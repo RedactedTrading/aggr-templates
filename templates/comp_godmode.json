@@ -17,7 +17,6 @@
             "BINANCE:compbusd",
             "BINANCE:compusdt",
             "BINANCE_FUTURES:compusdt",
-            "BITFINEX:COMP:USD",
             "BYBIT:COMPUSDT",
             "COINBASE:COMP-USD",
             "KRAKEN:COMP/USD",
@@ -47,7 +46,6 @@
           "markets": [
             "BINANCE:compbusd",
             "BINANCE:compusdt",
-            "BITFINEX:COMP:USD",
             "COINBASE:COMP-USD",
             "KRAKEN:COMP/USD",
             "KUCOIN:COMP-USDT",
@@ -325,7 +323,7 @@
         "fetched": false
       },
       "BITFINEX": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "BITMEX": {
@@ -481,7 +479,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:compusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(76,61,180)\");\n\nvar b = BYBIT:COMPUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(136,28,1)\");\n\nvar c = OKEX:COMP-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(217,0,225)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:compusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(13,162,200)\");\n\nvar b = BYBIT:COMPUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(194,88,131)\");\n\nvar c = OKEX:COMP-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(103,102,131)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -525,7 +523,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:compbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-compbusd\", color=\"rgb(161,153,242)\");\n\nvar b = BINANCE:compusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-compusdt\", color=\"rgb(161,153,199)\");\n\nvar c = BITFINEX:COMP:USD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(30,93,96)\");\n\nvar d = COINBASE:COMP-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(154,36,25)\");\n\nvar e = KUCOIN:COMP-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(69,147,143)\");\n\nvar f = OKEX:COMP-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-comp-usdc\", color=\"rgb(217,0,191)\");\n\nvar g = OKEX:COMP-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-comp-usdt\", color=\"rgb(217,0,46)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:compbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-compbusd\", color=\"rgb(251,88,72)\");\n\nvar b = BINANCE:compusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-compusdt\", color=\"rgb(251,88,82)\");\n\nvar c = COINBASE:COMP-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(92,172,198)\");\n\nvar d = KUCOIN:COMP-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(75,20,249)\");\n\nvar e = OKEX:COMP-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-comp-usdc\", color=\"rgb(103,102,48)\");\n\nvar f = OKEX:COMP-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-comp-usdt\", color=\"rgb(103,102,158)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -886,7 +884,6 @@
         "BINANCE:compbusd": false,
         "BINANCE:compusdt": false,
         "BINANCE_FUTURES:compusdt": false,
-        "BITFINEX:COMP:USD": false,
         "BYBIT:COMPUSDT": false,
         "COINBASE:COMP-USD": false,
         "KRAKEN:COMP/USD": false,
