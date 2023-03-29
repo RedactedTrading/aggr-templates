@@ -504,7 +504,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = KUCOIN:ERTHA-USDT;\nline(cum(a.vbuy-a.vsell), title=\"kucoin\", color=\"rgb(88,80,15)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = KUCOIN:ERTHA-USDT;\nline(cum(a.vbuy-a.vsell), title=\"kucoin\", color=\"rgb(38,128,123)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
