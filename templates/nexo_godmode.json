@@ -15,8 +15,7 @@
           "type": "chart",
           "markets": [
             "BINANCE:nexobusd",
-            "BINANCE:nexousdt",
-            "BITFINEX:NEXO:USD"
+            "BINANCE:nexousdt"
           ],
           "zoom": 1
         },
@@ -34,8 +33,7 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE:nexobusd",
-            "BINANCE:nexousdt",
-            "BITFINEX:NEXO:USD"
+            "BINANCE:nexousdt"
           ]
         }
       },
@@ -308,7 +306,7 @@
         "fetched": false
       },
       "BITFINEX": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "BITMEX": {
@@ -508,7 +506,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:nexobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-nexobusd\", color=\"rgb(239,46,248)\");\n\nvar b = BINANCE:nexousdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-nexousdt\", color=\"rgb(239,46,198)\");\n\nvar c = BITFINEX:NEXO:USD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(243,81,101)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:nexobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-nexobusd\", color=\"rgb(110,34,228)\");\n\nvar b = BINANCE:nexousdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-nexousdt\", color=\"rgb(110,34,240)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -867,8 +865,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:nexobusd": false,
-        "BINANCE:nexousdt": false,
-        "BITFINEX:NEXO:USD": false
+        "BINANCE:nexousdt": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
