@@ -473,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:iotausdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(54,250,188)\");\n\nvar b = BYBIT:IOTAUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(27,96,51)\");\n\nvar c = OKEX:IOTA-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(123,184,102)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:iotausdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(236,200,163)\");\n\nvar b = BYBIT:IOTAUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(163,33,216)\");\n\nvar c = OKEX:IOTA-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(55,143,151)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -517,7 +517,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:iotabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-iotabusd\", color=\"rgb(95,89,1)\");\n\nvar b = BINANCE:iotausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-iotausdt\", color=\"rgb(95,89,24)\");\n\nvar c = KUCOIN:IOTA-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(169,134,214)\");\n\nvar d = OKEX:IOTA-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(123,184,102)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:iotabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-iotabusd\", color=\"rgb(128,83,206)\");\n\nvar b = BINANCE:iotausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-iotausdt\", color=\"rgb(128,83,118)\");\n\nvar c = KUCOIN:IOTA-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(200,124,221)\");\n\nvar d = OKEX:IOTA-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(55,143,151)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
