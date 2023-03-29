@@ -508,7 +508,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = KUCOIN:USDD-TRX;\nline(cum(a.vbuy-a.vsell), title=\"kucoin-usdd-trx\", color=\"rgb(221,81,204)\");\n\nvar b = KUCOIN:USDD-USDC;\nline(cum(b.vbuy-b.vsell), title=\"kucoin-usdd-usdc\", color=\"rgb(221,81,130)\");\n\nvar c = KUCOIN:USDD-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin-usdd-usdt\", color=\"rgb(221,81,53)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = KUCOIN:USDD-TRX;\nline(cum(a.vbuy-a.vsell), title=\"kucoin-usdd-trx\", color=\"rgb(209,155,184)\");\n\nvar b = KUCOIN:USDD-USDC;\nline(cum(b.vbuy-b.vsell), title=\"kucoin-usdd-usdc\", color=\"rgb(209,155,244)\");\n\nvar c = KUCOIN:USDD-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin-usdd-usdt\", color=\"rgb(209,155,7)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
