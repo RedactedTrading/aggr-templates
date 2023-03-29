@@ -469,7 +469,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = OKEX:GODS-USDT-SWAP;\nline(cum(a.vbuy-a.vsell), title=\"okex\", color=\"rgb(90,213,238)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = OKEX:GODS-USDT-SWAP;\nline(cum(a.vbuy-a.vsell), title=\"okex\", color=\"rgb(76,3,206)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -513,7 +513,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = COINBASE:GODS-USD;\nline(cum(a.vbuy-a.vsell), title=\"coinbase\", color=\"rgb(183,67,65)\");\n\nvar b = KUCOIN:GODS-USDT;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(30,116,9)\");\n\nvar c = OKEX:GODS-USDC;\nline(cum(c.vbuy-c.vsell), title=\"okex-gods-usdc\", color=\"rgb(90,213,112)\");\n\nvar d = OKEX:GODS-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex-gods-usdt\", color=\"rgb(90,213,159)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = COINBASE:GODS-USD;\nline(cum(a.vbuy-a.vsell), title=\"coinbase\", color=\"rgb(50,35,203)\");\n\nvar b = KUCOIN:GODS-USDT;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(74,119,165)\");\n\nvar c = OKEX:GODS-USDC;\nline(cum(c.vbuy-c.vsell), title=\"okex-gods-usdc\", color=\"rgb(76,3,97)\");\n\nvar d = OKEX:GODS-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex-gods-usdt\", color=\"rgb(76,3,134)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
