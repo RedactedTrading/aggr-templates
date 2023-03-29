@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:pundixbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-pundixbusd\", color=\"rgb(57,138,232)\");\n\nvar b = BINANCE:pundixusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-pundixusdt\", color=\"rgb(57,138,166)\");\n\nvar c = COINBASE:PUNDIX-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(172,168,3)\");\n\nvar d = KUCOIN:PUNDIX-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(137,67,68)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:pundixbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-pundixbusd\", color=\"rgb(84,208,192)\");\n\nvar b = BINANCE:pundixusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-pundixusdt\", color=\"rgb(84,208,194)\");\n\nvar c = COINBASE:PUNDIX-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(15,66,250)\");\n\nvar d = KUCOIN:PUNDIX-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(133,142,48)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
