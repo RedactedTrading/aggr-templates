@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:paxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-paxbusd\", color=\"rgb(190,33,172)\");\n\nvar b = BINANCE:paxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-paxusdt\", color=\"rgb(190,33,128)\");\n\nvar c = BITFINEX:PAXUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(9,56,151)\");\n\nvar d = COINBASE:PAX-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(23,43,75)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:paxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-paxbusd\", color=\"rgb(70,217,235)\");\n\nvar b = BINANCE:paxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-paxusdt\", color=\"rgb(70,217,177)\");\n\nvar c = BITFINEX:PAXUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(99,30,165)\");\n\nvar d = COINBASE:PAX-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(33,131,3)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
