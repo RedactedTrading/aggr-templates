@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:lskbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-lskbusd\", color=\"rgb(92,248,228)\");\n\nvar b = BINANCE:lskusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-lskusdt\", color=\"rgb(92,248,92)\");\n\nvar c = OKEX:LSK-USDT;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(206,234,155)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:lskbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-lskbusd\", color=\"rgb(125,232,100)\");\n\nvar b = BINANCE:lskusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-lskusdt\", color=\"rgb(125,232,45)\");\n\nvar c = OKEX:LSK-USDT;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(17,132,218)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
