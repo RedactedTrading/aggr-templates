@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:quickbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-quickbusd\", color=\"rgb(192,196,167)\");\n\nvar b = BINANCE:quickusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-quickusdt\", color=\"rgb(192,196,164)\");\n\nvar c = COINBASE:QUICK-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(233,7,82)\");\n\nvar d = KUCOIN:QUICK-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(141,5,157)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:quickbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-quickbusd\", color=\"rgb(47,1,165)\");\n\nvar b = BINANCE:quickusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-quickusdt\", color=\"rgb(47,1,155)\");\n\nvar c = COINBASE:QUICK-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(76,214,237)\");\n\nvar d = KUCOIN:QUICK-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(198,246,112)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
