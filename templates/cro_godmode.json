@@ -475,7 +475,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITMEX:CROUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitmex\", color=\"rgb(64,25,248)\");\n\nvar b = BYBIT:CROUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(166,78,131)\");\n\nvar c = OKEX:CRO-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(163,194,236)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITMEX:CROUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitmex\", color=\"rgb(117,210,82)\");\n\nvar b = BYBIT:CROUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(162,241,202)\");\n\nvar c = OKEX:CRO-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(113,165,159)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +519,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = COINBASE:CRO-USD;\nline(cum(a.vbuy-a.vsell), title=\"coinbase-cro-usd\", color=\"rgb(148,177,142)\");\n\nvar b = COINBASE:CRO-USDT;\nline(cum(b.vbuy-b.vsell), title=\"coinbase-cro-usdt\", color=\"rgb(148,177,217)\");\n\nvar c = KUCOIN:CRO-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(213,108,204)\");\n\nvar d = OKEX:CRO-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-cro-usdc\", color=\"rgb(163,194,142)\");\n\nvar e = OKEX:CRO-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-cro-usdt\", color=\"rgb(163,194,155)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = COINBASE:CRO-USD;\nline(cum(a.vbuy-a.vsell), title=\"coinbase-cro-usd\", color=\"rgb(221,196,173)\");\n\nvar b = COINBASE:CRO-USDT;\nline(cum(b.vbuy-b.vsell), title=\"coinbase-cro-usdt\", color=\"rgb(221,196,123)\");\n\nvar c = KUCOIN:CRO-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(185,119,150)\");\n\nvar d = OKEX:CRO-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-cro-usdc\", color=\"rgb(113,165,254)\");\n\nvar e = OKEX:CRO-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-cro-usdt\", color=\"rgb(113,165,210)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
