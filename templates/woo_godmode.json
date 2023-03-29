@@ -477,7 +477,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:woousdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(176,126,43)\");\n\nvar b = BYBIT:WOOUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(116,183,2)\");\n\nvar c = OKEX:WOO-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(167,133,149)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:woousdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(189,29,33)\");\n\nvar b = BYBIT:WOOUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(204,218,109)\");\n\nvar c = OKEX:WOO-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(232,252,86)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -521,7 +521,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:woobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-woobusd\", color=\"rgb(224,197,232)\");\n\nvar b = BINANCE:woousdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-woousdt\", color=\"rgb(224,197,77)\");\n\nvar c = BITFINEX:WOOUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(57,106,146)\");\n\nvar d = KUCOIN:WOO-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(67,159,253)\");\n\nvar e = OKEX:WOO-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(167,133,149)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:woobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-woobusd\", color=\"rgb(7,135,4)\");\n\nvar b = BINANCE:woousdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-woousdt\", color=\"rgb(7,135,156)\");\n\nvar c = BITFINEX:WOOUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(101,206,214)\");\n\nvar d = KUCOIN:WOO-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(156,119,187)\");\n\nvar e = OKEX:WOO-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(232,252,86)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
