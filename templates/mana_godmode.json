@@ -485,7 +485,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:manausdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(59,142,22)\");\n\nvar b = BYBIT:MANAUSD;\nline(cum(b.vbuy-b.vsell), title=\"bybit-manausd\", color=\"rgb(166,145,53)\");\n\nvar c = BYBIT:MANAUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit-manausdt\", color=\"rgb(166,145,3)\");\n\nvar d = OKEX:MANA-USD-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex-mana-usd-swap\", color=\"rgb(165,27,76)\");\n\nvar e = OKEX:MANA-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-mana-usdt-swap\", color=\"rgb(165,27,233)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:manausdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(118,123,226)\");\n\nvar b = BYBIT:MANAUSD;\nline(cum(b.vbuy-b.vsell), title=\"bybit-manausd\", color=\"rgb(171,8,141)\");\n\nvar c = BYBIT:MANAUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit-manausdt\", color=\"rgb(171,8,196)\");\n\nvar d = OKEX:MANA-USD-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex-mana-usd-swap\", color=\"rgb(195,124,52)\");\n\nvar e = OKEX:MANA-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-mana-usdt-swap\", color=\"rgb(195,124,186)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -529,7 +529,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:manabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-manabusd\", color=\"rgb(231,186,74)\");\n\nvar b = BINANCE:manausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-manausdt\", color=\"rgb(231,186,48)\");\n\nvar c = COINBASE:MANA-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(152,96,134)\");\n\nvar d = KUCOIN:MANA-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(181,54,159)\");\n\nvar e = OKEX:MANA-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-mana-usdc\", color=\"rgb(165,27,13)\");\n\nvar f = OKEX:MANA-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-mana-usdt\", color=\"rgb(165,27,21)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:manabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-manabusd\", color=\"rgb(171,184,9)\");\n\nvar b = BINANCE:manausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-manausdt\", color=\"rgb(171,184,115)\");\n\nvar c = COINBASE:MANA-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(241,229,11)\");\n\nvar d = KUCOIN:MANA-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(76,187,94)\");\n\nvar e = OKEX:MANA-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-mana-usdc\", color=\"rgb(195,124,144)\");\n\nvar f = OKEX:MANA-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-mana-usdt\", color=\"rgb(195,124,94)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
