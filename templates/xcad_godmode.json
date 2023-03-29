@@ -14,7 +14,6 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BITFINEX:XCAD:USD",
             "KUCOIN:XCAD-USDT"
           ],
           "zoom": 1
@@ -32,7 +31,6 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
-            "BITFINEX:XCAD:USD",
             "KUCOIN:XCAD-USDT"
           ]
         }
@@ -306,7 +304,7 @@
         "fetched": false
       },
       "BITFINEX": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "BITMEX": {
@@ -506,7 +504,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITFINEX:XCAD:USD;\nline(cum(a.vbuy-a.vsell), title=\"bitfinex\", color=\"rgb(57,67,143)\");\n\nvar b = KUCOIN:XCAD-USDT;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(164,20,174)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = KUCOIN:XCAD-USDT;\nline(cum(a.vbuy-a.vsell), title=\"kucoin\", color=\"rgb(219,186,172)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -864,7 +862,6 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITFINEX:XCAD:USD": false,
         "KUCOIN:XCAD-USDT": false
       },
       "barSpacing": 0.39437454420364615,
