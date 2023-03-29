@@ -483,7 +483,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:lrcusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(160,126,226)\");\n\nvar b = BYBIT:LRCUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(247,235,186)\");\n\nvar c = OKEX:LRC-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(124,147,210)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:lrcusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(82,186,4)\");\n\nvar b = BYBIT:LRCUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(129,0,42)\");\n\nvar c = OKEX:LRC-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(184,2,241)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -527,7 +527,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:lrcbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-lrcbusd\", color=\"rgb(149,172,188)\");\n\nvar b = BINANCE:lrcusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-lrcusdt\", color=\"rgb(149,172,222)\");\n\nvar c = BITFINEX:LRCUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(178,91,230)\");\n\nvar d = COINBASE:LRC-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-lrc-usd\", color=\"rgb(181,251,159)\");\n\nvar e = COINBASE:LRC-USDT;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-lrc-usdt\", color=\"rgb(181,251,204)\");\n\nvar f = KUCOIN:LRC-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin\", color=\"rgb(61,22,139)\");\n\nvar g = OKEX:LRC-USDC;\nline(cum(g.vbuy-g.vsell), title=\"okex-lrc-usdc\", color=\"rgb(124,147,218)\");\n\nvar h = OKEX:LRC-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex-lrc-usdt\", color=\"rgb(124,147,87)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:lrcbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-lrcbusd\", color=\"rgb(210,203,207)\");\n\nvar b = BINANCE:lrcusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-lrcusdt\", color=\"rgb(210,203,122)\");\n\nvar c = BITFINEX:LRCUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(197,140,32)\");\n\nvar d = COINBASE:LRC-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-lrc-usd\", color=\"rgb(68,92,217)\");\n\nvar e = COINBASE:LRC-USDT;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-lrc-usdt\", color=\"rgb(68,92,232)\");\n\nvar f = KUCOIN:LRC-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin\", color=\"rgb(69,32,106)\");\n\nvar g = OKEX:LRC-USDC;\nline(cum(g.vbuy-g.vsell), title=\"okex-lrc-usdc\", color=\"rgb(184,2,49)\");\n\nvar h = OKEX:LRC-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex-lrc-usdt\", color=\"rgb(184,2,35)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
