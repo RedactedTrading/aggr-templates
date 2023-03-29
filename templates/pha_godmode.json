@@ -512,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:phabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-phabusd\", color=\"rgb(100,128,122)\");\n\nvar b = BINANCE:phausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-phausdt\", color=\"rgb(100,128,74)\");\n\nvar c = KUCOIN:PHA-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(121,183,1)\");\n\nvar d = OKEX:PHA-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(239,147,12)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:phabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-phabusd\", color=\"rgb(133,174,162)\");\n\nvar b = BINANCE:phausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-phausdt\", color=\"rgb(133,174,146)\");\n\nvar c = KUCOIN:PHA-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(112,36,249)\");\n\nvar d = OKEX:PHA-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(33,33,8)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
