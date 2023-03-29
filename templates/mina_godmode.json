@@ -481,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:minausdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(21,17,221)\");\n\nvar b = BYBIT:MINAUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(253,115,118)\");\n\nvar c = OKEX:MINA-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(209,27,92)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:minausdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(85,255,96)\");\n\nvar b = BYBIT:MINAUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(21,214,119)\");\n\nvar c = OKEX:MINA-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(153,150,205)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -525,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:minabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-minabusd\", color=\"rgb(240,77,124)\");\n\nvar b = BINANCE:minausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-minausdt\", color=\"rgb(240,77,45)\");\n\nvar c = COINBASE:MINA-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-mina-usd\", color=\"rgb(46,119,200)\");\n\nvar d = COINBASE:MINA-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-mina-usdt\", color=\"rgb(46,119,128)\");\n\nvar e = KUCOIN:MINA-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(62,146,193)\");\n\nvar f = OKEX:MINA-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-mina-usdc\", color=\"rgb(209,27,219)\");\n\nvar g = OKEX:MINA-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-mina-usdt\", color=\"rgb(209,27,195)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:minabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-minabusd\", color=\"rgb(7,242,150)\");\n\nvar b = BINANCE:minausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-minausdt\", color=\"rgb(7,242,180)\");\n\nvar c = COINBASE:MINA-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-mina-usd\", color=\"rgb(109,48,138)\");\n\nvar d = COINBASE:MINA-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-mina-usdt\", color=\"rgb(109,48,109)\");\n\nvar e = KUCOIN:MINA-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(168,60,197)\");\n\nvar f = OKEX:MINA-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-mina-usdc\", color=\"rgb(153,150,116)\");\n\nvar g = OKEX:MINA-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-mina-usdt\", color=\"rgb(153,150,81)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
