@@ -512,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:powrbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-powrbusd\", color=\"rgb(78,151,135)\");\n\nvar b = BINANCE:powrusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-powrusdt\", color=\"rgb(78,151,15)\");\n\nvar c = COINBASE:POWR-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-powr-usd\", color=\"rgb(228,215,248)\");\n\nvar d = COINBASE:POWR-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-powr-usdt\", color=\"rgb(228,215,27)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:powrbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-powrbusd\", color=\"rgb(58,4,144)\");\n\nvar b = BINANCE:powrusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-powrusdt\", color=\"rgb(58,4,103)\");\n\nvar c = COINBASE:POWR-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-powr-usd\", color=\"rgb(228,226,111)\");\n\nvar d = COINBASE:POWR-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-powr-usdt\", color=\"rgb(228,226,9)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
