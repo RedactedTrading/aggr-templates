@@ -508,7 +508,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = KUCOIN:OAS-USDT;\nline(cum(a.vbuy-a.vsell), title=\"kucoin\", color=\"rgb(177,62,142)\");\n\nvar b = OKEX:OAS-USDC;\nline(cum(b.vbuy-b.vsell), title=\"okex-oas-usdc\", color=\"rgb(107,101,36)\");\n\nvar c = OKEX:OAS-USDT;\nline(cum(c.vbuy-c.vsell), title=\"okex-oas-usdt\", color=\"rgb(107,101,207)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = KUCOIN:OAS-USDT;\nline(cum(a.vbuy-a.vsell), title=\"kucoin\", color=\"rgb(215,3,212)\");\n\nvar b = OKEX:OAS-USDC;\nline(cum(b.vbuy-b.vsell), title=\"okex-oas-usdc\", color=\"rgb(97,234,164)\");\n\nvar c = OKEX:OAS-USDT;\nline(cum(c.vbuy-c.vsell), title=\"okex-oas-usdt\", color=\"rgb(97,234,59)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
