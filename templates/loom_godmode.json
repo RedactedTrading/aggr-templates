@@ -508,7 +508,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:loombusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-loombusd\", color=\"rgb(148,250,51)\");\n\nvar b = BINANCE:loomusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-loomusdt\", color=\"rgb(148,250,67)\");\n\nvar c = COINBASE:LOOM-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(226,35,27)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:loombusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-loombusd\", color=\"rgb(49,200,224)\");\n\nvar b = BINANCE:loomusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-loomusdt\", color=\"rgb(49,200,164)\");\n\nvar c = COINBASE:LOOM-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(156,63,231)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
