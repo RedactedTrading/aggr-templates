@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:aergobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance\", color=\"rgb(191,234,3)\");\n\nvar b = COINBASE:AERGO-USD;\nline(cum(b.vbuy-b.vsell), title=\"coinbase\", color=\"rgb(94,55,30)\");\n\nvar c = KUCOIN:AERGO-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(21,240,134)\");\n\nvar d = OKEX:AERGO-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(164,112,143)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:aergobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance\", color=\"rgb(87,138,162)\");\n\nvar b = COINBASE:AERGO-USD;\nline(cum(b.vbuy-b.vsell), title=\"coinbase\", color=\"rgb(51,34,197)\");\n\nvar c = KUCOIN:AERGO-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(85,81,227)\");\n\nvar d = OKEX:AERGO-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(25,243,158)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
