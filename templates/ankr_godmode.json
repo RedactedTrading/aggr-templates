@@ -475,7 +475,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:ankrusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(201,71,244)\");\n\nvar b = BYBIT:ANKRUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(139,224,123)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:ankrusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(67,155,140)\");\n\nvar b = BYBIT:ANKRUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(133,143,157)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +519,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ankrbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ankrbusd\", color=\"rgb(66,96,170)\");\n\nvar b = BINANCE:ankrusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-ankrusdc\", color=\"rgb(66,96,245)\");\n\nvar c = BINANCE:ankrusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-ankrusdt\", color=\"rgb(66,96,44)\");\n\nvar d = COINBASE:ANKR-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(85,221,172)\");\n\nvar e = KUCOIN:ANKR-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(124,33,29)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ankrbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ankrbusd\", color=\"rgb(79,47,243)\");\n\nvar b = BINANCE:ankrusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-ankrusdc\", color=\"rgb(79,47,95)\");\n\nvar c = BINANCE:ankrusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-ankrusdt\", color=\"rgb(79,47,86)\");\n\nvar d = COINBASE:ANKR-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(146,39,32)\");\n\nvar e = KUCOIN:ANKR-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(252,74,16)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
