@@ -462,7 +462,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:1000shibbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-1000shibbusd\", color=\"rgb(204,3,189)\");\n\nvar b = BINANCE_FUTURES:1000shibusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-1000shibusdt\", color=\"rgb(204,3,148)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:1000shibbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-1000shibbusd\", color=\"rgb(99,213,206)\");\n\nvar b = BINANCE_FUTURES:1000shibusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-1000shibusdt\", color=\"rgb(99,213,254)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
