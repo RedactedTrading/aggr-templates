@@ -32,8 +32,7 @@
             "OKEX:BTC-USDC-SWAP",
             "OKEX:BTC-USDT",
             "OKEX:BTC-USDT-SWAP",
-            "UPBIT:BTC-TUSD",
-            "UPBIT:BTC-USDP"
+            "UPBIT:USDT-BTC"
           ],
           "zoom": 1
         },
@@ -69,8 +68,7 @@
             "KUCOIN:BTC-USDT",
             "OKEX:BTC-USDC",
             "OKEX:BTC-USDT",
-            "UPBIT:BTC-TUSD",
-            "UPBIT:BTC-USDP"
+            "UPBIT:USDT-BTC"
           ]
         }
       },
@@ -499,7 +497,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:btcbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-btcbusd\", color=\"rgb(185,225,3)\");\n\nvar b = BINANCE_FUTURES:btcusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-btcusdt\", color=\"rgb(185,225,128)\");\n\nvar c = BYBIT:BTCUSD;\nline(cum(c.vbuy-c.vsell), title=\"bybit-btcusd\", color=\"rgb(162,111,165)\");\n\nvar d = BYBIT:BTCUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit-btcusdt\", color=\"rgb(162,111,168)\");\n\nvar e = OKEX:BTC-USD-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-btc-usd-swap\", color=\"rgb(77,47,150)\");\n\nvar f = OKEX:BTC-USDC-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"okex-btc-usdc-swap\", color=\"rgb(77,47,203)\");\n\nvar g = OKEX:BTC-USDT-SWAP;\nline(cum(g.vbuy-g.vsell), title=\"okex-btc-usdt-swap\", color=\"rgb(77,47,69)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:btcbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-btcbusd\", color=\"rgb(119,177,203)\");\n\nvar b = BINANCE_FUTURES:btcusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-btcusdt\", color=\"rgb(119,177,93)\");\n\nvar c = BYBIT:BTCUSD;\nline(cum(c.vbuy-c.vsell), title=\"bybit-btcusd\", color=\"rgb(189,86,123)\");\n\nvar d = BYBIT:BTCUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit-btcusdt\", color=\"rgb(189,86,165)\");\n\nvar e = OKEX:BTC-USD-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-btc-usd-swap\", color=\"rgb(178,183,94)\");\n\nvar f = OKEX:BTC-USDC-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"okex-btc-usdc-swap\", color=\"rgb(178,183,220)\");\n\nvar g = OKEX:BTC-USDT-SWAP;\nline(cum(g.vbuy-g.vsell), title=\"okex-btc-usdt-swap\", color=\"rgb(178,183,90)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -543,7 +541,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:btcbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-btcbusd\", color=\"rgb(163,61,14)\");\n\nvar b = BINANCE:btcusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-btcusdc\", color=\"rgb(163,61,51)\");\n\nvar c = BINANCE:btcusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-btcusdt\", color=\"rgb(163,61,243)\");\n\nvar d = BITFINEX:BTCUSD;\nline(cum(d.vbuy-d.vsell), title=\"bitfinex\", color=\"rgb(2,152,176)\");\n\nvar e = COINBASE:BTC-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-btc-usd\", color=\"rgb(135,53,187)\");\n\nvar f = COINBASE:BTC-USDT;\nline(cum(f.vbuy-f.vsell), title=\"coinbase-btc-usdt\", color=\"rgb(135,53,85)\");\n\nvar g = KUCOIN:BTC-TUSD;\nline(cum(g.vbuy-g.vsell), title=\"kucoin-btc-tusd\", color=\"rgb(30,38,30)\");\n\nvar h = KUCOIN:BTC-USDC;\nline(cum(h.vbuy-h.vsell), title=\"kucoin-btc-usdc\", color=\"rgb(30,38,33)\");\n\nvar i = KUCOIN:BTC-USDT;\nline(cum(i.vbuy-i.vsell), title=\"kucoin-btc-usdt\", color=\"rgb(30,38,155)\");\n\nvar j = OKEX:BTC-USDC;\nline(cum(j.vbuy-j.vsell), title=\"okex-btc-usdc\", color=\"rgb(77,47,204)\");\n\nvar k = OKEX:BTC-USDT;\nline(cum(k.vbuy-k.vsell), title=\"okex-btc-usdt\", color=\"rgb(77,47,39)\");\n\nvar l = UPBIT:BTC-TUSD;\nline(cum(l.vbuy-l.vsell), title=\"upbit-btc-tusd\", color=\"rgb(29,15,56)\");\n\nvar m = UPBIT:BTC-USDP;\nline(cum(m.vbuy-m.vsell), title=\"upbit-btc-usdp\", color=\"rgb(29,15,93)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:btcbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-btcbusd\", color=\"rgb(16,4,92)\");\n\nvar b = BINANCE:btcusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-btcusdc\", color=\"rgb(16,4,227)\");\n\nvar c = BINANCE:btcusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-btcusdt\", color=\"rgb(16,4,22)\");\n\nvar d = BITFINEX:BTCUSD;\nline(cum(d.vbuy-d.vsell), title=\"bitfinex\", color=\"rgb(149,218,143)\");\n\nvar e = COINBASE:BTC-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-btc-usd\", color=\"rgb(205,200,63)\");\n\nvar f = COINBASE:BTC-USDT;\nline(cum(f.vbuy-f.vsell), title=\"coinbase-btc-usdt\", color=\"rgb(205,200,81)\");\n\nvar g = KUCOIN:BTC-TUSD;\nline(cum(g.vbuy-g.vsell), title=\"kucoin-btc-tusd\", color=\"rgb(110,170,238)\");\n\nvar h = KUCOIN:BTC-USDC;\nline(cum(h.vbuy-h.vsell), title=\"kucoin-btc-usdc\", color=\"rgb(110,170,38)\");\n\nvar i = KUCOIN:BTC-USDT;\nline(cum(i.vbuy-i.vsell), title=\"kucoin-btc-usdt\", color=\"rgb(110,170,12)\");\n\nvar j = OKEX:BTC-USDC;\nline(cum(j.vbuy-j.vsell), title=\"okex-btc-usdc\", color=\"rgb(178,183,248)\");\n\nvar k = OKEX:BTC-USDT;\nline(cum(k.vbuy-k.vsell), title=\"okex-btc-usdt\", color=\"rgb(178,183,57)\");\n\nvar l = UPBIT:USDT-BTC;\nline(cum(l.vbuy-l.vsell), title=\"upbit\", color=\"rgb(164,29,104)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -919,8 +917,7 @@
         "OKEX:BTC-USDC-SWAP": false,
         "OKEX:BTC-USDT": false,
         "OKEX:BTC-USDT-SWAP": false,
-        "UPBIT:BTC-TUSD": true,
-        "UPBIT:BTC-USDP": true
+        "UPBIT:USDT-BTC": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
