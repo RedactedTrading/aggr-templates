@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:btgbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-btgbusd\", color=\"rgb(48,20,85)\");\n\nvar b = BINANCE:btgusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-btgusdt\", color=\"rgb(48,20,245)\");\n\nvar c = BITFINEX:BTGUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(144,219,32)\");\n\nvar d = OKEX:BTG-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(65,75,76)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:btgbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-btgbusd\", color=\"rgb(16,232,107)\");\n\nvar b = BINANCE:btgusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-btgusdt\", color=\"rgb(16,232,106)\");\n\nvar c = BITFINEX:BTGUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(117,116,233)\");\n\nvar d = OKEX:BTG-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(220,164,227)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
