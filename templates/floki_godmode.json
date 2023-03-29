@@ -469,7 +469,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = OKEX:FLOKI-USDT-SWAP;\nline(cum(a.vbuy-a.vsell), title=\"okex\", color=\"rgb(214,108,145)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = OKEX:FLOKI-USDT-SWAP;\nline(cum(a.vbuy-a.vsell), title=\"okex\", color=\"rgb(90,23,210)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -513,7 +513,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = KUCOIN:FLOKI-USDC;\nline(cum(a.vbuy-a.vsell), title=\"kucoin-floki-usdc\", color=\"rgb(223,61,218)\");\n\nvar b = KUCOIN:FLOKI-USDT;\nline(cum(b.vbuy-b.vsell), title=\"kucoin-floki-usdt\", color=\"rgb(223,61,1)\");\n\nvar c = OKEX:FLOKI-USDC;\nline(cum(c.vbuy-c.vsell), title=\"okex-floki-usdc\", color=\"rgb(214,108,96)\");\n\nvar d = OKEX:FLOKI-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex-floki-usdt\", color=\"rgb(214,108,229)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = KUCOIN:FLOKI-USDC;\nline(cum(a.vbuy-a.vsell), title=\"kucoin-floki-usdc\", color=\"rgb(252,41,157)\");\n\nvar b = KUCOIN:FLOKI-USDT;\nline(cum(b.vbuy-b.vsell), title=\"kucoin-floki-usdt\", color=\"rgb(252,41,149)\");\n\nvar c = OKEX:FLOKI-USDC;\nline(cum(c.vbuy-c.vsell), title=\"okex-floki-usdc\", color=\"rgb(90,23,184)\");\n\nvar d = OKEX:FLOKI-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex-floki-usdt\", color=\"rgb(90,23,250)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
