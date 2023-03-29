@@ -469,7 +469,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:linausdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(216,219,172)\");\n\nvar b = BYBIT:LINAUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(129,199,34)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:linausdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(140,79,11)\");\n\nvar b = BYBIT:LINAUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(183,196,145)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -513,7 +513,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:linabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-linabusd\", color=\"rgb(71,27,148)\");\n\nvar b = BINANCE:linausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-linausdt\", color=\"rgb(71,27,130)\");\n\nvar c = KUCOIN:LINA-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(24,193,240)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:linabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-linabusd\", color=\"rgb(109,95,180)\");\n\nvar b = BINANCE:linausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-linausdt\", color=\"rgb(109,95,173)\");\n\nvar c = KUCOIN:LINA-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(105,118,124)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
