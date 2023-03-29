@@ -18,7 +18,6 @@
             "BINANCE:avaxusdt",
             "BINANCE_FUTURES:avaxbusd",
             "BINANCE_FUTURES:avaxusdt",
-            "BITFINEX:AVAX:USD",
             "BITMEX:AVAXUSD",
             "BYBIT:AVAXUSDT",
             "COINBASE:AVAX-USD",
@@ -56,7 +55,6 @@
           "markets": [
             "BINANCE:avaxbusd",
             "BINANCE:avaxusdt",
-            "BITFINEX:AVAX:USD",
             "COINBASE:AVAX-USD",
             "COINBASE:AVAX-USDT",
             "KRAKEN:AVAX/USD",
@@ -337,7 +335,7 @@
         "fetched": false
       },
       "BITFINEX": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "BITMEX": {
@@ -493,7 +491,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:avaxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-avaxbusd\", color=\"rgb(80,192,35)\");\n\nvar b = BINANCE_FUTURES:avaxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-avaxusdt\", color=\"rgb(80,192,72)\");\n\nvar c = BITMEX:AVAXUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitmex\", color=\"rgb(136,205,136)\");\n\nvar d = BYBIT:AVAXUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(73,237,228)\");\n\nvar e = OKEX:AVAX-USD-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-avax-usd-swap\", color=\"rgb(135,151,138)\");\n\nvar f = OKEX:AVAX-USDT-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"okex-avax-usdt-swap\", color=\"rgb(135,151,97)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:avaxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-avaxbusd\", color=\"rgb(145,225,31)\");\n\nvar b = BINANCE_FUTURES:avaxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-avaxusdt\", color=\"rgb(145,225,250)\");\n\nvar c = BITMEX:AVAXUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitmex\", color=\"rgb(170,236,68)\");\n\nvar d = BYBIT:AVAXUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(8,68,104)\");\n\nvar e = OKEX:AVAX-USD-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-avax-usd-swap\", color=\"rgb(51,222,228)\");\n\nvar f = OKEX:AVAX-USDT-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"okex-avax-usdt-swap\", color=\"rgb(51,222,110)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -537,7 +535,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:avaxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-avaxbusd\", color=\"rgb(234,80,24)\");\n\nvar b = BINANCE:avaxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-avaxusdt\", color=\"rgb(234,80,129)\");\n\nvar c = BITFINEX:AVAX:USD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(44,81,213)\");\n\nvar d = COINBASE:AVAX-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-avax-usd\", color=\"rgb(255,4,153)\");\n\nvar e = COINBASE:AVAX-USDT;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-avax-usdt\", color=\"rgb(255,4,178)\");\n\nvar f = KUCOIN:AVAX-USDC;\nline(cum(f.vbuy-f.vsell), title=\"kucoin-avax-usdc\", color=\"rgb(188,49,218)\");\n\nvar g = KUCOIN:AVAX-USDT;\nline(cum(g.vbuy-g.vsell), title=\"kucoin-avax-usdt\", color=\"rgb(188,49,85)\");\n\nvar h = OKEX:AVAX-USDC;\nline(cum(h.vbuy-h.vsell), title=\"okex-avax-usdc\", color=\"rgb(135,151,160)\");\n\nvar i = OKEX:AVAX-USDT;\nline(cum(i.vbuy-i.vsell), title=\"okex-avax-usdt\", color=\"rgb(135,151,67)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:avaxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-avaxbusd\", color=\"rgb(115,8,66)\");\n\nvar b = BINANCE:avaxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-avaxusdt\", color=\"rgb(115,8,135)\");\n\nvar c = COINBASE:AVAX-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-avax-usd\", color=\"rgb(178,92,29)\");\n\nvar d = COINBASE:AVAX-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-avax-usdt\", color=\"rgb(178,92,213)\");\n\nvar e = KUCOIN:AVAX-USDC;\nline(cum(e.vbuy-e.vsell), title=\"kucoin-avax-usdc\", color=\"rgb(213,159,78)\");\n\nvar f = KUCOIN:AVAX-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin-avax-usdt\", color=\"rgb(213,159,221)\");\n\nvar g = OKEX:AVAX-USDC;\nline(cum(g.vbuy-g.vsell), title=\"okex-avax-usdc\", color=\"rgb(51,222,30)\");\n\nvar h = OKEX:AVAX-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex-avax-usdt\", color=\"rgb(51,222,93)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -899,7 +897,6 @@
         "BINANCE:avaxusdt": false,
         "BINANCE_FUTURES:avaxbusd": false,
         "BINANCE_FUTURES:avaxusdt": false,
-        "BITFINEX:AVAX:USD": false,
         "BITMEX:AVAXUSD": false,
         "BYBIT:AVAXUSDT": false,
         "COINBASE:AVAX-USD": false,
