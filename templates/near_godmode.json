@@ -18,7 +18,6 @@
             "BINANCE:nearusdt",
             "BINANCE_FUTURES:nearbusd",
             "BINANCE_FUTURES:nearusdt",
-            "BITFINEX:NEAR:USD",
             "BITMEX:NEARUSD",
             "BYBIT:NEARUSDT",
             "COINBASE:NEAR-USD",
@@ -53,7 +52,6 @@
           "markets": [
             "BINANCE:nearbusd",
             "BINANCE:nearusdt",
-            "BITFINEX:NEAR:USD",
             "COINBASE:NEAR-USD",
             "COINBASE:NEAR-USDT",
             "KRAKEN:NEAR/USD",
@@ -333,7 +331,7 @@
         "fetched": false
       },
       "BITFINEX": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "BITMEX": {
@@ -489,7 +487,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:nearbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-nearbusd\", color=\"rgb(57,89,180)\");\n\nvar b = BINANCE_FUTURES:nearusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-nearusdt\", color=\"rgb(57,89,138)\");\n\nvar c = BITMEX:NEARUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitmex\", color=\"rgb(222,162,105)\");\n\nvar d = BYBIT:NEARUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(246,95,34)\");\n\nvar e = OKEX:NEAR-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(121,56,87)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:nearbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-nearbusd\", color=\"rgb(24,93,127)\");\n\nvar b = BINANCE_FUTURES:nearusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-nearusdt\", color=\"rgb(24,93,119)\");\n\nvar c = BITMEX:NEARUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitmex\", color=\"rgb(16,92,237)\");\n\nvar d = BYBIT:NEARUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(201,179,153)\");\n\nvar e = OKEX:NEAR-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(60,111,135)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -533,7 +531,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:nearbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-nearbusd\", color=\"rgb(116,172,114)\");\n\nvar b = BINANCE:nearusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-nearusdt\", color=\"rgb(116,172,237)\");\n\nvar c = BITFINEX:NEAR:USD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(38,45,85)\");\n\nvar d = COINBASE:NEAR-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-near-usd\", color=\"rgb(135,231,180)\");\n\nvar e = COINBASE:NEAR-USDT;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-near-usdt\", color=\"rgb(135,231,109)\");\n\nvar f = KUCOIN:NEAR-USDC;\nline(cum(f.vbuy-f.vsell), title=\"kucoin-near-usdc\", color=\"rgb(172,101,147)\");\n\nvar g = KUCOIN:NEAR-USDT;\nline(cum(g.vbuy-g.vsell), title=\"kucoin-near-usdt\", color=\"rgb(172,101,99)\");\n\nvar h = OKEX:NEAR-USDC;\nline(cum(h.vbuy-h.vsell), title=\"okex-near-usdc\", color=\"rgb(121,56,15)\");\n\nvar i = OKEX:NEAR-USDT;\nline(cum(i.vbuy-i.vsell), title=\"okex-near-usdt\", color=\"rgb(121,56,179)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:nearbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-nearbusd\", color=\"rgb(1,152,213)\");\n\nvar b = BINANCE:nearusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-nearusdt\", color=\"rgb(1,152,20)\");\n\nvar c = COINBASE:NEAR-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-near-usd\", color=\"rgb(153,129,71)\");\n\nvar d = COINBASE:NEAR-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-near-usdt\", color=\"rgb(153,129,183)\");\n\nvar e = KUCOIN:NEAR-USDC;\nline(cum(e.vbuy-e.vsell), title=\"kucoin-near-usdc\", color=\"rgb(82,149,184)\");\n\nvar f = KUCOIN:NEAR-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin-near-usdt\", color=\"rgb(82,149,40)\");\n\nvar g = OKEX:NEAR-USDC;\nline(cum(g.vbuy-g.vsell), title=\"okex-near-usdc\", color=\"rgb(60,111,9)\");\n\nvar h = OKEX:NEAR-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex-near-usdt\", color=\"rgb(60,111,246)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -895,7 +893,6 @@
         "BINANCE:nearusdt": false,
         "BINANCE_FUTURES:nearbusd": false,
         "BINANCE_FUTURES:nearusdt": false,
-        "BITFINEX:NEAR:USD": false,
         "BITMEX:NEARUSD": false,
         "BYBIT:NEARUSDT": false,
         "COINBASE:NEAR-USD": false,
