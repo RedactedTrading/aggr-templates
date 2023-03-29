@@ -17,7 +17,6 @@
             "BINANCE:sushibusd",
             "BINANCE:sushiusdt",
             "BINANCE_FUTURES:sushiusdt",
-            "BITFINEX:SUSHI:USD",
             "BYBIT:SUSHIUSDT",
             "COINBASE:SUSHI-USD",
             "KRAKEN:SUSHI/USD",
@@ -49,7 +48,6 @@
           "markets": [
             "BINANCE:sushibusd",
             "BINANCE:sushiusdt",
-            "BITFINEX:SUSHI:USD",
             "COINBASE:SUSHI-USD",
             "KRAKEN:SUSHI/USD",
             "KUCOIN:SUSHI-USDT",
@@ -327,7 +325,7 @@
         "fetched": false
       },
       "BITFINEX": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "BITMEX": {
@@ -483,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:sushiusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(150,61,103)\");\n\nvar b = BYBIT:SUSHIUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(60,56,223)\");\n\nvar c = OKEX:SUSHI-USD-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex-sushi-usd-swap\", color=\"rgb(17,5,52)\");\n\nvar d = OKEX:SUSHI-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex-sushi-usdt-swap\", color=\"rgb(17,5,35)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:sushiusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(111,153,156)\");\n\nvar b = BYBIT:SUSHIUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(14,22,66)\");\n\nvar c = OKEX:SUSHI-USD-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex-sushi-usd-swap\", color=\"rgb(79,230,212)\");\n\nvar d = OKEX:SUSHI-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex-sushi-usdt-swap\", color=\"rgb(79,230,82)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -527,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:sushibusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-sushibusd\", color=\"rgb(217,55,159)\");\n\nvar b = BINANCE:sushiusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-sushiusdt\", color=\"rgb(217,55,203)\");\n\nvar c = BITFINEX:SUSHI:USD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(155,111,73)\");\n\nvar d = COINBASE:SUSHI-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(65,100,74)\");\n\nvar e = KUCOIN:SUSHI-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(143,54,100)\");\n\nvar f = OKEX:SUSHI-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-sushi-usdc\", color=\"rgb(17,5,164)\");\n\nvar g = OKEX:SUSHI-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-sushi-usdt\", color=\"rgb(17,5,101)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:sushibusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-sushibusd\", color=\"rgb(84,49,234)\");\n\nvar b = BINANCE:sushiusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-sushiusdt\", color=\"rgb(84,49,6)\");\n\nvar c = COINBASE:SUSHI-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(67,0,223)\");\n\nvar d = KUCOIN:SUSHI-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(22,181,50)\");\n\nvar e = OKEX:SUSHI-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-sushi-usdc\", color=\"rgb(79,230,83)\");\n\nvar f = OKEX:SUSHI-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-sushi-usdt\", color=\"rgb(79,230,131)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -888,7 +886,6 @@
         "BINANCE:sushibusd": false,
         "BINANCE:sushiusdt": false,
         "BINANCE_FUTURES:sushiusdt": false,
-        "BITFINEX:SUSHI:USD": false,
         "BYBIT:SUSHIUSDT": false,
         "COINBASE:SUSHI-USD": false,
         "KRAKEN:SUSHI/USD": false,
