@@ -18,7 +18,6 @@
             "BINANCE:wavesusdc",
             "BINANCE:wavesusdt",
             "BINANCE_FUTURES:wavesusdt",
-            "BITFINEX:WAVES:USD",
             "BYBIT:WAVESUSDT",
             "KRAKEN:WAVES/USD",
             "KUCOIN:WAVES-USDT",
@@ -48,7 +47,6 @@
             "BINANCE:wavesbusd",
             "BINANCE:wavesusdc",
             "BINANCE:wavesusdt",
-            "BITFINEX:WAVES:USD",
             "KRAKEN:WAVES/USD",
             "KUCOIN:WAVES-USDT",
             "OKEX:WAVES-USDC",
@@ -325,7 +323,7 @@
         "fetched": false
       },
       "BITFINEX": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "BITMEX": {
@@ -481,7 +479,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:wavesusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(226,177,155)\");\n\nvar b = BYBIT:WAVESUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(250,136,178)\");\n\nvar c = OKEX:WAVES-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(161,18,229)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:wavesusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(205,15,133)\");\n\nvar b = BYBIT:WAVESUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(159,9,66)\");\n\nvar c = OKEX:WAVES-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(26,236,243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -525,7 +523,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:wavesbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-wavesbusd\", color=\"rgb(167,108,114)\");\n\nvar b = BINANCE:wavesusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-wavesusdc\", color=\"rgb(167,108,183)\");\n\nvar c = BINANCE:wavesusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-wavesusdt\", color=\"rgb(167,108,200)\");\n\nvar d = BITFINEX:WAVES:USD;\nline(cum(d.vbuy-d.vsell), title=\"bitfinex\", color=\"rgb(97,192,36)\");\n\nvar e = KUCOIN:WAVES-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(36,92,6)\");\n\nvar f = OKEX:WAVES-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-waves-usdc\", color=\"rgb(161,18,227)\");\n\nvar g = OKEX:WAVES-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-waves-usdt\", color=\"rgb(161,18,76)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:wavesbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-wavesbusd\", color=\"rgb(136,168,164)\");\n\nvar b = BINANCE:wavesusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-wavesusdc\", color=\"rgb(136,168,110)\");\n\nvar c = BINANCE:wavesusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-wavesusdt\", color=\"rgb(136,168,219)\");\n\nvar d = KUCOIN:WAVES-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(150,38,19)\");\n\nvar e = OKEX:WAVES-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-waves-usdc\", color=\"rgb(26,236,56)\");\n\nvar f = OKEX:WAVES-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-waves-usdt\", color=\"rgb(26,236,37)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -887,7 +885,6 @@
         "BINANCE:wavesusdc": false,
         "BINANCE:wavesusdt": false,
         "BINANCE_FUTURES:wavesusdt": false,
-        "BITFINEX:WAVES:USD": false,
         "BYBIT:WAVESUSDT": false,
         "KRAKEN:WAVES/USD": false,
         "KUCOIN:WAVES-USDT": false,
