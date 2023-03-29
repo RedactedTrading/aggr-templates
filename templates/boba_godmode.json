@@ -471,7 +471,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:BOBAUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(193,255,163)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:BOBAUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(124,131,90)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -515,7 +515,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITFINEX:BOBA:USD;\nline(cum(a.vbuy-a.vsell), title=\"bitfinex\", color=\"rgb(158,59,72)\");\n\nvar b = COINBASE:BOBA-USD;\nline(cum(b.vbuy-b.vsell), title=\"coinbase-boba-usd\", color=\"rgb(22,222,66)\");\n\nvar c = COINBASE:BOBA-USDT;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-boba-usdt\", color=\"rgb(22,222,85)\");\n\nvar d = KUCOIN:BOBA-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(247,35,139)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITFINEX:BOBA:USD;\nline(cum(a.vbuy-a.vsell), title=\"bitfinex\", color=\"rgb(163,237,105)\");\n\nvar b = COINBASE:BOBA-USD;\nline(cum(b.vbuy-b.vsell), title=\"coinbase-boba-usd\", color=\"rgb(247,250,166)\");\n\nvar c = COINBASE:BOBA-USDT;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-boba-usdt\", color=\"rgb(247,250,5)\");\n\nvar d = KUCOIN:BOBA-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(117,171,170)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
