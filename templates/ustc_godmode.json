@@ -473,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = OKEX:USTC-USDT-SWAP;\nline(cum(a.vbuy-a.vsell), title=\"okex\", color=\"rgb(69,181,238)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = OKEX:USTC-USDT-SWAP;\nline(cum(a.vbuy-a.vsell), title=\"okex\", color=\"rgb(143,145,21)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -517,7 +517,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ustcbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ustcbusd\", color=\"rgb(242,21,232)\");\n\nvar b = BINANCE:ustcusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-ustcusdt\", color=\"rgb(242,21,5)\");\n\nvar c = KUCOIN:USTC-USDC;\nline(cum(c.vbuy-c.vsell), title=\"kucoin-ustc-usdc\", color=\"rgb(200,57,162)\");\n\nvar d = KUCOIN:USTC-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin-ustc-usdt\", color=\"rgb(200,57,139)\");\n\nvar e = OKEX:USTC-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-ustc-usdc\", color=\"rgb(69,181,81)\");\n\nvar f = OKEX:USTC-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-ustc-usdt\", color=\"rgb(69,181,156)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ustcbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ustcbusd\", color=\"rgb(246,237,134)\");\n\nvar b = BINANCE:ustcusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-ustcusdt\", color=\"rgb(246,237,208)\");\n\nvar c = KUCOIN:USTC-USDC;\nline(cum(c.vbuy-c.vsell), title=\"kucoin-ustc-usdc\", color=\"rgb(217,69,121)\");\n\nvar d = KUCOIN:USTC-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin-ustc-usdt\", color=\"rgb(217,69,225)\");\n\nvar e = OKEX:USTC-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-ustc-usdc\", color=\"rgb(143,145,115)\");\n\nvar f = OKEX:USTC-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-ustc-usdt\", color=\"rgb(143,145,35)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
