@@ -475,7 +475,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:celousdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(97,29,109)\");\n\nvar b = BYBIT:CELOUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(161,250,113)\");\n\nvar c = OKEX:CELO-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(84,9,141)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:celousdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(51,33,240)\");\n\nvar b = BYBIT:CELOUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(107,247,30)\");\n\nvar c = OKEX:CELO-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(193,192,157)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +519,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:celobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-celobusd\", color=\"rgb(24,4,179)\");\n\nvar b = BINANCE:celousdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-celousdt\", color=\"rgb(24,4,252)\");\n\nvar c = KUCOIN:CELO-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(42,235,152)\");\n\nvar d = OKEX:CELO-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-celo-usdc\", color=\"rgb(84,9,113)\");\n\nvar e = OKEX:CELO-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-celo-usdt\", color=\"rgb(84,9,129)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:celobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-celobusd\", color=\"rgb(155,115,245)\");\n\nvar b = BINANCE:celousdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-celousdt\", color=\"rgb(155,115,232)\");\n\nvar c = KUCOIN:CELO-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(125,108,119)\");\n\nvar d = OKEX:CELO-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-celo-usdc\", color=\"rgb(193,192,106)\");\n\nvar e = OKEX:CELO-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-celo-usdt\", color=\"rgb(193,192,168)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
