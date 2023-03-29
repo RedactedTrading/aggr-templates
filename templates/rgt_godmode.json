@@ -506,7 +506,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:rgtbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-rgtbusd\", color=\"rgb(106,36,112)\");\n\nvar b = BINANCE:rgtusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-rgtusdt\", color=\"rgb(106,36,65)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:rgtbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-rgtbusd\", color=\"rgb(252,106,92)\");\n\nvar b = BINANCE:rgtusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-rgtusdt\", color=\"rgb(252,106,18)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
