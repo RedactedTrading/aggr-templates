@@ -512,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITFINEX:VRAUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitfinex\", color=\"rgb(58,110,96)\");\n\nvar b = KUCOIN:VRA-USDC;\nline(cum(b.vbuy-b.vsell), title=\"kucoin-vra-usdc\", color=\"rgb(136,82,156)\");\n\nvar c = KUCOIN:VRA-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin-vra-usdt\", color=\"rgb(136,82,8)\");\n\nvar d = OKEX:VRA-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-vra-usdc\", color=\"rgb(93,221,140)\");\n\nvar e = OKEX:VRA-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-vra-usdt\", color=\"rgb(93,221,202)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITFINEX:VRAUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitfinex\", color=\"rgb(69,15,135)\");\n\nvar b = KUCOIN:VRA-USDC;\nline(cum(b.vbuy-b.vsell), title=\"kucoin-vra-usdc\", color=\"rgb(179,146,198)\");\n\nvar c = KUCOIN:VRA-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin-vra-usdt\", color=\"rgb(179,146,240)\");\n\nvar d = OKEX:VRA-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-vra-usdc\", color=\"rgb(50,199,119)\");\n\nvar e = OKEX:VRA-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-vra-usdt\", color=\"rgb(50,199,153)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
