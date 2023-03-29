@@ -469,7 +469,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:BSVUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(210,211,125)\");\n\nvar b = OKEX:BSV-USD-SWAP;\nline(cum(b.vbuy-b.vsell), title=\"okex-bsv-usd-swap\", color=\"rgb(189,101,26)\");\n\nvar c = OKEX:BSV-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex-bsv-usdt-swap\", color=\"rgb(189,101,165)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:BSVUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(19,251,99)\");\n\nvar b = OKEX:BSV-USD-SWAP;\nline(cum(b.vbuy-b.vsell), title=\"okex-bsv-usd-swap\", color=\"rgb(195,192,12)\");\n\nvar c = OKEX:BSV-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex-bsv-usdt-swap\", color=\"rgb(195,192,240)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -513,7 +513,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = OKEX:BSV-USDC;\nline(cum(a.vbuy-a.vsell), title=\"okex-bsv-usdc\", color=\"rgb(189,101,104)\");\n\nvar b = OKEX:BSV-USDT;\nline(cum(b.vbuy-b.vsell), title=\"okex-bsv-usdt\", color=\"rgb(189,101,153)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = OKEX:BSV-USDC;\nline(cum(a.vbuy-a.vsell), title=\"okex-bsv-usdc\", color=\"rgb(195,192,241)\");\n\nvar b = OKEX:BSV-USDT;\nline(cum(b.vbuy-b.vsell), title=\"okex-bsv-usdt\", color=\"rgb(195,192,235)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
