@@ -481,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:dashusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(2,252,80)\");\n\nvar b = BYBIT:DASHUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(104,240,231)\");\n\nvar c = OKEX:DASH-USD-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex-dash-usd-swap\", color=\"rgb(203,221,35)\");\n\nvar d = OKEX:DASH-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex-dash-usdt-swap\", color=\"rgb(203,221,165)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:dashusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(232,26,158)\");\n\nvar b = BYBIT:DASHUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(242,215,244)\");\n\nvar c = OKEX:DASH-USD-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex-dash-usd-swap\", color=\"rgb(143,178,146)\");\n\nvar d = OKEX:DASH-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex-dash-usdt-swap\", color=\"rgb(143,178,103)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -525,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:dashbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-dashbusd\", color=\"rgb(170,203,139)\");\n\nvar b = BINANCE:dashusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-dashusdt\", color=\"rgb(170,203,178)\");\n\nvar c = COINBASE:DASH-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(217,165,50)\");\n\nvar d = KUCOIN:DASH-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(103,128,133)\");\n\nvar e = OKEX:DASH-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-dash-usdc\", color=\"rgb(203,221,112)\");\n\nvar f = OKEX:DASH-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-dash-usdt\", color=\"rgb(203,221,155)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:dashbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-dashbusd\", color=\"rgb(179,55,209)\");\n\nvar b = BINANCE:dashusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-dashusdt\", color=\"rgb(179,55,83)\");\n\nvar c = COINBASE:DASH-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(208,159,36)\");\n\nvar d = KUCOIN:DASH-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(74,92,231)\");\n\nvar e = OKEX:DASH-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-dash-usdc\", color=\"rgb(143,178,255)\");\n\nvar f = OKEX:DASH-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-dash-usdt\", color=\"rgb(143,178,212)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
