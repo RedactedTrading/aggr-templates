@@ -475,7 +475,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:HFTUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(182,15,219)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:HFTUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(19,95,58)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +519,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:hftbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-hftbusd\", color=\"rgb(95,182,156)\");\n\nvar b = BINANCE:hftusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-hftusdt\", color=\"rgb(95,182,230)\");\n\nvar c = COINBASE:HFT-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-hft-usd\", color=\"rgb(6,192,223)\");\n\nvar d = COINBASE:HFT-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-hft-usdt\", color=\"rgb(6,192,197)\");\n\nvar e = KUCOIN:HFT-USDC;\nline(cum(e.vbuy-e.vsell), title=\"kucoin-hft-usdc\", color=\"rgb(218,217,39)\");\n\nvar f = KUCOIN:HFT-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin-hft-usdt\", color=\"rgb(218,217,221)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:hftbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-hftbusd\", color=\"rgb(234,108,109)\");\n\nvar b = BINANCE:hftusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-hftusdt\", color=\"rgb(234,108,252)\");\n\nvar c = COINBASE:HFT-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-hft-usd\", color=\"rgb(4,143,188)\");\n\nvar d = COINBASE:HFT-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-hft-usdt\", color=\"rgb(4,143,9)\");\n\nvar e = KUCOIN:HFT-USDC;\nline(cum(e.vbuy-e.vsell), title=\"kucoin-hft-usdc\", color=\"rgb(49,237,134)\");\n\nvar f = KUCOIN:HFT-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin-hft-usdt\", color=\"rgb(49,237,125)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
