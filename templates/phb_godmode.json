@@ -469,7 +469,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:phbbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-phbbusd\", color=\"rgb(133,188,140)\");\n\nvar b = BINANCE_FUTURES:phbusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-phbusdt\", color=\"rgb(133,188,139)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:phbbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-phbbusd\", color=\"rgb(209,206,128)\");\n\nvar b = BINANCE_FUTURES:phbusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-phbusdt\", color=\"rgb(209,206,229)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -513,7 +513,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:phbbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-phbbusd\", color=\"rgb(122,223,27)\");\n\nvar b = BINANCE:phbusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-phbusdc\", color=\"rgb(122,223,220)\");\n\nvar c = BINANCE:phbusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-phbusdt\", color=\"rgb(122,223,238)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:phbbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-phbbusd\", color=\"rgb(39,120,143)\");\n\nvar b = BINANCE:phbusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-phbusdc\", color=\"rgb(39,120,52)\");\n\nvar c = BINANCE:phbusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-phbusdt\", color=\"rgb(39,120,230)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
