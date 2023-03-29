@@ -471,7 +471,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:vetusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(97,54,108)\");\n\nvar b = BYBIT:VETUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(97,153,158)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:vetusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(29,1,18)\");\n\nvar b = BYBIT:VETUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(16,34,149)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -515,7 +515,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:vetbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-vetbusd\", color=\"rgb(84,235,112)\");\n\nvar b = BINANCE:vetusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-vetusdt\", color=\"rgb(84,235,217)\");\n\nvar c = BITFINEX:VETUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(175,189,135)\");\n\nvar d = KUCOIN:VET-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(234,146,64)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:vetbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-vetbusd\", color=\"rgb(174,50,173)\");\n\nvar b = BINANCE:vetusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-vetusdt\", color=\"rgb(174,50,170)\");\n\nvar c = BITFINEX:VETUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(251,232,109)\");\n\nvar d = KUCOIN:VET-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(72,107,164)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
