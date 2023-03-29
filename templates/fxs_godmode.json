@@ -471,7 +471,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:fxsusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(161,182,200)\");\n\nvar b = BYBIT:FXSUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(1,89,129)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:fxsusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(164,143,193)\");\n\nvar b = BYBIT:FXSUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(22,35,172)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -515,7 +515,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:fxsbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-fxsbusd\", color=\"rgb(39,155,204)\");\n\nvar b = BINANCE:fxsusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-fxsusdt\", color=\"rgb(39,155,242)\");\n\nvar c = KUCOIN:FXS-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(191,219,103)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:fxsbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-fxsbusd\", color=\"rgb(152,236,40)\");\n\nvar b = BINANCE:fxsusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-fxsusdt\", color=\"rgb(152,236,81)\");\n\nvar c = KUCOIN:FXS-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(246,145,115)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
