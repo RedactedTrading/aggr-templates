@@ -512,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:idexbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-idexbusd\", color=\"rgb(153,92,144)\");\n\nvar b = BINANCE:idexusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-idexusdt\", color=\"rgb(153,92,170)\");\n\nvar c = COINBASE:IDEX-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-idex-usd\", color=\"rgb(54,9,11)\");\n\nvar d = COINBASE:IDEX-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-idex-usdt\", color=\"rgb(54,9,199)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:idexbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-idexbusd\", color=\"rgb(200,138,100)\");\n\nvar b = BINANCE:idexusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-idexusdt\", color=\"rgb(200,138,41)\");\n\nvar c = COINBASE:IDEX-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-idex-usd\", color=\"rgb(39,232,176)\");\n\nvar d = COINBASE:IDEX-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-idex-usdt\", color=\"rgb(39,232,148)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
