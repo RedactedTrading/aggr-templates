@@ -473,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:GLMRUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(147,247,87)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:GLMRUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(127,148,76)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -517,7 +517,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:glmrbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-glmrbusd\", color=\"rgb(142,160,199)\");\n\nvar b = BINANCE:glmrusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-glmrusdt\", color=\"rgb(142,160,83)\");\n\nvar c = KUCOIN:GLMR-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(14,5,102)\");\n\nvar d = OKEX:GLMR-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-glmr-usdc\", color=\"rgb(94,236,104)\");\n\nvar e = OKEX:GLMR-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-glmr-usdt\", color=\"rgb(94,236,176)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:glmrbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-glmrbusd\", color=\"rgb(172,225,249)\");\n\nvar b = BINANCE:glmrusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-glmrusdt\", color=\"rgb(172,225,51)\");\n\nvar c = KUCOIN:GLMR-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(229,132,231)\");\n\nvar d = OKEX:GLMR-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-glmr-usdc\", color=\"rgb(216,16,126)\");\n\nvar e = OKEX:GLMR-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-glmr-usdt\", color=\"rgb(216,16,110)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
