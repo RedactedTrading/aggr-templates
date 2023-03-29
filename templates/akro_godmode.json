@@ -467,7 +467,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:AKROUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(63,193,128)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:AKROUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(39,101,91)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -511,7 +511,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:akrobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-akrobusd\", color=\"rgb(203,71,230)\");\n\nvar b = BINANCE:akrousdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-akrousdt\", color=\"rgb(203,71,194)\");\n\nvar c = KUCOIN:AKRO-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(251,20,117)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:akrobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-akrobusd\", color=\"rgb(244,49,255)\");\n\nvar b = BINANCE:akrousdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-akrousdt\", color=\"rgb(244,49,4)\");\n\nvar c = KUCOIN:AKRO-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(234,35,30)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
