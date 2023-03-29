@@ -471,7 +471,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:agixbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-agixbusd\", color=\"rgb(236,135,53)\");\n\nvar b = BINANCE_FUTURES:agixusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-agixusdt\", color=\"rgb(236,135,11)\");\n\nvar c = BYBIT:AGIXUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(50,205,118)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:agixbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-agixbusd\", color=\"rgb(251,156,250)\");\n\nvar b = BINANCE_FUTURES:agixusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-agixusdt\", color=\"rgb(251,156,125)\");\n\nvar c = BYBIT:AGIXUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(41,6,65)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -515,7 +515,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:agixbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-agixbusd\", color=\"rgb(154,235,92)\");\n\nvar b = BINANCE:agixusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-agixusdt\", color=\"rgb(154,235,37)\");\n\nvar c = KUCOIN:AGIX-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(217,182,230)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:agixbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-agixbusd\", color=\"rgb(158,77,82)\");\n\nvar b = BINANCE:agixusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-agixusdt\", color=\"rgb(158,77,91)\");\n\nvar c = KUCOIN:AGIX-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(208,70,69)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
