@@ -512,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ancbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ancbusd\", color=\"rgb(60,158,70)\");\n\nvar b = BINANCE:ancusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-ancusdt\", color=\"rgb(60,158,166)\");\n\nvar c = KUCOIN:ANC-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(40,241,64)\");\n\nvar d = OKEX:ANC-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-anc-usdc\", color=\"rgb(62,105,119)\");\n\nvar e = OKEX:ANC-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-anc-usdt\", color=\"rgb(62,105,110)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ancbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ancbusd\", color=\"rgb(220,243,235)\");\n\nvar b = BINANCE:ancusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-ancusdt\", color=\"rgb(220,243,203)\");\n\nvar c = KUCOIN:ANC-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(76,43,172)\");\n\nvar d = OKEX:ANC-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-anc-usdc\", color=\"rgb(81,73,231)\");\n\nvar e = OKEX:ANC-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-anc-usdt\", color=\"rgb(81,73,235)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
