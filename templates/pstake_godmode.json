@@ -508,7 +508,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = KUCOIN:PSTAKE-USDT;\nline(cum(a.vbuy-a.vsell), title=\"kucoin\", color=\"rgb(25,112,91)\");\n\nvar b = OKEX:PSTAKE-USDT;\nline(cum(b.vbuy-b.vsell), title=\"okex\", color=\"rgb(79,113,13)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = KUCOIN:PSTAKE-USDT;\nline(cum(a.vbuy-a.vsell), title=\"kucoin\", color=\"rgb(28,41,133)\");\n\nvar b = OKEX:PSTAKE-USDT;\nline(cum(b.vbuy-b.vsell), title=\"okex\", color=\"rgb(113,220,43)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
