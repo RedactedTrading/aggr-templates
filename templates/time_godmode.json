@@ -508,7 +508,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = COINBASE:TIME-USD;\nline(cum(a.vbuy-a.vsell), title=\"coinbase-time-usd\", color=\"rgb(110,243,91)\");\n\nvar b = COINBASE:TIME-USDT;\nline(cum(b.vbuy-b.vsell), title=\"coinbase-time-usdt\", color=\"rgb(110,243,161)\");\n\nvar c = KUCOIN:TIME-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(97,23,166)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = COINBASE:TIME-USD;\nline(cum(a.vbuy-a.vsell), title=\"coinbase-time-usd\", color=\"rgb(14,63,190)\");\n\nvar b = COINBASE:TIME-USDT;\nline(cum(b.vbuy-b.vsell), title=\"coinbase-time-usdt\", color=\"rgb(14,63,1)\");\n\nvar c = KUCOIN:TIME-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(233,132,101)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
