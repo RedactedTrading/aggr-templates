@@ -512,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:fisbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-fisbusd\", color=\"rgb(175,92,114)\");\n\nvar b = BINANCE:fisusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-fisusdt\", color=\"rgb(175,92,19)\");\n\nvar c = COINBASE:FIS-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-fis-usd\", color=\"rgb(202,211,149)\");\n\nvar d = COINBASE:FIS-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-fis-usdt\", color=\"rgb(202,211,214)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:fisbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-fisbusd\", color=\"rgb(47,213,121)\");\n\nvar b = BINANCE:fisusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-fisusdt\", color=\"rgb(47,213,154)\");\n\nvar c = COINBASE:FIS-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-fis-usd\", color=\"rgb(183,110,234)\");\n\nvar d = COINBASE:FIS-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-fis-usdt\", color=\"rgb(183,110,152)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
