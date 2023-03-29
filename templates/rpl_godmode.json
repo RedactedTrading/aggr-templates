@@ -475,7 +475,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:RPLUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(82,223,18)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:RPLUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(80,28,26)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +519,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:rplbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-rplbusd\", color=\"rgb(133,168,254)\");\n\nvar b = BINANCE:rplusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-rplusdt\", color=\"rgb(133,168,146)\");\n\nvar c = COINBASE:RPL-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(175,64,174)\");\n\nvar d = KUCOIN:RPL-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(214,89,29)\");\n\nvar e = OKEX:RPL-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-rpl-usdc\", color=\"rgb(244,228,49)\");\n\nvar f = OKEX:RPL-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-rpl-usdt\", color=\"rgb(244,228,84)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:rplbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-rplbusd\", color=\"rgb(253,196,6)\");\n\nvar b = BINANCE:rplusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-rplusdt\", color=\"rgb(253,196,196)\");\n\nvar c = COINBASE:RPL-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(85,147,34)\");\n\nvar d = KUCOIN:RPL-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(54,95,77)\");\n\nvar e = OKEX:RPL-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-rpl-usdc\", color=\"rgb(162,191,199)\");\n\nvar f = OKEX:RPL-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-rpl-usdt\", color=\"rgb(162,191,142)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
