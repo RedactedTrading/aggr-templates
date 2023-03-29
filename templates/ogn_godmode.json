@@ -475,7 +475,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:ognusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(62,165,179)\");\n\nvar b = BYBIT:OGNUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(207,232,162)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:ognusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(64,15,80)\");\n\nvar b = BYBIT:OGNUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(171,122,18)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +519,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ognbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ognbusd\", color=\"rgb(219,6,28)\");\n\nvar b = BINANCE:ognusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-ognusdt\", color=\"rgb(219,6,11)\");\n\nvar c = BITFINEX:OGNUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(210,21,27)\");\n\nvar d = COINBASE:OGN-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(93,188,90)\");\n\nvar e = KUCOIN:OGN-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(139,142,253)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ognbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ognbusd\", color=\"rgb(50,82,69)\");\n\nvar b = BINANCE:ognusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-ognusdt\", color=\"rgb(50,82,177)\");\n\nvar c = BITFINEX:OGNUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(9,41,59)\");\n\nvar d = COINBASE:OGN-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(188,133,37)\");\n\nvar e = KUCOIN:OGN-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(13,230,207)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
