@@ -17,7 +17,6 @@
             "BINANCE:1inchbusd",
             "BINANCE:1inchusdt",
             "BINANCE_FUTURES:1inchusdt",
-            "BITFINEX:1INCH:USD",
             "BYBIT:1INCHUSDT",
             "COINBASE:1INCH-USD",
             "KRAKEN:1INCH/USD",
@@ -49,7 +48,6 @@
           "markets": [
             "BINANCE:1inchbusd",
             "BINANCE:1inchusdt",
-            "BITFINEX:1INCH:USD",
             "COINBASE:1INCH-USD",
             "KRAKEN:1INCH/USD",
             "KUCOIN:1INCH-USDT",
@@ -327,7 +325,7 @@
         "fetched": false
       },
       "BITFINEX": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "BITMEX": {
@@ -483,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:1inchusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(85,57,200)\");\n\nvar b = BYBIT:1INCHUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(84,51,141)\");\n\nvar c = OKEX:1INCH-USD-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex-1inch-usd-swap\", color=\"rgb(176,87,84)\");\n\nvar d = OKEX:1INCH-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex-1inch-usdt-swap\", color=\"rgb(176,87,87)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:1inchusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(205,231,94)\");\n\nvar b = BYBIT:1INCHUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(121,47,150)\");\n\nvar c = OKEX:1INCH-USD-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex-1inch-usd-swap\", color=\"rgb(42,139,121)\");\n\nvar d = OKEX:1INCH-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex-1inch-usdt-swap\", color=\"rgb(42,139,72)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -527,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:1inchbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-1inchbusd\", color=\"rgb(118,50,111)\");\n\nvar b = BINANCE:1inchusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-1inchusdt\", color=\"rgb(118,50,182)\");\n\nvar c = BITFINEX:1INCH:USD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(129,96,208)\");\n\nvar d = COINBASE:1INCH-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(17,215,118)\");\n\nvar e = KUCOIN:1INCH-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(251,184,7)\");\n\nvar f = OKEX:1INCH-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-1inch-usdc\", color=\"rgb(176,87,201)\");\n\nvar g = OKEX:1INCH-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-1inch-usdt\", color=\"rgb(176,87,191)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:1inchbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-1inchbusd\", color=\"rgb(214,231,196)\");\n\nvar b = BINANCE:1inchusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-1inchusdt\", color=\"rgb(214,231,192)\");\n\nvar c = COINBASE:1INCH-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(75,57,246)\");\n\nvar d = KUCOIN:1INCH-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(134,200,101)\");\n\nvar e = OKEX:1INCH-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-1inch-usdc\", color=\"rgb(42,139,243)\");\n\nvar f = OKEX:1INCH-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-1inch-usdt\", color=\"rgb(42,139,36)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -888,7 +886,6 @@
         "BINANCE:1inchbusd": false,
         "BINANCE:1inchusdt": false,
         "BINANCE_FUTURES:1inchusdt": false,
-        "BITFINEX:1INCH:USD": false,
         "BYBIT:1INCHUSDT": false,
         "COINBASE:1INCH-USD": false,
         "KRAKEN:1INCH/USD": false,
