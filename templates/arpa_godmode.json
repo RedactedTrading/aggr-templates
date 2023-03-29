@@ -475,7 +475,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:arpausdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(221,178,172)\");\n\nvar b = BYBIT:ARPAUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(142,102,52)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:arpausdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(113,64,99)\");\n\nvar b = BYBIT:ARPAUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(60,9,97)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +519,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:arpabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-arpabusd\", color=\"rgb(214,221,58)\");\n\nvar b = BINANCE:arpausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-arpausdt\", color=\"rgb(214,221,149)\");\n\nvar c = COINBASE:ARPA-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-arpa-usd\", color=\"rgb(164,71,194)\");\n\nvar d = COINBASE:ARPA-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-arpa-usdt\", color=\"rgb(164,71,232)\");\n\nvar e = KUCOIN:ARPA-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(6,77,48)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:arpabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-arpabusd\", color=\"rgb(78,181,185)\");\n\nvar b = BINANCE:arpausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-arpausdt\", color=\"rgb(78,181,102)\");\n\nvar c = COINBASE:ARPA-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-arpa-usd\", color=\"rgb(65,139,136)\");\n\nvar d = COINBASE:ARPA-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-arpa-usdt\", color=\"rgb(65,139,178)\");\n\nvar e = KUCOIN:ARPA-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(31,82,93)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
