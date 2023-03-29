@@ -479,7 +479,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:perpusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(117,31,14)\");\n\nvar b = KUCOIN:PERP-USDT;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(197,22,58)\");\n\nvar c = OKEX:PERP-USDC;\nline(cum(c.vbuy-c.vsell), title=\"okex-perp-usdc\", color=\"rgb(26,122,234)\");\n\nvar d = OKEX:PERP-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex-perp-usdt\", color=\"rgb(26,122,30)\");\n\nvar e = OKEX:PERP-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-perp-usdt-swap\", color=\"rgb(26,122,117)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:perpusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(67,52,77)\");\n\nvar b = KUCOIN:PERP-USDT;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(219,124,176)\");\n\nvar c = OKEX:PERP-USDC;\nline(cum(c.vbuy-c.vsell), title=\"okex-perp-usdc\", color=\"rgb(82,9,57)\");\n\nvar d = OKEX:PERP-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex-perp-usdt\", color=\"rgb(82,9,147)\");\n\nvar e = OKEX:PERP-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-perp-usdt-swap\", color=\"rgb(82,9,169)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -523,7 +523,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:perpbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-perpbusd\", color=\"rgb(52,90,148)\");\n\nvar b = BINANCE:perpusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-perpusdt\", color=\"rgb(52,90,196)\");\n\nvar c = COINBASE:PERP-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-perp-usd\", color=\"rgb(114,115,244)\");\n\nvar d = COINBASE:PERP-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-perp-usdt\", color=\"rgb(114,115,73)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:perpbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-perpbusd\", color=\"rgb(65,234,148)\");\n\nvar b = BINANCE:perpusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-perpusdt\", color=\"rgb(65,234,142)\");\n\nvar c = COINBASE:PERP-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-perp-usd\", color=\"rgb(6,74,215)\");\n\nvar d = COINBASE:PERP-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-perp-usdt\", color=\"rgb(6,74,184)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
