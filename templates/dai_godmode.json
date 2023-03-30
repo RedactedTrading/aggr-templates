@@ -17,6 +17,7 @@
             "BINANCE:daibusd",
             "BINANCE:daiusdt",
             "BITFINEX:DAIUSD",
+            "BYBIT:DAIUSDT-SPOT",
             "COINBASE:DAI-USD",
             "KRAKEN:DAI/USD",
             "KRAKEN:DAI/USDT",
@@ -40,6 +41,7 @@
             "BINANCE:daibusd",
             "BINANCE:daiusdt",
             "BITFINEX:DAIUSD",
+            "BYBIT:DAIUSDT-SPOT",
             "COINBASE:DAI-USD",
             "KRAKEN:DAI/USD",
             "KRAKEN:DAI/USDT",
@@ -328,7 +330,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -516,7 +518,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:daibusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-daibusd\", color=\"rgb(221,136,139)\");\n\nvar b = BINANCE:daiusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-daiusdt\", color=\"rgb(221,136,253)\");\n\nvar c = BITFINEX:DAIUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(210,47,17)\");\n\nvar d = COINBASE:DAI-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(218,206,17)\");\n\nvar e = OKEX:DAI-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(9,247,66)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:daibusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-daibusd\", color=\"rgb(2,220,85)\");\n\nvar b = BINANCE:daiusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-daiusdt\", color=\"rgb(2,220,86)\");\n\nvar c = BITFINEX:DAIUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(9,177,220)\");\n\nvar d = BYBIT:DAIUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(7,29,221)\");\n\nvar e = COINBASE:DAI-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase\", color=\"rgb(246,1,130)\");\n\nvar f = OKEX:DAI-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(216,41,12)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -877,6 +879,7 @@
         "BINANCE:daibusd": false,
         "BINANCE:daiusdt": false,
         "BITFINEX:DAIUSD": false,
+        "BYBIT:DAIUSDT-SPOT": false,
         "COINBASE:DAI-USD": false,
         "KRAKEN:DAI/USD": false,
         "KRAKEN:DAI/USDT": false,
