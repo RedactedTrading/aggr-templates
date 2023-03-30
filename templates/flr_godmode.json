@@ -16,8 +16,11 @@
           "markets": [
             "BITFINEX:FLRUSD",
             "BITMEX:FLRUSD",
+            "BITMEX:FLRUSDT",
             "BYBIT:FLRUSDT",
+            "BYBIT:FLRUSDT-SPOT",
             "KRAKEN:FLR/USD",
+            "KRAKEN:PF_FLRUSD",
             "KUCOIN:FLR-USDC",
             "KUCOIN:FLR-USDT",
             "OKEX:FLR-USDC",
@@ -32,6 +35,7 @@
           "zoom": 0.5,
           "markets": [
             "BITMEX:FLRUSD",
+            "BITMEX:FLRUSDT",
             "BYBIT:FLRUSDT"
           ]
         },
@@ -42,7 +46,9 @@
           "zoom": 0.5,
           "markets": [
             "BITFINEX:FLRUSD",
+            "BYBIT:FLRUSDT-SPOT",
             "KRAKEN:FLR/USD",
+            "KRAKEN:PF_FLRUSD",
             "KUCOIN:FLR-USDC",
             "KUCOIN:FLR-USDT",
             "OKEX:FLR-USDC",
@@ -475,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITMEX:FLRUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitmex\", color=\"rgb(220,100,143)\");\n\nvar b = BYBIT:FLRUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(52,8,116)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITMEX:FLRUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitmex-flrusd\", color=\"rgb(114,31,153)\");\n\nvar b = BITMEX:FLRUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bitmex-flrusdt\", color=\"rgb(114,31,207)\");\n\nvar c = BYBIT:FLRUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(254,211,76)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITFINEX:FLRUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitfinex\", color=\"rgb(60,177,129)\");\n\nvar b = KUCOIN:FLR-USDC;\nline(cum(b.vbuy-b.vsell), title=\"kucoin-flr-usdc\", color=\"rgb(99,46,157)\");\n\nvar c = KUCOIN:FLR-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin-flr-usdt\", color=\"rgb(99,46,55)\");\n\nvar d = OKEX:FLR-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-flr-usdc\", color=\"rgb(247,220,146)\");\n\nvar e = OKEX:FLR-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-flr-usdt\", color=\"rgb(247,220,251)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITFINEX:FLRUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitfinex\", color=\"rgb(68,88,27)\");\n\nvar b = BYBIT:FLRUSDT-SPOT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(254,211,76)\");\n\nvar c = KUCOIN:FLR-USDC;\nline(cum(c.vbuy-c.vsell), title=\"kucoin-flr-usdc\", color=\"rgb(18,54,159)\");\n\nvar d = KUCOIN:FLR-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin-flr-usdt\", color=\"rgb(18,54,2)\");\n\nvar e = OKEX:FLR-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-flr-usdc\", color=\"rgb(73,76,64)\");\n\nvar f = OKEX:FLR-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-flr-usdt\", color=\"rgb(73,76,215)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -879,8 +885,11 @@
       "hiddenMarkets": {
         "BITFINEX:FLRUSD": false,
         "BITMEX:FLRUSD": false,
+        "BITMEX:FLRUSDT": false,
         "BYBIT:FLRUSDT": false,
+        "BYBIT:FLRUSDT-SPOT": false,
         "KRAKEN:FLR/USD": false,
+        "KRAKEN:PF_FLRUSD": false,
         "KUCOIN:FLR-USDC": false,
         "KUCOIN:FLR-USDT": false,
         "OKEX:FLR-USDC": false,
