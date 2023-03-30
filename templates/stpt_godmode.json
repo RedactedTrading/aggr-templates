@@ -15,7 +15,8 @@
           "type": "chart",
           "markets": [
             "BINANCE:stptbusd",
-            "BINANCE:stptusdt"
+            "BINANCE:stptusdt",
+            "UPBIT:KRW-STPT"
           ],
           "zoom": 1
         },
@@ -33,7 +34,8 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE:stptbusd",
-            "BINANCE:stptusdt"
+            "BINANCE:stptusdt",
+            "UPBIT:KRW-STPT"
           ]
         }
       },
@@ -371,7 +373,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -506,7 +508,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:stptbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-stptbusd\", color=\"rgb(11,132,63)\");\n\nvar b = BINANCE:stptusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-stptusdt\", color=\"rgb(11,132,67)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:stptbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-stptbusd\", color=\"rgb(222,222,232)\");\n\nvar b = BINANCE:stptusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-stptusdt\", color=\"rgb(222,222,34)\");\n\nvar c = UPBIT:KRW-STPT;\nline(cum(c.vbuy-c.vsell), title=\"upbit\", color=\"rgb(2,79,28)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -865,7 +867,8 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:stptbusd": false,
-        "BINANCE:stptusdt": false
+        "BINANCE:stptusdt": false,
+        "UPBIT:KRW-STPT": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
