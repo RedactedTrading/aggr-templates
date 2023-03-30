@@ -512,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:mdtbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-mdtbusd\", color=\"rgb(45,44,10)\");\n\nvar b = BINANCE:mdtusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-mdtusdt\", color=\"rgb(45,44,52)\");\n\nvar c = COINBASE:MDT-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-mdt-usd\", color=\"rgb(50,209,199)\");\n\nvar d = COINBASE:MDT-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-mdt-usdt\", color=\"rgb(50,209,141)\");\n\nvar e = OKEX:MDT-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(18,5,107)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:mdtbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-mdtbusd\", color=\"rgb(119,176,236)\");\n\nvar b = BINANCE:mdtusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-mdtusdt\", color=\"rgb(119,176,14)\");\n\nvar c = COINBASE:MDT-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-mdt-usd\", color=\"rgb(24,149,102)\");\n\nvar d = COINBASE:MDT-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-mdt-usdt\", color=\"rgb(24,149,77)\");\n\nvar e = OKEX:MDT-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(146,217,144)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
