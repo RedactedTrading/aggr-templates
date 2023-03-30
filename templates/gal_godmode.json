@@ -18,10 +18,12 @@
             "BINANCE:galusdt",
             "BINANCE_FUTURES:galusdt",
             "BYBIT:GALUSDT",
+            "BYBIT:GALUSDT-SPOT",
             "COINBASE:GAL-USD",
             "COINBASE:GAL-USDT",
             "KRAKEN:GAL/USD",
-            "KUCOIN:GAL-USDT"
+            "KUCOIN:GAL-USDT",
+            "KUCOIN:GALUSDTM"
           ],
           "zoom": 1
         },
@@ -32,7 +34,8 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE_FUTURES:galusdt",
-            "BYBIT:GALUSDT"
+            "BYBIT:GALUSDT",
+            "KUCOIN:GALUSDTM"
           ]
         },
         "trades2": {
@@ -43,6 +46,7 @@
           "markets": [
             "BINANCE:galbusd",
             "BINANCE:galusdt",
+            "BYBIT:GALUSDT-SPOT",
             "COINBASE:GAL-USD",
             "COINBASE:GAL-USDT",
             "KRAKEN:GAL/USD",
@@ -475,7 +479,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:galusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(201,177,255)\");\n\nvar b = BYBIT:GALUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(157,69,20)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:galusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(196,92,171)\");\n\nvar b = BYBIT:GALUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(187,218,93)\");\n\nvar c = KUCOIN:GALUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(229,0,165)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +523,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:galbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-galbusd\", color=\"rgb(215,120,237)\");\n\nvar b = BINANCE:galusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-galusdt\", color=\"rgb(215,120,74)\");\n\nvar c = COINBASE:GAL-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-gal-usd\", color=\"rgb(236,118,20)\");\n\nvar d = COINBASE:GAL-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-gal-usdt\", color=\"rgb(236,118,220)\");\n\nvar e = KUCOIN:GAL-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(200,194,101)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:galbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-galbusd\", color=\"rgb(80,206,34)\");\n\nvar b = BINANCE:galusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-galusdt\", color=\"rgb(80,206,224)\");\n\nvar c = BYBIT:GALUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(187,218,93)\");\n\nvar d = COINBASE:GAL-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-gal-usd\", color=\"rgb(249,153,156)\");\n\nvar e = COINBASE:GAL-USDT;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-gal-usdt\", color=\"rgb(249,153,250)\");\n\nvar f = KUCOIN:GAL-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin\", color=\"rgb(229,0,165)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -881,10 +885,12 @@
         "BINANCE:galusdt": false,
         "BINANCE_FUTURES:galusdt": false,
         "BYBIT:GALUSDT": false,
+        "BYBIT:GALUSDT-SPOT": false,
         "COINBASE:GAL-USD": false,
         "COINBASE:GAL-USDT": false,
         "KRAKEN:GAL/USD": false,
-        "KUCOIN:GAL-USDT": false
+        "KUCOIN:GAL-USDT": false,
+        "KUCOIN:GALUSDTM": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
