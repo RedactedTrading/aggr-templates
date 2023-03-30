@@ -14,6 +14,7 @@
           "name": "",
           "type": "chart",
           "markets": [
+            "BYBIT:RDNTUSDT-SPOT",
             "KUCOIN:RDNT-USDT",
             "OKEX:RDNT-USDC",
             "OKEX:RDNT-USDT"
@@ -33,6 +34,7 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BYBIT:RDNTUSDT-SPOT",
             "KUCOIN:RDNT-USDT",
             "OKEX:RDNT-USDC",
             "OKEX:RDNT-USDT"
@@ -320,7 +322,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -508,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = KUCOIN:RDNT-USDT;\nline(cum(a.vbuy-a.vsell), title=\"kucoin\", color=\"rgb(242,8,243)\");\n\nvar b = OKEX:RDNT-USDC;\nline(cum(b.vbuy-b.vsell), title=\"okex-rdnt-usdc\", color=\"rgb(60,2,51)\");\n\nvar c = OKEX:RDNT-USDT;\nline(cum(c.vbuy-c.vsell), title=\"okex-rdnt-usdt\", color=\"rgb(60,2,25)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:RDNTUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(49,205,107)\");\n\nvar b = KUCOIN:RDNT-USDT;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(50,87,167)\");\n\nvar c = OKEX:RDNT-USDC;\nline(cum(c.vbuy-c.vsell), title=\"okex-rdnt-usdc\", color=\"rgb(224,243,180)\");\n\nvar d = OKEX:RDNT-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex-rdnt-usdt\", color=\"rgb(224,243,152)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -866,6 +868,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
+        "BYBIT:RDNTUSDT-SPOT": false,
         "KUCOIN:RDNT-USDT": false,
         "OKEX:RDNT-USDC": false,
         "OKEX:RDNT-USDT": false
