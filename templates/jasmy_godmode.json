@@ -18,11 +18,13 @@
             "BINANCE:jasmyusdt",
             "BINANCE_FUTURES:jasmyusdt",
             "BYBIT:JASMYUSDT",
+            "BYBIT:JASMYUSDT-SPOT",
             "COINBASE:JASMY-USD",
             "COINBASE:JASMY-USDT",
             "KRAKEN:JASMY/USD",
             "KUCOIN:JASMY-USDC",
-            "KUCOIN:JASMY-USDT"
+            "KUCOIN:JASMY-USDT",
+            "KUCOIN:JASMYUSDTM"
           ],
           "zoom": 1
         },
@@ -33,7 +35,8 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE_FUTURES:jasmyusdt",
-            "BYBIT:JASMYUSDT"
+            "BYBIT:JASMYUSDT",
+            "KUCOIN:JASMYUSDTM"
           ]
         },
         "trades2": {
@@ -44,6 +47,7 @@
           "markets": [
             "BINANCE:jasmybusd",
             "BINANCE:jasmyusdt",
+            "BYBIT:JASMYUSDT-SPOT",
             "COINBASE:JASMY-USD",
             "COINBASE:JASMY-USDT",
             "KRAKEN:JASMY/USD",
@@ -477,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:jasmyusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(4,48,231)\");\n\nvar b = BYBIT:JASMYUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(73,34,3)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:jasmyusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(81,146,106)\");\n\nvar b = BYBIT:JASMYUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(97,93,97)\");\n\nvar c = KUCOIN:JASMYUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(246,129,137)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -521,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:jasmybusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-jasmybusd\", color=\"rgb(87,82,98)\");\n\nvar b = BINANCE:jasmyusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-jasmyusdt\", color=\"rgb(87,82,77)\");\n\nvar c = COINBASE:JASMY-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-jasmy-usd\", color=\"rgb(20,160,181)\");\n\nvar d = COINBASE:JASMY-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-jasmy-usdt\", color=\"rgb(20,160,90)\");\n\nvar e = KUCOIN:JASMY-USDC;\nline(cum(e.vbuy-e.vsell), title=\"kucoin-jasmy-usdc\", color=\"rgb(63,42,138)\");\n\nvar f = KUCOIN:JASMY-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin-jasmy-usdt\", color=\"rgb(63,42,171)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:jasmybusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-jasmybusd\", color=\"rgb(27,86,204)\");\n\nvar b = BINANCE:jasmyusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-jasmyusdt\", color=\"rgb(27,86,85)\");\n\nvar c = BYBIT:JASMYUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(97,93,97)\");\n\nvar d = COINBASE:JASMY-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-jasmy-usd\", color=\"rgb(254,110,84)\");\n\nvar e = COINBASE:JASMY-USDT;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-jasmy-usdt\", color=\"rgb(254,110,103)\");\n\nvar f = KUCOIN:JASMY-USDC;\nline(cum(f.vbuy-f.vsell), title=\"kucoin-jasmy-usdc\", color=\"rgb(246,129,135)\");\n\nvar g = KUCOIN:JASMY-USDT;\nline(cum(g.vbuy-g.vsell), title=\"kucoin-jasmy-usdt\", color=\"rgb(246,129,112)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -883,11 +887,13 @@
         "BINANCE:jasmyusdt": false,
         "BINANCE_FUTURES:jasmyusdt": false,
         "BYBIT:JASMYUSDT": false,
+        "BYBIT:JASMYUSDT-SPOT": false,
         "COINBASE:JASMY-USD": false,
         "COINBASE:JASMY-USDT": false,
         "KRAKEN:JASMY/USD": false,
         "KUCOIN:JASMY-USDC": false,
-        "KUCOIN:JASMY-USDT": false
+        "KUCOIN:JASMY-USDT": false,
+        "KUCOIN:JASMYUSDTM": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
