@@ -17,13 +17,18 @@
             "BINANCE:unibusd",
             "BINANCE:uniusdt",
             "BINANCE_FUTURES:unibusd",
+            "BINANCE_FUTURES:uniusd_perp",
             "BINANCE_FUTURES:uniusdt",
             "BITFINEX:UNIUSD",
             "BITMEX:UNI_USDT",
             "BYBIT:UNIUSDT",
+            "BYBIT:UNIUSDT-SPOT",
             "COINBASE:UNI-USD",
+            "DERIBIT:UNI_USDC-PERPETUAL",
+            "KRAKEN:PF_UNIUSD",
             "KRAKEN:UNI/USD",
             "KUCOIN:UNI-USDT",
+            "KUCOIN:UNIUSDTM",
             "OKEX:UNI-USD-SWAP",
             "OKEX:UNI-USDC",
             "OKEX:UNI-USDT",
@@ -38,9 +43,12 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE_FUTURES:unibusd",
+            "BINANCE_FUTURES:uniusd_perp",
             "BINANCE_FUTURES:uniusdt",
             "BITMEX:UNI_USDT",
             "BYBIT:UNIUSDT",
+            "DERIBIT:UNI_USDC-PERPETUAL",
+            "KUCOIN:UNIUSDTM",
             "OKEX:UNI-USD-SWAP",
             "OKEX:UNI-USDT-SWAP"
           ]
@@ -54,7 +62,9 @@
             "BINANCE:unibusd",
             "BINANCE:uniusdt",
             "BITFINEX:UNIUSD",
+            "BYBIT:UNIUSDT-SPOT",
             "COINBASE:UNI-USD",
+            "KRAKEN:PF_UNIUSD",
             "KRAKEN:UNI/USD",
             "KUCOIN:UNI-USDT",
             "OKEX:UNI-USDC",
@@ -351,7 +361,7 @@
         "fetched": false
       },
       "DERIBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "DYDX": {
@@ -487,7 +497,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:unibusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-unibusd\", color=\"rgb(48,4,112)\");\n\nvar b = BINANCE_FUTURES:uniusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-uniusdt\", color=\"rgb(48,4,63)\");\n\nvar c = BITMEX:UNI_USDT;\nline(cum(c.vbuy-c.vsell), title=\"bitmex\", color=\"rgb(226,193,115)\");\n\nvar d = BYBIT:UNIUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(28,147,138)\");\n\nvar e = OKEX:UNI-USD-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-uni-usd-swap\", color=\"rgb(80,221,80)\");\n\nvar f = OKEX:UNI-USDT-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"okex-uni-usdt-swap\", color=\"rgb(80,221,65)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:unibusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-unibusd\", color=\"rgb(66,1,207)\");\n\nvar b = BINANCE_FUTURES:uniusd_perp;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-uniusd_perp\", color=\"rgb(66,1,40)\");\n\nvar c = BINANCE_FUTURES:uniusdt;\nline(cum(c.vbuy-c.vsell), title=\"binancefutures-uniusdt\", color=\"rgb(66,1,196)\");\n\nvar d = BITMEX:UNI_USDT;\nline(cum(d.vbuy-d.vsell), title=\"bitmex\", color=\"rgb(28,110,178)\");\n\nvar e = BYBIT:UNIUSDT;\nline(cum(e.vbuy-e.vsell), title=\"bybit\", color=\"rgb(186,174,14)\");\n\nvar f = DERIBIT:UNI_USDC-PERPETUAL;\nline(cum(f.vbuy-f.vsell), title=\"deribit\", color=\"rgb(30,123,13)\");\n\nvar g = KUCOIN:UNIUSDTM;\nline(cum(g.vbuy-g.vsell), title=\"kucoin\", color=\"rgb(226,166,177)\");\n\nvar h = OKEX:UNI-USD-SWAP;\nline(cum(h.vbuy-h.vsell), title=\"okex-uni-usd-swap\", color=\"rgb(126,162,244)\");\n\nvar i = OKEX:UNI-USDT-SWAP;\nline(cum(i.vbuy-i.vsell), title=\"okex-uni-usdt-swap\", color=\"rgb(126,162,47)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -531,7 +541,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:unibusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-unibusd\", color=\"rgb(137,56,135)\");\n\nvar b = BINANCE:uniusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-uniusdt\", color=\"rgb(137,56,88)\");\n\nvar c = BITFINEX:UNIUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(197,165,247)\");\n\nvar d = COINBASE:UNI-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(130,9,138)\");\n\nvar e = KUCOIN:UNI-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(183,66,122)\");\n\nvar f = OKEX:UNI-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-uni-usdc\", color=\"rgb(80,221,108)\");\n\nvar g = OKEX:UNI-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-uni-usdt\", color=\"rgb(80,221,98)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:unibusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-unibusd\", color=\"rgb(223,125,174)\");\n\nvar b = BINANCE:uniusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-uniusdt\", color=\"rgb(223,125,63)\");\n\nvar c = BITFINEX:UNIUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(213,31,232)\");\n\nvar d = BYBIT:UNIUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(186,174,14)\");\n\nvar e = COINBASE:UNI-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase\", color=\"rgb(64,202,201)\");\n\nvar f = KUCOIN:UNI-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin\", color=\"rgb(226,166,177)\");\n\nvar g = OKEX:UNI-USDC;\nline(cum(g.vbuy-g.vsell), title=\"okex-uni-usdc\", color=\"rgb(126,162,19)\");\n\nvar h = OKEX:UNI-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex-uni-usdt\", color=\"rgb(126,162,255)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -892,13 +902,18 @@
         "BINANCE:unibusd": false,
         "BINANCE:uniusdt": false,
         "BINANCE_FUTURES:unibusd": false,
+        "BINANCE_FUTURES:uniusd_perp": false,
         "BINANCE_FUTURES:uniusdt": false,
         "BITFINEX:UNIUSD": false,
         "BITMEX:UNI_USDT": false,
         "BYBIT:UNIUSDT": false,
+        "BYBIT:UNIUSDT-SPOT": false,
         "COINBASE:UNI-USD": false,
+        "DERIBIT:UNI_USDC-PERPETUAL": false,
+        "KRAKEN:PF_UNIUSD": false,
         "KRAKEN:UNI/USD": false,
         "KUCOIN:UNI-USDT": false,
+        "KUCOIN:UNIUSDTM": false,
         "OKEX:UNI-USD-SWAP": false,
         "OKEX:UNI-USDC": false,
         "OKEX:UNI-USDT": false,
