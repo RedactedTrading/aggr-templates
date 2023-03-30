@@ -15,6 +15,7 @@
           "type": "chart",
           "markets": [
             "BYBIT:RSS3USDT",
+            "BYBIT:RSS3USDT-SPOT",
             "OKEX:RSS3-USDT"
           ],
           "zoom": 1
@@ -34,6 +35,7 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BYBIT:RSS3USDT-SPOT",
             "OKEX:RSS3-USDT"
           ]
         }
@@ -463,7 +465,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:RSS3USDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(95,33,50)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:RSS3USDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(65,31,24)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -507,7 +509,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = OKEX:RSS3-USDT;\nline(cum(a.vbuy-a.vsell), title=\"okex\", color=\"rgb(209,207,189)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:RSS3USDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(65,31,24)\");\n\nvar b = OKEX:RSS3-USDT;\nline(cum(b.vbuy-b.vsell), title=\"okex\", color=\"rgb(33,122,192)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -866,6 +868,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:RSS3USDT": false,
+        "BYBIT:RSS3USDT-SPOT": false,
         "OKEX:RSS3-USDT": false
       },
       "barSpacing": 0.39437454420364615,
