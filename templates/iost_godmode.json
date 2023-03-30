@@ -19,9 +19,11 @@
             "BINANCE_FUTURES:iostusdt",
             "BYBIT:IOSTUSDT",
             "KUCOIN:IOST-USDT",
+            "KUCOIN:IOSTUSDTM",
             "OKEX:IOST-USDC",
             "OKEX:IOST-USDT",
-            "OKEX:IOST-USDT-SWAP"
+            "OKEX:IOST-USDT-SWAP",
+            "UPBIT:KRW-IOST"
           ],
           "zoom": 1
         },
@@ -33,6 +35,7 @@
           "markets": [
             "BINANCE_FUTURES:iostusdt",
             "BYBIT:IOSTUSDT",
+            "KUCOIN:IOSTUSDTM",
             "OKEX:IOST-USDT-SWAP"
           ]
         },
@@ -46,7 +49,8 @@
             "BINANCE:iostusdt",
             "KUCOIN:IOST-USDT",
             "OKEX:IOST-USDC",
-            "OKEX:IOST-USDT"
+            "OKEX:IOST-USDT",
+            "UPBIT:KRW-IOST"
           ]
         }
       },
@@ -384,7 +388,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -475,7 +479,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:iostusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(51,87,102)\");\n\nvar b = BYBIT:IOSTUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(10,55,122)\");\n\nvar c = OKEX:IOST-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(8,105,112)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:iostusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(97,188,14)\");\n\nvar b = BYBIT:IOSTUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(111,15,36)\");\n\nvar c = KUCOIN:IOSTUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(101,102,88)\");\n\nvar d = OKEX:IOST-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(69,54,143)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +523,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:iostbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-iostbusd\", color=\"rgb(186,220,242)\");\n\nvar b = BINANCE:iostusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-iostusdt\", color=\"rgb(186,220,108)\");\n\nvar c = KUCOIN:IOST-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(211,152,21)\");\n\nvar d = OKEX:IOST-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-iost-usdc\", color=\"rgb(8,105,101)\");\n\nvar e = OKEX:IOST-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-iost-usdt\", color=\"rgb(8,105,120)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:iostbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-iostbusd\", color=\"rgb(201,66,146)\");\n\nvar b = BINANCE:iostusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-iostusdt\", color=\"rgb(201,66,106)\");\n\nvar c = KUCOIN:IOST-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(101,102,88)\");\n\nvar d = OKEX:IOST-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-iost-usdc\", color=\"rgb(69,54,254)\");\n\nvar e = OKEX:IOST-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-iost-usdt\", color=\"rgb(69,54,213)\");\n\nvar f = UPBIT:KRW-IOST;\nline(cum(f.vbuy-f.vsell), title=\"upbit\", color=\"rgb(136,203,110)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -882,9 +886,11 @@
         "BINANCE_FUTURES:iostusdt": false,
         "BYBIT:IOSTUSDT": false,
         "KUCOIN:IOST-USDT": false,
+        "KUCOIN:IOSTUSDTM": false,
         "OKEX:IOST-USDC": false,
         "OKEX:IOST-USDT": false,
-        "OKEX:IOST-USDT-SWAP": false
+        "OKEX:IOST-USDT-SWAP": false,
+        "UPBIT:KRW-IOST": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
