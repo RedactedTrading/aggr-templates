@@ -16,16 +16,22 @@
           "markets": [
             "BINANCE:chzbusd",
             "BINANCE:chzusdt",
+            "BINANCE_FUTURES:chzusd_perp",
             "BINANCE_FUTURES:chzusdt",
             "BITFINEX:CHZUSD",
+            "BYBIT:CHZUSDC-SPOT",
             "BYBIT:CHZUSDT",
+            "BYBIT:CHZUSDT-SPOT",
             "COINBASE:CHZ-USD",
             "COINBASE:CHZ-USDT",
             "KRAKEN:CHZ/USD",
+            "KRAKEN:PF_CHZUSD",
             "KUCOIN:CHZ-USDT",
+            "KUCOIN:CHZUSDTM",
             "OKEX:CHZ-USDC",
             "OKEX:CHZ-USDT",
-            "OKEX:CHZ-USDT-SWAP"
+            "OKEX:CHZ-USDT-SWAP",
+            "UPBIT:KRW-CHZ"
           ],
           "zoom": 1
         },
@@ -35,8 +41,10 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BINANCE_FUTURES:chzusd_perp",
             "BINANCE_FUTURES:chzusdt",
             "BYBIT:CHZUSDT",
+            "KUCOIN:CHZUSDTM",
             "OKEX:CHZ-USDT-SWAP"
           ]
         },
@@ -49,12 +57,16 @@
             "BINANCE:chzbusd",
             "BINANCE:chzusdt",
             "BITFINEX:CHZUSD",
+            "BYBIT:CHZUSDC-SPOT",
+            "BYBIT:CHZUSDT-SPOT",
             "COINBASE:CHZ-USD",
             "COINBASE:CHZ-USDT",
             "KRAKEN:CHZ/USD",
+            "KRAKEN:PF_CHZUSD",
             "KUCOIN:CHZ-USDT",
             "OKEX:CHZ-USDC",
-            "OKEX:CHZ-USDT"
+            "OKEX:CHZ-USDT",
+            "UPBIT:KRW-CHZ"
           ]
         }
       },
@@ -392,7 +404,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -483,7 +495,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:chzusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(126,77,184)\");\n\nvar b = BYBIT:CHZUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(144,145,232)\");\n\nvar c = OKEX:CHZ-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(116,112,209)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:chzusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-chzusd_perp\", color=\"rgb(128,225,204)\");\n\nvar b = BINANCE_FUTURES:chzusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-chzusdt\", color=\"rgb(128,225,128)\");\n\nvar c = BYBIT:CHZUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(217,227,39)\");\n\nvar d = KUCOIN:CHZUSDTM;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(19,90,3)\");\n\nvar e = OKEX:CHZ-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(246,180,113)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -527,7 +539,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:chzbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-chzbusd\", color=\"rgb(238,128,141)\");\n\nvar b = BINANCE:chzusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-chzusdt\", color=\"rgb(238,128,49)\");\n\nvar c = BITFINEX:CHZUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(131,242,203)\");\n\nvar d = COINBASE:CHZ-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-chz-usd\", color=\"rgb(45,44,222)\");\n\nvar e = COINBASE:CHZ-USDT;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-chz-usdt\", color=\"rgb(45,44,74)\");\n\nvar f = KUCOIN:CHZ-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin\", color=\"rgb(224,201,69)\");\n\nvar g = OKEX:CHZ-USDC;\nline(cum(g.vbuy-g.vsell), title=\"okex-chz-usdc\", color=\"rgb(116,112,130)\");\n\nvar h = OKEX:CHZ-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex-chz-usdt\", color=\"rgb(116,112,106)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:chzbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-chzbusd\", color=\"rgb(183,124,15)\");\n\nvar b = BINANCE:chzusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-chzusdt\", color=\"rgb(183,124,143)\");\n\nvar c = BITFINEX:CHZUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(137,59,165)\");\n\nvar d = BYBIT:CHZUSDC-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit-chzusdc-spot\", color=\"rgb(217,227,156)\");\n\nvar e = BYBIT:CHZUSDT-SPOT;\nline(cum(e.vbuy-e.vsell), title=\"bybit-chzusdt-spot\", color=\"rgb(217,227,110)\");\n\nvar f = COINBASE:CHZ-USD;\nline(cum(f.vbuy-f.vsell), title=\"coinbase-chz-usd\", color=\"rgb(101,69,179)\");\n\nvar g = COINBASE:CHZ-USDT;\nline(cum(g.vbuy-g.vsell), title=\"coinbase-chz-usdt\", color=\"rgb(101,69,105)\");\n\nvar h = KUCOIN:CHZ-USDT;\nline(cum(h.vbuy-h.vsell), title=\"kucoin\", color=\"rgb(19,90,3)\");\n\nvar i = OKEX:CHZ-USDC;\nline(cum(i.vbuy-i.vsell), title=\"okex-chz-usdc\", color=\"rgb(246,180,137)\");\n\nvar j = OKEX:CHZ-USDT;\nline(cum(j.vbuy-j.vsell), title=\"okex-chz-usdt\", color=\"rgb(246,180,65)\");\n\nvar k = UPBIT:KRW-CHZ;\nline(cum(k.vbuy-k.vsell), title=\"upbit\", color=\"rgb(233,107,201)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -887,16 +899,22 @@
       "hiddenMarkets": {
         "BINANCE:chzbusd": false,
         "BINANCE:chzusdt": false,
+        "BINANCE_FUTURES:chzusd_perp": false,
         "BINANCE_FUTURES:chzusdt": false,
         "BITFINEX:CHZUSD": false,
+        "BYBIT:CHZUSDC-SPOT": false,
         "BYBIT:CHZUSDT": false,
+        "BYBIT:CHZUSDT-SPOT": false,
         "COINBASE:CHZ-USD": false,
         "COINBASE:CHZ-USDT": false,
         "KRAKEN:CHZ/USD": false,
+        "KRAKEN:PF_CHZUSD": false,
         "KUCOIN:CHZ-USDT": false,
+        "KUCOIN:CHZUSDTM": false,
         "OKEX:CHZ-USDC": false,
         "OKEX:CHZ-USDT": false,
-        "OKEX:CHZ-USDT-SWAP": false
+        "OKEX:CHZ-USDT-SWAP": false,
+        "UPBIT:KRW-CHZ": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
