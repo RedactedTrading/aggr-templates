@@ -15,6 +15,7 @@
           "type": "chart",
           "markets": [
             "BINANCE:gnsusdt",
+            "BYBIT:GNSUSDT-SPOT",
             "KUCOIN:GNS-USDT"
           ],
           "zoom": 1
@@ -33,6 +34,7 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE:gnsusdt",
+            "BYBIT:GNSUSDT-SPOT",
             "KUCOIN:GNS-USDT"
           ]
         }
@@ -318,7 +320,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -506,7 +508,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:gnsusdt;\nline(cum(a.vbuy-a.vsell), title=\"binance\", color=\"rgb(147,159,250)\");\n\nvar b = KUCOIN:GNS-USDT;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(23,191,164)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:gnsusdt;\nline(cum(a.vbuy-a.vsell), title=\"binance\", color=\"rgb(96,110,196)\");\n\nvar b = BYBIT:GNSUSDT-SPOT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(139,242,255)\");\n\nvar c = KUCOIN:GNS-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(29,220,0)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -865,6 +867,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:gnsusdt": false,
+        "BYBIT:GNSUSDT-SPOT": false,
         "KUCOIN:GNS-USDT": false
       },
       "barSpacing": 0.39437454420364615,
