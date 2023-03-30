@@ -18,9 +18,13 @@
             "BINANCE:gmxusdt",
             "BINANCE_FUTURES:gmxusdt",
             "BITMEX:GMXUSD",
+            "BITMEX:GMXUSDT",
             "BYBIT:GMXUSDT",
+            "BYBIT:GMXUSDT-SPOT",
             "KRAKEN:GMX/USD",
+            "KRAKEN:PF_GMXUSD",
             "KUCOIN:GMX-USDT",
+            "KUCOIN:GMXUSDTM",
             "OKEX:GMX-USDC",
             "OKEX:GMX-USDT",
             "OKEX:GMX-USDT-SWAP"
@@ -35,7 +39,9 @@
           "markets": [
             "BINANCE_FUTURES:gmxusdt",
             "BITMEX:GMXUSD",
+            "BITMEX:GMXUSDT",
             "BYBIT:GMXUSDT",
+            "KUCOIN:GMXUSDTM",
             "OKEX:GMX-USDT-SWAP"
           ]
         },
@@ -47,7 +53,9 @@
           "markets": [
             "BINANCE:gmxbusd",
             "BINANCE:gmxusdt",
+            "BYBIT:GMXUSDT-SPOT",
             "KRAKEN:GMX/USD",
+            "KRAKEN:PF_GMXUSD",
             "KUCOIN:GMX-USDT",
             "OKEX:GMX-USDC",
             "OKEX:GMX-USDT"
@@ -479,7 +487,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:gmxusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(147,130,229)\");\n\nvar b = BITMEX:GMXUSD;\nline(cum(b.vbuy-b.vsell), title=\"bitmex\", color=\"rgb(23,49,151)\");\n\nvar c = BYBIT:GMXUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(2,69,178)\");\n\nvar d = OKEX:GMX-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(243,236,110)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:gmxusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(167,199,59)\");\n\nvar b = BITMEX:GMXUSD;\nline(cum(b.vbuy-b.vsell), title=\"bitmex-gmxusd\", color=\"rgb(119,110,244)\");\n\nvar c = BITMEX:GMXUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bitmex-gmxusdt\", color=\"rgb(119,110,161)\");\n\nvar d = BYBIT:GMXUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(66,52,138)\");\n\nvar e = KUCOIN:GMXUSDTM;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(124,148,160)\");\n\nvar f = OKEX:GMX-USDT-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(163,184,201)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -523,7 +531,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:gmxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-gmxbusd\", color=\"rgb(148,2,3)\");\n\nvar b = BINANCE:gmxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-gmxusdt\", color=\"rgb(148,2,139)\");\n\nvar c = KUCOIN:GMX-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(240,192,148)\");\n\nvar d = OKEX:GMX-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-gmx-usdc\", color=\"rgb(243,236,203)\");\n\nvar e = OKEX:GMX-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-gmx-usdt\", color=\"rgb(243,236,152)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:gmxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-gmxbusd\", color=\"rgb(125,204,103)\");\n\nvar b = BINANCE:gmxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-gmxusdt\", color=\"rgb(125,204,140)\");\n\nvar c = BYBIT:GMXUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(66,52,138)\");\n\nvar d = KUCOIN:GMX-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(124,148,160)\");\n\nvar e = OKEX:GMX-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-gmx-usdc\", color=\"rgb(163,184,136)\");\n\nvar f = OKEX:GMX-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-gmx-usdt\", color=\"rgb(163,184,186)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -885,9 +893,13 @@
         "BINANCE:gmxusdt": false,
         "BINANCE_FUTURES:gmxusdt": false,
         "BITMEX:GMXUSD": false,
+        "BITMEX:GMXUSDT": false,
         "BYBIT:GMXUSDT": false,
+        "BYBIT:GMXUSDT-SPOT": false,
         "KRAKEN:GMX/USD": false,
+        "KRAKEN:PF_GMXUSD": false,
         "KUCOIN:GMX-USDT": false,
+        "KUCOIN:GMXUSDTM": false,
         "OKEX:GMX-USDC": false,
         "OKEX:GMX-USDT": false,
         "OKEX:GMX-USDT-SWAP": false
