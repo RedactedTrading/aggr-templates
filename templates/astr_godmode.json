@@ -20,6 +20,7 @@
             "BYBIT:ASTRUSDT",
             "KRAKEN:ASTR/USD",
             "KUCOIN:ASTR-USDT",
+            "KUCOIN:ASTRUSDTM",
             "OKEX:ASTR-USDC",
             "OKEX:ASTR-USDT"
           ],
@@ -32,7 +33,8 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE_FUTURES:astrusdt",
-            "BYBIT:ASTRUSDT"
+            "BYBIT:ASTRUSDT",
+            "KUCOIN:ASTRUSDTM"
           ]
         },
         "trades2": {
@@ -475,7 +477,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:astrusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(181,64,205)\");\n\nvar b = BYBIT:ASTRUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(86,56,32)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:astrusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(151,127,4)\");\n\nvar b = BYBIT:ASTRUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(170,63,109)\");\n\nvar c = KUCOIN:ASTRUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(92,77,114)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +521,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:astrbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-astrbusd\", color=\"rgb(228,37,69)\");\n\nvar b = BINANCE:astrusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-astrusdt\", color=\"rgb(228,37,100)\");\n\nvar c = KUCOIN:ASTR-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(215,80,226)\");\n\nvar d = OKEX:ASTR-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-astr-usdc\", color=\"rgb(206,30,125)\");\n\nvar e = OKEX:ASTR-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-astr-usdt\", color=\"rgb(206,30,151)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:astrbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-astrbusd\", color=\"rgb(15,115,23)\");\n\nvar b = BINANCE:astrusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-astrusdt\", color=\"rgb(15,115,108)\");\n\nvar c = KUCOIN:ASTR-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(92,77,114)\");\n\nvar d = OKEX:ASTR-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-astr-usdc\", color=\"rgb(12,198,2)\");\n\nvar e = OKEX:ASTR-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-astr-usdt\", color=\"rgb(12,198,191)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -883,6 +885,7 @@
         "BYBIT:ASTRUSDT": false,
         "KRAKEN:ASTR/USD": false,
         "KUCOIN:ASTR-USDT": false,
+        "KUCOIN:ASTRUSDTM": false,
         "OKEX:ASTR-USDC": false,
         "OKEX:ASTR-USDT": false
       },
