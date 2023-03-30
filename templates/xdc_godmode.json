@@ -15,6 +15,7 @@
           "type": "chart",
           "markets": [
             "BITFINEX:XDCUSD",
+            "BYBIT:XDCUSDT-SPOT",
             "KUCOIN:XDC-USDT"
           ],
           "zoom": 1
@@ -33,6 +34,7 @@
           "zoom": 0.5,
           "markets": [
             "BITFINEX:XDCUSD",
+            "BYBIT:XDCUSDT-SPOT",
             "KUCOIN:XDC-USDT"
           ]
         }
@@ -318,7 +320,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -506,7 +508,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITFINEX:XDCUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitfinex\", color=\"rgb(80,13,169)\");\n\nvar b = KUCOIN:XDC-USDT;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(212,165,72)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITFINEX:XDCUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitfinex\", color=\"rgb(146,151,187)\");\n\nvar b = BYBIT:XDCUSDT-SPOT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(137,180,18)\");\n\nvar c = KUCOIN:XDC-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(1,14,78)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -865,6 +867,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITFINEX:XDCUSD": false,
+        "BYBIT:XDCUSDT-SPOT": false,
         "KUCOIN:XDC-USDT": false
       },
       "barSpacing": 0.39437454420364615,
