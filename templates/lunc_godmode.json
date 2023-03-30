@@ -16,8 +16,11 @@
           "markets": [
             "BINANCE:luncbusd",
             "BINANCE:luncusdt",
+            "BYBIT:LUNCUSDC-SPOT",
+            "BYBIT:LUNCUSDT-SPOT",
             "KUCOIN:LUNC-USDC",
             "KUCOIN:LUNC-USDT",
+            "KUCOIN:LUNCUSDTM",
             "OKEX:LUNC-USDC",
             "OKEX:LUNC-USDT",
             "OKEX:LUNC-USDT-SWAP"
@@ -30,6 +33,7 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "KUCOIN:LUNCUSDTM",
             "OKEX:LUNC-USDT-SWAP"
           ]
         },
@@ -41,6 +45,8 @@
           "markets": [
             "BINANCE:luncbusd",
             "BINANCE:luncusdt",
+            "BYBIT:LUNCUSDC-SPOT",
+            "BYBIT:LUNCUSDT-SPOT",
             "KUCOIN:LUNC-USDC",
             "KUCOIN:LUNC-USDT",
             "OKEX:LUNC-USDC",
@@ -329,7 +335,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -473,7 +479,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = OKEX:LUNC-USDT-SWAP;\nline(cum(a.vbuy-a.vsell), title=\"okex\", color=\"rgb(40,119,128)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = KUCOIN:LUNCUSDTM;\nline(cum(a.vbuy-a.vsell), title=\"kucoin\", color=\"rgb(171,22,75)\");\n\nvar b = OKEX:LUNC-USDT-SWAP;\nline(cum(b.vbuy-b.vsell), title=\"okex\", color=\"rgb(4,197,161)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -517,7 +523,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:luncbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-luncbusd\", color=\"rgb(86,70,118)\");\n\nvar b = BINANCE:luncusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-luncusdt\", color=\"rgb(86,70,186)\");\n\nvar c = KUCOIN:LUNC-USDC;\nline(cum(c.vbuy-c.vsell), title=\"kucoin-lunc-usdc\", color=\"rgb(6,237,253)\");\n\nvar d = KUCOIN:LUNC-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin-lunc-usdt\", color=\"rgb(6,237,191)\");\n\nvar e = OKEX:LUNC-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-lunc-usdc\", color=\"rgb(40,119,233)\");\n\nvar f = OKEX:LUNC-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-lunc-usdt\", color=\"rgb(40,119,7)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:luncbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-luncbusd\", color=\"rgb(250,181,210)\");\n\nvar b = BINANCE:luncusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-luncusdt\", color=\"rgb(250,181,24)\");\n\nvar c = BYBIT:LUNCUSDC-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit-luncusdc-spot\", color=\"rgb(16,208,229)\");\n\nvar d = BYBIT:LUNCUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit-luncusdt-spot\", color=\"rgb(16,208,136)\");\n\nvar e = KUCOIN:LUNC-USDC;\nline(cum(e.vbuy-e.vsell), title=\"kucoin-lunc-usdc\", color=\"rgb(171,22,246)\");\n\nvar f = KUCOIN:LUNC-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin-lunc-usdt\", color=\"rgb(171,22,134)\");\n\nvar g = OKEX:LUNC-USDC;\nline(cum(g.vbuy-g.vsell), title=\"okex-lunc-usdc\", color=\"rgb(4,197,67)\");\n\nvar h = OKEX:LUNC-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex-lunc-usdt\", color=\"rgb(4,197,143)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -877,8 +883,11 @@
       "hiddenMarkets": {
         "BINANCE:luncbusd": false,
         "BINANCE:luncusdt": false,
+        "BYBIT:LUNCUSDC-SPOT": false,
+        "BYBIT:LUNCUSDT-SPOT": false,
         "KUCOIN:LUNC-USDC": false,
         "KUCOIN:LUNC-USDT": false,
+        "KUCOIN:LUNCUSDTM": false,
         "OKEX:LUNC-USDC": false,
         "OKEX:LUNC-USDT": false,
         "OKEX:LUNC-USDT-SWAP": false
