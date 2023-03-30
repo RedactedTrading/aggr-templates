@@ -15,6 +15,7 @@
           "type": "chart",
           "markets": [
             "BYBIT:FITFIUSDT",
+            "BYBIT:FITFIUSDT-SPOT",
             "KUCOIN:FITFI-USDC",
             "KUCOIN:FITFI-USDT",
             "OKEX:FITFI-USDC",
@@ -39,6 +40,7 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BYBIT:FITFIUSDT-SPOT",
             "KUCOIN:FITFI-USDC",
             "KUCOIN:FITFI-USDT",
             "OKEX:FITFI-USDC",
@@ -471,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:FITFIUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(18,72,184)\");\n\nvar b = OKEX:FITFI-USDT-SWAP;\nline(cum(b.vbuy-b.vsell), title=\"okex\", color=\"rgb(163,104,26)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:FITFIUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(168,94,86)\");\n\nvar b = OKEX:FITFI-USDT-SWAP;\nline(cum(b.vbuy-b.vsell), title=\"okex\", color=\"rgb(36,92,168)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -515,7 +517,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = KUCOIN:FITFI-USDC;\nline(cum(a.vbuy-a.vsell), title=\"kucoin-fitfi-usdc\", color=\"rgb(249,0,20)\");\n\nvar b = KUCOIN:FITFI-USDT;\nline(cum(b.vbuy-b.vsell), title=\"kucoin-fitfi-usdt\", color=\"rgb(249,0,42)\");\n\nvar c = OKEX:FITFI-USDC;\nline(cum(c.vbuy-c.vsell), title=\"okex-fitfi-usdc\", color=\"rgb(163,104,186)\");\n\nvar d = OKEX:FITFI-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex-fitfi-usdt\", color=\"rgb(163,104,236)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:FITFIUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(168,94,86)\");\n\nvar b = KUCOIN:FITFI-USDC;\nline(cum(b.vbuy-b.vsell), title=\"kucoin-fitfi-usdc\", color=\"rgb(176,16,127)\");\n\nvar c = KUCOIN:FITFI-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin-fitfi-usdt\", color=\"rgb(176,16,62)\");\n\nvar d = OKEX:FITFI-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-fitfi-usdc\", color=\"rgb(36,92,49)\");\n\nvar e = OKEX:FITFI-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-fitfi-usdt\", color=\"rgb(36,92,146)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -874,6 +876,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:FITFIUSDT": false,
+        "BYBIT:FITFIUSDT-SPOT": false,
         "KUCOIN:FITFI-USDC": false,
         "KUCOIN:FITFI-USDT": false,
         "OKEX:FITFI-USDC": false,
