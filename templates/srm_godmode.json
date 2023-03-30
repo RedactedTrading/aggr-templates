@@ -16,10 +16,12 @@
           "markets": [
             "BINANCE:srmbusd",
             "BINANCE:srmusdt",
+            "BYBIT:SRMUSDT-SPOT",
             "KRAKEN:SRM/USD",
             "KUCOIN:SRM-USDT",
             "OKEX:SRM-USDC",
-            "OKEX:SRM-USDT"
+            "OKEX:SRM-USDT",
+            "UPBIT:KRW-SRM"
           ],
           "zoom": 1
         },
@@ -38,10 +40,12 @@
           "markets": [
             "BINANCE:srmbusd",
             "BINANCE:srmusdt",
+            "BYBIT:SRMUSDT-SPOT",
             "KRAKEN:SRM/USD",
             "KUCOIN:SRM-USDT",
             "OKEX:SRM-USDC",
-            "OKEX:SRM-USDT"
+            "OKEX:SRM-USDT",
+            "UPBIT:KRW-SRM"
           ]
         }
       },
@@ -326,7 +330,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -379,7 +383,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -514,7 +518,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:srmbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-srmbusd\", color=\"rgb(247,86,121)\");\n\nvar b = BINANCE:srmusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-srmusdt\", color=\"rgb(247,86,248)\");\n\nvar c = KUCOIN:SRM-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(28,236,214)\");\n\nvar d = OKEX:SRM-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-srm-usdc\", color=\"rgb(151,97,206)\");\n\nvar e = OKEX:SRM-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-srm-usdt\", color=\"rgb(151,97,171)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:srmbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-srmbusd\", color=\"rgb(196,165,171)\");\n\nvar b = BINANCE:srmusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-srmusdt\", color=\"rgb(196,165,135)\");\n\nvar c = BYBIT:SRMUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(69,139,157)\");\n\nvar d = KUCOIN:SRM-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(140,164,166)\");\n\nvar e = OKEX:SRM-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-srm-usdc\", color=\"rgb(128,15,212)\");\n\nvar f = OKEX:SRM-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-srm-usdt\", color=\"rgb(128,15,216)\");\n\nvar g = UPBIT:KRW-SRM;\nline(cum(g.vbuy-g.vsell), title=\"upbit\", color=\"rgb(223,17,246)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -874,10 +878,12 @@
       "hiddenMarkets": {
         "BINANCE:srmbusd": false,
         "BINANCE:srmusdt": false,
+        "BYBIT:SRMUSDT-SPOT": false,
         "KRAKEN:SRM/USD": false,
         "KUCOIN:SRM-USDT": false,
         "OKEX:SRM-USDC": false,
-        "OKEX:SRM-USDT": false
+        "OKEX:SRM-USDT": false,
+        "UPBIT:KRW-SRM": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
