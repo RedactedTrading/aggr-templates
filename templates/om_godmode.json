@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ombusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ombusd\", color=\"rgb(50,178,27)\");\n\nvar b = BINANCE:omusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-omusdt\", color=\"rgb(50,178,56)\");\n\nvar c = KUCOIN:OM-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(93,62,47)\");\n\nvar d = OKEX:OM-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(83,41,241)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ombusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ombusd\", color=\"rgb(23,56,255)\");\n\nvar b = BINANCE:omusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-omusdt\", color=\"rgb(23,56,188)\");\n\nvar c = KUCOIN:OM-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(103,84,140)\");\n\nvar d = OKEX:OM-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(181,242,186)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
