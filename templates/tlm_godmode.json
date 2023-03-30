@@ -19,7 +19,8 @@
             "BINANCE_FUTURES:tlmbusd",
             "BYBIT:TLMUSDT",
             "KRAKEN:TLM/USD",
-            "KUCOIN:TLM-USDT"
+            "KUCOIN:TLM-USDT",
+            "KUCOIN:TLMUSDTM"
           ],
           "zoom": 1
         },
@@ -30,7 +31,8 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE_FUTURES:tlmbusd",
-            "BYBIT:TLMUSDT"
+            "BYBIT:TLMUSDT",
+            "KUCOIN:TLMUSDTM"
           ]
         },
         "trades2": {
@@ -471,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:tlmbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(135,0,212)\");\n\nvar b = BYBIT:TLMUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(158,189,251)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:tlmbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(17,49,13)\");\n\nvar b = BYBIT:TLMUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(41,27,21)\");\n\nvar c = KUCOIN:TLMUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(51,48,255)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -515,7 +517,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:tlmbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-tlmbusd\", color=\"rgb(121,224,93)\");\n\nvar b = BINANCE:tlmusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-tlmusdt\", color=\"rgb(121,224,191)\");\n\nvar c = KUCOIN:TLM-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(136,161,50)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:tlmbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-tlmbusd\", color=\"rgb(42,196,101)\");\n\nvar b = BINANCE:tlmusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-tlmusdt\", color=\"rgb(42,196,45)\");\n\nvar c = KUCOIN:TLM-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(51,48,255)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -878,7 +880,8 @@
         "BINANCE_FUTURES:tlmbusd": false,
         "BYBIT:TLMUSDT": false,
         "KRAKEN:TLM/USD": false,
-        "KUCOIN:TLM-USDT": false
+        "KUCOIN:TLM-USDT": false,
+        "KUCOIN:TLMUSDTM": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
