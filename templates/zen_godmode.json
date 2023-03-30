@@ -18,6 +18,7 @@
             "BINANCE:zenusdt",
             "BINANCE_FUTURES:zenusdt",
             "BYBIT:ZENUSDT",
+            "BYBIT:ZENUSDT-SPOT",
             "COINBASE:ZEN-USD",
             "COINBASE:ZEN-USDT",
             "KUCOIN:ZEN-USDT",
@@ -45,6 +46,7 @@
           "markets": [
             "BINANCE:zenbusd",
             "BINANCE:zenusdt",
+            "BYBIT:ZENUSDT-SPOT",
             "COINBASE:ZEN-USD",
             "COINBASE:ZEN-USDT",
             "KUCOIN:ZEN-USDT",
@@ -477,7 +479,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:zenusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(226,55,230)\");\n\nvar b = BYBIT:ZENUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(126,205,228)\");\n\nvar c = OKEX:ZEN-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(109,230,79)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:zenusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(143,244,125)\");\n\nvar b = BYBIT:ZENUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(91,247,98)\");\n\nvar c = OKEX:ZEN-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(49,21,194)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -521,7 +523,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:zenbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-zenbusd\", color=\"rgb(64,86,67)\");\n\nvar b = BINANCE:zenusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-zenusdt\", color=\"rgb(64,86,56)\");\n\nvar c = COINBASE:ZEN-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-zen-usd\", color=\"rgb(12,76,49)\");\n\nvar d = COINBASE:ZEN-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-zen-usdt\", color=\"rgb(12,76,189)\");\n\nvar e = KUCOIN:ZEN-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(141,134,120)\");\n\nvar f = OKEX:ZEN-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(109,230,79)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:zenbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-zenbusd\", color=\"rgb(124,149,205)\");\n\nvar b = BINANCE:zenusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-zenusdt\", color=\"rgb(124,149,90)\");\n\nvar c = BYBIT:ZENUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(91,247,98)\");\n\nvar d = COINBASE:ZEN-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-zen-usd\", color=\"rgb(37,72,120)\");\n\nvar e = COINBASE:ZEN-USDT;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-zen-usdt\", color=\"rgb(37,72,19)\");\n\nvar f = KUCOIN:ZEN-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin\", color=\"rgb(113,67,71)\");\n\nvar g = OKEX:ZEN-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex\", color=\"rgb(49,21,194)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -883,6 +885,7 @@
         "BINANCE:zenusdt": false,
         "BINANCE_FUTURES:zenusdt": false,
         "BYBIT:ZENUSDT": false,
+        "BYBIT:ZENUSDT-SPOT": false,
         "COINBASE:ZEN-USD": false,
         "COINBASE:ZEN-USDT": false,
         "KUCOIN:ZEN-USDT": false,
