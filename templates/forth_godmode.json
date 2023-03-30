@@ -514,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:forthbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-forthbusd\", color=\"rgb(130,125,97)\");\n\nvar b = BINANCE:forthusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-forthusdt\", color=\"rgb(130,125,33)\");\n\nvar c = COINBASE:FORTH-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(114,10,75)\");\n\nvar d = KUCOIN:FORTH-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(38,220,180)\");\n\nvar e = OKEX:FORTH-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(215,142,229)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:forthbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-forthbusd\", color=\"rgb(202,235,110)\");\n\nvar b = BINANCE:forthusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-forthusdt\", color=\"rgb(202,235,142)\");\n\nvar c = COINBASE:FORTH-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(115,131,83)\");\n\nvar d = KUCOIN:FORTH-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(179,50,44)\");\n\nvar e = OKEX:FORTH-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(239,83,106)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
