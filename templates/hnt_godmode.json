@@ -17,6 +17,7 @@
             "BINANCE:hntbusd",
             "BINANCE:hntusdt",
             "BYBIT:HNTUSDT",
+            "BYBIT:HNTUSDT-SPOT",
             "KUCOIN:HNT-USDT",
             "OKEX:HNT-USDC",
             "OKEX:HNT-USDT"
@@ -40,6 +41,7 @@
           "markets": [
             "BINANCE:hntbusd",
             "BINANCE:hntusdt",
+            "BYBIT:HNTUSDT-SPOT",
             "KUCOIN:HNT-USDT",
             "OKEX:HNT-USDC",
             "OKEX:HNT-USDT"
@@ -471,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:HNTUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(173,138,159)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:HNTUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(139,42,241)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -515,7 +517,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:hntbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-hntbusd\", color=\"rgb(4,26,91)\");\n\nvar b = BINANCE:hntusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-hntusdt\", color=\"rgb(4,26,112)\");\n\nvar c = KUCOIN:HNT-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(177,44,190)\");\n\nvar d = OKEX:HNT-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-hnt-usdc\", color=\"rgb(162,146,171)\");\n\nvar e = OKEX:HNT-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-hnt-usdt\", color=\"rgb(162,146,232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:hntbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-hntbusd\", color=\"rgb(183,2,219)\");\n\nvar b = BINANCE:hntusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-hntusdt\", color=\"rgb(183,2,104)\");\n\nvar c = BYBIT:HNTUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(139,42,241)\");\n\nvar d = KUCOIN:HNT-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(82,52,97)\");\n\nvar e = OKEX:HNT-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-hnt-usdc\", color=\"rgb(216,200,92)\");\n\nvar f = OKEX:HNT-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-hnt-usdt\", color=\"rgb(216,200,112)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -876,6 +878,7 @@
         "BINANCE:hntbusd": false,
         "BINANCE:hntusdt": false,
         "BYBIT:HNTUSDT": false,
+        "BYBIT:HNTUSDT-SPOT": false,
         "KUCOIN:HNT-USDT": false,
         "OKEX:HNT-USDC": false,
         "OKEX:HNT-USDT": false
