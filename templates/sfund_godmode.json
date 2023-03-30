@@ -14,6 +14,7 @@
           "name": "",
           "type": "chart",
           "markets": [
+            "BYBIT:SFUNDUSDT-SPOT",
             "KUCOIN:SFUND-USDT"
           ],
           "zoom": 1
@@ -31,6 +32,7 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BYBIT:SFUNDUSDT-SPOT",
             "KUCOIN:SFUND-USDT"
           ]
         }
@@ -316,7 +318,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -504,7 +506,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = KUCOIN:SFUND-USDT;\nline(cum(a.vbuy-a.vsell), title=\"kucoin\", color=\"rgb(198,148,218)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:SFUNDUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(147,154,191)\");\n\nvar b = KUCOIN:SFUND-USDT;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(184,189,236)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -862,6 +864,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
+        "BYBIT:SFUNDUSDT-SPOT": false,
         "KUCOIN:SFUND-USDT": false
       },
       "barSpacing": 0.39437454420364615,
