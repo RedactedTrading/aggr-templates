@@ -18,10 +18,13 @@
             "BINANCE:jstusdt",
             "BITFINEX:JSTUSD",
             "BYBIT:JSTUSDT",
+            "BYBIT:JSTUSDT-SPOT",
             "KUCOIN:JST-USDT",
+            "KUCOIN:JSTUSDTM",
             "OKEX:JST-USDC",
             "OKEX:JST-USDT",
-            "OKEX:JST-USDT-SWAP"
+            "OKEX:JST-USDT-SWAP",
+            "UPBIT:KRW-JST"
           ],
           "zoom": 1
         },
@@ -32,6 +35,7 @@
           "zoom": 0.5,
           "markets": [
             "BYBIT:JSTUSDT",
+            "KUCOIN:JSTUSDTM",
             "OKEX:JST-USDT-SWAP"
           ]
         },
@@ -44,9 +48,11 @@
             "BINANCE:jstbusd",
             "BINANCE:jstusdt",
             "BITFINEX:JSTUSD",
+            "BYBIT:JSTUSDT-SPOT",
             "KUCOIN:JST-USDT",
             "OKEX:JST-USDC",
-            "OKEX:JST-USDT"
+            "OKEX:JST-USDT",
+            "UPBIT:KRW-JST"
           ]
         }
       },
@@ -384,7 +390,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -475,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:JSTUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(235,37,0)\");\n\nvar b = OKEX:JST-USDT-SWAP;\nline(cum(b.vbuy-b.vsell), title=\"okex\", color=\"rgb(22,68,84)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:JSTUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(162,119,63)\");\n\nvar b = KUCOIN:JSTUSDTM;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(160,92,244)\");\n\nvar c = OKEX:JST-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(113,164,64)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:jstbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-jstbusd\", color=\"rgb(237,10,217)\");\n\nvar b = BINANCE:jstusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-jstusdt\", color=\"rgb(237,10,46)\");\n\nvar c = BITFINEX:JSTUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(215,239,147)\");\n\nvar d = KUCOIN:JST-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(192,110,109)\");\n\nvar e = OKEX:JST-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-jst-usdc\", color=\"rgb(22,68,44)\");\n\nvar f = OKEX:JST-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-jst-usdt\", color=\"rgb(22,68,11)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:jstbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-jstbusd\", color=\"rgb(86,12,241)\");\n\nvar b = BINANCE:jstusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-jstusdt\", color=\"rgb(86,12,214)\");\n\nvar c = BITFINEX:JSTUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(201,64,207)\");\n\nvar d = BYBIT:JSTUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(162,119,63)\");\n\nvar e = KUCOIN:JST-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(160,92,244)\");\n\nvar f = OKEX:JST-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-jst-usdc\", color=\"rgb(113,164,200)\");\n\nvar g = OKEX:JST-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-jst-usdt\", color=\"rgb(113,164,46)\");\n\nvar h = UPBIT:KRW-JST;\nline(cum(h.vbuy-h.vsell), title=\"upbit\", color=\"rgb(177,162,70)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -881,10 +887,13 @@
         "BINANCE:jstusdt": false,
         "BITFINEX:JSTUSD": false,
         "BYBIT:JSTUSDT": false,
+        "BYBIT:JSTUSDT-SPOT": false,
         "KUCOIN:JST-USDT": false,
+        "KUCOIN:JSTUSDTM": false,
         "OKEX:JST-USDC": false,
         "OKEX:JST-USDT": false,
-        "OKEX:JST-USDT-SWAP": false
+        "OKEX:JST-USDT-SWAP": false,
+        "UPBIT:KRW-JST": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
