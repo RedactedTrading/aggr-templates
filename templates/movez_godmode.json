@@ -14,6 +14,7 @@
           "name": "",
           "type": "chart",
           "markets": [
+            "BYBIT:MOVEZUSDT-SPOT",
             "OKEX:MOVEZ-USDC",
             "OKEX:MOVEZ-USDT"
           ],
@@ -32,6 +33,7 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BYBIT:MOVEZUSDT-SPOT",
             "OKEX:MOVEZ-USDC",
             "OKEX:MOVEZ-USDT"
           ]
@@ -318,7 +320,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -506,7 +508,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = OKEX:MOVEZ-USDC;\nline(cum(a.vbuy-a.vsell), title=\"okex-movez-usdc\", color=\"rgb(10,110,128)\");\n\nvar b = OKEX:MOVEZ-USDT;\nline(cum(b.vbuy-b.vsell), title=\"okex-movez-usdt\", color=\"rgb(10,110,113)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:MOVEZUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(22,170,47)\");\n\nvar b = OKEX:MOVEZ-USDC;\nline(cum(b.vbuy-b.vsell), title=\"okex-movez-usdc\", color=\"rgb(103,7,234)\");\n\nvar c = OKEX:MOVEZ-USDT;\nline(cum(c.vbuy-c.vsell), title=\"okex-movez-usdt\", color=\"rgb(103,7,52)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -864,6 +866,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
+        "BYBIT:MOVEZUSDT-SPOT": false,
         "OKEX:MOVEZ-USDC": false,
         "OKEX:MOVEZ-USDT": false
       },
