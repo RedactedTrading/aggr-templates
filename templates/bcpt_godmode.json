@@ -14,6 +14,7 @@
           "name": "",
           "type": "chart",
           "markets": [
+            "BINANCE:bcpttusd",
             "BINANCE:bcptusdc"
           ],
           "zoom": 1
@@ -31,6 +32,7 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BINANCE:bcpttusd",
             "BINANCE:bcptusdc"
           ]
         }
@@ -504,7 +506,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bcptusdc;\nline(cum(a.vbuy-a.vsell), title=\"binance\", color=\"rgb(133,108,76)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bcpttusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-bcpttusd\", color=\"rgb(12,168,201)\");\n\nvar b = BINANCE:bcptusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-bcptusdc\", color=\"rgb(12,168,79)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -862,6 +864,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
+        "BINANCE:bcpttusd": false,
         "BINANCE:bcptusdc": false
       },
       "barSpacing": 0.39437454420364615,
