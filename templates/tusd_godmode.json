@@ -14,11 +14,9 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BINANCE:tusdbnb",
-            "BINANCE:tusdbtc",
             "BINANCE:tusdbusd",
-            "BINANCE:tusdeth",
-            "BINANCE:tusdusdt"
+            "BINANCE:tusdusdt",
+            "UPBIT:USDT-TUSD"
           ],
           "zoom": 1
         },
@@ -35,11 +33,9 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
-            "BINANCE:tusdbnb",
-            "BINANCE:tusdbtc",
             "BINANCE:tusdbusd",
-            "BINANCE:tusdeth",
-            "BINANCE:tusdusdt"
+            "BINANCE:tusdusdt",
+            "UPBIT:USDT-TUSD"
           ]
         }
       },
@@ -377,7 +373,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -512,7 +508,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:tusdbnb;\nline(cum(a.vbuy-a.vsell), title=\"binance-tusdbnb\", color=\"rgb(86,142,58)\");\n\nvar b = BINANCE:tusdbtc;\nline(cum(b.vbuy-b.vsell), title=\"binance-tusdbtc\", color=\"rgb(86,142,226)\");\n\nvar c = BINANCE:tusdbusd;\nline(cum(c.vbuy-c.vsell), title=\"binance-tusdbusd\", color=\"rgb(86,142,65)\");\n\nvar d = BINANCE:tusdeth;\nline(cum(d.vbuy-d.vsell), title=\"binance-tusdeth\", color=\"rgb(86,142,102)\");\n\nvar e = BINANCE:tusdusdt;\nline(cum(e.vbuy-e.vsell), title=\"binance-tusdusdt\", color=\"rgb(86,142,125)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:tusdbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-tusdbusd\", color=\"rgb(125,216,39)\");\n\nvar b = BINANCE:tusdusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-tusdusdt\", color=\"rgb(125,216,25)\");\n\nvar c = UPBIT:USDT-TUSD;\nline(cum(c.vbuy-c.vsell), title=\"upbit\", color=\"rgb(61,181,60)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -870,11 +866,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:tusdbnb": false,
-        "BINANCE:tusdbtc": false,
         "BINANCE:tusdbusd": false,
-        "BINANCE:tusdeth": false,
-        "BINANCE:tusdusdt": false
+        "BINANCE:tusdusdt": false,
+        "UPBIT:USDT-TUSD": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
