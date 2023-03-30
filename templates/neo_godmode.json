@@ -15,15 +15,18 @@
           "type": "chart",
           "markets": [
             "BINANCE:neobusd",
+            "BINANCE:neotusd",
             "BINANCE:neousdc",
             "BINANCE:neousdt",
             "BINANCE_FUTURES:neousdt",
             "BITFINEX:NEOUSD",
             "BYBIT:NEOUSDT",
             "KUCOIN:NEO-USDT",
+            "KUCOIN:NEOUSDTM",
             "OKEX:NEO-USD-SWAP",
             "OKEX:NEO-USDT",
-            "OKEX:NEO-USDT-SWAP"
+            "OKEX:NEO-USDT-SWAP",
+            "UPBIT:KRW-NEO"
           ],
           "zoom": 1
         },
@@ -35,6 +38,7 @@
           "markets": [
             "BINANCE_FUTURES:neousdt",
             "BYBIT:NEOUSDT",
+            "KUCOIN:NEOUSDTM",
             "OKEX:NEO-USD-SWAP",
             "OKEX:NEO-USDT-SWAP"
           ]
@@ -46,11 +50,13 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE:neobusd",
+            "BINANCE:neotusd",
             "BINANCE:neousdc",
             "BINANCE:neousdt",
             "BITFINEX:NEOUSD",
             "KUCOIN:NEO-USDT",
-            "OKEX:NEO-USDT"
+            "OKEX:NEO-USDT",
+            "UPBIT:KRW-NEO"
           ]
         }
       },
@@ -388,7 +394,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -479,7 +485,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:neousdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(180,47,154)\");\n\nvar b = BYBIT:NEOUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(14,97,246)\");\n\nvar c = OKEX:NEO-USD-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex-neo-usd-swap\", color=\"rgb(207,245,226)\");\n\nvar d = OKEX:NEO-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex-neo-usdt-swap\", color=\"rgb(207,245,237)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:neousdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(79,128,59)\");\n\nvar b = BYBIT:NEOUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(190,211,88)\");\n\nvar c = KUCOIN:NEOUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(106,217,28)\");\n\nvar d = OKEX:NEO-USD-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex-neo-usd-swap\", color=\"rgb(135,84,149)\");\n\nvar e = OKEX:NEO-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-neo-usdt-swap\", color=\"rgb(135,84,220)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -523,7 +529,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:neobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-neobusd\", color=\"rgb(245,83,147)\");\n\nvar b = BINANCE:neousdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-neousdc\", color=\"rgb(245,83,189)\");\n\nvar c = BINANCE:neousdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-neousdt\", color=\"rgb(245,83,121)\");\n\nvar d = BITFINEX:NEOUSD;\nline(cum(d.vbuy-d.vsell), title=\"bitfinex\", color=\"rgb(105,85,55)\");\n\nvar e = KUCOIN:NEO-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(79,249,16)\");\n\nvar f = OKEX:NEO-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(207,245,51)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:neobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-neobusd\", color=\"rgb(227,115,58)\");\n\nvar b = BINANCE:neotusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-neotusd\", color=\"rgb(227,115,144)\");\n\nvar c = BINANCE:neousdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-neousdc\", color=\"rgb(227,115,135)\");\n\nvar d = BINANCE:neousdt;\nline(cum(d.vbuy-d.vsell), title=\"binance-neousdt\", color=\"rgb(227,115,236)\");\n\nvar e = BITFINEX:NEOUSD;\nline(cum(e.vbuy-e.vsell), title=\"bitfinex\", color=\"rgb(210,9,98)\");\n\nvar f = KUCOIN:NEO-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin\", color=\"rgb(106,217,28)\");\n\nvar g = OKEX:NEO-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex\", color=\"rgb(135,84,160)\");\n\nvar h = UPBIT:KRW-NEO;\nline(cum(h.vbuy-h.vsell), title=\"upbit\", color=\"rgb(99,73,199)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -882,15 +888,18 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:neobusd": false,
+        "BINANCE:neotusd": false,
         "BINANCE:neousdc": false,
         "BINANCE:neousdt": false,
         "BINANCE_FUTURES:neousdt": false,
         "BITFINEX:NEOUSD": false,
         "BYBIT:NEOUSDT": false,
         "KUCOIN:NEO-USDT": false,
+        "KUCOIN:NEOUSDTM": false,
         "OKEX:NEO-USD-SWAP": false,
         "OKEX:NEO-USDT": false,
-        "OKEX:NEO-USDT-SWAP": false
+        "OKEX:NEO-USDT-SWAP": false,
+        "UPBIT:KRW-NEO": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
