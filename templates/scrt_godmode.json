@@ -17,6 +17,7 @@
             "BINANCE:scrtbusd",
             "BINANCE:scrtusdt",
             "BYBIT:SCRTUSDT",
+            "BYBIT:SCRTUSDT-SPOT",
             "KRAKEN:SCRT/USD",
             "KUCOIN:SCRT-USDT"
           ],
@@ -39,6 +40,7 @@
           "markets": [
             "BINANCE:scrtbusd",
             "BINANCE:scrtusdt",
+            "BYBIT:SCRTUSDT-SPOT",
             "KRAKEN:SCRT/USD",
             "KUCOIN:SCRT-USDT"
           ]
@@ -469,7 +471,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:SCRTUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(217,222,231)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:SCRTUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(141,242,127)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -513,7 +515,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:scrtbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-scrtbusd\", color=\"rgb(234,203,114)\");\n\nvar b = BINANCE:scrtusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-scrtusdt\", color=\"rgb(234,203,146)\");\n\nvar c = KUCOIN:SCRT-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(177,152,157)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:scrtbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-scrtbusd\", color=\"rgb(230,116,232)\");\n\nvar b = BINANCE:scrtusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-scrtusdt\", color=\"rgb(230,116,165)\");\n\nvar c = BYBIT:SCRTUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(141,242,127)\");\n\nvar d = KUCOIN:SCRT-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(233,66,143)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -874,6 +876,7 @@
         "BINANCE:scrtbusd": false,
         "BINANCE:scrtusdt": false,
         "BYBIT:SCRTUSDT": false,
+        "BYBIT:SCRTUSDT-SPOT": false,
         "KRAKEN:SCRT/USD": false,
         "KUCOIN:SCRT-USDT": false
       },
