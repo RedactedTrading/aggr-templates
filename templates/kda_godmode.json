@@ -17,8 +17,10 @@
             "BINANCE:kdabusd",
             "BINANCE:kdausdt",
             "BYBIT:KDAUSDT",
+            "BYBIT:KDAUSDT-SPOT",
             "KUCOIN:KDA-USDC",
             "KUCOIN:KDA-USDT",
+            "KUCOIN:KDAUSDTM",
             "OKEX:KDA-USDT"
           ],
           "zoom": 1
@@ -29,7 +31,8 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
-            "BYBIT:KDAUSDT"
+            "BYBIT:KDAUSDT",
+            "KUCOIN:KDAUSDTM"
           ]
         },
         "trades2": {
@@ -40,6 +43,7 @@
           "markets": [
             "BINANCE:kdabusd",
             "BINANCE:kdausdt",
+            "BYBIT:KDAUSDT-SPOT",
             "KUCOIN:KDA-USDC",
             "KUCOIN:KDA-USDT",
             "OKEX:KDA-USDT"
@@ -471,7 +475,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:KDAUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(106,22,54)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:KDAUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(60,193,122)\");\n\nvar b = KUCOIN:KDAUSDTM;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(254,146,164)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -515,7 +519,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:kdabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-kdabusd\", color=\"rgb(67,219,7)\");\n\nvar b = BINANCE:kdausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-kdausdt\", color=\"rgb(67,219,131)\");\n\nvar c = KUCOIN:KDA-USDC;\nline(cum(c.vbuy-c.vsell), title=\"kucoin-kda-usdc\", color=\"rgb(123,175,190)\");\n\nvar d = KUCOIN:KDA-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin-kda-usdt\", color=\"rgb(123,175,124)\");\n\nvar e = OKEX:KDA-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(82,90,32)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:kdabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-kdabusd\", color=\"rgb(232,62,196)\");\n\nvar b = BINANCE:kdausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-kdausdt\", color=\"rgb(232,62,49)\");\n\nvar c = BYBIT:KDAUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(60,193,122)\");\n\nvar d = KUCOIN:KDA-USDC;\nline(cum(d.vbuy-d.vsell), title=\"kucoin-kda-usdc\", color=\"rgb(254,146,161)\");\n\nvar e = KUCOIN:KDA-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin-kda-usdt\", color=\"rgb(254,146,82)\");\n\nvar f = OKEX:KDA-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(80,213,186)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -876,8 +880,10 @@
         "BINANCE:kdabusd": false,
         "BINANCE:kdausdt": false,
         "BYBIT:KDAUSDT": false,
+        "BYBIT:KDAUSDT-SPOT": false,
         "KUCOIN:KDA-USDC": false,
         "KUCOIN:KDA-USDT": false,
+        "KUCOIN:KDAUSDTM": false,
         "OKEX:KDA-USDT": false
       },
       "barSpacing": 0.39437454420364615,
