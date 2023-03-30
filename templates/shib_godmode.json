@@ -16,15 +16,19 @@
           "markets": [
             "BINANCE:shibbusd",
             "BINANCE:shibusdt",
+            "BYBIT:SHIBUSDC-SPOT",
+            "BYBIT:SHIBUSDT-SPOT",
             "COINBASE:SHIB-USD",
             "COINBASE:SHIB-USDT",
             "KRAKEN:SHIB/USD",
             "KRAKEN:SHIB/USDT",
             "KUCOIN:SHIB-USDC",
             "KUCOIN:SHIB-USDT",
+            "KUCOIN:SHIBUSDTM",
             "OKEX:SHIB-USDC",
             "OKEX:SHIB-USDT",
-            "OKEX:SHIB-USDT-SWAP"
+            "OKEX:SHIB-USDT-SWAP",
+            "UPBIT:KRW-SHIB"
           ],
           "zoom": 1
         },
@@ -34,6 +38,7 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "KUCOIN:SHIBUSDTM",
             "OKEX:SHIB-USDT-SWAP"
           ]
         },
@@ -45,6 +50,8 @@
           "markets": [
             "BINANCE:shibbusd",
             "BINANCE:shibusdt",
+            "BYBIT:SHIBUSDC-SPOT",
+            "BYBIT:SHIBUSDT-SPOT",
             "COINBASE:SHIB-USD",
             "COINBASE:SHIB-USDT",
             "KRAKEN:SHIB/USD",
@@ -52,7 +59,8 @@
             "KUCOIN:SHIB-USDC",
             "KUCOIN:SHIB-USDT",
             "OKEX:SHIB-USDC",
-            "OKEX:SHIB-USDT"
+            "OKEX:SHIB-USDT",
+            "UPBIT:KRW-SHIB"
           ]
         }
       },
@@ -337,7 +345,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -390,7 +398,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -481,7 +489,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = OKEX:SHIB-USDT-SWAP;\nline(cum(a.vbuy-a.vsell), title=\"okex\", color=\"rgb(113,92,246)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = KUCOIN:SHIBUSDTM;\nline(cum(a.vbuy-a.vsell), title=\"kucoin\", color=\"rgb(232,239,0)\");\n\nvar b = OKEX:SHIB-USDT-SWAP;\nline(cum(b.vbuy-b.vsell), title=\"okex\", color=\"rgb(123,240,165)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -525,7 +533,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:shibbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-shibbusd\", color=\"rgb(244,145,171)\");\n\nvar b = BINANCE:shibusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-shibusdt\", color=\"rgb(244,145,39)\");\n\nvar c = COINBASE:SHIB-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-shib-usd\", color=\"rgb(121,138,74)\");\n\nvar d = COINBASE:SHIB-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-shib-usdt\", color=\"rgb(121,138,192)\");\n\nvar e = KUCOIN:SHIB-USDC;\nline(cum(e.vbuy-e.vsell), title=\"kucoin-shib-usdc\", color=\"rgb(175,63,173)\");\n\nvar f = KUCOIN:SHIB-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin-shib-usdt\", color=\"rgb(175,63,57)\");\n\nvar g = OKEX:SHIB-USDC;\nline(cum(g.vbuy-g.vsell), title=\"okex-shib-usdc\", color=\"rgb(113,92,246)\");\n\nvar h = OKEX:SHIB-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex-shib-usdt\", color=\"rgb(113,92,108)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:shibbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-shibbusd\", color=\"rgb(242,190,160)\");\n\nvar b = BINANCE:shibusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-shibusdt\", color=\"rgb(242,190,21)\");\n\nvar c = BYBIT:SHIBUSDC-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit-shibusdc-spot\", color=\"rgb(60,41,227)\");\n\nvar d = BYBIT:SHIBUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit-shibusdt-spot\", color=\"rgb(60,41,253)\");\n\nvar e = COINBASE:SHIB-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-shib-usd\", color=\"rgb(151,108,54)\");\n\nvar f = COINBASE:SHIB-USDT;\nline(cum(f.vbuy-f.vsell), title=\"coinbase-shib-usdt\", color=\"rgb(151,108,96)\");\n\nvar g = KUCOIN:SHIB-USDC;\nline(cum(g.vbuy-g.vsell), title=\"kucoin-shib-usdc\", color=\"rgb(232,239,238)\");\n\nvar h = KUCOIN:SHIB-USDT;\nline(cum(h.vbuy-h.vsell), title=\"kucoin-shib-usdt\", color=\"rgb(232,239,50)\");\n\nvar i = OKEX:SHIB-USDC;\nline(cum(i.vbuy-i.vsell), title=\"okex-shib-usdc\", color=\"rgb(123,240,152)\");\n\nvar j = OKEX:SHIB-USDT;\nline(cum(j.vbuy-j.vsell), title=\"okex-shib-usdt\", color=\"rgb(123,240,47)\");\n\nvar k = UPBIT:KRW-SHIB;\nline(cum(k.vbuy-k.vsell), title=\"upbit\", color=\"rgb(170,47,119)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -885,15 +893,19 @@
       "hiddenMarkets": {
         "BINANCE:shibbusd": false,
         "BINANCE:shibusdt": false,
+        "BYBIT:SHIBUSDC-SPOT": false,
+        "BYBIT:SHIBUSDT-SPOT": false,
         "COINBASE:SHIB-USD": false,
         "COINBASE:SHIB-USDT": false,
         "KRAKEN:SHIB/USD": false,
         "KRAKEN:SHIB/USDT": false,
         "KUCOIN:SHIB-USDC": false,
         "KUCOIN:SHIB-USDT": false,
+        "KUCOIN:SHIBUSDTM": false,
         "OKEX:SHIB-USDC": false,
         "OKEX:SHIB-USDT": false,
-        "OKEX:SHIB-USDT-SWAP": false
+        "OKEX:SHIB-USDT-SWAP": false,
+        "UPBIT:KRW-SHIB": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
