@@ -18,7 +18,8 @@
             "BINANCE:cocosusdt",
             "BINANCE_FUTURES:cocosusdt",
             "BYBIT:COCOSUSDT",
-            "KUCOIN:COCOS-USDT"
+            "KUCOIN:COCOS-USDT",
+            "KUCOIN:COCOSUSDTM"
           ],
           "zoom": 1
         },
@@ -29,7 +30,8 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE_FUTURES:cocosusdt",
-            "BYBIT:COCOSUSDT"
+            "BYBIT:COCOSUSDT",
+            "KUCOIN:COCOSUSDTM"
           ]
         },
         "trades2": {
@@ -469,7 +471,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:cocosusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(223,133,42)\");\n\nvar b = BYBIT:COCOSUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(254,25,161)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:cocosusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(94,65,208)\");\n\nvar b = BYBIT:COCOSUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(161,112,155)\");\n\nvar c = KUCOIN:COCOSUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(78,209,38)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -513,7 +515,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:cocosbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-cocosbusd\", color=\"rgb(236,236,165)\");\n\nvar b = BINANCE:cocosusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-cocosusdt\", color=\"rgb(236,236,179)\");\n\nvar c = KUCOIN:COCOS-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(16,204,195)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:cocosbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-cocosbusd\", color=\"rgb(212,120,137)\");\n\nvar b = BINANCE:cocosusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-cocosusdt\", color=\"rgb(212,120,247)\");\n\nvar c = KUCOIN:COCOS-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(78,209,38)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -875,7 +877,8 @@
         "BINANCE:cocosusdt": false,
         "BINANCE_FUTURES:cocosusdt": false,
         "BYBIT:COCOSUSDT": false,
-        "KUCOIN:COCOS-USDT": false
+        "KUCOIN:COCOS-USDT": false,
+        "KUCOIN:COCOSUSDTM": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
