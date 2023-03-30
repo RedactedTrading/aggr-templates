@@ -14,8 +14,9 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BYBIT:BITUSD",
+            "BYBIT:BITUSDC-SPOT",
             "BYBIT:BITUSDT",
+            "BYBIT:BITUSDT-SPOT",
             "COINBASE:BIT-USD",
             "COINBASE:BIT-USDT",
             "KRAKEN:BIT/USD"
@@ -28,7 +29,6 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
-            "BYBIT:BITUSD",
             "BYBIT:BITUSDT"
           ]
         },
@@ -38,6 +38,8 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BYBIT:BITUSDC-SPOT",
+            "BYBIT:BITUSDT-SPOT",
             "COINBASE:BIT-USD",
             "COINBASE:BIT-USDT",
             "KRAKEN:BIT/USD"
@@ -469,7 +471,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:BITUSD;\nline(cum(a.vbuy-a.vsell), title=\"bybit-bitusd\", color=\"rgb(14,76,1)\");\n\nvar b = BYBIT:BITUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit-bitusdt\", color=\"rgb(14,76,217)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:BITUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(197,127,205)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -513,7 +515,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = COINBASE:BIT-USD;\nline(cum(a.vbuy-a.vsell), title=\"coinbase-bit-usd\", color=\"rgb(225,106,162)\");\n\nvar b = COINBASE:BIT-USDT;\nline(cum(b.vbuy-b.vsell), title=\"coinbase-bit-usdt\", color=\"rgb(225,106,194)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:BITUSDC-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit-bitusdc-spot\", color=\"rgb(197,127,13)\");\n\nvar b = BYBIT:BITUSDT-SPOT;\nline(cum(b.vbuy-b.vsell), title=\"bybit-bitusdt-spot\", color=\"rgb(197,127,137)\");\n\nvar c = COINBASE:BIT-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-bit-usd\", color=\"rgb(35,50,91)\");\n\nvar d = COINBASE:BIT-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-bit-usdt\", color=\"rgb(35,50,0)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -871,8 +873,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:BITUSD": false,
+        "BYBIT:BITUSDC-SPOT": false,
         "BYBIT:BITUSDT": false,
+        "BYBIT:BITUSDT-SPOT": false,
         "COINBASE:BIT-USD": false,
         "COINBASE:BIT-USDT": false,
         "KRAKEN:BIT/USD": false
