@@ -512,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ampbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ampbusd\", color=\"rgb(70,238,140)\");\n\nvar b = BINANCE:ampusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-ampusdt\", color=\"rgb(70,238,147)\");\n\nvar c = BITFINEX:AMPUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(244,253,0)\");\n\nvar d = COINBASE:AMP-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(215,106,87)\");\n\nvar e = KUCOIN:AMP-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(208,209,243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ampbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ampbusd\", color=\"rgb(163,8,99)\");\n\nvar b = BINANCE:ampusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-ampusdt\", color=\"rgb(163,8,126)\");\n\nvar c = BITFINEX:AMPUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(230,236,169)\");\n\nvar d = COINBASE:AMP-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(121,142,102)\");\n\nvar e = KUCOIN:AMP-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(176,237,202)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
