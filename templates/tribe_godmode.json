@@ -16,6 +16,7 @@
           "markets": [
             "BINANCE:tribebusd",
             "BINANCE:tribeusdt",
+            "BYBIT:TRIBEUSDT-SPOT",
             "KRAKEN:TRIBE/USD",
             "KUCOIN:TRIBE-USDT"
           ],
@@ -36,6 +37,7 @@
           "markets": [
             "BINANCE:tribebusd",
             "BINANCE:tribeusdt",
+            "BYBIT:TRIBEUSDT-SPOT",
             "KRAKEN:TRIBE/USD",
             "KUCOIN:TRIBE-USDT"
           ]
@@ -322,7 +324,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -510,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:tribebusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-tribebusd\", color=\"rgb(155,207,49)\");\n\nvar b = BINANCE:tribeusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-tribeusdt\", color=\"rgb(155,207,232)\");\n\nvar c = KUCOIN:TRIBE-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(54,30,164)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:tribebusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-tribebusd\", color=\"rgb(9,31,45)\");\n\nvar b = BINANCE:tribeusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-tribeusdt\", color=\"rgb(9,31,50)\");\n\nvar c = BYBIT:TRIBEUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(214,156,183)\");\n\nvar d = KUCOIN:TRIBE-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(66,200,76)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -870,6 +872,7 @@
       "hiddenMarkets": {
         "BINANCE:tribebusd": false,
         "BINANCE:tribeusdt": false,
+        "BYBIT:TRIBEUSDT-SPOT": false,
         "KRAKEN:TRIBE/USD": false,
         "KUCOIN:TRIBE-USDT": false
       },
