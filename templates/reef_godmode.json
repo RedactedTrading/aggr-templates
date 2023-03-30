@@ -18,7 +18,8 @@
             "BINANCE:reefusdt",
             "BINANCE_FUTURES:reefusdt",
             "BYBIT:REEFUSDT",
-            "KUCOIN:REEF-USDT"
+            "KUCOIN:REEF-USDT",
+            "KUCOIN:REEFUSDTM"
           ],
           "zoom": 1
         },
@@ -29,7 +30,8 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE_FUTURES:reefusdt",
-            "BYBIT:REEFUSDT"
+            "BYBIT:REEFUSDT",
+            "KUCOIN:REEFUSDTM"
           ]
         },
         "trades2": {
@@ -469,7 +471,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:reefusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(130,134,133)\");\n\nvar b = BYBIT:REEFUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(225,149,167)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:reefusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(90,28,133)\");\n\nvar b = BYBIT:REEFUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(175,106,215)\");\n\nvar c = KUCOIN:REEFUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(58,99,162)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -513,7 +515,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:reefbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-reefbusd\", color=\"rgb(203,248,84)\");\n\nvar b = BINANCE:reefusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-reefusdt\", color=\"rgb(203,248,135)\");\n\nvar c = KUCOIN:REEF-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(210,231,246)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:reefbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-reefbusd\", color=\"rgb(48,130,229)\");\n\nvar b = BINANCE:reefusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-reefusdt\", color=\"rgb(48,130,19)\");\n\nvar c = KUCOIN:REEF-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(58,99,162)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -875,7 +877,8 @@
         "BINANCE:reefusdt": false,
         "BINANCE_FUTURES:reefusdt": false,
         "BYBIT:REEFUSDT": false,
-        "KUCOIN:REEF-USDT": false
+        "KUCOIN:REEF-USDT": false,
+        "KUCOIN:REEFUSDTM": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
