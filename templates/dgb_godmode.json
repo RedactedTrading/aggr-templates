@@ -19,8 +19,11 @@
             "BINANCE_FUTURES:dgbusdt",
             "BITFINEX:DGBUSD",
             "BYBIT:DGBUSDT",
+            "BYBIT:DGBUSDT-SPOT",
             "KUCOIN:DGB-USDT",
-            "OKEX:DGB-USDT"
+            "KUCOIN:DGBUSDTM",
+            "OKEX:DGB-USDT",
+            "UPBIT:USDT-DGB"
           ],
           "zoom": 1
         },
@@ -31,7 +34,8 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE_FUTURES:dgbusdt",
-            "BYBIT:DGBUSDT"
+            "BYBIT:DGBUSDT",
+            "KUCOIN:DGBUSDTM"
           ]
         },
         "trades2": {
@@ -43,8 +47,10 @@
             "BINANCE:dgbbusd",
             "BINANCE:dgbusdt",
             "BITFINEX:DGBUSD",
+            "BYBIT:DGBUSDT-SPOT",
             "KUCOIN:DGB-USDT",
-            "OKEX:DGB-USDT"
+            "OKEX:DGB-USDT",
+            "UPBIT:USDT-DGB"
           ]
         }
       },
@@ -382,7 +388,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -473,7 +479,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:dgbusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(63,21,21)\");\n\nvar b = BYBIT:DGBUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(54,59,42)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:dgbusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(135,170,150)\");\n\nvar b = BYBIT:DGBUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(73,239,71)\");\n\nvar c = KUCOIN:DGBUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(184,243,42)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -517,7 +523,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:dgbbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-dgbbusd\", color=\"rgb(125,176,90)\");\n\nvar b = BINANCE:dgbusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-dgbusdt\", color=\"rgb(125,176,145)\");\n\nvar c = BITFINEX:DGBUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(16,23,141)\");\n\nvar d = KUCOIN:DGB-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(5,192,87)\");\n\nvar e = OKEX:DGB-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(3,151,209)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:dgbbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-dgbbusd\", color=\"rgb(24,253,62)\");\n\nvar b = BINANCE:dgbusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-dgbusdt\", color=\"rgb(24,253,192)\");\n\nvar c = BITFINEX:DGBUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(114,85,221)\");\n\nvar d = BYBIT:DGBUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(73,239,71)\");\n\nvar e = KUCOIN:DGB-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(184,243,42)\");\n\nvar f = OKEX:DGB-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(23,12,14)\");\n\nvar g = UPBIT:USDT-DGB;\nline(cum(g.vbuy-g.vsell), title=\"upbit\", color=\"rgb(146,247,36)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -880,8 +886,11 @@
         "BINANCE_FUTURES:dgbusdt": false,
         "BITFINEX:DGBUSD": false,
         "BYBIT:DGBUSDT": false,
+        "BYBIT:DGBUSDT-SPOT": false,
         "KUCOIN:DGB-USDT": false,
-        "OKEX:DGB-USDT": false
+        "KUCOIN:DGBUSDTM": false,
+        "OKEX:DGB-USDT": false,
+        "UPBIT:USDT-DGB": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
