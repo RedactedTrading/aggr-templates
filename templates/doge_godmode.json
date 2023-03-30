@@ -18,17 +18,26 @@
             "BINANCE:dogeusdc",
             "BINANCE:dogeusdt",
             "BINANCE_FUTURES:dogebusd",
+            "BINANCE_FUTURES:dogeusd_perp",
             "BINANCE_FUTURES:dogeusdt",
             "BITMEX:DOGEUSD",
+            "BITMEX:DOGEUSDT",
+            "BYBIT:DOGEUSDC-SPOT",
             "BYBIT:DOGEUSDT",
+            "BYBIT:DOGEUSDT-SPOT",
             "COINBASE:DOGE-USD",
             "COINBASE:DOGE-USDT",
+            "DERIBIT:DOGE_USDC-PERPETUAL",
+            "KRAKEN:PF_DOGEUSD",
             "KUCOIN:DOGE-USDC",
             "KUCOIN:DOGE-USDT",
+            "KUCOIN:DOGEUSDTM",
             "OKEX:DOGE-USD-SWAP",
             "OKEX:DOGE-USDC",
             "OKEX:DOGE-USDT",
-            "OKEX:DOGE-USDT-SWAP"
+            "OKEX:DOGE-USDT-SWAP",
+            "UPBIT:KRW-DOGE",
+            "UPBIT:USDT-DOGE"
           ],
           "zoom": 1
         },
@@ -39,9 +48,13 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE_FUTURES:dogebusd",
+            "BINANCE_FUTURES:dogeusd_perp",
             "BINANCE_FUTURES:dogeusdt",
             "BITMEX:DOGEUSD",
+            "BITMEX:DOGEUSDT",
             "BYBIT:DOGEUSDT",
+            "DERIBIT:DOGE_USDC-PERPETUAL",
+            "KUCOIN:DOGEUSDTM",
             "OKEX:DOGE-USD-SWAP",
             "OKEX:DOGE-USDT-SWAP"
           ]
@@ -55,12 +68,17 @@
             "BINANCE:dogebusd",
             "BINANCE:dogeusdc",
             "BINANCE:dogeusdt",
+            "BYBIT:DOGEUSDC-SPOT",
+            "BYBIT:DOGEUSDT-SPOT",
             "COINBASE:DOGE-USD",
             "COINBASE:DOGE-USDT",
+            "KRAKEN:PF_DOGEUSD",
             "KUCOIN:DOGE-USDC",
             "KUCOIN:DOGE-USDT",
             "OKEX:DOGE-USDC",
-            "OKEX:DOGE-USDT"
+            "OKEX:DOGE-USDT",
+            "UPBIT:KRW-DOGE",
+            "UPBIT:USDT-DOGE"
           ]
         }
       },
@@ -353,7 +371,7 @@
         "fetched": false
       },
       "DERIBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "DYDX": {
@@ -373,7 +391,7 @@
         "fetched": false
       },
       "KRAKEN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "KUCOIN": {
@@ -398,7 +416,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -489,7 +507,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:dogebusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-dogebusd\", color=\"rgb(4,116,88)\");\n\nvar b = BINANCE_FUTURES:dogeusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-dogeusdt\", color=\"rgb(4,116,222)\");\n\nvar c = BITMEX:DOGEUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitmex\", color=\"rgb(238,115,134)\");\n\nvar d = BYBIT:DOGEUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(14,7,34)\");\n\nvar e = OKEX:DOGE-USD-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-doge-usd-swap\", color=\"rgb(215,44,163)\");\n\nvar f = OKEX:DOGE-USDT-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"okex-doge-usdt-swap\", color=\"rgb(215,44,117)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:dogebusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-dogebusd\", color=\"rgb(161,146,4)\");\n\nvar b = BINANCE_FUTURES:dogeusd_perp;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-dogeusd_perp\", color=\"rgb(161,146,91)\");\n\nvar c = BINANCE_FUTURES:dogeusdt;\nline(cum(c.vbuy-c.vsell), title=\"binancefutures-dogeusdt\", color=\"rgb(161,146,143)\");\n\nvar d = BITMEX:DOGEUSD;\nline(cum(d.vbuy-d.vsell), title=\"bitmex-dogeusd\", color=\"rgb(226,111,254)\");\n\nvar e = BITMEX:DOGEUSDT;\nline(cum(e.vbuy-e.vsell), title=\"bitmex-dogeusdt\", color=\"rgb(226,111,225)\");\n\nvar f = BYBIT:DOGEUSDT;\nline(cum(f.vbuy-f.vsell), title=\"bybit\", color=\"rgb(64,191,9)\");\n\nvar g = DERIBIT:DOGE_USDC-PERPETUAL;\nline(cum(g.vbuy-g.vsell), title=\"deribit\", color=\"rgb(101,71,3)\");\n\nvar h = KUCOIN:DOGEUSDTM;\nline(cum(h.vbuy-h.vsell), title=\"kucoin\", color=\"rgb(102,45,221)\");\n\nvar i = OKEX:DOGE-USD-SWAP;\nline(cum(i.vbuy-i.vsell), title=\"okex-doge-usd-swap\", color=\"rgb(177,136,29)\");\n\nvar j = OKEX:DOGE-USDT-SWAP;\nline(cum(j.vbuy-j.vsell), title=\"okex-doge-usdt-swap\", color=\"rgb(177,136,127)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -533,7 +551,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:dogebusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-dogebusd\", color=\"rgb(216,4,231)\");\n\nvar b = BINANCE:dogeusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-dogeusdc\", color=\"rgb(216,4,25)\");\n\nvar c = BINANCE:dogeusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-dogeusdt\", color=\"rgb(216,4,9)\");\n\nvar d = COINBASE:DOGE-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-doge-usd\", color=\"rgb(212,153,174)\");\n\nvar e = COINBASE:DOGE-USDT;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-doge-usdt\", color=\"rgb(212,153,99)\");\n\nvar f = KUCOIN:DOGE-USDC;\nline(cum(f.vbuy-f.vsell), title=\"kucoin-doge-usdc\", color=\"rgb(131,217,129)\");\n\nvar g = KUCOIN:DOGE-USDT;\nline(cum(g.vbuy-g.vsell), title=\"kucoin-doge-usdt\", color=\"rgb(131,217,118)\");\n\nvar h = OKEX:DOGE-USDC;\nline(cum(h.vbuy-h.vsell), title=\"okex-doge-usdc\", color=\"rgb(215,44,191)\");\n\nvar i = OKEX:DOGE-USDT;\nline(cum(i.vbuy-i.vsell), title=\"okex-doge-usdt\", color=\"rgb(215,44,234)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:dogebusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-dogebusd\", color=\"rgb(93,192,34)\");\n\nvar b = BINANCE:dogeusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-dogeusdc\", color=\"rgb(93,192,168)\");\n\nvar c = BINANCE:dogeusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-dogeusdt\", color=\"rgb(93,192,152)\");\n\nvar d = BYBIT:DOGEUSDC-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit-dogeusdc-spot\", color=\"rgb(64,191,229)\");\n\nvar e = BYBIT:DOGEUSDT-SPOT;\nline(cum(e.vbuy-e.vsell), title=\"bybit-dogeusdt-spot\", color=\"rgb(64,191,123)\");\n\nvar f = COINBASE:DOGE-USD;\nline(cum(f.vbuy-f.vsell), title=\"coinbase-doge-usd\", color=\"rgb(47,21,237)\");\n\nvar g = COINBASE:DOGE-USDT;\nline(cum(g.vbuy-g.vsell), title=\"coinbase-doge-usdt\", color=\"rgb(47,21,203)\");\n\nvar h = KUCOIN:DOGE-USDC;\nline(cum(h.vbuy-h.vsell), title=\"kucoin-doge-usdc\", color=\"rgb(102,45,168)\");\n\nvar i = KUCOIN:DOGE-USDT;\nline(cum(i.vbuy-i.vsell), title=\"kucoin-doge-usdt\", color=\"rgb(102,45,216)\");\n\nvar j = OKEX:DOGE-USDC;\nline(cum(j.vbuy-j.vsell), title=\"okex-doge-usdc\", color=\"rgb(177,136,252)\");\n\nvar k = OKEX:DOGE-USDT;\nline(cum(k.vbuy-k.vsell), title=\"okex-doge-usdt\", color=\"rgb(177,136,170)\");\n\nvar l = UPBIT:KRW-DOGE;\nline(cum(l.vbuy-l.vsell), title=\"upbit-krw-doge\", color=\"rgb(13,101,70)\");\n\nvar m = UPBIT:USDT-DOGE;\nline(cum(m.vbuy-m.vsell), title=\"upbit-usdt-doge\", color=\"rgb(13,101,17)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -895,17 +913,26 @@
         "BINANCE:dogeusdc": false,
         "BINANCE:dogeusdt": false,
         "BINANCE_FUTURES:dogebusd": false,
+        "BINANCE_FUTURES:dogeusd_perp": false,
         "BINANCE_FUTURES:dogeusdt": false,
         "BITMEX:DOGEUSD": false,
+        "BITMEX:DOGEUSDT": false,
+        "BYBIT:DOGEUSDC-SPOT": false,
         "BYBIT:DOGEUSDT": false,
+        "BYBIT:DOGEUSDT-SPOT": false,
         "COINBASE:DOGE-USD": false,
         "COINBASE:DOGE-USDT": false,
+        "DERIBIT:DOGE_USDC-PERPETUAL": false,
+        "KRAKEN:PF_DOGEUSD": false,
         "KUCOIN:DOGE-USDC": false,
         "KUCOIN:DOGE-USDT": false,
+        "KUCOIN:DOGEUSDTM": false,
         "OKEX:DOGE-USD-SWAP": false,
         "OKEX:DOGE-USDC": false,
         "OKEX:DOGE-USDT": false,
-        "OKEX:DOGE-USDT-SWAP": false
+        "OKEX:DOGE-USDT-SWAP": false,
+        "UPBIT:KRW-DOGE": true,
+        "UPBIT:USDT-DOGE": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
