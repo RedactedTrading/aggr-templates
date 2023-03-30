@@ -16,6 +16,7 @@
           "markets": [
             "BINANCE:acabusd",
             "BINANCE:acausdt",
+            "BYBIT:ACAUSDT-SPOT",
             "KRAKEN:ACA/USD",
             "KUCOIN:ACA-USDT",
             "OKEX:ACA-USDT"
@@ -37,6 +38,7 @@
           "markets": [
             "BINANCE:acabusd",
             "BINANCE:acausdt",
+            "BYBIT:ACAUSDT-SPOT",
             "KRAKEN:ACA/USD",
             "KUCOIN:ACA-USDT",
             "OKEX:ACA-USDT"
@@ -324,7 +326,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -512,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:acabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-acabusd\", color=\"rgb(59,186,1)\");\n\nvar b = BINANCE:acausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-acausdt\", color=\"rgb(59,186,44)\");\n\nvar c = KUCOIN:ACA-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(98,156,110)\");\n\nvar d = OKEX:ACA-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(201,215,203)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:acabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-acabusd\", color=\"rgb(184,231,237)\");\n\nvar b = BINANCE:acausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-acausdt\", color=\"rgb(184,231,154)\");\n\nvar c = BYBIT:ACAUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(216,15,125)\");\n\nvar d = KUCOIN:ACA-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(76,176,206)\");\n\nvar e = OKEX:ACA-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(249,154,52)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -872,6 +874,7 @@
       "hiddenMarkets": {
         "BINANCE:acabusd": false,
         "BINANCE:acausdt": false,
+        "BYBIT:ACAUSDT-SPOT": false,
         "KRAKEN:ACA/USD": false,
         "KUCOIN:ACA-USDT": false,
         "OKEX:ACA-USDT": false
