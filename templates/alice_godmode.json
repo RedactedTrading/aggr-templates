@@ -20,7 +20,9 @@
             "BYBIT:ALICEUSDT",
             "COINBASE:ALICE-USD",
             "KRAKEN:ALICE/USD",
-            "KUCOIN:ALICE-USDT"
+            "KRAKEN:PF_ALICEUSD",
+            "KUCOIN:ALICE-USDT",
+            "KUCOIN:ALICEUSDTM"
           ],
           "zoom": 1
         },
@@ -31,7 +33,8 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE_FUTURES:aliceusdt",
-            "BYBIT:ALICEUSDT"
+            "BYBIT:ALICEUSDT",
+            "KUCOIN:ALICEUSDTM"
           ]
         },
         "trades2": {
@@ -44,6 +47,7 @@
             "BINANCE:aliceusdt",
             "COINBASE:ALICE-USD",
             "KRAKEN:ALICE/USD",
+            "KRAKEN:PF_ALICEUSD",
             "KUCOIN:ALICE-USDT"
           ]
         }
@@ -473,7 +477,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:aliceusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(138,27,13)\");\n\nvar b = BYBIT:ALICEUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(220,151,141)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:aliceusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(204,124,89)\");\n\nvar b = BYBIT:ALICEUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(80,152,131)\");\n\nvar c = KUCOIN:ALICEUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(63,183,71)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -517,7 +521,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:alicebusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-alicebusd\", color=\"rgb(93,253,208)\");\n\nvar b = BINANCE:aliceusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-aliceusdt\", color=\"rgb(93,253,54)\");\n\nvar c = COINBASE:ALICE-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(243,136,115)\");\n\nvar d = KUCOIN:ALICE-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(106,180,128)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:alicebusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-alicebusd\", color=\"rgb(94,143,26)\");\n\nvar b = BINANCE:aliceusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-aliceusdt\", color=\"rgb(94,143,77)\");\n\nvar c = COINBASE:ALICE-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(133,221,218)\");\n\nvar d = KUCOIN:ALICE-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(63,183,71)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -881,7 +885,9 @@
         "BYBIT:ALICEUSDT": false,
         "COINBASE:ALICE-USD": false,
         "KRAKEN:ALICE/USD": false,
-        "KUCOIN:ALICE-USDT": false
+        "KRAKEN:PF_ALICEUSD": false,
+        "KUCOIN:ALICE-USDT": false,
+        "KUCOIN:ALICEUSDTM": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
