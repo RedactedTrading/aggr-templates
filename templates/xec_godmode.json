@@ -16,8 +16,10 @@
           "markets": [
             "BINANCE:xecbusd",
             "BINANCE:xecusdt",
+            "BYBIT:XECUSDT-SPOT",
             "KUCOIN:XEC-USDT",
-            "OKEX:XEC-USDT"
+            "OKEX:XEC-USDT",
+            "UPBIT:KRW-XEC"
           ],
           "zoom": 1
         },
@@ -36,8 +38,10 @@
           "markets": [
             "BINANCE:xecbusd",
             "BINANCE:xecusdt",
+            "BYBIT:XECUSDT-SPOT",
             "KUCOIN:XEC-USDT",
-            "OKEX:XEC-USDT"
+            "OKEX:XEC-USDT",
+            "UPBIT:KRW-XEC"
           ]
         }
       },
@@ -322,7 +326,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -375,7 +379,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -510,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:xecbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-xecbusd\", color=\"rgb(227,238,158)\");\n\nvar b = BINANCE:xecusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-xecusdt\", color=\"rgb(227,238,5)\");\n\nvar c = KUCOIN:XEC-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(26,7,80)\");\n\nvar d = OKEX:XEC-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(124,123,228)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:xecbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-xecbusd\", color=\"rgb(104,19,50)\");\n\nvar b = BINANCE:xecusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-xecusdt\", color=\"rgb(104,19,96)\");\n\nvar c = BYBIT:XECUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(72,184,208)\");\n\nvar d = KUCOIN:XEC-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(206,226,83)\");\n\nvar e = OKEX:XEC-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(47,34,178)\");\n\nvar f = UPBIT:KRW-XEC;\nline(cum(f.vbuy-f.vsell), title=\"upbit\", color=\"rgb(245,20,59)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -870,8 +874,10 @@
       "hiddenMarkets": {
         "BINANCE:xecbusd": false,
         "BINANCE:xecusdt": false,
+        "BYBIT:XECUSDT-SPOT": false,
         "KUCOIN:XEC-USDT": false,
-        "OKEX:XEC-USDT": false
+        "OKEX:XEC-USDT": false,
+        "UPBIT:KRW-XEC": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
