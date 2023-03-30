@@ -16,7 +16,8 @@
           "markets": [
             "BINANCE:elfbusd",
             "BINANCE:elfusdt",
-            "OKEX:ELF-USDT"
+            "OKEX:ELF-USDT",
+            "UPBIT:KRW-ELF"
           ],
           "zoom": 1
         },
@@ -35,7 +36,8 @@
           "markets": [
             "BINANCE:elfbusd",
             "BINANCE:elfusdt",
-            "OKEX:ELF-USDT"
+            "OKEX:ELF-USDT",
+            "UPBIT:KRW-ELF"
           ]
         }
       },
@@ -373,7 +375,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -508,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:elfbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-elfbusd\", color=\"rgb(96,224,1)\");\n\nvar b = BINANCE:elfusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-elfusdt\", color=\"rgb(96,224,81)\");\n\nvar c = OKEX:ELF-USDT;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(14,206,239)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:elfbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-elfbusd\", color=\"rgb(70,2,108)\");\n\nvar b = BINANCE:elfusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-elfusdt\", color=\"rgb(70,2,59)\");\n\nvar c = OKEX:ELF-USDT;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(78,236,1)\");\n\nvar d = UPBIT:KRW-ELF;\nline(cum(d.vbuy-d.vsell), title=\"upbit\", color=\"rgb(195,94,89)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -868,7 +870,8 @@
       "hiddenMarkets": {
         "BINANCE:elfbusd": false,
         "BINANCE:elfusdt": false,
-        "OKEX:ELF-USDT": false
+        "OKEX:ELF-USDT": false,
+        "UPBIT:KRW-ELF": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
