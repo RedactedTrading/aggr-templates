@@ -15,6 +15,7 @@
           "type": "chart",
           "markets": [
             "BINANCE:wbtcbusd",
+            "BYBIT:WBTCUSDT-SPOT",
             "COINBASE:WBTC-USD",
             "KRAKEN:WBTC/USD",
             "OKEX:WBTC-USDT"
@@ -35,6 +36,7 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE:wbtcbusd",
+            "BYBIT:WBTCUSDT-SPOT",
             "COINBASE:WBTC-USD",
             "KRAKEN:WBTC/USD",
             "OKEX:WBTC-USDT"
@@ -322,7 +324,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -510,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:wbtcbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance\", color=\"rgb(237,21,40)\");\n\nvar b = COINBASE:WBTC-USD;\nline(cum(b.vbuy-b.vsell), title=\"coinbase\", color=\"rgb(245,198,136)\");\n\nvar c = OKEX:WBTC-USDT;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(130,7,205)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:wbtcbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance\", color=\"rgb(251,228,57)\");\n\nvar b = BYBIT:WBTCUSDT-SPOT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(83,9,22)\");\n\nvar c = COINBASE:WBTC-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(27,35,198)\");\n\nvar d = OKEX:WBTC-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(37,30,105)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -869,6 +871,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:wbtcbusd": false,
+        "BYBIT:WBTCUSDT-SPOT": false,
         "COINBASE:WBTC-USD": false,
         "KRAKEN:WBTC/USD": false,
         "OKEX:WBTC-USDT": false
