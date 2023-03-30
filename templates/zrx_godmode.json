@@ -19,10 +19,13 @@
             "BINANCE_FUTURES:zrxusdt",
             "BITFINEX:ZRXUSD",
             "BYBIT:ZRXUSDT",
+            "BYBIT:ZRXUSDT-SPOT",
             "COINBASE:ZRX-USD",
             "KRAKEN:ZRX/USD",
             "OKEX:ZRX-USDT",
-            "OKEX:ZRX-USDT-SWAP"
+            "OKEX:ZRX-USDT-SWAP",
+            "UPBIT:KRW-ZRX",
+            "UPBIT:USDT-ZRX"
           ],
           "zoom": 1
         },
@@ -46,9 +49,12 @@
             "BINANCE:zrxbusd",
             "BINANCE:zrxusdt",
             "BITFINEX:ZRXUSD",
+            "BYBIT:ZRXUSDT-SPOT",
             "COINBASE:ZRX-USD",
             "KRAKEN:ZRX/USD",
-            "OKEX:ZRX-USDT"
+            "OKEX:ZRX-USDT",
+            "UPBIT:KRW-ZRX",
+            "UPBIT:USDT-ZRX"
           ]
         }
       },
@@ -386,7 +392,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -477,7 +483,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:zrxusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(8,106,135)\");\n\nvar b = BYBIT:ZRXUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(26,240,67)\");\n\nvar c = OKEX:ZRX-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(195,39,230)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:zrxusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(7,225,10)\");\n\nvar b = BYBIT:ZRXUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(90,3,2)\");\n\nvar c = OKEX:ZRX-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(227,24,226)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -521,7 +527,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:zrxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-zrxbusd\", color=\"rgb(209,139,212)\");\n\nvar b = BINANCE:zrxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-zrxusdt\", color=\"rgb(209,139,85)\");\n\nvar c = BITFINEX:ZRXUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(88,121,32)\");\n\nvar d = COINBASE:ZRX-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(115,74,254)\");\n\nvar e = OKEX:ZRX-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(195,39,230)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:zrxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-zrxbusd\", color=\"rgb(54,98,235)\");\n\nvar b = BINANCE:zrxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-zrxusdt\", color=\"rgb(54,98,76)\");\n\nvar c = BITFINEX:ZRXUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(60,103,209)\");\n\nvar d = BYBIT:ZRXUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(90,3,2)\");\n\nvar e = COINBASE:ZRX-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase\", color=\"rgb(41,55,67)\");\n\nvar f = OKEX:ZRX-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(227,24,226)\");\n\nvar g = UPBIT:KRW-ZRX;\nline(cum(g.vbuy-g.vsell), title=\"upbit-krw-zrx\", color=\"rgb(204,155,203)\");\n\nvar h = UPBIT:USDT-ZRX;\nline(cum(h.vbuy-h.vsell), title=\"upbit-usdt-zrx\", color=\"rgb(204,155,197)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -884,10 +890,13 @@
         "BINANCE_FUTURES:zrxusdt": false,
         "BITFINEX:ZRXUSD": false,
         "BYBIT:ZRXUSDT": false,
+        "BYBIT:ZRXUSDT-SPOT": false,
         "COINBASE:ZRX-USD": false,
         "KRAKEN:ZRX/USD": false,
         "OKEX:ZRX-USDT": false,
-        "OKEX:ZRX-USDT-SWAP": false
+        "OKEX:ZRX-USDT-SWAP": false,
+        "UPBIT:KRW-ZRX": true,
+        "UPBIT:USDT-ZRX": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
