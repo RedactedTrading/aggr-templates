@@ -16,11 +16,15 @@
           "markets": [
             "BINANCE:icxbusd",
             "BINANCE:icxusdt",
+            "BINANCE_FUTURES:icxusd_perp",
             "BINANCE_FUTURES:icxusdt",
             "BYBIT:ICXUSDT",
+            "BYBIT:ICXUSDT-SPOT",
             "KRAKEN:ICX/USD",
+            "KRAKEN:PF_ICXUSD",
             "KUCOIN:ICX-USDT",
-            "OKEX:ICX-USDT"
+            "OKEX:ICX-USDT",
+            "UPBIT:KRW-ICX"
           ],
           "zoom": 1
         },
@@ -30,6 +34,7 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BINANCE_FUTURES:icxusd_perp",
             "BINANCE_FUTURES:icxusdt",
             "BYBIT:ICXUSDT"
           ]
@@ -42,9 +47,12 @@
           "markets": [
             "BINANCE:icxbusd",
             "BINANCE:icxusdt",
+            "BYBIT:ICXUSDT-SPOT",
             "KRAKEN:ICX/USD",
+            "KRAKEN:PF_ICXUSD",
             "KUCOIN:ICX-USDT",
-            "OKEX:ICX-USDT"
+            "OKEX:ICX-USDT",
+            "UPBIT:KRW-ICX"
           ]
         }
       },
@@ -382,7 +390,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -473,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:icxusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(0,97,188)\");\n\nvar b = BYBIT:ICXUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(252,154,63)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:icxusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-icxusd_perp\", color=\"rgb(87,58,187)\");\n\nvar b = BINANCE_FUTURES:icxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-icxusdt\", color=\"rgb(87,58,142)\");\n\nvar c = BYBIT:ICXUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(72,203,252)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -517,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:icxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-icxbusd\", color=\"rgb(97,132,60)\");\n\nvar b = BINANCE:icxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-icxusdt\", color=\"rgb(97,132,210)\");\n\nvar c = KUCOIN:ICX-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(153,115,147)\");\n\nvar d = OKEX:ICX-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(78,191,97)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:icxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-icxbusd\", color=\"rgb(46,179,239)\");\n\nvar b = BINANCE:icxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-icxusdt\", color=\"rgb(46,179,90)\");\n\nvar c = BYBIT:ICXUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(72,203,252)\");\n\nvar d = KUCOIN:ICX-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(156,27,156)\");\n\nvar e = OKEX:ICX-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(168,174,195)\");\n\nvar f = UPBIT:KRW-ICX;\nline(cum(f.vbuy-f.vsell), title=\"upbit\", color=\"rgb(44,157,77)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -877,11 +885,15 @@
       "hiddenMarkets": {
         "BINANCE:icxbusd": false,
         "BINANCE:icxusdt": false,
+        "BINANCE_FUTURES:icxusd_perp": false,
         "BINANCE_FUTURES:icxusdt": false,
         "BYBIT:ICXUSDT": false,
+        "BYBIT:ICXUSDT-SPOT": false,
         "KRAKEN:ICX/USD": false,
+        "KRAKEN:PF_ICXUSD": false,
         "KUCOIN:ICX-USDT": false,
-        "OKEX:ICX-USDT": false
+        "OKEX:ICX-USDT": false,
+        "UPBIT:KRW-ICX": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
