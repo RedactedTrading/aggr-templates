@@ -17,7 +17,9 @@
             "BINANCE:glmrbusd",
             "BINANCE:glmrusdt",
             "BYBIT:GLMRUSDT",
+            "BYBIT:GLMRUSDT-SPOT",
             "KRAKEN:GLMR/USD",
+            "KRAKEN:PF_GLMRUSD",
             "KUCOIN:GLMR-USDT",
             "OKEX:GLMR-USDC",
             "OKEX:GLMR-USDT"
@@ -41,7 +43,9 @@
           "markets": [
             "BINANCE:glmrbusd",
             "BINANCE:glmrusdt",
+            "BYBIT:GLMRUSDT-SPOT",
             "KRAKEN:GLMR/USD",
+            "KRAKEN:PF_GLMRUSD",
             "KUCOIN:GLMR-USDT",
             "OKEX:GLMR-USDC",
             "OKEX:GLMR-USDT"
@@ -473,7 +477,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:GLMRUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(127,148,76)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:GLMRUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(69,121,61)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -517,7 +521,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:glmrbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-glmrbusd\", color=\"rgb(172,225,249)\");\n\nvar b = BINANCE:glmrusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-glmrusdt\", color=\"rgb(172,225,51)\");\n\nvar c = KUCOIN:GLMR-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(229,132,231)\");\n\nvar d = OKEX:GLMR-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-glmr-usdc\", color=\"rgb(216,16,126)\");\n\nvar e = OKEX:GLMR-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-glmr-usdt\", color=\"rgb(216,16,110)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:glmrbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-glmrbusd\", color=\"rgb(174,255,127)\");\n\nvar b = BINANCE:glmrusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-glmrusdt\", color=\"rgb(174,255,186)\");\n\nvar c = BYBIT:GLMRUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(69,121,61)\");\n\nvar d = KUCOIN:GLMR-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(14,12,179)\");\n\nvar e = OKEX:GLMR-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-glmr-usdc\", color=\"rgb(83,87,132)\");\n\nvar f = OKEX:GLMR-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-glmr-usdt\", color=\"rgb(83,87,133)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -878,7 +882,9 @@
         "BINANCE:glmrbusd": false,
         "BINANCE:glmrusdt": false,
         "BYBIT:GLMRUSDT": false,
+        "BYBIT:GLMRUSDT-SPOT": false,
         "KRAKEN:GLMR/USD": false,
+        "KRAKEN:PF_GLMRUSD": false,
         "KUCOIN:GLMR-USDT": false,
         "OKEX:GLMR-USDC": false,
         "OKEX:GLMR-USDT": false
