@@ -19,7 +19,8 @@
             "BINANCE_FUTURES:iotxusdt",
             "BYBIT:IOTXUSDT",
             "COINBASE:IOTX-USD",
-            "KUCOIN:IOTX-USDT"
+            "KUCOIN:IOTX-USDT",
+            "KUCOIN:IOTXUSDTM"
           ],
           "zoom": 1
         },
@@ -30,7 +31,8 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE_FUTURES:iotxusdt",
-            "BYBIT:IOTXUSDT"
+            "BYBIT:IOTXUSDT",
+            "KUCOIN:IOTXUSDTM"
           ]
         },
         "trades2": {
@@ -471,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:iotxusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(150,119,225)\");\n\nvar b = BYBIT:IOTXUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(83,74,103)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:iotxusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(91,140,2)\");\n\nvar b = BYBIT:IOTXUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(16,240,252)\");\n\nvar c = KUCOIN:IOTXUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(239,26,133)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -515,7 +517,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:iotxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-iotxbusd\", color=\"rgb(129,72,163)\");\n\nvar b = BINANCE:iotxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-iotxusdt\", color=\"rgb(129,72,14)\");\n\nvar c = COINBASE:IOTX-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(5,90,28)\");\n\nvar d = KUCOIN:IOTX-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(107,53,190)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:iotxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-iotxbusd\", color=\"rgb(182,45,44)\");\n\nvar b = BINANCE:iotxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-iotxusdt\", color=\"rgb(182,45,29)\");\n\nvar c = COINBASE:IOTX-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(101,234,10)\");\n\nvar d = KUCOIN:IOTX-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(239,26,133)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -878,7 +880,8 @@
         "BINANCE_FUTURES:iotxusdt": false,
         "BYBIT:IOTXUSDT": false,
         "COINBASE:IOTX-USD": false,
-        "KUCOIN:IOTX-USDT": false
+        "KUCOIN:IOTX-USDT": false,
+        "KUCOIN:IOTXUSDTM": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
