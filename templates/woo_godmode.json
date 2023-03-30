@@ -19,8 +19,10 @@
             "BINANCE_FUTURES:woousdt",
             "BITFINEX:WOOUSD",
             "BYBIT:WOOUSDT",
+            "BYBIT:WOOUSDT-SPOT",
             "KRAKEN:WOO/USD",
             "KUCOIN:WOO-USDT",
+            "KUCOIN:WOOUSDTM",
             "OKEX:WOO-USDT",
             "OKEX:WOO-USDT-SWAP"
           ],
@@ -34,6 +36,7 @@
           "markets": [
             "BINANCE_FUTURES:woousdt",
             "BYBIT:WOOUSDT",
+            "KUCOIN:WOOUSDTM",
             "OKEX:WOO-USDT-SWAP"
           ]
         },
@@ -46,6 +49,7 @@
             "BINANCE:woobusd",
             "BINANCE:woousdt",
             "BITFINEX:WOOUSD",
+            "BYBIT:WOOUSDT-SPOT",
             "KRAKEN:WOO/USD",
             "KUCOIN:WOO-USDT",
             "OKEX:WOO-USDT"
@@ -477,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:woousdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(189,29,33)\");\n\nvar b = BYBIT:WOOUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(204,218,109)\");\n\nvar c = OKEX:WOO-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(232,252,86)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:woousdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(104,50,54)\");\n\nvar b = BYBIT:WOOUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(70,75,11)\");\n\nvar c = KUCOIN:WOOUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(56,97,72)\");\n\nvar d = OKEX:WOO-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(209,245,39)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -521,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:woobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-woobusd\", color=\"rgb(7,135,4)\");\n\nvar b = BINANCE:woousdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-woousdt\", color=\"rgb(7,135,156)\");\n\nvar c = BITFINEX:WOOUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(101,206,214)\");\n\nvar d = KUCOIN:WOO-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(156,119,187)\");\n\nvar e = OKEX:WOO-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(232,252,86)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:woobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-woobusd\", color=\"rgb(164,5,15)\");\n\nvar b = BINANCE:woousdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-woousdt\", color=\"rgb(164,5,202)\");\n\nvar c = BITFINEX:WOOUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(234,73,109)\");\n\nvar d = BYBIT:WOOUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(70,75,11)\");\n\nvar e = KUCOIN:WOO-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(56,97,72)\");\n\nvar f = OKEX:WOO-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(209,245,39)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -884,8 +888,10 @@
         "BINANCE_FUTURES:woousdt": false,
         "BITFINEX:WOOUSD": false,
         "BYBIT:WOOUSDT": false,
+        "BYBIT:WOOUSDT-SPOT": false,
         "KRAKEN:WOO/USD": false,
         "KUCOIN:WOO-USDT": false,
+        "KUCOIN:WOOUSDTM": false,
         "OKEX:WOO-USDT": false,
         "OKEX:WOO-USDT-SWAP": false
       },
