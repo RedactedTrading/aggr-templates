@@ -20,7 +20,9 @@
             "BYBIT:OCEANUSDT",
             "COINBASE:OCEAN-USD",
             "KRAKEN:OCEAN/USD",
-            "KUCOIN:OCEAN-USDT"
+            "KRAKEN:PF_OCEANUSD",
+            "KUCOIN:OCEAN-USDT",
+            "KUCOIN:OCEANUSDTM"
           ],
           "zoom": 1
         },
@@ -31,7 +33,8 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE_FUTURES:oceanusdt",
-            "BYBIT:OCEANUSDT"
+            "BYBIT:OCEANUSDT",
+            "KUCOIN:OCEANUSDTM"
           ]
         },
         "trades2": {
@@ -44,6 +47,7 @@
             "BINANCE:oceanusdt",
             "COINBASE:OCEAN-USD",
             "KRAKEN:OCEAN/USD",
+            "KRAKEN:PF_OCEANUSD",
             "KUCOIN:OCEAN-USDT"
           ]
         }
@@ -473,7 +477,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:oceanusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(155,227,161)\");\n\nvar b = BYBIT:OCEANUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(150,184,29)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:oceanusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(117,40,159)\");\n\nvar b = BYBIT:OCEANUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(174,26,218)\");\n\nvar c = KUCOIN:OCEANUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(121,20,145)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -517,7 +521,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:oceanbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-oceanbusd\", color=\"rgb(6,115,225)\");\n\nvar b = BINANCE:oceanusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-oceanusdt\", color=\"rgb(6,115,19)\");\n\nvar c = COINBASE:OCEAN-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(163,75,195)\");\n\nvar d = KUCOIN:OCEAN-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(72,70,84)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:oceanbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-oceanbusd\", color=\"rgb(8,183,168)\");\n\nvar b = BINANCE:oceanusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-oceanusdt\", color=\"rgb(8,183,165)\");\n\nvar c = COINBASE:OCEAN-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(73,237,156)\");\n\nvar d = KUCOIN:OCEAN-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(121,20,145)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -881,7 +885,9 @@
         "BYBIT:OCEANUSDT": false,
         "COINBASE:OCEAN-USD": false,
         "KRAKEN:OCEAN/USD": false,
-        "KUCOIN:OCEAN-USDT": false
+        "KRAKEN:PF_OCEANUSD": false,
+        "KUCOIN:OCEAN-USDT": false,
+        "KUCOIN:OCEANUSDTM": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
