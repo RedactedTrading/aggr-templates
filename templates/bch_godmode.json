@@ -15,20 +15,30 @@
           "type": "chart",
           "markets": [
             "BINANCE:bchbusd",
+            "BINANCE:bchtusd",
             "BINANCE:bchusdc",
             "BINANCE:bchusdt",
+            "BINANCE_FUTURES:bchusd_perp",
             "BINANCE_FUTURES:bchusdt",
             "BITMEX:BCHUSD",
+            "BITMEX:BCHUSDT",
             "BYBIT:BCHUSDT",
+            "BYBIT:BCHUSDT-SPOT",
             "COINBASE:BCH-USD",
+            "DERIBIT:BCH_USDC-PERPETUAL",
             "KRAKEN:BCH/USD",
             "KRAKEN:BCH/USDT",
+            "KRAKEN:PF_BCHUSD",
+            "KRAKEN:PI_BCHUSD",
             "KUCOIN:BCH-USDC",
             "KUCOIN:BCH-USDT",
+            "KUCOIN:BCHUSDTM",
             "OKEX:BCH-USD-SWAP",
             "OKEX:BCH-USDC",
             "OKEX:BCH-USDT",
-            "OKEX:BCH-USDT-SWAP"
+            "OKEX:BCH-USDT-SWAP",
+            "UPBIT:KRW-BCH",
+            "UPBIT:USDT-BCH"
           ],
           "zoom": 1
         },
@@ -38,9 +48,14 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BINANCE_FUTURES:bchusd_perp",
             "BINANCE_FUTURES:bchusdt",
             "BITMEX:BCHUSD",
+            "BITMEX:BCHUSDT",
             "BYBIT:BCHUSDT",
+            "DERIBIT:BCH_USDC-PERPETUAL",
+            "KRAKEN:PI_BCHUSD",
+            "KUCOIN:BCHUSDTM",
             "OKEX:BCH-USD-SWAP",
             "OKEX:BCH-USDT-SWAP"
           ]
@@ -52,15 +67,20 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE:bchbusd",
+            "BINANCE:bchtusd",
             "BINANCE:bchusdc",
             "BINANCE:bchusdt",
+            "BYBIT:BCHUSDT-SPOT",
             "COINBASE:BCH-USD",
             "KRAKEN:BCH/USD",
             "KRAKEN:BCH/USDT",
+            "KRAKEN:PF_BCHUSD",
             "KUCOIN:BCH-USDC",
             "KUCOIN:BCH-USDT",
             "OKEX:BCH-USDC",
-            "OKEX:BCH-USDT"
+            "OKEX:BCH-USDT",
+            "UPBIT:KRW-BCH",
+            "UPBIT:USDT-BCH"
           ]
         }
       },
@@ -353,7 +373,7 @@
         "fetched": false
       },
       "DERIBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "DYDX": {
@@ -398,7 +418,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -489,7 +509,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:bchusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(86,49,121)\");\n\nvar b = BITMEX:BCHUSD;\nline(cum(b.vbuy-b.vsell), title=\"bitmex\", color=\"rgb(187,204,238)\");\n\nvar c = BYBIT:BCHUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(101,158,84)\");\n\nvar d = OKEX:BCH-USD-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex-bch-usd-swap\", color=\"rgb(6,113,136)\");\n\nvar e = OKEX:BCH-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-bch-usdt-swap\", color=\"rgb(6,113,99)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:bchusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-bchusd_perp\", color=\"rgb(244,155,53)\");\n\nvar b = BINANCE_FUTURES:bchusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-bchusdt\", color=\"rgb(244,155,147)\");\n\nvar c = BITMEX:BCHUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitmex-bchusd\", color=\"rgb(68,107,31)\");\n\nvar d = BITMEX:BCHUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bitmex-bchusdt\", color=\"rgb(68,107,177)\");\n\nvar e = BYBIT:BCHUSDT;\nline(cum(e.vbuy-e.vsell), title=\"bybit\", color=\"rgb(59,106,65)\");\n\nvar f = DERIBIT:BCH_USDC-PERPETUAL;\nline(cum(f.vbuy-f.vsell), title=\"deribit\", color=\"rgb(62,12,230)\");\n\nvar g = KUCOIN:BCHUSDTM;\nline(cum(g.vbuy-g.vsell), title=\"kucoin\", color=\"rgb(100,11,207)\");\n\nvar h = OKEX:BCH-USD-SWAP;\nline(cum(h.vbuy-h.vsell), title=\"okex-bch-usd-swap\", color=\"rgb(189,60,167)\");\n\nvar i = OKEX:BCH-USDT-SWAP;\nline(cum(i.vbuy-i.vsell), title=\"okex-bch-usdt-swap\", color=\"rgb(189,60,239)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -533,7 +553,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bchbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-bchbusd\", color=\"rgb(120,54,102)\");\n\nvar b = BINANCE:bchusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-bchusdc\", color=\"rgb(120,54,212)\");\n\nvar c = BINANCE:bchusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-bchusdt\", color=\"rgb(120,54,233)\");\n\nvar d = COINBASE:BCH-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(67,18,213)\");\n\nvar e = KUCOIN:BCH-USDC;\nline(cum(e.vbuy-e.vsell), title=\"kucoin-bch-usdc\", color=\"rgb(133,198,76)\");\n\nvar f = KUCOIN:BCH-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin-bch-usdt\", color=\"rgb(133,198,189)\");\n\nvar g = OKEX:BCH-USDC;\nline(cum(g.vbuy-g.vsell), title=\"okex-bch-usdc\", color=\"rgb(6,113,169)\");\n\nvar h = OKEX:BCH-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex-bch-usdt\", color=\"rgb(6,113,104)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bchbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-bchbusd\", color=\"rgb(42,181,69)\");\n\nvar b = BINANCE:bchtusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-bchtusd\", color=\"rgb(42,181,5)\");\n\nvar c = BINANCE:bchusdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-bchusdc\", color=\"rgb(42,181,231)\");\n\nvar d = BINANCE:bchusdt;\nline(cum(d.vbuy-d.vsell), title=\"binance-bchusdt\", color=\"rgb(42,181,247)\");\n\nvar e = BYBIT:BCHUSDT-SPOT;\nline(cum(e.vbuy-e.vsell), title=\"bybit\", color=\"rgb(59,106,65)\");\n\nvar f = COINBASE:BCH-USD;\nline(cum(f.vbuy-f.vsell), title=\"coinbase\", color=\"rgb(99,80,240)\");\n\nvar g = KUCOIN:BCH-USDC;\nline(cum(g.vbuy-g.vsell), title=\"kucoin-bch-usdc\", color=\"rgb(100,11,73)\");\n\nvar h = KUCOIN:BCH-USDT;\nline(cum(h.vbuy-h.vsell), title=\"kucoin-bch-usdt\", color=\"rgb(100,11,198)\");\n\nvar i = OKEX:BCH-USDC;\nline(cum(i.vbuy-i.vsell), title=\"okex-bch-usdc\", color=\"rgb(189,60,50)\");\n\nvar j = OKEX:BCH-USDT;\nline(cum(j.vbuy-j.vsell), title=\"okex-bch-usdt\", color=\"rgb(189,60,92)\");\n\nvar k = UPBIT:KRW-BCH;\nline(cum(k.vbuy-k.vsell), title=\"upbit-krw-bch\", color=\"rgb(90,112,27)\");\n\nvar l = UPBIT:USDT-BCH;\nline(cum(l.vbuy-l.vsell), title=\"upbit-usdt-bch\", color=\"rgb(90,112,26)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -892,20 +912,30 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:bchbusd": false,
+        "BINANCE:bchtusd": false,
         "BINANCE:bchusdc": false,
         "BINANCE:bchusdt": false,
+        "BINANCE_FUTURES:bchusd_perp": false,
         "BINANCE_FUTURES:bchusdt": false,
         "BITMEX:BCHUSD": false,
+        "BITMEX:BCHUSDT": false,
         "BYBIT:BCHUSDT": false,
+        "BYBIT:BCHUSDT-SPOT": false,
         "COINBASE:BCH-USD": false,
+        "DERIBIT:BCH_USDC-PERPETUAL": false,
         "KRAKEN:BCH/USD": false,
         "KRAKEN:BCH/USDT": false,
+        "KRAKEN:PF_BCHUSD": false,
+        "KRAKEN:PI_BCHUSD": false,
         "KUCOIN:BCH-USDC": false,
         "KUCOIN:BCH-USDT": false,
+        "KUCOIN:BCHUSDTM": false,
         "OKEX:BCH-USD-SWAP": false,
         "OKEX:BCH-USDC": false,
         "OKEX:BCH-USDT": false,
-        "OKEX:BCH-USDT-SWAP": false
+        "OKEX:BCH-USDT-SWAP": false,
+        "UPBIT:KRW-BCH": true,
+        "UPBIT:USDT-BCH": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
