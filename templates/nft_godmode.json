@@ -14,7 +14,9 @@
           "name": "",
           "type": "chart",
           "markets": [
+            "BYBIT:NFTUSDT-SPOT",
             "KUCOIN:NFT-USDT",
+            "KUCOIN:NFTUSDTM",
             "OKEX:NFT-USDC",
             "OKEX:NFT-USDT",
             "OKEX:NFT-USDT-SWAP"
@@ -27,6 +29,7 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "KUCOIN:NFTUSDTM",
             "OKEX:NFT-USDT-SWAP"
           ]
         },
@@ -36,6 +39,7 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BYBIT:NFTUSDT-SPOT",
             "KUCOIN:NFT-USDT",
             "OKEX:NFT-USDC",
             "OKEX:NFT-USDT"
@@ -323,7 +327,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -467,7 +471,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = OKEX:NFT-USDT-SWAP;\nline(cum(a.vbuy-a.vsell), title=\"okex\", color=\"rgb(15,106,228)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = KUCOIN:NFTUSDTM;\nline(cum(a.vbuy-a.vsell), title=\"kucoin\", color=\"rgb(145,29,51)\");\n\nvar b = OKEX:NFT-USDT-SWAP;\nline(cum(b.vbuy-b.vsell), title=\"okex\", color=\"rgb(214,47,50)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -511,7 +515,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = KUCOIN:NFT-USDT;\nline(cum(a.vbuy-a.vsell), title=\"kucoin\", color=\"rgb(233,12,76)\");\n\nvar b = OKEX:NFT-USDC;\nline(cum(b.vbuy-b.vsell), title=\"okex-nft-usdc\", color=\"rgb(15,106,235)\");\n\nvar c = OKEX:NFT-USDT;\nline(cum(c.vbuy-c.vsell), title=\"okex-nft-usdt\", color=\"rgb(15,106,197)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:NFTUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(233,152,44)\");\n\nvar b = KUCOIN:NFT-USDT;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(145,29,51)\");\n\nvar c = OKEX:NFT-USDC;\nline(cum(c.vbuy-c.vsell), title=\"okex-nft-usdc\", color=\"rgb(214,47,205)\");\n\nvar d = OKEX:NFT-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex-nft-usdt\", color=\"rgb(214,47,158)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -869,7 +873,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
+        "BYBIT:NFTUSDT-SPOT": false,
         "KUCOIN:NFT-USDT": false,
+        "KUCOIN:NFTUSDTM": false,
         "OKEX:NFT-USDC": false,
         "OKEX:NFT-USDT": false,
         "OKEX:NFT-USDT-SWAP": false
