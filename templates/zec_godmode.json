@@ -15,14 +15,17 @@
           "type": "chart",
           "markets": [
             "BINANCE:zecbusd",
+            "BINANCE:zectusd",
             "BINANCE:zecusdc",
             "BINANCE:zecusdt",
             "BINANCE_FUTURES:zecusdt",
             "BITFINEX:ZECUSD",
             "BYBIT:ZECUSDT",
             "COINBASE:ZEC-USD",
+            "KRAKEN:PF_ZECUSD",
             "KRAKEN:ZEC/USD",
             "KUCOIN:ZEC-USDT",
+            "KUCOIN:ZECUSDTM",
             "OKEX:ZEC-USD-SWAP",
             "OKEX:ZEC-USDC",
             "OKEX:ZEC-USDT",
@@ -38,6 +41,7 @@
           "markets": [
             "BINANCE_FUTURES:zecusdt",
             "BYBIT:ZECUSDT",
+            "KUCOIN:ZECUSDTM",
             "OKEX:ZEC-USD-SWAP",
             "OKEX:ZEC-USDT-SWAP"
           ]
@@ -49,10 +53,12 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE:zecbusd",
+            "BINANCE:zectusd",
             "BINANCE:zecusdc",
             "BINANCE:zecusdt",
             "BITFINEX:ZECUSD",
             "COINBASE:ZEC-USD",
+            "KRAKEN:PF_ZECUSD",
             "KRAKEN:ZEC/USD",
             "KUCOIN:ZEC-USDT",
             "OKEX:ZEC-USDC",
@@ -485,7 +491,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:zecusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(230,8,73)\");\n\nvar b = BYBIT:ZECUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(173,237,6)\");\n\nvar c = OKEX:ZEC-USD-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex-zec-usd-swap\", color=\"rgb(119,46,169)\");\n\nvar d = OKEX:ZEC-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex-zec-usdt-swap\", color=\"rgb(119,46,170)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:zecusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(169,6,41)\");\n\nvar b = BYBIT:ZECUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(100,117,68)\");\n\nvar c = KUCOIN:ZECUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(164,47,175)\");\n\nvar d = OKEX:ZEC-USD-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex-zec-usd-swap\", color=\"rgb(81,15,55)\");\n\nvar e = OKEX:ZEC-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-zec-usdt-swap\", color=\"rgb(81,15,63)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -529,7 +535,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:zecbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-zecbusd\", color=\"rgb(159,121,1)\");\n\nvar b = BINANCE:zecusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-zecusdc\", color=\"rgb(159,121,73)\");\n\nvar c = BINANCE:zecusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-zecusdt\", color=\"rgb(159,121,158)\");\n\nvar d = BITFINEX:ZECUSD;\nline(cum(d.vbuy-d.vsell), title=\"bitfinex\", color=\"rgb(123,37,126)\");\n\nvar e = COINBASE:ZEC-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase\", color=\"rgb(150,254,5)\");\n\nvar f = KUCOIN:ZEC-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin\", color=\"rgb(167,67,179)\");\n\nvar g = OKEX:ZEC-USDC;\nline(cum(g.vbuy-g.vsell), title=\"okex-zec-usdc\", color=\"rgb(119,46,103)\");\n\nvar h = OKEX:ZEC-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex-zec-usdt\", color=\"rgb(119,46,169)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:zecbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-zecbusd\", color=\"rgb(93,1,2)\");\n\nvar b = BINANCE:zectusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-zectusd\", color=\"rgb(93,1,10)\");\n\nvar c = BINANCE:zecusdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-zecusdc\", color=\"rgb(93,1,156)\");\n\nvar d = BINANCE:zecusdt;\nline(cum(d.vbuy-d.vsell), title=\"binance-zecusdt\", color=\"rgb(93,1,222)\");\n\nvar e = BITFINEX:ZECUSD;\nline(cum(e.vbuy-e.vsell), title=\"bitfinex\", color=\"rgb(217,98,50)\");\n\nvar f = COINBASE:ZEC-USD;\nline(cum(f.vbuy-f.vsell), title=\"coinbase\", color=\"rgb(86,195,253)\");\n\nvar g = KUCOIN:ZEC-USDT;\nline(cum(g.vbuy-g.vsell), title=\"kucoin\", color=\"rgb(164,47,175)\");\n\nvar h = OKEX:ZEC-USDC;\nline(cum(h.vbuy-h.vsell), title=\"okex-zec-usdc\", color=\"rgb(81,15,89)\");\n\nvar i = OKEX:ZEC-USDT;\nline(cum(i.vbuy-i.vsell), title=\"okex-zec-usdt\", color=\"rgb(81,15,185)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -888,14 +894,17 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:zecbusd": false,
+        "BINANCE:zectusd": false,
         "BINANCE:zecusdc": false,
         "BINANCE:zecusdt": false,
         "BINANCE_FUTURES:zecusdt": false,
         "BITFINEX:ZECUSD": false,
         "BYBIT:ZECUSDT": false,
         "COINBASE:ZEC-USD": false,
+        "KRAKEN:PF_ZECUSD": false,
         "KRAKEN:ZEC/USD": false,
         "KUCOIN:ZEC-USDT": false,
+        "KUCOIN:ZECUSDTM": false,
         "OKEX:ZEC-USD-SWAP": false,
         "OKEX:ZEC-USDC": false,
         "OKEX:ZEC-USDT": false,
