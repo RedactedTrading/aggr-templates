@@ -512,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ornbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ornbusd\", color=\"rgb(84,191,46)\");\n\nvar b = BINANCE:ornusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-ornusdt\", color=\"rgb(84,191,220)\");\n\nvar c = COINBASE:ORN-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-orn-usd\", color=\"rgb(255,106,119)\");\n\nvar d = COINBASE:ORN-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-orn-usdt\", color=\"rgb(255,106,215)\");\n\nvar e = KUCOIN:ORN-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(81,20,103)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ornbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ornbusd\", color=\"rgb(73,158,192)\");\n\nvar b = BINANCE:ornusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-ornusdt\", color=\"rgb(73,158,237)\");\n\nvar c = COINBASE:ORN-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-orn-usd\", color=\"rgb(193,22,180)\");\n\nvar d = COINBASE:ORN-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-orn-usdt\", color=\"rgb(193,22,210)\");\n\nvar e = KUCOIN:ORN-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(244,215,226)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
