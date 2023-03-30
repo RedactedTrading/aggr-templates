@@ -14,6 +14,7 @@
           "name": "",
           "type": "chart",
           "markets": [
+            "BINANCE:bchsvtusd",
             "BINANCE:bchsvusdc",
             "BINANCE:bchsvusdt",
             "KUCOIN:BCHSV-USDC",
@@ -34,6 +35,7 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BINANCE:bchsvtusd",
             "BINANCE:bchsvusdc",
             "BINANCE:bchsvusdt",
             "KUCOIN:BCHSV-USDC",
@@ -510,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bchsvusdc;\nline(cum(a.vbuy-a.vsell), title=\"binance-bchsvusdc\", color=\"rgb(87,89,182)\");\n\nvar b = BINANCE:bchsvusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-bchsvusdt\", color=\"rgb(87,89,240)\");\n\nvar c = KUCOIN:BCHSV-USDC;\nline(cum(c.vbuy-c.vsell), title=\"kucoin-bchsv-usdc\", color=\"rgb(156,110,80)\");\n\nvar d = KUCOIN:BCHSV-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin-bchsv-usdt\", color=\"rgb(156,110,216)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bchsvtusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-bchsvtusd\", color=\"rgb(79,82,116)\");\n\nvar b = BINANCE:bchsvusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-bchsvusdc\", color=\"rgb(79,82,10)\");\n\nvar c = BINANCE:bchsvusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-bchsvusdt\", color=\"rgb(79,82,218)\");\n\nvar d = KUCOIN:BCHSV-USDC;\nline(cum(d.vbuy-d.vsell), title=\"kucoin-bchsv-usdc\", color=\"rgb(159,199,120)\");\n\nvar e = KUCOIN:BCHSV-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin-bchsv-usdt\", color=\"rgb(159,199,118)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -868,6 +870,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
+        "BINANCE:bchsvtusd": false,
         "BINANCE:bchsvusdc": false,
         "BINANCE:bchsvusdt": false,
         "KUCOIN:BCHSV-USDC": false,
