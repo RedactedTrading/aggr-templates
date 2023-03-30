@@ -17,7 +17,8 @@
             "BINANCE:gasbusd",
             "BINANCE:gasusdt",
             "KUCOIN:GAS-USDT",
-            "OKEX:GAS-USDT"
+            "OKEX:GAS-USDT",
+            "UPBIT:KRW-GAS"
           ],
           "zoom": 1
         },
@@ -37,7 +38,8 @@
             "BINANCE:gasbusd",
             "BINANCE:gasusdt",
             "KUCOIN:GAS-USDT",
-            "OKEX:GAS-USDT"
+            "OKEX:GAS-USDT",
+            "UPBIT:KRW-GAS"
           ]
         }
       },
@@ -375,7 +377,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -510,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:gasbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-gasbusd\", color=\"rgb(158,232,224)\");\n\nvar b = BINANCE:gasusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-gasusdt\", color=\"rgb(158,232,39)\");\n\nvar c = KUCOIN:GAS-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(216,202,66)\");\n\nvar d = OKEX:GAS-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(32,232,81)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:gasbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-gasbusd\", color=\"rgb(166,194,250)\");\n\nvar b = BINANCE:gasusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-gasusdt\", color=\"rgb(166,194,6)\");\n\nvar c = KUCOIN:GAS-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(221,68,87)\");\n\nvar d = OKEX:GAS-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(218,125,221)\");\n\nvar e = UPBIT:KRW-GAS;\nline(cum(e.vbuy-e.vsell), title=\"upbit\", color=\"rgb(208,217,149)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -871,7 +873,8 @@
         "BINANCE:gasbusd": false,
         "BINANCE:gasusdt": false,
         "KUCOIN:GAS-USDT": false,
-        "OKEX:GAS-USDT": false
+        "OKEX:GAS-USDT": false,
+        "UPBIT:KRW-GAS": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
