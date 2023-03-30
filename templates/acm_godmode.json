@@ -15,7 +15,8 @@
           "type": "chart",
           "markets": [
             "BINANCE:acmbusd",
-            "BINANCE:acmusdt"
+            "BINANCE:acmusdt",
+            "BYBIT:ACMUSDT-SPOT"
           ],
           "zoom": 1
         },
@@ -33,7 +34,8 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE:acmbusd",
-            "BINANCE:acmusdt"
+            "BINANCE:acmusdt",
+            "BYBIT:ACMUSDT-SPOT"
           ]
         }
       },
@@ -318,7 +320,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -506,7 +508,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:acmbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-acmbusd\", color=\"rgb(218,72,145)\");\n\nvar b = BINANCE:acmusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-acmusdt\", color=\"rgb(218,72,148)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:acmbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-acmbusd\", color=\"rgb(207,140,75)\");\n\nvar b = BINANCE:acmusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-acmusdt\", color=\"rgb(207,140,23)\");\n\nvar c = BYBIT:ACMUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(233,209,30)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -865,7 +867,8 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:acmbusd": false,
-        "BINANCE:acmusdt": false
+        "BINANCE:acmusdt": false,
+        "BYBIT:ACMUSDT-SPOT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
