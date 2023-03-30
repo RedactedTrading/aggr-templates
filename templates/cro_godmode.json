@@ -15,13 +15,16 @@
           "type": "chart",
           "markets": [
             "BITMEX:CROUSD",
+            "BITMEX:CROUSDT",
             "BYBIT:CROUSDT",
             "COINBASE:CRO-USD",
             "COINBASE:CRO-USDT",
             "KUCOIN:CRO-USDT",
+            "KUCOIN:CROUSDTM",
             "OKEX:CRO-USDC",
             "OKEX:CRO-USDT",
-            "OKEX:CRO-USDT-SWAP"
+            "OKEX:CRO-USDT-SWAP",
+            "UPBIT:KRW-CRO"
           ],
           "zoom": 1
         },
@@ -32,7 +35,9 @@
           "zoom": 0.5,
           "markets": [
             "BITMEX:CROUSD",
+            "BITMEX:CROUSDT",
             "BYBIT:CROUSDT",
+            "KUCOIN:CROUSDTM",
             "OKEX:CRO-USDT-SWAP"
           ]
         },
@@ -46,7 +51,8 @@
             "COINBASE:CRO-USDT",
             "KUCOIN:CRO-USDT",
             "OKEX:CRO-USDC",
-            "OKEX:CRO-USDT"
+            "OKEX:CRO-USDT",
+            "UPBIT:KRW-CRO"
           ]
         }
       },
@@ -384,7 +390,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -475,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITMEX:CROUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitmex\", color=\"rgb(162,199,244)\");\n\nvar b = BYBIT:CROUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(56,151,39)\");\n\nvar c = OKEX:CRO-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(203,219,189)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITMEX:CROUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitmex-crousd\", color=\"rgb(84,81,210)\");\n\nvar b = BITMEX:CROUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bitmex-crousdt\", color=\"rgb(84,81,130)\");\n\nvar c = BYBIT:CROUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(212,203,46)\");\n\nvar d = KUCOIN:CROUSDTM;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(140,231,51)\");\n\nvar e = OKEX:CRO-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(107,147,123)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = COINBASE:CRO-USD;\nline(cum(a.vbuy-a.vsell), title=\"coinbase-cro-usd\", color=\"rgb(212,55,122)\");\n\nvar b = COINBASE:CRO-USDT;\nline(cum(b.vbuy-b.vsell), title=\"coinbase-cro-usdt\", color=\"rgb(212,55,170)\");\n\nvar c = KUCOIN:CRO-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(31,83,157)\");\n\nvar d = OKEX:CRO-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-cro-usdc\", color=\"rgb(203,219,56)\");\n\nvar e = OKEX:CRO-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-cro-usdt\", color=\"rgb(203,219,7)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = COINBASE:CRO-USD;\nline(cum(a.vbuy-a.vsell), title=\"coinbase-cro-usd\", color=\"rgb(172,43,148)\");\n\nvar b = COINBASE:CRO-USDT;\nline(cum(b.vbuy-b.vsell), title=\"coinbase-cro-usdt\", color=\"rgb(172,43,49)\");\n\nvar c = KUCOIN:CRO-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(140,231,51)\");\n\nvar d = OKEX:CRO-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-cro-usdc\", color=\"rgb(107,147,168)\");\n\nvar e = OKEX:CRO-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-cro-usdt\", color=\"rgb(107,147,8)\");\n\nvar f = UPBIT:KRW-CRO;\nline(cum(f.vbuy-f.vsell), title=\"upbit\", color=\"rgb(144,81,211)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -878,13 +884,16 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITMEX:CROUSD": false,
+        "BITMEX:CROUSDT": false,
         "BYBIT:CROUSDT": false,
         "COINBASE:CRO-USD": false,
         "COINBASE:CRO-USDT": false,
         "KUCOIN:CRO-USDT": false,
+        "KUCOIN:CROUSDTM": false,
         "OKEX:CRO-USDC": false,
         "OKEX:CRO-USDT": false,
-        "OKEX:CRO-USDT-SWAP": false
+        "OKEX:CRO-USDT-SWAP": false,
+        "UPBIT:KRW-CRO": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
