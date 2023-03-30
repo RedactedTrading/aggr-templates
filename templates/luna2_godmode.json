@@ -16,7 +16,8 @@
           "markets": [
             "BINANCE_FUTURES:luna2usdt",
             "BYBIT:LUNA2USDT",
-            "KRAKEN:LUNA2/USD"
+            "KRAKEN:LUNA2/USD",
+            "KRAKEN:PF_LUNA2USD"
           ],
           "zoom": 1
         },
@@ -36,7 +37,8 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
-            "KRAKEN:LUNA2/USD"
+            "KRAKEN:LUNA2/USD",
+            "KRAKEN:PF_LUNA2USD"
           ]
         }
       },
@@ -465,7 +467,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:luna2usdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(12,170,61)\");\n\nvar b = BYBIT:LUNA2USDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(187,89,25)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:luna2usdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(14,193,89)\");\n\nvar b = BYBIT:LUNA2USDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(81,143,94)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -869,7 +871,8 @@
       "hiddenMarkets": {
         "BINANCE_FUTURES:luna2usdt": false,
         "BYBIT:LUNA2USDT": false,
-        "KRAKEN:LUNA2/USD": false
+        "KRAKEN:LUNA2/USD": false,
+        "KRAKEN:PF_LUNA2USD": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
