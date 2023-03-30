@@ -14,7 +14,8 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BINANCE_FUTURES:defiusdt"
+            "BINANCE_FUTURES:defiusdt",
+            "KRAKEN:PF_DEFIUSD"
           ],
           "zoom": 1
         },
@@ -32,7 +33,9 @@
           "name": "Spot Trades",
           "type": "trades",
           "zoom": 0.5,
-          "markets": []
+          "markets": [
+            "KRAKEN:PF_DEFIUSD"
+          ]
         }
       },
       "layout": [
@@ -344,7 +347,7 @@
         "fetched": false
       },
       "KRAKEN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "KUCOIN": {
@@ -460,7 +463,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:defiusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(190,199,171)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:defiusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(76,15,31)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -862,7 +865,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE_FUTURES:defiusdt": false
+        "BINANCE_FUTURES:defiusdt": false,
+        "KRAKEN:PF_DEFIUSD": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
