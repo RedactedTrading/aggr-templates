@@ -15,9 +15,11 @@
           "type": "chart",
           "markets": [
             "BINANCE:tfuelbusd",
+            "BINANCE:tfueltusd",
             "BINANCE:tfuelusdc",
             "BINANCE:tfuelusdt",
-            "KUCOIN:TFUEL-USDT"
+            "KUCOIN:TFUEL-USDT",
+            "UPBIT:KRW-TFUEL"
           ],
           "zoom": 1
         },
@@ -35,9 +37,11 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE:tfuelbusd",
+            "BINANCE:tfueltusd",
             "BINANCE:tfuelusdc",
             "BINANCE:tfuelusdt",
-            "KUCOIN:TFUEL-USDT"
+            "KUCOIN:TFUEL-USDT",
+            "UPBIT:KRW-TFUEL"
           ]
         }
       },
@@ -375,7 +379,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -510,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:tfuelbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-tfuelbusd\", color=\"rgb(29,169,180)\");\n\nvar b = BINANCE:tfuelusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-tfuelusdc\", color=\"rgb(29,169,83)\");\n\nvar c = BINANCE:tfuelusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-tfuelusdt\", color=\"rgb(29,169,156)\");\n\nvar d = KUCOIN:TFUEL-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(125,173,48)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:tfuelbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-tfuelbusd\", color=\"rgb(194,155,46)\");\n\nvar b = BINANCE:tfueltusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-tfueltusd\", color=\"rgb(194,155,40)\");\n\nvar c = BINANCE:tfuelusdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-tfuelusdc\", color=\"rgb(194,155,123)\");\n\nvar d = BINANCE:tfuelusdt;\nline(cum(d.vbuy-d.vsell), title=\"binance-tfuelusdt\", color=\"rgb(194,155,63)\");\n\nvar e = KUCOIN:TFUEL-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(67,35,52)\");\n\nvar f = UPBIT:KRW-TFUEL;\nline(cum(f.vbuy-f.vsell), title=\"upbit\", color=\"rgb(50,9,157)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -869,9 +873,11 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:tfuelbusd": false,
+        "BINANCE:tfueltusd": false,
         "BINANCE:tfuelusdc": false,
         "BINANCE:tfuelusdt": false,
-        "KUCOIN:TFUEL-USDT": false
+        "KUCOIN:TFUEL-USDT": false,
+        "UPBIT:KRW-TFUEL": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
