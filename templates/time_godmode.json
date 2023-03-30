@@ -14,6 +14,7 @@
           "name": "",
           "type": "chart",
           "markets": [
+            "BYBIT:TIMEUSDT-SPOT",
             "COINBASE:TIME-USD",
             "COINBASE:TIME-USDT",
             "KUCOIN:TIME-USDT"
@@ -33,6 +34,7 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BYBIT:TIMEUSDT-SPOT",
             "COINBASE:TIME-USD",
             "COINBASE:TIME-USDT",
             "KUCOIN:TIME-USDT"
@@ -320,7 +322,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -508,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = COINBASE:TIME-USD;\nline(cum(a.vbuy-a.vsell), title=\"coinbase-time-usd\", color=\"rgb(14,63,190)\");\n\nvar b = COINBASE:TIME-USDT;\nline(cum(b.vbuy-b.vsell), title=\"coinbase-time-usdt\", color=\"rgb(14,63,1)\");\n\nvar c = KUCOIN:TIME-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(233,132,101)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:TIMEUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(167,83,148)\");\n\nvar b = COINBASE:TIME-USD;\nline(cum(b.vbuy-b.vsell), title=\"coinbase-time-usd\", color=\"rgb(212,173,74)\");\n\nvar c = COINBASE:TIME-USDT;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-time-usdt\", color=\"rgb(212,173,227)\");\n\nvar d = KUCOIN:TIME-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(161,229,47)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -866,6 +868,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
+        "BYBIT:TIMEUSDT-SPOT": false,
         "COINBASE:TIME-USD": false,
         "COINBASE:TIME-USDT": false,
         "KUCOIN:TIME-USDT": false
