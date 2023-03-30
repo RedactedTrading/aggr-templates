@@ -17,10 +17,12 @@
             "BINANCE:agldbusd",
             "BINANCE:agldusdt",
             "BYBIT:AGLDUSDT",
+            "BYBIT:AGLDUSDT-SPOT",
             "COINBASE:AGLD-USD",
             "COINBASE:AGLD-USDT",
             "KRAKEN:AGLD/USD",
             "KUCOIN:AGLD-USDT",
+            "KUCOIN:AGLDUSDTM",
             "OKEX:AGLD-USDC",
             "OKEX:AGLD-USDT",
             "OKEX:AGLD-USDT-SWAP"
@@ -34,6 +36,7 @@
           "zoom": 0.5,
           "markets": [
             "BYBIT:AGLDUSDT",
+            "KUCOIN:AGLDUSDTM",
             "OKEX:AGLD-USDT-SWAP"
           ]
         },
@@ -45,6 +48,7 @@
           "markets": [
             "BINANCE:agldbusd",
             "BINANCE:agldusdt",
+            "BYBIT:AGLDUSDT-SPOT",
             "COINBASE:AGLD-USD",
             "COINBASE:AGLD-USDT",
             "KRAKEN:AGLD/USD",
@@ -479,7 +483,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:AGLDUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(122,90,52)\");\n\nvar b = OKEX:AGLD-USDT-SWAP;\nline(cum(b.vbuy-b.vsell), title=\"okex\", color=\"rgb(48,210,133)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:AGLDUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(94,26,49)\");\n\nvar b = KUCOIN:AGLDUSDTM;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(210,225,234)\");\n\nvar c = OKEX:AGLD-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(200,132,68)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -523,7 +527,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:agldbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-agldbusd\", color=\"rgb(208,67,61)\");\n\nvar b = BINANCE:agldusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-agldusdt\", color=\"rgb(208,67,190)\");\n\nvar c = COINBASE:AGLD-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-agld-usd\", color=\"rgb(182,5,243)\");\n\nvar d = COINBASE:AGLD-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-agld-usdt\", color=\"rgb(182,5,101)\");\n\nvar e = KUCOIN:AGLD-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(41,92,92)\");\n\nvar f = OKEX:AGLD-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-agld-usdc\", color=\"rgb(48,210,148)\");\n\nvar g = OKEX:AGLD-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-agld-usdt\", color=\"rgb(48,210,166)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:agldbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-agldbusd\", color=\"rgb(212,101,72)\");\n\nvar b = BINANCE:agldusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-agldusdt\", color=\"rgb(212,101,147)\");\n\nvar c = BYBIT:AGLDUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(94,26,49)\");\n\nvar d = COINBASE:AGLD-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-agld-usd\", color=\"rgb(39,178,101)\");\n\nvar e = COINBASE:AGLD-USDT;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-agld-usdt\", color=\"rgb(39,178,93)\");\n\nvar f = KUCOIN:AGLD-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin\", color=\"rgb(210,225,234)\");\n\nvar g = OKEX:AGLD-USDC;\nline(cum(g.vbuy-g.vsell), title=\"okex-agld-usdc\", color=\"rgb(200,132,50)\");\n\nvar h = OKEX:AGLD-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex-agld-usdt\", color=\"rgb(200,132,223)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -884,10 +888,12 @@
         "BINANCE:agldbusd": false,
         "BINANCE:agldusdt": false,
         "BYBIT:AGLDUSDT": false,
+        "BYBIT:AGLDUSDT-SPOT": false,
         "COINBASE:AGLD-USD": false,
         "COINBASE:AGLD-USDT": false,
         "KRAKEN:AGLD/USD": false,
         "KUCOIN:AGLD-USDT": false,
+        "KUCOIN:AGLDUSDTM": false,
         "OKEX:AGLD-USDC": false,
         "OKEX:AGLD-USDT": false,
         "OKEX:AGLD-USDT-SWAP": false
