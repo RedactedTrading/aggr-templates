@@ -15,13 +15,18 @@
           "type": "chart",
           "markets": [
             "BINANCE:ankrbusd",
+            "BINANCE:ankrtusd",
             "BINANCE:ankrusdc",
             "BINANCE:ankrusdt",
             "BINANCE_FUTURES:ankrusdt",
             "BYBIT:ANKRUSDT",
+            "BYBIT:ANKRUSDT-SPOT",
             "COINBASE:ANKR-USD",
             "KRAKEN:ANKR/USD",
-            "KUCOIN:ANKR-USDT"
+            "KRAKEN:PF_ANKRUSD",
+            "KUCOIN:ANKR-USDT",
+            "KUCOIN:ANKRUSDTM",
+            "UPBIT:KRW-ANKR"
           ],
           "zoom": 1
         },
@@ -32,7 +37,8 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE_FUTURES:ankrusdt",
-            "BYBIT:ANKRUSDT"
+            "BYBIT:ANKRUSDT",
+            "KUCOIN:ANKRUSDTM"
           ]
         },
         "trades2": {
@@ -42,11 +48,15 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE:ankrbusd",
+            "BINANCE:ankrtusd",
             "BINANCE:ankrusdc",
             "BINANCE:ankrusdt",
+            "BYBIT:ANKRUSDT-SPOT",
             "COINBASE:ANKR-USD",
             "KRAKEN:ANKR/USD",
-            "KUCOIN:ANKR-USDT"
+            "KRAKEN:PF_ANKRUSD",
+            "KUCOIN:ANKR-USDT",
+            "UPBIT:KRW-ANKR"
           ]
         }
       },
@@ -384,7 +394,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -475,7 +485,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:ankrusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(67,155,140)\");\n\nvar b = BYBIT:ANKRUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(133,143,157)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:ankrusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(217,16,47)\");\n\nvar b = BYBIT:ANKRUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(188,71,178)\");\n\nvar c = KUCOIN:ANKRUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(177,203,82)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +529,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ankrbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ankrbusd\", color=\"rgb(79,47,243)\");\n\nvar b = BINANCE:ankrusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-ankrusdc\", color=\"rgb(79,47,95)\");\n\nvar c = BINANCE:ankrusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-ankrusdt\", color=\"rgb(79,47,86)\");\n\nvar d = COINBASE:ANKR-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(146,39,32)\");\n\nvar e = KUCOIN:ANKR-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(252,74,16)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ankrbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ankrbusd\", color=\"rgb(127,53,173)\");\n\nvar b = BINANCE:ankrtusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-ankrtusd\", color=\"rgb(127,53,198)\");\n\nvar c = BINANCE:ankrusdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-ankrusdc\", color=\"rgb(127,53,113)\");\n\nvar d = BINANCE:ankrusdt;\nline(cum(d.vbuy-d.vsell), title=\"binance-ankrusdt\", color=\"rgb(127,53,39)\");\n\nvar e = BYBIT:ANKRUSDT-SPOT;\nline(cum(e.vbuy-e.vsell), title=\"bybit\", color=\"rgb(188,71,178)\");\n\nvar f = COINBASE:ANKR-USD;\nline(cum(f.vbuy-f.vsell), title=\"coinbase\", color=\"rgb(71,124,177)\");\n\nvar g = KUCOIN:ANKR-USDT;\nline(cum(g.vbuy-g.vsell), title=\"kucoin\", color=\"rgb(177,203,82)\");\n\nvar h = UPBIT:KRW-ANKR;\nline(cum(h.vbuy-h.vsell), title=\"upbit\", color=\"rgb(174,52,13)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -878,13 +888,18 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:ankrbusd": false,
+        "BINANCE:ankrtusd": false,
         "BINANCE:ankrusdc": false,
         "BINANCE:ankrusdt": false,
         "BINANCE_FUTURES:ankrusdt": false,
         "BYBIT:ANKRUSDT": false,
+        "BYBIT:ANKRUSDT-SPOT": false,
         "COINBASE:ANKR-USD": false,
         "KRAKEN:ANKR/USD": false,
-        "KUCOIN:ANKR-USDT": false
+        "KRAKEN:PF_ANKRUSD": false,
+        "KUCOIN:ANKR-USDT": false,
+        "KUCOIN:ANKRUSDTM": false,
+        "UPBIT:KRW-ANKR": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
