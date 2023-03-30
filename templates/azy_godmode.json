@@ -14,6 +14,7 @@
           "name": "",
           "type": "chart",
           "markets": [
+            "BYBIT:AZYUSDT-SPOT",
             "OKEX:AZY-USDC",
             "OKEX:AZY-USDT"
           ],
@@ -32,6 +33,7 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BYBIT:AZYUSDT-SPOT",
             "OKEX:AZY-USDC",
             "OKEX:AZY-USDT"
           ]
@@ -318,7 +320,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -506,7 +508,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = OKEX:AZY-USDC;\nline(cum(a.vbuy-a.vsell), title=\"okex-azy-usdc\", color=\"rgb(246,135,185)\");\n\nvar b = OKEX:AZY-USDT;\nline(cum(b.vbuy-b.vsell), title=\"okex-azy-usdt\", color=\"rgb(246,135,15)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:AZYUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(234,141,218)\");\n\nvar b = OKEX:AZY-USDC;\nline(cum(b.vbuy-b.vsell), title=\"okex-azy-usdc\", color=\"rgb(44,19,20)\");\n\nvar c = OKEX:AZY-USDT;\nline(cum(c.vbuy-c.vsell), title=\"okex-azy-usdt\", color=\"rgb(44,19,6)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -864,6 +866,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
+        "BYBIT:AZYUSDT-SPOT": false,
         "OKEX:AZY-USDC": false,
         "OKEX:AZY-USDT": false
       },
