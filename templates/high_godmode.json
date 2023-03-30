@@ -19,7 +19,8 @@
             "BINANCE_FUTURES:highusdt",
             "BYBIT:HIGHUSDT",
             "COINBASE:HIGH-USD",
-            "KUCOIN:HIGH-USDT"
+            "KUCOIN:HIGH-USDT",
+            "KUCOIN:HIGHUSDTM"
           ],
           "zoom": 1
         },
@@ -30,7 +31,8 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE_FUTURES:highusdt",
-            "BYBIT:HIGHUSDT"
+            "BYBIT:HIGHUSDT",
+            "KUCOIN:HIGHUSDTM"
           ]
         },
         "trades2": {
@@ -471,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:highusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(214,250,101)\");\n\nvar b = BYBIT:HIGHUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(97,134,138)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:highusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(124,6,97)\");\n\nvar b = BYBIT:HIGHUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(99,83,5)\");\n\nvar c = KUCOIN:HIGHUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(126,149,62)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -515,7 +517,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:highbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-highbusd\", color=\"rgb(228,214,165)\");\n\nvar b = BINANCE:highusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-highusdt\", color=\"rgb(228,214,126)\");\n\nvar c = COINBASE:HIGH-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(125,101,77)\");\n\nvar d = KUCOIN:HIGH-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(231,49,146)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:highbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-highbusd\", color=\"rgb(51,89,200)\");\n\nvar b = BINANCE:highusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-highusdt\", color=\"rgb(51,89,1)\");\n\nvar c = COINBASE:HIGH-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(148,181,111)\");\n\nvar d = KUCOIN:HIGH-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(126,149,62)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -878,7 +880,8 @@
         "BINANCE_FUTURES:highusdt": false,
         "BYBIT:HIGHUSDT": false,
         "COINBASE:HIGH-USD": false,
-        "KUCOIN:HIGH-USDT": false
+        "KUCOIN:HIGH-USDT": false,
+        "KUCOIN:HIGHUSDTM": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
