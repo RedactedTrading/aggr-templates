@@ -18,7 +18,9 @@
             "BINANCE:peopleusdt",
             "BINANCE_FUTURES:peopleusdt",
             "BYBIT:PEOPLEUSDT",
+            "BYBIT:PEOPLEUSDT-SPOT",
             "KUCOIN:PEOPLE-USDT",
+            "KUCOIN:PEOPLEUSDTM",
             "OKEX:PEOPLE-USDC",
             "OKEX:PEOPLE-USDT",
             "OKEX:PEOPLE-USDT-SWAP"
@@ -33,6 +35,7 @@
           "markets": [
             "BINANCE_FUTURES:peopleusdt",
             "BYBIT:PEOPLEUSDT",
+            "KUCOIN:PEOPLEUSDTM",
             "OKEX:PEOPLE-USDT-SWAP"
           ]
         },
@@ -44,6 +47,7 @@
           "markets": [
             "BINANCE:peoplebusd",
             "BINANCE:peopleusdt",
+            "BYBIT:PEOPLEUSDT-SPOT",
             "KUCOIN:PEOPLE-USDT",
             "OKEX:PEOPLE-USDC",
             "OKEX:PEOPLE-USDT"
@@ -475,7 +479,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:peopleusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(218,149,240)\");\n\nvar b = BYBIT:PEOPLEUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(253,67,129)\");\n\nvar c = OKEX:PEOPLE-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(154,138,203)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:peopleusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(26,70,1)\");\n\nvar b = BYBIT:PEOPLEUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(151,240,103)\");\n\nvar c = KUCOIN:PEOPLEUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(70,81,156)\");\n\nvar d = OKEX:PEOPLE-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(40,184,171)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +523,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:peoplebusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-peoplebusd\", color=\"rgb(157,95,244)\");\n\nvar b = BINANCE:peopleusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-peopleusdt\", color=\"rgb(157,95,117)\");\n\nvar c = KUCOIN:PEOPLE-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(77,116,103)\");\n\nvar d = OKEX:PEOPLE-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-people-usdc\", color=\"rgb(154,138,174)\");\n\nvar e = OKEX:PEOPLE-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-people-usdt\", color=\"rgb(154,138,205)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:peoplebusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-peoplebusd\", color=\"rgb(248,110,40)\");\n\nvar b = BINANCE:peopleusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-peopleusdt\", color=\"rgb(248,110,157)\");\n\nvar c = BYBIT:PEOPLEUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(151,240,103)\");\n\nvar d = KUCOIN:PEOPLE-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(70,81,156)\");\n\nvar e = OKEX:PEOPLE-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-people-usdc\", color=\"rgb(40,184,165)\");\n\nvar f = OKEX:PEOPLE-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-people-usdt\", color=\"rgb(40,184,216)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -881,7 +885,9 @@
         "BINANCE:peopleusdt": false,
         "BINANCE_FUTURES:peopleusdt": false,
         "BYBIT:PEOPLEUSDT": false,
+        "BYBIT:PEOPLEUSDT-SPOT": false,
         "KUCOIN:PEOPLE-USDT": false,
+        "KUCOIN:PEOPLEUSDTM": false,
         "OKEX:PEOPLE-USDC": false,
         "OKEX:PEOPLE-USDT": false,
         "OKEX:PEOPLE-USDT-SWAP": false
