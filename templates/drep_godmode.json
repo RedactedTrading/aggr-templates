@@ -508,7 +508,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:drepbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-drepbusd\", color=\"rgb(20,131,230)\");\n\nvar b = BINANCE:drepusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-drepusdt\", color=\"rgb(20,131,182)\");\n\nvar c = COINBASE:DREP-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(88,125,164)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:drepbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-drepbusd\", color=\"rgb(154,110,125)\");\n\nvar b = BINANCE:drepusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-drepusdt\", color=\"rgb(154,110,67)\");\n\nvar c = COINBASE:DREP-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(69,190,222)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
