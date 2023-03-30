@@ -18,9 +18,12 @@
             "BINANCE:renusdt",
             "BINANCE_FUTURES:renusdt",
             "BYBIT:RENUSDT",
+            "BYBIT:RENUSDT-SPOT",
             "COINBASE:REN-USD",
+            "KRAKEN:PF_RENUSD",
             "KRAKEN:REN/USD",
             "KUCOIN:REN-USDT",
+            "KUCOIN:RENUSDTM",
             "OKEX:REN-USDT",
             "OKEX:REN-USDT-SWAP"
           ],
@@ -34,6 +37,7 @@
           "markets": [
             "BINANCE_FUTURES:renusdt",
             "BYBIT:RENUSDT",
+            "KUCOIN:RENUSDTM",
             "OKEX:REN-USDT-SWAP"
           ]
         },
@@ -45,7 +49,9 @@
           "markets": [
             "BINANCE:renbusd",
             "BINANCE:renusdt",
+            "BYBIT:RENUSDT-SPOT",
             "COINBASE:REN-USD",
+            "KRAKEN:PF_RENUSD",
             "KRAKEN:REN/USD",
             "KUCOIN:REN-USDT",
             "OKEX:REN-USDT"
@@ -477,7 +483,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:renusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(125,178,57)\");\n\nvar b = BYBIT:RENUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(164,43,9)\");\n\nvar c = OKEX:REN-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(249,133,227)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:renusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(60,151,228)\");\n\nvar b = BYBIT:RENUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(198,76,94)\");\n\nvar c = KUCOIN:RENUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(171,129,159)\");\n\nvar d = OKEX:REN-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(189,135,121)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -521,7 +527,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:renbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-renbusd\", color=\"rgb(177,189,149)\");\n\nvar b = BINANCE:renusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-renusdt\", color=\"rgb(177,189,253)\");\n\nvar c = COINBASE:REN-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(241,206,79)\");\n\nvar d = KUCOIN:REN-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(216,91,209)\");\n\nvar e = OKEX:REN-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(249,133,227)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:renbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-renbusd\", color=\"rgb(98,102,45)\");\n\nvar b = BINANCE:renusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-renusdt\", color=\"rgb(98,102,249)\");\n\nvar c = BYBIT:RENUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(198,76,94)\");\n\nvar d = COINBASE:REN-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(81,119,49)\");\n\nvar e = KUCOIN:REN-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(171,129,159)\");\n\nvar f = OKEX:REN-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(189,135,121)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -883,9 +889,12 @@
         "BINANCE:renusdt": false,
         "BINANCE_FUTURES:renusdt": false,
         "BYBIT:RENUSDT": false,
+        "BYBIT:RENUSDT-SPOT": false,
         "COINBASE:REN-USD": false,
+        "KRAKEN:PF_RENUSD": false,
         "KRAKEN:REN/USD": false,
         "KUCOIN:REN-USDT": false,
+        "KUCOIN:RENUSDTM": false,
         "OKEX:REN-USDT": false,
         "OKEX:REN-USDT-SWAP": false
       },
