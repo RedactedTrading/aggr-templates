@@ -14,6 +14,7 @@
           "name": "",
           "type": "chart",
           "markets": [
+            "BYBIT:KRLUSDT-SPOT",
             "COINBASE:KRL-USD",
             "COINBASE:KRL-USDT",
             "KUCOIN:KRL-USDT"
@@ -33,6 +34,7 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BYBIT:KRLUSDT-SPOT",
             "COINBASE:KRL-USD",
             "COINBASE:KRL-USDT",
             "KUCOIN:KRL-USDT"
@@ -320,7 +322,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -508,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = COINBASE:KRL-USD;\nline(cum(a.vbuy-a.vsell), title=\"coinbase-krl-usd\", color=\"rgb(133,64,18)\");\n\nvar b = COINBASE:KRL-USDT;\nline(cum(b.vbuy-b.vsell), title=\"coinbase-krl-usdt\", color=\"rgb(133,64,16)\");\n\nvar c = KUCOIN:KRL-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(205,102,162)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:KRLUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(86,137,205)\");\n\nvar b = COINBASE:KRL-USD;\nline(cum(b.vbuy-b.vsell), title=\"coinbase-krl-usd\", color=\"rgb(152,208,20)\");\n\nvar c = COINBASE:KRL-USDT;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-krl-usdt\", color=\"rgb(152,208,182)\");\n\nvar d = KUCOIN:KRL-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(44,70,22)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -866,6 +868,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
+        "BYBIT:KRLUSDT-SPOT": false,
         "COINBASE:KRL-USD": false,
         "COINBASE:KRL-USDT": false,
         "KUCOIN:KRL-USDT": false
