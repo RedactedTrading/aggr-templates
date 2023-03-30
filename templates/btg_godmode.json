@@ -17,7 +17,9 @@
             "BINANCE:btgbusd",
             "BINANCE:btgusdt",
             "BITFINEX:BTGUSD",
-            "OKEX:BTG-USDT"
+            "BYBIT:BTGUSDT-SPOT",
+            "OKEX:BTG-USDT",
+            "UPBIT:KRW-BTG"
           ],
           "zoom": 1
         },
@@ -37,7 +39,9 @@
             "BINANCE:btgbusd",
             "BINANCE:btgusdt",
             "BITFINEX:BTGUSD",
-            "OKEX:BTG-USDT"
+            "BYBIT:BTGUSDT-SPOT",
+            "OKEX:BTG-USDT",
+            "UPBIT:KRW-BTG"
           ]
         }
       },
@@ -322,7 +326,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -375,7 +379,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -510,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:btgbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-btgbusd\", color=\"rgb(16,232,107)\");\n\nvar b = BINANCE:btgusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-btgusdt\", color=\"rgb(16,232,106)\");\n\nvar c = BITFINEX:BTGUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(117,116,233)\");\n\nvar d = OKEX:BTG-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(220,164,227)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:btgbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-btgbusd\", color=\"rgb(202,186,142)\");\n\nvar b = BINANCE:btgusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-btgusdt\", color=\"rgb(202,186,5)\");\n\nvar c = BITFINEX:BTGUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(99,170,188)\");\n\nvar d = BYBIT:BTGUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(47,168,205)\");\n\nvar e = OKEX:BTG-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(123,216,31)\");\n\nvar f = UPBIT:KRW-BTG;\nline(cum(f.vbuy-f.vsell), title=\"upbit\", color=\"rgb(242,113,176)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -871,7 +875,9 @@
         "BINANCE:btgbusd": false,
         "BINANCE:btgusdt": false,
         "BITFINEX:BTGUSD": false,
-        "OKEX:BTG-USDT": false
+        "BYBIT:BTGUSDT-SPOT": false,
+        "OKEX:BTG-USDT": false,
+        "UPBIT:KRW-BTG": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
