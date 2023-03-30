@@ -18,6 +18,7 @@
             "BINANCE:sunusdt",
             "BITFINEX:SUNUSD",
             "BYBIT:SUNUSDT",
+            "BYBIT:SUNUSDT-SPOT",
             "KUCOIN:SUN-USDT",
             "OKEX:SUN-USDT"
           ],
@@ -41,6 +42,7 @@
             "BINANCE:sunbusd",
             "BINANCE:sunusdt",
             "BITFINEX:SUNUSD",
+            "BYBIT:SUNUSDT-SPOT",
             "KUCOIN:SUN-USDT",
             "OKEX:SUN-USDT"
           ]
@@ -471,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:SUNUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(101,104,52)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:SUNUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(174,45,190)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -515,7 +517,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:sunbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-sunbusd\", color=\"rgb(97,148,170)\");\n\nvar b = BINANCE:sunusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-sunusdt\", color=\"rgb(97,148,77)\");\n\nvar c = BITFINEX:SUNUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(215,212,156)\");\n\nvar d = KUCOIN:SUN-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(213,185,92)\");\n\nvar e = OKEX:SUN-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(56,226,85)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:sunbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-sunbusd\", color=\"rgb(30,221,45)\");\n\nvar b = BINANCE:sunusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-sunusdt\", color=\"rgb(30,221,144)\");\n\nvar c = BITFINEX:SUNUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(177,6,176)\");\n\nvar d = BYBIT:SUNUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(174,45,190)\");\n\nvar e = KUCOIN:SUN-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(235,63,130)\");\n\nvar f = OKEX:SUN-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(20,32,167)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -877,6 +879,7 @@
         "BINANCE:sunusdt": false,
         "BITFINEX:SUNUSD": false,
         "BYBIT:SUNUSDT": false,
+        "BYBIT:SUNUSDT-SPOT": false,
         "KUCOIN:SUN-USDT": false,
         "OKEX:SUN-USDT": false
       },
