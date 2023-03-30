@@ -16,12 +16,16 @@
           "markets": [
             "BINANCE:ensbusd",
             "BINANCE:ensusdt",
+            "BINANCE_FUTURES:ensusd_perp",
             "BINANCE_FUTURES:ensusdt",
             "BYBIT:ENSUSDT",
+            "BYBIT:ENSUSDT-SPOT",
             "COINBASE:ENS-USD",
             "COINBASE:ENS-USDT",
             "KRAKEN:ENS/USD",
+            "KRAKEN:PF_ENSUSD",
             "KUCOIN:ENS-USDT",
+            "KUCOIN:ENSUSDTM",
             "OKEX:ENS-USDC",
             "OKEX:ENS-USDT",
             "OKEX:ENS-USDT-SWAP"
@@ -34,8 +38,10 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BINANCE_FUTURES:ensusd_perp",
             "BINANCE_FUTURES:ensusdt",
             "BYBIT:ENSUSDT",
+            "KUCOIN:ENSUSDTM",
             "OKEX:ENS-USDT-SWAP"
           ]
         },
@@ -47,9 +53,11 @@
           "markets": [
             "BINANCE:ensbusd",
             "BINANCE:ensusdt",
+            "BYBIT:ENSUSDT-SPOT",
             "COINBASE:ENS-USD",
             "COINBASE:ENS-USDT",
             "KRAKEN:ENS/USD",
+            "KRAKEN:PF_ENSUSD",
             "KUCOIN:ENS-USDT",
             "OKEX:ENS-USDC",
             "OKEX:ENS-USDT"
@@ -481,7 +489,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:ensusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(156,248,72)\");\n\nvar b = BYBIT:ENSUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(52,75,63)\");\n\nvar c = OKEX:ENS-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(227,254,216)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:ensusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-ensusd_perp\", color=\"rgb(205,93,20)\");\n\nvar b = BINANCE_FUTURES:ensusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-ensusdt\", color=\"rgb(205,93,214)\");\n\nvar c = BYBIT:ENSUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(150,98,170)\");\n\nvar d = KUCOIN:ENSUSDTM;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(30,8,218)\");\n\nvar e = OKEX:ENS-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(234,240,160)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -525,7 +533,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ensbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ensbusd\", color=\"rgb(165,54,242)\");\n\nvar b = BINANCE:ensusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-ensusdt\", color=\"rgb(165,54,98)\");\n\nvar c = COINBASE:ENS-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-ens-usd\", color=\"rgb(186,9,134)\");\n\nvar d = COINBASE:ENS-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-ens-usdt\", color=\"rgb(186,9,205)\");\n\nvar e = KUCOIN:ENS-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(203,217,197)\");\n\nvar f = OKEX:ENS-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-ens-usdc\", color=\"rgb(227,254,205)\");\n\nvar g = OKEX:ENS-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-ens-usdt\", color=\"rgb(227,254,243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ensbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ensbusd\", color=\"rgb(179,27,232)\");\n\nvar b = BINANCE:ensusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-ensusdt\", color=\"rgb(179,27,192)\");\n\nvar c = BYBIT:ENSUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(150,98,170)\");\n\nvar d = COINBASE:ENS-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-ens-usd\", color=\"rgb(163,48,173)\");\n\nvar e = COINBASE:ENS-USDT;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-ens-usdt\", color=\"rgb(163,48,241)\");\n\nvar f = KUCOIN:ENS-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin\", color=\"rgb(30,8,218)\");\n\nvar g = OKEX:ENS-USDC;\nline(cum(g.vbuy-g.vsell), title=\"okex-ens-usdc\", color=\"rgb(234,240,57)\");\n\nvar h = OKEX:ENS-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex-ens-usdt\", color=\"rgb(234,240,120)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -885,12 +893,16 @@
       "hiddenMarkets": {
         "BINANCE:ensbusd": false,
         "BINANCE:ensusdt": false,
+        "BINANCE_FUTURES:ensusd_perp": false,
         "BINANCE_FUTURES:ensusdt": false,
         "BYBIT:ENSUSDT": false,
+        "BYBIT:ENSUSDT-SPOT": false,
         "COINBASE:ENS-USD": false,
         "COINBASE:ENS-USDT": false,
         "KRAKEN:ENS/USD": false,
+        "KRAKEN:PF_ENSUSD": false,
         "KUCOIN:ENS-USDT": false,
+        "KUCOIN:ENSUSDTM": false,
         "OKEX:ENS-USDC": false,
         "OKEX:ENS-USDT": false,
         "OKEX:ENS-USDT-SWAP": false
