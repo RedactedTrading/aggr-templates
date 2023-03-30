@@ -15,10 +15,12 @@
           "type": "chart",
           "markets": [
             "BYBIT:BSVUSDT",
+            "KUCOIN:BSVUSDTM",
             "OKEX:BSV-USD-SWAP",
             "OKEX:BSV-USDC",
             "OKEX:BSV-USDT",
-            "OKEX:BSV-USDT-SWAP"
+            "OKEX:BSV-USDT-SWAP",
+            "UPBIT:KRW-BSV"
           ],
           "zoom": 1
         },
@@ -29,6 +31,7 @@
           "zoom": 0.5,
           "markets": [
             "BYBIT:BSVUSDT",
+            "KUCOIN:BSVUSDTM",
             "OKEX:BSV-USD-SWAP",
             "OKEX:BSV-USDT-SWAP"
           ]
@@ -40,7 +43,8 @@
           "zoom": 0.5,
           "markets": [
             "OKEX:BSV-USDC",
-            "OKEX:BSV-USDT"
+            "OKEX:BSV-USDT",
+            "UPBIT:KRW-BSV"
           ]
         }
       },
@@ -357,7 +361,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -378,7 +382,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -469,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:BSVUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(19,251,99)\");\n\nvar b = OKEX:BSV-USD-SWAP;\nline(cum(b.vbuy-b.vsell), title=\"okex-bsv-usd-swap\", color=\"rgb(195,192,12)\");\n\nvar c = OKEX:BSV-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex-bsv-usdt-swap\", color=\"rgb(195,192,240)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:BSVUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(46,20,97)\");\n\nvar b = KUCOIN:BSVUSDTM;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(159,195,30)\");\n\nvar c = OKEX:BSV-USD-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex-bsv-usd-swap\", color=\"rgb(45,168,143)\");\n\nvar d = OKEX:BSV-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex-bsv-usdt-swap\", color=\"rgb(45,168,6)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -513,7 +517,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = OKEX:BSV-USDC;\nline(cum(a.vbuy-a.vsell), title=\"okex-bsv-usdc\", color=\"rgb(195,192,241)\");\n\nvar b = OKEX:BSV-USDT;\nline(cum(b.vbuy-b.vsell), title=\"okex-bsv-usdt\", color=\"rgb(195,192,235)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = OKEX:BSV-USDC;\nline(cum(a.vbuy-a.vsell), title=\"okex-bsv-usdc\", color=\"rgb(45,168,41)\");\n\nvar b = OKEX:BSV-USDT;\nline(cum(b.vbuy-b.vsell), title=\"okex-bsv-usdt\", color=\"rgb(45,168,61)\");\n\nvar c = UPBIT:KRW-BSV;\nline(cum(c.vbuy-c.vsell), title=\"upbit\", color=\"rgb(9,202,29)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -872,10 +876,12 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:BSVUSDT": false,
+        "KUCOIN:BSVUSDTM": false,
         "OKEX:BSV-USD-SWAP": false,
         "OKEX:BSV-USDC": false,
         "OKEX:BSV-USDT": false,
-        "OKEX:BSV-USDT-SWAP": false
+        "OKEX:BSV-USDT-SWAP": false,
+        "UPBIT:KRW-BSV": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
