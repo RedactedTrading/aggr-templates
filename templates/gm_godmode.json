@@ -14,6 +14,9 @@
           "name": "",
           "type": "chart",
           "markets": [
+            "BINANCE_FUTURES:gmtusd_perp",
+            "BITMEX:GMTUSD",
+            "BYBIT:GMUSDT-SPOT",
             "OKEX:GM-USDT"
           ],
           "zoom": 1
@@ -23,7 +26,10 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 0.5,
-          "markets": []
+          "markets": [
+            "BINANCE_FUTURES:gmtusd_perp",
+            "BITMEX:GMTUSD"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -31,6 +37,7 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BYBIT:GMUSDT-SPOT",
             "OKEX:GM-USDT"
           ]
         }
@@ -296,7 +303,7 @@
         "fetched": false
       },
       "BINANCE_FUTURES": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BINANCE_US": {
@@ -308,7 +315,7 @@
         "fetched": false
       },
       "BITMEX": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITSTAMP": {
@@ -316,7 +323,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -460,7 +467,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:gmtusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(30,101,54)\");\n\nvar b = BITMEX:GMTUSD;\nline(cum(b.vbuy-b.vsell), title=\"bitmex\", color=\"rgb(253,239,209)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -504,7 +511,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = OKEX:GM-USDT;\nline(cum(a.vbuy-a.vsell), title=\"okex\", color=\"rgb(101,154,234)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:GMUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(190,96,135)\");\n\nvar b = OKEX:GM-USDT;\nline(cum(b.vbuy-b.vsell), title=\"okex\", color=\"rgb(155,230,197)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -862,6 +869,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
+        "BINANCE_FUTURES:gmtusd_perp": false,
+        "BITMEX:GMTUSD": false,
+        "BYBIT:GMUSDT-SPOT": false,
         "OKEX:GM-USDT": false
       },
       "barSpacing": 0.39437454420364615,
