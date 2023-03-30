@@ -14,7 +14,8 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BINANCE:ardrusdt"
+            "BINANCE:ardrusdt",
+            "UPBIT:KRW-ARDR"
           ],
           "zoom": 1
         },
@@ -31,7 +32,8 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
-            "BINANCE:ardrusdt"
+            "BINANCE:ardrusdt",
+            "UPBIT:KRW-ARDR"
           ]
         }
       },
@@ -369,7 +371,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -504,7 +506,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ardrusdt;\nline(cum(a.vbuy-a.vsell), title=\"binance\", color=\"rgb(222,1,236)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ardrusdt;\nline(cum(a.vbuy-a.vsell), title=\"binance\", color=\"rgb(42,54,43)\");\n\nvar b = UPBIT:KRW-ARDR;\nline(cum(b.vbuy-b.vsell), title=\"upbit\", color=\"rgb(81,160,54)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -862,7 +864,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:ardrusdt": false
+        "BINANCE:ardrusdt": false,
+        "UPBIT:KRW-ARDR": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
