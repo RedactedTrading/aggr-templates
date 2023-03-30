@@ -17,6 +17,7 @@
             "BINANCE:paxgbusd",
             "BINANCE:paxgusdt",
             "BYBIT:PAXGUSDT",
+            "BYBIT:PAXGUSDT-SPOT",
             "KRAKEN:PAXG/USD",
             "KUCOIN:PAXG-USDT"
           ],
@@ -39,6 +40,7 @@
           "markets": [
             "BINANCE:paxgbusd",
             "BINANCE:paxgusdt",
+            "BYBIT:PAXGUSDT-SPOT",
             "KRAKEN:PAXG/USD",
             "KUCOIN:PAXG-USDT"
           ]
@@ -469,7 +471,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:PAXGUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(24,201,186)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:PAXGUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(252,153,95)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -513,7 +515,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:paxgbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-paxgbusd\", color=\"rgb(133,72,218)\");\n\nvar b = BINANCE:paxgusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-paxgusdt\", color=\"rgb(133,72,26)\");\n\nvar c = KUCOIN:PAXG-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(143,119,114)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:paxgbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-paxgbusd\", color=\"rgb(231,187,250)\");\n\nvar b = BINANCE:paxgusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-paxgusdt\", color=\"rgb(231,187,217)\");\n\nvar c = BYBIT:PAXGUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(252,153,95)\");\n\nvar d = KUCOIN:PAXG-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(45,247,250)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -874,6 +876,7 @@
         "BINANCE:paxgbusd": false,
         "BINANCE:paxgusdt": false,
         "BYBIT:PAXGUSDT": false,
+        "BYBIT:PAXGUSDT-SPOT": false,
         "KRAKEN:PAXG/USD": false,
         "KUCOIN:PAXG-USDT": false
       },
