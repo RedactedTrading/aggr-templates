@@ -18,6 +18,7 @@
             "BINANCE:spellusdt",
             "BINANCE_FUTURES:spellusdt",
             "BYBIT:SPELLUSDT",
+            "BYBIT:SPELLUSDT-SPOT",
             "COINBASE:SPELL-USD",
             "COINBASE:SPELL-USDT",
             "KRAKEN:SPELL/USD",
@@ -43,6 +44,7 @@
           "markets": [
             "BINANCE:spellbusd",
             "BINANCE:spellusdt",
+            "BYBIT:SPELLUSDT-SPOT",
             "COINBASE:SPELL-USD",
             "COINBASE:SPELL-USDT",
             "KRAKEN:SPELL/USD",
@@ -475,7 +477,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:spellusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(70,17,161)\");\n\nvar b = BYBIT:SPELLUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(172,74,19)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:spellusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(212,84,1)\");\n\nvar b = BYBIT:SPELLUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(66,183,235)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +521,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:spellbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-spellbusd\", color=\"rgb(222,26,120)\");\n\nvar b = BINANCE:spellusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-spellusdt\", color=\"rgb(222,26,184)\");\n\nvar c = COINBASE:SPELL-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-spell-usd\", color=\"rgb(8,199,43)\");\n\nvar d = COINBASE:SPELL-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-spell-usdt\", color=\"rgb(8,199,60)\");\n\nvar e = OKEX:SPELL-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(74,212,116)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:spellbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-spellbusd\", color=\"rgb(133,62,52)\");\n\nvar b = BINANCE:spellusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-spellusdt\", color=\"rgb(133,62,192)\");\n\nvar c = BYBIT:SPELLUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(66,183,235)\");\n\nvar d = COINBASE:SPELL-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-spell-usd\", color=\"rgb(19,241,109)\");\n\nvar e = COINBASE:SPELL-USDT;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-spell-usdt\", color=\"rgb(19,241,119)\");\n\nvar f = OKEX:SPELL-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(199,172,143)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -881,6 +883,7 @@
         "BINANCE:spellusdt": false,
         "BINANCE_FUTURES:spellusdt": false,
         "BYBIT:SPELLUSDT": false,
+        "BYBIT:SPELLUSDT-SPOT": false,
         "COINBASE:SPELL-USD": false,
         "COINBASE:SPELL-USDT": false,
         "KRAKEN:SPELL/USD": false,
