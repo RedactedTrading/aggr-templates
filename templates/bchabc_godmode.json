@@ -15,6 +15,7 @@
           "type": "chart",
           "markets": [
             "BINANCE:bchabcbusd",
+            "BINANCE:bchabctusd",
             "BINANCE:bchabcusdc",
             "BINANCE:bchabcusdt"
           ],
@@ -34,6 +35,7 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE:bchabcbusd",
+            "BINANCE:bchabctusd",
             "BINANCE:bchabcusdc",
             "BINANCE:bchabcusdt"
           ]
@@ -508,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bchabcbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-bchabcbusd\", color=\"rgb(45,183,243)\");\n\nvar b = BINANCE:bchabcusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-bchabcusdc\", color=\"rgb(45,183,40)\");\n\nvar c = BINANCE:bchabcusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-bchabcusdt\", color=\"rgb(45,183,213)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bchabcbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-bchabcbusd\", color=\"rgb(82,99,68)\");\n\nvar b = BINANCE:bchabctusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-bchabctusd\", color=\"rgb(82,99,94)\");\n\nvar c = BINANCE:bchabcusdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-bchabcusdc\", color=\"rgb(82,99,76)\");\n\nvar d = BINANCE:bchabcusdt;\nline(cum(d.vbuy-d.vsell), title=\"binance-bchabcusdt\", color=\"rgb(82,99,75)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -867,6 +869,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:bchabcbusd": false,
+        "BINANCE:bchabctusd": false,
         "BINANCE:bchabcusdc": false,
         "BINANCE:bchabcusdt": false
       },
