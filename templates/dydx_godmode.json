@@ -18,8 +18,11 @@
             "BINANCE:dydxusdt",
             "BINANCE_FUTURES:dydxusdt",
             "BYBIT:DYDXUSDT",
+            "BYBIT:DYDXUSDT-SPOT",
             "KRAKEN:DYDX/USD",
+            "KRAKEN:PF_DYDXUSD",
             "KUCOIN:DYDX-USDT",
+            "KUCOIN:DYDXUSDTM",
             "OKEX:DYDX-USDC",
             "OKEX:DYDX-USDT",
             "OKEX:DYDX-USDT-SWAP"
@@ -34,6 +37,7 @@
           "markets": [
             "BINANCE_FUTURES:dydxusdt",
             "BYBIT:DYDXUSDT",
+            "KUCOIN:DYDXUSDTM",
             "OKEX:DYDX-USDT-SWAP"
           ]
         },
@@ -45,7 +49,9 @@
           "markets": [
             "BINANCE:dydxbusd",
             "BINANCE:dydxusdt",
+            "BYBIT:DYDXUSDT-SPOT",
             "KRAKEN:DYDX/USD",
+            "KRAKEN:PF_DYDXUSD",
             "KUCOIN:DYDX-USDT",
             "OKEX:DYDX-USDC",
             "OKEX:DYDX-USDT"
@@ -477,7 +483,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:dydxusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(139,190,249)\");\n\nvar b = BYBIT:DYDXUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(31,2,239)\");\n\nvar c = OKEX:DYDX-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(207,172,197)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:dydxusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(62,69,228)\");\n\nvar b = BYBIT:DYDXUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(29,113,105)\");\n\nvar c = KUCOIN:DYDXUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(7,113,9)\");\n\nvar d = OKEX:DYDX-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(248,57,18)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -521,7 +527,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:dydxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-dydxbusd\", color=\"rgb(13,44,45)\");\n\nvar b = BINANCE:dydxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-dydxusdt\", color=\"rgb(13,44,81)\");\n\nvar c = KUCOIN:DYDX-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(172,237,224)\");\n\nvar d = OKEX:DYDX-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-dydx-usdc\", color=\"rgb(207,172,200)\");\n\nvar e = OKEX:DYDX-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-dydx-usdt\", color=\"rgb(207,172,73)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:dydxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-dydxbusd\", color=\"rgb(23,19,92)\");\n\nvar b = BINANCE:dydxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-dydxusdt\", color=\"rgb(23,19,73)\");\n\nvar c = BYBIT:DYDXUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(29,113,105)\");\n\nvar d = KUCOIN:DYDX-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(7,113,9)\");\n\nvar e = OKEX:DYDX-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-dydx-usdc\", color=\"rgb(248,57,193)\");\n\nvar f = OKEX:DYDX-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-dydx-usdt\", color=\"rgb(248,57,142)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -883,8 +889,11 @@
         "BINANCE:dydxusdt": false,
         "BINANCE_FUTURES:dydxusdt": false,
         "BYBIT:DYDXUSDT": false,
+        "BYBIT:DYDXUSDT-SPOT": false,
         "KRAKEN:DYDX/USD": false,
+        "KRAKEN:PF_DYDXUSD": false,
         "KUCOIN:DYDX-USDT": false,
+        "KUCOIN:DYDXUSDTM": false,
         "OKEX:DYDX-USDC": false,
         "OKEX:DYDX-USDT": false,
         "OKEX:DYDX-USDT-SWAP": false
