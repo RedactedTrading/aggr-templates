@@ -19,7 +19,8 @@
             "BINANCE_FUTURES:mtlusdt",
             "BYBIT:MTLUSDT",
             "COINBASE:MTL-USD",
-            "KUCOIN:MTL-USDT"
+            "KUCOIN:MTL-USDT",
+            "UPBIT:KRW-MTL"
           ],
           "zoom": 1
         },
@@ -42,7 +43,8 @@
             "BINANCE:mtlbusd",
             "BINANCE:mtlusdt",
             "COINBASE:MTL-USD",
-            "KUCOIN:MTL-USDT"
+            "KUCOIN:MTL-USDT",
+            "UPBIT:KRW-MTL"
           ]
         }
       },
@@ -380,7 +382,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -471,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:mtlusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(240,93,23)\");\n\nvar b = BYBIT:MTLUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(235,24,94)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:mtlusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(168,184,178)\");\n\nvar b = BYBIT:MTLUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(64,198,240)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -515,7 +517,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:mtlbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-mtlbusd\", color=\"rgb(150,19,24)\");\n\nvar b = BINANCE:mtlusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-mtlusdt\", color=\"rgb(150,19,216)\");\n\nvar c = COINBASE:MTL-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(203,215,251)\");\n\nvar d = KUCOIN:MTL-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(181,244,133)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:mtlbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-mtlbusd\", color=\"rgb(235,217,110)\");\n\nvar b = BINANCE:mtlusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-mtlusdt\", color=\"rgb(235,217,214)\");\n\nvar c = COINBASE:MTL-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(21,82,56)\");\n\nvar d = KUCOIN:MTL-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(95,239,59)\");\n\nvar e = UPBIT:KRW-MTL;\nline(cum(e.vbuy-e.vsell), title=\"upbit\", color=\"rgb(100,97,142)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -878,7 +880,8 @@
         "BINANCE_FUTURES:mtlusdt": false,
         "BYBIT:MTLUSDT": false,
         "COINBASE:MTL-USD": false,
-        "KUCOIN:MTL-USDT": false
+        "KUCOIN:MTL-USDT": false,
+        "UPBIT:KRW-MTL": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
