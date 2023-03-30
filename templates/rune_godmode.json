@@ -16,11 +16,15 @@
           "markets": [
             "BINANCE:runebusd",
             "BINANCE:runeusdt",
+            "BINANCE_FUTURES:runeusd_perp",
             "BINANCE_FUTURES:runeusdt",
             "BYBIT:RUNEUSDT",
+            "BYBIT:RUNEUSDT-SPOT",
+            "KRAKEN:PF_RUNEUSD",
             "KRAKEN:RUNE/USD",
             "KUCOIN:RUNE-USDC",
-            "KUCOIN:RUNE-USDT"
+            "KUCOIN:RUNE-USDT",
+            "KUCOIN:RUNEUSDTM"
           ],
           "zoom": 1
         },
@@ -30,8 +34,10 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BINANCE_FUTURES:runeusd_perp",
             "BINANCE_FUTURES:runeusdt",
-            "BYBIT:RUNEUSDT"
+            "BYBIT:RUNEUSDT",
+            "KUCOIN:RUNEUSDTM"
           ]
         },
         "trades2": {
@@ -42,6 +48,8 @@
           "markets": [
             "BINANCE:runebusd",
             "BINANCE:runeusdt",
+            "BYBIT:RUNEUSDT-SPOT",
+            "KRAKEN:PF_RUNEUSD",
             "KRAKEN:RUNE/USD",
             "KUCOIN:RUNE-USDC",
             "KUCOIN:RUNE-USDT"
@@ -473,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:runeusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(21,254,16)\");\n\nvar b = BYBIT:RUNEUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(2,218,177)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:runeusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-runeusd_perp\", color=\"rgb(204,73,243)\");\n\nvar b = BINANCE_FUTURES:runeusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-runeusdt\", color=\"rgb(204,73,56)\");\n\nvar c = BYBIT:RUNEUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(168,120,192)\");\n\nvar d = KUCOIN:RUNEUSDTM;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(143,160,66)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -517,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:runebusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-runebusd\", color=\"rgb(220,225,11)\");\n\nvar b = BINANCE:runeusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-runeusdt\", color=\"rgb(220,225,32)\");\n\nvar c = KUCOIN:RUNE-USDC;\nline(cum(c.vbuy-c.vsell), title=\"kucoin-rune-usdc\", color=\"rgb(58,190,218)\");\n\nvar d = KUCOIN:RUNE-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin-rune-usdt\", color=\"rgb(58,190,118)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:runebusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-runebusd\", color=\"rgb(130,181,28)\");\n\nvar b = BINANCE:runeusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-runeusdt\", color=\"rgb(130,181,224)\");\n\nvar c = BYBIT:RUNEUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(168,120,192)\");\n\nvar d = KUCOIN:RUNE-USDC;\nline(cum(d.vbuy-d.vsell), title=\"kucoin-rune-usdc\", color=\"rgb(143,160,9)\");\n\nvar e = KUCOIN:RUNE-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin-rune-usdt\", color=\"rgb(143,160,39)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -877,11 +885,15 @@
       "hiddenMarkets": {
         "BINANCE:runebusd": false,
         "BINANCE:runeusdt": false,
+        "BINANCE_FUTURES:runeusd_perp": false,
         "BINANCE_FUTURES:runeusdt": false,
         "BYBIT:RUNEUSDT": false,
+        "BYBIT:RUNEUSDT-SPOT": false,
+        "KRAKEN:PF_RUNEUSD": false,
         "KRAKEN:RUNE/USD": false,
         "KUCOIN:RUNE-USDC": false,
-        "KUCOIN:RUNE-USDT": false
+        "KUCOIN:RUNE-USDT": false,
+        "KUCOIN:RUNEUSDTM": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
