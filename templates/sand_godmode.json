@@ -17,16 +17,22 @@
             "BINANCE:sandbusd",
             "BINANCE:sandusdt",
             "BINANCE_FUTURES:sandbusd",
+            "BINANCE_FUTURES:sandusd_perp",
             "BINANCE_FUTURES:sandusdt",
+            "BYBIT:SANDUSDC-SPOT",
             "BYBIT:SANDUSDT",
+            "BYBIT:SANDUSDT-SPOT",
             "COINBASE:SAND-USD",
             "COINBASE:SAND-USDT",
+            "KRAKEN:PF_SANDUSD",
             "KRAKEN:SAND/USD",
             "KUCOIN:SAND-USDT",
+            "KUCOIN:SANDUSDTM",
             "OKEX:SAND-USD-SWAP",
             "OKEX:SAND-USDC",
             "OKEX:SAND-USDT",
-            "OKEX:SAND-USDT-SWAP"
+            "OKEX:SAND-USDT-SWAP",
+            "UPBIT:KRW-SAND"
           ],
           "zoom": 1
         },
@@ -37,8 +43,10 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE_FUTURES:sandbusd",
+            "BINANCE_FUTURES:sandusd_perp",
             "BINANCE_FUTURES:sandusdt",
             "BYBIT:SANDUSDT",
+            "KUCOIN:SANDUSDTM",
             "OKEX:SAND-USD-SWAP",
             "OKEX:SAND-USDT-SWAP"
           ]
@@ -51,12 +59,16 @@
           "markets": [
             "BINANCE:sandbusd",
             "BINANCE:sandusdt",
+            "BYBIT:SANDUSDC-SPOT",
+            "BYBIT:SANDUSDT-SPOT",
             "COINBASE:SAND-USD",
             "COINBASE:SAND-USDT",
+            "KRAKEN:PF_SANDUSD",
             "KRAKEN:SAND/USD",
             "KUCOIN:SAND-USDT",
             "OKEX:SAND-USDC",
-            "OKEX:SAND-USDT"
+            "OKEX:SAND-USDT",
+            "UPBIT:KRW-SAND"
           ]
         }
       },
@@ -394,7 +406,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -485,7 +497,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:sandbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-sandbusd\", color=\"rgb(168,21,57)\");\n\nvar b = BINANCE_FUTURES:sandusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-sandusdt\", color=\"rgb(168,21,144)\");\n\nvar c = BYBIT:SANDUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(227,159,161)\");\n\nvar d = OKEX:SAND-USD-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex-sand-usd-swap\", color=\"rgb(33,20,108)\");\n\nvar e = OKEX:SAND-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-sand-usdt-swap\", color=\"rgb(33,20,66)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:sandbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-sandbusd\", color=\"rgb(91,163,1)\");\n\nvar b = BINANCE_FUTURES:sandusd_perp;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-sandusd_perp\", color=\"rgb(91,163,159)\");\n\nvar c = BINANCE_FUTURES:sandusdt;\nline(cum(c.vbuy-c.vsell), title=\"binancefutures-sandusdt\", color=\"rgb(91,163,37)\");\n\nvar d = BYBIT:SANDUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(96,242,80)\");\n\nvar e = KUCOIN:SANDUSDTM;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(244,210,222)\");\n\nvar f = OKEX:SAND-USD-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"okex-sand-usd-swap\", color=\"rgb(224,11,140)\");\n\nvar g = OKEX:SAND-USDT-SWAP;\nline(cum(g.vbuy-g.vsell), title=\"okex-sand-usdt-swap\", color=\"rgb(224,11,251)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -529,7 +541,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:sandbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-sandbusd\", color=\"rgb(253,221,156)\");\n\nvar b = BINANCE:sandusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-sandusdt\", color=\"rgb(253,221,72)\");\n\nvar c = COINBASE:SAND-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-sand-usd\", color=\"rgb(166,118,70)\");\n\nvar d = COINBASE:SAND-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-sand-usdt\", color=\"rgb(166,118,175)\");\n\nvar e = KUCOIN:SAND-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(65,126,199)\");\n\nvar f = OKEX:SAND-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-sand-usdc\", color=\"rgb(33,20,182)\");\n\nvar g = OKEX:SAND-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-sand-usdt\", color=\"rgb(33,20,158)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:sandbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-sandbusd\", color=\"rgb(171,213,132)\");\n\nvar b = BINANCE:sandusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-sandusdt\", color=\"rgb(171,213,210)\");\n\nvar c = BYBIT:SANDUSDC-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit-sandusdc-spot\", color=\"rgb(96,242,117)\");\n\nvar d = BYBIT:SANDUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit-sandusdt-spot\", color=\"rgb(96,242,46)\");\n\nvar e = COINBASE:SAND-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-sand-usd\", color=\"rgb(80,188,162)\");\n\nvar f = COINBASE:SAND-USDT;\nline(cum(f.vbuy-f.vsell), title=\"coinbase-sand-usdt\", color=\"rgb(80,188,253)\");\n\nvar g = KUCOIN:SAND-USDT;\nline(cum(g.vbuy-g.vsell), title=\"kucoin\", color=\"rgb(244,210,222)\");\n\nvar h = OKEX:SAND-USDC;\nline(cum(h.vbuy-h.vsell), title=\"okex-sand-usdc\", color=\"rgb(224,11,226)\");\n\nvar i = OKEX:SAND-USDT;\nline(cum(i.vbuy-i.vsell), title=\"okex-sand-usdt\", color=\"rgb(224,11,139)\");\n\nvar j = UPBIT:KRW-SAND;\nline(cum(j.vbuy-j.vsell), title=\"upbit\", color=\"rgb(172,150,10)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -890,16 +902,22 @@
         "BINANCE:sandbusd": false,
         "BINANCE:sandusdt": false,
         "BINANCE_FUTURES:sandbusd": false,
+        "BINANCE_FUTURES:sandusd_perp": false,
         "BINANCE_FUTURES:sandusdt": false,
+        "BYBIT:SANDUSDC-SPOT": false,
         "BYBIT:SANDUSDT": false,
+        "BYBIT:SANDUSDT-SPOT": false,
         "COINBASE:SAND-USD": false,
         "COINBASE:SAND-USDT": false,
+        "KRAKEN:PF_SANDUSD": false,
         "KRAKEN:SAND/USD": false,
         "KUCOIN:SAND-USDT": false,
+        "KUCOIN:SANDUSDTM": false,
         "OKEX:SAND-USD-SWAP": false,
         "OKEX:SAND-USDC": false,
         "OKEX:SAND-USDT": false,
-        "OKEX:SAND-USDT-SWAP": false
+        "OKEX:SAND-USDT-SWAP": false,
+        "UPBIT:KRW-SAND": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
