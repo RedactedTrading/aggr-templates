@@ -15,19 +15,26 @@
           "type": "chart",
           "markets": [
             "BINANCE:xlmbusd",
+            "BINANCE:xlmtusd",
             "BINANCE:xlmusdc",
             "BINANCE:xlmusdt",
+            "BINANCE_FUTURES:xlmusd_perp",
             "BINANCE_FUTURES:xlmusdt",
             "BITFINEX:XLMUSD",
+            "BYBIT:XLMUSDC-SPOT",
             "BYBIT:XLMUSDT",
+            "BYBIT:XLMUSDT-SPOT",
             "COINBASE:XLM-USD",
             "COINBASE:XLM-USDT",
+            "KRAKEN:PF_XLMUSD",
             "KRAKEN:XLM/USD",
             "KUCOIN:XLM-USDT",
+            "KUCOIN:XLMUSDTM",
             "OKEX:XLM-USD-SWAP",
             "OKEX:XLM-USDC",
             "OKEX:XLM-USDT",
-            "OKEX:XLM-USDT-SWAP"
+            "OKEX:XLM-USDT-SWAP",
+            "UPBIT:KRW-XLM"
           ],
           "zoom": 1
         },
@@ -37,8 +44,10 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BINANCE_FUTURES:xlmusd_perp",
             "BINANCE_FUTURES:xlmusdt",
             "BYBIT:XLMUSDT",
+            "KUCOIN:XLMUSDTM",
             "OKEX:XLM-USD-SWAP",
             "OKEX:XLM-USDT-SWAP"
           ]
@@ -50,15 +59,20 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE:xlmbusd",
+            "BINANCE:xlmtusd",
             "BINANCE:xlmusdc",
             "BINANCE:xlmusdt",
             "BITFINEX:XLMUSD",
+            "BYBIT:XLMUSDC-SPOT",
+            "BYBIT:XLMUSDT-SPOT",
             "COINBASE:XLM-USD",
             "COINBASE:XLM-USDT",
+            "KRAKEN:PF_XLMUSD",
             "KRAKEN:XLM/USD",
             "KUCOIN:XLM-USDT",
             "OKEX:XLM-USDC",
-            "OKEX:XLM-USDT"
+            "OKEX:XLM-USDT",
+            "UPBIT:KRW-XLM"
           ]
         }
       },
@@ -396,7 +410,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -487,7 +501,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:xlmusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(130,205,168)\");\n\nvar b = BYBIT:XLMUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(207,93,181)\");\n\nvar c = OKEX:XLM-USD-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex-xlm-usd-swap\", color=\"rgb(185,179,197)\");\n\nvar d = OKEX:XLM-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex-xlm-usdt-swap\", color=\"rgb(185,179,159)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:xlmusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-xlmusd_perp\", color=\"rgb(20,131,198)\");\n\nvar b = BINANCE_FUTURES:xlmusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-xlmusdt\", color=\"rgb(20,131,48)\");\n\nvar c = BYBIT:XLMUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(97,209,88)\");\n\nvar d = KUCOIN:XLMUSDTM;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(233,117,78)\");\n\nvar e = OKEX:XLM-USD-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-xlm-usd-swap\", color=\"rgb(46,44,249)\");\n\nvar f = OKEX:XLM-USDT-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"okex-xlm-usdt-swap\", color=\"rgb(46,44,244)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -531,7 +545,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:xlmbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-xlmbusd\", color=\"rgb(199,31,133)\");\n\nvar b = BINANCE:xlmusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-xlmusdc\", color=\"rgb(199,31,22)\");\n\nvar c = BINANCE:xlmusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-xlmusdt\", color=\"rgb(199,31,160)\");\n\nvar d = BITFINEX:XLMUSD;\nline(cum(d.vbuy-d.vsell), title=\"bitfinex\", color=\"rgb(227,237,31)\");\n\nvar e = COINBASE:XLM-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-xlm-usd\", color=\"rgb(102,96,180)\");\n\nvar f = COINBASE:XLM-USDT;\nline(cum(f.vbuy-f.vsell), title=\"coinbase-xlm-usdt\", color=\"rgb(102,96,65)\");\n\nvar g = KUCOIN:XLM-USDT;\nline(cum(g.vbuy-g.vsell), title=\"kucoin\", color=\"rgb(176,225,25)\");\n\nvar h = OKEX:XLM-USDC;\nline(cum(h.vbuy-h.vsell), title=\"okex-xlm-usdc\", color=\"rgb(185,179,234)\");\n\nvar i = OKEX:XLM-USDT;\nline(cum(i.vbuy-i.vsell), title=\"okex-xlm-usdt\", color=\"rgb(185,179,238)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:xlmbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-xlmbusd\", color=\"rgb(160,166,98)\");\n\nvar b = BINANCE:xlmtusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-xlmtusd\", color=\"rgb(160,166,186)\");\n\nvar c = BINANCE:xlmusdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-xlmusdc\", color=\"rgb(160,166,242)\");\n\nvar d = BINANCE:xlmusdt;\nline(cum(d.vbuy-d.vsell), title=\"binance-xlmusdt\", color=\"rgb(160,166,41)\");\n\nvar e = BITFINEX:XLMUSD;\nline(cum(e.vbuy-e.vsell), title=\"bitfinex\", color=\"rgb(181,159,189)\");\n\nvar f = BYBIT:XLMUSDC-SPOT;\nline(cum(f.vbuy-f.vsell), title=\"bybit-xlmusdc-spot\", color=\"rgb(97,209,30)\");\n\nvar g = BYBIT:XLMUSDT-SPOT;\nline(cum(g.vbuy-g.vsell), title=\"bybit-xlmusdt-spot\", color=\"rgb(97,209,196)\");\n\nvar h = COINBASE:XLM-USD;\nline(cum(h.vbuy-h.vsell), title=\"coinbase-xlm-usd\", color=\"rgb(32,0,12)\");\n\nvar i = COINBASE:XLM-USDT;\nline(cum(i.vbuy-i.vsell), title=\"coinbase-xlm-usdt\", color=\"rgb(32,0,242)\");\n\nvar j = KUCOIN:XLM-USDT;\nline(cum(j.vbuy-j.vsell), title=\"kucoin\", color=\"rgb(233,117,78)\");\n\nvar k = OKEX:XLM-USDC;\nline(cum(k.vbuy-k.vsell), title=\"okex-xlm-usdc\", color=\"rgb(46,44,56)\");\n\nvar l = OKEX:XLM-USDT;\nline(cum(l.vbuy-l.vsell), title=\"okex-xlm-usdt\", color=\"rgb(46,44,249)\");\n\nvar m = UPBIT:KRW-XLM;\nline(cum(m.vbuy-m.vsell), title=\"upbit\", color=\"rgb(226,111,149)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -890,19 +904,26 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:xlmbusd": false,
+        "BINANCE:xlmtusd": false,
         "BINANCE:xlmusdc": false,
         "BINANCE:xlmusdt": false,
+        "BINANCE_FUTURES:xlmusd_perp": false,
         "BINANCE_FUTURES:xlmusdt": false,
         "BITFINEX:XLMUSD": false,
+        "BYBIT:XLMUSDC-SPOT": false,
         "BYBIT:XLMUSDT": false,
+        "BYBIT:XLMUSDT-SPOT": false,
         "COINBASE:XLM-USD": false,
         "COINBASE:XLM-USDT": false,
+        "KRAKEN:PF_XLMUSD": false,
         "KRAKEN:XLM/USD": false,
         "KUCOIN:XLM-USDT": false,
+        "KUCOIN:XLMUSDTM": false,
         "OKEX:XLM-USD-SWAP": false,
         "OKEX:XLM-USDC": false,
         "OKEX:XLM-USDT": false,
-        "OKEX:XLM-USDT-SWAP": false
+        "OKEX:XLM-USDT-SWAP": false,
+        "UPBIT:KRW-XLM": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
