@@ -18,7 +18,8 @@
             "BINANCE:glmusdt",
             "COINBASE:GLM-USD",
             "KUCOIN:GLM-USDT",
-            "OKEX:GLM-USDT"
+            "OKEX:GLM-USDT",
+            "UPBIT:KRW-GLM"
           ],
           "zoom": 1
         },
@@ -39,7 +40,8 @@
             "BINANCE:glmusdt",
             "COINBASE:GLM-USD",
             "KUCOIN:GLM-USDT",
-            "OKEX:GLM-USDT"
+            "OKEX:GLM-USDT",
+            "UPBIT:KRW-GLM"
           ]
         }
       },
@@ -377,7 +379,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -512,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:glmbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-glmbusd\", color=\"rgb(188,9,76)\");\n\nvar b = BINANCE:glmusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-glmusdt\", color=\"rgb(188,9,56)\");\n\nvar c = COINBASE:GLM-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(79,209,173)\");\n\nvar d = KUCOIN:GLM-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(158,57,66)\");\n\nvar e = OKEX:GLM-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(99,219,199)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:glmbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-glmbusd\", color=\"rgb(215,34,154)\");\n\nvar b = BINANCE:glmusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-glmusdt\", color=\"rgb(215,34,64)\");\n\nvar c = COINBASE:GLM-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(136,158,23)\");\n\nvar d = KUCOIN:GLM-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(71,119,31)\");\n\nvar e = OKEX:GLM-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(216,255,44)\");\n\nvar f = UPBIT:KRW-GLM;\nline(cum(f.vbuy-f.vsell), title=\"upbit\", color=\"rgb(233,145,218)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -874,7 +876,8 @@
         "BINANCE:glmusdt": false,
         "COINBASE:GLM-USD": false,
         "KUCOIN:GLM-USDT": false,
-        "OKEX:GLM-USDT": false
+        "OKEX:GLM-USDT": false,
+        "UPBIT:KRW-GLM": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
