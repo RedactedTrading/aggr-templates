@@ -508,7 +508,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bifibusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-bifibusd\", color=\"rgb(48,133,59)\");\n\nvar b = BINANCE:bifiusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-bifiusdt\", color=\"rgb(48,133,121)\");\n\nvar c = KUCOIN:BIFI-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(111,21,205)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bifibusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-bifibusd\", color=\"rgb(146,173,78)\");\n\nvar b = BINANCE:bifiusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-bifiusdt\", color=\"rgb(146,173,181)\");\n\nvar c = KUCOIN:BIFI-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(74,214,201)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
