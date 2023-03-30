@@ -22,6 +22,7 @@
             "COINBASE:API3-USDT",
             "KRAKEN:API3/USD",
             "KUCOIN:API3-USDT",
+            "KUCOIN:API3USDTM",
             "OKEX:API3-USDC",
             "OKEX:API3-USDT",
             "OKEX:API3-USDT-SWAP"
@@ -36,6 +37,7 @@
           "markets": [
             "BINANCE_FUTURES:api3usdt",
             "BYBIT:API3USDT",
+            "KUCOIN:API3USDTM",
             "OKEX:API3-USDT-SWAP"
           ]
         },
@@ -481,7 +483,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:api3usdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(86,26,148)\");\n\nvar b = BYBIT:API3USDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(239,153,94)\");\n\nvar c = OKEX:API3-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(10,101,182)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:api3usdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(146,233,50)\");\n\nvar b = BYBIT:API3USDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(24,69,131)\");\n\nvar c = KUCOIN:API3USDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(127,186,218)\");\n\nvar d = OKEX:API3-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(3,106,229)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -525,7 +527,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:api3busd;\nline(cum(a.vbuy-a.vsell), title=\"binance-api3busd\", color=\"rgb(62,247,135)\");\n\nvar b = BINANCE:api3usdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-api3usdt\", color=\"rgb(62,247,190)\");\n\nvar c = COINBASE:API3-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-api3-usd\", color=\"rgb(143,112,1)\");\n\nvar d = COINBASE:API3-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-api3-usdt\", color=\"rgb(143,112,181)\");\n\nvar e = KUCOIN:API3-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(113,217,159)\");\n\nvar f = OKEX:API3-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-api3-usdc\", color=\"rgb(10,101,160)\");\n\nvar g = OKEX:API3-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-api3-usdt\", color=\"rgb(10,101,70)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:api3busd;\nline(cum(a.vbuy-a.vsell), title=\"binance-api3busd\", color=\"rgb(33,174,156)\");\n\nvar b = BINANCE:api3usdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-api3usdt\", color=\"rgb(33,174,192)\");\n\nvar c = COINBASE:API3-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-api3-usd\", color=\"rgb(202,189,4)\");\n\nvar d = COINBASE:API3-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-api3-usdt\", color=\"rgb(202,189,85)\");\n\nvar e = KUCOIN:API3-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(127,186,218)\");\n\nvar f = OKEX:API3-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-api3-usdc\", color=\"rgb(3,106,133)\");\n\nvar g = OKEX:API3-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-api3-usdt\", color=\"rgb(3,106,173)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -891,6 +893,7 @@
         "COINBASE:API3-USDT": false,
         "KRAKEN:API3/USD": false,
         "KUCOIN:API3-USDT": false,
+        "KUCOIN:API3USDTM": false,
         "OKEX:API3-USDC": false,
         "OKEX:API3-USDT": false,
         "OKEX:API3-USDT-SWAP": false
