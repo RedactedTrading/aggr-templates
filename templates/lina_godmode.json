@@ -18,7 +18,8 @@
             "BINANCE:linausdt",
             "BINANCE_FUTURES:linausdt",
             "BYBIT:LINAUSDT",
-            "KUCOIN:LINA-USDT"
+            "KUCOIN:LINA-USDT",
+            "KUCOIN:LINAUSDTM"
           ],
           "zoom": 1
         },
@@ -29,7 +30,8 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE_FUTURES:linausdt",
-            "BYBIT:LINAUSDT"
+            "BYBIT:LINAUSDT",
+            "KUCOIN:LINAUSDTM"
           ]
         },
         "trades2": {
@@ -469,7 +471,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:linausdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(140,79,11)\");\n\nvar b = BYBIT:LINAUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(183,196,145)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:linausdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(139,252,56)\");\n\nvar b = BYBIT:LINAUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(46,53,237)\");\n\nvar c = KUCOIN:LINAUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(120,4,147)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -513,7 +515,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:linabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-linabusd\", color=\"rgb(109,95,180)\");\n\nvar b = BINANCE:linausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-linausdt\", color=\"rgb(109,95,173)\");\n\nvar c = KUCOIN:LINA-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(105,118,124)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:linabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-linabusd\", color=\"rgb(102,147,132)\");\n\nvar b = BINANCE:linausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-linausdt\", color=\"rgb(102,147,249)\");\n\nvar c = KUCOIN:LINA-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(120,4,147)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -875,7 +877,8 @@
         "BINANCE:linausdt": false,
         "BINANCE_FUTURES:linausdt": false,
         "BYBIT:LINAUSDT": false,
-        "KUCOIN:LINA-USDT": false
+        "KUCOIN:LINA-USDT": false,
+        "KUCOIN:LINAUSDTM": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
