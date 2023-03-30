@@ -15,15 +15,20 @@
           "type": "chart",
           "markets": [
             "BINANCE:wavesbusd",
+            "BINANCE:wavestusd",
             "BINANCE:wavesusdc",
             "BINANCE:wavesusdt",
             "BINANCE_FUTURES:wavesusdt",
             "BYBIT:WAVESUSDT",
+            "BYBIT:WAVESUSDT-SPOT",
+            "KRAKEN:PF_WAVESUSD",
             "KRAKEN:WAVES/USD",
             "KUCOIN:WAVES-USDT",
+            "KUCOIN:WAVESUSDTM",
             "OKEX:WAVES-USDC",
             "OKEX:WAVES-USDT",
-            "OKEX:WAVES-USDT-SWAP"
+            "OKEX:WAVES-USDT-SWAP",
+            "UPBIT:KRW-WAVES"
           ],
           "zoom": 1
         },
@@ -35,6 +40,7 @@
           "markets": [
             "BINANCE_FUTURES:wavesusdt",
             "BYBIT:WAVESUSDT",
+            "KUCOIN:WAVESUSDTM",
             "OKEX:WAVES-USDT-SWAP"
           ]
         },
@@ -45,12 +51,16 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE:wavesbusd",
+            "BINANCE:wavestusd",
             "BINANCE:wavesusdc",
             "BINANCE:wavesusdt",
+            "BYBIT:WAVESUSDT-SPOT",
+            "KRAKEN:PF_WAVESUSD",
             "KRAKEN:WAVES/USD",
             "KUCOIN:WAVES-USDT",
             "OKEX:WAVES-USDC",
-            "OKEX:WAVES-USDT"
+            "OKEX:WAVES-USDT",
+            "UPBIT:KRW-WAVES"
           ]
         }
       },
@@ -388,7 +398,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -479,7 +489,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:wavesusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(205,15,133)\");\n\nvar b = BYBIT:WAVESUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(159,9,66)\");\n\nvar c = OKEX:WAVES-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(26,236,243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:wavesusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(72,208,235)\");\n\nvar b = BYBIT:WAVESUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(125,139,137)\");\n\nvar c = KUCOIN:WAVESUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(167,211,139)\");\n\nvar d = OKEX:WAVES-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(175,211,162)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -523,7 +533,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:wavesbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-wavesbusd\", color=\"rgb(136,168,164)\");\n\nvar b = BINANCE:wavesusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-wavesusdc\", color=\"rgb(136,168,110)\");\n\nvar c = BINANCE:wavesusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-wavesusdt\", color=\"rgb(136,168,219)\");\n\nvar d = KUCOIN:WAVES-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(150,38,19)\");\n\nvar e = OKEX:WAVES-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-waves-usdc\", color=\"rgb(26,236,56)\");\n\nvar f = OKEX:WAVES-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-waves-usdt\", color=\"rgb(26,236,37)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:wavesbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-wavesbusd\", color=\"rgb(102,223,57)\");\n\nvar b = BINANCE:wavestusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-wavestusd\", color=\"rgb(102,223,97)\");\n\nvar c = BINANCE:wavesusdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-wavesusdc\", color=\"rgb(102,223,53)\");\n\nvar d = BINANCE:wavesusdt;\nline(cum(d.vbuy-d.vsell), title=\"binance-wavesusdt\", color=\"rgb(102,223,156)\");\n\nvar e = BYBIT:WAVESUSDT-SPOT;\nline(cum(e.vbuy-e.vsell), title=\"bybit\", color=\"rgb(125,139,137)\");\n\nvar f = KUCOIN:WAVES-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin\", color=\"rgb(167,211,139)\");\n\nvar g = OKEX:WAVES-USDC;\nline(cum(g.vbuy-g.vsell), title=\"okex-waves-usdc\", color=\"rgb(175,211,242)\");\n\nvar h = OKEX:WAVES-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex-waves-usdt\", color=\"rgb(175,211,111)\");\n\nvar i = UPBIT:KRW-WAVES;\nline(cum(i.vbuy-i.vsell), title=\"upbit\", color=\"rgb(242,112,82)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -882,15 +892,20 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:wavesbusd": false,
+        "BINANCE:wavestusd": false,
         "BINANCE:wavesusdc": false,
         "BINANCE:wavesusdt": false,
         "BINANCE_FUTURES:wavesusdt": false,
         "BYBIT:WAVESUSDT": false,
+        "BYBIT:WAVESUSDT-SPOT": false,
+        "KRAKEN:PF_WAVESUSD": false,
         "KRAKEN:WAVES/USD": false,
         "KUCOIN:WAVES-USDT": false,
+        "KUCOIN:WAVESUSDTM": false,
         "OKEX:WAVES-USDC": false,
         "OKEX:WAVES-USDT": false,
-        "OKEX:WAVES-USDT-SWAP": false
+        "OKEX:WAVES-USDT-SWAP": false,
+        "UPBIT:KRW-WAVES": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
