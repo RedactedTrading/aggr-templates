@@ -17,7 +17,8 @@
             "BINANCE:belbusd",
             "BINANCE:belusdt",
             "BINANCE_FUTURES:belusdt",
-            "BYBIT:BELUSDT"
+            "BYBIT:BELUSDT",
+            "BYBIT:BELUSDT-SPOT"
           ],
           "zoom": 1
         },
@@ -38,7 +39,8 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE:belbusd",
-            "BINANCE:belusdt"
+            "BINANCE:belusdt",
+            "BYBIT:BELUSDT-SPOT"
           ]
         }
       },
@@ -467,7 +469,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:belusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(30,182,127)\");\n\nvar b = BYBIT:BELUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(192,97,254)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:belusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(191,19,144)\");\n\nvar b = BYBIT:BELUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(109,253,230)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -511,7 +513,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:belbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-belbusd\", color=\"rgb(147,220,11)\");\n\nvar b = BINANCE:belusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-belusdt\", color=\"rgb(147,220,59)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:belbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-belbusd\", color=\"rgb(69,243,32)\");\n\nvar b = BINANCE:belusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-belusdt\", color=\"rgb(69,243,62)\");\n\nvar c = BYBIT:BELUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(109,253,230)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -872,7 +874,8 @@
         "BINANCE:belbusd": false,
         "BINANCE:belusdt": false,
         "BINANCE_FUTURES:belusdt": false,
-        "BYBIT:BELUSDT": false
+        "BYBIT:BELUSDT": false,
+        "BYBIT:BELUSDT-SPOT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
