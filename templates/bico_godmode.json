@@ -17,6 +17,7 @@
             "BINANCE:bicobusd",
             "BINANCE:bicousdt",
             "BYBIT:BICOUSDT",
+            "BYBIT:BICOUSDT-SPOT",
             "COINBASE:BICO-USD",
             "COINBASE:BICO-USDT",
             "KRAKEN:BICO/USD",
@@ -45,6 +46,7 @@
           "markets": [
             "BINANCE:bicobusd",
             "BINANCE:bicousdt",
+            "BYBIT:BICOUSDT-SPOT",
             "COINBASE:BICO-USD",
             "COINBASE:BICO-USDT",
             "KRAKEN:BICO/USD",
@@ -479,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:BICOUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(6,101,10)\");\n\nvar b = OKEX:BICO-USDT-SWAP;\nline(cum(b.vbuy-b.vsell), title=\"okex\", color=\"rgb(183,173,42)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:BICOUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(143,143,247)\");\n\nvar b = OKEX:BICO-USDT-SWAP;\nline(cum(b.vbuy-b.vsell), title=\"okex\", color=\"rgb(178,115,143)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -523,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bicobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-bicobusd\", color=\"rgb(99,185,31)\");\n\nvar b = BINANCE:bicousdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-bicousdt\", color=\"rgb(99,185,173)\");\n\nvar c = COINBASE:BICO-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-bico-usd\", color=\"rgb(246,52,26)\");\n\nvar d = COINBASE:BICO-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-bico-usdt\", color=\"rgb(246,52,36)\");\n\nvar e = KUCOIN:BICO-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(248,146,5)\");\n\nvar f = OKEX:BICO-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-bico-usdc\", color=\"rgb(183,173,180)\");\n\nvar g = OKEX:BICO-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-bico-usdt\", color=\"rgb(183,173,135)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bicobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-bicobusd\", color=\"rgb(154,40,207)\");\n\nvar b = BINANCE:bicousdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-bicousdt\", color=\"rgb(154,40,167)\");\n\nvar c = BYBIT:BICOUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(143,143,247)\");\n\nvar d = COINBASE:BICO-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-bico-usd\", color=\"rgb(157,116,26)\");\n\nvar e = COINBASE:BICO-USDT;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-bico-usdt\", color=\"rgb(157,116,114)\");\n\nvar f = KUCOIN:BICO-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin\", color=\"rgb(49,11,17)\");\n\nvar g = OKEX:BICO-USDC;\nline(cum(g.vbuy-g.vsell), title=\"okex-bico-usdc\", color=\"rgb(178,115,69)\");\n\nvar h = OKEX:BICO-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex-bico-usdt\", color=\"rgb(178,115,43)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -884,6 +886,7 @@
         "BINANCE:bicobusd": false,
         "BINANCE:bicousdt": false,
         "BYBIT:BICOUSDT": false,
+        "BYBIT:BICOUSDT-SPOT": false,
         "COINBASE:BICO-USD": false,
         "COINBASE:BICO-USDT": false,
         "KRAKEN:BICO/USD": false,
