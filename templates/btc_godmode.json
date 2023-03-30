@@ -15,15 +15,21 @@
           "type": "chart",
           "markets": [
             "BINANCE:btcbusd",
+            "BINANCE:btctusd",
             "BINANCE:btcusdc",
+            "BINANCE:btcusdp",
             "BINANCE:btcusdt",
             "BINANCE_FUTURES:btcbusd",
+            "BINANCE_FUTURES:btcusd_perp",
             "BINANCE_FUTURES:btcusdt",
             "BITFINEX:BTCUSD",
             "BYBIT:BTCUSD",
+            "BYBIT:BTCUSDC-SPOT",
             "BYBIT:BTCUSDT",
+            "BYBIT:BTCUSDT-SPOT",
             "COINBASE:BTC-USD",
             "COINBASE:BTC-USDT",
+            "DERIBIT:BTC_USDC-PERPETUAL",
             "KUCOIN:BTC-TUSD",
             "KUCOIN:BTC-USDC",
             "KUCOIN:BTC-USDT",
@@ -43,9 +49,11 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE_FUTURES:btcbusd",
+            "BINANCE_FUTURES:btcusd_perp",
             "BINANCE_FUTURES:btcusdt",
             "BYBIT:BTCUSD",
             "BYBIT:BTCUSDT",
+            "DERIBIT:BTC_USDC-PERPETUAL",
             "OKEX:BTC-USD-SWAP",
             "OKEX:BTC-USDC-SWAP",
             "OKEX:BTC-USDT-SWAP"
@@ -58,9 +66,13 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE:btcbusd",
+            "BINANCE:btctusd",
             "BINANCE:btcusdc",
+            "BINANCE:btcusdp",
             "BINANCE:btcusdt",
             "BITFINEX:BTCUSD",
+            "BYBIT:BTCUSDC-SPOT",
+            "BYBIT:BTCUSDT-SPOT",
             "COINBASE:BTC-USD",
             "COINBASE:BTC-USDT",
             "KUCOIN:BTC-TUSD",
@@ -361,7 +373,7 @@
         "fetched": false
       },
       "DERIBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "DYDX": {
@@ -497,7 +509,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:btcbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-btcbusd\", color=\"rgb(119,177,203)\");\n\nvar b = BINANCE_FUTURES:btcusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-btcusdt\", color=\"rgb(119,177,93)\");\n\nvar c = BYBIT:BTCUSD;\nline(cum(c.vbuy-c.vsell), title=\"bybit-btcusd\", color=\"rgb(189,86,123)\");\n\nvar d = BYBIT:BTCUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit-btcusdt\", color=\"rgb(189,86,165)\");\n\nvar e = OKEX:BTC-USD-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-btc-usd-swap\", color=\"rgb(178,183,94)\");\n\nvar f = OKEX:BTC-USDC-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"okex-btc-usdc-swap\", color=\"rgb(178,183,220)\");\n\nvar g = OKEX:BTC-USDT-SWAP;\nline(cum(g.vbuy-g.vsell), title=\"okex-btc-usdt-swap\", color=\"rgb(178,183,90)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:btcbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-btcbusd\", color=\"rgb(137,74,40)\");\n\nvar b = BINANCE_FUTURES:btcusd_perp;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-btcusd_perp\", color=\"rgb(137,74,71)\");\n\nvar c = BINANCE_FUTURES:btcusdt;\nline(cum(c.vbuy-c.vsell), title=\"binancefutures-btcusdt\", color=\"rgb(137,74,109)\");\n\nvar d = BYBIT:BTCUSD;\nline(cum(d.vbuy-d.vsell), title=\"bybit-btcusd\", color=\"rgb(237,19,22)\");\n\nvar e = BYBIT:BTCUSDT;\nline(cum(e.vbuy-e.vsell), title=\"bybit-btcusdt\", color=\"rgb(237,19,40)\");\n\nvar f = DERIBIT:BTC_USDC-PERPETUAL;\nline(cum(f.vbuy-f.vsell), title=\"deribit\", color=\"rgb(149,55,111)\");\n\nvar g = OKEX:BTC-USD-SWAP;\nline(cum(g.vbuy-g.vsell), title=\"okex-btc-usd-swap\", color=\"rgb(214,116,49)\");\n\nvar h = OKEX:BTC-USDC-SWAP;\nline(cum(h.vbuy-h.vsell), title=\"okex-btc-usdc-swap\", color=\"rgb(214,116,233)\");\n\nvar i = OKEX:BTC-USDT-SWAP;\nline(cum(i.vbuy-i.vsell), title=\"okex-btc-usdt-swap\", color=\"rgb(214,116,222)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -541,7 +553,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:btcbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-btcbusd\", color=\"rgb(16,4,92)\");\n\nvar b = BINANCE:btcusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-btcusdc\", color=\"rgb(16,4,227)\");\n\nvar c = BINANCE:btcusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-btcusdt\", color=\"rgb(16,4,22)\");\n\nvar d = BITFINEX:BTCUSD;\nline(cum(d.vbuy-d.vsell), title=\"bitfinex\", color=\"rgb(149,218,143)\");\n\nvar e = COINBASE:BTC-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-btc-usd\", color=\"rgb(205,200,63)\");\n\nvar f = COINBASE:BTC-USDT;\nline(cum(f.vbuy-f.vsell), title=\"coinbase-btc-usdt\", color=\"rgb(205,200,81)\");\n\nvar g = KUCOIN:BTC-TUSD;\nline(cum(g.vbuy-g.vsell), title=\"kucoin-btc-tusd\", color=\"rgb(110,170,238)\");\n\nvar h = KUCOIN:BTC-USDC;\nline(cum(h.vbuy-h.vsell), title=\"kucoin-btc-usdc\", color=\"rgb(110,170,38)\");\n\nvar i = KUCOIN:BTC-USDT;\nline(cum(i.vbuy-i.vsell), title=\"kucoin-btc-usdt\", color=\"rgb(110,170,12)\");\n\nvar j = OKEX:BTC-USDC;\nline(cum(j.vbuy-j.vsell), title=\"okex-btc-usdc\", color=\"rgb(178,183,248)\");\n\nvar k = OKEX:BTC-USDT;\nline(cum(k.vbuy-k.vsell), title=\"okex-btc-usdt\", color=\"rgb(178,183,57)\");\n\nvar l = UPBIT:USDT-BTC;\nline(cum(l.vbuy-l.vsell), title=\"upbit\", color=\"rgb(164,29,104)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:btcbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-btcbusd\", color=\"rgb(36,149,224)\");\n\nvar b = BINANCE:btctusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-btctusd\", color=\"rgb(36,149,96)\");\n\nvar c = BINANCE:btcusdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-btcusdc\", color=\"rgb(36,149,73)\");\n\nvar d = BINANCE:btcusdp;\nline(cum(d.vbuy-d.vsell), title=\"binance-btcusdp\", color=\"rgb(36,149,139)\");\n\nvar e = BINANCE:btcusdt;\nline(cum(e.vbuy-e.vsell), title=\"binance-btcusdt\", color=\"rgb(36,149,234)\");\n\nvar f = BITFINEX:BTCUSD;\nline(cum(f.vbuy-f.vsell), title=\"bitfinex\", color=\"rgb(196,118,56)\");\n\nvar g = BYBIT:BTCUSDC-SPOT;\nline(cum(g.vbuy-g.vsell), title=\"bybit-btcusdc-spot\", color=\"rgb(237,19,97)\");\n\nvar h = BYBIT:BTCUSDT-SPOT;\nline(cum(h.vbuy-h.vsell), title=\"bybit-btcusdt-spot\", color=\"rgb(237,19,140)\");\n\nvar i = COINBASE:BTC-USD;\nline(cum(i.vbuy-i.vsell), title=\"coinbase-btc-usd\", color=\"rgb(36,241,154)\");\n\nvar j = COINBASE:BTC-USDT;\nline(cum(j.vbuy-j.vsell), title=\"coinbase-btc-usdt\", color=\"rgb(36,241,31)\");\n\nvar k = KUCOIN:BTC-TUSD;\nline(cum(k.vbuy-k.vsell), title=\"kucoin-btc-tusd\", color=\"rgb(142,172,219)\");\n\nvar l = KUCOIN:BTC-USDC;\nline(cum(l.vbuy-l.vsell), title=\"kucoin-btc-usdc\", color=\"rgb(142,172,20)\");\n\nvar m = KUCOIN:BTC-USDT;\nline(cum(m.vbuy-m.vsell), title=\"kucoin-btc-usdt\", color=\"rgb(142,172,203)\");\n\nvar n = OKEX:BTC-USDC;\nline(cum(n.vbuy-n.vsell), title=\"okex-btc-usdc\", color=\"rgb(214,116,250)\");\n\nvar o = OKEX:BTC-USDT;\nline(cum(o.vbuy-o.vsell), title=\"okex-btc-usdt\", color=\"rgb(214,116,193)\");\n\nvar p = UPBIT:USDT-BTC;\nline(cum(p.vbuy-p.vsell), title=\"upbit\", color=\"rgb(207,29,166)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -900,15 +912,21 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:btcbusd": false,
+        "BINANCE:btctusd": false,
         "BINANCE:btcusdc": false,
+        "BINANCE:btcusdp": false,
         "BINANCE:btcusdt": false,
         "BINANCE_FUTURES:btcbusd": false,
+        "BINANCE_FUTURES:btcusd_perp": false,
         "BINANCE_FUTURES:btcusdt": false,
         "BITFINEX:BTCUSD": false,
         "BYBIT:BTCUSD": false,
+        "BYBIT:BTCUSDC-SPOT": false,
         "BYBIT:BTCUSDT": false,
+        "BYBIT:BTCUSDT-SPOT": false,
         "COINBASE:BTC-USD": false,
         "COINBASE:BTC-USDT": false,
+        "DERIBIT:BTC_USDC-PERPETUAL": false,
         "KUCOIN:BTC-TUSD": false,
         "KUCOIN:BTC-USDC": false,
         "KUCOIN:BTC-USDT": false,
