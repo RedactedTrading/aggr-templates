@@ -19,9 +19,12 @@
             "BINANCE_FUTURES:galabusd",
             "BINANCE_FUTURES:galausdt",
             "BYBIT:GALAUSDT",
+            "BYBIT:GALAUSDT-SPOT",
             "COINBASE:GALA-USD",
             "COINBASE:GALA-USDT",
             "KRAKEN:GALA/USD",
+            "KRAKEN:PF_GALAUSD",
+            "KUCOIN:GALAUSDTM",
             "OKEX:GALA-USDC",
             "OKEX:GALA-USDT",
             "OKEX:GALA-USDT-SWAP"
@@ -37,6 +40,7 @@
             "BINANCE_FUTURES:galabusd",
             "BINANCE_FUTURES:galausdt",
             "BYBIT:GALAUSDT",
+            "KUCOIN:GALAUSDTM",
             "OKEX:GALA-USDT-SWAP"
           ]
         },
@@ -48,9 +52,11 @@
           "markets": [
             "BINANCE:galabusd",
             "BINANCE:galausdt",
+            "BYBIT:GALAUSDT-SPOT",
             "COINBASE:GALA-USD",
             "COINBASE:GALA-USDT",
             "KRAKEN:GALA/USD",
+            "KRAKEN:PF_GALAUSD",
             "OKEX:GALA-USDC",
             "OKEX:GALA-USDT"
           ]
@@ -369,7 +375,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -481,7 +487,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:galabusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-galabusd\", color=\"rgb(71,29,49)\");\n\nvar b = BINANCE_FUTURES:galausdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-galausdt\", color=\"rgb(71,29,141)\");\n\nvar c = BYBIT:GALAUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(177,121,250)\");\n\nvar d = OKEX:GALA-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(35,157,234)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:galabusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-galabusd\", color=\"rgb(94,130,226)\");\n\nvar b = BINANCE_FUTURES:galausdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-galausdt\", color=\"rgb(94,130,240)\");\n\nvar c = BYBIT:GALAUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(57,170,199)\");\n\nvar d = KUCOIN:GALAUSDTM;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(140,49,149)\");\n\nvar e = OKEX:GALA-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(89,12,150)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -525,7 +531,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:galabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-galabusd\", color=\"rgb(27,180,140)\");\n\nvar b = BINANCE:galausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-galausdt\", color=\"rgb(27,180,84)\");\n\nvar c = COINBASE:GALA-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-gala-usd\", color=\"rgb(155,27,64)\");\n\nvar d = COINBASE:GALA-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-gala-usdt\", color=\"rgb(155,27,255)\");\n\nvar e = OKEX:GALA-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-gala-usdc\", color=\"rgb(35,157,78)\");\n\nvar f = OKEX:GALA-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-gala-usdt\", color=\"rgb(35,157,211)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:galabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-galabusd\", color=\"rgb(152,156,56)\");\n\nvar b = BINANCE:galausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-galausdt\", color=\"rgb(152,156,66)\");\n\nvar c = BYBIT:GALAUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(57,170,199)\");\n\nvar d = COINBASE:GALA-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-gala-usd\", color=\"rgb(193,168,76)\");\n\nvar e = COINBASE:GALA-USDT;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-gala-usdt\", color=\"rgb(193,168,160)\");\n\nvar f = OKEX:GALA-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-gala-usdc\", color=\"rgb(89,12,195)\");\n\nvar g = OKEX:GALA-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-gala-usdt\", color=\"rgb(89,12,59)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -888,9 +894,12 @@
         "BINANCE_FUTURES:galabusd": false,
         "BINANCE_FUTURES:galausdt": false,
         "BYBIT:GALAUSDT": false,
+        "BYBIT:GALAUSDT-SPOT": false,
         "COINBASE:GALA-USD": false,
         "COINBASE:GALA-USDT": false,
         "KRAKEN:GALA/USD": false,
+        "KRAKEN:PF_GALAUSD": false,
+        "KUCOIN:GALAUSDTM": false,
         "OKEX:GALA-USDC": false,
         "OKEX:GALA-USDT": false,
         "OKEX:GALA-USDT-SWAP": false
