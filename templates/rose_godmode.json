@@ -16,11 +16,14 @@
           "markets": [
             "BINANCE:rosebusd",
             "BINANCE:roseusdt",
+            "BINANCE_FUTURES:roseusd_perp",
             "BINANCE_FUTURES:roseusdt",
             "BYBIT:ROSEUSDT",
+            "BYBIT:ROSEUSDT-SPOT",
             "COINBASE:ROSE-USD",
             "COINBASE:ROSE-USDT",
-            "KUCOIN:ROSE-USDT"
+            "KUCOIN:ROSE-USDT",
+            "KUCOIN:ROSEUSDTM"
           ],
           "zoom": 1
         },
@@ -30,8 +33,10 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BINANCE_FUTURES:roseusd_perp",
             "BINANCE_FUTURES:roseusdt",
-            "BYBIT:ROSEUSDT"
+            "BYBIT:ROSEUSDT",
+            "KUCOIN:ROSEUSDTM"
           ]
         },
         "trades2": {
@@ -42,6 +47,7 @@
           "markets": [
             "BINANCE:rosebusd",
             "BINANCE:roseusdt",
+            "BYBIT:ROSEUSDT-SPOT",
             "COINBASE:ROSE-USD",
             "COINBASE:ROSE-USDT",
             "KUCOIN:ROSE-USDT"
@@ -473,7 +479,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:roseusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(164,172,221)\");\n\nvar b = BYBIT:ROSEUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(190,8,10)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:roseusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-roseusd_perp\", color=\"rgb(92,174,239)\");\n\nvar b = BINANCE_FUTURES:roseusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-roseusdt\", color=\"rgb(92,174,17)\");\n\nvar c = BYBIT:ROSEUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(170,85,240)\");\n\nvar d = KUCOIN:ROSEUSDTM;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(239,206,207)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -517,7 +523,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:rosebusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-rosebusd\", color=\"rgb(78,146,14)\");\n\nvar b = BINANCE:roseusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-roseusdt\", color=\"rgb(78,146,250)\");\n\nvar c = COINBASE:ROSE-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-rose-usd\", color=\"rgb(84,146,210)\");\n\nvar d = COINBASE:ROSE-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-rose-usdt\", color=\"rgb(84,146,194)\");\n\nvar e = KUCOIN:ROSE-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(136,55,207)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:rosebusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-rosebusd\", color=\"rgb(207,161,104)\");\n\nvar b = BINANCE:roseusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-roseusdt\", color=\"rgb(207,161,110)\");\n\nvar c = BYBIT:ROSEUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(170,85,240)\");\n\nvar d = COINBASE:ROSE-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-rose-usd\", color=\"rgb(222,183,130)\");\n\nvar e = COINBASE:ROSE-USDT;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-rose-usdt\", color=\"rgb(222,183,10)\");\n\nvar f = KUCOIN:ROSE-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin\", color=\"rgb(239,206,207)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -877,11 +883,14 @@
       "hiddenMarkets": {
         "BINANCE:rosebusd": false,
         "BINANCE:roseusdt": false,
+        "BINANCE_FUTURES:roseusd_perp": false,
         "BINANCE_FUTURES:roseusdt": false,
         "BYBIT:ROSEUSDT": false,
+        "BYBIT:ROSEUSDT-SPOT": false,
         "COINBASE:ROSE-USD": false,
         "COINBASE:ROSE-USDT": false,
-        "KUCOIN:ROSE-USDT": false
+        "KUCOIN:ROSE-USDT": false,
+        "KUCOIN:ROSEUSDTM": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
