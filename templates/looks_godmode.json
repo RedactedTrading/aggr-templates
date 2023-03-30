@@ -15,7 +15,9 @@
           "type": "chart",
           "markets": [
             "BYBIT:LOOKSUSDT",
+            "BYBIT:LOOKSUSDT-SPOT",
             "KUCOIN:LOOKS-USDT",
+            "KUCOIN:LOOKSUSDTM",
             "OKEX:LOOKS-USDC",
             "OKEX:LOOKS-USDT",
             "OKEX:LOOKS-USDT-SWAP"
@@ -29,6 +31,7 @@
           "zoom": 0.5,
           "markets": [
             "BYBIT:LOOKSUSDT",
+            "KUCOIN:LOOKSUSDTM",
             "OKEX:LOOKS-USDT-SWAP"
           ]
         },
@@ -38,6 +41,7 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BYBIT:LOOKSUSDT-SPOT",
             "KUCOIN:LOOKS-USDT",
             "OKEX:LOOKS-USDC",
             "OKEX:LOOKS-USDT"
@@ -469,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:LOOKSUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(252,146,213)\");\n\nvar b = OKEX:LOOKS-USDT-SWAP;\nline(cum(b.vbuy-b.vsell), title=\"okex\", color=\"rgb(203,244,108)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:LOOKSUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(171,85,194)\");\n\nvar b = KUCOIN:LOOKSUSDTM;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(10,47,198)\");\n\nvar c = OKEX:LOOKS-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(96,116,86)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -513,7 +517,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = KUCOIN:LOOKS-USDT;\nline(cum(a.vbuy-a.vsell), title=\"kucoin\", color=\"rgb(217,73,16)\");\n\nvar b = OKEX:LOOKS-USDC;\nline(cum(b.vbuy-b.vsell), title=\"okex-looks-usdc\", color=\"rgb(203,244,8)\");\n\nvar c = OKEX:LOOKS-USDT;\nline(cum(c.vbuy-c.vsell), title=\"okex-looks-usdt\", color=\"rgb(203,244,232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:LOOKSUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(171,85,194)\");\n\nvar b = KUCOIN:LOOKS-USDT;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(10,47,198)\");\n\nvar c = OKEX:LOOKS-USDC;\nline(cum(c.vbuy-c.vsell), title=\"okex-looks-usdc\", color=\"rgb(96,116,207)\");\n\nvar d = OKEX:LOOKS-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex-looks-usdt\", color=\"rgb(96,116,125)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -872,7 +876,9 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:LOOKSUSDT": false,
+        "BYBIT:LOOKSUSDT-SPOT": false,
         "KUCOIN:LOOKS-USDT": false,
+        "KUCOIN:LOOKSUSDTM": false,
         "OKEX:LOOKS-USDC": false,
         "OKEX:LOOKS-USDT": false,
         "OKEX:LOOKS-USDT-SWAP": false
