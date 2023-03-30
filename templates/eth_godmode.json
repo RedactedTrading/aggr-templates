@@ -15,29 +15,42 @@
           "type": "chart",
           "markets": [
             "BINANCE:ethbusd",
+            "BINANCE:ethtusd",
             "BINANCE:ethusdc",
+            "BINANCE:ethusdp",
             "BINANCE:ethusdt",
             "BINANCE_FUTURES:ethbusd",
+            "BINANCE_FUTURES:ethusd_perp",
             "BINANCE_FUTURES:ethusdt",
             "BITFINEX:ETHUSD",
             "BITMEX:ETHUSD",
+            "BITMEX:ETHUSDT",
             "BITMEX:ETH_USDT",
             "BYBIT:ETHUSD",
+            "BYBIT:ETHUSDC-SPOT",
             "BYBIT:ETHUSDT",
+            "BYBIT:ETHUSDT-SPOT",
             "COINBASE:ETH-USD",
             "COINBASE:ETH-USDT",
+            "DERIBIT:ETH_USDC-PERPETUAL",
             "KRAKEN:ETH/USD",
             "KRAKEN:ETH/USDC",
             "KRAKEN:ETH/USDT",
+            "KRAKEN:PF_ETHUSD",
+            "KRAKEN:PI_ETHUSD",
             "KUCOIN:ETH-TUSD",
             "KUCOIN:ETH-USDC",
             "KUCOIN:ETH-USDT",
+            "KUCOIN:ETHUSDM",
+            "KUCOIN:ETHUSDTM",
             "OKEX:ETH-USD-SWAP",
             "OKEX:ETH-USDC",
             "OKEX:ETH-USDC-SWAP",
             "OKEX:ETH-USDT",
             "OKEX:ETH-USDT-SWAP",
-            "UNISWAPARBITRUM:WETH/USDC"
+            "UNISWAPARBITRUM:WETH/USDC",
+            "UPBIT:KRW-ETH",
+            "UPBIT:USDT-ETH"
           ],
           "zoom": 1
         },
@@ -48,11 +61,16 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE_FUTURES:ethbusd",
+            "BINANCE_FUTURES:ethusd_perp",
             "BINANCE_FUTURES:ethusdt",
             "BITMEX:ETHUSD",
+            "BITMEX:ETHUSDT",
             "BITMEX:ETH_USDT",
             "BYBIT:ETHUSD",
             "BYBIT:ETHUSDT",
+            "DERIBIT:ETH_USDC-PERPETUAL",
+            "KRAKEN:PI_ETHUSD",
+            "KUCOIN:ETHUSDTM",
             "OKEX:ETH-USD-SWAP",
             "OKEX:ETH-USDC-SWAP",
             "OKEX:ETH-USDT-SWAP"
@@ -65,20 +83,28 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE:ethbusd",
+            "BINANCE:ethtusd",
             "BINANCE:ethusdc",
+            "BINANCE:ethusdp",
             "BINANCE:ethusdt",
             "BITFINEX:ETHUSD",
+            "BYBIT:ETHUSDC-SPOT",
+            "BYBIT:ETHUSDT-SPOT",
             "COINBASE:ETH-USD",
             "COINBASE:ETH-USDT",
             "KRAKEN:ETH/USD",
             "KRAKEN:ETH/USDC",
             "KRAKEN:ETH/USDT",
+            "KRAKEN:PF_ETHUSD",
             "KUCOIN:ETH-TUSD",
             "KUCOIN:ETH-USDC",
             "KUCOIN:ETH-USDT",
+            "KUCOIN:ETHUSDM",
             "OKEX:ETH-USDC",
             "OKEX:ETH-USDT",
-            "UNISWAPARBITRUM:WETH/USDC"
+            "UNISWAPARBITRUM:WETH/USDC",
+            "UPBIT:KRW-ETH",
+            "UPBIT:USDT-ETH"
           ]
         }
       },
@@ -371,7 +397,7 @@
         "fetched": false
       },
       "DERIBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "DYDX": {
@@ -416,7 +442,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "UNISWAPARBITRUM": {
@@ -511,7 +537,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:ethbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-ethbusd\", color=\"rgb(150,101,15)\");\n\nvar b = BINANCE_FUTURES:ethusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-ethusdt\", color=\"rgb(150,101,242)\");\n\nvar c = BITMEX:ETHUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitmex-ethusd\", color=\"rgb(117,208,48)\");\n\nvar d = BITMEX:ETH_USDT;\nline(cum(d.vbuy-d.vsell), title=\"bitmex-eth_usdt\", color=\"rgb(117,208,116)\");\n\nvar e = BYBIT:ETHUSD;\nline(cum(e.vbuy-e.vsell), title=\"bybit-ethusd\", color=\"rgb(218,70,8)\");\n\nvar f = BYBIT:ETHUSDT;\nline(cum(f.vbuy-f.vsell), title=\"bybit-ethusdt\", color=\"rgb(218,70,102)\");\n\nvar g = OKEX:ETH-USD-SWAP;\nline(cum(g.vbuy-g.vsell), title=\"okex-eth-usd-swap\", color=\"rgb(11,4,243)\");\n\nvar h = OKEX:ETH-USDC-SWAP;\nline(cum(h.vbuy-h.vsell), title=\"okex-eth-usdc-swap\", color=\"rgb(11,4,166)\");\n\nvar i = OKEX:ETH-USDT-SWAP;\nline(cum(i.vbuy-i.vsell), title=\"okex-eth-usdt-swap\", color=\"rgb(11,4,59)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:ethbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-ethbusd\", color=\"rgb(60,137,179)\");\n\nvar b = BINANCE_FUTURES:ethusd_perp;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-ethusd_perp\", color=\"rgb(60,137,203)\");\n\nvar c = BINANCE_FUTURES:ethusdt;\nline(cum(c.vbuy-c.vsell), title=\"binancefutures-ethusdt\", color=\"rgb(60,137,196)\");\n\nvar d = BITMEX:ETHUSD;\nline(cum(d.vbuy-d.vsell), title=\"bitmex-ethusd\", color=\"rgb(178,43,223)\");\n\nvar e = BITMEX:ETHUSDT;\nline(cum(e.vbuy-e.vsell), title=\"bitmex-ethusdt\", color=\"rgb(178,43,83)\");\n\nvar f = BITMEX:ETH_USDT;\nline(cum(f.vbuy-f.vsell), title=\"bitmex-eth_usdt\", color=\"rgb(178,43,197)\");\n\nvar g = BYBIT:ETHUSD;\nline(cum(g.vbuy-g.vsell), title=\"bybit-ethusd\", color=\"rgb(123,83,201)\");\n\nvar h = BYBIT:ETHUSDT;\nline(cum(h.vbuy-h.vsell), title=\"bybit-ethusdt\", color=\"rgb(123,83,34)\");\n\nvar i = DERIBIT:ETH_USDC-PERPETUAL;\nline(cum(i.vbuy-i.vsell), title=\"deribit\", color=\"rgb(37,38,18)\");\n\nvar j = KUCOIN:ETHUSDTM;\nline(cum(j.vbuy-j.vsell), title=\"kucoin\", color=\"rgb(122,147,225)\");\n\nvar k = OKEX:ETH-USD-SWAP;\nline(cum(k.vbuy-k.vsell), title=\"okex-eth-usd-swap\", color=\"rgb(76,204,142)\");\n\nvar l = OKEX:ETH-USDC-SWAP;\nline(cum(l.vbuy-l.vsell), title=\"okex-eth-usdc-swap\", color=\"rgb(76,204,48)\");\n\nvar m = OKEX:ETH-USDT-SWAP;\nline(cum(m.vbuy-m.vsell), title=\"okex-eth-usdt-swap\", color=\"rgb(76,204,250)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -555,7 +581,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ethbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ethbusd\", color=\"rgb(4,55,149)\");\n\nvar b = BINANCE:ethusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-ethusdc\", color=\"rgb(4,55,42)\");\n\nvar c = BINANCE:ethusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-ethusdt\", color=\"rgb(4,55,112)\");\n\nvar d = BITFINEX:ETHUSD;\nline(cum(d.vbuy-d.vsell), title=\"bitfinex\", color=\"rgb(55,177,149)\");\n\nvar e = COINBASE:ETH-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-eth-usd\", color=\"rgb(191,146,39)\");\n\nvar f = COINBASE:ETH-USDT;\nline(cum(f.vbuy-f.vsell), title=\"coinbase-eth-usdt\", color=\"rgb(191,146,193)\");\n\nvar g = KUCOIN:ETH-TUSD;\nline(cum(g.vbuy-g.vsell), title=\"kucoin-eth-tusd\", color=\"rgb(196,66,141)\");\n\nvar h = KUCOIN:ETH-USDC;\nline(cum(h.vbuy-h.vsell), title=\"kucoin-eth-usdc\", color=\"rgb(196,66,20)\");\n\nvar i = KUCOIN:ETH-USDT;\nline(cum(i.vbuy-i.vsell), title=\"kucoin-eth-usdt\", color=\"rgb(196,66,72)\");\n\nvar j = OKEX:ETH-USDC;\nline(cum(j.vbuy-j.vsell), title=\"okex-eth-usdc\", color=\"rgb(11,4,11)\");\n\nvar k = OKEX:ETH-USDT;\nline(cum(k.vbuy-k.vsell), title=\"okex-eth-usdt\", color=\"rgb(11,4,18)\");\n\nvar l = UNISWAPARBITRUM:WETH/USDC;\nline(cum(l.vbuy-l.vsell), title=\"uniswaparbitrum\", color=\"rgb(39,121,101)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ethbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ethbusd\", color=\"rgb(177,55,38)\");\n\nvar b = BINANCE:ethtusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-ethtusd\", color=\"rgb(177,55,161)\");\n\nvar c = BINANCE:ethusdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-ethusdc\", color=\"rgb(177,55,218)\");\n\nvar d = BINANCE:ethusdp;\nline(cum(d.vbuy-d.vsell), title=\"binance-ethusdp\", color=\"rgb(177,55,157)\");\n\nvar e = BINANCE:ethusdt;\nline(cum(e.vbuy-e.vsell), title=\"binance-ethusdt\", color=\"rgb(177,55,107)\");\n\nvar f = BITFINEX:ETHUSD;\nline(cum(f.vbuy-f.vsell), title=\"bitfinex\", color=\"rgb(199,114,167)\");\n\nvar g = BYBIT:ETHUSDC-SPOT;\nline(cum(g.vbuy-g.vsell), title=\"bybit-ethusdc-spot\", color=\"rgb(123,83,80)\");\n\nvar h = BYBIT:ETHUSDT-SPOT;\nline(cum(h.vbuy-h.vsell), title=\"bybit-ethusdt-spot\", color=\"rgb(123,83,157)\");\n\nvar i = COINBASE:ETH-USD;\nline(cum(i.vbuy-i.vsell), title=\"coinbase-eth-usd\", color=\"rgb(45,193,254)\");\n\nvar j = COINBASE:ETH-USDT;\nline(cum(j.vbuy-j.vsell), title=\"coinbase-eth-usdt\", color=\"rgb(45,193,158)\");\n\nvar k = KUCOIN:ETH-TUSD;\nline(cum(k.vbuy-k.vsell), title=\"kucoin-eth-tusd\", color=\"rgb(122,147,236)\");\n\nvar l = KUCOIN:ETH-USDC;\nline(cum(l.vbuy-l.vsell), title=\"kucoin-eth-usdc\", color=\"rgb(122,147,175)\");\n\nvar m = KUCOIN:ETH-USDT;\nline(cum(m.vbuy-m.vsell), title=\"kucoin-eth-usdt\", color=\"rgb(122,147,123)\");\n\nvar n = KUCOIN:ETHUSDM;\nline(cum(n.vbuy-n.vsell), title=\"kucoin-ethusdm\", color=\"rgb(122,147,165)\");\n\nvar o = OKEX:ETH-USDC;\nline(cum(o.vbuy-o.vsell), title=\"okex-eth-usdc\", color=\"rgb(76,204,10)\");\n\nvar p = OKEX:ETH-USDT;\nline(cum(p.vbuy-p.vsell), title=\"okex-eth-usdt\", color=\"rgb(76,204,182)\");\n\nvar q = UNISWAPARBITRUM:WETH/USDC;\nline(cum(q.vbuy-q.vsell), title=\"uniswaparbitrum\", color=\"rgb(99,139,254)\");\n\nvar r = UPBIT:KRW-ETH;\nline(cum(r.vbuy-r.vsell), title=\"upbit-krw-eth\", color=\"rgb(248,253,23)\");\n\nvar s = UPBIT:USDT-ETH;\nline(cum(s.vbuy-s.vsell), title=\"upbit-usdt-eth\", color=\"rgb(248,253,215)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -914,29 +940,42 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:ethbusd": false,
+        "BINANCE:ethtusd": false,
         "BINANCE:ethusdc": false,
+        "BINANCE:ethusdp": false,
         "BINANCE:ethusdt": false,
         "BINANCE_FUTURES:ethbusd": false,
+        "BINANCE_FUTURES:ethusd_perp": false,
         "BINANCE_FUTURES:ethusdt": false,
         "BITFINEX:ETHUSD": false,
         "BITMEX:ETHUSD": false,
+        "BITMEX:ETHUSDT": false,
         "BITMEX:ETH_USDT": false,
         "BYBIT:ETHUSD": false,
+        "BYBIT:ETHUSDC-SPOT": false,
         "BYBIT:ETHUSDT": false,
+        "BYBIT:ETHUSDT-SPOT": false,
         "COINBASE:ETH-USD": false,
         "COINBASE:ETH-USDT": false,
+        "DERIBIT:ETH_USDC-PERPETUAL": false,
         "KRAKEN:ETH/USD": false,
         "KRAKEN:ETH/USDC": false,
         "KRAKEN:ETH/USDT": false,
+        "KRAKEN:PF_ETHUSD": false,
+        "KRAKEN:PI_ETHUSD": false,
         "KUCOIN:ETH-TUSD": false,
         "KUCOIN:ETH-USDC": false,
         "KUCOIN:ETH-USDT": false,
+        "KUCOIN:ETHUSDM": false,
+        "KUCOIN:ETHUSDTM": false,
         "OKEX:ETH-USD-SWAP": false,
         "OKEX:ETH-USDC": false,
         "OKEX:ETH-USDC-SWAP": false,
         "OKEX:ETH-USDT": false,
         "OKEX:ETH-USDT-SWAP": false,
-        "UNISWAPARBITRUM:WETH/USDC": false
+        "UNISWAPARBITRUM:WETH/USDC": false,
+        "UPBIT:KRW-ETH": true,
+        "UPBIT:USDT-ETH": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
