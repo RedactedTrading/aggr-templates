@@ -512,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:gnobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-gnobusd\", color=\"rgb(52,45,186)\");\n\nvar b = BINANCE:gnousdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-gnousdt\", color=\"rgb(52,45,110)\");\n\nvar c = BITFINEX:GNOUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(176,190,81)\");\n\nvar d = COINBASE:GNO-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(120,162,129)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:gnobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-gnobusd\", color=\"rgb(185,80,196)\");\n\nvar b = BINANCE:gnousdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-gnousdt\", color=\"rgb(185,80,234)\");\n\nvar c = BITFINEX:GNOUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(155,148,79)\");\n\nvar d = COINBASE:GNO-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(107,47,239)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
