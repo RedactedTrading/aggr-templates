@@ -15,22 +15,29 @@
           "type": "chart",
           "markets": [
             "BINANCE:eosbusd",
+            "BINANCE:eostusd",
             "BINANCE:eosusdc",
             "BINANCE:eosusdt",
+            "BINANCE_FUTURES:eosusd_perp",
             "BINANCE_FUTURES:eosusdt",
             "BITFINEX:EOSUSD",
             "BITMEX:EOSUSD",
             "BYBIT:EOSUSD",
+            "BYBIT:EOSUSDC-SPOT",
             "BYBIT:EOSUSDT",
+            "BYBIT:EOSUSDT-SPOT",
             "COINBASE:EOS-USD",
             "KRAKEN:EOS/USD",
             "KRAKEN:EOS/USDT",
+            "KRAKEN:PF_EOSUSD",
             "KUCOIN:EOS-USDC",
             "KUCOIN:EOS-USDT",
+            "KUCOIN:EOSUSDTM",
             "OKEX:EOS-USD-SWAP",
             "OKEX:EOS-USDC",
             "OKEX:EOS-USDT",
-            "OKEX:EOS-USDT-SWAP"
+            "OKEX:EOS-USDT-SWAP",
+            "UPBIT:KRW-EOS"
           ],
           "zoom": 1
         },
@@ -40,10 +47,12 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BINANCE_FUTURES:eosusd_perp",
             "BINANCE_FUTURES:eosusdt",
             "BITMEX:EOSUSD",
             "BYBIT:EOSUSD",
             "BYBIT:EOSUSDT",
+            "KUCOIN:EOSUSDTM",
             "OKEX:EOS-USD-SWAP",
             "OKEX:EOS-USDT-SWAP"
           ]
@@ -55,16 +64,21 @@
           "zoom": 0.5,
           "markets": [
             "BINANCE:eosbusd",
+            "BINANCE:eostusd",
             "BINANCE:eosusdc",
             "BINANCE:eosusdt",
             "BITFINEX:EOSUSD",
+            "BYBIT:EOSUSDC-SPOT",
+            "BYBIT:EOSUSDT-SPOT",
             "COINBASE:EOS-USD",
             "KRAKEN:EOS/USD",
             "KRAKEN:EOS/USDT",
+            "KRAKEN:PF_EOSUSD",
             "KUCOIN:EOS-USDC",
             "KUCOIN:EOS-USDT",
             "OKEX:EOS-USDC",
-            "OKEX:EOS-USDT"
+            "OKEX:EOS-USDT",
+            "UPBIT:KRW-EOS"
           ]
         }
       },
@@ -402,7 +416,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -493,7 +507,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:eosusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(210,162,178)\");\n\nvar b = BITMEX:EOSUSD;\nline(cum(b.vbuy-b.vsell), title=\"bitmex\", color=\"rgb(96,226,216)\");\n\nvar c = BYBIT:EOSUSD;\nline(cum(c.vbuy-c.vsell), title=\"bybit-eosusd\", color=\"rgb(150,231,33)\");\n\nvar d = BYBIT:EOSUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit-eosusdt\", color=\"rgb(150,231,110)\");\n\nvar e = OKEX:EOS-USD-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-eos-usd-swap\", color=\"rgb(13,144,162)\");\n\nvar f = OKEX:EOS-USDT-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"okex-eos-usdt-swap\", color=\"rgb(13,144,233)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:eosusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-eosusd_perp\", color=\"rgb(222,31,12)\");\n\nvar b = BINANCE_FUTURES:eosusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-eosusdt\", color=\"rgb(222,31,120)\");\n\nvar c = BITMEX:EOSUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitmex\", color=\"rgb(88,46,129)\");\n\nvar d = BYBIT:EOSUSD;\nline(cum(d.vbuy-d.vsell), title=\"bybit-eosusd\", color=\"rgb(111,54,76)\");\n\nvar e = BYBIT:EOSUSDT;\nline(cum(e.vbuy-e.vsell), title=\"bybit-eosusdt\", color=\"rgb(111,54,53)\");\n\nvar f = KUCOIN:EOSUSDTM;\nline(cum(f.vbuy-f.vsell), title=\"kucoin\", color=\"rgb(57,220,126)\");\n\nvar g = OKEX:EOS-USD-SWAP;\nline(cum(g.vbuy-g.vsell), title=\"okex-eos-usd-swap\", color=\"rgb(204,107,240)\");\n\nvar h = OKEX:EOS-USDT-SWAP;\nline(cum(h.vbuy-h.vsell), title=\"okex-eos-usdt-swap\", color=\"rgb(204,107,235)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -537,7 +551,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:eosbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-eosbusd\", color=\"rgb(170,152,183)\");\n\nvar b = BINANCE:eosusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-eosusdc\", color=\"rgb(170,152,171)\");\n\nvar c = BINANCE:eosusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-eosusdt\", color=\"rgb(170,152,156)\");\n\nvar d = BITFINEX:EOSUSD;\nline(cum(d.vbuy-d.vsell), title=\"bitfinex\", color=\"rgb(21,67,117)\");\n\nvar e = COINBASE:EOS-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase\", color=\"rgb(243,60,23)\");\n\nvar f = KUCOIN:EOS-USDC;\nline(cum(f.vbuy-f.vsell), title=\"kucoin-eos-usdc\", color=\"rgb(226,105,119)\");\n\nvar g = KUCOIN:EOS-USDT;\nline(cum(g.vbuy-g.vsell), title=\"kucoin-eos-usdt\", color=\"rgb(226,105,60)\");\n\nvar h = OKEX:EOS-USDC;\nline(cum(h.vbuy-h.vsell), title=\"okex-eos-usdc\", color=\"rgb(13,144,70)\");\n\nvar i = OKEX:EOS-USDT;\nline(cum(i.vbuy-i.vsell), title=\"okex-eos-usdt\", color=\"rgb(13,144,6)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:eosbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-eosbusd\", color=\"rgb(1,18,161)\");\n\nvar b = BINANCE:eostusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-eostusd\", color=\"rgb(1,18,213)\");\n\nvar c = BINANCE:eosusdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-eosusdc\", color=\"rgb(1,18,109)\");\n\nvar d = BINANCE:eosusdt;\nline(cum(d.vbuy-d.vsell), title=\"binance-eosusdt\", color=\"rgb(1,18,77)\");\n\nvar e = BITFINEX:EOSUSD;\nline(cum(e.vbuy-e.vsell), title=\"bitfinex\", color=\"rgb(191,136,33)\");\n\nvar f = BYBIT:EOSUSDC-SPOT;\nline(cum(f.vbuy-f.vsell), title=\"bybit-eosusdc-spot\", color=\"rgb(111,54,85)\");\n\nvar g = BYBIT:EOSUSDT-SPOT;\nline(cum(g.vbuy-g.vsell), title=\"bybit-eosusdt-spot\", color=\"rgb(111,54,125)\");\n\nvar h = COINBASE:EOS-USD;\nline(cum(h.vbuy-h.vsell), title=\"coinbase\", color=\"rgb(47,168,188)\");\n\nvar i = KUCOIN:EOS-USDC;\nline(cum(i.vbuy-i.vsell), title=\"kucoin-eos-usdc\", color=\"rgb(57,220,99)\");\n\nvar j = KUCOIN:EOS-USDT;\nline(cum(j.vbuy-j.vsell), title=\"kucoin-eos-usdt\", color=\"rgb(57,220,193)\");\n\nvar k = OKEX:EOS-USDC;\nline(cum(k.vbuy-k.vsell), title=\"okex-eos-usdc\", color=\"rgb(204,107,241)\");\n\nvar l = OKEX:EOS-USDT;\nline(cum(l.vbuy-l.vsell), title=\"okex-eos-usdt\", color=\"rgb(204,107,124)\");\n\nvar m = UPBIT:KRW-EOS;\nline(cum(m.vbuy-m.vsell), title=\"upbit\", color=\"rgb(95,217,27)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -896,22 +910,29 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:eosbusd": false,
+        "BINANCE:eostusd": false,
         "BINANCE:eosusdc": false,
         "BINANCE:eosusdt": false,
+        "BINANCE_FUTURES:eosusd_perp": false,
         "BINANCE_FUTURES:eosusdt": false,
         "BITFINEX:EOSUSD": false,
         "BITMEX:EOSUSD": false,
         "BYBIT:EOSUSD": false,
+        "BYBIT:EOSUSDC-SPOT": false,
         "BYBIT:EOSUSDT": false,
+        "BYBIT:EOSUSDT-SPOT": false,
         "COINBASE:EOS-USD": false,
         "KRAKEN:EOS/USD": false,
         "KRAKEN:EOS/USDT": false,
+        "KRAKEN:PF_EOSUSD": false,
         "KUCOIN:EOS-USDC": false,
         "KUCOIN:EOS-USDT": false,
+        "KUCOIN:EOSUSDTM": false,
         "OKEX:EOS-USD-SWAP": false,
         "OKEX:EOS-USDC": false,
         "OKEX:EOS-USDT": false,
-        "OKEX:EOS-USDT-SWAP": false
+        "OKEX:EOS-USDT-SWAP": false,
+        "UPBIT:KRW-EOS": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
