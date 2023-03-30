@@ -16,14 +16,19 @@
           "markets": [
             "BINANCE:aavebusd",
             "BINANCE:aaveusdt",
+            "BINANCE_FUTURES:aaveusd_perp",
             "BINANCE_FUTURES:aaveusdt",
             "BYBIT:AAVEUSDT",
+            "BYBIT:AAVEUSDT-SPOT",
             "COINBASE:AAVE-USD",
             "KRAKEN:AAVE/USD",
+            "KRAKEN:PF_AAVEUSD",
             "KUCOIN:AAVE-USDT",
+            "KUCOIN:AAVEUSDTM",
             "OKEX:AAVE-USDC",
             "OKEX:AAVE-USDT",
-            "OKEX:AAVE-USDT-SWAP"
+            "OKEX:AAVE-USDT-SWAP",
+            "UPBIT:KRW-AAVE"
           ],
           "zoom": 1
         },
@@ -33,8 +38,10 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
+            "BINANCE_FUTURES:aaveusd_perp",
             "BINANCE_FUTURES:aaveusdt",
             "BYBIT:AAVEUSDT",
+            "KUCOIN:AAVEUSDTM",
             "OKEX:AAVE-USDT-SWAP"
           ]
         },
@@ -46,11 +53,14 @@
           "markets": [
             "BINANCE:aavebusd",
             "BINANCE:aaveusdt",
+            "BYBIT:AAVEUSDT-SPOT",
             "COINBASE:AAVE-USD",
             "KRAKEN:AAVE/USD",
+            "KRAKEN:PF_AAVEUSD",
             "KUCOIN:AAVE-USDT",
             "OKEX:AAVE-USDC",
-            "OKEX:AAVE-USDT"
+            "OKEX:AAVE-USDT",
+            "UPBIT:KRW-AAVE"
           ]
         }
       },
@@ -388,7 +398,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -479,7 +489,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:aaveusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(112,2,206)\");\n\nvar b = BYBIT:AAVEUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(109,143,89)\");\n\nvar c = OKEX:AAVE-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(95,33,13)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:aaveusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-aaveusd_perp\", color=\"rgb(249,253,39)\");\n\nvar b = BINANCE_FUTURES:aaveusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-aaveusdt\", color=\"rgb(249,253,98)\");\n\nvar c = BYBIT:AAVEUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(9,212,124)\");\n\nvar d = KUCOIN:AAVEUSDTM;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(10,48,75)\");\n\nvar e = OKEX:AAVE-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(16,113,97)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -523,7 +533,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:aavebusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-aavebusd\", color=\"rgb(80,123,221)\");\n\nvar b = BINANCE:aaveusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-aaveusdt\", color=\"rgb(80,123,134)\");\n\nvar c = COINBASE:AAVE-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(59,11,218)\");\n\nvar d = KUCOIN:AAVE-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(61,42,136)\");\n\nvar e = OKEX:AAVE-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-aave-usdc\", color=\"rgb(95,33,143)\");\n\nvar f = OKEX:AAVE-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-aave-usdt\", color=\"rgb(95,33,202)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:aavebusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-aavebusd\", color=\"rgb(178,92,196)\");\n\nvar b = BINANCE:aaveusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-aaveusdt\", color=\"rgb(178,92,52)\");\n\nvar c = BYBIT:AAVEUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(9,212,124)\");\n\nvar d = COINBASE:AAVE-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(251,79,36)\");\n\nvar e = KUCOIN:AAVE-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(10,48,75)\");\n\nvar f = OKEX:AAVE-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-aave-usdc\", color=\"rgb(16,113,70)\");\n\nvar g = OKEX:AAVE-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-aave-usdt\", color=\"rgb(16,113,7)\");\n\nvar h = UPBIT:KRW-AAVE;\nline(cum(h.vbuy-h.vsell), title=\"upbit\", color=\"rgb(134,82,16)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -883,14 +893,19 @@
       "hiddenMarkets": {
         "BINANCE:aavebusd": false,
         "BINANCE:aaveusdt": false,
+        "BINANCE_FUTURES:aaveusd_perp": false,
         "BINANCE_FUTURES:aaveusdt": false,
         "BYBIT:AAVEUSDT": false,
+        "BYBIT:AAVEUSDT-SPOT": false,
         "COINBASE:AAVE-USD": false,
         "KRAKEN:AAVE/USD": false,
+        "KRAKEN:PF_AAVEUSD": false,
         "KUCOIN:AAVE-USDT": false,
+        "KUCOIN:AAVEUSDTM": false,
         "OKEX:AAVE-USDC": false,
         "OKEX:AAVE-USDT": false,
-        "OKEX:AAVE-USDT-SWAP": false
+        "OKEX:AAVE-USDT-SWAP": false,
+        "UPBIT:KRW-AAVE": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
