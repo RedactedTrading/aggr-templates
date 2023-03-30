@@ -14,7 +14,7 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "KUCOIN:USDD-TRX",
+            "BYBIT:USDDUSDT-SPOT",
             "KUCOIN:USDD-USDC",
             "KUCOIN:USDD-USDT"
           ],
@@ -33,7 +33,7 @@
           "type": "trades",
           "zoom": 0.5,
           "markets": [
-            "KUCOIN:USDD-TRX",
+            "BYBIT:USDDUSDT-SPOT",
             "KUCOIN:USDD-USDC",
             "KUCOIN:USDD-USDT"
           ]
@@ -320,7 +320,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -508,7 +508,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = KUCOIN:USDD-TRX;\nline(cum(a.vbuy-a.vsell), title=\"kucoin-usdd-trx\", color=\"rgb(209,155,184)\");\n\nvar b = KUCOIN:USDD-USDC;\nline(cum(b.vbuy-b.vsell), title=\"kucoin-usdd-usdc\", color=\"rgb(209,155,244)\");\n\nvar c = KUCOIN:USDD-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin-usdd-usdt\", color=\"rgb(209,155,7)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:USDDUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(118,213,109)\");\n\nvar b = KUCOIN:USDD-USDC;\nline(cum(b.vbuy-b.vsell), title=\"kucoin-usdd-usdc\", color=\"rgb(172,242,107)\");\n\nvar c = KUCOIN:USDD-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin-usdd-usdt\", color=\"rgb(172,242,113)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -866,7 +866,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "KUCOIN:USDD-TRX": false,
+        "BYBIT:USDDUSDT-SPOT": false,
         "KUCOIN:USDD-USDC": false,
         "KUCOIN:USDD-USDT": false
       },
