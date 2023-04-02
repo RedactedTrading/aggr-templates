@@ -586,7 +586,7 @@
             "stdevMultiplier": 1,
             "color": "rgb(41,98,255)",
             "sessionLengthInDays": 7,
-            "visible": false
+            "visible": true
           },
           "id": "vwap",
           "createdAt": 1667127228900,
