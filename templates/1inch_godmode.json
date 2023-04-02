@@ -103,7 +103,7 @@
       "disableAnimations": true,
       "autoHideHeaders": false,
       "theme": "dark",
-      "backgroundColor": "rgb(25,25,25)",
+      "backgroundColor": "rgb(0,0,0)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
