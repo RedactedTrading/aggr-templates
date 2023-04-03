@@ -23,6 +23,7 @@
             "BYBIT:ARBUSDC-SPOT",
             "BYBIT:ARBUSDT",
             "BYBIT:ARBUSDT-SPOT",
+            "CAMELOTARBITRUM:ARB/WETH",
             "COINBASE:ARB-USD",
             "KRAKEN:ARB/USD",
             "KRAKEN:PF_ARBUSD",
@@ -30,6 +31,9 @@
             "KUCOIN:ARBUSDTM",
             "OKEX:ARB-USDT",
             "OKEX:ARB-USDT-SWAP",
+            "TRADERJOEARBITRUM:ARB/WETH",
+            "UNISWAPARBITRUM:ARB/USDC",
+            "UNISWAPARBITRUM:ARB/WETH",
             "UPBIT:KRW-ARB"
           ],
           "zoom": 1
@@ -59,11 +63,15 @@
             "BITFINEX:ARBUSD",
             "BYBIT:ARBUSDC-SPOT",
             "BYBIT:ARBUSDT-SPOT",
+            "CAMELOTARBITRUM:ARB/WETH",
             "COINBASE:ARB-USD",
             "KRAKEN:ARB/USD",
             "KRAKEN:PF_ARBUSD",
             "KUCOIN:ARB-USDT",
             "OKEX:ARB-USDT",
+            "TRADERJOEARBITRUM:ARB/WETH",
+            "UNISWAPARBITRUM:ARB/USDC",
+            "UNISWAPARBITRUM:ARB/WETH",
             "UPBIT:KRW-ARB"
           ]
         }
@@ -404,6 +412,18 @@
       "UPBIT": {
         "disabled": false,
         "fetched": false
+      },
+      "CAMELOTARBITRUM": {
+        "disabled": false,
+        "fetched": false
+      },
+      "TRADERJOEARBITRUM": {
+        "disabled": false,
+        "fetched": false
+      },
+      "UNISWAPARBITRUM": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -493,7 +513,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:arbusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(14,184,233)\");\n\nvar b = BITMEX:ARBUSD;\nline(cum(b.vbuy-b.vsell), title=\"bitmex-arbusd\", color=\"rgb(207,232,155)\");\n\nvar c = BITMEX:ARBUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bitmex-arbusdt\", color=\"rgb(207,232,197)\");\n\nvar d = BYBIT:ARBUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(171,91,77)\");\n\nvar e = KUCOIN:ARBUSDTM;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(151,51,36)\");\n\nvar f = OKEX:ARB-USDT-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(98,110,46)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:arbusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(90,167,144)\");\n\nvar b = BITMEX:ARBUSD;\nline(cum(b.vbuy-b.vsell), title=\"bitmex-arbusd\", color=\"rgb(222,8,50)\");\n\nvar c = BITMEX:ARBUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bitmex-arbusdt\", color=\"rgb(222,8,29)\");\n\nvar d = BYBIT:ARBUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(156,49,244)\");\n\nvar e = KUCOIN:ARBUSDTM;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(208,252,95)\");\n\nvar f = OKEX:ARB-USDT-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(51,36,228)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -537,7 +557,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:arbtusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-arbtusd\", color=\"rgb(137,166,142)\");\n\nvar b = BINANCE:arbusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-arbusdt\", color=\"rgb(137,166,185)\");\n\nvar c = BITFINEX:ARBUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(161,29,115)\");\n\nvar d = BYBIT:ARBUSDC-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit-arbusdc-spot\", color=\"rgb(171,91,216)\");\n\nvar e = BYBIT:ARBUSDT-SPOT;\nline(cum(e.vbuy-e.vsell), title=\"bybit-arbusdt-spot\", color=\"rgb(171,91,203)\");\n\nvar f = COINBASE:ARB-USD;\nline(cum(f.vbuy-f.vsell), title=\"coinbase\", color=\"rgb(42,170,95)\");\n\nvar g = KUCOIN:ARB-USDT;\nline(cum(g.vbuy-g.vsell), title=\"kucoin\", color=\"rgb(151,51,36)\");\n\nvar h = OKEX:ARB-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex\", color=\"rgb(98,110,46)\");\n\nvar i = UPBIT:KRW-ARB;\nline(cum(i.vbuy-i.vsell), title=\"upbit\", color=\"rgb(231,89,220)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:arbtusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-arbtusd\", color=\"rgb(88,196,235)\");\n\nvar b = BINANCE:arbusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-arbusdt\", color=\"rgb(88,196,233)\");\n\nvar c = BITFINEX:ARBUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(174,78,232)\");\n\nvar d = BYBIT:ARBUSDC-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit-arbusdc-spot\", color=\"rgb(156,49,60)\");\n\nvar e = BYBIT:ARBUSDT-SPOT;\nline(cum(e.vbuy-e.vsell), title=\"bybit-arbusdt-spot\", color=\"rgb(156,49,15)\");\n\nvar f = CAMELOTARBITRUM:ARB/WETH;\nline(cum(f.vbuy-f.vsell), title=\"camelotarbitrum\", color=\"rgb(88,44,35)\");\n\nvar g = COINBASE:ARB-USD;\nline(cum(g.vbuy-g.vsell), title=\"coinbase\", color=\"rgb(98,218,2)\");\n\nvar h = KUCOIN:ARB-USDT;\nline(cum(h.vbuy-h.vsell), title=\"kucoin\", color=\"rgb(208,252,95)\");\n\nvar i = OKEX:ARB-USDT;\nline(cum(i.vbuy-i.vsell), title=\"okex\", color=\"rgb(51,36,228)\");\n\nvar j = TRADERJOEARBITRUM:ARB/WETH;\nline(cum(j.vbuy-j.vsell), title=\"traderjoearbitrum\", color=\"rgb(176,73,154)\");\n\nvar k = UNISWAPARBITRUM:ARB/USDC;\nline(cum(k.vbuy-k.vsell), title=\"uniswaparbitrum-arb/usdc\", color=\"rgb(179,113,11)\");\n\nvar l = UNISWAPARBITRUM:ARB/WETH;\nline(cum(l.vbuy-l.vsell), title=\"uniswaparbitrum-arb/weth\", color=\"rgb(179,113,210)\");\n\nvar m = UPBIT:KRW-ARB;\nline(cum(m.vbuy-m.vsell), title=\"upbit\", color=\"rgb(115,236,201)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -904,6 +924,7 @@
         "BYBIT:ARBUSDC-SPOT": false,
         "BYBIT:ARBUSDT": false,
         "BYBIT:ARBUSDT-SPOT": false,
+        "CAMELOTARBITRUM:ARB/WETH": false,
         "COINBASE:ARB-USD": false,
         "KRAKEN:ARB/USD": false,
         "KRAKEN:PF_ARBUSD": false,
@@ -911,6 +932,9 @@
         "KUCOIN:ARBUSDTM": false,
         "OKEX:ARB-USDT": false,
         "OKEX:ARB-USDT-SWAP": false,
+        "TRADERJOEARBITRUM:ARB/WETH": false,
+        "UNISWAPARBITRUM:ARB/USDC": false,
+        "UNISWAPARBITRUM:ARB/WETH": false,
         "UPBIT:KRW-ARB": true
       },
       "barSpacing": 0.39437454420364615,
