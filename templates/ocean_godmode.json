@@ -477,7 +477,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:oceanusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(117,40,159)\");\n\nvar b = BYBIT:OCEANUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(174,26,218)\");\n\nvar c = KUCOIN:OCEANUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(121,20,145)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:oceanusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(87,86,91)\");\n\nvar b = BYBIT:OCEANUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(126,20,206)\");\n\nvar c = KUCOIN:OCEANUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(52,165,96)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -521,7 +521,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:oceanbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-oceanbusd\", color=\"rgb(8,183,168)\");\n\nvar b = BINANCE:oceanusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-oceanusdt\", color=\"rgb(8,183,165)\");\n\nvar c = COINBASE:OCEAN-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(73,237,156)\");\n\nvar d = KUCOIN:OCEAN-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(121,20,145)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:oceanbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-oceanbusd\", color=\"rgb(211,173,246)\");\n\nvar b = BINANCE:oceanusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-oceanusdt\", color=\"rgb(211,173,116)\");\n\nvar c = COINBASE:OCEAN-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(45,44,200)\");\n\nvar d = KUCOIN:OCEAN-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(52,165,96)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
