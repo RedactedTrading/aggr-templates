@@ -473,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:flmusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(195,178,252)\");\n\nvar b = BYBIT:FLMUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(45,248,181)\");\n\nvar c = OKEX:FLM-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(0,76,125)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:flmusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(217,219,55)\");\n\nvar b = BYBIT:FLMUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(204,26,77)\");\n\nvar c = OKEX:FLM-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(105,134,0)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -517,7 +517,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:flmbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-flmbusd\", color=\"rgb(194,26,80)\");\n\nvar b = BINANCE:flmusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-flmusdt\", color=\"rgb(194,26,104)\");\n\nvar c = OKEX:FLM-USDC;\nline(cum(c.vbuy-c.vsell), title=\"okex-flm-usdc\", color=\"rgb(0,76,237)\");\n\nvar d = OKEX:FLM-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex-flm-usdt\", color=\"rgb(0,76,222)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:flmbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-flmbusd\", color=\"rgb(192,31,1)\");\n\nvar b = BINANCE:flmusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-flmusdt\", color=\"rgb(192,31,85)\");\n\nvar c = OKEX:FLM-USDC;\nline(cum(c.vbuy-c.vsell), title=\"okex-flm-usdc\", color=\"rgb(105,134,227)\");\n\nvar d = OKEX:FLM-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex-flm-usdt\", color=\"rgb(105,134,19)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
