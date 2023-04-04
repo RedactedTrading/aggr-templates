@@ -465,7 +465,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:GPTUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(164,145,58)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:GPTUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(210,19,181)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -509,7 +509,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITFINEX:GPTUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitfinex\", color=\"rgb(253,188,170)\");\n\nvar b = BYBIT:GPTUSDT-SPOT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(164,145,58)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITFINEX:GPTUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitfinex\", color=\"rgb(157,254,45)\");\n\nvar b = BYBIT:GPTUSDT-SPOT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(210,19,181)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
