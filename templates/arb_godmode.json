@@ -513,7 +513,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:arbusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(90,167,144)\");\n\nvar b = BITMEX:ARBUSD;\nline(cum(b.vbuy-b.vsell), title=\"bitmex-arbusd\", color=\"rgb(222,8,50)\");\n\nvar c = BITMEX:ARBUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bitmex-arbusdt\", color=\"rgb(222,8,29)\");\n\nvar d = BYBIT:ARBUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(156,49,244)\");\n\nvar e = KUCOIN:ARBUSDTM;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(208,252,95)\");\n\nvar f = OKEX:ARB-USDT-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(51,36,228)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:arbusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(104,102,218)\");\n\nvar b = BITMEX:ARBUSD;\nline(cum(b.vbuy-b.vsell), title=\"bitmex-arbusd\", color=\"rgb(234,86,53)\");\n\nvar c = BITMEX:ARBUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bitmex-arbusdt\", color=\"rgb(234,86,117)\");\n\nvar d = BYBIT:ARBUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(171,70,237)\");\n\nvar e = KUCOIN:ARBUSDTM;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(234,49,212)\");\n\nvar f = OKEX:ARB-USDT-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(160,239,152)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -557,7 +557,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:arbtusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-arbtusd\", color=\"rgb(88,196,235)\");\n\nvar b = BINANCE:arbusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-arbusdt\", color=\"rgb(88,196,233)\");\n\nvar c = BITFINEX:ARBUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(174,78,232)\");\n\nvar d = BYBIT:ARBUSDC-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit-arbusdc-spot\", color=\"rgb(156,49,60)\");\n\nvar e = BYBIT:ARBUSDT-SPOT;\nline(cum(e.vbuy-e.vsell), title=\"bybit-arbusdt-spot\", color=\"rgb(156,49,15)\");\n\nvar f = CAMELOTARBITRUM:ARB/WETH;\nline(cum(f.vbuy-f.vsell), title=\"camelotarbitrum\", color=\"rgb(88,44,35)\");\n\nvar g = COINBASE:ARB-USD;\nline(cum(g.vbuy-g.vsell), title=\"coinbase\", color=\"rgb(98,218,2)\");\n\nvar h = KUCOIN:ARB-USDT;\nline(cum(h.vbuy-h.vsell), title=\"kucoin\", color=\"rgb(208,252,95)\");\n\nvar i = OKEX:ARB-USDT;\nline(cum(i.vbuy-i.vsell), title=\"okex\", color=\"rgb(51,36,228)\");\n\nvar j = TRADERJOEARBITRUM:ARB/WETH;\nline(cum(j.vbuy-j.vsell), title=\"traderjoearbitrum\", color=\"rgb(176,73,154)\");\n\nvar k = UNISWAPARBITRUM:ARB/USDC;\nline(cum(k.vbuy-k.vsell), title=\"uniswaparbitrum-arb/usdc\", color=\"rgb(179,113,11)\");\n\nvar l = UNISWAPARBITRUM:ARB/WETH;\nline(cum(l.vbuy-l.vsell), title=\"uniswaparbitrum-arb/weth\", color=\"rgb(179,113,210)\");\n\nvar m = UPBIT:KRW-ARB;\nline(cum(m.vbuy-m.vsell), title=\"upbit\", color=\"rgb(115,236,201)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:arbtusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-arbtusd\", color=\"rgb(220,173,126)\");\n\nvar b = BINANCE:arbusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-arbusdt\", color=\"rgb(220,173,180)\");\n\nvar c = BITFINEX:ARBUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(32,158,219)\");\n\nvar d = BYBIT:ARBUSDC-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit-arbusdc-spot\", color=\"rgb(171,70,231)\");\n\nvar e = BYBIT:ARBUSDT-SPOT;\nline(cum(e.vbuy-e.vsell), title=\"bybit-arbusdt-spot\", color=\"rgb(171,70,236)\");\n\nvar f = CAMELOTARBITRUM:ARB/WETH;\nline(cum(f.vbuy-f.vsell), title=\"camelotarbitrum\", color=\"rgb(77,126,251)\");\n\nvar g = COINBASE:ARB-USD;\nline(cum(g.vbuy-g.vsell), title=\"coinbase\", color=\"rgb(213,161,230)\");\n\nvar h = KUCOIN:ARB-USDT;\nline(cum(h.vbuy-h.vsell), title=\"kucoin\", color=\"rgb(234,49,212)\");\n\nvar i = OKEX:ARB-USDT;\nline(cum(i.vbuy-i.vsell), title=\"okex\", color=\"rgb(160,239,152)\");\n\nvar j = TRADERJOEARBITRUM:ARB/WETH;\nline(cum(j.vbuy-j.vsell), title=\"traderjoearbitrum\", color=\"rgb(63,141,218)\");\n\nvar k = UNISWAPARBITRUM:ARB/USDC;\nline(cum(k.vbuy-k.vsell), title=\"uniswaparbitrum-arb/usdc\", color=\"rgb(8,5,53)\");\n\nvar l = UNISWAPARBITRUM:ARB/WETH;\nline(cum(l.vbuy-l.vsell), title=\"uniswaparbitrum-arb/weth\", color=\"rgb(8,5,161)\");\n\nvar m = UPBIT:KRW-ARB;\nline(cum(m.vbuy-m.vsell), title=\"upbit\", color=\"rgb(161,171,58)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -924,7 +924,7 @@
         "BYBIT:ARBUSDC-SPOT": false,
         "BYBIT:ARBUSDT": false,
         "BYBIT:ARBUSDT-SPOT": false,
-        "CAMELOTARBITRUM:ARB/WETH": false,
+        "CAMELOTARBITRUM:ARB/WETH": true,
         "COINBASE:ARB-USD": false,
         "KRAKEN:ARB/USD": false,
         "KRAKEN:PF_ARBUSD": false,
@@ -932,9 +932,9 @@
         "KUCOIN:ARBUSDTM": false,
         "OKEX:ARB-USDT": false,
         "OKEX:ARB-USDT-SWAP": false,
-        "TRADERJOEARBITRUM:ARB/WETH": false,
+        "TRADERJOEARBITRUM:ARB/WETH": true,
         "UNISWAPARBITRUM:ARB/USDC": false,
-        "UNISWAPARBITRUM:ARB/WETH": false,
+        "UNISWAPARBITRUM:ARB/WETH": true,
         "UPBIT:KRW-ARB": true
       },
       "barSpacing": 0.39437454420364615,
