@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:TIMEUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(167,83,148)\");\n\nvar b = COINBASE:TIME-USD;\nline(cum(b.vbuy-b.vsell), title=\"coinbase-time-usd\", color=\"rgb(212,173,74)\");\n\nvar c = COINBASE:TIME-USDT;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-time-usdt\", color=\"rgb(212,173,227)\");\n\nvar d = KUCOIN:TIME-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(161,229,47)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:TIMEUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(246,62,22)\");\n\nvar b = COINBASE:TIME-USD;\nline(cum(b.vbuy-b.vsell), title=\"coinbase-time-usd\", color=\"rgb(242,131,254)\");\n\nvar c = COINBASE:TIME-USDT;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-time-usdt\", color=\"rgb(242,131,76)\");\n\nvar d = KUCOIN:TIME-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(252,178,65)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
