@@ -475,7 +475,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = KUCOIN:TONUSDTM;\nline(cum(a.vbuy-a.vsell), title=\"kucoin\", color=\"rgb(24,143,154)\");\n\nvar b = OKEX:TON-USDT-SWAP;\nline(cum(b.vbuy-b.vsell), title=\"okex\", color=\"rgb(90,1,171)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = KUCOIN:TONUSDTM;\nline(cum(a.vbuy-a.vsell), title=\"kucoin\", color=\"rgb(66,237,2)\");\n\nvar b = OKEX:TON-USDT-SWAP;\nline(cum(b.vbuy-b.vsell), title=\"okex\", color=\"rgb(116,20,84)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +519,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITFINEX:TONUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitfinex\", color=\"rgb(114,19,209)\");\n\nvar b = BYBIT:TONUSDT-SPOT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(186,158,207)\");\n\nvar c = KUCOIN:TON-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(24,143,154)\");\n\nvar d = OKEX:TON-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-ton-usdc\", color=\"rgb(90,1,155)\");\n\nvar e = OKEX:TON-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-ton-usdt\", color=\"rgb(90,1,179)\");\n\nvar f = UPBIT:KRW-TON;\nline(cum(f.vbuy-f.vsell), title=\"upbit\", color=\"rgb(71,129,91)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITFINEX:TONUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitfinex\", color=\"rgb(245,163,3)\");\n\nvar b = BYBIT:TONUSDT-SPOT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(217,219,131)\");\n\nvar c = KUCOIN:TON-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(66,237,2)\");\n\nvar d = OKEX:TON-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-ton-usdc\", color=\"rgb(116,20,76)\");\n\nvar e = OKEX:TON-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-ton-usdt\", color=\"rgb(116,20,42)\");\n\nvar f = UPBIT:KRW-TON;\nline(cum(f.vbuy-f.vsell), title=\"upbit\", color=\"rgb(23,94,49)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
