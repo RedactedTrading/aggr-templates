@@ -483,7 +483,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:zrxusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(7,225,10)\");\n\nvar b = BYBIT:ZRXUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(90,3,2)\");\n\nvar c = OKEX:ZRX-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(227,24,226)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:zrxusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(25,43,39)\");\n\nvar b = BYBIT:ZRXUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(105,81,212)\");\n\nvar c = OKEX:ZRX-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(219,149,194)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -527,7 +527,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:zrxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-zrxbusd\", color=\"rgb(54,98,235)\");\n\nvar b = BINANCE:zrxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-zrxusdt\", color=\"rgb(54,98,76)\");\n\nvar c = BITFINEX:ZRXUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(60,103,209)\");\n\nvar d = BYBIT:ZRXUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(90,3,2)\");\n\nvar e = COINBASE:ZRX-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase\", color=\"rgb(41,55,67)\");\n\nvar f = OKEX:ZRX-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(227,24,226)\");\n\nvar g = UPBIT:KRW-ZRX;\nline(cum(g.vbuy-g.vsell), title=\"upbit-krw-zrx\", color=\"rgb(204,155,203)\");\n\nvar h = UPBIT:USDT-ZRX;\nline(cum(h.vbuy-h.vsell), title=\"upbit-usdt-zrx\", color=\"rgb(204,155,197)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:zrxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-zrxbusd\", color=\"rgb(16,105,98)\");\n\nvar b = BINANCE:zrxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-zrxusdt\", color=\"rgb(16,105,87)\");\n\nvar c = BITFINEX:ZRXUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(224,44,195)\");\n\nvar d = BYBIT:ZRXUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(105,81,212)\");\n\nvar e = COINBASE:ZRX-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase\", color=\"rgb(227,214,149)\");\n\nvar f = OKEX:ZRX-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(219,149,194)\");\n\nvar g = UPBIT:KRW-ZRX;\nline(cum(g.vbuy-g.vsell), title=\"upbit-krw-zrx\", color=\"rgb(86,6,209)\");\n\nvar h = UPBIT:USDT-ZRX;\nline(cum(h.vbuy-h.vsell), title=\"upbit-usdt-zrx\", color=\"rgb(86,6,179)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -896,7 +896,7 @@
         "OKEX:ZRX-USDT": false,
         "OKEX:ZRX-USDT-SWAP": false,
         "UPBIT:KRW-ZRX": true,
-        "UPBIT:USDT-ZRX": true
+        "UPBIT:USDT-ZRX": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
