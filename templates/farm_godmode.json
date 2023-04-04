@@ -512,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:farmbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-farmbusd\", color=\"rgb(245,158,178)\");\n\nvar b = BINANCE:farmusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-farmusdt\", color=\"rgb(245,158,124)\");\n\nvar c = COINBASE:FARM-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-farm-usd\", color=\"rgb(118,211,130)\");\n\nvar d = COINBASE:FARM-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-farm-usdt\", color=\"rgb(118,211,237)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:farmbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-farmbusd\", color=\"rgb(96,210,60)\");\n\nvar b = BINANCE:farmusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-farmusdt\", color=\"rgb(96,210,158)\");\n\nvar c = COINBASE:FARM-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-farm-usd\", color=\"rgb(245,211,204)\");\n\nvar d = COINBASE:FARM-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-farm-usdt\", color=\"rgb(245,211,168)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
