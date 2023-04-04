@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:mblbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-mblbusd\", color=\"rgb(167,131,200)\");\n\nvar b = BINANCE:mblusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-mblusdt\", color=\"rgb(167,131,36)\");\n\nvar c = KUCOIN:MBL-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(32,177,73)\");\n\nvar d = UPBIT:KRW-MBL;\nline(cum(d.vbuy-d.vsell), title=\"upbit\", color=\"rgb(192,226,220)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:mblbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-mblbusd\", color=\"rgb(161,205,150)\");\n\nvar b = BINANCE:mblusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-mblusdt\", color=\"rgb(161,205,5)\");\n\nvar c = KUCOIN:MBL-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(203,0,19)\");\n\nvar d = UPBIT:KRW-MBL;\nline(cum(d.vbuy-d.vsell), title=\"upbit\", color=\"rgb(33,200,124)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
