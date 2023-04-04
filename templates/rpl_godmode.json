@@ -22,7 +22,8 @@
             "KRAKEN:RPL/USD",
             "KUCOIN:RPL-USDT",
             "OKEX:RPL-USDC",
-            "OKEX:RPL-USDT"
+            "OKEX:RPL-USDT",
+            "UNISWAPETHEREUM:RPL/WETH"
           ],
           "zoom": 1
         },
@@ -48,7 +49,8 @@
             "KRAKEN:RPL/USD",
             "KUCOIN:RPL-USDT",
             "OKEX:RPL-USDC",
-            "OKEX:RPL-USDT"
+            "OKEX:RPL-USDT",
+            "UNISWAPETHEREUM:RPL/WETH"
           ]
         }
       },
@@ -388,6 +390,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "UNISWAPETHEREUM": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -477,7 +483,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:RPLUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(235,135,92)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:RPLUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(81,162,118)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -521,7 +527,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:rplbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-rplbusd\", color=\"rgb(10,184,160)\");\n\nvar b = BINANCE:rplusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-rplusdt\", color=\"rgb(10,184,65)\");\n\nvar c = BYBIT:RPLUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(235,135,92)\");\n\nvar d = COINBASE:RPL-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(87,225,8)\");\n\nvar e = KUCOIN:RPL-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(250,28,234)\");\n\nvar f = OKEX:RPL-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-rpl-usdc\", color=\"rgb(203,151,121)\");\n\nvar g = OKEX:RPL-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-rpl-usdt\", color=\"rgb(203,151,45)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:rplbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-rplbusd\", color=\"rgb(121,204,122)\");\n\nvar b = BINANCE:rplusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-rplusdt\", color=\"rgb(121,204,50)\");\n\nvar c = BYBIT:RPLUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(81,162,118)\");\n\nvar d = COINBASE:RPL-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(45,26,46)\");\n\nvar e = KUCOIN:RPL-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(7,182,113)\");\n\nvar f = OKEX:RPL-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-rpl-usdc\", color=\"rgb(235,50,223)\");\n\nvar g = OKEX:RPL-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-rpl-usdt\", color=\"rgb(235,50,11)\");\n\nvar h = UNISWAPETHEREUM:RPL/WETH;\nline(cum(h.vbuy-h.vsell), title=\"uniswapethereum\", color=\"rgb(49,219,32)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -887,7 +893,8 @@
         "KRAKEN:RPL/USD": false,
         "KUCOIN:RPL-USDT": false,
         "OKEX:RPL-USDC": false,
-        "OKEX:RPL-USDT": false
+        "OKEX:RPL-USDT": false,
+        "UNISWAPETHEREUM:RPL/WETH": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
