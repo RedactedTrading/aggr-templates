@@ -506,7 +506,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:TELUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(47,142,221)\");\n\nvar b = KUCOIN:TEL-USDT;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(142,245,141)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:TELUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(59,148,101)\");\n\nvar b = KUCOIN:TEL-USDT;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(46,107,154)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
