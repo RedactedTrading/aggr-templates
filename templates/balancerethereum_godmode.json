@@ -514,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BALANCERETHEREUM:BAL/WETH;\nline(cum(a.vbuy-a.vsell), title=\"balancerethereum-bal/weth\", color=\"rgb(63,138,251)\");\n\nvar b = BALANCERETHEREUM:GNO/WETH;\nline(cum(b.vbuy-b.vsell), title=\"balancerethereum-gno/weth\", color=\"rgb(63,138,196)\");\n\nvar c = BALANCERETHEREUM:LIT/WETH;\nline(cum(c.vbuy-c.vsell), title=\"balancerethereum-lit/weth\", color=\"rgb(63,138,133)\");\n\nvar d = BALANCERETHEREUM:OHM/DAI;\nline(cum(d.vbuy-d.vsell), title=\"balancerethereum-ohm/dai\", color=\"rgb(63,138,96)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BALANCERETHEREUM:BAL/WETH;\nline(cum(a.vbuy-a.vsell), title=\"balancerethereum-bal/weth\", color=\"rgb(169,58,220)\");\n\nvar b = BALANCERETHEREUM:GNO/WETH;\nline(cum(b.vbuy-b.vsell), title=\"balancerethereum-gno/weth\", color=\"rgb(169,58,108)\");\n\nvar c = BALANCERETHEREUM:LIT/WETH;\nline(cum(c.vbuy-c.vsell), title=\"balancerethereum-lit/weth\", color=\"rgb(169,58,44)\");\n\nvar d = BALANCERETHEREUM:OHM/DAI;\nline(cum(d.vbuy-d.vsell), title=\"balancerethereum-ohm/dai\", color=\"rgb(169,58,160)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
