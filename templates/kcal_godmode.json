@@ -508,7 +508,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:KCALUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(28,174,68)\");\n\nvar b = OKEX:KCAL-USDC;\nline(cum(b.vbuy-b.vsell), title=\"okex-kcal-usdc\", color=\"rgb(59,98,169)\");\n\nvar c = OKEX:KCAL-USDT;\nline(cum(c.vbuy-c.vsell), title=\"okex-kcal-usdt\", color=\"rgb(59,98,125)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:KCALUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(3,255,19)\");\n\nvar b = OKEX:KCAL-USDC;\nline(cum(b.vbuy-b.vsell), title=\"okex-kcal-usdc\", color=\"rgb(248,97,125)\");\n\nvar c = OKEX:KCAL-USDT;\nline(cum(c.vbuy-c.vsell), title=\"okex-kcal-usdt\", color=\"rgb(248,97,1)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
