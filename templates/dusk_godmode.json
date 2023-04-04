@@ -473,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:duskusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(41,130,204)\");\n\nvar b = BYBIT:DUSKUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(16,41,8)\");\n\nvar c = KUCOIN:DUSKUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(213,42,100)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:duskusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(150,194,198)\");\n\nvar b = BYBIT:DUSKUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(145,67,222)\");\n\nvar c = KUCOIN:DUSKUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(113,236,183)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -517,7 +517,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:duskbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-duskbusd\", color=\"rgb(97,229,179)\");\n\nvar b = BINANCE:duskusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-duskusdc\", color=\"rgb(97,229,42)\");\n\nvar c = BINANCE:duskusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-duskusdt\", color=\"rgb(97,229,145)\");\n\nvar d = KUCOIN:DUSK-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(213,42,100)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:duskbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-duskbusd\", color=\"rgb(206,218,251)\");\n\nvar b = BINANCE:duskusdc;\nline(cum(b.vbuy-b.vsell), title=\"binance-duskusdc\", color=\"rgb(206,218,71)\");\n\nvar c = BINANCE:duskusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-duskusdt\", color=\"rgb(206,218,117)\");\n\nvar d = KUCOIN:DUSK-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(113,236,183)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
