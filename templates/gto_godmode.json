@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:gtobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-gtobusd\", color=\"rgb(197,94,114)\");\n\nvar b = BINANCE:gtotusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-gtotusd\", color=\"rgb(197,94,218)\");\n\nvar c = BINANCE:gtousdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-gtousdc\", color=\"rgb(197,94,247)\");\n\nvar d = BINANCE:gtousdt;\nline(cum(d.vbuy-d.vsell), title=\"binance-gtousdt\", color=\"rgb(197,94,159)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:gtobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-gtobusd\", color=\"rgb(8,200,68)\");\n\nvar b = BINANCE:gtotusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-gtotusd\", color=\"rgb(8,200,166)\");\n\nvar c = BINANCE:gtousdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-gtousdc\", color=\"rgb(8,200,172)\");\n\nvar d = BINANCE:gtousdt;\nline(cum(d.vbuy-d.vsell), title=\"binance-gtousdt\", color=\"rgb(8,200,243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
