@@ -17,7 +17,8 @@
             "BINANCE:synusdt",
             "COINBASE:SYN-USD",
             "KRAKEN:SYN/USD",
-            "KUCOIN:SYN-USDT"
+            "KUCOIN:SYN-USDT",
+            "SUSHISWAPETHEREUM:SYN/WETH"
           ],
           "zoom": 1
         },
@@ -37,7 +38,8 @@
             "BINANCE:synusdt",
             "COINBASE:SYN-USD",
             "KRAKEN:SYN/USD",
-            "KUCOIN:SYN-USDT"
+            "KUCOIN:SYN-USDT",
+            "SUSHISWAPETHEREUM:SYN/WETH"
           ]
         }
       },
@@ -377,6 +379,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "SUSHISWAPETHEREUM": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -510,7 +516,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:synusdt;\nline(cum(a.vbuy-a.vsell), title=\"binance\", color=\"rgb(90,143,117)\");\n\nvar b = COINBASE:SYN-USD;\nline(cum(b.vbuy-b.vsell), title=\"coinbase\", color=\"rgb(160,35,180)\");\n\nvar c = KUCOIN:SYN-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(93,229,184)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:synusdt;\nline(cum(a.vbuy-a.vsell), title=\"binance\", color=\"rgb(186,209,209)\");\n\nvar b = COINBASE:SYN-USD;\nline(cum(b.vbuy-b.vsell), title=\"coinbase\", color=\"rgb(49,255,11)\");\n\nvar c = KUCOIN:SYN-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(1,60,253)\");\n\nvar d = SUSHISWAPETHEREUM:SYN/WETH;\nline(cum(d.vbuy-d.vsell), title=\"sushiswapethereum\", color=\"rgb(56,114,99)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -871,7 +877,8 @@
         "BINANCE:synusdt": false,
         "COINBASE:SYN-USD": false,
         "KRAKEN:SYN/USD": false,
-        "KUCOIN:SYN-USDT": false
+        "KUCOIN:SYN-USDT": false,
+        "SUSHISWAPETHEREUM:SYN/WETH": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
