@@ -512,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:plabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-plabusd\", color=\"rgb(12,32,241)\");\n\nvar b = BINANCE:plausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-plausdt\", color=\"rgb(12,32,157)\");\n\nvar c = COINBASE:PLA-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(60,160,180)\");\n\nvar d = UPBIT:KRW-PLA;\nline(cum(d.vbuy-d.vsell), title=\"upbit\", color=\"rgb(129,191,211)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:plabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-plabusd\", color=\"rgb(17,159,227)\");\n\nvar b = BINANCE:plausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-plausdt\", color=\"rgb(17,159,174)\");\n\nvar c = COINBASE:PLA-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(145,75,243)\");\n\nvar d = UPBIT:KRW-PLA;\nline(cum(d.vbuy-d.vsell), title=\"upbit\", color=\"rgb(119,73,64)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
