@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:avabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-avabusd\", color=\"rgb(225,232,176)\");\n\nvar b = BINANCE:avausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-avausdt\", color=\"rgb(225,232,152)\");\n\nvar c = BYBIT:AVAUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(33,24,5)\");\n\nvar d = KUCOIN:AVA-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(89,207,196)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:avabusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-avabusd\", color=\"rgb(9,142,161)\");\n\nvar b = BINANCE:avausdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-avausdt\", color=\"rgb(9,142,130)\");\n\nvar c = BYBIT:AVAUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(187,112,192)\");\n\nvar d = KUCOIN:AVA-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(177,58,10)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
