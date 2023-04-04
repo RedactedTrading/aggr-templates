@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:citybusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-citybusd\", color=\"rgb(208,239,234)\");\n\nvar b = BINANCE:cityusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-cityusdt\", color=\"rgb(208,239,170)\");\n\nvar c = BYBIT:CITYUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(26,42,137)\");\n\nvar d = OKEX:CITY-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(192,203,99)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:citybusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-citybusd\", color=\"rgb(146,2,63)\");\n\nvar b = BINANCE:cityusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-cityusdt\", color=\"rgb(146,2,92)\");\n\nvar c = BYBIT:CITYUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(62,207,68)\");\n\nvar d = OKEX:CITY-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(168,254,12)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
