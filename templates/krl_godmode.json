@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:KRLUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(86,137,205)\");\n\nvar b = COINBASE:KRL-USD;\nline(cum(b.vbuy-b.vsell), title=\"coinbase-krl-usd\", color=\"rgb(152,208,20)\");\n\nvar c = COINBASE:KRL-USDT;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-krl-usdt\", color=\"rgb(152,208,182)\");\n\nvar d = KUCOIN:KRL-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(44,70,22)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:KRLUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(139,74,204)\");\n\nvar b = COINBASE:KRL-USD;\nline(cum(b.vbuy-b.vsell), title=\"coinbase-krl-usd\", color=\"rgb(221,219,121)\");\n\nvar c = COINBASE:KRL-USDT;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-krl-usdt\", color=\"rgb(221,219,65)\");\n\nvar d = KUCOIN:KRL-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(83,200,138)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
