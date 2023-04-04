@@ -508,7 +508,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:polyxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-polyxbusd\", color=\"rgb(241,56,177)\");\n\nvar b = BINANCE:polyxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-polyxusdt\", color=\"rgb(241,56,50)\");\n\nvar c = UPBIT:KRW-POLYX;\nline(cum(c.vbuy-c.vsell), title=\"upbit\", color=\"rgb(248,191,187)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:polyxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-polyxbusd\", color=\"rgb(180,166,240)\");\n\nvar b = BINANCE:polyxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-polyxusdt\", color=\"rgb(180,166,88)\");\n\nvar c = UPBIT:KRW-POLYX;\nline(cum(c.vbuy-c.vsell), title=\"upbit\", color=\"rgb(83,185,193)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
