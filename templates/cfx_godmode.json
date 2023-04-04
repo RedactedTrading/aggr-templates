@@ -475,7 +475,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:cfxusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(141,16,165)\");\n\nvar b = BYBIT:CFXUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(147,230,33)\");\n\nvar c = KUCOIN:CFXUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(0,34,105)\");\n\nvar d = OKEX:CFX-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(154,94,74)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:cfxusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(107,14,105)\");\n\nvar b = BYBIT:CFXUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(34,237,222)\");\n\nvar c = KUCOIN:CFXUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(145,54,210)\");\n\nvar d = OKEX:CFX-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(184,104,112)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +519,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:cfxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-cfxbusd\", color=\"rgb(107,194,125)\");\n\nvar b = BINANCE:cfxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-cfxusdt\", color=\"rgb(107,194,187)\");\n\nvar c = KUCOIN:CFX-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(0,34,105)\");\n\nvar d = OKEX:CFX-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(154,94,74)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:cfxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-cfxbusd\", color=\"rgb(72,70,98)\");\n\nvar b = BINANCE:cfxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-cfxusdt\", color=\"rgb(72,70,52)\");\n\nvar c = KUCOIN:CFX-USDT;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(145,54,210)\");\n\nvar d = OKEX:CFX-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(184,104,112)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
