@@ -514,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:movrbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-movrbusd\", color=\"rgb(227,127,100)\");\n\nvar b = BINANCE:movrusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-movrusdt\", color=\"rgb(227,127,174)\");\n\nvar c = BYBIT:MOVRUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(127,128,235)\");\n\nvar d = KUCOIN:MOVR-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(75,170,247)\");\n\nvar e = OKEX:MOVR-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(223,29,47)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:movrbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-movrbusd\", color=\"rgb(173,209,66)\");\n\nvar b = BINANCE:movrusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-movrusdt\", color=\"rgb(173,209,135)\");\n\nvar c = BYBIT:MOVRUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(143,246,193)\");\n\nvar d = KUCOIN:MOVR-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(71,68,248)\");\n\nvar e = OKEX:MOVR-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(144,193,190)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
