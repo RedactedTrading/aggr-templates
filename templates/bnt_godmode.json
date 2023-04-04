@@ -475,7 +475,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = OKEX:BNT-USDT-SWAP;\nline(cum(a.vbuy-a.vsell), title=\"okex\", color=\"rgb(137,233,147)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = OKEX:BNT-USDT-SWAP;\nline(cum(a.vbuy-a.vsell), title=\"okex\", color=\"rgb(26,83,218)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +519,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bntbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-bntbusd\", color=\"rgb(246,122,106)\");\n\nvar b = BINANCE:bntusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-bntusdt\", color=\"rgb(246,122,7)\");\n\nvar c = BITFINEX:BNTUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(187,77,35)\");\n\nvar d = BYBIT:BNTUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(67,154,146)\");\n\nvar e = COINBASE:BNT-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase\", color=\"rgb(115,99,249)\");\n\nvar f = OKEX:BNT-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(137,233,147)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bntbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-bntbusd\", color=\"rgb(88,220,123)\");\n\nvar b = BINANCE:bntusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-bntusdt\", color=\"rgb(88,220,158)\");\n\nvar c = BITFINEX:BNTUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(218,254,98)\");\n\nvar d = BYBIT:BNTUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(236,144,163)\");\n\nvar e = COINBASE:BNT-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase\", color=\"rgb(187,76,16)\");\n\nvar f = OKEX:BNT-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(26,83,218)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
