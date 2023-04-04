@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = TRADERJOEARBITRUM:ARB/WETH;\nline(cum(a.vbuy-a.vsell), title=\"traderjoearbitrum-arb/weth\", color=\"rgb(181,234,254)\");\n\nvar b = TRADERJOEARBITRUM:WETH/USDC;\nline(cum(b.vbuy-b.vsell), title=\"traderjoearbitrum-weth/usdc\", color=\"rgb(181,234,206)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = TRADERJOEARBITRUM:ARB/WETH;\nline(cum(a.vbuy-a.vsell), title=\"traderjoearbitrum-arb/weth\", color=\"rgb(147,156,90)\");\n\nvar b = TRADERJOEARBITRUM:WETH/USDC;\nline(cum(b.vbuy-b.vsell), title=\"traderjoearbitrum-weth/usdc\", color=\"rgb(147,156,209)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
