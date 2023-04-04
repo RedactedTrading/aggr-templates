@@ -16,7 +16,6 @@
           "markets": [
             "BINANCE:yfiibusd",
             "BINANCE:yfiiusdt",
-            "COINBASE:YFII-USD",
             "OKEX:YFII-USDC",
             "OKEX:YFII-USDT",
             "OKEX:YFII-USDT-SWAP"
@@ -40,7 +39,6 @@
           "markets": [
             "BINANCE:yfiibusd",
             "BINANCE:yfiiusdt",
-            "COINBASE:YFII-USD",
             "OKEX:YFII-USDC",
             "OKEX:YFII-USDT"
           ]
@@ -331,7 +329,7 @@
         "fetched": false
       },
       "COINBASE": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "DERIBIT": {
@@ -471,7 +469,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = OKEX:YFII-USDT-SWAP;\nline(cum(a.vbuy-a.vsell), title=\"okex\", color=\"rgb(65,132,161)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = OKEX:YFII-USDT-SWAP;\nline(cum(a.vbuy-a.vsell), title=\"okex\", color=\"rgb(78,112,99)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -515,7 +513,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:yfiibusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-yfiibusd\", color=\"rgb(2,182,115)\");\n\nvar b = BINANCE:yfiiusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-yfiiusdt\", color=\"rgb(2,182,194)\");\n\nvar c = COINBASE:YFII-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(125,229,87)\");\n\nvar d = OKEX:YFII-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-yfii-usdc\", color=\"rgb(65,132,181)\");\n\nvar e = OKEX:YFII-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-yfii-usdt\", color=\"rgb(65,132,190)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:yfiibusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-yfiibusd\", color=\"rgb(37,194,115)\");\n\nvar b = BINANCE:yfiiusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-yfiiusdt\", color=\"rgb(37,194,39)\");\n\nvar c = OKEX:YFII-USDC;\nline(cum(c.vbuy-c.vsell), title=\"okex-yfii-usdc\", color=\"rgb(78,112,170)\");\n\nvar d = OKEX:YFII-USDT;\nline(cum(d.vbuy-d.vsell), title=\"okex-yfii-usdt\", color=\"rgb(78,112,255)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -875,7 +873,6 @@
       "hiddenMarkets": {
         "BINANCE:yfiibusd": false,
         "BINANCE:yfiiusdt": false,
-        "COINBASE:YFII-USD": false,
         "OKEX:YFII-USDC": false,
         "OKEX:YFII-USDT": false,
         "OKEX:YFII-USDT-SWAP": false
