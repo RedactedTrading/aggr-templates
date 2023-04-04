@@ -508,7 +508,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:XETAUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(183,169,44)\");\n\nvar b = KUCOIN:XETA-USDT;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(148,250,12)\");\n\nvar c = OKEX:XETA-USDT;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(75,237,103)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:XETAUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(222,133,36)\");\n\nvar b = KUCOIN:XETA-USDT;\nline(cum(b.vbuy-b.vsell), title=\"kucoin\", color=\"rgb(240,150,139)\");\n\nvar c = OKEX:XETA-USDT;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(197,216,228)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
