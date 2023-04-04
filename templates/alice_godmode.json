@@ -477,7 +477,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:aliceusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(204,124,89)\");\n\nvar b = BYBIT:ALICEUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(80,152,131)\");\n\nvar c = KUCOIN:ALICEUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(63,183,71)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:aliceusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(222,126,233)\");\n\nvar b = BYBIT:ALICEUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(206,209,197)\");\n\nvar c = KUCOIN:ALICEUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(121,111,86)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -521,7 +521,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:alicebusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-alicebusd\", color=\"rgb(94,143,26)\");\n\nvar b = BINANCE:aliceusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-aliceusdt\", color=\"rgb(94,143,77)\");\n\nvar c = COINBASE:ALICE-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(133,221,218)\");\n\nvar d = KUCOIN:ALICE-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(63,183,71)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:alicebusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-alicebusd\", color=\"rgb(148,225,130)\");\n\nvar b = BINANCE:aliceusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-aliceusdt\", color=\"rgb(148,225,126)\");\n\nvar c = COINBASE:ALICE-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(55,81,95)\");\n\nvar d = KUCOIN:ALICE-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(121,111,86)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
