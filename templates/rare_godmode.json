@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:rarebusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-rarebusd\", color=\"rgb(125,244,121)\");\n\nvar b = BINANCE:rareusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-rareusdt\", color=\"rgb(125,244,141)\");\n\nvar c = COINBASE:RARE-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(46,28,8)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:rarebusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-rarebusd\", color=\"rgb(179,247,190)\");\n\nvar b = BINANCE:rareusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-rareusdt\", color=\"rgb(179,247,141)\");\n\nvar c = COINBASE:RARE-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(16,218,196)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
