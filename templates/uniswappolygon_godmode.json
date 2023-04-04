@@ -514,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = UNISWAPPOLYGON:WBTC/WETH;\nline(cum(a.vbuy-a.vsell), title=\"uniswappolygon-wbtc/weth\", color=\"rgb(123,234,121)\");\n\nvar b = UNISWAPPOLYGON:WETH/USDC;\nline(cum(b.vbuy-b.vsell), title=\"uniswappolygon-weth/usdc\", color=\"rgb(123,234,186)\");\n\nvar c = UNISWAPPOLYGON:WMATIC/USDC;\nline(cum(c.vbuy-c.vsell), title=\"uniswappolygon-wmatic/usdc\", color=\"rgb(123,234,111)\");\n\nvar d = UNISWAPPOLYGON:WMATIC/USDT;\nline(cum(d.vbuy-d.vsell), title=\"uniswappolygon-wmatic/usdt\", color=\"rgb(123,234,106)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = UNISWAPPOLYGON:WBTC/WETH;\nline(cum(a.vbuy-a.vsell), title=\"uniswappolygon-wbtc/weth\", color=\"rgb(178,74,135)\");\n\nvar b = UNISWAPPOLYGON:WETH/USDC;\nline(cum(b.vbuy-b.vsell), title=\"uniswappolygon-weth/usdc\", color=\"rgb(178,74,201)\");\n\nvar c = UNISWAPPOLYGON:WMATIC/USDC;\nline(cum(c.vbuy-c.vsell), title=\"uniswappolygon-wmatic/usdc\", color=\"rgb(178,74,248)\");\n\nvar d = UNISWAPPOLYGON:WMATIC/USDT;\nline(cum(d.vbuy-d.vsell), title=\"uniswappolygon-wmatic/usdt\", color=\"rgb(178,74,146)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
