@@ -481,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITMEX:FLRUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitmex-flrusd\", color=\"rgb(146,229,144)\");\n\nvar b = BITMEX:FLRUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bitmex-flrusdt\", color=\"rgb(146,229,173)\");\n\nvar c = BYBIT:FLRUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(202,123,144)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITMEX:FLRUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitmex-flrusd\", color=\"rgb(71,223,185)\");\n\nvar b = BITMEX:FLRUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bitmex-flrusdt\", color=\"rgb(71,223,192)\");\n\nvar c = BYBIT:FLRUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(224,174,43)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -525,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITFINEX:FLRUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitfinex\", color=\"rgb(238,142,19)\");\n\nvar b = BYBIT:FLRUSDT-SPOT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(202,123,144)\");\n\nvar c = KUCOIN:FLR-USDC;\nline(cum(c.vbuy-c.vsell), title=\"kucoin-flr-usdc\", color=\"rgb(88,7,236)\");\n\nvar d = KUCOIN:FLR-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin-flr-usdt\", color=\"rgb(88,7,62)\");\n\nvar e = OKEX:FLR-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-flr-usdc\", color=\"rgb(92,182,149)\");\n\nvar f = OKEX:FLR-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-flr-usdt\", color=\"rgb(92,182,80)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITFINEX:FLRUSD;\nline(cum(a.vbuy-a.vsell), title=\"bitfinex\", color=\"rgb(51,47,3)\");\n\nvar b = BYBIT:FLRUSDT-SPOT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(224,174,43)\");\n\nvar c = KUCOIN:FLR-USDC;\nline(cum(c.vbuy-c.vsell), title=\"kucoin-flr-usdc\", color=\"rgb(29,182,216)\");\n\nvar d = KUCOIN:FLR-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin-flr-usdt\", color=\"rgb(29,182,204)\");\n\nvar e = OKEX:FLR-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-flr-usdc\", color=\"rgb(161,57,46)\");\n\nvar f = OKEX:FLR-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-flr-usdt\", color=\"rgb(161,57,229)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
