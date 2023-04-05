@@ -25,9 +25,6 @@
             "COINBASE:LDO-USD",
             "KRAKEN:LDO/USD",
             "KRAKEN:PF_LDOUSD",
-            "KUCOIN:LDO-USDC",
-            "KUCOIN:LDO-USDT",
-            "KUCOIN:LDOUSDTM",
             "OKEX:LDO-USDT",
             "OKEX:LDO-USDT-SWAP",
             "UNISWAPETHEREUM:LDO/WETH"
@@ -38,12 +35,11 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:ldobusd",
             "BINANCE_FUTURES:ldousdt",
             "BYBIT:LDOUSDT",
-            "KUCOIN:LDOUSDTM",
             "OKEX:LDO-USDT-SWAP"
           ]
         },
@@ -51,7 +47,7 @@
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE:ldobusd",
             "BINANCE:ldotusd",
@@ -61,8 +57,6 @@
             "COINBASE:LDO-USD",
             "KRAKEN:LDO/USD",
             "KRAKEN:PF_LDOUSD",
-            "KUCOIN:LDO-USDC",
-            "KUCOIN:LDO-USDT",
             "OKEX:LDO-USDT",
             "UNISWAPETHEREUM:LDO/WETH"
           ]
@@ -107,7 +101,7 @@
       "disableAnimations": true,
       "autoHideHeaders": false,
       "theme": "dark",
-      "backgroundColor": "rgb(25,25,25)",
+      "backgroundColor": "rgb(0,0,0)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -381,7 +375,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "OKEX": {
@@ -469,8 +463,8 @@
             "priceLineVisible": false,
             "lastValueVisible": true,
             "borderVisible": true,
-            "upColor": "rgba(255,255,255,0.7)",
-            "downColor": "rgb(0,0,0)",
+            "upColor": "rgb(38,134,252)",
+            "downColor": "rgb(252,45,45)",
             "borderUpColor": "rgba(255,255,255,0.5)",
             "borderDownColor": "rgba(255,255,255,0.5)",
             "wickUpColor": "rgba(255,255,255,0.5)",
@@ -497,7 +491,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:ldobusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-ldobusd\", color=\"rgb(222,246,206)\");\n\nvar b = BINANCE_FUTURES:ldousdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-ldousdt\", color=\"rgb(222,246,56)\");\n\nvar c = BYBIT:LDOUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(88,50,85)\");\n\nvar d = KUCOIN:LDOUSDTM;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(119,80,70)\");\n\nvar e = OKEX:LDO-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(223,16,25)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:ldobusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-ldobusd\", color=\"rgb(50, 121, 175)\");\n\nvar b = BINANCE_FUTURES:ldousdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-ldousdt\", color=\"rgb(89, 157, 208)\");\n\nvar c = BYBIT:LDOUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(30, 201, 220)\");\n\nvar d = OKEX:LDO-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -541,7 +535,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ldobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ldobusd\", color=\"rgb(117,2,34)\");\n\nvar b = BINANCE:ldotusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-ldotusd\", color=\"rgb(117,2,54)\");\n\nvar c = BINANCE:ldousdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-ldousdt\", color=\"rgb(117,2,231)\");\n\nvar d = BYBIT:LDOUSDC-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit-ldousdc-spot\", color=\"rgb(88,50,162)\");\n\nvar e = BYBIT:LDOUSDT-SPOT;\nline(cum(e.vbuy-e.vsell), title=\"bybit-ldousdt-spot\", color=\"rgb(88,50,255)\");\n\nvar f = COINBASE:LDO-USD;\nline(cum(f.vbuy-f.vsell), title=\"coinbase\", color=\"rgb(35,218,207)\");\n\nvar g = KUCOIN:LDO-USDC;\nline(cum(g.vbuy-g.vsell), title=\"kucoin-ldo-usdc\", color=\"rgb(119,80,248)\");\n\nvar h = KUCOIN:LDO-USDT;\nline(cum(h.vbuy-h.vsell), title=\"kucoin-ldo-usdt\", color=\"rgb(119,80,168)\");\n\nvar i = OKEX:LDO-USDT;\nline(cum(i.vbuy-i.vsell), title=\"okex\", color=\"rgb(223,16,25)\");\n\nvar j = UNISWAPETHEREUM:LDO/WETH;\nline(cum(j.vbuy-j.vsell), title=\"uniswapethereum\", color=\"rgb(68,166,193)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ldobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ldobusd\", color=\"rgb(50, 121, 175)\");\n\nvar b = BINANCE:ldotusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-ldotusd\", color=\"rgb(89, 157, 208)\");\n\nvar c = BINANCE:ldousdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-ldousdt\", color=\"rgb(30, 201, 220)\");\n\nvar d = BYBIT:LDOUSDC-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit-ldousdc-spot\", color=\"rgb(83, 217, 232)\");\n\nvar e = BYBIT:LDOUSDT-SPOT;\nline(cum(e.vbuy-e.vsell), title=\"bybit-ldousdt-spot\", color=\"rgb(180, 242, 243)\");\n\nvar f = COINBASE:LDO-USD;\nline(cum(f.vbuy-f.vsell), title=\"coinbase\", color=\"rgb(205, 246, 247)\");\n\nvar g = OKEX:LDO-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex\", color=\"rgb(204, 227, 126)\");\n\nvar h = UNISWAPETHEREUM:LDO/WETH;\nline(cum(h.vbuy-h.vsell), title=\"uniswapethereum\", color=\"rgb(255, 202, 42)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -594,7 +588,7 @@
             "stdevMultiplier": 1,
             "color": "rgb(41,98,255)",
             "sessionLengthInDays": 7,
-            "visible": false
+            "visible": true
           },
           "id": "vwap",
           "createdAt": 1667127228900,
@@ -887,9 +881,9 @@
       "refreshRate": 0,
       "showLegend": false,
       "fillGapsWithEmpty": true,
-      "showHorizontalGridlines": false,
+      "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
-      "showVerticalGridlines": false,
+      "showVerticalGridlines": true,
       "verticalGridlinesColor": "rgba(255,255,255,.1)",
       "showWatermark": false,
       "watermarkColor": "rgba(255,255,255,.1)",
@@ -910,9 +904,6 @@
         "COINBASE:LDO-USD": false,
         "KRAKEN:LDO/USD": false,
         "KRAKEN:PF_LDOUSD": false,
-        "KUCOIN:LDO-USDC": false,
-        "KUCOIN:LDO-USDT": false,
-        "KUCOIN:LDOUSDTM": false,
         "OKEX:LDO-USDT": false,
         "OKEX:LDO-USDT-SWAP": false,
         "UNISWAPETHEREUM:LDO/WETH": true
