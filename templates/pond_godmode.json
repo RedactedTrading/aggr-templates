@@ -514,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:pondbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-pondbusd\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:pondusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-pondusdt\", color=\"rgb(255, 192, 118)\");\n\nvar c = COINBASE:POND-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-pond-usd\", color=\"rgb(255, 141, 7)\");\n\nvar d = COINBASE:POND-USDT;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-pond-usdt\", color=\"rgb(255, 141, 7)\");\n\nvar e = KUCOIN:POND-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:pondbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:pondusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = COINBASE:POND-USD;\nline(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar d = COINBASE:POND-USDT;\nline(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar e = KUCOIN:POND-USDT;\nline(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
