@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:FORTUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(170, 109, 215)\");\n\nvar b = COINBASE:FORT-USD;\nline(cum(b.vbuy-b.vsell), title=\"coinbase-fort-usd\", color=\"rgb(255, 141, 7)\");\n\nvar c = COINBASE:FORT-USDT;\nline(cum(c.vbuy-c.vsell), title=\"coinbase-fort-usdt\", color=\"rgb(255, 141, 7)\");\n\nvar d = KUCOIN:FORT-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:FORTUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar b = COINBASE:FORT-USD;\nline(cum(b.vbuy-b.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar c = COINBASE:FORT-USDT;\nline(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar d = KUCOIN:FORT-USDT;\nline(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
