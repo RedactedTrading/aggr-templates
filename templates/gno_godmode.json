@@ -14,11 +14,13 @@
           "name": "",
           "type": "chart",
           "markets": [
+            "BALANCERETHEREUM:GNO/WETH",
             "BINANCE:gnobusd",
             "BINANCE:gnousdt",
             "BITFINEX:GNOUSD",
             "COINBASE:GNO-USD",
-            "KRAKEN:GNO/USD"
+            "KRAKEN:GNO/USD",
+            "UNISWAPETHEREUM:GNO/WETH"
           ],
           "zoom": 1
         },
@@ -26,20 +28,22 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": []
         },
         "trades2": {
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
+            "BALANCERETHEREUM:GNO/WETH",
             "BINANCE:gnobusd",
             "BINANCE:gnousdt",
             "BITFINEX:GNOUSD",
             "COINBASE:GNO-USD",
-            "KRAKEN:GNO/USD"
+            "KRAKEN:GNO/USD",
+            "UNISWAPETHEREUM:GNO/WETH"
           ]
         }
       },
@@ -82,7 +86,7 @@
       "disableAnimations": true,
       "autoHideHeaders": false,
       "theme": "dark",
-      "backgroundColor": "rgb(25,25,25)",
+      "backgroundColor": "rgb(0,0,0)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -379,6 +383,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BALANCERETHEREUM": {
+        "disabled": false,
+        "fetched": false
+      },
+      "UNISWAPETHEREUM": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -440,8 +452,8 @@
             "priceLineVisible": false,
             "lastValueVisible": true,
             "borderVisible": true,
-            "upColor": "rgba(255,255,255,0.7)",
-            "downColor": "rgb(0,0,0)",
+            "upColor": "rgb(38,134,252)",
+            "downColor": "rgb(252,45,45)",
             "borderUpColor": "rgba(255,255,255,0.5)",
             "borderDownColor": "rgba(255,255,255,0.5)",
             "wickUpColor": "rgba(255,255,255,0.5)",
@@ -512,7 +524,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:gnobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-gnobusd\", color=\"rgb(185,80,196)\");\n\nvar b = BINANCE:gnousdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-gnousdt\", color=\"rgb(185,80,234)\");\n\nvar c = BITFINEX:GNOUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(155,148,79)\");\n\nvar d = COINBASE:GNO-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(107,47,239)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BALANCERETHEREUM:GNO/WETH;\nline(cum(a.vbuy-a.vsell), title=\"BLNETH\", color=\"rgb(89, 157, 208)\");\n\nvar b = BINANCE:gnobusd;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BINANCE:gnousdt;\nline(cum(c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar d = BITFINEX:GNOUSD;\nline(cum(d.vbuy-d.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\nvar e = COINBASE:GNO-USD;\nline(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar f = UNISWAPETHEREUM:GNO/WETH;\nline(cum(f.vbuy-f.vsell), title=\"UNIETH\", color=\"rgb(89, 157, 208)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -565,7 +577,7 @@
             "stdevMultiplier": 1,
             "color": "rgb(41,98,255)",
             "sessionLengthInDays": 7,
-            "visible": false
+            "visible": true
           },
           "id": "vwap",
           "createdAt": 1667127228900,
@@ -858,9 +870,9 @@
       "refreshRate": 0,
       "showLegend": false,
       "fillGapsWithEmpty": true,
-      "showHorizontalGridlines": false,
+      "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
-      "showVerticalGridlines": false,
+      "showVerticalGridlines": true,
       "verticalGridlinesColor": "rgba(255,255,255,.1)",
       "showWatermark": false,
       "watermarkColor": "rgba(255,255,255,.1)",
@@ -870,11 +882,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
+        "BALANCERETHEREUM:GNO/WETH": true,
         "BINANCE:gnobusd": false,
         "BINANCE:gnousdt": false,
         "BITFINEX:GNOUSD": false,
         "COINBASE:GNO-USD": false,
-        "KRAKEN:GNO/USD": false
+        "KRAKEN:GNO/USD": false,
+        "UNISWAPETHEREUM:GNO/WETH": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
