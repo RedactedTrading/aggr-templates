@@ -31,7 +31,7 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BYBIT:RPLUSDT"
           ]
@@ -40,7 +40,7 @@
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE:rplbusd",
             "BINANCE:rplusdt",
@@ -93,7 +93,7 @@
       "disableAnimations": true,
       "autoHideHeaders": false,
       "theme": "dark",
-      "backgroundColor": "rgb(25,25,25)",
+      "backgroundColor": "rgb(0,0,0)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -455,8 +455,8 @@
             "priceLineVisible": false,
             "lastValueVisible": true,
             "borderVisible": true,
-            "upColor": "rgba(255,255,255,0.7)",
-            "downColor": "rgb(0,0,0)",
+            "upColor": "rgb(38,134,252)",
+            "downColor": "rgb(252,45,45)",
             "borderUpColor": "rgba(255,255,255,0.5)",
             "borderDownColor": "rgba(255,255,255,0.5)",
             "wickUpColor": "rgba(255,255,255,0.5)",
@@ -483,7 +483,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:RPLUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(81,162,118)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:RPLUSDT;\nline(cum(a.vbuy-a.vsell), title=\"bybit\", color=\"rgb(170, 109, 215)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -527,7 +527,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:rplbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-rplbusd\", color=\"rgb(121,204,122)\");\n\nvar b = BINANCE:rplusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-rplusdt\", color=\"rgb(121,204,50)\");\n\nvar c = BYBIT:RPLUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(81,162,118)\");\n\nvar d = COINBASE:RPL-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(45,26,46)\");\n\nvar e = KUCOIN:RPL-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(7,182,113)\");\n\nvar f = OKEX:RPL-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-rpl-usdc\", color=\"rgb(235,50,223)\");\n\nvar g = OKEX:RPL-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-rpl-usdt\", color=\"rgb(235,50,11)\");\n\nvar h = UNISWAPETHEREUM:RPL/WETH;\nline(cum(h.vbuy-h.vsell), title=\"uniswapethereum\", color=\"rgb(49,219,32)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:rplbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-rplbusd\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:rplusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-rplusdt\", color=\"rgb(255, 192, 118)\");\n\nvar c = BYBIT:RPLUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(170, 109, 215)\");\n\nvar d = COINBASE:RPL-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(255, 141, 7)\");\n\nvar e = KUCOIN:RPL-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(180, 242, 243)\");\n\nvar f = OKEX:RPL-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-rpl-usdc\", color=\"rgb(234, 238, 245)\");\n\nvar g = OKEX:RPL-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-rpl-usdt\", color=\"rgb(234, 238, 245)\");\n\nvar h = UNISWAPETHEREUM:RPL/WETH;\nline(cum(h.vbuy-h.vsell), title=\"uniswapethereum\", color=\"rgb(89, 157, 208)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -580,7 +580,7 @@
             "stdevMultiplier": 1,
             "color": "rgb(41,98,255)",
             "sessionLengthInDays": 7,
-            "visible": false
+            "visible": true
           },
           "id": "vwap",
           "createdAt": 1667127228900,
@@ -873,9 +873,9 @@
       "refreshRate": 0,
       "showLegend": false,
       "fillGapsWithEmpty": true,
-      "showHorizontalGridlines": false,
+      "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
-      "showVerticalGridlines": false,
+      "showVerticalGridlines": true,
       "verticalGridlinesColor": "rgba(255,255,255,.1)",
       "showWatermark": false,
       "watermarkColor": "rgba(255,255,255,.1)",
