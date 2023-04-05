@@ -23,8 +23,6 @@
             "KRAKEN:PF_XMRUSD",
             "KRAKEN:XMR/USD",
             "KRAKEN:XMR/USDT",
-            "KUCOIN:XMR-USDT",
-            "KUCOIN:XMRUSDTM",
             "OKEX:XMR-USD-SWAP",
             "OKEX:XMR-USDC",
             "OKEX:XMR-USDT",
@@ -36,12 +34,11 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:xmrusd_perp",
             "BINANCE_FUTURES:xmrusdt",
             "BYBIT:XMRUSDT",
-            "KUCOIN:XMRUSDTM",
             "OKEX:XMR-USD-SWAP",
             "OKEX:XMR-USDT-SWAP"
           ]
@@ -50,7 +47,7 @@
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE:xmrbusd",
             "BINANCE:xmrusdt",
@@ -58,7 +55,6 @@
             "KRAKEN:PF_XMRUSD",
             "KRAKEN:XMR/USD",
             "KRAKEN:XMR/USDT",
-            "KUCOIN:XMR-USDT",
             "OKEX:XMR-USDC",
             "OKEX:XMR-USDT"
           ]
@@ -103,7 +99,7 @@
       "disableAnimations": true,
       "autoHideHeaders": false,
       "theme": "dark",
-      "backgroundColor": "rgb(25,25,25)",
+      "backgroundColor": "rgb(0,0,0)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -377,7 +373,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "OKEX": {
@@ -461,8 +457,8 @@
             "priceLineVisible": false,
             "lastValueVisible": true,
             "borderVisible": true,
-            "upColor": "rgba(255,255,255,0.7)",
-            "downColor": "rgb(0,0,0)",
+            "upColor": "rgb(38,134,252)",
+            "downColor": "rgb(252,45,45)",
             "borderUpColor": "rgba(255,255,255,0.5)",
             "borderDownColor": "rgba(255,255,255,0.5)",
             "wickUpColor": "rgba(255,255,255,0.5)",
@@ -489,7 +485,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:xmrusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-xmrusd_perp\", color=\"rgb(32,134,126)\");\n\nvar b = BINANCE_FUTURES:xmrusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-xmrusdt\", color=\"rgb(32,134,68)\");\n\nvar c = BYBIT:XMRUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(217,30,13)\");\n\nvar d = KUCOIN:XMRUSDTM;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(66,68,163)\");\n\nvar e = OKEX:XMR-USD-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-xmr-usd-swap\", color=\"rgb(45,104,213)\");\n\nvar f = OKEX:XMR-USDT-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"okex-xmr-usdt-swap\", color=\"rgb(45,104,40)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:xmrusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-xmrusd_perp\", color=\"rgb(50, 121, 175)\");\n\nvar b = BINANCE_FUTURES:xmrusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-xmrusdt\", color=\"rgb(89, 157, 208)\");\n\nvar c = BYBIT:XMRUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(30, 201, 220)\");\n\nvar d = OKEX:XMR-USD-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex-xmr-usd-swap\", color=\"rgb(83, 217, 232)\");\n\nvar e = OKEX:XMR-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-xmr-usdt-swap\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -533,7 +529,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:xmrbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-xmrbusd\", color=\"rgb(201,57,113)\");\n\nvar b = BINANCE:xmrusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-xmrusdt\", color=\"rgb(201,57,194)\");\n\nvar c = BITFINEX:XMRUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(223,190,78)\");\n\nvar d = KUCOIN:XMR-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(66,68,163)\");\n\nvar e = OKEX:XMR-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-xmr-usdc\", color=\"rgb(45,104,45)\");\n\nvar f = OKEX:XMR-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-xmr-usdt\", color=\"rgb(45,104,223)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:xmrbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-xmrbusd\", color=\"rgb(50, 121, 175)\");\n\nvar b = BINANCE:xmrusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-xmrusdt\", color=\"rgb(89, 157, 208)\");\n\nvar c = BITFINEX:XMRUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(30, 201, 220)\");\n\nvar d = OKEX:XMR-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-xmr-usdc\", color=\"rgb(255, 141, 7)\");\n\nvar e = OKEX:XMR-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-xmr-usdt\", color=\"rgb(255, 192, 118)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -586,7 +582,7 @@
             "stdevMultiplier": 1,
             "color": "rgb(41,98,255)",
             "sessionLengthInDays": 7,
-            "visible": false
+            "visible": true
           },
           "id": "vwap",
           "createdAt": 1667127228900,
@@ -879,9 +875,9 @@
       "refreshRate": 0,
       "showLegend": false,
       "fillGapsWithEmpty": true,
-      "showHorizontalGridlines": false,
+      "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
-      "showVerticalGridlines": false,
+      "showVerticalGridlines": true,
       "verticalGridlinesColor": "rgba(255,255,255,.1)",
       "showWatermark": false,
       "watermarkColor": "rgba(255,255,255,.1)",
@@ -900,8 +896,6 @@
         "KRAKEN:PF_XMRUSD": false,
         "KRAKEN:XMR/USD": false,
         "KRAKEN:XMR/USDT": false,
-        "KUCOIN:XMR-USDT": false,
-        "KUCOIN:XMRUSDTM": false,
         "OKEX:XMR-USD-SWAP": false,
         "OKEX:XMR-USDC": false,
         "OKEX:XMR-USDT": false,
