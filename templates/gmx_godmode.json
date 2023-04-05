@@ -23,8 +23,6 @@
             "BYBIT:GMXUSDT-SPOT",
             "KRAKEN:GMX/USD",
             "KRAKEN:PF_GMXUSD",
-            "KUCOIN:GMX-USDT",
-            "KUCOIN:GMXUSDTM",
             "OKEX:GMX-USDC",
             "OKEX:GMX-USDT",
             "OKEX:GMX-USDT-SWAP",
@@ -36,13 +34,12 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:gmxusdt",
             "BITMEX:GMXUSD",
             "BITMEX:GMXUSDT",
             "BYBIT:GMXUSDT",
-            "KUCOIN:GMXUSDTM",
             "OKEX:GMX-USDT-SWAP"
           ]
         },
@@ -50,14 +47,13 @@
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE:gmxbusd",
             "BINANCE:gmxusdt",
             "BYBIT:GMXUSDT-SPOT",
             "KRAKEN:GMX/USD",
             "KRAKEN:PF_GMXUSD",
-            "KUCOIN:GMX-USDT",
             "OKEX:GMX-USDC",
             "OKEX:GMX-USDT",
             "UNISWAPARBITRUM:GMX/WETH"
@@ -103,7 +99,7 @@
       "disableAnimations": true,
       "autoHideHeaders": false,
       "theme": "dark",
-      "backgroundColor": "rgb(25,25,25)",
+      "backgroundColor": "rgb(0,0,0)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -377,7 +373,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "OKEX": {
@@ -465,8 +461,8 @@
             "priceLineVisible": false,
             "lastValueVisible": true,
             "borderVisible": true,
-            "upColor": "rgba(255,255,255,0.7)",
-            "downColor": "rgb(0,0,0)",
+            "upColor": "rgb(38,134,252)",
+            "downColor": "rgb(252,45,45)",
             "borderUpColor": "rgba(255,255,255,0.5)",
             "borderDownColor": "rgba(255,255,255,0.5)",
             "wickUpColor": "rgba(255,255,255,0.5)",
@@ -493,7 +489,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:gmxusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(145,121,130)\");\n\nvar b = BITMEX:GMXUSD;\nline(cum(b.vbuy-b.vsell), title=\"bitmex-gmxusd\", color=\"rgb(145,250,231)\");\n\nvar c = BITMEX:GMXUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bitmex-gmxusdt\", color=\"rgb(145,250,128)\");\n\nvar d = BYBIT:GMXUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(34,19,69)\");\n\nvar e = KUCOIN:GMXUSDTM;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(76,255,44)\");\n\nvar f = OKEX:GMX-USDT-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(123,236,69)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:gmxusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(50, 121, 175)\");\n\nvar b = BITMEX:GMXUSD;\nline(cum(b.vbuy-b.vsell), title=\"bitmex-gmxusd\", color=\"rgb(89, 157, 208)\");\n\nvar c = BITMEX:GMXUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bitmex-gmxusdt\", color=\"rgb(30, 201, 220)\");\n\nvar d = BYBIT:GMXUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(83, 217, 232)\");\n\nvar e = OKEX:GMX-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -537,7 +533,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:gmxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-gmxbusd\", color=\"rgb(9,198,196)\");\n\nvar b = BINANCE:gmxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-gmxusdt\", color=\"rgb(9,198,240)\");\n\nvar c = BYBIT:GMXUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(34,19,69)\");\n\nvar d = KUCOIN:GMX-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(76,255,44)\");\n\nvar e = OKEX:GMX-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-gmx-usdc\", color=\"rgb(123,236,53)\");\n\nvar f = OKEX:GMX-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-gmx-usdt\", color=\"rgb(123,236,83)\");\n\nvar g = UNISWAPARBITRUM:GMX/WETH;\nline(cum(g.vbuy-g.vsell), title=\"uniswaparbitrum\", color=\"rgb(124,91,247)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:gmxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-gmxbusd\", color=\"rgb(50, 121, 175)\");\n\nvar b = BINANCE:gmxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-gmxusdt\", color=\"rgb(89, 157, 208)\");\n\nvar c = BYBIT:GMXUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(30, 201, 220)\");\n\nvar d = OKEX:GMX-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-gmx-usdc\", color=\"rgb(205, 246, 247)\");\n\nvar e = OKEX:GMX-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-gmx-usdt\", color=\"rgb(255, 141, 7)\");\n\nvar f = UNISWAPARBITRUM:GMX/WETH;\nline(cum(f.vbuy-f.vsell), title=\"uniswaparbitrum\", color=\"rgb(255, 192, 118)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -590,7 +586,7 @@
             "stdevMultiplier": 1,
             "color": "rgb(41,98,255)",
             "sessionLengthInDays": 7,
-            "visible": false
+            "visible": true
           },
           "id": "vwap",
           "createdAt": 1667127228900,
@@ -883,9 +879,9 @@
       "refreshRate": 0,
       "showLegend": false,
       "fillGapsWithEmpty": true,
-      "showHorizontalGridlines": false,
+      "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
-      "showVerticalGridlines": false,
+      "showVerticalGridlines": true,
       "verticalGridlinesColor": "rgba(255,255,255,.1)",
       "showWatermark": false,
       "watermarkColor": "rgba(255,255,255,.1)",
@@ -904,8 +900,6 @@
         "BYBIT:GMXUSDT-SPOT": false,
         "KRAKEN:GMX/USD": false,
         "KRAKEN:PF_GMXUSD": false,
-        "KUCOIN:GMX-USDT": false,
-        "KUCOIN:GMXUSDTM": false,
         "OKEX:GMX-USDC": false,
         "OKEX:GMX-USDT": false,
         "OKEX:GMX-USDT-SWAP": false,
