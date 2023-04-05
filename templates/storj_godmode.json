@@ -21,8 +21,6 @@
             "COINBASE:STORJ-USD",
             "KRAKEN:PF_STORJUSD",
             "KRAKEN:STORJ/USD",
-            "KUCOIN:STORJ-USDT",
-            "KUCOIN:STORJUSDTM",
             "OKEX:STORJ-USDC",
             "OKEX:STORJ-USDT",
             "OKEX:STORJ-USDT-SWAP",
@@ -34,11 +32,10 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:storjusdt",
             "BYBIT:STORJUSDT",
-            "KUCOIN:STORJUSDTM",
             "OKEX:STORJ-USDT-SWAP"
           ]
         },
@@ -46,14 +43,13 @@
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE:storjbusd",
             "BINANCE:storjusdt",
             "COINBASE:STORJ-USD",
             "KRAKEN:PF_STORJUSD",
             "KRAKEN:STORJ/USD",
-            "KUCOIN:STORJ-USDT",
             "OKEX:STORJ-USDC",
             "OKEX:STORJ-USDT",
             "UPBIT:KRW-STORJ"
@@ -99,7 +95,7 @@
       "disableAnimations": true,
       "autoHideHeaders": false,
       "theme": "dark",
-      "backgroundColor": "rgb(25,25,25)",
+      "backgroundColor": "rgb(0,0,0)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -373,7 +369,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "OKEX": {
@@ -457,8 +453,8 @@
             "priceLineVisible": false,
             "lastValueVisible": true,
             "borderVisible": true,
-            "upColor": "rgba(255,255,255,0.7)",
-            "downColor": "rgb(0,0,0)",
+            "upColor": "rgb(38,134,252)",
+            "downColor": "rgb(252,45,45)",
             "borderUpColor": "rgba(255,255,255,0.5)",
             "borderDownColor": "rgba(255,255,255,0.5)",
             "wickUpColor": "rgba(255,255,255,0.5)",
@@ -485,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:storjusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(106,26,244)\");\n\nvar b = BYBIT:STORJUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(210,29,68)\");\n\nvar c = KUCOIN:STORJUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(176,241,222)\");\n\nvar d = OKEX:STORJ-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(90,60,14)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:storjusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(50, 121, 175)\");\n\nvar b = BYBIT:STORJUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(89, 157, 208)\");\n\nvar c = OKEX:STORJ-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(30, 201, 220)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -529,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:storjbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-storjbusd\", color=\"rgb(17,135,143)\");\n\nvar b = BINANCE:storjusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-storjusdt\", color=\"rgb(17,135,154)\");\n\nvar c = COINBASE:STORJ-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(147,177,116)\");\n\nvar d = KUCOIN:STORJ-USDT;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(176,241,222)\");\n\nvar e = OKEX:STORJ-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-storj-usdc\", color=\"rgb(90,60,209)\");\n\nvar f = OKEX:STORJ-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-storj-usdt\", color=\"rgb(90,60,35)\");\n\nvar g = UPBIT:KRW-STORJ;\nline(cum(g.vbuy-g.vsell), title=\"upbit\", color=\"rgb(67,116,26)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:storjbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-storjbusd\", color=\"rgb(50, 121, 175)\");\n\nvar b = BINANCE:storjusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-storjusdt\", color=\"rgb(89, 157, 208)\");\n\nvar c = COINBASE:STORJ-USD;\nline(cum(c.vbuy-c.vsell), title=\"coinbase\", color=\"rgb(30, 201, 220)\");\n\nvar d = OKEX:STORJ-USDC;\nline(cum(d.vbuy-d.vsell), title=\"okex-storj-usdc\", color=\"rgb(205, 246, 247)\");\n\nvar e = OKEX:STORJ-USDT;\nline(cum(e.vbuy-e.vsell), title=\"okex-storj-usdt\", color=\"rgb(255, 141, 7)\");\n\nvar f = UPBIT:KRW-STORJ;\nline(cum(f.vbuy-f.vsell), title=\"upbit\", color=\"rgb(255, 192, 118)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -582,7 +578,7 @@
             "stdevMultiplier": 1,
             "color": "rgb(41,98,255)",
             "sessionLengthInDays": 7,
-            "visible": false
+            "visible": true
           },
           "id": "vwap",
           "createdAt": 1667127228900,
@@ -875,9 +871,9 @@
       "refreshRate": 0,
       "showLegend": false,
       "fillGapsWithEmpty": true,
-      "showHorizontalGridlines": false,
+      "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
-      "showVerticalGridlines": false,
+      "showVerticalGridlines": true,
       "verticalGridlinesColor": "rgba(255,255,255,.1)",
       "showWatermark": false,
       "watermarkColor": "rgba(255,255,255,.1)",
@@ -894,8 +890,6 @@
         "COINBASE:STORJ-USD": false,
         "KRAKEN:PF_STORJUSD": false,
         "KRAKEN:STORJ/USD": false,
-        "KUCOIN:STORJ-USDT": false,
-        "KUCOIN:STORJUSDTM": false,
         "OKEX:STORJ-USDC": false,
         "OKEX:STORJ-USDT": false,
         "OKEX:STORJ-USDT-SWAP": false,
