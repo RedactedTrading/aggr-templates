@@ -23,6 +23,7 @@
             "KRAKEN:BTT/USD",
             "KUCOIN:BTT-USDT",
             "OKEX:BTT-USDT",
+            "UNISWAPETHEREUM:BTT/WETH",
             "UPBIT:KRW-BTT"
           ],
           "zoom": 1
@@ -31,14 +32,14 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": []
         },
         "trades2": {
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE:bttbusd",
             "BINANCE:btttusd",
@@ -49,6 +50,7 @@
             "KRAKEN:BTT/USD",
             "KUCOIN:BTT-USDT",
             "OKEX:BTT-USDT",
+            "UNISWAPETHEREUM:BTT/WETH",
             "UPBIT:KRW-BTT"
           ]
         }
@@ -92,7 +94,7 @@
       "disableAnimations": true,
       "autoHideHeaders": false,
       "theme": "dark",
-      "backgroundColor": "rgb(25,25,25)",
+      "backgroundColor": "rgb(0,0,0)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -389,6 +391,10 @@
       "UPBIT": {
         "disabled": false,
         "fetched": false
+      },
+      "UNISWAPETHEREUM": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -450,8 +456,8 @@
             "priceLineVisible": false,
             "lastValueVisible": true,
             "borderVisible": true,
-            "upColor": "rgba(255,255,255,0.7)",
-            "downColor": "rgb(0,0,0)",
+            "upColor": "rgb(38,134,252)",
+            "downColor": "rgb(252,45,45)",
             "borderUpColor": "rgba(255,255,255,0.5)",
             "borderDownColor": "rgba(255,255,255,0.5)",
             "wickUpColor": "rgba(255,255,255,0.5)",
@@ -522,7 +528,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bttbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-bttbusd\", color=\"rgb(27,109,198)\");\n\nvar b = BINANCE:btttusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-btttusd\", color=\"rgb(27,109,193)\");\n\nvar c = BINANCE:bttusdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-bttusdc\", color=\"rgb(27,109,5)\");\n\nvar d = BINANCE:bttusdt;\nline(cum(d.vbuy-d.vsell), title=\"binance-bttusdt\", color=\"rgb(27,109,157)\");\n\nvar e = BITFINEX:BTTUSD;\nline(cum(e.vbuy-e.vsell), title=\"bitfinex\", color=\"rgb(29,228,242)\");\n\nvar f = BYBIT:BTTUSDT-SPOT;\nline(cum(f.vbuy-f.vsell), title=\"bybit\", color=\"rgb(4,129,220)\");\n\nvar g = KUCOIN:BTT-USDT;\nline(cum(g.vbuy-g.vsell), title=\"kucoin\", color=\"rgb(212,230,171)\");\n\nvar h = OKEX:BTT-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex\", color=\"rgb(115,15,165)\");\n\nvar i = UPBIT:KRW-BTT;\nline(cum(i.vbuy-i.vsell), title=\"upbit\", color=\"rgb(135,222,15)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bttbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-bttbusd\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:btttusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-btttusd\", color=\"rgb(255, 192, 118)\");\n\nvar c = BINANCE:bttusdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-bttusdc\", color=\"rgb(255, 192, 118)\");\n\nvar d = BINANCE:bttusdt;\nline(cum(d.vbuy-d.vsell), title=\"binance-bttusdt\", color=\"rgb(255, 192, 118)\");\n\nvar e = BITFINEX:BTTUSD;\nline(cum(e.vbuy-e.vsell), title=\"bitfinex\", color=\"rgb(178, 173, 77)\");\n\nvar f = BYBIT:BTTUSDT-SPOT;\nline(cum(f.vbuy-f.vsell), title=\"bybit\", color=\"rgb(170, 109, 215)\");\n\nvar g = KUCOIN:BTT-USDT;\nline(cum(g.vbuy-g.vsell), title=\"kucoin\", color=\"rgb(180, 242, 243)\");\n\nvar h = OKEX:BTT-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex\", color=\"rgb(234, 238, 245)\");\n\nvar i = UNISWAPETHEREUM:BTT/WETH;\nline(cum(i.vbuy-i.vsell), title=\"uniswapethereum\", color=\"rgb(89, 157, 208)\");\n\nvar j = UPBIT:KRW-BTT;\nline(cum(j.vbuy-j.vsell), title=\"upbit\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -575,7 +581,7 @@
             "stdevMultiplier": 1,
             "color": "rgb(41,98,255)",
             "sessionLengthInDays": 7,
-            "visible": false
+            "visible": true
           },
           "id": "vwap",
           "createdAt": 1667127228900,
@@ -868,9 +874,9 @@
       "refreshRate": 0,
       "showLegend": false,
       "fillGapsWithEmpty": true,
-      "showHorizontalGridlines": false,
+      "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
-      "showVerticalGridlines": false,
+      "showVerticalGridlines": true,
       "verticalGridlinesColor": "rgba(255,255,255,.1)",
       "showWatermark": false,
       "watermarkColor": "rgba(255,255,255,.1)",
@@ -889,6 +895,7 @@
         "KRAKEN:BTT/USD": false,
         "KUCOIN:BTT-USDT": false,
         "OKEX:BTT-USDT": false,
+        "UNISWAPETHEREUM:BTT/WETH": true,
         "UPBIT:KRW-BTT": true
       },
       "barSpacing": 0.39437454420364615,
