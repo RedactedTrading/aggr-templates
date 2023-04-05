@@ -23,6 +23,8 @@
             "KRAKEN:PF_XMRUSD",
             "KRAKEN:XMR/USD",
             "KRAKEN:XMR/USDT",
+            "KUCOIN:XMR-USDT",
+            "KUCOIN:XMRUSDTM",
             "OKEX:XMR-USD-SWAP",
             "OKEX:XMR-USDC",
             "OKEX:XMR-USDT",
@@ -39,6 +41,7 @@
             "BINANCE_FUTURES:xmrusd_perp",
             "BINANCE_FUTURES:xmrusdt",
             "BYBIT:XMRUSDT",
+            "KUCOIN:XMRUSDTM",
             "OKEX:XMR-USD-SWAP",
             "OKEX:XMR-USDT-SWAP"
           ]
@@ -55,6 +58,7 @@
             "KRAKEN:PF_XMRUSD",
             "KRAKEN:XMR/USD",
             "KRAKEN:XMR/USDT",
+            "KUCOIN:XMR-USDT",
             "OKEX:XMR-USDC",
             "OKEX:XMR-USDT"
           ]
@@ -373,7 +377,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -485,7 +489,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:xmrusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BINANCE_FUTURES:xmrusdt;\nline(cum(b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar c = BYBIT:XMRUSDT;\nline(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar d = OKEX:XMR-USD-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar e = OKEX:XMR-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:xmrusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BINANCE_FUTURES:xmrusdt;\nline(cum(b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar c = BYBIT:XMRUSDT;\nline(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar d = KUCOIN:XMRUSDTM;\nline(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar e = OKEX:XMR-USD-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar f = OKEX:XMR-USDT-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -529,7 +533,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:xmrbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:xmrusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BITFINEX:XMRUSD;\nline(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\nvar d = OKEX:XMR-USDC;\nline(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar e = OKEX:XMR-USDT;\nline(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:xmrbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:xmrusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BITFINEX:XMRUSD;\nline(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\nvar d = KUCOIN:XMR-USDT;\nline(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar e = OKEX:XMR-USDC;\nline(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar f = OKEX:XMR-USDT;\nline(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -896,6 +900,8 @@
         "KRAKEN:PF_XMRUSD": false,
         "KRAKEN:XMR/USD": false,
         "KRAKEN:XMR/USDT": false,
+        "KUCOIN:XMR-USDT": false,
+        "KUCOIN:XMRUSDTM": false,
         "OKEX:XMR-USD-SWAP": false,
         "OKEX:XMR-USDC": false,
         "OKEX:XMR-USDT": false,
