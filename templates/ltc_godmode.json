@@ -48,7 +48,7 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:ltcbusd",
             "BINANCE_FUTURES:ltcusd_perp",
@@ -68,7 +68,7 @@
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE:ltcbusd",
             "BINANCE:ltctusd",
@@ -127,7 +127,7 @@
       "disableAnimations": true,
       "autoHideHeaders": false,
       "theme": "dark",
-      "backgroundColor": "rgb(25,25,25)",
+      "backgroundColor": "rgb(0,0,0)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -485,8 +485,8 @@
             "priceLineVisible": false,
             "lastValueVisible": true,
             "borderVisible": true,
-            "upColor": "rgba(255,255,255,0.7)",
-            "downColor": "rgb(0,0,0)",
+            "upColor": "rgb(38,134,252)",
+            "downColor": "rgb(252,45,45)",
             "borderUpColor": "rgba(255,255,255,0.5)",
             "borderDownColor": "rgba(255,255,255,0.5)",
             "wickUpColor": "rgba(255,255,255,0.5)",
@@ -513,7 +513,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:ltcbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-ltcbusd\", color=\"rgb(84,165,175)\");\n\nvar b = BINANCE_FUTURES:ltcusd_perp;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-ltcusd_perp\", color=\"rgb(84,165,185)\");\n\nvar c = BINANCE_FUTURES:ltcusdt;\nline(cum(c.vbuy-c.vsell), title=\"binancefutures-ltcusdt\", color=\"rgb(84,165,156)\");\n\nvar d = BITMEX:LTCUSD;\nline(cum(d.vbuy-d.vsell), title=\"bitmex-ltcusd\", color=\"rgb(112,128,170)\");\n\nvar e = BITMEX:LTCUSDT;\nline(cum(e.vbuy-e.vsell), title=\"bitmex-ltcusdt\", color=\"rgb(112,128,8)\");\n\nvar f = BYBIT:LTCUSD;\nline(cum(f.vbuy-f.vsell), title=\"bybit-ltcusd\", color=\"rgb(253,245,58)\");\n\nvar g = BYBIT:LTCUSDT;\nline(cum(g.vbuy-g.vsell), title=\"bybit-ltcusdt\", color=\"rgb(253,245,206)\");\n\nvar h = DERIBIT:LTC_USDC-PERPETUAL;\nline(cum(h.vbuy-h.vsell), title=\"deribit\", color=\"rgb(181,220,24)\");\n\nvar i = KUCOIN:LTCUSDTM;\nline(cum(i.vbuy-i.vsell), title=\"kucoin\", color=\"rgb(212,238,20)\");\n\nvar j = OKEX:LTC-USD-SWAP;\nline(cum(j.vbuy-j.vsell), title=\"okex-ltc-usd-swap\", color=\"rgb(247,53,253)\");\n\nvar k = OKEX:LTC-USDT-SWAP;\nline(cum(k.vbuy-k.vsell), title=\"okex-ltc-usdt-swap\", color=\"rgb(247,53,150)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:ltcbusd;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BINANCE_FUTURES:ltcusd_perp;\nline(cum(b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar c = BINANCE_FUTURES:ltcusdt;\nline(cum(c.vbuy-c.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar d = BITMEX:LTCUSD;\nline(cum(d.vbuy-d.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\nvar e = BITMEX:LTCUSDT;\nline(cum(e.vbuy-e.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\nvar f = BYBIT:LTCUSD;\nline(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar g = BYBIT:LTCUSDT;\nline(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar h = DERIBIT:LTC_USDC-PERPETUAL;\nline(cum(h.vbuy-h.vsell), title=\"DRBT\", color=\"rgb(50, 121, 175)\");\n\nvar i = KUCOIN:LTCUSDTM;\nline(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar j = OKEX:LTC-USD-SWAP;\nline(cum(j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar k = OKEX:LTC-USDT-SWAP;\nline(cum(k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -557,7 +557,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ltcbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ltcbusd\", color=\"rgb(44,224,75)\");\n\nvar b = BINANCE:ltctusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-ltctusd\", color=\"rgb(44,224,242)\");\n\nvar c = BINANCE:ltcusdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-ltcusdc\", color=\"rgb(44,224,131)\");\n\nvar d = BINANCE:ltcusdt;\nline(cum(d.vbuy-d.vsell), title=\"binance-ltcusdt\", color=\"rgb(44,224,58)\");\n\nvar e = BITFINEX:LTCUSD;\nline(cum(e.vbuy-e.vsell), title=\"bitfinex\", color=\"rgb(47,66,37)\");\n\nvar f = BYBIT:LTCUSDC-SPOT;\nline(cum(f.vbuy-f.vsell), title=\"bybit-ltcusdc-spot\", color=\"rgb(253,245,133)\");\n\nvar g = BYBIT:LTCUSDT-SPOT;\nline(cum(g.vbuy-g.vsell), title=\"bybit-ltcusdt-spot\", color=\"rgb(253,245,95)\");\n\nvar h = COINBASE:LTC-USD;\nline(cum(h.vbuy-h.vsell), title=\"coinbase\", color=\"rgb(180,99,7)\");\n\nvar i = KUCOIN:LTC-USDC;\nline(cum(i.vbuy-i.vsell), title=\"kucoin-ltc-usdc\", color=\"rgb(212,238,64)\");\n\nvar j = KUCOIN:LTC-USDT;\nline(cum(j.vbuy-j.vsell), title=\"kucoin-ltc-usdt\", color=\"rgb(212,238,161)\");\n\nvar k = OKEX:LTC-USDC;\nline(cum(k.vbuy-k.vsell), title=\"okex-ltc-usdc\", color=\"rgb(247,53,27)\");\n\nvar l = OKEX:LTC-USDT;\nline(cum(l.vbuy-l.vsell), title=\"okex-ltc-usdt\", color=\"rgb(247,53,50)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ltcbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:ltctusd;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BINANCE:ltcusdc;\nline(cum(c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar d = BINANCE:ltcusdt;\nline(cum(d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar e = BITFINEX:LTCUSD;\nline(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\nvar f = BYBIT:LTCUSDC-SPOT;\nline(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar g = BYBIT:LTCUSDT-SPOT;\nline(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar h = COINBASE:LTC-USD;\nline(cum(h.vbuy-h.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar i = KUCOIN:LTC-USDC;\nline(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar j = KUCOIN:LTC-USDT;\nline(cum(j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar k = OKEX:LTC-USDC;\nline(cum(k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar l = OKEX:LTC-USDT;\nline(cum(l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -610,7 +610,7 @@
             "stdevMultiplier": 1,
             "color": "rgb(41,98,255)",
             "sessionLengthInDays": 7,
-            "visible": false
+            "visible": true
           },
           "id": "vwap",
           "createdAt": 1667127228900,
@@ -903,9 +903,9 @@
       "refreshRate": 0,
       "showLegend": false,
       "fillGapsWithEmpty": true,
-      "showHorizontalGridlines": false,
+      "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
-      "showVerticalGridlines": false,
+      "showVerticalGridlines": true,
       "verticalGridlinesColor": "rgba(255,255,255,.1)",
       "showWatermark": false,
       "watermarkColor": "rgba(255,255,255,.1)",
