@@ -26,9 +26,6 @@
             "BITMEX:BNBUSDT",
             "BYBIT:BNBUSDT",
             "BYBIT:BNBUSDT-SPOT",
-            "KUCOIN:BNB-USDC",
-            "KUCOIN:BNB-USDT",
-            "KUCOIN:BNBUSDTM",
             "OKEX:BNB-USDC",
             "OKEX:BNB-USDT",
             "OKEX:BNB-USDT-SWAP"
@@ -39,7 +36,7 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:bnbbusd",
             "BINANCE_FUTURES:bnbusd_perp",
@@ -47,7 +44,6 @@
             "BITMEX:BNBUSD",
             "BITMEX:BNBUSDT",
             "BYBIT:BNBUSDT",
-            "KUCOIN:BNBUSDTM",
             "OKEX:BNB-USDT-SWAP"
           ]
         },
@@ -55,7 +51,7 @@
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE:bnbbusd",
             "BINANCE:bnbtusd",
@@ -63,8 +59,6 @@
             "BINANCE:bnbusdp",
             "BINANCE:bnbusdt",
             "BYBIT:BNBUSDT-SPOT",
-            "KUCOIN:BNB-USDC",
-            "KUCOIN:BNB-USDT",
             "OKEX:BNB-USDC",
             "OKEX:BNB-USDT"
           ]
@@ -109,7 +103,7 @@
       "disableAnimations": true,
       "autoHideHeaders": false,
       "theme": "dark",
-      "backgroundColor": "rgb(25,25,25)",
+      "backgroundColor": "rgb(0,0,0)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -383,7 +377,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "OKEX": {
@@ -467,8 +461,8 @@
             "priceLineVisible": false,
             "lastValueVisible": true,
             "borderVisible": true,
-            "upColor": "rgba(255,255,255,0.7)",
-            "downColor": "rgb(0,0,0)",
+            "upColor": "rgb(38,134,252)",
+            "downColor": "rgb(252,45,45)",
             "borderUpColor": "rgba(255,255,255,0.5)",
             "borderDownColor": "rgba(255,255,255,0.5)",
             "wickUpColor": "rgba(255,255,255,0.5)",
@@ -495,7 +489,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:bnbbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-bnbbusd\", color=\"rgb(96,33,221)\");\n\nvar b = BINANCE_FUTURES:bnbusd_perp;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-bnbusd_perp\", color=\"rgb(96,33,2)\");\n\nvar c = BINANCE_FUTURES:bnbusdt;\nline(cum(c.vbuy-c.vsell), title=\"binancefutures-bnbusdt\", color=\"rgb(96,33,162)\");\n\nvar d = BITMEX:BNBUSD;\nline(cum(d.vbuy-d.vsell), title=\"bitmex-bnbusd\", color=\"rgb(140,112,32)\");\n\nvar e = BITMEX:BNBUSDT;\nline(cum(e.vbuy-e.vsell), title=\"bitmex-bnbusdt\", color=\"rgb(140,112,135)\");\n\nvar f = BYBIT:BNBUSDT;\nline(cum(f.vbuy-f.vsell), title=\"bybit\", color=\"rgb(2,105,229)\");\n\nvar g = KUCOIN:BNBUSDTM;\nline(cum(g.vbuy-g.vsell), title=\"kucoin\", color=\"rgb(212,192,7)\");\n\nvar h = OKEX:BNB-USDT-SWAP;\nline(cum(h.vbuy-h.vsell), title=\"okex\", color=\"rgb(229,38,156)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:bnbbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-bnbbusd\", color=\"rgb(50, 121, 175)\");\n\nvar b = BINANCE_FUTURES:bnbusd_perp;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-bnbusd_perp\", color=\"rgb(89, 157, 208)\");\n\nvar c = BINANCE_FUTURES:bnbusdt;\nline(cum(c.vbuy-c.vsell), title=\"binancefutures-bnbusdt\", color=\"rgb(30, 201, 220)\");\n\nvar d = BITMEX:BNBUSD;\nline(cum(d.vbuy-d.vsell), title=\"bitmex-bnbusd\", color=\"rgb(83, 217, 232)\");\n\nvar e = BITMEX:BNBUSDT;\nline(cum(e.vbuy-e.vsell), title=\"bitmex-bnbusdt\", color=\"rgb(180, 242, 243)\");\n\nvar f = BYBIT:BNBUSDT;\nline(cum(f.vbuy-f.vsell), title=\"bybit\", color=\"rgb(205, 246, 247)\");\n\nvar g = OKEX:BNB-USDT-SWAP;\nline(cum(g.vbuy-g.vsell), title=\"okex\", color=\"rgb(255, 141, 7)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -539,7 +533,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bnbbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-bnbbusd\", color=\"rgb(68,195,193)\");\n\nvar b = BINANCE:bnbtusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-bnbtusd\", color=\"rgb(68,195,178)\");\n\nvar c = BINANCE:bnbusdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-bnbusdc\", color=\"rgb(68,195,85)\");\n\nvar d = BINANCE:bnbusdp;\nline(cum(d.vbuy-d.vsell), title=\"binance-bnbusdp\", color=\"rgb(68,195,234)\");\n\nvar e = BINANCE:bnbusdt;\nline(cum(e.vbuy-e.vsell), title=\"binance-bnbusdt\", color=\"rgb(68,195,98)\");\n\nvar f = BYBIT:BNBUSDT-SPOT;\nline(cum(f.vbuy-f.vsell), title=\"bybit\", color=\"rgb(2,105,229)\");\n\nvar g = KUCOIN:BNB-USDC;\nline(cum(g.vbuy-g.vsell), title=\"kucoin-bnb-usdc\", color=\"rgb(212,192,231)\");\n\nvar h = KUCOIN:BNB-USDT;\nline(cum(h.vbuy-h.vsell), title=\"kucoin-bnb-usdt\", color=\"rgb(212,192,112)\");\n\nvar i = OKEX:BNB-USDC;\nline(cum(i.vbuy-i.vsell), title=\"okex-bnb-usdc\", color=\"rgb(229,38,58)\");\n\nvar j = OKEX:BNB-USDT;\nline(cum(j.vbuy-j.vsell), title=\"okex-bnb-usdt\", color=\"rgb(229,38,111)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bnbbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-bnbbusd\", color=\"rgb(50, 121, 175)\");\n\nvar b = BINANCE:bnbtusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-bnbtusd\", color=\"rgb(89, 157, 208)\");\n\nvar c = BINANCE:bnbusdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-bnbusdc\", color=\"rgb(30, 201, 220)\");\n\nvar d = BINANCE:bnbusdp;\nline(cum(d.vbuy-d.vsell), title=\"binance-bnbusdp\", color=\"rgb(83, 217, 232)\");\n\nvar e = BINANCE:bnbusdt;\nline(cum(e.vbuy-e.vsell), title=\"binance-bnbusdt\", color=\"rgb(180, 242, 243)\");\n\nvar f = BYBIT:BNBUSDT-SPOT;\nline(cum(f.vbuy-f.vsell), title=\"bybit\", color=\"rgb(205, 246, 247)\");\n\nvar g = OKEX:BNB-USDC;\nline(cum(g.vbuy-g.vsell), title=\"okex-bnb-usdc\", color=\"rgb(255, 141, 7)\");\n\nvar h = OKEX:BNB-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex-bnb-usdt\", color=\"rgb(255, 192, 118)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -592,7 +586,7 @@
             "stdevMultiplier": 1,
             "color": "rgb(41,98,255)",
             "sessionLengthInDays": 7,
-            "visible": false
+            "visible": true
           },
           "id": "vwap",
           "createdAt": 1667127228900,
@@ -885,9 +879,9 @@
       "refreshRate": 0,
       "showLegend": false,
       "fillGapsWithEmpty": true,
-      "showHorizontalGridlines": false,
+      "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
-      "showVerticalGridlines": false,
+      "showVerticalGridlines": true,
       "verticalGridlinesColor": "rgba(255,255,255,.1)",
       "showWatermark": false,
       "watermarkColor": "rgba(255,255,255,.1)",
@@ -909,9 +903,6 @@
         "BITMEX:BNBUSDT": false,
         "BYBIT:BNBUSDT": false,
         "BYBIT:BNBUSDT-SPOT": false,
-        "KUCOIN:BNB-USDC": false,
-        "KUCOIN:BNB-USDT": false,
-        "KUCOIN:BNBUSDTM": false,
         "OKEX:BNB-USDC": false,
         "OKEX:BNB-USDT": false,
         "OKEX:BNB-USDT-SWAP": false
