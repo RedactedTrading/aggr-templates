@@ -29,10 +29,6 @@
             "KRAKEN:DOT/USD",
             "KRAKEN:DOT/USDT",
             "KRAKEN:PF_DOTUSD",
-            "KUCOIN:DOT-USDC",
-            "KUCOIN:DOT-USDT",
-            "KUCOIN:DOTUSDM",
-            "KUCOIN:DOTUSDTM",
             "OKEX:DOT-USD-SWAP",
             "OKEX:DOT-USDC",
             "OKEX:DOT-USDT",
@@ -45,14 +41,13 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:dotbusd",
             "BINANCE_FUTURES:dotusdt",
             "BITMEX:DOTUSDT",
             "BYBIT:DOTUSDT",
             "DERIBIT:DOT_USDC-PERPETUAL",
-            "KUCOIN:DOTUSDTM",
             "OKEX:DOT-USD-SWAP",
             "OKEX:DOT-USDT-SWAP"
           ]
@@ -61,7 +56,7 @@
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE:dotbusd",
             "BINANCE:dotusdt",
@@ -73,9 +68,6 @@
             "KRAKEN:DOT/USD",
             "KRAKEN:DOT/USDT",
             "KRAKEN:PF_DOTUSD",
-            "KUCOIN:DOT-USDC",
-            "KUCOIN:DOT-USDT",
-            "KUCOIN:DOTUSDM",
             "OKEX:DOT-USDC",
             "OKEX:DOT-USDT",
             "UPBIT:KRW-DOT"
@@ -121,7 +113,7 @@
       "disableAnimations": true,
       "autoHideHeaders": false,
       "theme": "dark",
-      "backgroundColor": "rgb(25,25,25)",
+      "backgroundColor": "rgb(0,0,0)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -395,7 +387,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "OKEX": {
@@ -479,8 +471,8 @@
             "priceLineVisible": false,
             "lastValueVisible": true,
             "borderVisible": true,
-            "upColor": "rgba(255,255,255,0.7)",
-            "downColor": "rgb(0,0,0)",
+            "upColor": "rgb(38,134,252)",
+            "downColor": "rgb(252,45,45)",
             "borderUpColor": "rgba(255,255,255,0.5)",
             "borderDownColor": "rgba(255,255,255,0.5)",
             "wickUpColor": "rgba(255,255,255,0.5)",
@@ -507,7 +499,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:dotbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-dotbusd\", color=\"rgb(158,47,129)\");\n\nvar b = BINANCE_FUTURES:dotusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-dotusdt\", color=\"rgb(158,47,219)\");\n\nvar c = BITMEX:DOTUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bitmex\", color=\"rgb(89,64,223)\");\n\nvar d = BYBIT:DOTUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(79,253,157)\");\n\nvar e = DERIBIT:DOT_USDC-PERPETUAL;\nline(cum(e.vbuy-e.vsell), title=\"deribit\", color=\"rgb(132,105,251)\");\n\nvar f = KUCOIN:DOTUSDTM;\nline(cum(f.vbuy-f.vsell), title=\"kucoin\", color=\"rgb(147,76,203)\");\n\nvar g = OKEX:DOT-USD-SWAP;\nline(cum(g.vbuy-g.vsell), title=\"okex-dot-usd-swap\", color=\"rgb(46,254,52)\");\n\nvar h = OKEX:DOT-USDT-SWAP;\nline(cum(h.vbuy-h.vsell), title=\"okex-dot-usdt-swap\", color=\"rgb(46,254,255)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:dotbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-dotbusd\", color=\"rgb(30, 201, 220)\");\n\nvar b = BINANCE_FUTURES:dotusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-dotusdt\", color=\"rgb(30, 201, 220)\");\n\nvar c = BITMEX:DOTUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bitmex\", color=\"rgb(255, 202, 42)\");\n\nvar d = BYBIT:DOTUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(170, 109, 215)\");\n\nvar e = DERIBIT:DOT_USDC-PERPETUAL;\nline(cum(e.vbuy-e.vsell), title=\"deribit\", color=\"rgb(50, 121, 175)\");\n\nvar f = OKEX:DOT-USD-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"okex-dot-usd-swap\", color=\"rgb(234, 238, 245)\");\n\nvar g = OKEX:DOT-USDT-SWAP;\nline(cum(g.vbuy-g.vsell), title=\"okex-dot-usdt-swap\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -551,7 +543,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:dotbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-dotbusd\", color=\"rgb(33,219,71)\");\n\nvar b = BINANCE:dotusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-dotusdt\", color=\"rgb(33,219,14)\");\n\nvar c = BITFINEX:DOTUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(157,69,209)\");\n\nvar d = BYBIT:DOTUSDC-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit-dotusdc-spot\", color=\"rgb(79,253,242)\");\n\nvar e = BYBIT:DOTUSDT-SPOT;\nline(cum(e.vbuy-e.vsell), title=\"bybit-dotusdt-spot\", color=\"rgb(79,253,143)\");\n\nvar f = COINBASE:DOT-USD;\nline(cum(f.vbuy-f.vsell), title=\"coinbase-dot-usd\", color=\"rgb(215,188,104)\");\n\nvar g = COINBASE:DOT-USDT;\nline(cum(g.vbuy-g.vsell), title=\"coinbase-dot-usdt\", color=\"rgb(215,188,159)\");\n\nvar h = KUCOIN:DOT-USDC;\nline(cum(h.vbuy-h.vsell), title=\"kucoin-dot-usdc\", color=\"rgb(147,76,103)\");\n\nvar i = KUCOIN:DOT-USDT;\nline(cum(i.vbuy-i.vsell), title=\"kucoin-dot-usdt\", color=\"rgb(147,76,233)\");\n\nvar j = KUCOIN:DOTUSDM;\nline(cum(j.vbuy-j.vsell), title=\"kucoin-dotusdm\", color=\"rgb(147,76,89)\");\n\nvar k = OKEX:DOT-USDC;\nline(cum(k.vbuy-k.vsell), title=\"okex-dot-usdc\", color=\"rgb(46,254,122)\");\n\nvar l = OKEX:DOT-USDT;\nline(cum(l.vbuy-l.vsell), title=\"okex-dot-usdt\", color=\"rgb(46,254,151)\");\n\nvar m = UPBIT:KRW-DOT;\nline(cum(m.vbuy-m.vsell), title=\"upbit\", color=\"rgb(125,85,189)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:dotbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-dotbusd\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:dotusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-dotusdt\", color=\"rgb(255, 192, 118)\");\n\nvar c = BITFINEX:DOTUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(178, 173, 77)\");\n\nvar d = BYBIT:DOTUSDC-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit-dotusdc-spot\", color=\"rgb(170, 109, 215)\");\n\nvar e = BYBIT:DOTUSDT-SPOT;\nline(cum(e.vbuy-e.vsell), title=\"bybit-dotusdt-spot\", color=\"rgb(170, 109, 215)\");\n\nvar f = COINBASE:DOT-USD;\nline(cum(f.vbuy-f.vsell), title=\"coinbase-dot-usd\", color=\"rgb(255, 141, 7)\");\n\nvar g = COINBASE:DOT-USDT;\nline(cum(g.vbuy-g.vsell), title=\"coinbase-dot-usdt\", color=\"rgb(255, 141, 7)\");\n\nvar h = OKEX:DOT-USDC;\nline(cum(h.vbuy-h.vsell), title=\"okex-dot-usdc\", color=\"rgb(234, 238, 245)\");\n\nvar i = OKEX:DOT-USDT;\nline(cum(i.vbuy-i.vsell), title=\"okex-dot-usdt\", color=\"rgb(234, 238, 245)\");\n\nvar j = UPBIT:KRW-DOT;\nline(cum(j.vbuy-j.vsell), title=\"upbit\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -604,7 +596,7 @@
             "stdevMultiplier": 1,
             "color": "rgb(41,98,255)",
             "sessionLengthInDays": 7,
-            "visible": false
+            "visible": true
           },
           "id": "vwap",
           "createdAt": 1667127228900,
@@ -897,9 +889,9 @@
       "refreshRate": 0,
       "showLegend": false,
       "fillGapsWithEmpty": true,
-      "showHorizontalGridlines": false,
+      "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
-      "showVerticalGridlines": false,
+      "showVerticalGridlines": true,
       "verticalGridlinesColor": "rgba(255,255,255,.1)",
       "showWatermark": false,
       "watermarkColor": "rgba(255,255,255,.1)",
@@ -924,10 +916,6 @@
         "KRAKEN:DOT/USD": false,
         "KRAKEN:DOT/USDT": false,
         "KRAKEN:PF_DOTUSD": false,
-        "KUCOIN:DOT-USDC": false,
-        "KUCOIN:DOT-USDT": false,
-        "KUCOIN:DOTUSDM": false,
-        "KUCOIN:DOTUSDTM": false,
         "OKEX:DOT-USD-SWAP": false,
         "OKEX:DOT-USDC": false,
         "OKEX:DOT-USDT": false,
