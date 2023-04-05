@@ -38,7 +38,7 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:xtzusd_perp",
             "BINANCE_FUTURES:xtzusdt",
@@ -51,7 +51,7 @@
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE:xtzbusd",
             "BINANCE:xtzusdt",
@@ -107,7 +107,7 @@
       "disableAnimations": true,
       "autoHideHeaders": false,
       "theme": "dark",
-      "backgroundColor": "rgb(25,25,25)",
+      "backgroundColor": "rgb(0,0,0)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -465,8 +465,8 @@
             "priceLineVisible": false,
             "lastValueVisible": true,
             "borderVisible": true,
-            "upColor": "rgba(255,255,255,0.7)",
-            "downColor": "rgb(0,0,0)",
+            "upColor": "rgb(38,134,252)",
+            "downColor": "rgb(252,45,45)",
             "borderUpColor": "rgba(255,255,255,0.5)",
             "borderDownColor": "rgba(255,255,255,0.5)",
             "wickUpColor": "rgba(255,255,255,0.5)",
@@ -493,7 +493,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:xtzusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-xtzusd_perp\", color=\"rgb(201,122,196)\");\n\nvar b = BINANCE_FUTURES:xtzusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-xtzusdt\", color=\"rgb(201,122,75)\");\n\nvar c = BYBIT:XTZUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(235,80,157)\");\n\nvar d = KUCOIN:XTZUSDTM;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(26,87,225)\");\n\nvar e = OKEX:XTZ-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(30,176,154)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:xtzusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BINANCE_FUTURES:xtzusdt;\nline(cum(b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar c = BYBIT:XTZUSDT;\nline(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar d = KUCOIN:XTZUSDTM;\nline(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar e = OKEX:XTZ-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -537,7 +537,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:xtzbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-xtzbusd\", color=\"rgb(170,67,2)\");\n\nvar b = BINANCE:xtzusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-xtzusdt\", color=\"rgb(170,67,30)\");\n\nvar c = BITFINEX:XTZUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(117,202,254)\");\n\nvar d = BYBIT:XTZUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(235,80,157)\");\n\nvar e = COINBASE:XTZ-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase\", color=\"rgb(163,123,69)\");\n\nvar f = KUCOIN:XTZ-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin\", color=\"rgb(26,87,225)\");\n\nvar g = OKEX:XTZ-USDC;\nline(cum(g.vbuy-g.vsell), title=\"okex-xtz-usdc\", color=\"rgb(30,176,240)\");\n\nvar h = OKEX:XTZ-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex-xtz-usdt\", color=\"rgb(30,176,146)\");\n\nvar i = UPBIT:KRW-XTZ;\nline(cum(i.vbuy-i.vsell), title=\"upbit\", color=\"rgb(135,68,218)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:xtzbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:xtzusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BITFINEX:XTZUSD;\nline(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\nvar d = BYBIT:XTZUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar e = COINBASE:XTZ-USD;\nline(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar f = KUCOIN:XTZ-USDT;\nline(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar g = OKEX:XTZ-USDC;\nline(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar h = OKEX:XTZ-USDT;\nline(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar i = UPBIT:KRW-XTZ;\nline(cum(i.vbuy-i.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -590,7 +590,7 @@
             "stdevMultiplier": 1,
             "color": "rgb(41,98,255)",
             "sessionLengthInDays": 7,
-            "visible": false
+            "visible": true
           },
           "id": "vwap",
           "createdAt": 1667127228900,
@@ -883,9 +883,9 @@
       "refreshRate": 0,
       "showLegend": false,
       "fillGapsWithEmpty": true,
-      "showHorizontalGridlines": false,
+      "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
-      "showVerticalGridlines": false,
+      "showVerticalGridlines": true,
       "verticalGridlinesColor": "rgba(255,255,255,.1)",
       "showWatermark": false,
       "watermarkColor": "rgba(255,255,255,.1)",
