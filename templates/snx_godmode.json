@@ -23,8 +23,6 @@
             "COINBASE:SNX-USD",
             "KRAKEN:PF_SNXUSD",
             "KRAKEN:SNX/USD",
-            "KUCOIN:SNX-USDT",
-            "KUCOIN:SNXUSDTM",
             "OKEX:SNX-USDC",
             "OKEX:SNX-USDT",
             "OKEX:SNX-USDT-SWAP",
@@ -37,11 +35,10 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:snxusdt",
             "BYBIT:SNXUSDT",
-            "KUCOIN:SNXUSDTM",
             "OKEX:SNX-USDT-SWAP"
           ]
         },
@@ -49,7 +46,7 @@
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE:snxbusd",
             "BINANCE:snxusdt",
@@ -58,7 +55,6 @@
             "COINBASE:SNX-USD",
             "KRAKEN:PF_SNXUSD",
             "KRAKEN:SNX/USD",
-            "KUCOIN:SNX-USDT",
             "OKEX:SNX-USDC",
             "OKEX:SNX-USDT",
             "UNISWAPOPTIMISM:SNX/WETH",
@@ -105,7 +101,7 @@
       "disableAnimations": true,
       "autoHideHeaders": false,
       "theme": "dark",
-      "backgroundColor": "rgb(25,25,25)",
+      "backgroundColor": "rgb(0,0,0)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -379,7 +375,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "OKEX": {
@@ -471,8 +467,8 @@
             "priceLineVisible": false,
             "lastValueVisible": true,
             "borderVisible": true,
-            "upColor": "rgba(255,255,255,0.7)",
-            "downColor": "rgb(0,0,0)",
+            "upColor": "rgb(38,134,252)",
+            "downColor": "rgb(252,45,45)",
             "borderUpColor": "rgba(255,255,255,0.5)",
             "borderDownColor": "rgba(255,255,255,0.5)",
             "wickUpColor": "rgba(255,255,255,0.5)",
@@ -499,7 +495,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:snxusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(122,51,29)\");\n\nvar b = BYBIT:SNXUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(141,127,223)\");\n\nvar c = KUCOIN:SNXUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(132,6,132)\");\n\nvar d = OKEX:SNX-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(251,161,53)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:snxusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:SNXUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(170, 109, 215)\");\n\nvar c = OKEX:SNX-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -543,7 +539,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:snxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-snxbusd\", color=\"rgb(94,3,106)\");\n\nvar b = BINANCE:snxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-snxusdt\", color=\"rgb(94,3,214)\");\n\nvar c = BITFINEX:SNXUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(142,135,249)\");\n\nvar d = BYBIT:SNXUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(141,127,223)\");\n\nvar e = COINBASE:SNX-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase\", color=\"rgb(130,194,227)\");\n\nvar f = KUCOIN:SNX-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin\", color=\"rgb(132,6,132)\");\n\nvar g = OKEX:SNX-USDC;\nline(cum(g.vbuy-g.vsell), title=\"okex-snx-usdc\", color=\"rgb(251,161,196)\");\n\nvar h = OKEX:SNX-USDT;\nline(cum(h.vbuy-h.vsell), title=\"okex-snx-usdt\", color=\"rgb(251,161,134)\");\n\nvar i = UNISWAPOPTIMISM:SNX/WETH;\nline(cum(i.vbuy-i.vsell), title=\"uniswapoptimism\", color=\"rgb(253,146,182)\");\n\nvar j = VELODROMEOPTIMISM:SNX/USDC;\nline(cum(j.vbuy-j.vsell), title=\"velodromeoptimism\", color=\"rgb(56,99,152)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:snxbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-snxbusd\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:snxusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-snxusdt\", color=\"rgb(255, 192, 118)\");\n\nvar c = BITFINEX:SNXUSD;\nline(cum(c.vbuy-c.vsell), title=\"bitfinex\", color=\"rgb(178, 173, 77)\");\n\nvar d = BYBIT:SNXUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit\", color=\"rgb(170, 109, 215)\");\n\nvar e = COINBASE:SNX-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase\", color=\"rgb(255, 141, 7)\");\n\nvar f = OKEX:SNX-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-snx-usdc\", color=\"rgb(234, 238, 245)\");\n\nvar g = OKEX:SNX-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-snx-usdt\", color=\"rgb(234, 238, 245)\");\n\nvar h = UNISWAPOPTIMISM:SNX/WETH;\nline(cum(h.vbuy-h.vsell), title=\"uniswapoptimism\", color=\"rgb(89, 157, 208)\");\n\nvar i = VELODROMEOPTIMISM:SNX/USDC;\nline(cum(i.vbuy-i.vsell), title=\"velodromeoptimism\", color=\"rgb(89, 157, 208)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -596,7 +592,7 @@
             "stdevMultiplier": 1,
             "color": "rgb(41,98,255)",
             "sessionLengthInDays": 7,
-            "visible": false
+            "visible": true
           },
           "id": "vwap",
           "createdAt": 1667127228900,
@@ -889,9 +885,9 @@
       "refreshRate": 0,
       "showLegend": false,
       "fillGapsWithEmpty": true,
-      "showHorizontalGridlines": false,
+      "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
-      "showVerticalGridlines": false,
+      "showVerticalGridlines": true,
       "verticalGridlinesColor": "rgba(255,255,255,.1)",
       "showWatermark": false,
       "watermarkColor": "rgba(255,255,255,.1)",
@@ -910,8 +906,6 @@
         "COINBASE:SNX-USD": false,
         "KRAKEN:PF_SNXUSD": false,
         "KRAKEN:SNX/USD": false,
-        "KUCOIN:SNX-USDT": false,
-        "KUCOIN:SNXUSDTM": false,
         "OKEX:SNX-USDC": false,
         "OKEX:SNX-USDT": false,
         "OKEX:SNX-USDT-SWAP": false,
