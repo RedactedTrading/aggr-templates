@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:elfbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-elfbusd\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:elfusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-elfusdt\", color=\"rgb(255, 192, 118)\");\n\nvar c = OKEX:ELF-USDT;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(234, 238, 245)\");\n\nvar d = UPBIT:KRW-ELF;\nline(cum(d.vbuy-d.vsell), title=\"upbit\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:elfbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:elfusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = OKEX:ELF-USDT;\nline(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar d = UPBIT:KRW-ELF;\nline(cum(d.vbuy-d.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
