@@ -23,6 +23,8 @@
             "COINBASE:MASK-USDT",
             "KRAKEN:MASK/USD",
             "KRAKEN:PF_MASKUSD",
+            "KUCOIN:MASK-USDT",
+            "KUCOIN:MASKUSDTM",
             "OKEX:MASK-USDC",
             "OKEX:MASK-USDT",
             "OKEX:MASK-USDT-SWAP",
@@ -38,6 +40,7 @@
           "markets": [
             "BINANCE_FUTURES:maskusdt",
             "BYBIT:MASKUSDT",
+            "KUCOIN:MASKUSDTM",
             "OKEX:MASK-USDT-SWAP"
           ]
         },
@@ -54,6 +57,7 @@
             "COINBASE:MASK-USDT",
             "KRAKEN:MASK/USD",
             "KRAKEN:PF_MASKUSD",
+            "KUCOIN:MASK-USDT",
             "OKEX:MASK-USDC",
             "OKEX:MASK-USDT",
             "UPBIT:KRW-MASK"
@@ -373,7 +377,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -485,7 +489,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:maskusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:MASKUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(170, 109, 215)\");\n\nvar c = OKEX:MASK-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:maskusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:MASKUSDT;\nline(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar c = KUCOIN:MASKUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar d = OKEX:MASK-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -529,7 +533,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:maskbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-maskbusd\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:maskusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-maskusdt\", color=\"rgb(255, 192, 118)\");\n\nvar c = BYBIT:MASKUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(170, 109, 215)\");\n\nvar d = COINBASE:MASK-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase-mask-usd\", color=\"rgb(255, 141, 7)\");\n\nvar e = COINBASE:MASK-USDT;\nline(cum(e.vbuy-e.vsell), title=\"coinbase-mask-usdt\", color=\"rgb(255, 141, 7)\");\n\nvar f = OKEX:MASK-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-mask-usdc\", color=\"rgb(234, 238, 245)\");\n\nvar g = OKEX:MASK-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-mask-usdt\", color=\"rgb(234, 238, 245)\");\n\nvar h = UPBIT:KRW-MASK;\nline(cum(h.vbuy-h.vsell), title=\"upbit\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:maskbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:maskusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BYBIT:MASKUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar d = COINBASE:MASK-USD;\nline(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar e = COINBASE:MASK-USDT;\nline(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar f = KUCOIN:MASK-USDT;\nline(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar g = OKEX:MASK-USDC;\nline(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar h = OKEX:MASK-USDT;\nline(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar i = UPBIT:KRW-MASK;\nline(cum(i.vbuy-i.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -896,6 +900,8 @@
         "COINBASE:MASK-USDT": false,
         "KRAKEN:MASK/USD": false,
         "KRAKEN:PF_MASKUSD": false,
+        "KUCOIN:MASK-USDT": false,
+        "KUCOIN:MASKUSDTM": false,
         "OKEX:MASK-USDC": false,
         "OKEX:MASK-USDT": false,
         "OKEX:MASK-USDT-SWAP": false,
