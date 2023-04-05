@@ -24,8 +24,6 @@
             "COINBASE:ANKR-USD",
             "KRAKEN:ANKR/USD",
             "KRAKEN:PF_ANKRUSD",
-            "KUCOIN:ANKR-USDT",
-            "KUCOIN:ANKRUSDTM",
             "UPBIT:KRW-ANKR"
           ],
           "zoom": 1
@@ -34,18 +32,17 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:ankrusdt",
-            "BYBIT:ANKRUSDT",
-            "KUCOIN:ANKRUSDTM"
+            "BYBIT:ANKRUSDT"
           ]
         },
         "trades2": {
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE:ankrbusd",
             "BINANCE:ankrtusd",
@@ -55,7 +52,6 @@
             "COINBASE:ANKR-USD",
             "KRAKEN:ANKR/USD",
             "KRAKEN:PF_ANKRUSD",
-            "KUCOIN:ANKR-USDT",
             "UPBIT:KRW-ANKR"
           ]
         }
@@ -99,7 +95,7 @@
       "disableAnimations": true,
       "autoHideHeaders": false,
       "theme": "dark",
-      "backgroundColor": "rgb(25,25,25)",
+      "backgroundColor": "rgb(0,0,0)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -373,7 +369,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "OKEX": {
@@ -457,8 +453,8 @@
             "priceLineVisible": false,
             "lastValueVisible": true,
             "borderVisible": true,
-            "upColor": "rgba(255,255,255,0.7)",
-            "downColor": "rgb(0,0,0)",
+            "upColor": "rgb(38,134,252)",
+            "downColor": "rgb(252,45,45)",
             "borderUpColor": "rgba(255,255,255,0.5)",
             "borderDownColor": "rgba(255,255,255,0.5)",
             "wickUpColor": "rgba(255,255,255,0.5)",
@@ -485,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:ankrusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(200,199,39)\");\n\nvar b = BYBIT:ANKRUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(103,238,150)\");\n\nvar c = KUCOIN:ANKRUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(62,126,185)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:ankrusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:ANKRUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(170, 109, 215)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -529,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ankrbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ankrbusd\", color=\"rgb(77,59,236)\");\n\nvar b = BINANCE:ankrtusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-ankrtusd\", color=\"rgb(77,59,156)\");\n\nvar c = BINANCE:ankrusdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-ankrusdc\", color=\"rgb(77,59,206)\");\n\nvar d = BINANCE:ankrusdt;\nline(cum(d.vbuy-d.vsell), title=\"binance-ankrusdt\", color=\"rgb(77,59,14)\");\n\nvar e = BYBIT:ANKRUSDT-SPOT;\nline(cum(e.vbuy-e.vsell), title=\"bybit\", color=\"rgb(103,238,150)\");\n\nvar f = COINBASE:ANKR-USD;\nline(cum(f.vbuy-f.vsell), title=\"coinbase\", color=\"rgb(136,32,58)\");\n\nvar g = KUCOIN:ANKR-USDT;\nline(cum(g.vbuy-g.vsell), title=\"kucoin\", color=\"rgb(62,126,185)\");\n\nvar h = UPBIT:KRW-ANKR;\nline(cum(h.vbuy-h.vsell), title=\"upbit\", color=\"rgb(16,37,40)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ankrbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-ankrbusd\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:ankrtusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-ankrtusd\", color=\"rgb(255, 192, 118)\");\n\nvar c = BINANCE:ankrusdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-ankrusdc\", color=\"rgb(255, 192, 118)\");\n\nvar d = BINANCE:ankrusdt;\nline(cum(d.vbuy-d.vsell), title=\"binance-ankrusdt\", color=\"rgb(255, 192, 118)\");\n\nvar e = BYBIT:ANKRUSDT-SPOT;\nline(cum(e.vbuy-e.vsell), title=\"bybit\", color=\"rgb(170, 109, 215)\");\n\nvar f = COINBASE:ANKR-USD;\nline(cum(f.vbuy-f.vsell), title=\"coinbase\", color=\"rgb(255, 141, 7)\");\n\nvar g = UPBIT:KRW-ANKR;\nline(cum(g.vbuy-g.vsell), title=\"upbit\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -582,7 +578,7 @@
             "stdevMultiplier": 1,
             "color": "rgb(41,98,255)",
             "sessionLengthInDays": 7,
-            "visible": false
+            "visible": true
           },
           "id": "vwap",
           "createdAt": 1667127228900,
@@ -875,9 +871,9 @@
       "refreshRate": 0,
       "showLegend": false,
       "fillGapsWithEmpty": true,
-      "showHorizontalGridlines": false,
+      "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
-      "showVerticalGridlines": false,
+      "showVerticalGridlines": true,
       "verticalGridlinesColor": "rgba(255,255,255,.1)",
       "showWatermark": false,
       "watermarkColor": "rgba(255,255,255,.1)",
@@ -897,8 +893,6 @@
         "COINBASE:ANKR-USD": false,
         "KRAKEN:ANKR/USD": false,
         "KRAKEN:PF_ANKRUSD": false,
-        "KUCOIN:ANKR-USDT": false,
-        "KUCOIN:ANKRUSDTM": false,
         "UPBIT:KRW-ANKR": true
       },
       "barSpacing": 0.39437454420364615,
