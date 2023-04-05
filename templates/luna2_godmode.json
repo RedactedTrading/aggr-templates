@@ -25,7 +25,7 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:luna2usdt",
             "BYBIT:LUNA2USDT"
@@ -35,7 +35,7 @@
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "KRAKEN:LUNA2/USD",
             "KRAKEN:PF_LUNA2USD"
@@ -81,7 +81,7 @@
       "disableAnimations": true,
       "autoHideHeaders": false,
       "theme": "dark",
-      "backgroundColor": "rgb(25,25,25)",
+      "backgroundColor": "rgb(0,0,0)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -439,8 +439,8 @@
             "priceLineVisible": false,
             "lastValueVisible": true,
             "borderVisible": true,
-            "upColor": "rgba(255,255,255,0.7)",
-            "downColor": "rgb(0,0,0)",
+            "upColor": "rgb(38,134,252)",
+            "downColor": "rgb(252,45,45)",
             "borderUpColor": "rgba(255,255,255,0.5)",
             "borderDownColor": "rgba(255,255,255,0.5)",
             "wickUpColor": "rgba(255,255,255,0.5)",
@@ -467,7 +467,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:luna2usdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(14,193,89)\");\n\nvar b = BYBIT:LUNA2USDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(81,143,94)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:luna2usdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:LUNA2USDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(170, 109, 215)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -564,7 +564,7 @@
             "stdevMultiplier": 1,
             "color": "rgb(41,98,255)",
             "sessionLengthInDays": 7,
-            "visible": false
+            "visible": true
           },
           "id": "vwap",
           "createdAt": 1667127228900,
@@ -857,9 +857,9 @@
       "refreshRate": 0,
       "showLegend": false,
       "fillGapsWithEmpty": true,
-      "showHorizontalGridlines": false,
+      "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
-      "showVerticalGridlines": false,
+      "showVerticalGridlines": true,
       "verticalGridlinesColor": "rgba(255,255,255,.1)",
       "showWatermark": false,
       "watermarkColor": "rgba(255,255,255,.1)",
