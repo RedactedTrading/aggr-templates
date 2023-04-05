@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = ZYBERSWAPARBITRUM:USDT/USDC;\nline(cum(a.vbuy-a.vsell), title=\"zyberswaparbitrum-usdt/usdc\", color=\"rgb(89, 157, 208)\");\n\nvar b = ZYBERSWAPARBITRUM:WETH/USDC;\nline(cum(b.vbuy-b.vsell), title=\"zyberswaparbitrum-weth/usdc\", color=\"rgb(89, 157, 208)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = ZYBERSWAPARBITRUM:USDT/USDC;\nline(cum(a.vbuy-a.vsell), title=\"zyberswaparbitrum\", color=\"rgb(89, 157, 208)\");\n\nvar b = ZYBERSWAPARBITRUM:WETH/USDC;\nline(cum(b.vbuy-b.vsell), title=\"zyberswaparbitrum\", color=\"rgb(89, 157, 208)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
