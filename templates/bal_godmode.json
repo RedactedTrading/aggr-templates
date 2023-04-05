@@ -23,6 +23,8 @@
             "COINBASE:BAL-USD",
             "KRAKEN:BAL/USD",
             "KRAKEN:PF_BALUSD",
+            "KUCOIN:BAL-USDT",
+            "KUCOIN:BALUSDTM",
             "OKEX:BAL-USDT",
             "OKEX:BAL-USDT-SWAP"
           ],
@@ -36,6 +38,7 @@
           "markets": [
             "BINANCE_FUTURES:balusdt",
             "BYBIT:BALUSDT",
+            "KUCOIN:BALUSDTM",
             "OKEX:BAL-USDT-SWAP"
           ]
         },
@@ -52,6 +55,7 @@
             "COINBASE:BAL-USD",
             "KRAKEN:BAL/USD",
             "KRAKEN:PF_BALUSD",
+            "KUCOIN:BAL-USDT",
             "OKEX:BAL-USDT"
           ]
         }
@@ -369,7 +373,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -485,7 +489,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:balusdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:BALUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(170, 109, 215)\");\n\nvar c = OKEX:BAL-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:balusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:BALUSDT;\nline(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar c = KUCOIN:BALUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar d = OKEX:BAL-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -529,7 +533,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BALANCERETHEREUM:BAL/WETH;\nline(cum(a.vbuy-a.vsell), title=\"balancerethereum\", color=\"rgb(89, 157, 208)\");\n\nvar b = BINANCE:balbusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-balbusd\", color=\"rgb(255, 192, 118)\");\n\nvar c = BINANCE:balusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-balusdt\", color=\"rgb(255, 192, 118)\");\n\nvar d = BITFINEX:BALUSD;\nline(cum(d.vbuy-d.vsell), title=\"bitfinex\", color=\"rgb(178, 173, 77)\");\n\nvar e = COINBASE:BAL-USD;\nline(cum(e.vbuy-e.vsell), title=\"coinbase\", color=\"rgb(255, 141, 7)\");\n\nvar f = OKEX:BAL-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BALANCERETHEREUM:BAL/WETH;\nline(cum(a.vbuy-a.vsell), title=\"BLNETH\", color=\"rgb(89, 157, 208)\");\n\nvar b = BINANCE:balbusd;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BINANCE:balusdt;\nline(cum(c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar d = BITFINEX:BALUSD;\nline(cum(d.vbuy-d.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\nvar e = COINBASE:BAL-USD;\nline(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar f = KUCOIN:BAL-USDT;\nline(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar g = OKEX:BAL-USDT;\nline(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -896,6 +900,8 @@
         "COINBASE:BAL-USD": false,
         "KRAKEN:BAL/USD": false,
         "KRAKEN:PF_BALUSD": false,
+        "KUCOIN:BAL-USDT": false,
+        "KUCOIN:BALUSDTM": false,
         "OKEX:BAL-USDT": false,
         "OKEX:BAL-USDT-SWAP": false
       },
