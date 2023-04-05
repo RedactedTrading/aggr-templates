@@ -25,6 +25,8 @@
             "COINBASE:BAT-USD",
             "KRAKEN:BAT/USD",
             "KRAKEN:PF_BATUSD",
+            "KUCOIN:BAT-USDT",
+            "KUCOIN:BATUSDTM",
             "OKEX:BAT-USDC",
             "OKEX:BAT-USDT",
             "OKEX:BAT-USDT-SWAP",
@@ -41,6 +43,7 @@
           "markets": [
             "BINANCE_FUTURES:batusdt",
             "BYBIT:BATUSDT",
+            "KUCOIN:BATUSDTM",
             "OKEX:BAT-USDT-SWAP"
           ]
         },
@@ -59,6 +62,7 @@
             "COINBASE:BAT-USD",
             "KRAKEN:BAT/USD",
             "KRAKEN:PF_BATUSD",
+            "KUCOIN:BAT-USDT",
             "OKEX:BAT-USDC",
             "OKEX:BAT-USDT",
             "UPBIT:KRW-BAT",
@@ -379,7 +383,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -491,7 +495,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:batusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:BATUSDT;\nline(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar c = OKEX:BAT-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:batusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:BATUSDT;\nline(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar c = KUCOIN:BATUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar d = OKEX:BAT-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -535,7 +539,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:batbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:battusd;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BINANCE:batusdc;\nline(cum(c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar d = BINANCE:batusdt;\nline(cum(d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar e = BITFINEX:BATUSD;\nline(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\nvar f = BYBIT:BATUSDT-SPOT;\nline(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar g = COINBASE:BAT-USD;\nline(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar h = OKEX:BAT-USDC;\nline(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar i = OKEX:BAT-USDT;\nline(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar j = UPBIT:KRW-BAT;\nline(cum(j.vbuy-j.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nvar k = UPBIT:USDT-BAT;\nline(cum(k.vbuy-k.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:batbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:battusd;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BINANCE:batusdc;\nline(cum(c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar d = BINANCE:batusdt;\nline(cum(d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar e = BITFINEX:BATUSD;\nline(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\nvar f = BYBIT:BATUSDT-SPOT;\nline(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar g = COINBASE:BAT-USD;\nline(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar h = KUCOIN:BAT-USDT;\nline(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar i = OKEX:BAT-USDC;\nline(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar j = OKEX:BAT-USDT;\nline(cum(j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar k = UPBIT:KRW-BAT;\nline(cum(k.vbuy-k.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nvar l = UPBIT:USDT-BAT;\nline(cum(l.vbuy-l.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -904,6 +908,8 @@
         "COINBASE:BAT-USD": false,
         "KRAKEN:BAT/USD": false,
         "KRAKEN:PF_BATUSD": false,
+        "KUCOIN:BAT-USDT": false,
+        "KUCOIN:BATUSDTM": false,
         "OKEX:BAT-USDC": false,
         "OKEX:BAT-USDT": false,
         "OKEX:BAT-USDT-SWAP": false,
