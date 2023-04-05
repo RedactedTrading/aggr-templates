@@ -514,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = SUSHISWAPARBITRUM:DPX/WETH;\nline(cum(a.vbuy-a.vsell), title=\"sushiswaparbitrum-dpx/weth\", color=\"rgb(89, 157, 208)\");\n\nvar b = SUSHISWAPARBITRUM:MAGIC/WETH;\nline(cum(b.vbuy-b.vsell), title=\"sushiswaparbitrum-magic/weth\", color=\"rgb(89, 157, 208)\");\n\nvar c = SUSHISWAPARBITRUM:RDPX/WETH;\nline(cum(c.vbuy-c.vsell), title=\"sushiswaparbitrum-rdpx/weth\", color=\"rgb(89, 157, 208)\");\n\nvar d = SUSHISWAPARBITRUM:gOHM/WETH;\nline(cum(d.vbuy-d.vsell), title=\"sushiswaparbitrum-gohm/weth\", color=\"rgb(89, 157, 208)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = SUSHISWAPARBITRUM:DPX/WETH;\nline(cum(a.vbuy-a.vsell), title=\"sushiswaparbitrum\", color=\"rgb(89, 157, 208)\");\n\nvar b = SUSHISWAPARBITRUM:MAGIC/WETH;\nline(cum(b.vbuy-b.vsell), title=\"sushiswaparbitrum\", color=\"rgb(89, 157, 208)\");\n\nvar c = SUSHISWAPARBITRUM:RDPX/WETH;\nline(cum(c.vbuy-c.vsell), title=\"sushiswaparbitrum\", color=\"rgb(89, 157, 208)\");\n\nvar d = SUSHISWAPARBITRUM:gOHM/WETH;\nline(cum(d.vbuy-d.vsell), title=\"sushiswaparbitrum\", color=\"rgb(89, 157, 208)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
