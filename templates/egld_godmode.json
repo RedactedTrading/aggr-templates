@@ -23,8 +23,6 @@
             "COINBASE:EGLD-USD",
             "KRAKEN:EGLD/USD",
             "KRAKEN:PF_EGLDUSD",
-            "KUCOIN:EGLD-USDT",
-            "KUCOIN:EGLDUSDTM",
             "OKEX:EGLD-USDC",
             "OKEX:EGLD-USDT",
             "OKEX:EGLD-USDT-SWAP"
@@ -35,12 +33,11 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:egldusd_perp",
             "BINANCE_FUTURES:egldusdt",
             "BYBIT:EGLDUSDT",
-            "KUCOIN:EGLDUSDTM",
             "OKEX:EGLD-USDT-SWAP"
           ]
         },
@@ -48,7 +45,7 @@
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE:egldbusd",
             "BINANCE:egldusdt",
@@ -56,7 +53,6 @@
             "COINBASE:EGLD-USD",
             "KRAKEN:EGLD/USD",
             "KRAKEN:PF_EGLDUSD",
-            "KUCOIN:EGLD-USDT",
             "OKEX:EGLD-USDC",
             "OKEX:EGLD-USDT"
           ]
@@ -101,7 +97,7 @@
       "disableAnimations": true,
       "autoHideHeaders": false,
       "theme": "dark",
-      "backgroundColor": "rgb(25,25,25)",
+      "backgroundColor": "rgb(0,0,0)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -375,7 +371,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "OKEX": {
@@ -459,8 +455,8 @@
             "priceLineVisible": false,
             "lastValueVisible": true,
             "borderVisible": true,
-            "upColor": "rgba(255,255,255,0.7)",
-            "downColor": "rgb(0,0,0)",
+            "upColor": "rgb(38,134,252)",
+            "downColor": "rgb(252,45,45)",
             "borderUpColor": "rgba(255,255,255,0.5)",
             "borderDownColor": "rgba(255,255,255,0.5)",
             "wickUpColor": "rgba(255,255,255,0.5)",
@@ -487,7 +483,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:egldusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-egldusd_perp\", color=\"rgb(247,175,218)\");\n\nvar b = BINANCE_FUTURES:egldusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-egldusdt\", color=\"rgb(247,175,171)\");\n\nvar c = BYBIT:EGLDUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(216,109,18)\");\n\nvar d = KUCOIN:EGLDUSDTM;\nline(cum(d.vbuy-d.vsell), title=\"kucoin\", color=\"rgb(122,162,110)\");\n\nvar e = OKEX:EGLD-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex\", color=\"rgb(207,13,78)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:egldusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-egldusd_perp\", color=\"rgb(30, 201, 220)\");\n\nvar b = BINANCE_FUTURES:egldusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-egldusdt\", color=\"rgb(30, 201, 220)\");\n\nvar c = BYBIT:EGLDUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(170, 109, 215)\");\n\nvar d = OKEX:EGLD-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -531,7 +527,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:egldbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-egldbusd\", color=\"rgb(160,228,212)\");\n\nvar b = BINANCE:egldusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-egldusdt\", color=\"rgb(160,228,194)\");\n\nvar c = BYBIT:EGLDUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(216,109,18)\");\n\nvar d = COINBASE:EGLD-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(4,197,119)\");\n\nvar e = KUCOIN:EGLD-USDT;\nline(cum(e.vbuy-e.vsell), title=\"kucoin\", color=\"rgb(122,162,110)\");\n\nvar f = OKEX:EGLD-USDC;\nline(cum(f.vbuy-f.vsell), title=\"okex-egld-usdc\", color=\"rgb(207,13,103)\");\n\nvar g = OKEX:EGLD-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex-egld-usdt\", color=\"rgb(207,13,130)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:egldbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-egldbusd\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:egldusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-egldusdt\", color=\"rgb(255, 192, 118)\");\n\nvar c = BYBIT:EGLDUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(170, 109, 215)\");\n\nvar d = COINBASE:EGLD-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(255, 141, 7)\");\n\nvar e = OKEX:EGLD-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-egld-usdc\", color=\"rgb(234, 238, 245)\");\n\nvar f = OKEX:EGLD-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-egld-usdt\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -584,7 +580,7 @@
             "stdevMultiplier": 1,
             "color": "rgb(41,98,255)",
             "sessionLengthInDays": 7,
-            "visible": false
+            "visible": true
           },
           "id": "vwap",
           "createdAt": 1667127228900,
@@ -877,9 +873,9 @@
       "refreshRate": 0,
       "showLegend": false,
       "fillGapsWithEmpty": true,
-      "showHorizontalGridlines": false,
+      "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
-      "showVerticalGridlines": false,
+      "showVerticalGridlines": true,
       "verticalGridlinesColor": "rgba(255,255,255,.1)",
       "showWatermark": false,
       "watermarkColor": "rgba(255,255,255,.1)",
@@ -898,8 +894,6 @@
         "COINBASE:EGLD-USD": false,
         "KRAKEN:EGLD/USD": false,
         "KRAKEN:PF_EGLDUSD": false,
-        "KUCOIN:EGLD-USDT": false,
-        "KUCOIN:EGLDUSDTM": false,
         "OKEX:EGLD-USDC": false,
         "OKEX:EGLD-USDT": false,
         "OKEX:EGLD-USDT-SWAP": false
