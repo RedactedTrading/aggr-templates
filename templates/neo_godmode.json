@@ -21,8 +21,6 @@
             "BINANCE_FUTURES:neousdt",
             "BITFINEX:NEOUSD",
             "BYBIT:NEOUSDT",
-            "KUCOIN:NEO-USDT",
-            "KUCOIN:NEOUSDTM",
             "OKEX:NEO-USD-SWAP",
             "OKEX:NEO-USDT",
             "OKEX:NEO-USDT-SWAP",
@@ -34,11 +32,10 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:neousdt",
             "BYBIT:NEOUSDT",
-            "KUCOIN:NEOUSDTM",
             "OKEX:NEO-USD-SWAP",
             "OKEX:NEO-USDT-SWAP"
           ]
@@ -47,14 +44,13 @@
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 0.5,
+          "zoom": 1.0,
           "markets": [
             "BINANCE:neobusd",
             "BINANCE:neotusd",
             "BINANCE:neousdc",
             "BINANCE:neousdt",
             "BITFINEX:NEOUSD",
-            "KUCOIN:NEO-USDT",
             "OKEX:NEO-USDT",
             "UPBIT:KRW-NEO"
           ]
@@ -99,7 +95,7 @@
       "disableAnimations": true,
       "autoHideHeaders": false,
       "theme": "dark",
-      "backgroundColor": "rgb(25,25,25)",
+      "backgroundColor": "rgb(0,0,0)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -373,7 +369,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "OKEX": {
@@ -457,8 +453,8 @@
             "priceLineVisible": false,
             "lastValueVisible": true,
             "borderVisible": true,
-            "upColor": "rgba(255,255,255,0.7)",
-            "downColor": "rgb(0,0,0)",
+            "upColor": "rgb(38,134,252)",
+            "downColor": "rgb(252,45,45)",
             "borderUpColor": "rgba(255,255,255,0.5)",
             "borderDownColor": "rgba(255,255,255,0.5)",
             "wickUpColor": "rgba(255,255,255,0.5)",
@@ -485,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:neousdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(79,84,102)\");\n\nvar b = BYBIT:NEOUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(149,136,51)\");\n\nvar c = KUCOIN:NEOUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"kucoin\", color=\"rgb(214,183,92)\");\n\nvar d = OKEX:NEO-USD-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex-neo-usd-swap\", color=\"rgb(60,159,145)\");\n\nvar e = OKEX:NEO-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"okex-neo-usdt-swap\", color=\"rgb(60,159,74)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:neousdt;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures\", color=\"rgb(50, 121, 175)\");\n\nvar b = BYBIT:NEOUSDT;\nline(cum(b.vbuy-b.vsell), title=\"bybit\", color=\"rgb(89, 157, 208)\");\n\nvar c = OKEX:NEO-USD-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"okex-neo-usd-swap\", color=\"rgb(30, 201, 220)\");\n\nvar d = OKEX:NEO-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex-neo-usdt-swap\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -529,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:neobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-neobusd\", color=\"rgb(240,96,127)\");\n\nvar b = BINANCE:neotusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-neotusd\", color=\"rgb(240,96,250)\");\n\nvar c = BINANCE:neousdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-neousdc\", color=\"rgb(240,96,145)\");\n\nvar d = BINANCE:neousdt;\nline(cum(d.vbuy-d.vsell), title=\"binance-neousdt\", color=\"rgb(240,96,240)\");\n\nvar e = BITFINEX:NEOUSD;\nline(cum(e.vbuy-e.vsell), title=\"bitfinex\", color=\"rgb(228,151,79)\");\n\nvar f = KUCOIN:NEO-USDT;\nline(cum(f.vbuy-f.vsell), title=\"kucoin\", color=\"rgb(214,183,92)\");\n\nvar g = OKEX:NEO-USDT;\nline(cum(g.vbuy-g.vsell), title=\"okex\", color=\"rgb(60,159,157)\");\n\nvar h = UPBIT:KRW-NEO;\nline(cum(h.vbuy-h.vsell), title=\"upbit\", color=\"rgb(120,43,217)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:neobusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-neobusd\", color=\"rgb(50, 121, 175)\");\n\nvar b = BINANCE:neotusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-neotusd\", color=\"rgb(89, 157, 208)\");\n\nvar c = BINANCE:neousdc;\nline(cum(c.vbuy-c.vsell), title=\"binance-neousdc\", color=\"rgb(30, 201, 220)\");\n\nvar d = BINANCE:neousdt;\nline(cum(d.vbuy-d.vsell), title=\"binance-neousdt\", color=\"rgb(83, 217, 232)\");\n\nvar e = BITFINEX:NEOUSD;\nline(cum(e.vbuy-e.vsell), title=\"bitfinex\", color=\"rgb(180, 242, 243)\");\n\nvar f = OKEX:NEO-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex\", color=\"rgb(205, 246, 247)\");\n\nvar g = UPBIT:KRW-NEO;\nline(cum(g.vbuy-g.vsell), title=\"upbit\", color=\"rgb(255, 141, 7)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -582,7 +578,7 @@
             "stdevMultiplier": 1,
             "color": "rgb(41,98,255)",
             "sessionLengthInDays": 7,
-            "visible": false
+            "visible": true
           },
           "id": "vwap",
           "createdAt": 1667127228900,
@@ -875,9 +871,9 @@
       "refreshRate": 0,
       "showLegend": false,
       "fillGapsWithEmpty": true,
-      "showHorizontalGridlines": false,
+      "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
-      "showVerticalGridlines": false,
+      "showVerticalGridlines": true,
       "verticalGridlinesColor": "rgba(255,255,255,.1)",
       "showWatermark": false,
       "watermarkColor": "rgba(255,255,255,.1)",
@@ -894,8 +890,6 @@
         "BINANCE_FUTURES:neousdt": false,
         "BITFINEX:NEOUSD": false,
         "BYBIT:NEOUSDT": false,
-        "KUCOIN:NEO-USDT": false,
-        "KUCOIN:NEOUSDTM": false,
         "OKEX:NEO-USD-SWAP": false,
         "OKEX:NEO-USDT": false,
         "OKEX:NEO-USDT-SWAP": false,
