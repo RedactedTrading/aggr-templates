@@ -21,6 +21,8 @@
             "COINBASE:PERP-USD",
             "COINBASE:PERP-USDT",
             "KRAKEN:PERP/USD",
+            "KUCOIN:PERP-USDT",
+            "KUCOIN:PERPUSDTM",
             "OKEX:PERP-USDC",
             "OKEX:PERP-USDT",
             "OKEX:PERP-USDT-SWAP",
@@ -36,6 +38,8 @@
           "markets": [
             "BINANCE_FUTURES:perpusdt",
             "KRAKEN:PERP/USD",
+            "KUCOIN:PERP-USDT",
+            "KUCOIN:PERPUSDTM",
             "OKEX:PERP-USDC",
             "OKEX:PERP-USDT",
             "OKEX:PERP-USDT-SWAP"
@@ -369,7 +373,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -485,7 +489,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:perpusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = OKEX:PERP-USDC;\nline(cum(b.vbuy-b.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar c = OKEX:PERP-USDT;\nline(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar d = OKEX:PERP-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:perpusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = KUCOIN:PERP-USDT;\nline(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar c = KUCOIN:PERPUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar d = OKEX:PERP-USDC;\nline(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar e = OKEX:PERP-USDT;\nline(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar f = OKEX:PERP-USDT-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -894,6 +898,8 @@
         "COINBASE:PERP-USD": false,
         "COINBASE:PERP-USDT": false,
         "KRAKEN:PERP/USD": false,
+        "KUCOIN:PERP-USDT": false,
+        "KUCOIN:PERPUSDTM": false,
         "OKEX:PERP-USDC": false,
         "OKEX:PERP-USDT": false,
         "OKEX:PERP-USDT-SWAP": false,
