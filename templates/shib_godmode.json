@@ -22,6 +22,9 @@
             "COINBASE:SHIB-USDT",
             "KRAKEN:SHIB/USD",
             "KRAKEN:SHIB/USDT",
+            "KUCOIN:SHIB-USDC",
+            "KUCOIN:SHIB-USDT",
+            "KUCOIN:SHIBUSDTM",
             "OKEX:SHIB-USDC",
             "OKEX:SHIB-USDT",
             "OKEX:SHIB-USDT-SWAP",
@@ -35,6 +38,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "KUCOIN:SHIBUSDTM",
             "OKEX:SHIB-USDT-SWAP"
           ]
         },
@@ -52,6 +56,8 @@
             "COINBASE:SHIB-USDT",
             "KRAKEN:SHIB/USD",
             "KRAKEN:SHIB/USDT",
+            "KUCOIN:SHIB-USDC",
+            "KUCOIN:SHIB-USDT",
             "OKEX:SHIB-USDC",
             "OKEX:SHIB-USDT",
             "UPBIT:KRW-SHIB"
@@ -371,7 +377,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -483,7 +489,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = OKEX:SHIB-USDT-SWAP;\nline(cum(a.vbuy-a.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = KUCOIN:SHIBUSDTM;\nline(cum(a.vbuy-a.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar b = OKEX:SHIB-USDT-SWAP;\nline(cum(b.vbuy-b.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -527,7 +533,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:shibbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:shibusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BYBIT:SHIBUSDC-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar d = BYBIT:SHIBUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar e = COINBASE:SHIB-USD;\nline(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar f = COINBASE:SHIB-USDT;\nline(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar g = OKEX:SHIB-USDC;\nline(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar h = OKEX:SHIB-USDT;\nline(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar i = UPBIT:KRW-SHIB;\nline(cum(i.vbuy-i.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:shibbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:shibusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BYBIT:SHIBUSDC-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar d = BYBIT:SHIBUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar e = COINBASE:SHIB-USD;\nline(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar f = COINBASE:SHIB-USDT;\nline(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar g = KUCOIN:SHIB-USDC;\nline(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar h = KUCOIN:SHIB-USDT;\nline(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar i = OKEX:SHIB-USDC;\nline(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar j = OKEX:SHIB-USDT;\nline(cum(j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar k = UPBIT:KRW-SHIB;\nline(cum(k.vbuy-k.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -893,6 +899,9 @@
         "COINBASE:SHIB-USDT": false,
         "KRAKEN:SHIB/USD": false,
         "KRAKEN:SHIB/USDT": false,
+        "KUCOIN:SHIB-USDC": false,
+        "KUCOIN:SHIB-USDT": false,
+        "KUCOIN:SHIBUSDTM": false,
         "OKEX:SHIB-USDC": false,
         "OKEX:SHIB-USDT": false,
         "OKEX:SHIB-USDT-SWAP": false,
