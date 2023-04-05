@@ -31,6 +31,9 @@
             "KRAKEN:MATIC/USD",
             "KRAKEN:MATIC/USDT",
             "KRAKEN:PF_MATICUSD",
+            "KUCOIN:MATIC-USDC",
+            "KUCOIN:MATIC-USDT",
+            "KUCOIN:MATICUSDTM",
             "OKEX:MATIC-USDC",
             "OKEX:MATIC-USDT",
             "OKEX:MATIC-USDT-SWAP",
@@ -52,6 +55,7 @@
             "BITMEX:MATIC_USDT",
             "BYBIT:MATICUSDT",
             "DERIBIT:MATIC_USDC-PERPETUAL",
+            "KUCOIN:MATICUSDTM",
             "OKEX:MATIC-USDT-SWAP"
           ]
         },
@@ -71,6 +75,8 @@
             "KRAKEN:MATIC/USD",
             "KRAKEN:MATIC/USDT",
             "KRAKEN:PF_MATICUSD",
+            "KUCOIN:MATIC-USDC",
+            "KUCOIN:MATIC-USDT",
             "OKEX:MATIC-USDC",
             "OKEX:MATIC-USDT",
             "UNISWAPETHEREUM:MATIC/WETH",
@@ -391,7 +397,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -507,7 +513,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:maticbusd;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-maticbusd\", color=\"rgb(30, 201, 220)\");\n\nvar b = BINANCE_FUTURES:maticusd_perp;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-maticusd_perp\", color=\"rgb(30, 201, 220)\");\n\nvar c = BINANCE_FUTURES:maticusdt;\nline(cum(c.vbuy-c.vsell), title=\"binancefutures-maticusdt\", color=\"rgb(30, 201, 220)\");\n\nvar d = BITMEX:MATICUSDT;\nline(cum(d.vbuy-d.vsell), title=\"bitmex-maticusdt\", color=\"rgb(255, 202, 42)\");\n\nvar e = BITMEX:MATIC_USDT;\nline(cum(e.vbuy-e.vsell), title=\"bitmex-matic_usdt\", color=\"rgb(255, 202, 42)\");\n\nvar f = BYBIT:MATICUSDT;\nline(cum(f.vbuy-f.vsell), title=\"bybit\", color=\"rgb(170, 109, 215)\");\n\nvar g = DERIBIT:MATIC_USDC-PERPETUAL;\nline(cum(g.vbuy-g.vsell), title=\"deribit\", color=\"rgb(50, 121, 175)\");\n\nvar h = OKEX:MATIC-USDT-SWAP;\nline(cum(h.vbuy-h.vsell), title=\"okex\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:maticbusd;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BINANCE_FUTURES:maticusd_perp;\nline(cum(b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar c = BINANCE_FUTURES:maticusdt;\nline(cum(c.vbuy-c.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar d = BITMEX:MATICUSDT;\nline(cum(d.vbuy-d.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\nvar e = BITMEX:MATIC_USDT;\nline(cum(e.vbuy-e.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\nvar f = BYBIT:MATICUSDT;\nline(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar g = DERIBIT:MATIC_USDC-PERPETUAL;\nline(cum(g.vbuy-g.vsell), title=\"DRBT\", color=\"rgb(50, 121, 175)\");\n\nvar h = KUCOIN:MATICUSDTM;\nline(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar i = OKEX:MATIC-USDT-SWAP;\nline(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -551,7 +557,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:maticbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-maticbusd\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:matictusd;\nline(cum(b.vbuy-b.vsell), title=\"binance-matictusd\", color=\"rgb(255, 192, 118)\");\n\nvar c = BINANCE:maticusdt;\nline(cum(c.vbuy-c.vsell), title=\"binance-maticusdt\", color=\"rgb(255, 192, 118)\");\n\nvar d = BYBIT:MATICUSDC-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"bybit-maticusdc-spot\", color=\"rgb(170, 109, 215)\");\n\nvar e = BYBIT:MATICUSDT-SPOT;\nline(cum(e.vbuy-e.vsell), title=\"bybit-maticusdt-spot\", color=\"rgb(170, 109, 215)\");\n\nvar f = COINBASE:MATIC-USD;\nline(cum(f.vbuy-f.vsell), title=\"coinbase-matic-usd\", color=\"rgb(255, 141, 7)\");\n\nvar g = COINBASE:MATIC-USDT;\nline(cum(g.vbuy-g.vsell), title=\"coinbase-matic-usdt\", color=\"rgb(255, 141, 7)\");\n\nvar h = OKEX:MATIC-USDC;\nline(cum(h.vbuy-h.vsell), title=\"okex-matic-usdc\", color=\"rgb(234, 238, 245)\");\n\nvar i = OKEX:MATIC-USDT;\nline(cum(i.vbuy-i.vsell), title=\"okex-matic-usdt\", color=\"rgb(234, 238, 245)\");\n\nvar j = UNISWAPETHEREUM:MATIC/WETH;\nline(cum(j.vbuy-j.vsell), title=\"uniswapethereum\", color=\"rgb(89, 157, 208)\");\n\nvar k = UPBIT:KRW-MATIC;\nline(cum(k.vbuy-k.vsell), title=\"upbit\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:maticbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:matictusd;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BINANCE:maticusdt;\nline(cum(c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar d = BYBIT:MATICUSDC-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar e = BYBIT:MATICUSDT-SPOT;\nline(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar f = COINBASE:MATIC-USD;\nline(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar g = COINBASE:MATIC-USDT;\nline(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar h = KUCOIN:MATIC-USDC;\nline(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar i = KUCOIN:MATIC-USDT;\nline(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar j = OKEX:MATIC-USDC;\nline(cum(j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar k = OKEX:MATIC-USDT;\nline(cum(k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar l = UNISWAPETHEREUM:MATIC/WETH;\nline(cum(l.vbuy-l.vsell), title=\"UNIETH\", color=\"rgb(89, 157, 208)\");\n\nvar m = UPBIT:KRW-MATIC;\nline(cum(m.vbuy-m.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -926,6 +932,9 @@
         "KRAKEN:MATIC/USD": false,
         "KRAKEN:MATIC/USDT": false,
         "KRAKEN:PF_MATICUSD": false,
+        "KUCOIN:MATIC-USDC": false,
+        "KUCOIN:MATIC-USDT": false,
+        "KUCOIN:MATICUSDTM": false,
         "OKEX:MATIC-USDC": false,
         "OKEX:MATIC-USDT": false,
         "OKEX:MATIC-USDT-SWAP": false,
