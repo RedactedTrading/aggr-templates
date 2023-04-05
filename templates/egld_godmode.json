@@ -483,7 +483,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:egldusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"binancefutures-egldusd_perp\", color=\"rgb(30, 201, 220)\");\n\nvar b = BINANCE_FUTURES:egldusdt;\nline(cum(b.vbuy-b.vsell), title=\"binancefutures-egldusdt\", color=\"rgb(30, 201, 220)\");\n\nvar c = BYBIT:EGLDUSDT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(170, 109, 215)\");\n\nvar d = OKEX:EGLD-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"okex\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:egldusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BINANCE_FUTURES:egldusdt;\nline(cum(b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar c = BYBIT:EGLDUSDT;\nline(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar d = OKEX:EGLD-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -527,7 +527,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:egldbusd;\nline(cum(a.vbuy-a.vsell), title=\"binance-egldbusd\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:egldusdt;\nline(cum(b.vbuy-b.vsell), title=\"binance-egldusdt\", color=\"rgb(255, 192, 118)\");\n\nvar c = BYBIT:EGLDUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"bybit\", color=\"rgb(170, 109, 215)\");\n\nvar d = COINBASE:EGLD-USD;\nline(cum(d.vbuy-d.vsell), title=\"coinbase\", color=\"rgb(255, 141, 7)\");\n\nvar e = OKEX:EGLD-USDC;\nline(cum(e.vbuy-e.vsell), title=\"okex-egld-usdc\", color=\"rgb(234, 238, 245)\");\n\nvar f = OKEX:EGLD-USDT;\nline(cum(f.vbuy-f.vsell), title=\"okex-egld-usdt\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:egldbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:egldusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BYBIT:EGLDUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar d = COINBASE:EGLD-USD;\nline(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar e = OKEX:EGLD-USDC;\nline(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar f = OKEX:EGLD-USDT;\nline(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
