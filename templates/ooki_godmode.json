@@ -16,7 +16,8 @@
           "markets": [
             "BINANCE:ookibusd",
             "BINANCE:ookiusdt",
-            "COINBASE:OOKI-USD"
+            "COINBASE:OOKI-USD",
+            "MEXC:OOKIUSDT"
           ],
           "zoom": 1
         },
@@ -35,7 +36,8 @@
           "markets": [
             "BINANCE:ookibusd",
             "BINANCE:ookiusdt",
-            "COINBASE:OOKI-USD"
+            "COINBASE:OOKI-USD",
+            "MEXC:OOKIUSDT"
           ]
         }
       },
@@ -375,6 +377,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -508,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ookibusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:ookiusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = COINBASE:OOKI-USD;\nline(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ookibusd;\n\nvar b = BINANCE:ookiusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:OOKI-USD;line(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar d = MEXC:OOKIUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -868,7 +874,8 @@
       "hiddenMarkets": {
         "BINANCE:ookibusd": false,
         "BINANCE:ookiusdt": false,
-        "COINBASE:OOKI-USD": false
+        "COINBASE:OOKI-USD": false,
+        "MEXC:OOKIUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
