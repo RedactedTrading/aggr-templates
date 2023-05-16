@@ -17,9 +17,13 @@
             "BINANCE:sxpbusd",
             "BINANCE:sxpusdt",
             "BINANCE_FUTURES:sxpusdt",
+            "BITGET:SXPUSDT",
+            "BITGET:SXPUSDT_UMCBL",
             "BYBIT:SXPUSDT",
             "KUCOIN:SXP-USDT",
             "KUCOIN:SXPUSDTM",
+            "MEXC:SXPUSDT",
+            "MEXC:SXP_USDT",
             "UPBIT:KRW-SXP"
           ],
           "zoom": 1
@@ -32,7 +36,8 @@
           "markets": [
             "BINANCE_FUTURES:sxpusdt",
             "BYBIT:SXPUSDT",
-            "KUCOIN:SXPUSDTM"
+            "KUCOIN:SXPUSDTM",
+            "MEXC:SXP_USDT"
           ]
         },
         "trades2": {
@@ -43,7 +48,10 @@
           "markets": [
             "BINANCE:sxpbusd",
             "BINANCE:sxpusdt",
+            "BITGET:SXPUSDT",
+            "BITGET:SXPUSDT_UMCBL",
             "KUCOIN:SXP-USDT",
+            "MEXC:SXPUSDT",
             "UPBIT:KRW-SXP"
           ]
         }
@@ -384,6 +392,14 @@
       "UPBIT": {
         "disabled": false,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -473,7 +489,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:sxpusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:SXPUSDT;\nline(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar c = KUCOIN:SXPUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:sxpusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:SXPUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KUCOIN:SXPUSDTM;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:SXP_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -517,7 +533,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:sxpbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:sxpusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = KUCOIN:SXP-USDT;\nline(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar d = UPBIT:KRW-SXP;\nline(cum(d.vbuy-d.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:sxpbusd;\n\nvar b = BINANCE:sxpusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:SXPUSDT;\n\nvar d = BITGET:SXPUSDT_UMCBL;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = KUCOIN:SXP-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:SXPUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = UPBIT:KRW-SXP;line(cum(g.vbuy-g.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -878,9 +894,13 @@
         "BINANCE:sxpbusd": false,
         "BINANCE:sxpusdt": false,
         "BINANCE_FUTURES:sxpusdt": false,
+        "BITGET:SXPUSDT": false,
+        "BITGET:SXPUSDT_UMCBL": false,
         "BYBIT:SXPUSDT": false,
         "KUCOIN:SXP-USDT": false,
         "KUCOIN:SXPUSDTM": false,
+        "MEXC:SXPUSDT": false,
+        "MEXC:SXP_USDT": false,
         "UPBIT:KRW-SXP": true
       },
       "barSpacing": 0.39437454420364615,
