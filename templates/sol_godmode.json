@@ -22,6 +22,9 @@
             "BINANCE_FUTURES:solusd_perp",
             "BINANCE_FUTURES:solusdt",
             "BITFINEX:SOLUSD",
+            "BITGET:SOLUSDC",
+            "BITGET:SOLUSDT",
+            "BITGET:SOLUSDT_UMCBL",
             "BITMEX:SOLUSD",
             "BITMEX:SOLUSDT",
             "BITMEX:SOL_USDT",
@@ -37,6 +40,8 @@
             "KUCOIN:SOL-USDC",
             "KUCOIN:SOL-USDT",
             "KUCOIN:SOLUSDTM",
+            "MEXC:SOLUSDC",
+            "MEXC:SOL_USDT",
             "OKEX:SOL-USD-SWAP",
             "OKEX:SOL-USDC",
             "OKEX:SOL-USDT",
@@ -62,6 +67,7 @@
             "BYBIT:SOLUSDT",
             "DERIBIT:SOL_USDC-PERPETUAL",
             "KUCOIN:SOLUSDTM",
+            "MEXC:SOL_USDT",
             "OKEX:SOL-USD-SWAP",
             "OKEX:SOL-USDT-SWAP"
           ]
@@ -77,6 +83,9 @@
             "BINANCE:solusdc",
             "BINANCE:solusdt",
             "BITFINEX:SOLUSD",
+            "BITGET:SOLUSDC",
+            "BITGET:SOLUSDT",
+            "BITGET:SOLUSDT_UMCBL",
             "BYBIT:SOLUSDC-SPOT",
             "BYBIT:SOLUSDT-SPOT",
             "COINBASE:SOL-USD",
@@ -86,6 +95,7 @@
             "KRAKEN:SOL/USDT",
             "KUCOIN:SOL-USDC",
             "KUCOIN:SOL-USDT",
+            "MEXC:SOLUSDC",
             "OKEX:SOL-USDC",
             "OKEX:SOL-USDT",
             "ORCASOLANA:SOL/USDC",
@@ -431,6 +441,14 @@
         "disabled": false,
         "fetched": false
       },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
+      },
       "ORCASOLANA": {
         "disabled": false,
         "fetched": false
@@ -527,7 +545,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:solbusd;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BINANCE_FUTURES:solusd_perp;\nline(cum(b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar c = BINANCE_FUTURES:solusdt;\nline(cum(c.vbuy-c.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar d = BITMEX:SOLUSD;\nline(cum(d.vbuy-d.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\nvar e = BITMEX:SOLUSDT;\nline(cum(e.vbuy-e.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\nvar f = BITMEX:SOL_USDT;\nline(cum(f.vbuy-f.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\nvar g = BYBIT:SOLUSDT;\nline(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar h = DERIBIT:SOL_USDC-PERPETUAL;\nline(cum(h.vbuy-h.vsell), title=\"DRBT\", color=\"rgb(50, 121, 175)\");\n\nvar i = KUCOIN:SOLUSDTM;\nline(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar j = OKEX:SOL-USD-SWAP;\nline(cum(j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar k = OKEX:SOL-USDT-SWAP;\nline(cum(k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:solbusd;\n\nvar b = BINANCE_FUTURES:solusd_perp;\n\nvar c = BINANCE_FUTURES:solusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar d = BITMEX:SOLUSD;\n\nvar e = BITMEX:SOLUSDT;\n\nvar f = BITMEX:SOL_USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar g = BYBIT:SOLUSDT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = DERIBIT:SOL_USDC-PERPETUAL;line(cum(h.vbuy-h.vsell), title=\"DRBT\", color=\"rgb(180, 242, 243)\");\n\n\nvar i = KUCOIN:SOLUSDTM;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar j = MEXC:SOL_USDT;line(cum(j.vbuy-j.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar k = OKEX:SOL-USD-SWAP;\n\nvar l = OKEX:SOL-USDT-SWAP;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -571,7 +589,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:solbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:soltusd;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BINANCE:solusdc;\nline(cum(c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar d = BINANCE:solusdt;\nline(cum(d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar e = BITFINEX:SOLUSD;\nline(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\nvar f = BYBIT:SOLUSDC-SPOT;\nline(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar g = BYBIT:SOLUSDT-SPOT;\nline(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar h = COINBASE:SOL-USD;\nline(cum(h.vbuy-h.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar i = COINBASE:SOL-USDT;\nline(cum(i.vbuy-i.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar j = KUCOIN:SOL-USDC;\nline(cum(j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar k = KUCOIN:SOL-USDT;\nline(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar l = OKEX:SOL-USDC;\nline(cum(l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar m = OKEX:SOL-USDT;\nline(cum(m.vbuy-m.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar n = ORCASOLANA:SOL/USDC;\nline(cum(n.vbuy-n.vsell), title=\"ORCSOL\", color=\"rgb(89, 157, 208)\");\n\nvar o = RAYDIUMSOLANA:SOL/USDC;\nline(cum(o.vbuy-o.vsell), title=\"RAYSOL\", color=\"rgb(89, 157, 208)\");\n\nvar p = UPBIT:KRW-SOL;\nline(cum(p.vbuy-p.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:solbusd;\n\nvar b = BINANCE:soltusd;\n\nvar c = BINANCE:solusdc;\n\nvar d = BINANCE:solusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:SOLUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:SOLUSDC;\n\nvar g = BITGET:SOLUSDT;\n\nvar h = BITGET:SOLUSDT_UMCBL;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar i = BYBIT:SOLUSDC-SPOT;\n\nvar j = BYBIT:SOLUSDT-SPOT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar k = COINBASE:SOL-USD;\n\nvar l = COINBASE:SOL-USDT;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar m = KUCOIN:SOL-USDC;\n\nvar n = KUCOIN:SOL-USDT;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar o = MEXC:SOLUSDC;line(cum(o.vbuy-o.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar p = OKEX:SOL-USDC;\n\nvar q = OKEX:SOL-USDT;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar r = ORCASOLANA:SOL/USDC;line(cum(r.vbuy-r.vsell), title=\"ORCSOL\", color=\"rgb(89, 157, 208)\");\n\n\nvar s = RAYDIUMSOLANA:SOL/USDC;line(cum(s.vbuy-s.vsell), title=\"RAYSOL\", color=\"rgb(89, 157, 208)\");\n\n\nvar t = UPBIT:KRW-SOL;line(cum(t.vbuy-t.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -937,6 +955,9 @@
         "BINANCE_FUTURES:solusd_perp": false,
         "BINANCE_FUTURES:solusdt": false,
         "BITFINEX:SOLUSD": false,
+        "BITGET:SOLUSDC": false,
+        "BITGET:SOLUSDT": false,
+        "BITGET:SOLUSDT_UMCBL": false,
         "BITMEX:SOLUSD": false,
         "BITMEX:SOLUSDT": false,
         "BITMEX:SOL_USDT": false,
@@ -952,6 +973,8 @@
         "KUCOIN:SOL-USDC": false,
         "KUCOIN:SOL-USDT": false,
         "KUCOIN:SOLUSDTM": false,
+        "MEXC:SOLUSDC": false,
+        "MEXC:SOL_USDT": false,
         "OKEX:SOL-USD-SWAP": false,
         "OKEX:SOL-USDC": false,
         "OKEX:SOL-USDT": false,
