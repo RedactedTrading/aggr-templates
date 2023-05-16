@@ -17,10 +17,14 @@
             "BINANCE:cvxbusd",
             "BINANCE:cvxusdt",
             "BINANCE_FUTURES:cvxusdt",
+            "BITGET:CVXUSDT",
             "BYBIT:CVXUSDT",
             "COINBASE:CVX-USD",
             "KRAKEN:CVX/USD",
+            "KRAKEN:PF_CVXUSD",
             "KUCOIN:CVX-USDT",
+            "MEXC:CVXUSDT",
+            "MEXC:CVX_USDT",
             "OKEX:CVX-USDT"
           ],
           "zoom": 1
@@ -32,7 +36,8 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:cvxusdt",
-            "BYBIT:CVXUSDT"
+            "BYBIT:CVXUSDT",
+            "MEXC:CVX_USDT"
           ]
         },
         "trades2": {
@@ -43,9 +48,12 @@
           "markets": [
             "BINANCE:cvxbusd",
             "BINANCE:cvxusdt",
+            "BITGET:CVXUSDT",
             "COINBASE:CVX-USD",
             "KRAKEN:CVX/USD",
+            "KRAKEN:PF_CVXUSD",
             "KUCOIN:CVX-USDT",
+            "MEXC:CVXUSDT",
             "OKEX:CVX-USDT"
           ]
         }
@@ -386,6 +394,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -475,7 +491,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:cvxusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:CVXUSDT;\nline(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:cvxusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:CVXUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = MEXC:CVX_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +535,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:cvxbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:cvxusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = COINBASE:CVX-USD;\nline(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar d = KUCOIN:CVX-USDT;\nline(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar e = OKEX:CVX-USDT;\nline(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:cvxbusd;\n\nvar b = BINANCE:cvxusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:CVXUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:CVX-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = KUCOIN:CVX-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:CVXUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:CVX-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -880,10 +896,14 @@
         "BINANCE:cvxbusd": false,
         "BINANCE:cvxusdt": false,
         "BINANCE_FUTURES:cvxusdt": false,
+        "BITGET:CVXUSDT": false,
         "BYBIT:CVXUSDT": false,
         "COINBASE:CVX-USD": false,
         "KRAKEN:CVX/USD": false,
+        "KRAKEN:PF_CVXUSD": false,
         "KUCOIN:CVX-USDT": false,
+        "MEXC:CVXUSDT": false,
+        "MEXC:CVX_USDT": false,
         "OKEX:CVX-USDT": false
       },
       "barSpacing": 0.39437454420364615,
