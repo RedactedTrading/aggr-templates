@@ -16,9 +16,12 @@
           "markets": [
             "BINANCE:radbusd",
             "BINANCE:radusdt",
+            "BITGET:RADUSDT",
             "COINBASE:RAD-USD",
             "COINBASE:RAD-USDT",
-            "KRAKEN:RAD/USD"
+            "KRAKEN:RAD/USD",
+            "MEXC:RADUSDT",
+            "MEXC:RAD_USDT"
           ],
           "zoom": 1
         },
@@ -27,7 +30,9 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "MEXC:RAD_USDT"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -37,9 +42,11 @@
           "markets": [
             "BINANCE:radbusd",
             "BINANCE:radusdt",
+            "BITGET:RADUSDT",
             "COINBASE:RAD-USD",
             "COINBASE:RAD-USDT",
-            "KRAKEN:RAD/USD"
+            "KRAKEN:RAD/USD",
+            "MEXC:RADUSDT"
           ]
         }
       },
@@ -379,6 +386,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -468,7 +483,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = MEXC:RAD_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -512,7 +527,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:radbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:radusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = COINBASE:RAD-USD;\nline(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar d = COINBASE:RAD-USDT;\nline(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:radbusd;\n\nvar b = BINANCE:radusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:RADUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:RAD-USD;\n\nvar e = COINBASE:RAD-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = MEXC:RADUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -872,9 +887,12 @@
       "hiddenMarkets": {
         "BINANCE:radbusd": false,
         "BINANCE:radusdt": false,
+        "BITGET:RADUSDT": false,
         "COINBASE:RAD-USD": false,
         "COINBASE:RAD-USDT": false,
-        "KRAKEN:RAD/USD": false
+        "KRAKEN:RAD/USD": false,
+        "MEXC:RADUSDT": false,
+        "MEXC:RAD_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
