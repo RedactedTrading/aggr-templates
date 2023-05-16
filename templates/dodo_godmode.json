@@ -17,8 +17,11 @@
             "BINANCE:dodobusd",
             "BINANCE:dodousdt",
             "BINANCE_FUTURES:dodobusd",
+            "BITGET:DODOUSDT",
             "BYBIT:DODOUSDT",
-            "KUCOIN:DODO-USDT"
+            "KUCOIN:DODO-USDT",
+            "KUCOIN:DODOUSDTM",
+            "MEXC:DODO_USDT"
           ],
           "zoom": 1
         },
@@ -29,7 +32,9 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:dodobusd",
-            "BYBIT:DODOUSDT"
+            "BYBIT:DODOUSDT",
+            "KUCOIN:DODOUSDTM",
+            "MEXC:DODO_USDT"
           ]
         },
         "trades2": {
@@ -40,6 +45,7 @@
           "markets": [
             "BINANCE:dodobusd",
             "BINANCE:dodousdt",
+            "BITGET:DODOUSDT",
             "KUCOIN:DODO-USDT"
           ]
         }
@@ -380,6 +386,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -469,7 +483,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:dodobusd;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:DODOUSDT;\nline(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:dodobusd;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:DODOUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KUCOIN:DODOUSDTM;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:DODO_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -513,7 +527,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:dodobusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:dodousdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = KUCOIN:DODO-USDT;\nline(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:dodobusd;\n\nvar b = BINANCE:dodousdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:DODOUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = KUCOIN:DODO-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -874,8 +888,11 @@
         "BINANCE:dodobusd": false,
         "BINANCE:dodousdt": false,
         "BINANCE_FUTURES:dodobusd": false,
+        "BITGET:DODOUSDT": false,
         "BYBIT:DODOUSDT": false,
-        "KUCOIN:DODO-USDT": false
+        "KUCOIN:DODO-USDT": false,
+        "KUCOIN:DODOUSDTM": false,
+        "MEXC:DODO_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
