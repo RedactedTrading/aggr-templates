@@ -14,9 +14,10 @@
           "name": "",
           "type": "chart",
           "markets": [
+            "BITGET:CEEKUSDT",
             "BYBIT:CEEKUSDT",
             "KUCOIN:CEEK-USDT",
-            "OKEX:CEEK-USDC",
+            "MEXC:CEEK_USDT",
             "OKEX:CEEK-USDT"
           ],
           "zoom": 1
@@ -27,7 +28,8 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BYBIT:CEEKUSDT"
+            "BYBIT:CEEKUSDT",
+            "MEXC:CEEK_USDT"
           ]
         },
         "trades2": {
@@ -36,8 +38,8 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BITGET:CEEKUSDT",
             "KUCOIN:CEEK-USDT",
-            "OKEX:CEEK-USDC",
             "OKEX:CEEK-USDT"
           ]
         }
@@ -378,6 +380,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -467,7 +477,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:CEEKUSDT;\nline(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:CEEKUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:CEEK_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -511,7 +521,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = KUCOIN:CEEK-USDT;\nline(cum(a.vbuy-a.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar b = OKEX:CEEK-USDC;\nline(cum(b.vbuy-b.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar c = OKEX:CEEK-USDT;\nline(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:CEEKUSDT;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = KUCOIN:CEEK-USDT;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar c = OKEX:CEEK-USDT;line(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -869,9 +879,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
+        "BITGET:CEEKUSDT": false,
         "BYBIT:CEEKUSDT": false,
         "KUCOIN:CEEK-USDT": false,
-        "OKEX:CEEK-USDC": false,
+        "MEXC:CEEK_USDT": false,
         "OKEX:CEEK-USDT": false
       },
       "barSpacing": 0.39437454420364615,
