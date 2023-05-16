@@ -20,6 +20,9 @@
             "BINANCE_FUTURES:apeusd_perp",
             "BINANCE_FUTURES:apeusdt",
             "BITFINEX:APEUSD",
+            "BITGET:APEUSDC",
+            "BITGET:APEUSDT",
+            "BITGET:APEUSDT_UMCBL",
             "BITMEX:APEUSDT",
             "BITMEX:APE_USDT",
             "BYBIT:APEUSDC-SPOT",
@@ -33,6 +36,9 @@
             "KUCOIN:APE-USDC",
             "KUCOIN:APE-USDT",
             "KUCOIN:APEUSDTM",
+            "MEXC:APEUSDC",
+            "MEXC:APEUSDT",
+            "MEXC:APE_USDT",
             "OKEX:APE-USDC",
             "OKEX:APE-USDT",
             "OKEX:APE-USDT-SWAP"
@@ -52,6 +58,7 @@
             "BITMEX:APE_USDT",
             "BYBIT:APEUSDT",
             "KUCOIN:APEUSDTM",
+            "MEXC:APE_USDT",
             "OKEX:APE-USDT-SWAP"
           ]
         },
@@ -64,6 +71,9 @@
             "BINANCE:apebusd",
             "BINANCE:apeusdt",
             "BITFINEX:APEUSD",
+            "BITGET:APEUSDC",
+            "BITGET:APEUSDT",
+            "BITGET:APEUSDT_UMCBL",
             "BYBIT:APEUSDC-SPOT",
             "BYBIT:APEUSDT-SPOT",
             "COINBASE:APE-USD",
@@ -73,6 +83,8 @@
             "KRAKEN:PF_APEUSD",
             "KUCOIN:APE-USDC",
             "KUCOIN:APE-USDT",
+            "MEXC:APEUSDC",
+            "MEXC:APEUSDT",
             "OKEX:APE-USDC",
             "OKEX:APE-USDT"
           ]
@@ -414,6 +426,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -503,7 +523,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:apebusd;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BINANCE_FUTURES:apeusd_perp;\nline(cum(b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar c = BINANCE_FUTURES:apeusdt;\nline(cum(c.vbuy-c.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar d = BITMEX:APEUSDT;\nline(cum(d.vbuy-d.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\nvar e = BITMEX:APE_USDT;\nline(cum(e.vbuy-e.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\nvar f = BYBIT:APEUSDT;\nline(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar g = KUCOIN:APEUSDTM;\nline(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar h = OKEX:APE-USDT-SWAP;\nline(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:apebusd;\n\nvar b = BINANCE_FUTURES:apeusd_perp;\n\nvar c = BINANCE_FUTURES:apeusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar d = BITMEX:APEUSDT;\n\nvar e = BITMEX:APE_USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar f = BYBIT:APEUSDT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = KUCOIN:APEUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = MEXC:APE_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar i = OKEX:APE-USDT-SWAP;line(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -547,7 +567,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:apebusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:apeusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BITFINEX:APEUSD;\nline(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\nvar d = BYBIT:APEUSDC-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar e = BYBIT:APEUSDT-SPOT;\nline(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar f = COINBASE:APE-USD;\nline(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar g = COINBASE:APE-USDT;\nline(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar h = KUCOIN:APE-USDC;\nline(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar i = KUCOIN:APE-USDT;\nline(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar j = OKEX:APE-USDC;\nline(cum(j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar k = OKEX:APE-USDT;\nline(cum(k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:apebusd;\n\nvar b = BINANCE:apeusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:APEUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:APEUSDC;\n\nvar e = BITGET:APEUSDT;\n\nvar f = BITGET:APEUSDT_UMCBL;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar g = BYBIT:APEUSDC-SPOT;\n\nvar h = BYBIT:APEUSDT-SPOT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar i = COINBASE:APE-USD;\n\nvar j = COINBASE:APE-USDT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar k = KUCOIN:APE-USDC;\n\nvar l = KUCOIN:APE-USDT;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar m = MEXC:APEUSDC;\n\nvar n = MEXC:APEUSDT;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar o = OKEX:APE-USDC;\n\nvar p = OKEX:APE-USDT;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -911,6 +931,9 @@
         "BINANCE_FUTURES:apeusd_perp": false,
         "BINANCE_FUTURES:apeusdt": false,
         "BITFINEX:APEUSD": false,
+        "BITGET:APEUSDC": false,
+        "BITGET:APEUSDT": false,
+        "BITGET:APEUSDT_UMCBL": false,
         "BITMEX:APEUSDT": false,
         "BITMEX:APE_USDT": false,
         "BYBIT:APEUSDC-SPOT": false,
@@ -924,6 +947,9 @@
         "KUCOIN:APE-USDC": false,
         "KUCOIN:APE-USDT": false,
         "KUCOIN:APEUSDTM": false,
+        "MEXC:APEUSDC": false,
+        "MEXC:APEUSDT": false,
+        "MEXC:APE_USDT": false,
         "OKEX:APE-USDC": false,
         "OKEX:APE-USDT": false,
         "OKEX:APE-USDT-SWAP": false
