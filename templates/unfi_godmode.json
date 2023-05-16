@@ -17,11 +17,15 @@
             "BINANCE:unfibusd",
             "BINANCE:unfiusdt",
             "BINANCE_FUTURES:unfiusdt",
+            "BITGET:UNFIUSDT",
+            "BITGET:UNFIUSDT_UMCBL",
             "BYBIT:UNFIUSDT",
             "COINBASE:UNFI-USD",
             "KRAKEN:UNFI/USD",
             "KUCOIN:UNFI-USDT",
-            "KUCOIN:UNFIUSDTM"
+            "KUCOIN:UNFIUSDTM",
+            "MEXC:UNFIUSDT",
+            "MEXC:UNFI_USDT"
           ],
           "zoom": 1
         },
@@ -33,7 +37,8 @@
           "markets": [
             "BINANCE_FUTURES:unfiusdt",
             "BYBIT:UNFIUSDT",
-            "KUCOIN:UNFIUSDTM"
+            "KUCOIN:UNFIUSDTM",
+            "MEXC:UNFI_USDT"
           ]
         },
         "trades2": {
@@ -44,9 +49,12 @@
           "markets": [
             "BINANCE:unfibusd",
             "BINANCE:unfiusdt",
+            "BITGET:UNFIUSDT",
+            "BITGET:UNFIUSDT_UMCBL",
             "COINBASE:UNFI-USD",
             "KRAKEN:UNFI/USD",
-            "KUCOIN:UNFI-USDT"
+            "KUCOIN:UNFI-USDT",
+            "MEXC:UNFIUSDT"
           ]
         }
       },
@@ -386,6 +394,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -475,7 +491,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:unfiusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:UNFIUSDT;\nline(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar c = KUCOIN:UNFIUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:unfiusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:UNFIUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KUCOIN:UNFIUSDTM;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:UNFI_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +535,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:unfibusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:unfiusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = COINBASE:UNFI-USD;\nline(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar d = KUCOIN:UNFI-USDT;\nline(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:unfibusd;\n\nvar b = BINANCE:unfiusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:UNFIUSDT;\n\nvar d = BITGET:UNFIUSDT_UMCBL;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = COINBASE:UNFI-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = KUCOIN:UNFI-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:UNFIUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -880,11 +896,15 @@
         "BINANCE:unfibusd": false,
         "BINANCE:unfiusdt": false,
         "BINANCE_FUTURES:unfiusdt": false,
+        "BITGET:UNFIUSDT": false,
+        "BITGET:UNFIUSDT_UMCBL": false,
         "BYBIT:UNFIUSDT": false,
         "COINBASE:UNFI-USD": false,
         "KRAKEN:UNFI/USD": false,
         "KUCOIN:UNFI-USDT": false,
-        "KUCOIN:UNFIUSDTM": false
+        "KUCOIN:UNFIUSDTM": false,
+        "MEXC:UNFIUSDT": false,
+        "MEXC:UNFI_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
