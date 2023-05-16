@@ -18,6 +18,8 @@
             "BINANCE:yfiusdt",
             "BINANCE_FUTURES:yfiusdt",
             "BITFINEX:YFIUSD",
+            "BITGET:YFIUSDT",
+            "BITGET:YFIUSDT_UMCBL",
             "BYBIT:YFIUSDT",
             "BYBIT:YFIUSDT-SPOT",
             "COINBASE:YFI-USD",
@@ -25,6 +27,8 @@
             "KRAKEN:YFI/USD",
             "KUCOIN:YFI-USDT",
             "KUCOIN:YFIUSDTM",
+            "MEXC:YFIUSDT",
+            "MEXC:YFI_USDT",
             "OKEX:YFI-USD-SWAP",
             "OKEX:YFI-USDC",
             "OKEX:YFI-USDT",
@@ -41,6 +45,7 @@
             "BINANCE_FUTURES:yfiusdt",
             "BYBIT:YFIUSDT",
             "KUCOIN:YFIUSDTM",
+            "MEXC:YFI_USDT",
             "OKEX:YFI-USD-SWAP",
             "OKEX:YFI-USDT-SWAP"
           ]
@@ -54,11 +59,14 @@
             "BINANCE:yfibusd",
             "BINANCE:yfiusdt",
             "BITFINEX:YFIUSD",
+            "BITGET:YFIUSDT",
+            "BITGET:YFIUSDT_UMCBL",
             "BYBIT:YFIUSDT-SPOT",
             "COINBASE:YFI-USD",
             "KRAKEN:PF_YFIUSD",
             "KRAKEN:YFI/USD",
             "KUCOIN:YFI-USDT",
+            "MEXC:YFIUSDT",
             "OKEX:YFI-USDC",
             "OKEX:YFI-USDT"
           ]
@@ -400,6 +408,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -489,7 +505,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:yfiusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:YFIUSDT;\nline(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar c = KUCOIN:YFIUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar d = OKEX:YFI-USD-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar e = OKEX:YFI-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:yfiusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:YFIUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KUCOIN:YFIUSDTM;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:YFI_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar e = OKEX:YFI-USD-SWAP;\n\nvar f = OKEX:YFI-USDT-SWAP;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -533,7 +549,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:yfibusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:yfiusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BITFINEX:YFIUSD;\nline(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\nvar d = BYBIT:YFIUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar e = COINBASE:YFI-USD;\nline(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar f = KUCOIN:YFI-USDT;\nline(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar g = OKEX:YFI-USDC;\nline(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar h = OKEX:YFI-USDT;\nline(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:yfibusd;\n\nvar b = BINANCE:yfiusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:YFIUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:YFIUSDT;\n\nvar e = BITGET:YFIUSDT_UMCBL;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = BYBIT:YFIUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:YFI-USD;line(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = KUCOIN:YFI-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar i = MEXC:YFIUSDT;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar j = OKEX:YFI-USDC;\n\nvar k = OKEX:YFI-USDT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -895,6 +911,8 @@
         "BINANCE:yfiusdt": false,
         "BINANCE_FUTURES:yfiusdt": false,
         "BITFINEX:YFIUSD": false,
+        "BITGET:YFIUSDT": false,
+        "BITGET:YFIUSDT_UMCBL": false,
         "BYBIT:YFIUSDT": false,
         "BYBIT:YFIUSDT-SPOT": false,
         "COINBASE:YFI-USD": false,
@@ -902,6 +920,8 @@
         "KRAKEN:YFI/USD": false,
         "KUCOIN:YFI-USDT": false,
         "KUCOIN:YFIUSDTM": false,
+        "MEXC:YFIUSDT": false,
+        "MEXC:YFI_USDT": false,
         "OKEX:YFI-USD-SWAP": false,
         "OKEX:YFI-USDC": false,
         "OKEX:YFI-USDT": false,
