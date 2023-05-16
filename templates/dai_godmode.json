@@ -17,10 +17,13 @@
             "BINANCE:daibusd",
             "BINANCE:daiusdt",
             "BITFINEX:DAIUSD",
+            "BITGET:DAIUSDC",
+            "BITGET:DAIUSDT",
             "BYBIT:DAIUSDT-SPOT",
             "COINBASE:DAI-USD",
             "KRAKEN:DAI/USD",
             "KRAKEN:DAI/USDT",
+            "MEXC:DAIUSDT",
             "OKEX:DAI-USDT",
             "UNISWAPETHEREUM:DAI/USDC"
           ],
@@ -42,10 +45,13 @@
             "BINANCE:daibusd",
             "BINANCE:daiusdt",
             "BITFINEX:DAIUSD",
+            "BITGET:DAIUSDC",
+            "BITGET:DAIUSDT",
             "BYBIT:DAIUSDT-SPOT",
             "COINBASE:DAI-USD",
             "KRAKEN:DAI/USD",
             "KRAKEN:DAI/USDT",
+            "MEXC:DAIUSDT",
             "OKEX:DAI-USDT",
             "UNISWAPETHEREUM:DAI/USDC"
           ]
@@ -388,6 +394,14 @@
         "disabled": true,
         "fetched": false
       },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
+      },
       "UNISWAPETHEREUM": {
         "disabled": false,
         "fetched": false
@@ -524,7 +538,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:daibusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:daiusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BITFINEX:DAIUSD;\nline(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\nvar d = BYBIT:DAIUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar e = COINBASE:DAI-USD;\nline(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar f = OKEX:DAI-USDT;\nline(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar g = UNISWAPETHEREUM:DAI/USDC;\nline(cum(g.vbuy-g.vsell), title=\"UNIETH\", color=\"rgb(89, 157, 208)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:daibusd;\n\nvar b = BINANCE:daiusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:DAIUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:DAIUSDC;\n\nvar e = BITGET:DAIUSDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = BYBIT:DAIUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:DAI-USD;line(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = MEXC:DAIUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar i = OKEX:DAI-USDT;line(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = UNISWAPETHEREUM:DAI/USDC;line(cum(j.vbuy-j.vsell), title=\"UNIETH\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -885,10 +899,13 @@
         "BINANCE:daibusd": false,
         "BINANCE:daiusdt": false,
         "BITFINEX:DAIUSD": false,
+        "BITGET:DAIUSDC": false,
+        "BITGET:DAIUSDT": false,
         "BYBIT:DAIUSDT-SPOT": false,
         "COINBASE:DAI-USD": false,
         "KRAKEN:DAI/USD": false,
         "KRAKEN:DAI/USDT": false,
+        "MEXC:DAIUSDT": false,
         "OKEX:DAI-USDT": false,
         "UNISWAPETHEREUM:DAI/USDC": false
       },
