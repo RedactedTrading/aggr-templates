@@ -16,10 +16,13 @@
           "markets": [
             "BINANCE:slpbusd",
             "BINANCE:slpusdt",
+            "BITGET:SLPUSDT",
             "BYBIT:SLPUSDT",
             "BYBIT:SLPUSDT-SPOT",
             "KUCOIN:SLP-USDT",
             "KUCOIN:SLPUSDTM",
+            "MEXC:SLPUSDT",
+            "MEXC:SLP_USDT",
             "OKEX:SLP-USDC",
             "OKEX:SLP-USDT",
             "OKEX:SLP-USDT-SWAP"
@@ -34,6 +37,7 @@
           "markets": [
             "BYBIT:SLPUSDT",
             "KUCOIN:SLPUSDTM",
+            "MEXC:SLP_USDT",
             "OKEX:SLP-USDT-SWAP"
           ]
         },
@@ -45,8 +49,10 @@
           "markets": [
             "BINANCE:slpbusd",
             "BINANCE:slpusdt",
+            "BITGET:SLPUSDT",
             "BYBIT:SLPUSDT-SPOT",
             "KUCOIN:SLP-USDT",
+            "MEXC:SLPUSDT",
             "OKEX:SLP-USDC",
             "OKEX:SLP-USDT"
           ]
@@ -388,6 +394,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -477,7 +491,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:SLPUSDT;\nline(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar b = KUCOIN:SLPUSDTM;\nline(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar c = OKEX:SLP-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:SLPUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = KUCOIN:SLPUSDTM;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar c = MEXC:SLP_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar d = OKEX:SLP-USDT-SWAP;line(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -521,7 +535,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:slpbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:slpusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BYBIT:SLPUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar d = KUCOIN:SLP-USDT;\nline(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar e = OKEX:SLP-USDC;\nline(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar f = OKEX:SLP-USDT;\nline(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:slpbusd;\n\nvar b = BINANCE:slpusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:SLPUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:SLPUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KUCOIN:SLP-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:SLPUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:SLP-USDC;\n\nvar h = OKEX:SLP-USDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -881,10 +895,13 @@
       "hiddenMarkets": {
         "BINANCE:slpbusd": false,
         "BINANCE:slpusdt": false,
+        "BITGET:SLPUSDT": false,
         "BYBIT:SLPUSDT": false,
         "BYBIT:SLPUSDT-SPOT": false,
         "KUCOIN:SLP-USDT": false,
         "KUCOIN:SLPUSDTM": false,
+        "MEXC:SLPUSDT": false,
+        "MEXC:SLP_USDT": false,
         "OKEX:SLP-USDC": false,
         "OKEX:SLP-USDT": false,
         "OKEX:SLP-USDT-SWAP": false
