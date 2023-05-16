@@ -17,7 +17,11 @@
             "BINANCE:flmbusd",
             "BINANCE:flmusdt",
             "BINANCE_FUTURES:flmusdt",
+            "BITGET:FLMUSDT",
+            "BITGET:FLMUSDT_UMCBL",
             "BYBIT:FLMUSDT",
+            "MEXC:FLMUSDT",
+            "MEXC:FLM_USDT",
             "OKEX:FLM-USDC",
             "OKEX:FLM-USDT",
             "OKEX:FLM-USDT-SWAP"
@@ -32,6 +36,7 @@
           "markets": [
             "BINANCE_FUTURES:flmusdt",
             "BYBIT:FLMUSDT",
+            "MEXC:FLM_USDT",
             "OKEX:FLM-USDT-SWAP"
           ]
         },
@@ -43,6 +48,9 @@
           "markets": [
             "BINANCE:flmbusd",
             "BINANCE:flmusdt",
+            "BITGET:FLMUSDT",
+            "BITGET:FLMUSDT_UMCBL",
+            "MEXC:FLMUSDT",
             "OKEX:FLM-USDC",
             "OKEX:FLM-USDT"
           ]
@@ -384,6 +392,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -473,7 +489,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:flmusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:FLMUSDT;\nline(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar c = OKEX:FLM-USDT-SWAP;\nline(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:flmusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:FLMUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = MEXC:FLM_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar d = OKEX:FLM-USDT-SWAP;line(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -517,7 +533,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:flmbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:flmusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = OKEX:FLM-USDC;\nline(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar d = OKEX:FLM-USDT;\nline(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:flmbusd;\n\nvar b = BINANCE:flmusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:FLMUSDT;\n\nvar d = BITGET:FLMUSDT_UMCBL;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = MEXC:FLMUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:FLM-USDC;\n\nvar g = OKEX:FLM-USDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -878,7 +894,11 @@
         "BINANCE:flmbusd": false,
         "BINANCE:flmusdt": false,
         "BINANCE_FUTURES:flmusdt": false,
+        "BITGET:FLMUSDT": false,
+        "BITGET:FLMUSDT_UMCBL": false,
         "BYBIT:FLMUSDT": false,
+        "MEXC:FLMUSDT": false,
+        "MEXC:FLM_USDT": false,
         "OKEX:FLM-USDC": false,
         "OKEX:FLM-USDT": false,
         "OKEX:FLM-USDT-SWAP": false
