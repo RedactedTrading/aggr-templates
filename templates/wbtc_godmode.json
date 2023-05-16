@@ -17,12 +17,17 @@
             "ARBIDEXARBITRUM:WBTC/USDC",
             "ARBIDEXARBITRUM:WBTC/WETH",
             "BINANCE:wbtcbusd",
+            "BINANCE:wbtcusdt",
+            "BITGET:WBTCUSDT",
             "BYBIT:WBTCUSDT-SPOT",
             "COINBASE:WBTC-USD",
             "KRAKEN:WBTC/USD",
+            "MEXC:WBTCUSDC",
+            "MEXC:WBTCUSDT",
             "OKEX:WBTC-USDT",
             "QUICKSWAPPOLYGON:WBTC/WETH",
             "SUSHISWAPETHEREUM:WBTC/WETH",
+            "SWAPPICONFLUX:WBTC/USDT",
             "UNISWAPARBITRUM:WBTC/WETH",
             "UNISWAPETHEREUM:WBTC/USDC",
             "UNISWAPETHEREUM:WBTC/WETH",
@@ -48,12 +53,17 @@
             "ARBIDEXARBITRUM:WBTC/USDC",
             "ARBIDEXARBITRUM:WBTC/WETH",
             "BINANCE:wbtcbusd",
+            "BINANCE:wbtcusdt",
+            "BITGET:WBTCUSDT",
             "BYBIT:WBTCUSDT-SPOT",
             "COINBASE:WBTC-USD",
             "KRAKEN:WBTC/USD",
+            "MEXC:WBTCUSDC",
+            "MEXC:WBTCUSDT",
             "OKEX:WBTC-USDT",
             "QUICKSWAPPOLYGON:WBTC/WETH",
             "SUSHISWAPETHEREUM:WBTC/WETH",
+            "SWAPPICONFLUX:WBTC/USDT",
             "UNISWAPARBITRUM:WBTC/WETH",
             "UNISWAPETHEREUM:WBTC/USDC",
             "UNISWAPETHEREUM:WBTC/WETH",
@@ -404,11 +414,23 @@
         "disabled": false,
         "fetched": false
       },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
+      },
       "QUICKSWAPPOLYGON": {
         "disabled": false,
         "fetched": false
       },
       "SUSHISWAPETHEREUM": {
+        "disabled": false,
+        "fetched": false
+      },
+      "SWAPPICONFLUX": {
         "disabled": false,
         "fetched": false
       },
@@ -564,7 +586,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = ARBIDEXARBITRUM:WBTC/USDC;\nline(cum(a.vbuy-a.vsell), title=\"ARBDXAB\", color=\"rgb(89, 157, 208)\");\n\nvar b = ARBIDEXARBITRUM:WBTC/WETH;\nline(cum(b.vbuy-b.vsell), title=\"ARBDXAB\", color=\"rgb(89, 157, 208)\");\n\nvar c = BINANCE:wbtcbusd;\nline(cum(c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar d = BYBIT:WBTCUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar e = COINBASE:WBTC-USD;\nline(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar f = OKEX:WBTC-USDT;\nline(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar g = QUICKSWAPPOLYGON:WBTC/WETH;\nline(cum(g.vbuy-g.vsell), title=\"QSPOL\", color=\"rgb(89, 157, 208)\");\n\nvar h = SUSHISWAPETHEREUM:WBTC/WETH;\nline(cum(h.vbuy-h.vsell), title=\"SUSHIETH\", color=\"rgb(89, 157, 208)\");\n\nvar i = UNISWAPARBITRUM:WBTC/WETH;\nline(cum(i.vbuy-i.vsell), title=\"UNIAB\", color=\"rgb(89, 157, 208)\");\n\nvar j = UNISWAPETHEREUM:WBTC/USDC;\nline(cum(j.vbuy-j.vsell), title=\"UNIETH\", color=\"rgb(89, 157, 208)\");\n\nvar k = UNISWAPETHEREUM:WBTC/WETH;\nline(cum(k.vbuy-k.vsell), title=\"UNIETH\", color=\"rgb(89, 157, 208)\");\n\nvar l = UNISWAPOPTIMISM:WBTC/WETH;\nline(cum(l.vbuy-l.vsell), title=\"UNIOPT\", color=\"rgb(89, 157, 208)\");\n\nvar m = UNISWAPPOLYGON:WBTC/WETH;\nline(cum(m.vbuy-m.vsell), title=\"UNIPOL\", color=\"rgb(89, 157, 208)\");\n\nvar n = UNISWAPV2ETHEREUM:WBTC/WETH;\nline(cum(n.vbuy-n.vsell), title=\"UNI2ETH\", color=\"rgb(89, 157, 208)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = ARBIDEXARBITRUM:WBTC/USDC;\n\nvar b = ARBIDEXARBITRUM:WBTC/WETH;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"ARBDXAB\", color=\"rgb(89, 157, 208)\");\n\n\nvar c = BINANCE:wbtcbusd;\n\nvar d = BINANCE:wbtcusdt;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITGET:WBTCUSDT;line(cum(e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = BYBIT:WBTCUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:WBTC-USD;line(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = MEXC:WBTCUSDC;\n\nvar i = MEXC:WBTCUSDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar j = OKEX:WBTC-USDT;line(cum(j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar k = QUICKSWAPPOLYGON:WBTC/WETH;line(cum(k.vbuy-k.vsell), title=\"QSPOL\", color=\"rgb(89, 157, 208)\");\n\n\nvar l = SUSHISWAPETHEREUM:WBTC/WETH;line(cum(l.vbuy-l.vsell), title=\"SUSHIETH\", color=\"rgb(89, 157, 208)\");\n\n\nvar m = SWAPPICONFLUX:WBTC/USDT;line(cum(m.vbuy-m.vsell), title=\"SWAPICON\", color=\"rgb(89, 157, 208)\");\n\n\nvar n = UNISWAPARBITRUM:WBTC/WETH;line(cum(n.vbuy-n.vsell), title=\"UNIAB\", color=\"rgb(89, 157, 208)\");\n\n\nvar o = UNISWAPETHEREUM:WBTC/USDC;\n\nvar p = UNISWAPETHEREUM:WBTC/WETH;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"UNIETH\", color=\"rgb(89, 157, 208)\");\n\n\nvar q = UNISWAPOPTIMISM:WBTC/WETH;line(cum(q.vbuy-q.vsell), title=\"UNIOPT\", color=\"rgb(89, 157, 208)\");\n\n\nvar r = UNISWAPPOLYGON:WBTC/WETH;line(cum(r.vbuy-r.vsell), title=\"UNIPOL\", color=\"rgb(89, 157, 208)\");\n\n\nvar s = UNISWAPV2ETHEREUM:WBTC/WETH;line(cum(s.vbuy-s.vsell), title=\"UNI2ETH\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -925,12 +947,17 @@
         "ARBIDEXARBITRUM:WBTC/USDC": false,
         "ARBIDEXARBITRUM:WBTC/WETH": true,
         "BINANCE:wbtcbusd": false,
+        "BINANCE:wbtcusdt": false,
+        "BITGET:WBTCUSDT": false,
         "BYBIT:WBTCUSDT-SPOT": false,
         "COINBASE:WBTC-USD": false,
         "KRAKEN:WBTC/USD": false,
+        "MEXC:WBTCUSDC": false,
+        "MEXC:WBTCUSDT": false,
         "OKEX:WBTC-USDT": false,
         "QUICKSWAPPOLYGON:WBTC/WETH": true,
         "SUSHISWAPETHEREUM:WBTC/WETH": true,
+        "SWAPPICONFLUX:WBTC/USDT": false,
         "UNISWAPARBITRUM:WBTC/WETH": true,
         "UNISWAPETHEREUM:WBTC/USDC": false,
         "UNISWAPETHEREUM:WBTC/WETH": true,
