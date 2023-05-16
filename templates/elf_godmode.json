@@ -16,6 +16,8 @@
           "markets": [
             "BINANCE:elfbusd",
             "BINANCE:elfusdt",
+            "BITGET:ELFUSDT",
+            "MEXC:ELFUSDT",
             "OKEX:ELF-USDT",
             "UPBIT:KRW-ELF"
           ],
@@ -36,6 +38,8 @@
           "markets": [
             "BINANCE:elfbusd",
             "BINANCE:elfusdt",
+            "BITGET:ELFUSDT",
+            "MEXC:ELFUSDT",
             "OKEX:ELF-USDT",
             "UPBIT:KRW-ELF"
           ]
@@ -377,6 +381,14 @@
       "UPBIT": {
         "disabled": false,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -510,7 +522,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:elfbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:elfusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = OKEX:ELF-USDT;\nline(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar d = UPBIT:KRW-ELF;\nline(cum(d.vbuy-d.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:elfbusd;\n\nvar b = BINANCE:elfusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:ELFUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = MEXC:ELFUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar e = OKEX:ELF-USDT;line(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = UPBIT:KRW-ELF;line(cum(f.vbuy-f.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -870,6 +882,8 @@
       "hiddenMarkets": {
         "BINANCE:elfbusd": false,
         "BINANCE:elfusdt": false,
+        "BITGET:ELFUSDT": false,
+        "MEXC:ELFUSDT": false,
         "OKEX:ELF-USDT": false,
         "UPBIT:KRW-ELF": true
       },
