@@ -17,6 +17,8 @@
             "BINANCE:1inchbusd",
             "BINANCE:1inchusdt",
             "BINANCE_FUTURES:1inchusdt",
+            "BITGET:1INCHUSDT",
+            "BITGET:1INCHUSDT_UMCBL",
             "BYBIT:1INCHUSDT",
             "BYBIT:1INCHUSDT-SPOT",
             "COINBASE:1INCH-USD",
@@ -24,6 +26,8 @@
             "KRAKEN:PF_1INCHUSD",
             "KUCOIN:1INCH-USDT",
             "KUCOIN:1INCHUSDTM",
+            "MEXC:1INCHUSDT",
+            "MEXC:1INCH_USDT",
             "OKEX:1INCH-USD-SWAP",
             "OKEX:1INCH-USDC",
             "OKEX:1INCH-USDT",
@@ -43,6 +47,7 @@
             "BINANCE_FUTURES:1inchusdt",
             "BYBIT:1INCHUSDT",
             "KUCOIN:1INCHUSDTM",
+            "MEXC:1INCH_USDT",
             "OKEX:1INCH-USD-SWAP",
             "OKEX:1INCH-USDT-SWAP"
           ]
@@ -55,11 +60,14 @@
           "markets": [
             "BINANCE:1inchbusd",
             "BINANCE:1inchusdt",
+            "BITGET:1INCHUSDT",
+            "BITGET:1INCHUSDT_UMCBL",
             "BYBIT:1INCHUSDT-SPOT",
             "COINBASE:1INCH-USD",
             "KRAKEN:1INCH/USD",
             "KRAKEN:PF_1INCHUSD",
             "KUCOIN:1INCH-USDT",
+            "MEXC:1INCHUSDT",
             "OKEX:1INCH-USDC",
             "OKEX:1INCH-USDT",
             "UNISWAPETHEREUM:1INCH/USDT",
@@ -405,6 +413,14 @@
         "disabled": false,
         "fetched": false
       },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
+      },
       "UNISWAPETHEREUM": {
         "disabled": false,
         "fetched": false
@@ -497,7 +513,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:1inchusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:1INCHUSDT;\nline(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar c = KUCOIN:1INCHUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar d = OKEX:1INCH-USD-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar e = OKEX:1INCH-USDT-SWAP;\nline(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:1inchusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:1INCHUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KUCOIN:1INCHUSDTM;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:1INCH_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar e = OKEX:1INCH-USD-SWAP;\n\nvar f = OKEX:1INCH-USDT-SWAP;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -541,7 +557,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:1inchbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:1inchusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BYBIT:1INCHUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar d = COINBASE:1INCH-USD;\nline(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar e = KUCOIN:1INCH-USDT;\nline(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar f = OKEX:1INCH-USDC;\nline(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar g = OKEX:1INCH-USDT;\nline(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar h = UNISWAPETHEREUM:1INCH/USDT;\nline(cum(h.vbuy-h.vsell), title=\"UNIETH\", color=\"rgb(89, 157, 208)\");\n\nvar i = UNISWAPETHEREUM:1INCH/WETH;\nline(cum(i.vbuy-i.vsell), title=\"UNIETH\", color=\"rgb(89, 157, 208)\");\n\nvar j = UPBIT:KRW-1INCH;\nline(cum(j.vbuy-j.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:1inchbusd;\n\nvar b = BINANCE:1inchusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:1INCHUSDT;\n\nvar d = BITGET:1INCHUSDT_UMCBL;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BYBIT:1INCHUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:1INCH-USD;line(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = KUCOIN:1INCH-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = MEXC:1INCHUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar i = OKEX:1INCH-USDC;\n\nvar j = OKEX:1INCH-USDT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar k = UNISWAPETHEREUM:1INCH/USDT;\n\nvar l = UNISWAPETHEREUM:1INCH/WETH;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"UNIETH\", color=\"rgb(89, 157, 208)\");\n\n\nvar m = UPBIT:KRW-1INCH;line(cum(m.vbuy-m.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -902,6 +918,8 @@
         "BINANCE:1inchbusd": false,
         "BINANCE:1inchusdt": false,
         "BINANCE_FUTURES:1inchusdt": false,
+        "BITGET:1INCHUSDT": false,
+        "BITGET:1INCHUSDT_UMCBL": false,
         "BYBIT:1INCHUSDT": false,
         "BYBIT:1INCHUSDT-SPOT": false,
         "COINBASE:1INCH-USD": false,
@@ -909,6 +927,8 @@
         "KRAKEN:PF_1INCHUSD": false,
         "KUCOIN:1INCH-USDT": false,
         "KUCOIN:1INCHUSDTM": false,
+        "MEXC:1INCHUSDT": false,
+        "MEXC:1INCH_USDT": false,
         "OKEX:1INCH-USD-SWAP": false,
         "OKEX:1INCH-USDC": false,
         "OKEX:1INCH-USDT": false,
