@@ -14,7 +14,8 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BYBIT:GENEUSDT-SPOT"
+            "BYBIT:GENEUSDT-SPOT",
+            "MEXC:GENEUSDT"
           ],
           "zoom": 1
         },
@@ -31,7 +32,8 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BYBIT:GENEUSDT-SPOT"
+            "BYBIT:GENEUSDT-SPOT",
+            "MEXC:GENEUSDT"
           ]
         }
       },
@@ -371,6 +373,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -504,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:GENEUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:GENEUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:GENEUSDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -862,7 +868,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:GENEUSDT-SPOT": false
+        "BYBIT:GENEUSDT-SPOT": false,
+        "MEXC:GENEUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
