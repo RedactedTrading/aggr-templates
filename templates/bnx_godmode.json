@@ -17,7 +17,10 @@
             "BINANCE:bnxbusd",
             "BINANCE:bnxusdt",
             "BINANCE_FUTURES:bnxusdt",
-            "BYBIT:BNXUSDT"
+            "BITGET:BNXUSDT",
+            "BITGET:BNXUSDT_UMCBL",
+            "BYBIT:BNXUSDT",
+            "MEXC:BNXUSDT"
           ],
           "zoom": 1
         },
@@ -38,7 +41,10 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:bnxbusd",
-            "BINANCE:bnxusdt"
+            "BINANCE:bnxusdt",
+            "BITGET:BNXUSDT",
+            "BITGET:BNXUSDT_UMCBL",
+            "MEXC:BNXUSDT"
           ]
         }
       },
@@ -378,6 +384,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -467,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:bnxusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:BNXUSDT;\nline(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:bnxusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:BNXUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -511,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bnxbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:bnxusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bnxbusd;\n\nvar b = BINANCE:bnxusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:BNXUSDT;\n\nvar d = BITGET:BNXUSDT_UMCBL;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = MEXC:BNXUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -872,7 +886,10 @@
         "BINANCE:bnxbusd": false,
         "BINANCE:bnxusdt": false,
         "BINANCE_FUTURES:bnxusdt": false,
-        "BYBIT:BNXUSDT": false
+        "BITGET:BNXUSDT": false,
+        "BITGET:BNXUSDT_UMCBL": false,
+        "BYBIT:BNXUSDT": false,
+        "MEXC:BNXUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
