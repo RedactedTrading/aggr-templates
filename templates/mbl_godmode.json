@@ -17,6 +17,7 @@
             "BINANCE:mblbusd",
             "BINANCE:mblusdt",
             "KUCOIN:MBL-USDT",
+            "MEXC:MBLUSDT",
             "UPBIT:KRW-MBL"
           ],
           "zoom": 1
@@ -37,6 +38,7 @@
             "BINANCE:mblbusd",
             "BINANCE:mblusdt",
             "KUCOIN:MBL-USDT",
+            "MEXC:MBLUSDT",
             "UPBIT:KRW-MBL"
           ]
         }
@@ -377,6 +379,10 @@
       "UPBIT": {
         "disabled": false,
         "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -510,7 +516,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:mblbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:mblusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = KUCOIN:MBL-USDT;\nline(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar d = UPBIT:KRW-MBL;\nline(cum(d.vbuy-d.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:mblbusd;\n\nvar b = BINANCE:mblusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = KUCOIN:MBL-USDT;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:MBLUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar e = UPBIT:KRW-MBL;line(cum(e.vbuy-e.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -871,6 +877,7 @@
         "BINANCE:mblbusd": false,
         "BINANCE:mblusdt": false,
         "KUCOIN:MBL-USDT": false,
+        "MEXC:MBLUSDT": false,
         "UPBIT:KRW-MBL": true
       },
       "barSpacing": 0.39437454420364615,
