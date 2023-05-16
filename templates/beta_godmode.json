@@ -15,7 +15,9 @@
           "type": "chart",
           "markets": [
             "BINANCE:betabusd",
-            "BINANCE:betausdt"
+            "BINANCE:betausdt",
+            "BITGET:BETAUSDT",
+            "MEXC:BETAUSDT"
           ],
           "zoom": 1
         },
@@ -33,7 +35,9 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:betabusd",
-            "BINANCE:betausdt"
+            "BINANCE:betausdt",
+            "BITGET:BETAUSDT",
+            "MEXC:BETAUSDT"
           ]
         }
       },
@@ -373,6 +377,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -506,7 +518,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:betabusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:betausdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:betabusd;\n\nvar b = BINANCE:betausdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:BETAUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = MEXC:BETAUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -865,7 +877,9 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:betabusd": false,
-        "BINANCE:betausdt": false
+        "BINANCE:betausdt": false,
+        "BITGET:BETAUSDT": false,
+        "MEXC:BETAUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
