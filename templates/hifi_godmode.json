@@ -15,6 +15,9 @@
           "type": "chart",
           "markets": [
             "BINANCE:hifiusdt",
+            "KUCOIN:HIFI-USDT",
+            "MEXC:HIFIUSDT",
+            "MEXC:HIFI_USDT",
             "UPBIT:KRW-HIFI"
           ],
           "zoom": 1
@@ -24,7 +27,9 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "MEXC:HIFI_USDT"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -33,6 +38,8 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:hifiusdt",
+            "KUCOIN:HIFI-USDT",
+            "MEXC:HIFIUSDT",
             "UPBIT:KRW-HIFI"
           ]
         }
@@ -350,7 +357,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -371,6 +378,10 @@
       },
       "_id": "exchanges",
       "UPBIT": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
         "disabled": false,
         "fetched": false
       }
@@ -462,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = MEXC:HIFI_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -506,7 +517,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:hifiusdt;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = UPBIT:KRW-HIFI;\nline(cum(b.vbuy-b.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:hifiusdt;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = KUCOIN:HIFI-USDT;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar c = MEXC:HIFIUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar d = UPBIT:KRW-HIFI;line(cum(d.vbuy-d.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -865,6 +876,9 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:hifiusdt": false,
+        "KUCOIN:HIFI-USDT": false,
+        "MEXC:HIFIUSDT": false,
+        "MEXC:HIFI_USDT": false,
         "UPBIT:KRW-HIFI": true
       },
       "barSpacing": 0.39437454420364615,
