@@ -16,6 +16,7 @@
           "markets": [
             "BINANCE:drepbusd",
             "BINANCE:drepusdt",
+            "BITGET:DREPUSDT",
             "COINBASE:DREP-USD"
           ],
           "zoom": 1
@@ -35,6 +36,7 @@
           "markets": [
             "BINANCE:drepbusd",
             "BINANCE:drepusdt",
+            "BITGET:DREPUSDT",
             "COINBASE:DREP-USD"
           ]
         }
@@ -375,6 +377,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -508,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:drepbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:drepusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = COINBASE:DREP-USD;\nline(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:drepbusd;\n\nvar b = BINANCE:drepusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:DREPUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:DREP-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -868,6 +874,7 @@
       "hiddenMarkets": {
         "BINANCE:drepbusd": false,
         "BINANCE:drepusdt": false,
+        "BITGET:DREPUSDT": false,
         "COINBASE:DREP-USD": false
       },
       "barSpacing": 0.39437454420364615,
