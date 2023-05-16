@@ -17,13 +17,18 @@
             "BINANCE:rndrbusd",
             "BINANCE:rndrusdt",
             "BINANCE_FUTURES:rndrusdt",
+            "BITGET:RNDRUSDT",
+            "BITGET:RNDRUSDT_UMCBL",
             "BYBIT:RNDRUSDT",
             "BYBIT:RNDRUSDT-SPOT",
             "COINBASE:RNDR-USD",
             "COINBASE:RNDR-USDT",
+            "KRAKEN:PF_RNDRUSD",
             "KRAKEN:RNDR/USD",
             "KUCOIN:RNDR-USDT",
-            "KUCOIN:RNDRUSDTM"
+            "KUCOIN:RNDRUSDTM",
+            "MEXC:RNDRUSDT",
+            "MEXC:RNDR_USDT"
           ],
           "zoom": 1
         },
@@ -35,7 +40,8 @@
           "markets": [
             "BINANCE_FUTURES:rndrusdt",
             "BYBIT:RNDRUSDT",
-            "KUCOIN:RNDRUSDTM"
+            "KUCOIN:RNDRUSDTM",
+            "MEXC:RNDR_USDT"
           ]
         },
         "trades2": {
@@ -46,11 +52,15 @@
           "markets": [
             "BINANCE:rndrbusd",
             "BINANCE:rndrusdt",
+            "BITGET:RNDRUSDT",
+            "BITGET:RNDRUSDT_UMCBL",
             "BYBIT:RNDRUSDT-SPOT",
             "COINBASE:RNDR-USD",
             "COINBASE:RNDR-USDT",
+            "KRAKEN:PF_RNDRUSD",
             "KRAKEN:RNDR/USD",
-            "KUCOIN:RNDR-USDT"
+            "KUCOIN:RNDR-USDT",
+            "MEXC:RNDRUSDT"
           ]
         }
       },
@@ -390,6 +400,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -479,7 +497,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:rndrusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:RNDRUSDT;\nline(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar c = KUCOIN:RNDRUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:rndrusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:RNDRUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KUCOIN:RNDRUSDTM;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:RNDR_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -523,7 +541,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:rndrbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:rndrusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BYBIT:RNDRUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar d = COINBASE:RNDR-USD;\nline(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar e = COINBASE:RNDR-USDT;\nline(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar f = KUCOIN:RNDR-USDT;\nline(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:rndrbusd;\n\nvar b = BINANCE:rndrusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:RNDRUSDT;\n\nvar d = BITGET:RNDRUSDT_UMCBL;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BYBIT:RNDRUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:RNDR-USD;\n\nvar g = COINBASE:RNDR-USDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = KUCOIN:RNDR-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar i = MEXC:RNDRUSDT;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -884,13 +902,18 @@
         "BINANCE:rndrbusd": false,
         "BINANCE:rndrusdt": false,
         "BINANCE_FUTURES:rndrusdt": false,
+        "BITGET:RNDRUSDT": false,
+        "BITGET:RNDRUSDT_UMCBL": false,
         "BYBIT:RNDRUSDT": false,
         "BYBIT:RNDRUSDT-SPOT": false,
         "COINBASE:RNDR-USD": false,
         "COINBASE:RNDR-USDT": false,
+        "KRAKEN:PF_RNDRUSD": false,
         "KRAKEN:RNDR/USD": false,
         "KUCOIN:RNDR-USDT": false,
-        "KUCOIN:RNDRUSDTM": false
+        "KUCOIN:RNDRUSDTM": false,
+        "MEXC:RNDRUSDT": false,
+        "MEXC:RNDR_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
