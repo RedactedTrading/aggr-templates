@@ -16,7 +16,8 @@
           "markets": [
             "BINANCE:keepbusd",
             "BINANCE:keepusdt",
-            "KRAKEN:KEEP/USD"
+            "KRAKEN:KEEP/USD",
+            "MEXC:KEEPUSDT"
           ],
           "zoom": 1
         },
@@ -35,7 +36,8 @@
           "markets": [
             "BINANCE:keepbusd",
             "BINANCE:keepusdt",
-            "KRAKEN:KEEP/USD"
+            "KRAKEN:KEEP/USD",
+            "MEXC:KEEPUSDT"
           ]
         }
       },
@@ -375,6 +377,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -508,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:keepbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:keepusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:keepbusd;\n\nvar b = BINANCE:keepusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = MEXC:KEEPUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -868,7 +874,8 @@
       "hiddenMarkets": {
         "BINANCE:keepbusd": false,
         "BINANCE:keepusdt": false,
-        "KRAKEN:KEEP/USD": false
+        "KRAKEN:KEEP/USD": false,
+        "MEXC:KEEPUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
