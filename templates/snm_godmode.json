@@ -14,7 +14,9 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BINANCE:snmbusd"
+            "BINANCE:snmbusd",
+            "BITGET:SNMUSDT",
+            "MEXC:SNMUSDT"
           ],
           "zoom": 1
         },
@@ -31,7 +33,9 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BINANCE:snmbusd"
+            "BINANCE:snmbusd",
+            "BITGET:SNMUSDT",
+            "MEXC:SNMUSDT"
           ]
         }
       },
@@ -371,6 +375,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -504,7 +516,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:snmbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:snmbusd;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = BITGET:SNMUSDT;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = MEXC:SNMUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -862,7 +874,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:snmbusd": false
+        "BINANCE:snmbusd": false,
+        "BITGET:SNMUSDT": false,
+        "MEXC:SNMUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
