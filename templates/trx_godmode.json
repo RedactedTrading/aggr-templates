@@ -22,6 +22,9 @@
             "BINANCE_FUTURES:trxusd_perp",
             "BINANCE_FUTURES:trxusdt",
             "BITFINEX:TRXUSD",
+            "BITGET:TRXUSDC",
+            "BITGET:TRXUSDT",
+            "BITGET:TRXUSDT_UMCBL",
             "BITMEX:TRX_USDT",
             "BYBIT:TRXUSDC-SPOT",
             "BYBIT:TRXUSDT",
@@ -32,6 +35,8 @@
             "KUCOIN:TRX-USDC",
             "KUCOIN:TRX-USDT",
             "KUCOIN:TRXUSDTM",
+            "MEXC:TRXUSDC",
+            "MEXC:TRX_USDT",
             "OKEX:TRX-USD-SWAP",
             "OKEX:TRX-USDC",
             "OKEX:TRX-USDT",
@@ -54,6 +59,7 @@
             "BYBIT:TRXUSDT",
             "DERIBIT:TRX_USDC-PERPETUAL",
             "KUCOIN:TRXUSDTM",
+            "MEXC:TRX_USDT",
             "OKEX:TRX-USD-SWAP",
             "OKEX:TRX-USDT-SWAP"
           ]
@@ -69,12 +75,16 @@
             "BINANCE:trxusdc",
             "BINANCE:trxusdt",
             "BITFINEX:TRXUSD",
+            "BITGET:TRXUSDC",
+            "BITGET:TRXUSDT",
+            "BITGET:TRXUSDT_UMCBL",
             "BYBIT:TRXUSDC-SPOT",
             "BYBIT:TRXUSDT-SPOT",
             "KRAKEN:PF_TRXUSD",
             "KRAKEN:TRX/USD",
             "KUCOIN:TRX-USDC",
             "KUCOIN:TRX-USDT",
+            "MEXC:TRXUSDC",
             "OKEX:TRX-USDC",
             "OKEX:TRX-USDT",
             "UPBIT:KRW-TRX",
@@ -418,6 +428,14 @@
       "UPBIT": {
         "disabled": false,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -507,7 +525,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:trxbusd;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BINANCE_FUTURES:trxusd_perp;\nline(cum(b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar c = BINANCE_FUTURES:trxusdt;\nline(cum(c.vbuy-c.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar d = BITMEX:TRX_USDT;\nline(cum(d.vbuy-d.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\nvar e = BYBIT:TRXUSDT;\nline(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar f = DERIBIT:TRX_USDC-PERPETUAL;\nline(cum(f.vbuy-f.vsell), title=\"DRBT\", color=\"rgb(50, 121, 175)\");\n\nvar g = KUCOIN:TRXUSDTM;\nline(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar h = OKEX:TRX-USD-SWAP;\nline(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar i = OKEX:TRX-USDT-SWAP;\nline(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:trxbusd;\n\nvar b = BINANCE_FUTURES:trxusd_perp;\n\nvar c = BINANCE_FUTURES:trxusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar d = BITMEX:TRX_USDT;line(cum(d.vbuy-d.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar e = BYBIT:TRXUSDT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = DERIBIT:TRX_USDC-PERPETUAL;line(cum(f.vbuy-f.vsell), title=\"DRBT\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = KUCOIN:TRXUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = MEXC:TRX_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar i = OKEX:TRX-USD-SWAP;\n\nvar j = OKEX:TRX-USDT-SWAP;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -551,7 +569,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:trxbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:trxtusd;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BINANCE:trxusdc;\nline(cum(c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar d = BINANCE:trxusdt;\nline(cum(d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar e = BITFINEX:TRXUSD;\nline(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\nvar f = BYBIT:TRXUSDC-SPOT;\nline(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar g = BYBIT:TRXUSDT-SPOT;\nline(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar h = KUCOIN:TRX-USDC;\nline(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar i = KUCOIN:TRX-USDT;\nline(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar j = OKEX:TRX-USDC;\nline(cum(j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar k = OKEX:TRX-USDT;\nline(cum(k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar l = UPBIT:KRW-TRX;\nline(cum(l.vbuy-l.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nvar m = UPBIT:USDT-TRX;\nline(cum(m.vbuy-m.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:trxbusd;\n\nvar b = BINANCE:trxtusd;\n\nvar c = BINANCE:trxusdc;\n\nvar d = BINANCE:trxusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:TRXUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:TRXUSDC;\n\nvar g = BITGET:TRXUSDT;\n\nvar h = BITGET:TRXUSDT_UMCBL;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar i = BYBIT:TRXUSDC-SPOT;\n\nvar j = BYBIT:TRXUSDT-SPOT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar k = KUCOIN:TRX-USDC;\n\nvar l = KUCOIN:TRX-USDT;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar m = MEXC:TRXUSDC;line(cum(m.vbuy-m.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar n = OKEX:TRX-USDC;\n\nvar o = OKEX:TRX-USDT;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar p = UPBIT:KRW-TRX;\n\nvar q = UPBIT:USDT-TRX;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -917,6 +935,9 @@
         "BINANCE_FUTURES:trxusd_perp": false,
         "BINANCE_FUTURES:trxusdt": false,
         "BITFINEX:TRXUSD": false,
+        "BITGET:TRXUSDC": false,
+        "BITGET:TRXUSDT": false,
+        "BITGET:TRXUSDT_UMCBL": false,
         "BITMEX:TRX_USDT": false,
         "BYBIT:TRXUSDC-SPOT": false,
         "BYBIT:TRXUSDT": false,
@@ -927,6 +948,8 @@
         "KUCOIN:TRX-USDC": false,
         "KUCOIN:TRX-USDT": false,
         "KUCOIN:TRXUSDTM": false,
+        "MEXC:TRXUSDC": false,
+        "MEXC:TRX_USDT": false,
         "OKEX:TRX-USD-SWAP": false,
         "OKEX:TRX-USDC": false,
         "OKEX:TRX-USDT": false,
