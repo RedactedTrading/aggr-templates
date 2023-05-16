@@ -16,8 +16,10 @@
           "markets": [
             "BINANCE:ambbusd",
             "BINANCE:ambusdt",
-            "BINANCE_FUTURES:ambbusd",
-            "KUCOIN:AMB-USDT"
+            "BINANCE_FUTURES:ambusdt",
+            "KUCOIN:AMB-USDT",
+            "MEXC:AMBUSDT",
+            "MEXC:AMB_USDT"
           ],
           "zoom": 1
         },
@@ -27,7 +29,8 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BINANCE_FUTURES:ambbusd"
+            "BINANCE_FUTURES:ambusdt",
+            "MEXC:AMB_USDT"
           ]
         },
         "trades2": {
@@ -38,7 +41,8 @@
           "markets": [
             "BINANCE:ambbusd",
             "BINANCE:ambusdt",
-            "KUCOIN:AMB-USDT"
+            "KUCOIN:AMB-USDT",
+            "MEXC:AMBUSDT"
           ]
         }
       },
@@ -378,6 +382,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -467,7 +475,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:ambbusd;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:ambusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = MEXC:AMB_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -511,7 +519,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ambbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:ambusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = KUCOIN:AMB-USDT;\nline(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ambbusd;\n\nvar b = BINANCE:ambusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = KUCOIN:AMB-USDT;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:AMBUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -871,8 +879,10 @@
       "hiddenMarkets": {
         "BINANCE:ambbusd": false,
         "BINANCE:ambusdt": false,
-        "BINANCE_FUTURES:ambbusd": false,
-        "KUCOIN:AMB-USDT": false
+        "BINANCE_FUTURES:ambusdt": false,
+        "KUCOIN:AMB-USDT": false,
+        "MEXC:AMBUSDT": false,
+        "MEXC:AMB_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
