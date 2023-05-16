@@ -18,6 +18,9 @@
             "BINANCE:manausdt",
             "BINANCE_FUTURES:manausd_perp",
             "BINANCE_FUTURES:manausdt",
+            "BITGET:MANAUSDC",
+            "BITGET:MANAUSDT",
+            "BITGET:MANAUSDT_UMCBL",
             "BYBIT:MANAUSD",
             "BYBIT:MANAUSDC-SPOT",
             "BYBIT:MANAUSDT",
@@ -28,6 +31,8 @@
             "KRAKEN:PF_MANAUSD",
             "KUCOIN:MANA-USDT",
             "KUCOIN:MANAUSDTM",
+            "MEXC:MANAUSDT",
+            "MEXC:MANA_USDT",
             "OKEX:MANA-USD-SWAP",
             "OKEX:MANA-USDC",
             "OKEX:MANA-USDT",
@@ -47,6 +52,7 @@
             "BYBIT:MANAUSD",
             "BYBIT:MANAUSDT",
             "KUCOIN:MANAUSDTM",
+            "MEXC:MANA_USDT",
             "OKEX:MANA-USD-SWAP",
             "OKEX:MANA-USDT-SWAP"
           ]
@@ -59,6 +65,9 @@
           "markets": [
             "BINANCE:manabusd",
             "BINANCE:manausdt",
+            "BITGET:MANAUSDC",
+            "BITGET:MANAUSDT",
+            "BITGET:MANAUSDT_UMCBL",
             "BYBIT:MANAUSDC-SPOT",
             "BYBIT:MANAUSDT-SPOT",
             "COINBASE:MANA-USD",
@@ -66,6 +75,7 @@
             "KRAKEN:MANA/USDT",
             "KRAKEN:PF_MANAUSD",
             "KUCOIN:MANA-USDT",
+            "MEXC:MANAUSDT",
             "OKEX:MANA-USDC",
             "OKEX:MANA-USDT",
             "UPBIT:KRW-MANA"
@@ -408,6 +418,14 @@
       "UPBIT": {
         "disabled": false,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -497,7 +515,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:manausd_perp;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BINANCE_FUTURES:manausdt;\nline(cum(b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar c = BYBIT:MANAUSD;\nline(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar d = BYBIT:MANAUSDT;\nline(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar e = KUCOIN:MANAUSDTM;\nline(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar f = OKEX:MANA-USD-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar g = OKEX:MANA-USDT-SWAP;\nline(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:manausd_perp;\n\nvar b = BINANCE_FUTURES:manausdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BYBIT:MANAUSD;\n\nvar d = BYBIT:MANAUSDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KUCOIN:MANAUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:MANA_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:MANA-USD-SWAP;\n\nvar h = OKEX:MANA-USDT-SWAP;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -541,7 +559,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:manabusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:manausdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BYBIT:MANAUSDC-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar d = BYBIT:MANAUSDT-SPOT;\nline(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar e = COINBASE:MANA-USD;\nline(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar f = KUCOIN:MANA-USDT;\nline(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar g = OKEX:MANA-USDC;\nline(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar h = OKEX:MANA-USDT;\nline(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar i = UPBIT:KRW-MANA;\nline(cum(i.vbuy-i.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:manabusd;\n\nvar b = BINANCE:manausdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MANAUSDC;\n\nvar d = BITGET:MANAUSDT;\n\nvar e = BITGET:MANAUSDT_UMCBL;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = BYBIT:MANAUSDC-SPOT;\n\nvar g = BYBIT:MANAUSDT-SPOT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = COINBASE:MANA-USD;line(cum(h.vbuy-h.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar i = KUCOIN:MANA-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar j = MEXC:MANAUSDT;line(cum(j.vbuy-j.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar k = OKEX:MANA-USDC;\n\nvar l = OKEX:MANA-USDT;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = UPBIT:KRW-MANA;line(cum(m.vbuy-m.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -903,6 +921,9 @@
         "BINANCE:manausdt": false,
         "BINANCE_FUTURES:manausd_perp": false,
         "BINANCE_FUTURES:manausdt": false,
+        "BITGET:MANAUSDC": false,
+        "BITGET:MANAUSDT": false,
+        "BITGET:MANAUSDT_UMCBL": false,
         "BYBIT:MANAUSD": false,
         "BYBIT:MANAUSDC-SPOT": false,
         "BYBIT:MANAUSDT": false,
@@ -913,6 +934,8 @@
         "KRAKEN:PF_MANAUSD": false,
         "KUCOIN:MANA-USDT": false,
         "KUCOIN:MANAUSDTM": false,
+        "MEXC:MANAUSDT": false,
+        "MEXC:MANA_USDT": false,
         "OKEX:MANA-USD-SWAP": false,
         "OKEX:MANA-USDC": false,
         "OKEX:MANA-USDT": false,
