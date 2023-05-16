@@ -16,7 +16,8 @@
           "markets": [
             "BINANCE:xvgbusd",
             "BINANCE:xvgusdt",
-            "BITFINEX:XVGUSD"
+            "BITFINEX:XVGUSD",
+            "MEXC:XVGUSDT"
           ],
           "zoom": 1
         },
@@ -35,7 +36,8 @@
           "markets": [
             "BINANCE:xvgbusd",
             "BINANCE:xvgusdt",
-            "BITFINEX:XVGUSD"
+            "BITFINEX:XVGUSD",
+            "MEXC:XVGUSDT"
           ]
         }
       },
@@ -375,6 +377,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -508,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:xvgbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:xvgusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BITFINEX:XVGUSD;\nline(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:xvgbusd;\n\nvar b = BINANCE:xvgusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:XVGUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = MEXC:XVGUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -868,7 +874,8 @@
       "hiddenMarkets": {
         "BINANCE:xvgbusd": false,
         "BINANCE:xvgusdt": false,
-        "BITFINEX:XVGUSD": false
+        "BITFINEX:XVGUSD": false,
+        "MEXC:XVGUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
