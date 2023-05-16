@@ -16,7 +16,8 @@
           "markets": [
             "BINANCE:wnxmbusd",
             "BINANCE:wnxmusdt",
-            "OKEX:WNXM-USDT"
+            "BITGET:WNXMUSDT",
+            "MEXC:WNXMUSDT"
           ],
           "zoom": 1
         },
@@ -35,7 +36,8 @@
           "markets": [
             "BINANCE:wnxmbusd",
             "BINANCE:wnxmusdt",
-            "OKEX:WNXM-USDT"
+            "BITGET:WNXMUSDT",
+            "MEXC:WNXMUSDT"
           ]
         }
       },
@@ -356,7 +358,7 @@
         "fetched": false
       },
       "OKEX": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "PHEMEX": {
@@ -374,6 +376,14 @@
       "_id": "exchanges",
       "UPBIT": {
         "disabled": true,
+        "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
         "fetched": false
       }
     },
@@ -508,7 +518,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:wnxmbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:wnxmusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = OKEX:WNXM-USDT;\nline(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:wnxmbusd;\n\nvar b = BINANCE:wnxmusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:WNXMUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = MEXC:WNXMUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -868,7 +878,8 @@
       "hiddenMarkets": {
         "BINANCE:wnxmbusd": false,
         "BINANCE:wnxmusdt": false,
-        "OKEX:WNXM-USDT": false
+        "BITGET:WNXMUSDT": false,
+        "MEXC:WNXMUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
