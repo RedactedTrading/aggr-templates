@@ -15,7 +15,6 @@
           "type": "chart",
           "markets": [
             "BYBIT:KCALUSDT-SPOT",
-            "OKEX:KCAL-USDC",
             "OKEX:KCAL-USDT"
           ],
           "zoom": 1
@@ -34,7 +33,6 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:KCALUSDT-SPOT",
-            "OKEX:KCAL-USDC",
             "OKEX:KCAL-USDT"
           ]
         }
@@ -508,7 +506,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:KCALUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar b = OKEX:KCAL-USDC;\nline(cum(b.vbuy-b.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar c = OKEX:KCAL-USDT;\nline(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:KCALUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = OKEX:KCAL-USDT;line(cum(b.vbuy-b.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -867,7 +865,6 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:KCALUSDT-SPOT": false,
-        "OKEX:KCAL-USDC": false,
         "OKEX:KCAL-USDT": false
       },
       "barSpacing": 0.39437454420364615,
