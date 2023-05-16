@@ -14,7 +14,9 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BINANCE_FUTURES:footballusdt"
+            "BINANCE_FUTURES:footballusdt",
+            "BITGET:FOOTBALLUSDT_UMCBL",
+            "MEXC:FOOTBALL_USDT"
           ],
           "zoom": 1
         },
@@ -24,7 +26,8 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BINANCE_FUTURES:footballusdt"
+            "BINANCE_FUTURES:footballusdt",
+            "MEXC:FOOTBALL_USDT"
           ]
         },
         "trades2": {
@@ -32,7 +35,9 @@
           "name": "Spot Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "BITGET:FOOTBALLUSDT_UMCBL"
+          ]
         }
       },
       "layout": [
@@ -371,6 +376,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -460,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:footballusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:footballusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = MEXC:FOOTBALL_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -504,7 +517,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:FOOTBALLUSDT_UMCBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -862,7 +875,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE_FUTURES:footballusdt": false
+        "BINANCE_FUTURES:footballusdt": false,
+        "BITGET:FOOTBALLUSDT_UMCBL": false,
+        "MEXC:FOOTBALL_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
