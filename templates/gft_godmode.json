@@ -15,9 +15,12 @@
           "type": "chart",
           "markets": [
             "BINANCE:gftbusd",
+            "BITGET:GFTUSDT",
+            "BITGET:GFTUSDT_UMCBL",
             "BYBIT:GFTUSDT",
             "KUCOIN:GFT-USDT",
-            "OKEX:GFT-USDC",
+            "MEXC:GFTUSDT",
+            "MEXC:GFT_USDT",
             "OKEX:GFT-USDT",
             "OKEX:GFT-USDT-SWAP"
           ],
@@ -30,6 +33,7 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:GFTUSDT",
+            "MEXC:GFT_USDT",
             "OKEX:GFT-USDT-SWAP"
           ]
         },
@@ -40,8 +44,10 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:gftbusd",
+            "BITGET:GFTUSDT",
+            "BITGET:GFTUSDT_UMCBL",
             "KUCOIN:GFT-USDT",
-            "OKEX:GFT-USDC",
+            "MEXC:GFTUSDT",
             "OKEX:GFT-USDT"
           ]
         }
@@ -382,6 +388,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -471,7 +485,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:GFTUSDT;\nline(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar b = OKEX:GFT-USDT-SWAP;\nline(cum(b.vbuy-b.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:GFTUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:GFT_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar c = OKEX:GFT-USDT-SWAP;line(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -515,7 +529,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:gftbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = KUCOIN:GFT-USDT;\nline(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar c = OKEX:GFT-USDC;\nline(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar d = OKEX:GFT-USDT;\nline(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:gftbusd;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = BITGET:GFTUSDT;\n\nvar c = BITGET:GFTUSDT_UMCBL;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = KUCOIN:GFT-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:GFTUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:GFT-USDT;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -874,9 +888,12 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:gftbusd": false,
+        "BITGET:GFTUSDT": false,
+        "BITGET:GFTUSDT_UMCBL": false,
         "BYBIT:GFTUSDT": false,
         "KUCOIN:GFT-USDT": false,
-        "OKEX:GFT-USDC": false,
+        "MEXC:GFTUSDT": false,
+        "MEXC:GFT_USDT": false,
         "OKEX:GFT-USDT": false,
         "OKEX:GFT-USDT-SWAP": false
       },
