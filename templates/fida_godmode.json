@@ -20,7 +20,9 @@
             "COINBASE:FIDA-USD",
             "COINBASE:FIDA-USDT",
             "KRAKEN:FIDA/USD",
-            "KUCOIN:FIDA-USDT"
+            "KUCOIN:FIDA-USDT",
+            "MEXC:FIDAUSDT",
+            "MEXC:FIDA_USDT"
           ],
           "zoom": 1
         },
@@ -29,7 +31,9 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "MEXC:FIDA_USDT"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -43,7 +47,8 @@
             "COINBASE:FIDA-USD",
             "COINBASE:FIDA-USDT",
             "KRAKEN:FIDA/USD",
-            "KUCOIN:FIDA-USDT"
+            "KUCOIN:FIDA-USDT",
+            "MEXC:FIDAUSDT"
           ]
         }
       },
@@ -383,6 +388,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -472,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = MEXC:FIDA_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -516,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:fidabusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:fidausdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BYBIT:FIDAUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar d = COINBASE:FIDA-USD;\nline(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar e = COINBASE:FIDA-USDT;\nline(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar f = KUCOIN:FIDA-USDT;\nline(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:fidabusd;\n\nvar b = BINANCE:fidausdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BYBIT:FIDAUSDT-SPOT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = COINBASE:FIDA-USD;\n\nvar e = COINBASE:FIDA-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = KUCOIN:FIDA-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:FIDAUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -880,7 +889,9 @@
         "COINBASE:FIDA-USD": false,
         "COINBASE:FIDA-USDT": false,
         "KRAKEN:FIDA/USD": false,
-        "KUCOIN:FIDA-USDT": false
+        "KUCOIN:FIDA-USDT": false,
+        "MEXC:FIDAUSDT": false,
+        "MEXC:FIDA_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
