@@ -15,6 +15,7 @@
           "type": "chart",
           "markets": [
             "BINANCE_FUTURES:luna2usdt",
+            "BITGET:LUNA2USDT_UMCBL",
             "BYBIT:LUNA2USDT",
             "KRAKEN:LUNA2/USD",
             "KRAKEN:PF_LUNA2USD"
@@ -37,6 +38,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BITGET:LUNA2USDT_UMCBL",
             "KRAKEN:LUNA2/USD",
             "KRAKEN:PF_LUNA2USD"
           ]
@@ -378,6 +380,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -467,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:luna2usdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:LUNA2USDT;\nline(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:luna2usdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:LUNA2USDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -511,7 +517,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:LUNA2USDT_UMCBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -870,6 +876,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE_FUTURES:luna2usdt": false,
+        "BITGET:LUNA2USDT_UMCBL": false,
         "BYBIT:LUNA2USDT": false,
         "KRAKEN:LUNA2/USD": false,
         "KRAKEN:PF_LUNA2USD": false
