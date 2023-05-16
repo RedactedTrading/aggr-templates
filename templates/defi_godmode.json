@@ -15,7 +15,8 @@
           "type": "chart",
           "markets": [
             "BINANCE_FUTURES:defiusdt",
-            "KRAKEN:PF_DEFIUSD"
+            "KRAKEN:PF_DEFIUSD",
+            "MEXC:DEFI_USDT"
           ],
           "zoom": 1
         },
@@ -25,7 +26,8 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BINANCE_FUTURES:defiusdt"
+            "BINANCE_FUTURES:defiusdt",
+            "MEXC:DEFI_USDT"
           ]
         },
         "trades2": {
@@ -374,6 +376,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -463,7 +469,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:defiusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:defiusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = MEXC:DEFI_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -866,7 +872,8 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE_FUTURES:defiusdt": false,
-        "KRAKEN:PF_DEFIUSD": false
+        "KRAKEN:PF_DEFIUSD": false,
+        "MEXC:DEFI_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
