@@ -17,12 +17,15 @@
             "BINANCE:bandbusd",
             "BINANCE:bandusdt",
             "BINANCE_FUTURES:bandusdt",
+            "BITGET:BANDUSDT",
+            "BITGET:BANDUSDT_UMCBL",
             "BYBIT:BANDUSDT",
             "COINBASE:BAND-USD",
             "KRAKEN:BAND/USD",
             "KRAKEN:PF_BANDUSD",
             "KUCOIN:BAND-USDT",
             "KUCOIN:BANDUSDTM",
+            "MEXC:BAND_USDT",
             "OKEX:BAND-USDT",
             "OKEX:BAND-USDT-SWAP"
           ],
@@ -37,6 +40,7 @@
             "BINANCE_FUTURES:bandusdt",
             "BYBIT:BANDUSDT",
             "KUCOIN:BANDUSDTM",
+            "MEXC:BAND_USDT",
             "OKEX:BAND-USDT-SWAP"
           ]
         },
@@ -48,6 +52,8 @@
           "markets": [
             "BINANCE:bandbusd",
             "BINANCE:bandusdt",
+            "BITGET:BANDUSDT",
+            "BITGET:BANDUSDT_UMCBL",
             "COINBASE:BAND-USD",
             "KRAKEN:BAND/USD",
             "KRAKEN:PF_BANDUSD",
@@ -392,6 +398,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -481,7 +495,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:bandusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:BANDUSDT;\nline(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar c = KUCOIN:BANDUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar d = OKEX:BAND-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:bandusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:BANDUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KUCOIN:BANDUSDTM;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:BAND_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar e = OKEX:BAND-USDT-SWAP;line(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -525,7 +539,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bandbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:bandusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = COINBASE:BAND-USD;\nline(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar d = KUCOIN:BAND-USDT;\nline(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar e = OKEX:BAND-USDT;\nline(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bandbusd;\n\nvar b = BINANCE:bandusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:BANDUSDT;\n\nvar d = BITGET:BANDUSDT_UMCBL;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = COINBASE:BAND-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = KUCOIN:BAND-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = OKEX:BAND-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -886,12 +900,15 @@
         "BINANCE:bandbusd": false,
         "BINANCE:bandusdt": false,
         "BINANCE_FUTURES:bandusdt": false,
+        "BITGET:BANDUSDT": false,
+        "BITGET:BANDUSDT_UMCBL": false,
         "BYBIT:BANDUSDT": false,
         "COINBASE:BAND-USD": false,
         "KRAKEN:BAND/USD": false,
         "KRAKEN:PF_BANDUSD": false,
         "KUCOIN:BAND-USDT": false,
         "KUCOIN:BANDUSDTM": false,
+        "MEXC:BAND_USDT": false,
         "OKEX:BAND-USDT": false,
         "OKEX:BAND-USDT-SWAP": false
       },
