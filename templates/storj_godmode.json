@@ -17,12 +17,16 @@
             "BINANCE:storjbusd",
             "BINANCE:storjusdt",
             "BINANCE_FUTURES:storjusdt",
+            "BITGET:STORJUSDT",
+            "BITGET:STORJUSDT_UMCBL",
             "BYBIT:STORJUSDT",
             "COINBASE:STORJ-USD",
             "KRAKEN:PF_STORJUSD",
             "KRAKEN:STORJ/USD",
             "KUCOIN:STORJ-USDT",
             "KUCOIN:STORJUSDTM",
+            "MEXC:STORJUSDT",
+            "MEXC:STORJ_USDT",
             "OKEX:STORJ-USDC",
             "OKEX:STORJ-USDT",
             "OKEX:STORJ-USDT-SWAP",
@@ -39,6 +43,7 @@
             "BINANCE_FUTURES:storjusdt",
             "BYBIT:STORJUSDT",
             "KUCOIN:STORJUSDTM",
+            "MEXC:STORJ_USDT",
             "OKEX:STORJ-USDT-SWAP"
           ]
         },
@@ -50,10 +55,13 @@
           "markets": [
             "BINANCE:storjbusd",
             "BINANCE:storjusdt",
+            "BITGET:STORJUSDT",
+            "BITGET:STORJUSDT_UMCBL",
             "COINBASE:STORJ-USD",
             "KRAKEN:PF_STORJUSD",
             "KRAKEN:STORJ/USD",
             "KUCOIN:STORJ-USDT",
+            "MEXC:STORJUSDT",
             "OKEX:STORJ-USDC",
             "OKEX:STORJ-USDT",
             "UPBIT:KRW-STORJ"
@@ -396,6 +404,14 @@
       "UPBIT": {
         "disabled": false,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -485,7 +501,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:storjusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:STORJUSDT;\nline(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar c = KUCOIN:STORJUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar d = OKEX:STORJ-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:storjusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:STORJUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KUCOIN:STORJUSDTM;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:STORJ_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar e = OKEX:STORJ-USDT-SWAP;line(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -529,7 +545,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:storjbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:storjusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = COINBASE:STORJ-USD;\nline(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar d = KUCOIN:STORJ-USDT;\nline(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar e = OKEX:STORJ-USDC;\nline(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar f = OKEX:STORJ-USDT;\nline(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar g = UPBIT:KRW-STORJ;\nline(cum(g.vbuy-g.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:storjbusd;\n\nvar b = BINANCE:storjusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:STORJUSDT;\n\nvar d = BITGET:STORJUSDT_UMCBL;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = COINBASE:STORJ-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = KUCOIN:STORJ-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:STORJUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:STORJ-USDC;\n\nvar i = OKEX:STORJ-USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = UPBIT:KRW-STORJ;line(cum(j.vbuy-j.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -890,12 +906,16 @@
         "BINANCE:storjbusd": false,
         "BINANCE:storjusdt": false,
         "BINANCE_FUTURES:storjusdt": false,
+        "BITGET:STORJUSDT": false,
+        "BITGET:STORJUSDT_UMCBL": false,
         "BYBIT:STORJUSDT": false,
         "COINBASE:STORJ-USD": false,
         "KRAKEN:PF_STORJUSD": false,
         "KRAKEN:STORJ/USD": false,
         "KUCOIN:STORJ-USDT": false,
         "KUCOIN:STORJUSDTM": false,
+        "MEXC:STORJUSDT": false,
+        "MEXC:STORJ_USDT": false,
         "OKEX:STORJ-USDC": false,
         "OKEX:STORJ-USDT": false,
         "OKEX:STORJ-USDT-SWAP": false,
