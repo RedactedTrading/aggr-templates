@@ -14,7 +14,9 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BYBIT:STRMUSDT-SPOT"
+            "BITGET:STRMUSDT",
+            "BYBIT:STRMUSDT-SPOT",
+            "MEXC:STRMUSDT"
           ],
           "zoom": 1
         },
@@ -31,7 +33,9 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BYBIT:STRMUSDT-SPOT"
+            "BITGET:STRMUSDT",
+            "BYBIT:STRMUSDT-SPOT",
+            "MEXC:STRMUSDT"
           ]
         }
       },
@@ -371,6 +375,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -504,7 +516,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:STRMUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:STRMUSDT;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:STRMUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = MEXC:STRMUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -862,7 +874,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:STRMUSDT-SPOT": false
+        "BITGET:STRMUSDT": false,
+        "BYBIT:STRMUSDT-SPOT": false,
+        "MEXC:STRMUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
