@@ -16,6 +16,9 @@
           "markets": [
             "BINANCE:yfiibusd",
             "BINANCE:yfiiusdt",
+            "BITGET:YFIIUSDT",
+            "MEXC:YFIIUSDT",
+            "MEXC:YFII_USDT",
             "OKEX:YFII-USDC",
             "OKEX:YFII-USDT",
             "OKEX:YFII-USDT-SWAP"
@@ -28,6 +31,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "MEXC:YFII_USDT",
             "OKEX:YFII-USDT-SWAP"
           ]
         },
@@ -39,6 +43,8 @@
           "markets": [
             "BINANCE:yfiibusd",
             "BINANCE:yfiiusdt",
+            "BITGET:YFIIUSDT",
+            "MEXC:YFIIUSDT",
             "OKEX:YFII-USDC",
             "OKEX:YFII-USDT"
           ]
@@ -380,6 +386,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -469,7 +483,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = OKEX:YFII-USDT-SWAP;\nline(cum(a.vbuy-a.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = MEXC:YFII_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar b = OKEX:YFII-USDT-SWAP;line(cum(b.vbuy-b.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -513,7 +527,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:yfiibusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:yfiiusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = OKEX:YFII-USDC;\nline(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar d = OKEX:YFII-USDT;\nline(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:yfiibusd;\n\nvar b = BINANCE:yfiiusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:YFIIUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = MEXC:YFIIUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar e = OKEX:YFII-USDC;\n\nvar f = OKEX:YFII-USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -873,6 +887,9 @@
       "hiddenMarkets": {
         "BINANCE:yfiibusd": false,
         "BINANCE:yfiiusdt": false,
+        "BITGET:YFIIUSDT": false,
+        "MEXC:YFIIUSDT": false,
+        "MEXC:YFII_USDT": false,
         "OKEX:YFII-USDC": false,
         "OKEX:YFII-USDT": false,
         "OKEX:YFII-USDT-SWAP": false
