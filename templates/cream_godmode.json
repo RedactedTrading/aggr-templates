@@ -16,7 +16,8 @@
           "markets": [
             "BINANCE:creambusd",
             "BYBIT:CREAMUSDT",
-            "KUCOIN:CREAM-USDT"
+            "KUCOIN:CREAM-USDT",
+            "MEXC:CREAM_USDT"
           ],
           "zoom": 1
         },
@@ -26,7 +27,8 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BYBIT:CREAMUSDT"
+            "BYBIT:CREAMUSDT",
+            "MEXC:CREAM_USDT"
           ]
         },
         "trades2": {
@@ -376,6 +378,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -465,7 +471,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:CREAMUSDT;\nline(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:CREAMUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:CREAM_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -509,7 +515,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:creambusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = KUCOIN:CREAM-USDT;\nline(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:creambusd;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = KUCOIN:CREAM-USDT;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -869,7 +875,8 @@
       "hiddenMarkets": {
         "BINANCE:creambusd": false,
         "BYBIT:CREAMUSDT": false,
-        "KUCOIN:CREAM-USDT": false
+        "KUCOIN:CREAM-USDT": false,
+        "MEXC:CREAM_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
