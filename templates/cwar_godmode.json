@@ -15,7 +15,8 @@
           "type": "chart",
           "markets": [
             "BYBIT:CWARUSDT-SPOT",
-            "KUCOIN:CWAR-USDT"
+            "KUCOIN:CWAR-USDT",
+            "MEXC:CWARUSDT"
           ],
           "zoom": 1
         },
@@ -33,7 +34,8 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:CWARUSDT-SPOT",
-            "KUCOIN:CWAR-USDT"
+            "KUCOIN:CWAR-USDT",
+            "MEXC:CWARUSDT"
           ]
         }
       },
@@ -373,6 +375,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -506,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:CWARUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar b = KUCOIN:CWAR-USDT;\nline(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:CWARUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = KUCOIN:CWAR-USDT;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar c = MEXC:CWARUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -865,7 +871,8 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:CWARUSDT-SPOT": false,
-        "KUCOIN:CWAR-USDT": false
+        "KUCOIN:CWAR-USDT": false,
+        "MEXC:CWARUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
