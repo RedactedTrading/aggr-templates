@@ -16,6 +16,7 @@
           "markets": [
             "BINANCE:nulsbusd",
             "BINANCE:nulsusdt",
+            "MEXC:NULSUSDT",
             "OKEX:NULS-USDT"
           ],
           "zoom": 1
@@ -35,6 +36,7 @@
           "markets": [
             "BINANCE:nulsbusd",
             "BINANCE:nulsusdt",
+            "MEXC:NULSUSDT",
             "OKEX:NULS-USDT"
           ]
         }
@@ -375,6 +377,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -508,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:nulsbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:nulsusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = OKEX:NULS-USDT;\nline(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:nulsbusd;\n\nvar b = BINANCE:nulsusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = MEXC:NULSUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar d = OKEX:NULS-USDT;line(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -868,6 +874,7 @@
       "hiddenMarkets": {
         "BINANCE:nulsbusd": false,
         "BINANCE:nulsusdt": false,
+        "MEXC:NULSUSDT": false,
         "OKEX:NULS-USDT": false
       },
       "barSpacing": 0.39437454420364615,
