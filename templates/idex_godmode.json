@@ -16,9 +16,13 @@
           "markets": [
             "BINANCE:idexbusd",
             "BINANCE:idexusdt",
+            "BINANCE_FUTURES:idexusdt",
+            "BITGET:IDEXUSDT",
             "COINBASE:IDEX-USD",
             "COINBASE:IDEX-USDT",
-            "KRAKEN:IDEX/USD"
+            "KRAKEN:IDEX/USD",
+            "MEXC:IDEXUSDT",
+            "MEXC:IDEX_USDT"
           ],
           "zoom": 1
         },
@@ -27,7 +31,10 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "BINANCE_FUTURES:idexusdt",
+            "MEXC:IDEX_USDT"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -37,9 +44,11 @@
           "markets": [
             "BINANCE:idexbusd",
             "BINANCE:idexusdt",
+            "BITGET:IDEXUSDT",
             "COINBASE:IDEX-USD",
             "COINBASE:IDEX-USDT",
-            "KRAKEN:IDEX/USD"
+            "KRAKEN:IDEX/USD",
+            "MEXC:IDEXUSDT"
           ]
         }
       },
@@ -304,7 +313,7 @@
         "fetched": false
       },
       "BINANCE_FUTURES": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BINANCE_US": {
@@ -378,6 +387,14 @@
       "_id": "exchanges",
       "UPBIT": {
         "disabled": true,
+        "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
         "fetched": false
       }
     },
@@ -468,7 +485,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:idexusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = MEXC:IDEX_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -512,7 +529,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:idexbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:idexusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = COINBASE:IDEX-USD;\nline(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar d = COINBASE:IDEX-USDT;\nline(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:idexbusd;\n\nvar b = BINANCE:idexusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:IDEXUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:IDEX-USD;\n\nvar e = COINBASE:IDEX-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = MEXC:IDEXUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -872,9 +889,13 @@
       "hiddenMarkets": {
         "BINANCE:idexbusd": false,
         "BINANCE:idexusdt": false,
+        "BINANCE_FUTURES:idexusdt": false,
+        "BITGET:IDEXUSDT": false,
         "COINBASE:IDEX-USD": false,
         "COINBASE:IDEX-USDT": false,
-        "KRAKEN:IDEX/USD": false
+        "KRAKEN:IDEX/USD": false,
+        "MEXC:IDEXUSDT": false,
+        "MEXC:IDEX_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
