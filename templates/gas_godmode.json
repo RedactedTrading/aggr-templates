@@ -17,6 +17,7 @@
             "BINANCE:gasbusd",
             "BINANCE:gasusdt",
             "KUCOIN:GAS-USDT",
+            "MEXC:GASUSDT",
             "OKEX:GAS-USDT",
             "UPBIT:KRW-GAS"
           ],
@@ -38,6 +39,7 @@
             "BINANCE:gasbusd",
             "BINANCE:gasusdt",
             "KUCOIN:GAS-USDT",
+            "MEXC:GASUSDT",
             "OKEX:GAS-USDT",
             "UPBIT:KRW-GAS"
           ]
@@ -379,6 +381,10 @@
       "UPBIT": {
         "disabled": false,
         "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -512,7 +518,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:gasbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:gasusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = KUCOIN:GAS-USDT;\nline(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar d = OKEX:GAS-USDT;\nline(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar e = UPBIT:KRW-GAS;\nline(cum(e.vbuy-e.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:gasbusd;\n\nvar b = BINANCE:gasusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = KUCOIN:GAS-USDT;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:GASUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar e = OKEX:GAS-USDT;line(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = UPBIT:KRW-GAS;line(cum(f.vbuy-f.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -873,6 +879,7 @@
         "BINANCE:gasbusd": false,
         "BINANCE:gasusdt": false,
         "KUCOIN:GAS-USDT": false,
+        "MEXC:GASUSDT": false,
         "OKEX:GAS-USDT": false,
         "UPBIT:KRW-GAS": true
       },
