@@ -17,13 +17,16 @@
             "BINANCE:qntbusd",
             "BINANCE:qntusdt",
             "BINANCE_FUTURES:qntusdt",
+            "BITGET:QNTUSDT",
             "BYBIT:QNTUSDT-SPOT",
             "COINBASE:QNT-USD",
             "COINBASE:QNT-USDT",
             "KRAKEN:PF_QNTUSD",
             "KRAKEN:QNT/USD",
             "KUCOIN:QNT-USDT",
-            "KUCOIN:QNTUSDTM"
+            "KUCOIN:QNTUSDTM",
+            "MEXC:QNTUSDT",
+            "MEXC:QNT_USDT"
           ],
           "zoom": 1
         },
@@ -34,7 +37,8 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:qntusdt",
-            "KUCOIN:QNTUSDTM"
+            "KUCOIN:QNTUSDTM",
+            "MEXC:QNT_USDT"
           ]
         },
         "trades2": {
@@ -45,12 +49,14 @@
           "markets": [
             "BINANCE:qntbusd",
             "BINANCE:qntusdt",
+            "BITGET:QNTUSDT",
             "BYBIT:QNTUSDT-SPOT",
             "COINBASE:QNT-USD",
             "COINBASE:QNT-USDT",
             "KRAKEN:PF_QNTUSD",
             "KRAKEN:QNT/USD",
-            "KUCOIN:QNT-USDT"
+            "KUCOIN:QNT-USDT",
+            "MEXC:QNTUSDT"
           ]
         }
       },
@@ -390,6 +396,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -479,7 +493,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:qntusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = KUCOIN:QNTUSDTM;\nline(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:qntusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = KUCOIN:QNTUSDTM;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar c = MEXC:QNT_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -523,7 +537,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:qntbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:qntusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BYBIT:QNTUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar d = COINBASE:QNT-USD;\nline(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar e = COINBASE:QNT-USDT;\nline(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar f = KUCOIN:QNT-USDT;\nline(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:qntbusd;\n\nvar b = BINANCE:qntusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:QNTUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:QNTUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = COINBASE:QNT-USD;\n\nvar f = COINBASE:QNT-USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = KUCOIN:QNT-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = MEXC:QNTUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -884,13 +898,16 @@
         "BINANCE:qntbusd": false,
         "BINANCE:qntusdt": false,
         "BINANCE_FUTURES:qntusdt": false,
+        "BITGET:QNTUSDT": false,
         "BYBIT:QNTUSDT-SPOT": false,
         "COINBASE:QNT-USD": false,
         "COINBASE:QNT-USDT": false,
         "KRAKEN:PF_QNTUSD": false,
         "KRAKEN:QNT/USD": false,
         "KUCOIN:QNT-USDT": false,
-        "KUCOIN:QNTUSDTM": false
+        "KUCOIN:QNTUSDTM": false,
+        "MEXC:QNTUSDT": false,
+        "MEXC:QNT_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
