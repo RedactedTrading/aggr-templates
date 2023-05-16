@@ -21,6 +21,10 @@
             "BINANCE_FUTURES:eosusd_perp",
             "BINANCE_FUTURES:eosusdt",
             "BITFINEX:EOSUSD",
+            "BITGET:EOSUSDC",
+            "BITGET:EOSUSDT",
+            "BITGET:EOSUSDT_UMCBL",
+            "BITGET:EOSUSD_DMCBL",
             "BITMEX:EOSUSD",
             "BYBIT:EOSUSD",
             "BYBIT:EOSUSDC-SPOT",
@@ -33,6 +37,8 @@
             "KUCOIN:EOS-USDC",
             "KUCOIN:EOS-USDT",
             "KUCOIN:EOSUSDTM",
+            "MEXC:EOSUSDC",
+            "MEXC:EOS_USDT",
             "OKEX:EOS-USD-SWAP",
             "OKEX:EOS-USDC",
             "OKEX:EOS-USDT",
@@ -53,6 +59,7 @@
             "BYBIT:EOSUSD",
             "BYBIT:EOSUSDT",
             "KUCOIN:EOSUSDTM",
+            "MEXC:EOS_USDT",
             "OKEX:EOS-USD-SWAP",
             "OKEX:EOS-USDT-SWAP"
           ]
@@ -68,6 +75,10 @@
             "BINANCE:eosusdc",
             "BINANCE:eosusdt",
             "BITFINEX:EOSUSD",
+            "BITGET:EOSUSDC",
+            "BITGET:EOSUSDT",
+            "BITGET:EOSUSDT_UMCBL",
+            "BITGET:EOSUSD_DMCBL",
             "BYBIT:EOSUSDC-SPOT",
             "BYBIT:EOSUSDT-SPOT",
             "COINBASE:EOS-USD",
@@ -76,6 +87,7 @@
             "KRAKEN:PF_EOSUSD",
             "KUCOIN:EOS-USDC",
             "KUCOIN:EOS-USDT",
+            "MEXC:EOSUSDC",
             "OKEX:EOS-USDC",
             "OKEX:EOS-USDT",
             "UPBIT:KRW-EOS"
@@ -418,6 +430,14 @@
       "UPBIT": {
         "disabled": false,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -507,7 +527,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:eosusd_perp;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BINANCE_FUTURES:eosusdt;\nline(cum(b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar c = BITMEX:EOSUSD;\nline(cum(c.vbuy-c.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\nvar d = BYBIT:EOSUSD;\nline(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar e = BYBIT:EOSUSDT;\nline(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar f = KUCOIN:EOSUSDTM;\nline(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar g = OKEX:EOS-USD-SWAP;\nline(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar h = OKEX:EOS-USDT-SWAP;\nline(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:eosusd_perp;\n\nvar b = BINANCE_FUTURES:eosusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITMEX:EOSUSD;line(cum(c.vbuy-c.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar d = BYBIT:EOSUSD;\n\nvar e = BYBIT:EOSUSDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = KUCOIN:EOSUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:EOS_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:EOS-USD-SWAP;\n\nvar i = OKEX:EOS-USDT-SWAP;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -551,7 +571,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:eosbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:eostusd;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BINANCE:eosusdc;\nline(cum(c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar d = BINANCE:eosusdt;\nline(cum(d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar e = BITFINEX:EOSUSD;\nline(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\nvar f = BYBIT:EOSUSDC-SPOT;\nline(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar g = BYBIT:EOSUSDT-SPOT;\nline(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar h = COINBASE:EOS-USD;\nline(cum(h.vbuy-h.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar i = KUCOIN:EOS-USDC;\nline(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar j = KUCOIN:EOS-USDT;\nline(cum(j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar k = OKEX:EOS-USDC;\nline(cum(k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar l = OKEX:EOS-USDT;\nline(cum(l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar m = UPBIT:KRW-EOS;\nline(cum(m.vbuy-m.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:eosbusd;\n\nvar b = BINANCE:eostusd;\n\nvar c = BINANCE:eosusdc;\n\nvar d = BINANCE:eosusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:EOSUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:EOSUSDC;\n\nvar g = BITGET:EOSUSDT;\n\nvar h = BITGET:EOSUSDT_UMCBL;\n\nvar i = BITGET:EOSUSD_DMCBL;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar j = BYBIT:EOSUSDC-SPOT;\n\nvar k = BYBIT:EOSUSDT-SPOT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar l = COINBASE:EOS-USD;line(cum(l.vbuy-l.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar m = KUCOIN:EOS-USDC;\n\nvar n = KUCOIN:EOS-USDT;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar o = MEXC:EOSUSDC;line(cum(o.vbuy-o.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar p = OKEX:EOS-USDC;\n\nvar q = OKEX:EOS-USDT;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar r = UPBIT:KRW-EOS;line(cum(r.vbuy-r.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -916,6 +936,10 @@
         "BINANCE_FUTURES:eosusd_perp": false,
         "BINANCE_FUTURES:eosusdt": false,
         "BITFINEX:EOSUSD": false,
+        "BITGET:EOSUSDC": false,
+        "BITGET:EOSUSDT": false,
+        "BITGET:EOSUSDT_UMCBL": false,
+        "BITGET:EOSUSD_DMCBL": false,
         "BITMEX:EOSUSD": false,
         "BYBIT:EOSUSD": false,
         "BYBIT:EOSUSDC-SPOT": false,
@@ -928,6 +952,8 @@
         "KUCOIN:EOS-USDC": false,
         "KUCOIN:EOS-USDT": false,
         "KUCOIN:EOSUSDTM": false,
+        "MEXC:EOSUSDC": false,
+        "MEXC:EOS_USDT": false,
         "OKEX:EOS-USD-SWAP": false,
         "OKEX:EOS-USDC": false,
         "OKEX:EOS-USDT": false,
