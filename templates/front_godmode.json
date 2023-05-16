@@ -16,7 +16,9 @@
           "markets": [
             "BINANCE:frontbusd",
             "BINANCE:frontusdt",
+            "BITGET:FRONTUSDT",
             "KUCOIN:FRONT-USDT",
+            "MEXC:FRONTUSDT",
             "OKEX:FRONT-USDT"
           ],
           "zoom": 1
@@ -36,7 +38,9 @@
           "markets": [
             "BINANCE:frontbusd",
             "BINANCE:frontusdt",
+            "BITGET:FRONTUSDT",
             "KUCOIN:FRONT-USDT",
+            "MEXC:FRONTUSDT",
             "OKEX:FRONT-USDT"
           ]
         }
@@ -377,6 +381,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -510,7 +522,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:frontbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:frontusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = KUCOIN:FRONT-USDT;\nline(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar d = OKEX:FRONT-USDT;\nline(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:frontbusd;\n\nvar b = BINANCE:frontusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:FRONTUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = KUCOIN:FRONT-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:FRONTUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:FRONT-USDT;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -870,7 +882,9 @@
       "hiddenMarkets": {
         "BINANCE:frontbusd": false,
         "BINANCE:frontusdt": false,
+        "BITGET:FRONTUSDT": false,
         "KUCOIN:FRONT-USDT": false,
+        "MEXC:FRONTUSDT": false,
         "OKEX:FRONT-USDT": false
       },
       "barSpacing": 0.39437454420364615,
