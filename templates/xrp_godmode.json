@@ -22,6 +22,10 @@
             "BINANCE_FUTURES:xrpusd_perp",
             "BINANCE_FUTURES:xrpusdt",
             "BITFINEX:XRPUSD",
+            "BITGET:XRPUSDC",
+            "BITGET:XRPUSDT",
+            "BITGET:XRPUSDT_UMCBL",
+            "BITGET:XRPUSD_DMCBL",
             "BITMEX:XRPUSD",
             "BITMEX:XRPUSDT",
             "BYBIT:XRPUSD",
@@ -38,6 +42,8 @@
             "KUCOIN:XRP-USDT",
             "KUCOIN:XRPUSDM",
             "KUCOIN:XRPUSDTM",
+            "MEXC:XRPUSDC",
+            "MEXC:XRP_USDT",
             "OKEX:XRP-USD-SWAP",
             "OKEX:XRP-USDC",
             "OKEX:XRP-USDT",
@@ -63,6 +69,7 @@
             "DERIBIT:XRP_USDC-PERPETUAL",
             "KRAKEN:PI_XRPUSD",
             "KUCOIN:XRPUSDTM",
+            "MEXC:XRP_USDT",
             "OKEX:XRP-USD-SWAP",
             "OKEX:XRP-USDT-SWAP"
           ]
@@ -78,6 +85,10 @@
             "BINANCE:xrpusdc",
             "BINANCE:xrpusdt",
             "BITFINEX:XRPUSD",
+            "BITGET:XRPUSDC",
+            "BITGET:XRPUSDT",
+            "BITGET:XRPUSDT_UMCBL",
+            "BITGET:XRPUSD_DMCBL",
             "BYBIT:XRPUSDC-SPOT",
             "BYBIT:XRPUSDT-SPOT",
             "KRAKEN:PF_XRPUSD",
@@ -87,6 +98,7 @@
             "KUCOIN:XRP-USDC",
             "KUCOIN:XRP-USDT",
             "KUCOIN:XRPUSDM",
+            "MEXC:XRPUSDC",
             "OKEX:XRP-USDC",
             "OKEX:XRP-USDT",
             "UPBIT:KRW-XRP",
@@ -430,6 +442,14 @@
       "UPBIT": {
         "disabled": false,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -519,7 +539,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:xrpbusd;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BINANCE_FUTURES:xrpusd_perp;\nline(cum(b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar c = BINANCE_FUTURES:xrpusdt;\nline(cum(c.vbuy-c.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar d = BITMEX:XRPUSD;\nline(cum(d.vbuy-d.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\nvar e = BITMEX:XRPUSDT;\nline(cum(e.vbuy-e.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\nvar f = BYBIT:XRPUSD;\nline(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar g = BYBIT:XRPUSDT;\nline(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar h = DERIBIT:XRP_USDC-PERPETUAL;\nline(cum(h.vbuy-h.vsell), title=\"DRBT\", color=\"rgb(50, 121, 175)\");\n\nvar i = KUCOIN:XRPUSDTM;\nline(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar j = OKEX:XRP-USD-SWAP;\nline(cum(j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar k = OKEX:XRP-USDT-SWAP;\nline(cum(k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:xrpbusd;\n\nvar b = BINANCE_FUTURES:xrpusd_perp;\n\nvar c = BINANCE_FUTURES:xrpusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar d = BITMEX:XRPUSD;\n\nvar e = BITMEX:XRPUSDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar f = BYBIT:XRPUSD;\n\nvar g = BYBIT:XRPUSDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = DERIBIT:XRP_USDC-PERPETUAL;line(cum(h.vbuy-h.vsell), title=\"DRBT\", color=\"rgb(180, 242, 243)\");\n\n\nvar i = KUCOIN:XRPUSDTM;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar j = MEXC:XRP_USDT;line(cum(j.vbuy-j.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar k = OKEX:XRP-USD-SWAP;\n\nvar l = OKEX:XRP-USDT-SWAP;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -563,7 +583,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:xrpbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:xrptusd;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BINANCE:xrpusdc;\nline(cum(c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar d = BINANCE:xrpusdt;\nline(cum(d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar e = BITFINEX:XRPUSD;\nline(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\nvar f = BYBIT:XRPUSDC-SPOT;\nline(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar g = BYBIT:XRPUSDT-SPOT;\nline(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar h = KUCOIN:XRP-TUSD;\nline(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar i = KUCOIN:XRP-USDC;\nline(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar j = KUCOIN:XRP-USDT;\nline(cum(j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar k = KUCOIN:XRPUSDM;\nline(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar l = OKEX:XRP-USDC;\nline(cum(l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar m = OKEX:XRP-USDT;\nline(cum(m.vbuy-m.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar n = UPBIT:KRW-XRP;\nline(cum(n.vbuy-n.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nvar o = UPBIT:USDT-XRP;\nline(cum(o.vbuy-o.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:xrpbusd;\n\nvar b = BINANCE:xrptusd;\n\nvar c = BINANCE:xrpusdc;\n\nvar d = BINANCE:xrpusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:XRPUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:XRPUSDC;\n\nvar g = BITGET:XRPUSDT;\n\nvar h = BITGET:XRPUSDT_UMCBL;\n\nvar i = BITGET:XRPUSD_DMCBL;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar j = BYBIT:XRPUSDC-SPOT;\n\nvar k = BYBIT:XRPUSDT-SPOT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar l = KUCOIN:XRP-TUSD;\n\nvar m = KUCOIN:XRP-USDC;\n\nvar n = KUCOIN:XRP-USDT;\n\nvar o = KUCOIN:XRPUSDM;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar p = MEXC:XRPUSDC;line(cum(p.vbuy-p.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar q = OKEX:XRP-USDC;\n\nvar r = OKEX:XRP-USDT;line(cum(q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar s = UPBIT:KRW-XRP;\n\nvar t = UPBIT:USDT-XRP;line(cum(s.vbuy-s.vsell+t.vbuy-t.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -929,6 +949,10 @@
         "BINANCE_FUTURES:xrpusd_perp": false,
         "BINANCE_FUTURES:xrpusdt": false,
         "BITFINEX:XRPUSD": false,
+        "BITGET:XRPUSDC": false,
+        "BITGET:XRPUSDT": false,
+        "BITGET:XRPUSDT_UMCBL": false,
+        "BITGET:XRPUSD_DMCBL": false,
         "BITMEX:XRPUSD": false,
         "BITMEX:XRPUSDT": false,
         "BYBIT:XRPUSD": false,
@@ -945,6 +969,8 @@
         "KUCOIN:XRP-USDT": false,
         "KUCOIN:XRPUSDM": false,
         "KUCOIN:XRPUSDTM": false,
+        "MEXC:XRPUSDC": false,
+        "MEXC:XRP_USDT": false,
         "OKEX:XRP-USD-SWAP": false,
         "OKEX:XRP-USDC": false,
         "OKEX:XRP-USDT": false,
