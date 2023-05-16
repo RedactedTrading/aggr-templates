@@ -17,10 +17,13 @@
             "BINANCE:gtcbusd",
             "BINANCE:gtcusdt",
             "BINANCE_FUTURES:gtcusdt",
+            "BITGET:GTCUSDT",
             "BYBIT:GTCUSDT",
             "COINBASE:GTC-USD",
             "KRAKEN:GTC/USD",
-            "KUCOIN:GTC-USDT"
+            "KUCOIN:GTC-USDT",
+            "MEXC:GTCUSDT",
+            "MEXC:GTC_USDT"
           ],
           "zoom": 1
         },
@@ -31,7 +34,8 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:gtcusdt",
-            "BYBIT:GTCUSDT"
+            "BYBIT:GTCUSDT",
+            "MEXC:GTC_USDT"
           ]
         },
         "trades2": {
@@ -42,9 +46,11 @@
           "markets": [
             "BINANCE:gtcbusd",
             "BINANCE:gtcusdt",
+            "BITGET:GTCUSDT",
             "COINBASE:GTC-USD",
             "KRAKEN:GTC/USD",
-            "KUCOIN:GTC-USDT"
+            "KUCOIN:GTC-USDT",
+            "MEXC:GTCUSDT"
           ]
         }
       },
@@ -384,6 +390,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -473,7 +487,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:gtcusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:GTCUSDT;\nline(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:gtcusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:GTCUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = MEXC:GTC_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -517,7 +531,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:gtcbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:gtcusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = COINBASE:GTC-USD;\nline(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(255, 141, 7)\");\n\nvar d = KUCOIN:GTC-USDT;\nline(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:gtcbusd;\n\nvar b = BINANCE:gtcusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:GTCUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:GTC-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = KUCOIN:GTC-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:GTCUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -878,10 +892,13 @@
         "BINANCE:gtcbusd": false,
         "BINANCE:gtcusdt": false,
         "BINANCE_FUTURES:gtcusdt": false,
+        "BITGET:GTCUSDT": false,
         "BYBIT:GTCUSDT": false,
         "COINBASE:GTC-USD": false,
         "KRAKEN:GTC/USD": false,
-        "KUCOIN:GTC-USDT": false
+        "KUCOIN:GTC-USDT": false,
+        "MEXC:GTCUSDT": false,
+        "MEXC:GTC_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
