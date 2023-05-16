@@ -17,12 +17,16 @@
             "BINANCE:klaybusd",
             "BINANCE:klayusdt",
             "BINANCE_FUTURES:klayusdt",
+            "BITGET:KLAYUSDT",
+            "BITGET:KLAYUSDT_UMCBL",
             "BITMEX:KLAYUSD",
             "BITMEX:KLAYUSDT",
             "BYBIT:KLAYUSDT",
             "BYBIT:KLAYUSDT-SPOT",
             "KUCOIN:KLAY-USDT",
             "KUCOIN:KLAYUSDTM",
+            "MEXC:KLAYUSDC",
+            "MEXC:KLAY_USDT",
             "OKEX:KLAY-USDC",
             "OKEX:KLAY-USDT",
             "OKEX:KLAY-USDT-SWAP"
@@ -40,6 +44,7 @@
             "BITMEX:KLAYUSDT",
             "BYBIT:KLAYUSDT",
             "KUCOIN:KLAYUSDTM",
+            "MEXC:KLAY_USDT",
             "OKEX:KLAY-USDT-SWAP"
           ]
         },
@@ -51,8 +56,11 @@
           "markets": [
             "BINANCE:klaybusd",
             "BINANCE:klayusdt",
+            "BITGET:KLAYUSDT",
+            "BITGET:KLAYUSDT_UMCBL",
             "BYBIT:KLAYUSDT-SPOT",
             "KUCOIN:KLAY-USDT",
+            "MEXC:KLAYUSDC",
             "OKEX:KLAY-USDC",
             "OKEX:KLAY-USDT"
           ]
@@ -394,6 +402,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -483,7 +499,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:klayusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BITMEX:KLAYUSD;\nline(cum(b.vbuy-b.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\nvar c = BITMEX:KLAYUSDT;\nline(cum(c.vbuy-c.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\nvar d = BYBIT:KLAYUSDT;\nline(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar e = KUCOIN:KLAYUSDTM;\nline(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar f = OKEX:KLAY-USDT-SWAP;\nline(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:klayusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITMEX:KLAYUSD;\n\nvar c = BITMEX:KLAYUSDT;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar d = BYBIT:KLAYUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KUCOIN:KLAYUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:KLAY_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:KLAY-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -527,7 +543,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:klaybusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:klayusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BYBIT:KLAYUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar d = KUCOIN:KLAY-USDT;\nline(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar e = OKEX:KLAY-USDC;\nline(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar f = OKEX:KLAY-USDT;\nline(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:klaybusd;\n\nvar b = BINANCE:klayusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:KLAYUSDT;\n\nvar d = BITGET:KLAYUSDT_UMCBL;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BYBIT:KLAYUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = KUCOIN:KLAY-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:KLAYUSDC;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:KLAY-USDC;\n\nvar i = OKEX:KLAY-USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -888,12 +904,16 @@
         "BINANCE:klaybusd": false,
         "BINANCE:klayusdt": false,
         "BINANCE_FUTURES:klayusdt": false,
+        "BITGET:KLAYUSDT": false,
+        "BITGET:KLAYUSDT_UMCBL": false,
         "BITMEX:KLAYUSD": false,
         "BITMEX:KLAYUSDT": false,
         "BYBIT:KLAYUSDT": false,
         "BYBIT:KLAYUSDT-SPOT": false,
         "KUCOIN:KLAY-USDT": false,
         "KUCOIN:KLAYUSDTM": false,
+        "MEXC:KLAYUSDC": false,
+        "MEXC:KLAY_USDT": false,
         "OKEX:KLAY-USDC": false,
         "OKEX:KLAY-USDT": false,
         "OKEX:KLAY-USDT-SWAP": false
