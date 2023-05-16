@@ -16,7 +16,9 @@
           "markets": [
             "BINANCE:citybusd",
             "BINANCE:cityusdt",
+            "BITGET:CITYUSDT",
             "BYBIT:CITYUSDT-SPOT",
+            "MEXC:CITYUSDT",
             "OKEX:CITY-USDT"
           ],
           "zoom": 1
@@ -36,7 +38,9 @@
           "markets": [
             "BINANCE:citybusd",
             "BINANCE:cityusdt",
+            "BITGET:CITYUSDT",
             "BYBIT:CITYUSDT-SPOT",
+            "MEXC:CITYUSDT",
             "OKEX:CITY-USDT"
           ]
         }
@@ -377,6 +381,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -510,7 +522,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:citybusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:cityusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BYBIT:CITYUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar d = OKEX:CITY-USDT;\nline(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:citybusd;\n\nvar b = BINANCE:cityusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:CITYUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:CITYUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = MEXC:CITYUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:CITY-USDT;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -870,7 +882,9 @@
       "hiddenMarkets": {
         "BINANCE:citybusd": false,
         "BINANCE:cityusdt": false,
+        "BITGET:CITYUSDT": false,
         "BYBIT:CITYUSDT-SPOT": false,
+        "MEXC:CITYUSDT": false,
         "OKEX:CITY-USDT": false
       },
       "barSpacing": 0.39437454420364615,
