@@ -16,6 +16,8 @@
           "markets": [
             "BINANCE:lunabusd",
             "BINANCE:lunausdt",
+            "BITGET:LUNAUSDC",
+            "BITGET:LUNAUSDT",
             "BITMEX:LUNAUSD",
             "BITMEX:LUNAUSDT",
             "BYBIT:LUNAUSDT-SPOT",
@@ -23,6 +25,7 @@
             "KUCOIN:LUNA-USDC",
             "KUCOIN:LUNA-USDT",
             "KUCOIN:LUNAUSDTM",
+            "MEXC:LUNAUSDC",
             "OKEX:LUNA-USDC",
             "OKEX:LUNA-USDT",
             "OKEX:LUNA-USDT-SWAP"
@@ -49,10 +52,13 @@
           "markets": [
             "BINANCE:lunabusd",
             "BINANCE:lunausdt",
+            "BITGET:LUNAUSDC",
+            "BITGET:LUNAUSDT",
             "BYBIT:LUNAUSDT-SPOT",
             "KRAKEN:LUNA/USD",
             "KUCOIN:LUNA-USDC",
             "KUCOIN:LUNA-USDT",
+            "MEXC:LUNAUSDC",
             "OKEX:LUNA-USDC",
             "OKEX:LUNA-USDT"
           ]
@@ -394,6 +400,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -483,7 +497,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITMEX:LUNAUSD;\nline(cum(a.vbuy-a.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\nvar b = BITMEX:LUNAUSDT;\nline(cum(b.vbuy-b.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\nvar c = KUCOIN:LUNAUSDTM;\nline(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar d = OKEX:LUNA-USDT-SWAP;\nline(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITMEX:LUNAUSD;\n\nvar b = BITMEX:LUNAUSDT;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar c = KUCOIN:LUNAUSDTM;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = OKEX:LUNA-USDT-SWAP;line(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -527,7 +541,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:lunabusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:lunausdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = BYBIT:LUNAUSDT-SPOT;\nline(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar d = KUCOIN:LUNA-USDC;\nline(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar e = KUCOIN:LUNA-USDT;\nline(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar f = OKEX:LUNA-USDC;\nline(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar g = OKEX:LUNA-USDT;\nline(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:lunabusd;\n\nvar b = BINANCE:lunausdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:LUNAUSDC;\n\nvar d = BITGET:LUNAUSDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BYBIT:LUNAUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = KUCOIN:LUNA-USDC;\n\nvar g = KUCOIN:LUNA-USDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = MEXC:LUNAUSDC;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar i = OKEX:LUNA-USDC;\n\nvar j = OKEX:LUNA-USDT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -887,6 +901,8 @@
       "hiddenMarkets": {
         "BINANCE:lunabusd": false,
         "BINANCE:lunausdt": false,
+        "BITGET:LUNAUSDC": false,
+        "BITGET:LUNAUSDT": false,
         "BITMEX:LUNAUSD": false,
         "BITMEX:LUNAUSDT": false,
         "BYBIT:LUNAUSDT-SPOT": false,
@@ -894,6 +910,7 @@
         "KUCOIN:LUNA-USDC": false,
         "KUCOIN:LUNA-USDT": false,
         "KUCOIN:LUNAUSDTM": false,
+        "MEXC:LUNAUSDC": false,
         "OKEX:LUNA-USDC": false,
         "OKEX:LUNA-USDT": false,
         "OKEX:LUNA-USDT-SWAP": false
