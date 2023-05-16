@@ -17,8 +17,12 @@
             "BINANCE:sfpbusd",
             "BINANCE:sfpusdt",
             "BINANCE_FUTURES:sfpusdt",
+            "BITGET:SFPUSDT",
+            "BITGET:SFPUSDT_UMCBL",
             "BYBIT:SFPUSDT",
-            "KUCOIN:SFP-USDT"
+            "KUCOIN:SFP-USDT",
+            "MEXC:SFPUSDT",
+            "MEXC:SFP_USDT"
           ],
           "zoom": 1
         },
@@ -29,7 +33,8 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:sfpusdt",
-            "BYBIT:SFPUSDT"
+            "BYBIT:SFPUSDT",
+            "MEXC:SFP_USDT"
           ]
         },
         "trades2": {
@@ -40,7 +45,10 @@
           "markets": [
             "BINANCE:sfpbusd",
             "BINANCE:sfpusdt",
-            "KUCOIN:SFP-USDT"
+            "BITGET:SFPUSDT",
+            "BITGET:SFPUSDT_UMCBL",
+            "KUCOIN:SFP-USDT",
+            "MEXC:SFPUSDT"
           ]
         }
       },
@@ -380,6 +388,14 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -469,7 +485,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:sfpusdt;\nline(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\nvar b = BYBIT:SFPUSDT;\nline(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:sfpusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:SFPUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = MEXC:SFP_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -513,7 +529,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:sfpbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:sfpusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = KUCOIN:SFP-USDT;\nline(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:sfpbusd;\n\nvar b = BINANCE:sfpusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:SFPUSDT;\n\nvar d = BITGET:SFPUSDT_UMCBL;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = KUCOIN:SFP-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:SFPUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -874,8 +890,12 @@
         "BINANCE:sfpbusd": false,
         "BINANCE:sfpusdt": false,
         "BINANCE_FUTURES:sfpusdt": false,
+        "BITGET:SFPUSDT": false,
+        "BITGET:SFPUSDT_UMCBL": false,
         "BYBIT:SFPUSDT": false,
-        "KUCOIN:SFP-USDT": false
+        "KUCOIN:SFP-USDT": false,
+        "MEXC:SFPUSDT": false,
+        "MEXC:SFP_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
