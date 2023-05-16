@@ -17,6 +17,8 @@
             "BYBIT:CTCUSDT",
             "BYBIT:CTCUSDT-SPOT",
             "KUCOIN:CTC-USDT",
+            "MEXC:CTCUSDT",
+            "MEXC:CTC_USDT",
             "OKEX:CTC-USDT"
           ],
           "zoom": 1
@@ -27,7 +29,8 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BYBIT:CTCUSDT"
+            "BYBIT:CTCUSDT",
+            "MEXC:CTC_USDT"
           ]
         },
         "trades2": {
@@ -38,6 +41,7 @@
           "markets": [
             "BYBIT:CTCUSDT-SPOT",
             "KUCOIN:CTC-USDT",
+            "MEXC:CTCUSDT",
             "OKEX:CTC-USDT"
           ]
         }
@@ -378,6 +382,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -467,7 +475,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:CTCUSDT;\nline(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:CTCUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:CTC_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -511,7 +519,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:CTCUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar b = KUCOIN:CTC-USDT;\nline(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar c = OKEX:CTC-USDT;\nline(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:CTCUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = KUCOIN:CTC-USDT;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar c = MEXC:CTCUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar d = OKEX:CTC-USDT;line(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -872,6 +880,8 @@
         "BYBIT:CTCUSDT": false,
         "BYBIT:CTCUSDT-SPOT": false,
         "KUCOIN:CTC-USDT": false,
+        "MEXC:CTCUSDT": false,
+        "MEXC:CTC_USDT": false,
         "OKEX:CTC-USDT": false
       },
       "barSpacing": 0.39437454420364615,
