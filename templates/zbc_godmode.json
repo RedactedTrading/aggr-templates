@@ -14,8 +14,10 @@
           "name": "",
           "type": "chart",
           "markets": [
+            "BITGET:ZBCUSDT",
             "BYBIT:ZBCUSDT-SPOT",
             "KUCOIN:ZBC-USDT",
+            "MEXC:ZBCUSDT",
             "OKEX:ZBC-USDT",
             "RAYDIUMSOLANA:ZBC/USDC"
           ],
@@ -34,8 +36,10 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BITGET:ZBCUSDT",
             "BYBIT:ZBCUSDT-SPOT",
             "KUCOIN:ZBC-USDT",
+            "MEXC:ZBCUSDT",
             "OKEX:ZBC-USDT",
             "RAYDIUMSOLANA:ZBC/USDC"
           ]
@@ -378,6 +382,14 @@
         "disabled": true,
         "fetched": false
       },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
+      },
       "RAYDIUMSOLANA": {
         "disabled": false,
         "fetched": false
@@ -514,7 +526,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:ZBCUSDT-SPOT;\nline(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\nvar b = KUCOIN:ZBC-USDT;\nline(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(180, 242, 243)\");\n\nvar c = OKEX:ZBC-USDT;\nline(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar d = RAYDIUMSOLANA:ZBC/USDC;\nline(cum(d.vbuy-d.vsell), title=\"RAYSOL\", color=\"rgb(89, 157, 208)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:ZBCUSDT;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:ZBCUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KUCOIN:ZBC-USDT;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:ZBCUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar e = OKEX:ZBC-USDT;line(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = RAYDIUMSOLANA:ZBC/USDC;line(cum(f.vbuy-f.vsell), title=\"RAYSOL\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -872,8 +884,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
+        "BITGET:ZBCUSDT": false,
         "BYBIT:ZBCUSDT-SPOT": false,
         "KUCOIN:ZBC-USDT": false,
+        "MEXC:ZBCUSDT": false,
         "OKEX:ZBC-USDT": false,
         "RAYDIUMSOLANA:ZBC/USDC": false
       },
