@@ -16,7 +16,10 @@
           "markets": [
             "BINANCE:multibusd",
             "BINANCE:multiusdt",
+            "BITGET:MULTIUSDT",
+            "COINBASE:MULTI-USD",
             "KRAKEN:MULTI/USD",
+            "MEXC:MULTIUSDT",
             "SUSHISWAPETHEREUM:MULTI/WETH"
           ],
           "zoom": 1
@@ -36,7 +39,10 @@
           "markets": [
             "BINANCE:multibusd",
             "BINANCE:multiusdt",
+            "BITGET:MULTIUSDT",
+            "COINBASE:MULTI-USD",
             "KRAKEN:MULTI/USD",
+            "MEXC:MULTIUSDT",
             "SUSHISWAPETHEREUM:MULTI/WETH"
           ]
         }
@@ -326,7 +332,7 @@
         "fetched": false
       },
       "COINBASE": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "DERIBIT": {
@@ -376,6 +382,14 @@
       "_id": "exchanges",
       "UPBIT": {
         "disabled": true,
+        "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
         "fetched": false
       },
       "SUSHISWAPETHEREUM": {
@@ -514,7 +528,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:multibusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = BINANCE:multiusdt;\nline(cum(b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar c = SUSHISWAPETHEREUM:MULTI/WETH;\nline(cum(c.vbuy-c.vsell), title=\"SUSHIETH\", color=\"rgb(89, 157, 208)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:multibusd;\n\nvar b = BINANCE:multiusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MULTIUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:MULTI-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = MEXC:MULTIUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = SUSHISWAPETHEREUM:MULTI/WETH;line(cum(f.vbuy-f.vsell), title=\"SUSHIETH\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -874,7 +888,10 @@
       "hiddenMarkets": {
         "BINANCE:multibusd": false,
         "BINANCE:multiusdt": false,
+        "BITGET:MULTIUSDT": false,
+        "COINBASE:MULTI-USD": false,
         "KRAKEN:MULTI/USD": false,
+        "MEXC:MULTIUSDT": false,
         "SUSHISWAPETHEREUM:MULTI/WETH": true
       },
       "barSpacing": 0.39437454420364615,
