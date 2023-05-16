@@ -15,6 +15,7 @@
           "type": "chart",
           "markets": [
             "BINANCE:iqbusd",
+            "MEXC:IQUSDT",
             "OKEX:IQ-USDT",
             "UPBIT:KRW-IQ"
           ],
@@ -34,6 +35,7 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:iqbusd",
+            "MEXC:IQUSDT",
             "OKEX:IQ-USDT",
             "UPBIT:KRW-IQ"
           ]
@@ -375,6 +377,10 @@
       "UPBIT": {
         "disabled": false,
         "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -508,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:iqbusd;\nline(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\nvar b = OKEX:IQ-USDT;\nline(cum(b.vbuy-b.vsell), title=\"OKX\", color=\"rgb(234, 238, 245)\");\n\nvar c = UPBIT:KRW-IQ;\nline(cum(c.vbuy-c.vsell), title=\"UPB\", color=\"rgb(83, 217, 232)\");\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:iqbusd;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = MEXC:IQUSDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar c = OKEX:IQ-USDT;line(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar d = UPBIT:KRW-IQ;line(cum(d.vbuy-d.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -867,6 +873,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:iqbusd": false,
+        "MEXC:IQUSDT": false,
         "OKEX:IQ-USDT": false,
         "UPBIT:KRW-IQ": true
       },
