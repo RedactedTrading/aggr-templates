@@ -42,7 +42,6 @@
             "OKEX:MATIC-USDC",
             "OKEX:MATIC-USDT",
             "OKEX:MATIC-USDT-SWAP",
-            "UNISWAPETHEREUM:MATIC/WETH",
             "UPBIT:KRW-MATIC"
           ],
           "zoom": 1
@@ -61,6 +60,7 @@
             "BITMEX:MATIC_USDT",
             "BYBIT:MATICUSDT",
             "DERIBIT:MATIC_USDC-PERPETUAL",
+            "KRAKEN:PF_MATICUSD",
             "KUCOIN:MATICUSDTM",
             "MEXC:MATIC_USDT",
             "OKEX:MATIC-USDT-SWAP"
@@ -83,13 +83,11 @@
             "COINBASE:MATIC-USDT",
             "KRAKEN:MATIC/USD",
             "KRAKEN:MATIC/USDT",
-            "KRAKEN:PF_MATICUSD",
             "KUCOIN:MATIC-USDC",
             "KUCOIN:MATIC-USDT",
             "MEXC:MATICUSDC",
             "OKEX:MATIC-USDC",
             "OKEX:MATIC-USDT",
-            "UNISWAPETHEREUM:MATIC/WETH",
             "UPBIT:KRW-MATIC"
           ]
         }
@@ -438,10 +436,6 @@
       "MEXC": {
         "disabled": false,
         "fetched": false
-      },
-      "UNISWAPETHEREUM": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -575,7 +569,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:maticbusd;\n\nvar b = BINANCE:matictusd;\n\nvar c = BINANCE:maticusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar d = BITGET:MATICUSDC;\n\nvar e = BITGET:MATICUSDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = BYBIT:MATICUSDC-SPOT;\n\nvar g = BYBIT:MATICUSDT-SPOT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = COINBASE:MATIC-USD;\n\nvar i = COINBASE:MATIC-USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar j = KUCOIN:MATIC-USDC;\n\nvar k = KUCOIN:MATIC-USDT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar l = MEXC:MATICUSDC;line(cum(l.vbuy-l.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar m = OKEX:MATIC-USDC;\n\nvar n = OKEX:MATIC-USDT;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar o = UNISWAPETHEREUM:MATIC/WETH;line(cum(o.vbuy-o.vsell), title=\"UNIETH\", color=\"rgb(89, 157, 208)\");\n\n\nvar p = UPBIT:KRW-MATIC;line(cum(p.vbuy-p.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:maticbusd;\n\nvar b = BINANCE:matictusd;\n\nvar c = BINANCE:maticusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar d = BITGET:MATICUSDC;\n\nvar e = BITGET:MATICUSDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = BYBIT:MATICUSDC-SPOT;\n\nvar g = BYBIT:MATICUSDT-SPOT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = COINBASE:MATIC-USD;\n\nvar i = COINBASE:MATIC-USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar j = KUCOIN:MATIC-USDC;\n\nvar k = KUCOIN:MATIC-USDT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar l = MEXC:MATICUSDC;line(cum(l.vbuy-l.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar m = OKEX:MATIC-USDC;\n\nvar n = OKEX:MATIC-USDT;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar o = UPBIT:KRW-MATIC;line(cum(o.vbuy-o.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -961,7 +955,6 @@
         "OKEX:MATIC-USDC": false,
         "OKEX:MATIC-USDT": false,
         "OKEX:MATIC-USDT-SWAP": false,
-        "UNISWAPETHEREUM:MATIC/WETH": true,
         "UPBIT:KRW-MATIC": true
       },
       "barSpacing": 0.39437454420364615,
