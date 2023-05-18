@@ -45,6 +45,7 @@
             "BINANCE_FUTURES:stxusdt",
             "BITGET:STXUSDT_UMCBL",
             "BYBIT:STXUSDT",
+            "KRAKEN:PF_STXUSD",
             "KUCOIN:STXUSDTM",
             "MEXC:STX_USDT",
             "OKEX:STX-USDT-SWAP"
@@ -62,7 +63,6 @@
             "BYBIT:STXUSDT-SPOT",
             "COINBASE:STX-USD",
             "COINBASE:STX-USDT",
-            "KRAKEN:PF_STXUSD",
             "KRAKEN:STX/USD",
             "KUCOIN:STX-USDT",
             "MEXC:STXUSDT",
