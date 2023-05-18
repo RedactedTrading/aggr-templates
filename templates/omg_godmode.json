@@ -43,6 +43,7 @@
             "BINANCE_FUTURES:omgusdt",
             "BITGET:OMGUSDT_UMCBL",
             "BYBIT:OMGUSDT",
+            "KRAKEN:PF_OMGUSD",
             "KUCOIN:OMGUSDTM",
             "MEXC:OMG_USDT",
             "OKEX:OMG-USDT-SWAP"
@@ -60,7 +61,6 @@
             "BITGET:OMGUSDT",
             "BYBIT:OMGUSDT-SPOT",
             "KRAKEN:OMG/USD",
-            "KRAKEN:PF_OMGUSD",
             "KUCOIN:OMG-USDT",
             "MEXC:OMGUSDT",
             "OKEX:OMG-USDC",
