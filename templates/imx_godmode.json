@@ -43,6 +43,7 @@
             "BINANCE_FUTURES:imxusdt",
             "BITGET:IMXUSDT_UMCBL",
             "BYBIT:IMXUSDT",
+            "KRAKEN:PF_IMXUSD",
             "KUCOIN:IMXUSDTM",
             "MEXC:IMX_USDT",
             "OKEX:IMX-USDT-SWAP"
@@ -61,7 +62,6 @@
             "COINBASE:IMX-USD",
             "COINBASE:IMX-USDT",
             "KRAKEN:IMX/USD",
-            "KRAKEN:PF_IMXUSD",
             "KUCOIN:IMX-USDT",
             "OKEX:IMX-USDC",
             "OKEX:IMX-USDT"
