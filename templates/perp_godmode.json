@@ -28,8 +28,7 @@
             "MEXC:PERP_USDT",
             "OKEX:PERP-USDC",
             "OKEX:PERP-USDT",
-            "OKEX:PERP-USDT-SWAP",
-            "UNISWAPOPTIMISM:PERP/WETH"
+            "OKEX:PERP-USDT-SWAP"
           ],
           "zoom": 1
         },
@@ -40,7 +39,6 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:perpusdt",
-            "KRAKEN:PERP/USD",
             "KUCOIN:PERP-USDT",
             "KUCOIN:PERPUSDTM",
             "MEXC:PERP_USDT",
@@ -61,8 +59,8 @@
             "BYBIT:PERPUSDT-SPOT",
             "COINBASE:PERP-USD",
             "COINBASE:PERP-USDT",
-            "MEXC:PERPUSDT",
-            "UNISWAPOPTIMISM:PERP/WETH"
+            "KRAKEN:PERP/USD",
+            "MEXC:PERPUSDT"
           ]
         }
       },
@@ -410,10 +408,6 @@
       "MEXC": {
         "disabled": false,
         "fetched": false
-      },
-      "UNISWAPOPTIMISM": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -547,7 +541,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:perpbusd;\n\nvar b = BINANCE:perpusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:PERPUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:PERPUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = COINBASE:PERP-USD;\n\nvar f = COINBASE:PERP-USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = MEXC:PERPUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = UNISWAPOPTIMISM:PERP/WETH;line(cum(h.vbuy-h.vsell), title=\"UNIOPT\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:perpbusd;\n\nvar b = BINANCE:perpusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:PERPUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:PERPUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = COINBASE:PERP-USD;\n\nvar f = COINBASE:PERP-USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = MEXC:PERPUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -919,8 +913,7 @@
         "MEXC:PERP_USDT": false,
         "OKEX:PERP-USDC": false,
         "OKEX:PERP-USDT": false,
-        "OKEX:PERP-USDT-SWAP": false,
-        "UNISWAPOPTIMISM:PERP/WETH": true
+        "OKEX:PERP-USDT-SWAP": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
