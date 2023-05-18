@@ -47,6 +47,7 @@
             "BINANCE_FUTURES:xtzusdt",
             "BITGET:XTZUSDT_UMCBL",
             "BYBIT:XTZUSDT",
+            "KRAKEN:PF_XTZUSD",
             "KUCOIN:XTZUSDTM",
             "MEXC:XTZ_USDT",
             "OKEX:XTZ-USDT-SWAP"
@@ -63,7 +64,6 @@
             "BITFINEX:XTZUSD",
             "BYBIT:XTZUSDT-SPOT",
             "COINBASE:XTZ-USD",
-            "KRAKEN:PF_XTZUSD",
             "KRAKEN:XTZ/USD",
             "KRAKEN:XTZ/USDT",
             "KUCOIN:XTZ-USDT",
