@@ -42,6 +42,7 @@
             "BINANCE_FUTURES:jasmyusdt",
             "BITGET:JASMYUSDT_UMCBL",
             "BYBIT:JASMYUSDT",
+            "KRAKEN:PF_JASMYUSD",
             "KUCOIN:JASMYUSDTM",
             "MEXC:JASMY_USDT"
           ]
@@ -59,7 +60,6 @@
             "COINBASE:JASMY-USD",
             "COINBASE:JASMY-USDT",
             "KRAKEN:JASMY/USD",
-            "KRAKEN:PF_JASMYUSD",
             "KUCOIN:JASMY-USDC",
             "KUCOIN:JASMY-USDT",
             "MEXC:JASMYUSDC"
