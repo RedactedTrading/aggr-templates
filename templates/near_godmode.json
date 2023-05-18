@@ -53,6 +53,7 @@
             "BITMEX:NEARUSD",
             "BYBIT:NEARUSDT",
             "DERIBIT:NEAR_USDC-PERPETUAL",
+            "KRAKEN:PF_NEARUSD",
             "KUCOIN:NEARUSDTM",
             "MEXC:NEAR_USDT",
             "OKEX:NEAR-USDT-SWAP"
@@ -72,7 +73,6 @@
             "COINBASE:NEAR-USD",
             "COINBASE:NEAR-USDT",
             "KRAKEN:NEAR/USD",
-            "KRAKEN:PF_NEARUSD",
             "KUCOIN:NEAR-USDC",
             "KUCOIN:NEAR-USDT",
             "MEXC:NEARUSDC",
