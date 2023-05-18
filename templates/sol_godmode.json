@@ -46,8 +46,6 @@
             "OKEX:SOL-USDC",
             "OKEX:SOL-USDT",
             "OKEX:SOL-USDT-SWAP",
-            "ORCASOLANA:SOL/USDC",
-            "RAYDIUMSOLANA:SOL/USDC",
             "UPBIT:KRW-SOL"
           ],
           "zoom": 1
@@ -98,8 +96,6 @@
             "MEXC:SOLUSDC",
             "OKEX:SOL-USDC",
             "OKEX:SOL-USDT",
-            "ORCASOLANA:SOL/USDC",
-            "RAYDIUMSOLANA:SOL/USDC",
             "UPBIT:KRW-SOL"
           ]
         }
@@ -448,14 +444,6 @@
       "MEXC": {
         "disabled": false,
         "fetched": false
-      },
-      "ORCASOLANA": {
-        "disabled": false,
-        "fetched": false
-      },
-      "RAYDIUMSOLANA": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -589,7 +577,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:solbusd;\n\nvar b = BINANCE:soltusd;\n\nvar c = BINANCE:solusdc;\n\nvar d = BINANCE:solusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:SOLUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:SOLUSDC;\n\nvar g = BITGET:SOLUSDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar h = BYBIT:SOLUSDC-SPOT;\n\nvar i = BYBIT:SOLUSDT-SPOT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar j = COINBASE:SOL-USD;\n\nvar k = COINBASE:SOL-USDT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar l = KUCOIN:SOL-USDC;\n\nvar m = KUCOIN:SOL-USDT;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar n = MEXC:SOLUSDC;line(cum(n.vbuy-n.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar o = OKEX:SOL-USDC;\n\nvar p = OKEX:SOL-USDT;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar q = ORCASOLANA:SOL/USDC;line(cum(q.vbuy-q.vsell), title=\"ORCSOL\", color=\"rgb(89, 157, 208)\");\n\n\nvar r = RAYDIUMSOLANA:SOL/USDC;line(cum(r.vbuy-r.vsell), title=\"RAYSOL\", color=\"rgb(89, 157, 208)\");\n\n\nvar s = UPBIT:KRW-SOL;line(cum(s.vbuy-s.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:solbusd;\n\nvar b = BINANCE:soltusd;\n\nvar c = BINANCE:solusdc;\n\nvar d = BINANCE:solusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:SOLUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:SOLUSDC;\n\nvar g = BITGET:SOLUSDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar h = BYBIT:SOLUSDC-SPOT;\n\nvar i = BYBIT:SOLUSDT-SPOT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar j = COINBASE:SOL-USD;\n\nvar k = COINBASE:SOL-USDT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar l = KUCOIN:SOL-USDC;\n\nvar m = KUCOIN:SOL-USDT;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar n = MEXC:SOLUSDC;line(cum(n.vbuy-n.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar o = OKEX:SOL-USDC;\n\nvar p = OKEX:SOL-USDT;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar q = UPBIT:KRW-SOL;line(cum(q.vbuy-q.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -979,8 +967,6 @@
         "OKEX:SOL-USDC": false,
         "OKEX:SOL-USDT": false,
         "OKEX:SOL-USDT-SWAP": false,
-        "ORCASOLANA:SOL/USDC": false,
-        "RAYDIUMSOLANA:SOL/USDC": false,
         "UPBIT:KRW-SOL": true
       },
       "barSpacing": 0.39437454420364615,
