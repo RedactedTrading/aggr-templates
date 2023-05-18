@@ -40,6 +40,7 @@
             "BINANCE_FUTURES:fetusdt",
             "BITGET:FETUSDT_UMCBL",
             "BYBIT:FETUSDT",
+            "KRAKEN:PF_FETUSD",
             "KUCOIN:FETUSDTM",
             "MEXC:FET_USDT"
           ]
@@ -57,7 +58,6 @@
             "COINBASE:FET-USD",
             "COINBASE:FET-USDT",
             "KRAKEN:FET/USD",
-            "KRAKEN:PF_FETUSD",
             "KUCOIN:FET-USDT"
           ]
         }
