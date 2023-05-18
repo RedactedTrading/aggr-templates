@@ -46,6 +46,7 @@
             "BINANCE_FUTURES:egldusdt",
             "BITGET:EGLDUSDT_UMCBL",
             "BYBIT:EGLDUSDT",
+            "KRAKEN:PF_EGLDUSD",
             "KUCOIN:EGLDUSDTM",
             "MEXC:EGLD_USDT",
             "OKEX:EGLD-USDT-SWAP"
@@ -63,7 +64,6 @@
             "BYBIT:EGLDUSDT-SPOT",
             "COINBASE:EGLD-USD",
             "KRAKEN:EGLD/USD",
-            "KRAKEN:PF_EGLDUSD",
             "KUCOIN:EGLD-USDT",
             "MEXC:EGLDUSDT",
             "OKEX:EGLD-USDC",
