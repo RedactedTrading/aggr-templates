@@ -37,6 +37,7 @@
           "markets": [
             "BINANCE_FUTURES:cvxusdt",
             "BYBIT:CVXUSDT",
+            "KRAKEN:PF_CVXUSD",
             "MEXC:CVX_USDT"
           ]
         },
@@ -51,7 +52,6 @@
             "BITGET:CVXUSDT",
             "COINBASE:CVX-USD",
             "KRAKEN:CVX/USD",
-            "KRAKEN:PF_CVXUSD",
             "KUCOIN:CVX-USDT",
             "MEXC:CVXUSDT",
             "OKEX:CVX-USDT"
