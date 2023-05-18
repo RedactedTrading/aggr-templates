@@ -52,6 +52,7 @@
             "BITMEX:AXSUSD",
             "BITMEX:AXS_USDT",
             "BYBIT:AXSUSDT",
+            "KRAKEN:PF_AXSUSD",
             "KUCOIN:AXSUSDTM",
             "MEXC:AXS_USDT",
             "OKEX:AXS-USDT-SWAP"
@@ -71,7 +72,6 @@
             "COINBASE:AXS-USD",
             "COINBASE:AXS-USDT",
             "KRAKEN:AXS/USD",
-            "KRAKEN:PF_AXSUSD",
             "KUCOIN:AXS-USDT",
             "MEXC:AXSUSDT",
             "OKEX:AXS-USDC",
