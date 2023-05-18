@@ -48,6 +48,7 @@
             "BITGET:GMTUSDT_UMCBL",
             "BITMEX:GMTUSDT",
             "BYBIT:GMTUSDT",
+            "KRAKEN:PF_GMTUSD",
             "KUCOIN:GMTUSDTM",
             "MEXC:GMT_USDT",
             "OKEX:GMT-USDT-SWAP"
@@ -67,7 +68,6 @@
             "COINBASE:GMT-USD",
             "COINBASE:GMT-USDT",
             "KRAKEN:GMT/USD",
-            "KRAKEN:PF_GMTUSD",
             "KUCOIN:GMT-USDC",
             "KUCOIN:GMT-USDT",
             "OKEX:GMT-USDC",
