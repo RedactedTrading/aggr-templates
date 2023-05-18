@@ -39,6 +39,7 @@
             "BITMEX:FLRUSD",
             "BITMEX:FLRUSDT",
             "BYBIT:FLRUSDT",
+            "KRAKEN:PF_FLRUSD",
             "MEXC:FLR_USDT"
           ]
         },
@@ -52,7 +53,6 @@
             "BYBIT:FLRUSDT-SPOT",
             "COINBASE:FLR-USD",
             "KRAKEN:FLR/USD",
-            "KRAKEN:PF_FLRUSD",
             "KUCOIN:FLR-USDC",
             "KUCOIN:FLR-USDT",
             "OKEX:FLR-USDC",
