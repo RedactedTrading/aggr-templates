@@ -41,6 +41,7 @@
             "BINANCE_FUTURES:icxusdt",
             "BITGET:ICXUSDT_UMCBL",
             "BYBIT:ICXUSDT",
+            "KRAKEN:PF_ICXUSD",
             "KUCOIN:ICXUSDTM",
             "MEXC:ICX_USDT"
           ]
@@ -55,7 +56,6 @@
             "BINANCE:icxusdt",
             "BYBIT:ICXUSDT-SPOT",
             "KRAKEN:ICX/USD",
-            "KRAKEN:PF_ICXUSD",
             "KUCOIN:ICX-USDT",
             "OKEX:ICX-USDT",
             "UPBIT:KRW-ICX"
