@@ -41,6 +41,7 @@
           "markets": [
             "BINANCE_FUTURES:antusdt",
             "BYBIT:ANTUSDT",
+            "KRAKEN:PF_ANTUSD",
             "KUCOIN:ANTUSDTM",
             "MEXC:ANT_USDT",
             "OKEX:ANT-USDT-SWAP"
@@ -58,7 +59,6 @@
             "BITGET:ANTUSDT",
             "COINBASE:ANT-USD",
             "KRAKEN:ANT/USD",
-            "KRAKEN:PF_ANTUSD",
             "KUCOIN:ANT-USDT",
             "MEXC:ANTUSDT",
             "OKEX:ANT-USDC",
