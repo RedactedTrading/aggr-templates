@@ -22,8 +22,7 @@
             "KUCOIN:ILV-USDT",
             "MEXC:ILVUSDT",
             "MEXC:ILV_USDT",
-            "OKEX:ILV-USDT",
-            "SUSHISWAPETHEREUM:ILV/WETH"
+            "OKEX:ILV-USDT"
           ],
           "zoom": 1
         },
@@ -49,8 +48,7 @@
             "COINBASE:ILV-USD",
             "KUCOIN:ILV-USDT",
             "MEXC:ILVUSDT",
-            "OKEX:ILV-USDT",
-            "SUSHISWAPETHEREUM:ILV/WETH"
+            "OKEX:ILV-USDT"
           ]
         }
       },
@@ -398,10 +396,6 @@
       "MEXC": {
         "disabled": false,
         "fetched": false
-      },
-      "SUSHISWAPETHEREUM": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -535,7 +529,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ilvbusd;\n\nvar b = BINANCE:ilvusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:ILVUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:ILV-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = KUCOIN:ILV-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:ILVUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:ILV-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = SUSHISWAPETHEREUM:ILV/WETH;line(cum(h.vbuy-h.vsell), title=\"SUSHIETH\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ilvbusd;\n\nvar b = BINANCE:ilvusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:ILVUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:ILV-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = KUCOIN:ILV-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:ILVUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:ILV-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -901,8 +895,7 @@
         "KUCOIN:ILV-USDT": false,
         "MEXC:ILVUSDT": false,
         "MEXC:ILV_USDT": false,
-        "OKEX:ILV-USDT": false,
-        "SUSHISWAPETHEREUM:ILV/WETH": true
+        "OKEX:ILV-USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
