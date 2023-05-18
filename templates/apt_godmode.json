@@ -35,7 +35,6 @@
             "OKEX:APT-USDC",
             "OKEX:APT-USDT",
             "OKEX:APT-USDT-SWAP",
-            "PANCAKESWAPAPTOS:APT/USDC",
             "UPBIT:KRW-APT"
           ],
           "zoom": 1
@@ -51,6 +50,7 @@
             "BITGET:APTUSDT_UMCBL",
             "BITMEX:APTUSDT",
             "BYBIT:APTUSDT",
+            "KRAKEN:PF_APTUSD",
             "KUCOIN:APTUSDTM",
             "MEXC:APT_USDT",
             "OKEX:APT-USDT-SWAP"
@@ -71,11 +71,9 @@
             "COINBASE:APT-USD",
             "COINBASE:APT-USDT",
             "KRAKEN:APT/USD",
-            "KRAKEN:PF_APTUSD",
             "KUCOIN:APT-USDT",
             "OKEX:APT-USDC",
             "OKEX:APT-USDT",
-            "PANCAKESWAPAPTOS:APT/USDC",
             "UPBIT:KRW-APT"
           ]
         }
@@ -424,10 +422,6 @@
       "MEXC": {
         "disabled": false,
         "fetched": false
-      },
-      "PANCAKESWAPAPTOS": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -561,7 +555,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:aptbusd;\n\nvar b = BINANCE:aptusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:APTUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:APTUSDT;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BYBIT:APTUSDC-SPOT;\n\nvar f = BYBIT:APTUSDT-SPOT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:APT-USD;\n\nvar h = COINBASE:APT-USDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar i = KUCOIN:APT-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar j = OKEX:APT-USDC;\n\nvar k = OKEX:APT-USDT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar l = PANCAKESWAPAPTOS:APT/USDC;line(cum(l.vbuy-l.vsell), title=\"PCKAPT\", color=\"rgb(89, 157, 208)\");\n\n\nvar m = UPBIT:KRW-APT;line(cum(m.vbuy-m.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:aptbusd;\n\nvar b = BINANCE:aptusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:APTUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:APTUSDT;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BYBIT:APTUSDC-SPOT;\n\nvar f = BYBIT:APTUSDT-SPOT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:APT-USD;\n\nvar h = COINBASE:APT-USDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar i = KUCOIN:APT-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar j = OKEX:APT-USDC;\n\nvar k = OKEX:APT-USDT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar l = UPBIT:KRW-APT;line(cum(l.vbuy-l.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -940,7 +934,6 @@
         "OKEX:APT-USDC": false,
         "OKEX:APT-USDT": false,
         "OKEX:APT-USDT-SWAP": false,
-        "PANCAKESWAPAPTOS:APT/USDC": false,
         "UPBIT:KRW-APT": true
       },
       "barSpacing": 0.39437454420364615,
