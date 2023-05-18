@@ -27,8 +27,7 @@
             "MEXC:MAGICUSDT",
             "MEXC:MAGIC_USDT",
             "OKEX:MAGIC-USDT",
-            "OKEX:MAGIC-USDT-SWAP",
-            "SUSHISWAPARBITRUM:MAGIC/WETH"
+            "OKEX:MAGIC-USDT-SWAP"
           ],
           "zoom": 1
         },
@@ -59,8 +58,7 @@
             "COINBASE:MAGIC-USD",
             "KUCOIN:MAGIC-USDT",
             "MEXC:MAGICUSDT",
-            "OKEX:MAGIC-USDT",
-            "SUSHISWAPARBITRUM:MAGIC/WETH"
+            "OKEX:MAGIC-USDT"
           ]
         }
       },
@@ -408,10 +406,6 @@
       "MEXC": {
         "disabled": false,
         "fetched": false
-      },
-      "SUSHISWAPARBITRUM": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -545,7 +539,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:magicbusd;\n\nvar b = BINANCE:magicusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MAGICUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:MAGICUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = COINBASE:MAGIC-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = KUCOIN:MAGIC-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:MAGICUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:MAGIC-USDT;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = SUSHISWAPARBITRUM:MAGIC/WETH;line(cum(i.vbuy-i.vsell), title=\"SUSHIAB\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:magicbusd;\n\nvar b = BINANCE:magicusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MAGICUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:MAGICUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = COINBASE:MAGIC-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = KUCOIN:MAGIC-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:MAGICUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:MAGIC-USDT;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -916,8 +910,7 @@
         "MEXC:MAGICUSDT": false,
         "MEXC:MAGIC_USDT": false,
         "OKEX:MAGIC-USDT": false,
-        "OKEX:MAGIC-USDT-SWAP": false,
-        "SUSHISWAPARBITRUM:MAGIC/WETH": true
+        "OKEX:MAGIC-USDT-SWAP": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
