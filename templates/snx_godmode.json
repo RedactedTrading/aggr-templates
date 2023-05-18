@@ -30,9 +30,7 @@
             "MEXC:SNX_USDT",
             "OKEX:SNX-USDC",
             "OKEX:SNX-USDT",
-            "OKEX:SNX-USDT-SWAP",
-            "UNISWAPOPTIMISM:SNX/WETH",
-            "VELODROMEOPTIMISM:SNX/USDC"
+            "OKEX:SNX-USDT-SWAP"
           ],
           "zoom": 1
         },
@@ -45,6 +43,7 @@
             "BINANCE_FUTURES:snxusdt",
             "BITGET:SNXUSDT_UMCBL",
             "BYBIT:SNXUSDT",
+            "KRAKEN:PF_SNXUSD",
             "KUCOIN:SNXUSDTM",
             "MEXC:SNX_USDT",
             "OKEX:SNX-USDT-SWAP"
@@ -62,13 +61,10 @@
             "BITGET:SNXUSDT",
             "BYBIT:SNXUSDT-SPOT",
             "COINBASE:SNX-USD",
-            "KRAKEN:PF_SNXUSD",
             "KRAKEN:SNX/USD",
             "KUCOIN:SNX-USDT",
             "OKEX:SNX-USDC",
-            "OKEX:SNX-USDT",
-            "UNISWAPOPTIMISM:SNX/WETH",
-            "VELODROMEOPTIMISM:SNX/USDC"
+            "OKEX:SNX-USDT"
           ]
         }
       },
@@ -416,14 +412,6 @@
       "MEXC": {
         "disabled": false,
         "fetched": false
-      },
-      "UNISWAPOPTIMISM": {
-        "disabled": false,
-        "fetched": false
-      },
-      "VELODROMEOPTIMISM": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -557,7 +545,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:snxbusd;\n\nvar b = BINANCE:snxusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:SNXUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:SNXUSDT;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BYBIT:SNXUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:SNX-USD;line(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = KUCOIN:SNX-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = OKEX:SNX-USDC;\n\nvar i = OKEX:SNX-USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = UNISWAPOPTIMISM:SNX/WETH;line(cum(j.vbuy-j.vsell), title=\"UNIOPT\", color=\"rgb(89, 157, 208)\");\n\n\nvar k = VELODROMEOPTIMISM:SNX/USDC;line(cum(k.vbuy-k.vsell), title=\"VLOPT\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:snxbusd;\n\nvar b = BINANCE:snxusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:SNXUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:SNXUSDT;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BYBIT:SNXUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:SNX-USD;line(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = KUCOIN:SNX-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = OKEX:SNX-USDC;\n\nvar i = OKEX:SNX-USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -931,9 +919,7 @@
         "MEXC:SNX_USDT": false,
         "OKEX:SNX-USDC": false,
         "OKEX:SNX-USDT": false,
-        "OKEX:SNX-USDT-SWAP": false,
-        "UNISWAPOPTIMISM:SNX/WETH": true,
-        "VELODROMEOPTIMISM:SNX/USDC": false
+        "OKEX:SNX-USDT-SWAP": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
