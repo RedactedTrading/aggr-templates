@@ -48,6 +48,7 @@
             "BINANCE_FUTURES:chzusdt",
             "BITGET:CHZUSDT_UMCBL",
             "BYBIT:CHZUSDT",
+            "KRAKEN:PF_CHZUSD",
             "KUCOIN:CHZUSDTM",
             "MEXC:CHZ_USDT",
             "OKEX:CHZ-USDT-SWAP"
@@ -68,7 +69,6 @@
             "COINBASE:CHZ-USD",
             "COINBASE:CHZ-USDT",
             "KRAKEN:CHZ/USD",
-            "KRAKEN:PF_CHZUSD",
             "KUCOIN:CHZ-USDT",
             "OKEX:CHZ-USDC",
             "OKEX:CHZ-USDT",
