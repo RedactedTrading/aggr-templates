@@ -42,6 +42,7 @@
             "BINANCE_FUTURES:renusdt",
             "BITGET:RENUSDT_UMCBL",
             "BYBIT:RENUSDT",
+            "KRAKEN:PF_RENUSD",
             "KUCOIN:RENUSDTM",
             "MEXC:REN_USDT",
             "OKEX:REN-USDT-SWAP"
@@ -58,7 +59,6 @@
             "BITGET:RENUSDT",
             "BYBIT:RENUSDT-SPOT",
             "COINBASE:REN-USD",
-            "KRAKEN:PF_RENUSD",
             "KRAKEN:REN/USD",
             "KUCOIN:REN-USDT",
             "MEXC:RENUSDT",
