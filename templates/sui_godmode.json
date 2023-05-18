@@ -48,6 +48,7 @@
             "BITMEX:SUIUSD",
             "BITMEX:SUIUSDT",
             "BYBIT:SUIUSDT",
+            "KRAKEN:PF_SUIUSD",
             "KUCOIN:SUIUSDTM",
             "MEXC:SUI_USDT",
             "OKEX:SUI-USDT-SWAP"
@@ -65,7 +66,6 @@
             "BITGET:SUIUSDT",
             "BYBIT:SUIUSDC-SPOT",
             "BYBIT:SUIUSDT-SPOT",
-            "KRAKEN:PF_SUIUSD",
             "KRAKEN:SUI/USD",
             "KUCOIN:SUI-USDT",
             "MEXC:SUIUSDT",
