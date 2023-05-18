@@ -46,6 +46,7 @@
             "BINANCE_FUTURES:kncusdt",
             "BITGET:KNCUSDT_UMCBL",
             "BYBIT:KNCUSDT",
+            "KRAKEN:PF_KNCUSD",
             "KUCOIN:KNCUSDTM",
             "MEXC:KNC_USDT",
             "OKEX:KNC-USDT-SWAP"
@@ -63,7 +64,6 @@
             "BITGET:KNCUSDT",
             "COINBASE:KNC-USD",
             "KRAKEN:KNC/USD",
-            "KRAKEN:PF_KNCUSD",
             "KUCOIN:KNC-USDT",
             "MEXC:KNCUSDT",
             "OKEX:KNC-USDC",
