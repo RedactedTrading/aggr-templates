@@ -35,6 +35,7 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:SCUSDT",
+            "KRAKEN:PF_SCUSD",
             "MEXC:SC_USDT"
           ]
         },
@@ -47,7 +48,6 @@
             "BINANCE:scbusd",
             "BINANCE:scusdt",
             "BYBIT:SCUSDT-SPOT",
-            "KRAKEN:PF_SCUSD",
             "KRAKEN:SC/USD",
             "MEXC:SCUSDT",
             "OKEX:SC-USDT",
