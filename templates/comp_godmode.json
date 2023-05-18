@@ -43,6 +43,7 @@
             "BINANCE_FUTURES:compusdt",
             "BITGET:COMPUSDT_UMCBL",
             "BYBIT:COMPUSDT",
+            "KRAKEN:PF_COMPUSD",
             "KUCOIN:COMPUSDTM",
             "MEXC:COMP_USDT",
             "OKEX:COMP-USDT-SWAP"
@@ -60,7 +61,6 @@
             "BYBIT:COMPUSDT-SPOT",
             "COINBASE:COMP-USD",
             "KRAKEN:COMP/USD",
-            "KRAKEN:PF_COMPUSD",
             "KUCOIN:COMP-USDT",
             "MEXC:COMPUSDT",
             "OKEX:COMP-USDC",
