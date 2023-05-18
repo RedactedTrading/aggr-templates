@@ -44,6 +44,7 @@
             "BINANCE_FUTURES:minausdt",
             "BITGET:MINAUSDT_UMCBL",
             "BYBIT:MINAUSDT",
+            "KRAKEN:PF_MINAUSD",
             "KUCOIN:MINAUSDTM",
             "MEXC:MINA_USDT",
             "OKEX:MINA-USDT-SWAP"
@@ -62,7 +63,6 @@
             "COINBASE:MINA-USD",
             "COINBASE:MINA-USDT",
             "KRAKEN:MINA/USD",
-            "KRAKEN:PF_MINAUSD",
             "KUCOIN:MINA-USDT",
             "MEXC:MINAUSDC",
             "OKEX:MINA-USDC",
