@@ -45,6 +45,7 @@
             "BINANCE_FUTURES:icpusdt",
             "BITGET:ICPUSDT_UMCBL",
             "BYBIT:ICPUSDT",
+            "KRAKEN:PF_ICPUSD",
             "KUCOIN:ICPUSDTM",
             "MEXC:ICP_USDT",
             "OKEX:ICP-USDT-SWAP"
@@ -65,7 +66,6 @@
             "COINBASE:ICP-USD",
             "COINBASE:ICP-USDT",
             "KRAKEN:ICP/USD",
-            "KRAKEN:PF_ICPUSD",
             "KUCOIN:ICP-USDT",
             "OKEX:ICP-USDC",
             "OKEX:ICP-USDT"
