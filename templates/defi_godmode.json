@@ -27,6 +27,7 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:defiusdt",
+            "KRAKEN:PF_DEFIUSD",
             "MEXC:DEFI_USDT"
           ]
         },
@@ -35,9 +36,7 @@
           "name": "Spot Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": [
-            "KRAKEN:PF_DEFIUSD"
-          ]
+          "markets": []
         }
       },
       "layout": [
