@@ -43,6 +43,7 @@
             "BINANCE_FUTURES:galusdt",
             "BITGET:GALUSDT_UMCBL",
             "BYBIT:GALUSDT",
+            "KRAKEN:PF_GALUSD",
             "KUCOIN:GALUSDTM",
             "MEXC:GAL_USDT"
           ]
@@ -60,7 +61,6 @@
             "COINBASE:GAL-USD",
             "COINBASE:GAL-USDT",
             "KRAKEN:GAL/USD",
-            "KRAKEN:PF_GALUSD",
             "KUCOIN:GAL-USDT",
             "MEXC:GALUSDC",
             "MEXC:GALUSDT",
