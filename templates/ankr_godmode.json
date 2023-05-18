@@ -43,6 +43,7 @@
             "BINANCE_FUTURES:ankrusdt",
             "BITGET:ANKRUSDT_UMCBL",
             "BYBIT:ANKRUSDT",
+            "KRAKEN:PF_ANKRUSD",
             "KUCOIN:ANKRUSDTM",
             "MEXC:ANKR_USDT"
           ]
@@ -61,7 +62,6 @@
             "BYBIT:ANKRUSDT-SPOT",
             "COINBASE:ANKR-USD",
             "KRAKEN:ANKR/USD",
-            "KRAKEN:PF_ANKRUSD",
             "KUCOIN:ANKR-USDT",
             "MEXC:ANKRUSDT",
             "UPBIT:KRW-ANKR"
