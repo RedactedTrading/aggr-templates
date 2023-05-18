@@ -38,6 +38,7 @@
           "markets": [
             "BINANCE_FUTURES:lptusdt",
             "BYBIT:LPTUSDT",
+            "KRAKEN:PF_LPTUSD",
             "MEXC:LPT_USDT",
             "OKEX:LPT-USDT-SWAP"
           ]
@@ -53,7 +54,6 @@
             "BITGET:LPTUSDT",
             "COINBASE:LPT-USD",
             "KRAKEN:LPT/USD",
-            "KRAKEN:PF_LPTUSD",
             "KUCOIN:LPT-USDT",
             "MEXC:LPTUSDT",
             "OKEX:LPT-USDT"
