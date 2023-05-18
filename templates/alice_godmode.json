@@ -39,6 +39,7 @@
             "BINANCE_FUTURES:aliceusdt",
             "BITGET:ALICEUSDT_UMCBL",
             "BYBIT:ALICEUSDT",
+            "KRAKEN:PF_ALICEUSD",
             "KUCOIN:ALICEUSDTM",
             "MEXC:ALICE_USDT"
           ]
@@ -54,7 +55,6 @@
             "BITGET:ALICEUSDT",
             "COINBASE:ALICE-USD",
             "KRAKEN:ALICE/USD",
-            "KRAKEN:PF_ALICEUSD",
             "KUCOIN:ALICE-USDT",
             "MEXC:ALICEUSDT"
           ]
