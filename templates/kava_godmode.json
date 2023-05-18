@@ -40,6 +40,7 @@
             "BINANCE_FUTURES:kavausdt",
             "BITGET:KAVAUSDT_UMCBL",
             "BYBIT:KAVAUSDT",
+            "KRAKEN:PF_KAVAUSD",
             "KUCOIN:KAVAUSDTM",
             "MEXC:KAVA_USDT"
           ]
@@ -55,7 +56,6 @@
             "BITGET:KAVAUSDT",
             "COINBASE:KAVA-USD",
             "KRAKEN:KAVA/USD",
-            "KRAKEN:PF_KAVAUSD",
             "KUCOIN:KAVA-USDT",
             "MEXC:KAVAUSDT",
             "UPBIT:KRW-KAVA"
