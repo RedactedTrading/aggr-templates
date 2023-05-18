@@ -34,6 +34,7 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:ETHWUSDT",
+            "KRAKEN:PF_ETHWUSD",
             "MEXC:ETHW_USDT",
             "OKEX:ETHW-USDT-SWAP"
           ]
@@ -47,7 +48,6 @@
             "BITGET:ETHWUSDT",
             "BYBIT:ETHWUSDT-SPOT",
             "KRAKEN:ETHW/USD",
-            "KRAKEN:PF_ETHWUSD",
             "KUCOIN:ETHW-USDT",
             "OKEX:ETHW-USDC",
             "OKEX:ETHW-USDT"
