@@ -48,6 +48,7 @@
             "BINANCE_FUTURES:aaveusdt",
             "BITGET:AAVEUSDT_UMCBL",
             "BYBIT:AAVEUSDT",
+            "KRAKEN:PF_AAVEUSD",
             "KUCOIN:AAVEUSDTM",
             "MEXC:AAVE_USDT",
             "OKEX:AAVE-USDT-SWAP"
@@ -66,7 +67,6 @@
             "BYBIT:AAVEUSDT-SPOT",
             "COINBASE:AAVE-USD",
             "KRAKEN:AAVE/USD",
-            "KRAKEN:PF_AAVEUSD",
             "KUCOIN:AAVE-USDT",
             "MEXC:AAVEUSDC",
             "MEXC:AAVEUSDT",
