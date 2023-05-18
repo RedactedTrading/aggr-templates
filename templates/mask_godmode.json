@@ -44,6 +44,7 @@
             "BINANCE_FUTURES:maskusdt",
             "BITGET:MASKUSDT_UMCBL",
             "BYBIT:MASKUSDT",
+            "KRAKEN:PF_MASKUSD",
             "KUCOIN:MASKUSDTM",
             "MEXC:MASK_USDT",
             "OKEX:MASK-USDT-SWAP"
@@ -62,7 +63,6 @@
             "COINBASE:MASK-USD",
             "COINBASE:MASK-USDT",
             "KRAKEN:MASK/USD",
-            "KRAKEN:PF_MASKUSD",
             "KUCOIN:MASK-USDT",
             "OKEX:MASK-USDC",
             "OKEX:MASK-USDT",
