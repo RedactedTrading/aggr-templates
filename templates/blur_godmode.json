@@ -44,6 +44,7 @@
             "BITMEX:BLURUSD",
             "BITMEX:BLURUSDT",
             "BYBIT:BLURUSDT",
+            "KRAKEN:PF_BLURUSD",
             "KUCOIN:BLURUSDTM",
             "MEXC:BLUR_USDT",
             "OKEX:BLUR-USDT-SWAP"
@@ -59,7 +60,6 @@
             "BYBIT:BLURUSDT-SPOT",
             "COINBASE:BLUR-USD",
             "KRAKEN:BLUR/USD",
-            "KRAKEN:PF_BLURUSD",
             "KUCOIN:BLUR-USDT",
             "OKEX:BLUR-USDC",
             "OKEX:BLUR-USDT"
