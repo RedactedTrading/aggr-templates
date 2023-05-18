@@ -25,8 +25,7 @@
             "KRAKEN:STG/USD",
             "KUCOIN:STG-USDT",
             "KUCOIN:STGUSDTM",
-            "MEXC:STG_USDT",
-            "PANCAKESWAPBSC:STG/BUSD"
+            "MEXC:STG_USDT"
           ],
           "zoom": 1
         },
@@ -55,8 +54,7 @@
             "BITGET:STGUSDT",
             "BYBIT:STGUSDT-SPOT",
             "KRAKEN:STG/USD",
-            "KUCOIN:STG-USDT",
-            "PANCAKESWAPBSC:STG/BUSD"
+            "KUCOIN:STG-USDT"
           ]
         }
       },
@@ -404,10 +402,6 @@
       "MEXC": {
         "disabled": false,
         "fetched": false
-      },
-      "PANCAKESWAPBSC": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -541,7 +535,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:stgbusd;\n\nvar b = BINANCE:stgusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:STGUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:STGUSDT;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BYBIT:STGUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = KUCOIN:STG-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = PANCAKESWAPBSC:STG/BUSD;line(cum(g.vbuy-g.vsell), title=\"PCKBSC\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:stgbusd;\n\nvar b = BINANCE:stgusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:STGUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:STGUSDT;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BYBIT:STGUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = KUCOIN:STG-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -910,8 +904,7 @@
         "KRAKEN:STG/USD": false,
         "KUCOIN:STG-USDT": false,
         "KUCOIN:STGUSDTM": false,
-        "MEXC:STG_USDT": false,
-        "PANCAKESWAPBSC:STG/BUSD": false
+        "MEXC:STG_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
