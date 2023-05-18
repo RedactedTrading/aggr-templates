@@ -38,6 +38,7 @@
           "markets": [
             "BINANCE_FUTURES:ognusdt",
             "BYBIT:OGNUSDT",
+            "KRAKEN:PF_OGNUSD",
             "KUCOIN:OGNUSDTM",
             "MEXC:OGN_USDT"
           ]
@@ -54,7 +55,6 @@
             "BITGET:OGNUSDT",
             "COINBASE:OGN-USD",
             "KRAKEN:OGN/USD",
-            "KRAKEN:PF_OGNUSD",
             "KUCOIN:OGN-USDT",
             "MEXC:OGNUSDT"
           ]
