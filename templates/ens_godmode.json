@@ -47,6 +47,7 @@
             "BINANCE_FUTURES:ensusdt",
             "BITGET:ENSUSDT_UMCBL",
             "BYBIT:ENSUSDT",
+            "KRAKEN:PF_ENSUSD",
             "KUCOIN:ENSUSDTM",
             "MEXC:ENS_USDT",
             "OKEX:ENS-USDT-SWAP"
@@ -65,7 +66,6 @@
             "COINBASE:ENS-USD",
             "COINBASE:ENS-USDT",
             "KRAKEN:ENS/USD",
-            "KRAKEN:PF_ENSUSD",
             "KUCOIN:ENS-USDT",
             "MEXC:ENSUSDC",
             "MEXC:ENSUSDT",
