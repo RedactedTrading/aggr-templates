@@ -38,6 +38,7 @@
             "BINANCE_FUTURES:audiousdt",
             "BITGET:AUDIOUSDT_UMCBL",
             "BYBIT:AUDIOUSDT",
+            "KRAKEN:PF_AUDIOUSD",
             "KUCOIN:AUDIOUSDTM",
             "MEXC:AUDIO_USDT"
           ]
@@ -53,7 +54,6 @@
             "BITGET:AUDIOUSDT",
             "COINBASE:AUDIO-USD",
             "KRAKEN:AUDIO/USD",
-            "KRAKEN:PF_AUDIOUSD",
             "KUCOIN:AUDIO-USDT"
           ]
         }
