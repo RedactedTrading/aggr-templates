@@ -36,6 +36,7 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:GLMRUSDT",
+            "KRAKEN:PF_GLMRUSD",
             "MEXC:GLMR_USDT"
           ]
         },
@@ -50,7 +51,6 @@
             "BITGET:GLMRUSDT",
             "BYBIT:GLMRUSDT-SPOT",
             "KRAKEN:GLMR/USD",
-            "KRAKEN:PF_GLMRUSD",
             "KUCOIN:GLMR-USDT",
             "MEXC:GLMRUSDT",
             "OKEX:GLMR-USDC",
