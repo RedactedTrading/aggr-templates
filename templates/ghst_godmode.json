@@ -20,8 +20,7 @@
             "COINBASE:GHST-USD",
             "KRAKEN:GHST/USD",
             "MEXC:GHSTUSDT",
-            "OKEX:GHST-USDT",
-            "QUICKSWAPPOLYGON:GHST/USDC"
+            "OKEX:GHST-USDT"
           ],
           "zoom": 1
         },
@@ -44,8 +43,7 @@
             "COINBASE:GHST-USD",
             "KRAKEN:GHST/USD",
             "MEXC:GHSTUSDT",
-            "OKEX:GHST-USDT",
-            "QUICKSWAPPOLYGON:GHST/USDC"
+            "OKEX:GHST-USDT"
           ]
         }
       },
@@ -393,10 +391,6 @@
       "MEXC": {
         "disabled": false,
         "fetched": false
-      },
-      "QUICKSWAPPOLYGON": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -530,7 +524,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ghstbusd;\n\nvar b = BINANCE:ghstusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:GHSTUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:GHST-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = MEXC:GHSTUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:GHST-USDT;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = QUICKSWAPPOLYGON:GHST/USDC;line(cum(g.vbuy-g.vsell), title=\"QSPOL\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ghstbusd;\n\nvar b = BINANCE:ghstusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:GHSTUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:GHST-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = MEXC:GHSTUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:GHST-USDT;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -894,8 +888,7 @@
         "COINBASE:GHST-USD": false,
         "KRAKEN:GHST/USD": false,
         "MEXC:GHSTUSDT": false,
-        "OKEX:GHST-USDT": false,
-        "QUICKSWAPPOLYGON:GHST/USDC": false
+        "OKEX:GHST-USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
