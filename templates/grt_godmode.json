@@ -44,6 +44,7 @@
             "BINANCE_FUTURES:grtusdt",
             "BITGET:GRTUSDT_UMCBL",
             "BYBIT:GRTUSDT",
+            "KRAKEN:PF_GRTUSD",
             "KUCOIN:GRTUSDTM",
             "MEXC:GRT_USDT",
             "OKEX:GRT-USD-SWAP",
@@ -63,7 +64,6 @@
             "BYBIT:GRTUSDT-SPOT",
             "COINBASE:GRT-USD",
             "KRAKEN:GRT/USD",
-            "KRAKEN:PF_GRTUSD",
             "KUCOIN:GRT-USDT",
             "OKEX:GRT-USDC",
             "OKEX:GRT-USDT"
