@@ -50,6 +50,7 @@
             "BINANCE_FUTURES:ftmusdt",
             "BITGET:FTMUSDT_UMCBL",
             "BYBIT:FTMUSDT",
+            "KRAKEN:PF_FTMUSD",
             "KUCOIN:FTMUSDTM",
             "MEXC:FTM_USDT",
             "OKEX:FTM-USDT-SWAP"
@@ -69,7 +70,6 @@
             "BITGET:FTMUSDT",
             "BYBIT:FTMUSDT-SPOT",
             "KRAKEN:FTM/USD",
-            "KRAKEN:PF_FTMUSD",
             "KUCOIN:FTM-USDC",
             "KUCOIN:FTM-USDT",
             "MEXC:FTMUSDC",
