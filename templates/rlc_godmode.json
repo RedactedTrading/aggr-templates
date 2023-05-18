@@ -38,6 +38,7 @@
             "BINANCE_FUTURES:rlcusdt",
             "BITGET:RLCUSDT_UMCBL",
             "BYBIT:RLCUSDT",
+            "KRAKEN:PF_RLCUSD",
             "MEXC:RLC_USDT"
           ]
         },
@@ -51,7 +52,6 @@
             "BINANCE:rlcusdt",
             "BITGET:RLCUSDT",
             "COINBASE:RLC-USD",
-            "KRAKEN:PF_RLCUSD",
             "KRAKEN:RLC/USD",
             "KUCOIN:RLC-USDT",
             "MEXC:RLCUSDT"
