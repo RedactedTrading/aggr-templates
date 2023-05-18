@@ -44,6 +44,7 @@
             "BINANCE_FUTURES:galausdt",
             "BITGET:GALAUSDT_UMCBL",
             "BYBIT:GALAUSDT",
+            "KRAKEN:PF_GALAUSD",
             "KUCOIN:GALAUSDTM",
             "MEXC:GALA_USDT",
             "OKEX:GALA-USDT-SWAP"
@@ -62,7 +63,6 @@
             "COINBASE:GALA-USD",
             "COINBASE:GALA-USDT",
             "KRAKEN:GALA/USD",
-            "KRAKEN:PF_GALAUSD",
             "OKEX:GALA-USDC",
             "OKEX:GALA-USDT"
           ]
