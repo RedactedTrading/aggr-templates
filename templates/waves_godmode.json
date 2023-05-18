@@ -46,6 +46,7 @@
             "BINANCE_FUTURES:wavesusdt",
             "BITGET:WAVESUSDT_UMCBL",
             "BYBIT:WAVESUSDT",
+            "KRAKEN:PF_WAVESUSD",
             "KUCOIN:WAVESUSDTM",
             "MEXC:WAVES_USDT",
             "OKEX:WAVES-USDT-SWAP"
@@ -63,7 +64,6 @@
             "BINANCE:wavesusdt",
             "BITGET:WAVESUSDT",
             "BYBIT:WAVESUSDT-SPOT",
-            "KRAKEN:PF_WAVESUSD",
             "KRAKEN:WAVES/USD",
             "KUCOIN:WAVES-USDT",
             "MEXC:WAVESUSDC",
