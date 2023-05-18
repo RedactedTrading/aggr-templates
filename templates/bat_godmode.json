@@ -48,6 +48,7 @@
             "BINANCE_FUTURES:batusdt",
             "BITGET:BATUSDT_UMCBL",
             "BYBIT:BATUSDT",
+            "KRAKEN:PF_BATUSD",
             "KUCOIN:BATUSDTM",
             "MEXC:BAT_USDT",
             "OKEX:BAT-USDT-SWAP"
@@ -68,7 +69,6 @@
             "BYBIT:BATUSDT-SPOT",
             "COINBASE:BAT-USD",
             "KRAKEN:BAT/USD",
-            "KRAKEN:PF_BATUSD",
             "KUCOIN:BAT-USDT",
             "MEXC:BATUSDT",
             "OKEX:BAT-USDC",
