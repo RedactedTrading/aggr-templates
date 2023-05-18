@@ -44,6 +44,7 @@
             "BINANCE_FUTURES:enjusdt",
             "BITGET:ENJUSDT_UMCBL",
             "BYBIT:ENJUSDT",
+            "KRAKEN:PF_ENJUSD",
             "KUCOIN:ENJUSDTM",
             "MEXC:ENJ_USDT",
             "OKEX:ENJ-USDT-SWAP"
@@ -63,7 +64,6 @@
             "COINBASE:ENJ-USD",
             "COINBASE:ENJ-USDT",
             "KRAKEN:ENJ/USD",
-            "KRAKEN:PF_ENJUSD",
             "KUCOIN:ENJ-USDT",
             "OKEX:ENJ-USDT",
             "UPBIT:KRW-ENJ"
