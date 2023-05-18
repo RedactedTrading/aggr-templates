@@ -44,7 +44,6 @@
             "OKEX:LINK-USDC",
             "OKEX:LINK-USDT",
             "OKEX:LINK-USDT-SWAP",
-            "UNISWAPETHEREUM:LINK/WETH",
             "UPBIT:KRW-LINK"
           ],
           "zoom": 1
@@ -64,6 +63,7 @@
             "BITMEX:LINK_USDT",
             "BYBIT:LINKUSDT",
             "DERIBIT:LINK_USDC-PERPETUAL",
+            "KRAKEN:PF_LINKUSD",
             "KUCOIN:LINKUSDTM",
             "MEXC:LINK_USDT",
             "OKEX:LINK-USD-SWAP",
@@ -88,12 +88,10 @@
             "COINBASE:LINK-USDT",
             "KRAKEN:LINK/USD",
             "KRAKEN:LINK/USDT",
-            "KRAKEN:PF_LINKUSD",
             "KUCOIN:LINK-USDC",
             "KUCOIN:LINK-USDT",
             "OKEX:LINK-USDC",
             "OKEX:LINK-USDT",
-            "UNISWAPETHEREUM:LINK/WETH",
             "UPBIT:KRW-LINK"
           ]
         }
@@ -442,10 +440,6 @@
       "MEXC": {
         "disabled": false,
         "fetched": false
-      },
-      "UNISWAPETHEREUM": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -579,7 +573,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:linkbusd;\n\nvar b = BINANCE:linktusd;\n\nvar c = BINANCE:linkusdc;\n\nvar d = BINANCE:linkusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITGET:LINKUSDC;\n\nvar f = BITGET:LINKUSDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar g = BYBIT:LINKUSDC-SPOT;\n\nvar h = BYBIT:LINKUSDT-SPOT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar i = COINBASE:LINK-USD;\n\nvar j = COINBASE:LINK-USDT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar k = KUCOIN:LINK-USDC;\n\nvar l = KUCOIN:LINK-USDT;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar m = OKEX:LINK-USDC;\n\nvar n = OKEX:LINK-USDT;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar o = UNISWAPETHEREUM:LINK/WETH;line(cum(o.vbuy-o.vsell), title=\"UNIETH\", color=\"rgb(89, 157, 208)\");\n\n\nvar p = UPBIT:KRW-LINK;line(cum(p.vbuy-p.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:linkbusd;\n\nvar b = BINANCE:linktusd;\n\nvar c = BINANCE:linkusdc;\n\nvar d = BINANCE:linkusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITGET:LINKUSDC;\n\nvar f = BITGET:LINKUSDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar g = BYBIT:LINKUSDC-SPOT;\n\nvar h = BYBIT:LINKUSDT-SPOT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar i = COINBASE:LINK-USD;\n\nvar j = COINBASE:LINK-USDT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar k = KUCOIN:LINK-USDC;\n\nvar l = KUCOIN:LINK-USDT;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar m = OKEX:LINK-USDC;\n\nvar n = OKEX:LINK-USDT;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar o = UPBIT:KRW-LINK;line(cum(o.vbuy-o.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -967,7 +961,6 @@
         "OKEX:LINK-USDC": false,
         "OKEX:LINK-USDT": false,
         "OKEX:LINK-USDT-SWAP": false,
-        "UNISWAPETHEREUM:LINK/WETH": true,
         "UPBIT:KRW-LINK": true
       },
       "barSpacing": 0.39437454420364615,
