@@ -48,6 +48,7 @@
             "BITMEX:ARBUSD",
             "BITMEX:ARBUSDT",
             "BYBIT:ARBUSDT",
+            "KRAKEN:PF_ARBUSD",
             "KUCOIN:ARBUSDTM",
             "MEXC:ARB_USDT",
             "OKEX:ARB-USDT-SWAP"
@@ -67,7 +68,6 @@
             "BYBIT:ARBUSDT-SPOT",
             "COINBASE:ARB-USD",
             "KRAKEN:ARB/USD",
-            "KRAKEN:PF_ARBUSD",
             "KUCOIN:ARB-USDT",
             "OKEX:ARB-USDT",
             "UPBIT:KRW-ARB"
