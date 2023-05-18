@@ -30,7 +30,8 @@
           "markets": [
             "BINANCE_FUTURES:luna2usdt",
             "BITGET:LUNA2USDT_UMCBL",
-            "BYBIT:LUNA2USDT"
+            "BYBIT:LUNA2USDT",
+            "KRAKEN:PF_LUNA2USD"
           ]
         },
         "trades2": {
@@ -39,8 +40,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "KRAKEN:LUNA2/USD",
-            "KRAKEN:PF_LUNA2USD"
+            "KRAKEN:LUNA2/USD"
           ]
         }
       },
