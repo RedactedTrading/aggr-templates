@@ -41,6 +41,7 @@
             "BINANCE_FUTURES:dydxusdt",
             "BITGET:DYDXUSDT_UMCBL",
             "BYBIT:DYDXUSDT",
+            "KRAKEN:PF_DYDXUSD",
             "KUCOIN:DYDXUSDTM",
             "MEXC:DYDX_USDT",
             "OKEX:DYDX-USDT-SWAP"
@@ -57,7 +58,6 @@
             "BITGET:DYDXUSDT",
             "BYBIT:DYDXUSDT-SPOT",
             "KRAKEN:DYDX/USD",
-            "KRAKEN:PF_DYDXUSD",
             "KUCOIN:DYDX-USDT",
             "OKEX:DYDX-USDC",
             "OKEX:DYDX-USDT"
