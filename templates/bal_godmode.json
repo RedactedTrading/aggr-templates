@@ -40,6 +40,7 @@
           "markets": [
             "BINANCE_FUTURES:balusdt",
             "BYBIT:BALUSDT",
+            "KRAKEN:PF_BALUSD",
             "KUCOIN:BALUSDTM",
             "MEXC:BAL_USDT",
             "OKEX:BAL-USDT-SWAP"
@@ -57,7 +58,6 @@
             "BITGET:BALUSDT",
             "COINBASE:BAL-USD",
             "KRAKEN:BAL/USD",
-            "KRAKEN:PF_BALUSD",
             "KUCOIN:BAL-USDT",
             "MEXC:BALUSDT",
             "OKEX:BAL-USDT"
