@@ -37,6 +37,7 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:qntusdt",
+            "KRAKEN:PF_QNTUSD",
             "KUCOIN:QNTUSDTM",
             "MEXC:QNT_USDT"
           ]
@@ -53,7 +54,6 @@
             "BYBIT:QNTUSDT-SPOT",
             "COINBASE:QNT-USD",
             "COINBASE:QNT-USDT",
-            "KRAKEN:PF_QNTUSD",
             "KRAKEN:QNT/USD",
             "KUCOIN:QNT-USDT",
             "MEXC:QNTUSDT"
