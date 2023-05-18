@@ -58,6 +58,7 @@
             "BITMEX:APEUSDT",
             "BITMEX:APE_USDT",
             "BYBIT:APEUSDT",
+            "KRAKEN:PF_APEUSD",
             "KUCOIN:APEUSDTM",
             "MEXC:APE_USDT",
             "OKEX:APE-USDT-SWAP"
@@ -80,7 +81,6 @@
             "COINBASE:APE-USDT",
             "KRAKEN:APE/USD",
             "KRAKEN:APE/USDT",
-            "KRAKEN:PF_APEUSD",
             "KUCOIN:APE-USDC",
             "KUCOIN:APE-USDT",
             "MEXC:APEUSDC",
