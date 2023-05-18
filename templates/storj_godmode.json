@@ -43,6 +43,7 @@
             "BINANCE_FUTURES:storjusdt",
             "BITGET:STORJUSDT_UMCBL",
             "BYBIT:STORJUSDT",
+            "KRAKEN:PF_STORJUSD",
             "KUCOIN:STORJUSDTM",
             "MEXC:STORJ_USDT",
             "OKEX:STORJ-USDT-SWAP"
@@ -58,7 +59,6 @@
             "BINANCE:storjusdt",
             "BITGET:STORJUSDT",
             "COINBASE:STORJ-USD",
-            "KRAKEN:PF_STORJUSD",
             "KRAKEN:STORJ/USD",
             "KUCOIN:STORJ-USDT",
             "MEXC:STORJUSDT",
