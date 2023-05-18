@@ -32,8 +32,6 @@
             "OKEX:1INCH-USDC",
             "OKEX:1INCH-USDT",
             "OKEX:1INCH-USDT-SWAP",
-            "UNISWAPETHEREUM:1INCH/USDT",
-            "UNISWAPETHEREUM:1INCH/WETH",
             "UPBIT:KRW-1INCH"
           ],
           "zoom": 1
@@ -47,6 +45,7 @@
             "BINANCE_FUTURES:1inchusdt",
             "BITGET:1INCHUSDT_UMCBL",
             "BYBIT:1INCHUSDT",
+            "KRAKEN:PF_1INCHUSD",
             "KUCOIN:1INCHUSDTM",
             "MEXC:1INCH_USDT",
             "OKEX:1INCH-USD-SWAP",
@@ -65,13 +64,10 @@
             "BYBIT:1INCHUSDT-SPOT",
             "COINBASE:1INCH-USD",
             "KRAKEN:1INCH/USD",
-            "KRAKEN:PF_1INCHUSD",
             "KUCOIN:1INCH-USDT",
             "MEXC:1INCHUSDT",
             "OKEX:1INCH-USDC",
             "OKEX:1INCH-USDT",
-            "UNISWAPETHEREUM:1INCH/USDT",
-            "UNISWAPETHEREUM:1INCH/WETH",
             "UPBIT:KRW-1INCH"
           ]
         }
@@ -420,10 +416,6 @@
       "MEXC": {
         "disabled": false,
         "fetched": false
-      },
-      "UNISWAPETHEREUM": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -557,7 +549,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:1inchbusd;\n\nvar b = BINANCE:1inchusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:1INCHUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:1INCHUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = COINBASE:1INCH-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = KUCOIN:1INCH-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:1INCHUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:1INCH-USDC;\n\nvar i = OKEX:1INCH-USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = UNISWAPETHEREUM:1INCH/USDT;\n\nvar k = UNISWAPETHEREUM:1INCH/WETH;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"UNIETH\", color=\"rgb(89, 157, 208)\");\n\n\nvar l = UPBIT:KRW-1INCH;line(cum(l.vbuy-l.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:1inchbusd;\n\nvar b = BINANCE:1inchusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:1INCHUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:1INCHUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = COINBASE:1INCH-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = KUCOIN:1INCH-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:1INCHUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:1INCH-USDC;\n\nvar i = OKEX:1INCH-USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = UPBIT:KRW-1INCH;line(cum(j.vbuy-j.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -933,8 +925,6 @@
         "OKEX:1INCH-USDC": false,
         "OKEX:1INCH-USDT": false,
         "OKEX:1INCH-USDT-SWAP": false,
-        "UNISWAPETHEREUM:1INCH/USDT": false,
-        "UNISWAPETHEREUM:1INCH/WETH": true,
         "UPBIT:KRW-1INCH": true
       },
       "barSpacing": 0.39437454420364615,
