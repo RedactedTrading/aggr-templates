@@ -14,7 +14,6 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BALANCERETHEREUM:LIT/WETH",
             "BINANCE:litbusd",
             "BINANCE:litusdt",
             "BINANCE_FUTURES:litusdt",
@@ -48,7 +47,6 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BALANCERETHEREUM:LIT/WETH",
             "BINANCE:litbusd",
             "BINANCE:litusdt",
             "BITGET:LITUSDT",
@@ -395,10 +393,6 @@
         "disabled": true,
         "fetched": false
       },
-      "BALANCERETHEREUM": {
-        "disabled": false,
-        "fetched": false
-      },
       "BITGET": {
         "disabled": false,
         "fetched": false
@@ -539,7 +533,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BALANCERETHEREUM:LIT/WETH;line(cum(a.vbuy-a.vsell), title=\"BLNETH\", color=\"rgb(89, 157, 208)\");\n\n\nvar b = BINANCE:litbusd;\n\nvar c = BINANCE:litusdt;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar d = BITGET:LITUSDT;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = COINBASE:LIT-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = KUCOIN:LIT-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:LITUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:litbusd;\n\nvar b = BINANCE:litusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:LITUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:LIT-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = KUCOIN:LIT-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:LITUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -897,7 +891,6 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BALANCERETHEREUM:LIT/WETH": true,
         "BINANCE:litbusd": false,
         "BINANCE:litusdt": false,
         "BINANCE_FUTURES:litusdt": false,
