@@ -45,6 +45,7 @@
             "BINANCE_FUTURES:lrcusdt",
             "BITGET:LRCUSDT_UMCBL",
             "BYBIT:LRCUSDT",
+            "KRAKEN:PF_LRCUSD",
             "KUCOIN:LRCUSDTM",
             "MEXC:LRC_USDT",
             "OKEX:LRC-USDT-SWAP"
@@ -64,7 +65,6 @@
             "COINBASE:LRC-USD",
             "COINBASE:LRC-USDT",
             "KRAKEN:LRC/USD",
-            "KRAKEN:PF_LRCUSD",
             "KUCOIN:LRC-USDT",
             "MEXC:LRCUSDT",
             "OKEX:LRC-USDC",
