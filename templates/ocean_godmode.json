@@ -39,6 +39,7 @@
             "BINANCE_FUTURES:oceanusdt",
             "BITGET:OCEANUSDT_UMCBL",
             "BYBIT:OCEANUSDT",
+            "KRAKEN:PF_OCEANUSD",
             "KUCOIN:OCEANUSDTM",
             "MEXC:OCEAN_USDT"
           ]
@@ -54,7 +55,6 @@
             "BITGET:OCEANUSDT",
             "COINBASE:OCEAN-USD",
             "KRAKEN:OCEAN/USD",
-            "KRAKEN:PF_OCEANUSD",
             "KUCOIN:OCEAN-USDT",
             "MEXC:OCEANUSDT"
           ]
