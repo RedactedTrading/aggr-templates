@@ -16,7 +16,7 @@
           "markets": [
             "BINANCE:chessbusd",
             "BINANCE:chessusdt",
-            "BITGET:CHESSUSDT",
+            "BITGET:CHESSUSDT_SPBL",
             "MEXC:CHESSUSDT",
             "MEXC:CHESS_USDT"
           ],
@@ -28,6 +28,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BITGET:CHESSUSDT_SPBL",
             "MEXC:CHESS_USDT"
           ]
         },
@@ -39,7 +40,6 @@
           "markets": [
             "BINANCE:chessbusd",
             "BINANCE:chessusdt",
-            "BITGET:CHESSUSDT",
             "MEXC:CHESSUSDT"
           ]
         }
@@ -477,7 +477,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = MEXC:CHESS_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:CHESSUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = MEXC:CHESS_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -521,7 +521,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:chessbusd;\n\nvar b = BINANCE:chessusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:CHESSUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = MEXC:CHESSUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:chessbusd;\n\nvar b = BINANCE:chessusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = MEXC:CHESSUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -881,7 +881,7 @@
       "hiddenMarkets": {
         "BINANCE:chessbusd": false,
         "BINANCE:chessusdt": false,
-        "BITGET:CHESSUSDT": false,
+        "BITGET:CHESSUSDT_SPBL": false,
         "MEXC:CHESSUSDT": false,
         "MEXC:CHESS_USDT": false
       },
