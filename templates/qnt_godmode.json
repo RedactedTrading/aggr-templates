@@ -17,7 +17,7 @@
             "BINANCE:qntbusd",
             "BINANCE:qntusdt",
             "BINANCE_FUTURES:qntusdt",
-            "BITGET:QNTUSDT",
+            "BITGET:QNTUSDT_SPBL",
             "BYBIT:QNTUSDT-SPOT",
             "COINBASE:QNT-USD",
             "COINBASE:QNT-USDT",
@@ -37,6 +37,7 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:qntusdt",
+            "BITGET:QNTUSDT_SPBL",
             "KRAKEN:PF_QNTUSD",
             "KUCOIN:QNTUSDTM",
             "MEXC:QNT_USDT"
@@ -50,7 +51,6 @@
           "markets": [
             "BINANCE:qntbusd",
             "BINANCE:qntusdt",
-            "BITGET:QNTUSDT",
             "BYBIT:QNTUSDT-SPOT",
             "COINBASE:QNT-USD",
             "COINBASE:QNT-USDT",
@@ -493,7 +493,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:qntusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = KUCOIN:QNTUSDTM;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar c = MEXC:QNT_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:qntusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:QNTUSDT_SPBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = KUCOIN:QNTUSDTM;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:QNT_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -537,7 +537,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:qntbusd;\n\nvar b = BINANCE:qntusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:QNTUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:QNTUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = COINBASE:QNT-USD;\n\nvar f = COINBASE:QNT-USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = KUCOIN:QNT-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = MEXC:QNTUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:qntbusd;\n\nvar b = BINANCE:qntusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BYBIT:QNTUSDT-SPOT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = COINBASE:QNT-USD;\n\nvar e = COINBASE:QNT-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = KUCOIN:QNT-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:QNTUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -898,7 +898,7 @@
         "BINANCE:qntbusd": false,
         "BINANCE:qntusdt": false,
         "BINANCE_FUTURES:qntusdt": false,
-        "BITGET:QNTUSDT": false,
+        "BITGET:QNTUSDT_SPBL": false,
         "BYBIT:QNTUSDT-SPOT": false,
         "COINBASE:QNT-USD": false,
         "COINBASE:QNT-USDT": false,
