@@ -16,7 +16,6 @@
           "markets": [
             "BITFINEX:FLRUSD",
             "BITMEX:FLRUSD",
-            "BITMEX:FLRUSDT",
             "BYBIT:FLRUSDT",
             "BYBIT:FLRUSDT-SPOT",
             "COINBASE:FLR-USD",
@@ -37,7 +36,6 @@
           "zoom": 1.0,
           "markets": [
             "BITMEX:FLRUSD",
-            "BITMEX:FLRUSDT",
             "BYBIT:FLRUSDT",
             "KRAKEN:PF_FLRUSD",
             "MEXC:FLR_USDT"
@@ -489,7 +487,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITMEX:FLRUSD;\n\nvar b = BITMEX:FLRUSDT;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar c = BYBIT:FLRUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = MEXC:FLR_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITMEX:FLRUSD;line(cum(a.vbuy-a.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar b = BYBIT:FLRUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = MEXC:FLR_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -893,7 +891,6 @@
       "hiddenMarkets": {
         "BITFINEX:FLRUSD": false,
         "BITMEX:FLRUSD": false,
-        "BITMEX:FLRUSDT": false,
         "BYBIT:FLRUSDT": false,
         "BYBIT:FLRUSDT-SPOT": false,
         "COINBASE:FLR-USD": false,
