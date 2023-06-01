@@ -14,7 +14,7 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BITGET:SAITAMAUSDT",
+            "BITGET:SAITAMAUSDT_SPBL",
             "BYBIT:SAITAMAUSDT-SPOT",
             "MEXC:SAITAMAUSDT",
             "OKEX:SAITAMA-USDT"
@@ -34,7 +34,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BITGET:SAITAMAUSDT",
+            "BITGET:SAITAMAUSDT_SPBL",
             "BYBIT:SAITAMAUSDT-SPOT",
             "MEXC:SAITAMAUSDT",
             "OKEX:SAITAMA-USDT"
@@ -518,7 +518,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:SAITAMAUSDT;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:SAITAMAUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = MEXC:SAITAMAUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar d = OKEX:SAITAMA-USDT;line(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:SAITAMAUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:SAITAMAUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = MEXC:SAITAMAUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar d = OKEX:SAITAMA-USDT;line(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -876,7 +876,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:SAITAMAUSDT": false,
+        "BITGET:SAITAMAUSDT_SPBL": false,
         "BYBIT:SAITAMAUSDT-SPOT": false,
         "MEXC:SAITAMAUSDT": false,
         "OKEX:SAITAMA-USDT": false
