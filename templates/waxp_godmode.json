@@ -19,7 +19,6 @@
             "BYBIT:WAXPUSDT-SPOT",
             "KUCOIN:WAXPUSDTM",
             "MEXC:WAXPUSDT",
-            "MEXC:WAXP_USDT",
             "OKEX:WAXP-USDT",
             "UPBIT:KRW-WAXP"
           ],
@@ -31,8 +30,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "KUCOIN:WAXPUSDTM",
-            "MEXC:WAXP_USDT"
+            "KUCOIN:WAXPUSDTM"
           ]
         },
         "trades2": {
@@ -479,7 +477,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = KUCOIN:WAXPUSDTM;line(cum(a.vbuy-a.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar b = MEXC:WAXP_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = KUCOIN:WAXPUSDTM;line(cum(a.vbuy-a.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -886,7 +884,6 @@
         "BYBIT:WAXPUSDT-SPOT": false,
         "KUCOIN:WAXPUSDTM": false,
         "MEXC:WAXPUSDT": false,
-        "MEXC:WAXP_USDT": false,
         "OKEX:WAXP-USDT": false,
         "UPBIT:KRW-WAXP": true
       },
