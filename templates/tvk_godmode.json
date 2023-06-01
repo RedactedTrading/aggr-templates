@@ -16,11 +16,10 @@
           "markets": [
             "BINANCE:tvkbusd",
             "BINANCE:tvkusdt",
-            "BITGET:TVKUSDT",
+            "BITGET:TVKUSDT_SPBL",
             "COINBASE:TVK-USD",
             "KRAKEN:TVK/USD",
-            "KUCOIN:TVK-USDT",
-            "MEXC:TVKUSDT"
+            "KUCOIN:TVK-USDT"
           ],
           "zoom": 1
         },
@@ -29,7 +28,9 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "BITGET:TVKUSDT_SPBL"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -39,11 +40,9 @@
           "markets": [
             "BINANCE:tvkbusd",
             "BINANCE:tvkusdt",
-            "BITGET:TVKUSDT",
             "COINBASE:TVK-USD",
             "KRAKEN:TVK/USD",
-            "KUCOIN:TVK-USDT",
-            "MEXC:TVKUSDT"
+            "KUCOIN:TVK-USDT"
           ]
         }
       },
@@ -387,10 +386,6 @@
       "BITGET": {
         "disabled": false,
         "fetched": false
-      },
-      "MEXC": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -480,7 +475,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:TVKUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -524,7 +519,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:tvkbusd;\n\nvar b = BINANCE:tvkusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:TVKUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:TVK-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = KUCOIN:TVK-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:TVKUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:tvkbusd;\n\nvar b = BINANCE:tvkusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:TVK-USD;line(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar d = KUCOIN:TVK-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -884,11 +879,10 @@
       "hiddenMarkets": {
         "BINANCE:tvkbusd": false,
         "BINANCE:tvkusdt": false,
-        "BITGET:TVKUSDT": false,
+        "BITGET:TVKUSDT_SPBL": false,
         "COINBASE:TVK-USD": false,
         "KRAKEN:TVK/USD": false,
-        "KUCOIN:TVK-USDT": false,
-        "MEXC:TVKUSDT": false
+        "KUCOIN:TVK-USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
