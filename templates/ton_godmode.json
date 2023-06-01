@@ -15,6 +15,7 @@
           "type": "chart",
           "markets": [
             "BITFINEX:TONUSD",
+            "BITGET:TONUSDT_UMCBL",
             "BYBIT:TONUSDT-SPOT",
             "KUCOIN:TON-USDT",
             "KUCOIN:TONUSDTM",
@@ -31,6 +32,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BITGET:TONUSDT_UMCBL",
             "KUCOIN:TONUSDTM",
             "OKEX:TON-USDT-SWAP"
           ]
@@ -386,6 +388,10 @@
       "UPBIT": {
         "disabled": false,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -475,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = KUCOIN:TONUSDTM;line(cum(a.vbuy-a.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar b = OKEX:TON-USDT-SWAP;line(cum(b.vbuy-b.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:TONUSDT_UMCBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = KUCOIN:TONUSDTM;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar c = OKEX:TON-USDT-SWAP;line(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -878,6 +884,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITFINEX:TONUSD": false,
+        "BITGET:TONUSDT_UMCBL": false,
         "BYBIT:TONUSDT-SPOT": false,
         "KUCOIN:TON-USDT": false,
         "KUCOIN:TONUSDTM": false,
