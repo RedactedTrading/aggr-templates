@@ -16,7 +16,7 @@
           "markets": [
             "BINANCE:laziobusd",
             "BINANCE:laziousdt",
-            "BITGET:LAZIOUSDT",
+            "BITGET:LAZIOUSDT_SPBL",
             "MEXC:LAZIOUSDT",
             "MEXC:LAZIO_USDT"
           ],
@@ -28,6 +28,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BITGET:LAZIOUSDT_SPBL",
             "MEXC:LAZIO_USDT"
           ]
         },
@@ -39,7 +40,6 @@
           "markets": [
             "BINANCE:laziobusd",
             "BINANCE:laziousdt",
-            "BITGET:LAZIOUSDT",
             "MEXC:LAZIOUSDT"
           ]
         }
@@ -477,7 +477,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = MEXC:LAZIO_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:LAZIOUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = MEXC:LAZIO_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -521,7 +521,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:laziobusd;\n\nvar b = BINANCE:laziousdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:LAZIOUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = MEXC:LAZIOUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:laziobusd;\n\nvar b = BINANCE:laziousdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = MEXC:LAZIOUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -881,7 +881,7 @@
       "hiddenMarkets": {
         "BINANCE:laziobusd": false,
         "BINANCE:laziousdt": false,
-        "BITGET:LAZIOUSDT": false,
+        "BITGET:LAZIOUSDT_SPBL": false,
         "MEXC:LAZIOUSDT": false,
         "MEXC:LAZIO_USDT": false
       },
