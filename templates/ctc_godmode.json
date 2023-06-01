@@ -18,7 +18,6 @@
             "BYBIT:CTCUSDT-SPOT",
             "KUCOIN:CTC-USDT",
             "MEXC:CTCUSDT",
-            "MEXC:CTC_USDT",
             "OKEX:CTC-USDT"
           ],
           "zoom": 1
@@ -29,8 +28,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BYBIT:CTCUSDT",
-            "MEXC:CTC_USDT"
+            "BYBIT:CTCUSDT"
           ]
         },
         "trades2": {
@@ -475,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:CTCUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:CTC_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:CTCUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -881,7 +879,6 @@
         "BYBIT:CTCUSDT-SPOT": false,
         "KUCOIN:CTC-USDT": false,
         "MEXC:CTCUSDT": false,
-        "MEXC:CTC_USDT": false,
         "OKEX:CTC-USDT": false
       },
       "barSpacing": 0.39437454420364615,
