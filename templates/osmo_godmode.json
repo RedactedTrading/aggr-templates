@@ -16,10 +16,9 @@
           "markets": [
             "BINANCE:osmobusd",
             "BINANCE:osmousdt",
-            "BITGET:OSMOUSDT",
-            "KUCOIN:OSMO-USDT",
-            "MEXC:OSMOUSDT",
-            "MEXC:OSMO_USDT"
+            "BITGET:OSMOUSDT_SPBL",
+            "COINBASE:OSMO-USD",
+            "KUCOIN:OSMO-USDT"
           ],
           "zoom": 1
         },
@@ -29,7 +28,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "MEXC:OSMO_USDT"
+            "BITGET:OSMOUSDT_SPBL"
           ]
         },
         "trades2": {
@@ -40,9 +39,8 @@
           "markets": [
             "BINANCE:osmobusd",
             "BINANCE:osmousdt",
-            "BITGET:OSMOUSDT",
-            "KUCOIN:OSMO-USDT",
-            "MEXC:OSMOUSDT"
+            "COINBASE:OSMO-USD",
+            "KUCOIN:OSMO-USDT"
           ]
         }
       },
@@ -331,7 +329,7 @@
         "fetched": false
       },
       "COINBASE": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "DERIBIT": {
@@ -384,10 +382,6 @@
         "fetched": false
       },
       "BITGET": {
-        "disabled": false,
-        "fetched": false
-      },
-      "MEXC": {
         "disabled": false,
         "fetched": false
       }
@@ -479,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = MEXC:OSMO_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:OSMOUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -523,7 +517,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:osmobusd;\n\nvar b = BINANCE:osmousdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:OSMOUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = KUCOIN:OSMO-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:OSMOUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:osmobusd;\n\nvar b = BINANCE:osmousdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:OSMO-USD;line(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar d = KUCOIN:OSMO-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -883,10 +877,9 @@
       "hiddenMarkets": {
         "BINANCE:osmobusd": false,
         "BINANCE:osmousdt": false,
-        "BITGET:OSMOUSDT": false,
-        "KUCOIN:OSMO-USDT": false,
-        "MEXC:OSMOUSDT": false,
-        "MEXC:OSMO_USDT": false
+        "BITGET:OSMOUSDT_SPBL": false,
+        "COINBASE:OSMO-USD": false,
+        "KUCOIN:OSMO-USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
