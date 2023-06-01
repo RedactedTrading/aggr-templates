@@ -18,8 +18,7 @@
             "BINANCE:paxtusd",
             "BINANCE:paxusdt",
             "BITFINEX:PAXUSD",
-            "COINBASE:PAX-USD",
-            "MEXC:PAXUSDT"
+            "COINBASE:PAX-USD"
           ],
           "zoom": 1
         },
@@ -40,8 +39,7 @@
             "BINANCE:paxtusd",
             "BINANCE:paxusdt",
             "BITFINEX:PAXUSD",
-            "COINBASE:PAX-USD",
-            "MEXC:PAXUSDT"
+            "COINBASE:PAX-USD"
           ]
         }
       },
@@ -381,10 +379,6 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
-      },
-      "MEXC": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -518,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:paxbusd;\n\nvar b = BINANCE:paxtusd;\n\nvar c = BINANCE:paxusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar d = BITFINEX:PAXUSD;line(cum(d.vbuy-d.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar e = COINBASE:PAX-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = MEXC:PAXUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:paxbusd;\n\nvar b = BINANCE:paxtusd;\n\nvar c = BINANCE:paxusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar d = BITFINEX:PAXUSD;line(cum(d.vbuy-d.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar e = COINBASE:PAX-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -880,8 +874,7 @@
         "BINANCE:paxtusd": false,
         "BINANCE:paxusdt": false,
         "BITFINEX:PAXUSD": false,
-        "COINBASE:PAX-USD": false,
-        "MEXC:PAXUSDT": false
+        "COINBASE:PAX-USD": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
