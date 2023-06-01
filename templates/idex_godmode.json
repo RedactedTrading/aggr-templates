@@ -17,11 +17,13 @@
             "BINANCE:idexbusd",
             "BINANCE:idexusdt",
             "BINANCE_FUTURES:idexusdt",
-            "BITGET:IDEXUSDT",
+            "BITGET:IDEXUSDT_SPBL",
+            "BITGET:IDEXUSDT_UMCBL",
+            "BYBIT:IDEXUSDT",
             "COINBASE:IDEX-USD",
             "COINBASE:IDEX-USDT",
             "KRAKEN:IDEX/USD",
-            "MEXC:IDEXUSDT",
+            "KUCOIN:IDEXUSDTM",
             "MEXC:IDEX_USDT"
           ],
           "zoom": 1
@@ -33,6 +35,10 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:idexusdt",
+            "BITGET:IDEXUSDT_SPBL",
+            "BITGET:IDEXUSDT_UMCBL",
+            "BYBIT:IDEXUSDT",
+            "KUCOIN:IDEXUSDTM",
             "MEXC:IDEX_USDT"
           ]
         },
@@ -44,11 +50,9 @@
           "markets": [
             "BINANCE:idexbusd",
             "BINANCE:idexusdt",
-            "BITGET:IDEXUSDT",
             "COINBASE:IDEX-USD",
             "COINBASE:IDEX-USDT",
-            "KRAKEN:IDEX/USD",
-            "MEXC:IDEXUSDT"
+            "KRAKEN:IDEX/USD"
           ]
         }
       },
@@ -333,7 +337,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -365,7 +369,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -485,7 +489,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:idexusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = MEXC:IDEX_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:idexusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:IDEXUSDT_SPBL;\n\nvar c = BITGET:IDEXUSDT_UMCBL;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:IDEXUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KUCOIN:IDEXUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:IDEX_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -529,7 +533,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:idexbusd;\n\nvar b = BINANCE:idexusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:IDEXUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:IDEX-USD;\n\nvar e = COINBASE:IDEX-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = MEXC:IDEXUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:idexbusd;\n\nvar b = BINANCE:idexusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:IDEX-USD;\n\nvar d = COINBASE:IDEX-USDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -890,11 +894,13 @@
         "BINANCE:idexbusd": false,
         "BINANCE:idexusdt": false,
         "BINANCE_FUTURES:idexusdt": false,
-        "BITGET:IDEXUSDT": false,
+        "BITGET:IDEXUSDT_SPBL": false,
+        "BITGET:IDEXUSDT_UMCBL": false,
+        "BYBIT:IDEXUSDT": false,
         "COINBASE:IDEX-USD": false,
         "COINBASE:IDEX-USDT": false,
         "KRAKEN:IDEX/USD": false,
-        "MEXC:IDEXUSDT": false,
+        "KUCOIN:IDEXUSDTM": false,
         "MEXC:IDEX_USDT": false
       },
       "barSpacing": 0.39437454420364615,
