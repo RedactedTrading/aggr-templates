@@ -16,11 +16,12 @@
           "markets": [
             "BINANCE:radbusd",
             "BINANCE:radusdt",
-            "BITGET:RADUSDT",
+            "BINANCE_FUTURES:radusdt",
+            "BITGET:RADUSDT_SPBL",
             "COINBASE:RAD-USD",
             "COINBASE:RAD-USDT",
             "KRAKEN:RAD/USD",
-            "MEXC:RADUSDT",
+            "KUCOIN:RADUSDTM",
             "MEXC:RAD_USDT"
           ],
           "zoom": 1
@@ -31,6 +32,9 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BINANCE_FUTURES:radusdt",
+            "BITGET:RADUSDT_SPBL",
+            "KUCOIN:RADUSDTM",
             "MEXC:RAD_USDT"
           ]
         },
@@ -42,11 +46,9 @@
           "markets": [
             "BINANCE:radbusd",
             "BINANCE:radusdt",
-            "BITGET:RADUSDT",
             "COINBASE:RAD-USD",
             "COINBASE:RAD-USDT",
-            "KRAKEN:RAD/USD",
-            "MEXC:RADUSDT"
+            "KRAKEN:RAD/USD"
           ]
         }
       },
@@ -311,7 +313,7 @@
         "fetched": false
       },
       "BINANCE_FUTURES": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BINANCE_US": {
@@ -363,7 +365,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -483,7 +485,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = MEXC:RAD_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:radusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:RADUSDT_SPBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = KUCOIN:RADUSDTM;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:RAD_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -527,7 +529,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:radbusd;\n\nvar b = BINANCE:radusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:RADUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:RAD-USD;\n\nvar e = COINBASE:RAD-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = MEXC:RADUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:radbusd;\n\nvar b = BINANCE:radusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:RAD-USD;\n\nvar d = COINBASE:RAD-USDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -887,11 +889,12 @@
       "hiddenMarkets": {
         "BINANCE:radbusd": false,
         "BINANCE:radusdt": false,
-        "BITGET:RADUSDT": false,
+        "BINANCE_FUTURES:radusdt": false,
+        "BITGET:RADUSDT_SPBL": false,
         "COINBASE:RAD-USD": false,
         "COINBASE:RAD-USDT": false,
         "KRAKEN:RAD/USD": false,
-        "MEXC:RADUSDT": false,
+        "KUCOIN:RADUSDTM": false,
         "MEXC:RAD_USDT": false
       },
       "barSpacing": 0.39437454420364615,
