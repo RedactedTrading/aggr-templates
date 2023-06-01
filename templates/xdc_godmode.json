@@ -15,7 +15,7 @@
           "type": "chart",
           "markets": [
             "BITFINEX:XDCUSD",
-            "BITGET:XDCUSDT",
+            "BITGET:XDCUSDT_SPBL",
             "BYBIT:XDCUSDT-SPOT",
             "KUCOIN:XDC-USDT"
           ],
@@ -35,7 +35,7 @@
           "zoom": 1.0,
           "markets": [
             "BITFINEX:XDCUSD",
-            "BITGET:XDCUSDT",
+            "BITGET:XDCUSDT_SPBL",
             "BYBIT:XDCUSDT-SPOT",
             "KUCOIN:XDC-USDT"
           ]
@@ -514,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITFINEX:XDCUSD;line(cum(a.vbuy-a.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar b = BITGET:XDCUSDT;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:XDCUSDT-SPOT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KUCOIN:XDC-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITFINEX:XDCUSD;line(cum(a.vbuy-a.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar b = BITGET:XDCUSDT_SPBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:XDCUSDT-SPOT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KUCOIN:XDC-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -873,7 +873,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITFINEX:XDCUSD": false,
-        "BITGET:XDCUSDT": false,
+        "BITGET:XDCUSDT_SPBL": false,
         "BYBIT:XDCUSDT-SPOT": false,
         "KUCOIN:XDC-USDT": false
       },
