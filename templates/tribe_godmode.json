@@ -17,7 +17,6 @@
             "BINANCE:tribebusd",
             "BINANCE:tribeusdt",
             "BYBIT:TRIBEUSDT-SPOT",
-            "KRAKEN:TRIBE/USD",
             "KUCOIN:TRIBE-USDT",
             "MEXC:TRIBEUSDT"
           ],
@@ -39,7 +38,6 @@
             "BINANCE:tribebusd",
             "BINANCE:tribeusdt",
             "BYBIT:TRIBEUSDT-SPOT",
-            "KRAKEN:TRIBE/USD",
             "KUCOIN:TRIBE-USDT",
             "MEXC:TRIBEUSDT"
           ]
@@ -354,7 +352,7 @@
         "fetched": false
       },
       "KRAKEN": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "KUCOIN": {
@@ -879,7 +877,6 @@
         "BINANCE:tribebusd": false,
         "BINANCE:tribeusdt": false,
         "BYBIT:TRIBEUSDT-SPOT": false,
-        "KRAKEN:TRIBE/USD": false,
         "KUCOIN:TRIBE-USDT": false,
         "MEXC:TRIBEUSDT": false
       },
