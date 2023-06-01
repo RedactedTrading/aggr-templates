@@ -14,8 +14,7 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BYBIT:FBUSDT-SPOT",
-            "MEXC:FBUSDT"
+            "BYBIT:FBUSDT-SPOT"
           ],
           "zoom": 1
         },
@@ -32,8 +31,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BYBIT:FBUSDT-SPOT",
-            "MEXC:FBUSDT"
+            "BYBIT:FBUSDT-SPOT"
           ]
         }
       },
@@ -373,10 +371,6 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
-      },
-      "MEXC": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -510,7 +504,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:FBUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:FBUSDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:FBUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -868,8 +862,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:FBUSDT-SPOT": false,
-        "MEXC:FBUSDT": false
+        "BYBIT:FBUSDT-SPOT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
