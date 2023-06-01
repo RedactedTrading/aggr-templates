@@ -15,8 +15,7 @@
           "type": "chart",
           "markets": [
             "BYBIT:AXLUSDT-SPOT",
-            "COINBASE:AXL-USD",
-            "MEXC:AXLUSDT"
+            "COINBASE:AXL-USD"
           ],
           "zoom": 1
         },
@@ -34,8 +33,7 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:AXLUSDT-SPOT",
-            "COINBASE:AXL-USD",
-            "MEXC:AXLUSDT"
+            "COINBASE:AXL-USD"
           ]
         }
       },
@@ -375,10 +373,6 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
-      },
-      "MEXC": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -512,7 +506,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:AXLUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = COINBASE:AXL-USD;line(cum(b.vbuy-b.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar c = MEXC:AXLUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:AXLUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = COINBASE:AXL-USD;line(cum(b.vbuy-b.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -871,8 +865,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:AXLUSDT-SPOT": false,
-        "COINBASE:AXL-USD": false,
-        "MEXC:AXLUSDT": false
+        "COINBASE:AXL-USD": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
