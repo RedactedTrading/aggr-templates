@@ -16,7 +16,7 @@
           "markets": [
             "BINANCE:auctionbusd",
             "BINANCE:auctionusdt",
-            "BITGET:AUCTIONUSDT",
+            "BITGET:AUCTIONUSDT_SPBL",
             "COINBASE:AUCTION-USD",
             "COINBASE:AUCTION-USDT",
             "MEXC:AUCTIONUSDT",
@@ -29,7 +29,9 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "BITGET:AUCTIONUSDT_SPBL"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -39,7 +41,6 @@
           "markets": [
             "BINANCE:auctionbusd",
             "BINANCE:auctionusdt",
-            "BITGET:AUCTIONUSDT",
             "COINBASE:AUCTION-USD",
             "COINBASE:AUCTION-USDT",
             "MEXC:AUCTIONUSDT",
@@ -480,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:AUCTIONUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -524,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:auctionbusd;\n\nvar b = BINANCE:auctionusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:AUCTIONUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:AUCTION-USD;\n\nvar e = COINBASE:AUCTION-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = MEXC:AUCTIONUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:AUCTION-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:auctionbusd;\n\nvar b = BINANCE:auctionusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:AUCTION-USD;\n\nvar d = COINBASE:AUCTION-USDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = MEXC:AUCTIONUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:AUCTION-USDT;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -884,7 +885,7 @@
       "hiddenMarkets": {
         "BINANCE:auctionbusd": false,
         "BINANCE:auctionusdt": false,
-        "BITGET:AUCTIONUSDT": false,
+        "BITGET:AUCTIONUSDT_SPBL": false,
         "COINBASE:AUCTION-USD": false,
         "COINBASE:AUCTION-USDT": false,
         "MEXC:AUCTIONUSDT": false,
