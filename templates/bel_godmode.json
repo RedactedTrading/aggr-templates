@@ -17,7 +17,7 @@
             "BINANCE:belbusd",
             "BINANCE:belusdt",
             "BINANCE_FUTURES:belusdt",
-            "BITGET:BELUSDT",
+            "BITGET:BELUSDT_SPBL",
             "BITGET:BELUSDT_UMCBL",
             "BYBIT:BELUSDT",
             "BYBIT:BELUSDT-SPOT",
@@ -48,7 +48,7 @@
           "markets": [
             "BINANCE:belbusd",
             "BINANCE:belusdt",
-            "BITGET:BELUSDT",
+            "BITGET:BELUSDT_SPBL",
             "BYBIT:BELUSDT-SPOT",
             "MEXC:BELUSDT"
           ]
@@ -531,7 +531,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:belbusd;\n\nvar b = BINANCE:belusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:BELUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:BELUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = MEXC:BELUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:belbusd;\n\nvar b = BINANCE:belusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:BELUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:BELUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = MEXC:BELUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -892,7 +892,7 @@
         "BINANCE:belbusd": false,
         "BINANCE:belusdt": false,
         "BINANCE_FUTURES:belusdt": false,
-        "BITGET:BELUSDT": false,
+        "BITGET:BELUSDT_SPBL": false,
         "BITGET:BELUSDT_UMCBL": false,
         "BYBIT:BELUSDT": false,
         "BYBIT:BELUSDT-SPOT": false,
