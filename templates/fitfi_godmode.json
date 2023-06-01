@@ -14,8 +14,8 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BITGET:FITFIUSDC",
-            "BITGET:FITFIUSDT",
+            "BITGET:FITFIUSDC_SPBL",
+            "BITGET:FITFIUSDT_SPBL",
             "BYBIT:FITFIUSDT",
             "BYBIT:FITFIUSDT-SPOT",
             "KUCOIN:FITFI-USDC",
@@ -34,6 +34,8 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BITGET:FITFIUSDC_SPBL",
+            "BITGET:FITFIUSDT_SPBL",
             "BYBIT:FITFIUSDT",
             "MEXC:FITFI_USDT",
             "OKEX:FITFI-USDT-SWAP"
@@ -45,8 +47,6 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BITGET:FITFIUSDC",
-            "BITGET:FITFIUSDT",
             "BYBIT:FITFIUSDT-SPOT",
             "KUCOIN:FITFI-USDC",
             "KUCOIN:FITFI-USDT",
@@ -489,7 +489,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:FITFIUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:FITFI_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar c = OKEX:FITFI-USDT-SWAP;line(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:FITFIUSDC_SPBL;\n\nvar b = BITGET:FITFIUSDT_SPBL;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:FITFIUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = MEXC:FITFI_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar e = OKEX:FITFI-USDT-SWAP;line(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -533,7 +533,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:FITFIUSDC;\n\nvar b = BITGET:FITFIUSDT;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:FITFIUSDT-SPOT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KUCOIN:FITFI-USDC;\n\nvar e = KUCOIN:FITFI-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:FITFIUSDC;\n\nvar g = MEXC:FITFIUSDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:FITFI-USDT;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:FITFIUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = KUCOIN:FITFI-USDC;\n\nvar c = KUCOIN:FITFI-USDT;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:FITFIUSDC;\n\nvar e = MEXC:FITFIUSDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:FITFI-USDT;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -891,8 +891,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:FITFIUSDC": false,
-        "BITGET:FITFIUSDT": false,
+        "BITGET:FITFIUSDC_SPBL": false,
+        "BITGET:FITFIUSDT_SPBL": false,
         "BYBIT:FITFIUSDT": false,
         "BYBIT:FITFIUSDT-SPOT": false,
         "KUCOIN:FITFI-USDC": false,
