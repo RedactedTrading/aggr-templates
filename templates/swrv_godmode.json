@@ -15,8 +15,7 @@
           "type": "chart",
           "markets": [
             "BINANCE:swrvbusd",
-            "MEXC:SWRVUSDT",
-            "OKEX:SWRV-USDT"
+            "MEXC:SWRVUSDT"
           ],
           "zoom": 1
         },
@@ -34,8 +33,7 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:swrvbusd",
-            "MEXC:SWRVUSDT",
-            "OKEX:SWRV-USDT"
+            "MEXC:SWRVUSDT"
           ]
         }
       },
@@ -356,7 +354,7 @@
         "fetched": false
       },
       "OKEX": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "PHEMEX": {
@@ -512,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:swrvbusd;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = MEXC:SWRVUSDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar c = OKEX:SWRV-USDT;line(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:swrvbusd;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = MEXC:SWRVUSDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -871,8 +869,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:swrvbusd": false,
-        "MEXC:SWRVUSDT": false,
-        "OKEX:SWRV-USDT": false
+        "MEXC:SWRVUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
