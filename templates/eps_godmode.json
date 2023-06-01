@@ -15,8 +15,7 @@
           "type": "chart",
           "markets": [
             "BINANCE:epsbusd",
-            "BINANCE:epsusdt",
-            "MEXC:EPSUSDT"
+            "BINANCE:epsusdt"
           ],
           "zoom": 1
         },
@@ -34,8 +33,7 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:epsbusd",
-            "BINANCE:epsusdt",
-            "MEXC:EPSUSDT"
+            "BINANCE:epsusdt"
           ]
         }
       },
@@ -375,10 +373,6 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
-      },
-      "MEXC": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -512,7 +506,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:epsbusd;\n\nvar b = BINANCE:epsusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = MEXC:EPSUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:epsbusd;\n\nvar b = BINANCE:epsusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -871,8 +865,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:epsbusd": false,
-        "BINANCE:epsusdt": false,
-        "MEXC:EPSUSDT": false
+        "BINANCE:epsusdt": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
