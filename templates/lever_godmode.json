@@ -17,7 +17,8 @@
             "BINANCE:leverbusd",
             "BINANCE:leverusdt",
             "BINANCE_FUTURES:leverusdt",
-            "BITGET:LEVERUSDT",
+            "BITGET:LEVERUSDT_SPBL",
+            "KUCOIN:LEVERUSDTM",
             "MEXC:LEVERUSDT",
             "MEXC:LEVER_USDT"
           ],
@@ -30,6 +31,8 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:leverusdt",
+            "BITGET:LEVERUSDT_SPBL",
+            "KUCOIN:LEVERUSDTM",
             "MEXC:LEVER_USDT"
           ]
         },
@@ -41,7 +44,6 @@
           "markets": [
             "BINANCE:leverbusd",
             "BINANCE:leverusdt",
-            "BITGET:LEVERUSDT",
             "MEXC:LEVERUSDT"
           ]
         }
@@ -359,7 +361,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -479,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:leverusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = MEXC:LEVER_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:leverusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:LEVERUSDT_SPBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = KUCOIN:LEVERUSDTM;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:LEVER_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -523,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:leverbusd;\n\nvar b = BINANCE:leverusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:LEVERUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = MEXC:LEVERUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:leverbusd;\n\nvar b = BINANCE:leverusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = MEXC:LEVERUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -884,7 +886,8 @@
         "BINANCE:leverbusd": false,
         "BINANCE:leverusdt": false,
         "BINANCE_FUTURES:leverusdt": false,
-        "BITGET:LEVERUSDT": false,
+        "BITGET:LEVERUSDT_SPBL": false,
+        "KUCOIN:LEVERUSDTM": false,
         "MEXC:LEVERUSDT": false,
         "MEXC:LEVER_USDT": false
       },
