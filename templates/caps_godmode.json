@@ -14,7 +14,7 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BITGET:CAPSUSDT",
+            "BITGET:CAPSUSDT_SPBL",
             "BYBIT:CAPSUSDT-SPOT"
           ],
           "zoom": 1
@@ -32,7 +32,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BITGET:CAPSUSDT",
+            "BITGET:CAPSUSDT_SPBL",
             "BYBIT:CAPSUSDT-SPOT"
           ]
         }
@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:CAPSUSDT;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:CAPSUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:CAPSUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:CAPSUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -868,7 +868,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:CAPSUSDT": false,
+        "BITGET:CAPSUSDT_SPBL": false,
         "BYBIT:CAPSUSDT-SPOT": false
       },
       "barSpacing": 0.39437454420364615,
