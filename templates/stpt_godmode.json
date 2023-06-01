@@ -16,7 +16,7 @@
           "markets": [
             "BINANCE:stptbusd",
             "BINANCE:stptusdt",
-            "BITGET:STPTUSDT",
+            "BITGET:STPTUSDT_SPBL",
             "UPBIT:KRW-STPT"
           ],
           "zoom": 1
@@ -26,7 +26,9 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "BITGET:STPTUSDT_SPBL"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -36,7 +38,6 @@
           "markets": [
             "BINANCE:stptbusd",
             "BINANCE:stptusdt",
-            "BITGET:STPTUSDT",
             "UPBIT:KRW-STPT"
           ]
         }
@@ -470,7 +471,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:STPTUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -514,7 +515,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:stptbusd;\n\nvar b = BINANCE:stptusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:STPTUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = UPBIT:KRW-STPT;line(cum(d.vbuy-d.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:stptbusd;\n\nvar b = BINANCE:stptusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = UPBIT:KRW-STPT;line(cum(c.vbuy-c.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -874,7 +875,7 @@
       "hiddenMarkets": {
         "BINANCE:stptbusd": false,
         "BINANCE:stptusdt": false,
-        "BITGET:STPTUSDT": false,
+        "BITGET:STPTUSDT_SPBL": false,
         "UPBIT:KRW-STPT": true
       },
       "barSpacing": 0.39437454420364615,
