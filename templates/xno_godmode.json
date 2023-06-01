@@ -18,7 +18,6 @@
             "BINANCE:xnousdt",
             "BYBIT:XNOUSDT",
             "KUCOIN:XNO-USDT",
-            "MEXC:XNO_USDT",
             "OKEX:XNO-USDT"
           ],
           "zoom": 1
@@ -29,8 +28,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BYBIT:XNOUSDT",
-            "MEXC:XNO_USDT"
+            "BYBIT:XNOUSDT"
           ]
         },
         "trades2": {
@@ -382,10 +380,6 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
-      },
-      "MEXC": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -475,7 +469,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:XNOUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:XNO_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:XNOUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -881,7 +875,6 @@
         "BINANCE:xnousdt": false,
         "BYBIT:XNOUSDT": false,
         "KUCOIN:XNO-USDT": false,
-        "MEXC:XNO_USDT": false,
         "OKEX:XNO-USDT": false
       },
       "barSpacing": 0.39437454420364615,
