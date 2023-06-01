@@ -21,7 +21,6 @@
             "KRAKEN:PF_SCUSD",
             "KRAKEN:SC/USD",
             "MEXC:SCUSDT",
-            "MEXC:SC_USDT",
             "OKEX:SC-USDT",
             "UPBIT:KRW-SC",
             "UPBIT:USDT-SC"
@@ -35,8 +34,7 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:SCUSDT",
-            "KRAKEN:PF_SCUSD",
-            "MEXC:SC_USDT"
+            "KRAKEN:PF_SCUSD"
           ]
         },
         "trades2": {
@@ -485,7 +483,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:SCUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:SC_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:SCUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -894,7 +892,6 @@
         "KRAKEN:PF_SCUSD": false,
         "KRAKEN:SC/USD": false,
         "MEXC:SCUSDT": false,
-        "MEXC:SC_USDT": false,
         "OKEX:SC-USDT": false,
         "UPBIT:KRW-SC": true,
         "UPBIT:USDT-SC": false
