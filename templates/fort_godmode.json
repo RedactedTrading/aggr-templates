@@ -14,10 +14,9 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BITGET:FORTUSDT",
+            "BITGET:FORTUSDT_SPBL",
             "BYBIT:FORTUSDT-SPOT",
             "COINBASE:FORT-USD",
-            "COINBASE:FORT-USDT",
             "KUCOIN:FORT-USDT",
             "MEXC:FORTUSDT"
           ],
@@ -36,10 +35,9 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BITGET:FORTUSDT",
+            "BITGET:FORTUSDT_SPBL",
             "BYBIT:FORTUSDT-SPOT",
             "COINBASE:FORT-USD",
-            "COINBASE:FORT-USDT",
             "KUCOIN:FORT-USDT",
             "MEXC:FORTUSDT"
           ]
@@ -522,7 +520,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:FORTUSDT;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:FORTUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = COINBASE:FORT-USD;\n\nvar d = COINBASE:FORT-USDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = KUCOIN:FORT-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:FORTUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:FORTUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:FORTUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = COINBASE:FORT-USD;line(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar d = KUCOIN:FORT-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:FORTUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -880,10 +878,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:FORTUSDT": false,
+        "BITGET:FORTUSDT_SPBL": false,
         "BYBIT:FORTUSDT-SPOT": false,
         "COINBASE:FORT-USD": false,
-        "COINBASE:FORT-USDT": false,
         "KUCOIN:FORT-USDT": false,
         "MEXC:FORTUSDT": false
       },
