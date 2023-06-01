@@ -18,8 +18,8 @@
             "BINANCE:nearusdt",
             "BINANCE_FUTURES:nearusd_perp",
             "BINANCE_FUTURES:nearusdt",
-            "BITGET:NEARUSDC",
-            "BITGET:NEARUSDT",
+            "BITGET:NEARUSDC_SPBL",
+            "BITGET:NEARUSDT_SPBL",
             "BITGET:NEARUSDT_UMCBL",
             "BITMEX:NEARUSD",
             "BYBIT:NEARUSDT",
@@ -49,6 +49,8 @@
           "markets": [
             "BINANCE_FUTURES:nearusd_perp",
             "BINANCE_FUTURES:nearusdt",
+            "BITGET:NEARUSDC_SPBL",
+            "BITGET:NEARUSDT_SPBL",
             "BITGET:NEARUSDT_UMCBL",
             "BITMEX:NEARUSD",
             "BYBIT:NEARUSDT",
@@ -67,8 +69,6 @@
           "markets": [
             "BINANCE:nearbusd",
             "BINANCE:nearusdt",
-            "BITGET:NEARUSDC",
-            "BITGET:NEARUSDT",
             "BYBIT:NEARUSDT-SPOT",
             "COINBASE:NEAR-USD",
             "COINBASE:NEAR-USDT",
@@ -515,7 +515,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:nearusd_perp;\n\nvar b = BINANCE_FUTURES:nearusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:NEARUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITMEX:NEARUSD;line(cum(d.vbuy-d.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar e = BYBIT:NEARUSDT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = DERIBIT:NEAR_USDC-PERPETUAL;line(cum(f.vbuy-f.vsell), title=\"DRBT\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = KUCOIN:NEARUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = MEXC:NEAR_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar i = OKEX:NEAR-USDT-SWAP;line(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:nearusd_perp;\n\nvar b = BINANCE_FUTURES:nearusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:NEARUSDC_SPBL;\n\nvar d = BITGET:NEARUSDT_SPBL;\n\nvar e = BITGET:NEARUSDT_UMCBL;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = BITMEX:NEARUSD;line(cum(f.vbuy-f.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar g = BYBIT:NEARUSDT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = DERIBIT:NEAR_USDC-PERPETUAL;line(cum(h.vbuy-h.vsell), title=\"DRBT\", color=\"rgb(180, 242, 243)\");\n\n\nvar i = KUCOIN:NEARUSDTM;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar j = MEXC:NEAR_USDT;line(cum(j.vbuy-j.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar k = OKEX:NEAR-USDT-SWAP;line(cum(k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -559,7 +559,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:nearbusd;\n\nvar b = BINANCE:nearusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:NEARUSDC;\n\nvar d = BITGET:NEARUSDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BYBIT:NEARUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:NEAR-USD;\n\nvar g = COINBASE:NEAR-USDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = KUCOIN:NEAR-USDC;\n\nvar i = KUCOIN:NEAR-USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar j = MEXC:NEARUSDC;line(cum(j.vbuy-j.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar k = OKEX:NEAR-USDC;\n\nvar l = OKEX:NEAR-USDT;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = UPBIT:KRW-NEAR;line(cum(m.vbuy-m.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:nearbusd;\n\nvar b = BINANCE:nearusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BYBIT:NEARUSDT-SPOT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = COINBASE:NEAR-USD;\n\nvar e = COINBASE:NEAR-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = KUCOIN:NEAR-USDC;\n\nvar g = KUCOIN:NEAR-USDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = MEXC:NEARUSDC;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar i = OKEX:NEAR-USDC;\n\nvar j = OKEX:NEAR-USDT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar k = UPBIT:KRW-NEAR;line(cum(k.vbuy-k.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -921,8 +921,8 @@
         "BINANCE:nearusdt": false,
         "BINANCE_FUTURES:nearusd_perp": false,
         "BINANCE_FUTURES:nearusdt": false,
-        "BITGET:NEARUSDC": false,
-        "BITGET:NEARUSDT": false,
+        "BITGET:NEARUSDC_SPBL": false,
+        "BITGET:NEARUSDT_SPBL": false,
         "BITGET:NEARUSDT_UMCBL": false,
         "BITMEX:NEARUSD": false,
         "BYBIT:NEARUSDT": false,
