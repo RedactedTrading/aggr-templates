@@ -15,8 +15,7 @@
           "type": "chart",
           "markets": [
             "BINANCE:botbusd",
-            "BITGET:BOTUSDT",
-            "MEXC:BOTUSDT"
+            "BITGET:BOTUSDT_SPBL"
           ],
           "zoom": 1
         },
@@ -25,7 +24,9 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "BITGET:BOTUSDT_SPBL"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -33,9 +34,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BINANCE:botbusd",
-            "BITGET:BOTUSDT",
-            "MEXC:BOTUSDT"
+            "BINANCE:botbusd"
           ]
         }
       },
@@ -379,10 +378,6 @@
       "BITGET": {
         "disabled": false,
         "fetched": false
-      },
-      "MEXC": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -472,7 +467,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:BOTUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -516,7 +511,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:botbusd;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = BITGET:BOTUSDT;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = MEXC:BOTUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:botbusd;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -875,8 +870,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:botbusd": false,
-        "BITGET:BOTUSDT": false,
-        "MEXC:BOTUSDT": false
+        "BITGET:BOTUSDT_SPBL": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
