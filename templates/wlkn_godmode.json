@@ -14,8 +14,9 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BITGET:WLKNUSDT",
-            "BYBIT:WLKNUSDT-SPOT"
+            "BITGET:WLKNUSDT_SPBL",
+            "BYBIT:WLKNUSDT-SPOT",
+            "KUCOIN:WLKN-USDT"
           ],
           "zoom": 1
         },
@@ -24,7 +25,9 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "BITGET:WLKNUSDT_SPBL"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -32,8 +35,8 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BITGET:WLKNUSDT",
-            "BYBIT:WLKNUSDT-SPOT"
+            "BYBIT:WLKNUSDT-SPOT",
+            "KUCOIN:WLKN-USDT"
           ]
         }
       },
@@ -350,7 +353,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -466,7 +469,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:WLKNUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -510,7 +513,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:WLKNUSDT;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:WLKNUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:WLKNUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = KUCOIN:WLKN-USDT;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -868,8 +871,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:WLKNUSDT": false,
-        "BYBIT:WLKNUSDT-SPOT": false
+        "BITGET:WLKNUSDT_SPBL": false,
+        "BYBIT:WLKNUSDT-SPOT": false,
+        "KUCOIN:WLKN-USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
