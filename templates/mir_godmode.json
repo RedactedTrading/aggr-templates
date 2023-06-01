@@ -16,7 +16,7 @@
           "markets": [
             "BINANCE:mirbusd",
             "BINANCE:mirusdt",
-            "BITGET:MIRUSDT",
+            "BITGET:MIRUSDT_SPBL",
             "KRAKEN:MIR/USD",
             "KUCOIN:MIR-USDT",
             "MEXC:MIRUSDT",
@@ -29,7 +29,9 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "BITGET:MIRUSDT_SPBL"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -39,7 +41,6 @@
           "markets": [
             "BINANCE:mirbusd",
             "BINANCE:mirusdt",
-            "BITGET:MIRUSDT",
             "KRAKEN:MIR/USD",
             "KUCOIN:MIR-USDT",
             "MEXC:MIRUSDT",
@@ -480,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:MIRUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -524,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:mirbusd;\n\nvar b = BINANCE:mirusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MIRUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = KUCOIN:MIR-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:MIRUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:MIR-USDT;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:mirbusd;\n\nvar b = BINANCE:mirusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = KUCOIN:MIR-USDT;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:MIRUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar e = OKEX:MIR-USDT;line(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -884,7 +885,7 @@
       "hiddenMarkets": {
         "BINANCE:mirbusd": false,
         "BINANCE:mirusdt": false,
-        "BITGET:MIRUSDT": false,
+        "BITGET:MIRUSDT_SPBL": false,
         "KRAKEN:MIR/USD": false,
         "KUCOIN:MIR-USDT": false,
         "MEXC:MIRUSDT": false,
