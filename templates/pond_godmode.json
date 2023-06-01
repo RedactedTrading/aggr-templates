@@ -16,7 +16,7 @@
           "markets": [
             "BINANCE:pondbusd",
             "BINANCE:pondusdt",
-            "BITGET:PONDUSDT",
+            "BITGET:PONDUSDT_SPBL",
             "COINBASE:POND-USD",
             "COINBASE:POND-USDT",
             "KRAKEN:POND/USD",
@@ -30,7 +30,9 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "BITGET:PONDUSDT_SPBL"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -40,7 +42,6 @@
           "markets": [
             "BINANCE:pondbusd",
             "BINANCE:pondusdt",
-            "BITGET:PONDUSDT",
             "COINBASE:POND-USD",
             "COINBASE:POND-USDT",
             "KRAKEN:POND/USD",
@@ -482,7 +483,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:PONDUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -526,7 +527,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:pondbusd;\n\nvar b = BINANCE:pondusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:PONDUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:POND-USD;\n\nvar e = COINBASE:POND-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = KUCOIN:POND-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:PONDUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:pondbusd;\n\nvar b = BINANCE:pondusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:POND-USD;\n\nvar d = COINBASE:POND-USDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = KUCOIN:POND-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:PONDUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -886,7 +887,7 @@
       "hiddenMarkets": {
         "BINANCE:pondbusd": false,
         "BINANCE:pondusdt": false,
-        "BITGET:PONDUSDT": false,
+        "BITGET:PONDUSDT_SPBL": false,
         "COINBASE:POND-USD": false,
         "COINBASE:POND-USDT": false,
         "KRAKEN:POND/USD": false,
