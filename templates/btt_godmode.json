@@ -19,12 +19,11 @@
             "BINANCE:bttusdc",
             "BINANCE:bttusdt",
             "BITFINEX:BTTUSD",
-            "BITGET:BTTUSDT",
+            "BITGET:BTTUSDT_SPBL",
             "BYBIT:BTTUSDT-SPOT",
             "KRAKEN:BTT/USD",
             "KUCOIN:BTT-USDT",
             "MEXC:BTTUSDC",
-            "MEXC:BTTUSDT",
             "OKEX:BTT-USDT",
             "UPBIT:KRW-BTT"
           ],
@@ -35,7 +34,9 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "BITGET:BTTUSDT_SPBL"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -48,12 +49,10 @@
             "BINANCE:bttusdc",
             "BINANCE:bttusdt",
             "BITFINEX:BTTUSD",
-            "BITGET:BTTUSDT",
             "BYBIT:BTTUSDT-SPOT",
             "KRAKEN:BTT/USD",
             "KUCOIN:BTT-USDT",
             "MEXC:BTTUSDC",
-            "MEXC:BTTUSDT",
             "OKEX:BTT-USDT",
             "UPBIT:KRW-BTT"
           ]
@@ -492,7 +491,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:BTTUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -536,7 +535,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bttbusd;\n\nvar b = BINANCE:btttusd;\n\nvar c = BINANCE:bttusdc;\n\nvar d = BINANCE:bttusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:BTTUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:BTTUSDT;line(cum(f.vbuy-f.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar g = BYBIT:BTTUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = KUCOIN:BTT-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar i = MEXC:BTTUSDC;\n\nvar j = MEXC:BTTUSDT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar k = OKEX:BTT-USDT;line(cum(k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar l = UPBIT:KRW-BTT;line(cum(l.vbuy-l.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bttbusd;\n\nvar b = BINANCE:btttusd;\n\nvar c = BINANCE:bttusdc;\n\nvar d = BINANCE:bttusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:BTTUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BYBIT:BTTUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = KUCOIN:BTT-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = MEXC:BTTUSDC;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar i = OKEX:BTT-USDT;line(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = UPBIT:KRW-BTT;line(cum(j.vbuy-j.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -899,12 +898,11 @@
         "BINANCE:bttusdc": false,
         "BINANCE:bttusdt": false,
         "BITFINEX:BTTUSD": false,
-        "BITGET:BTTUSDT": false,
+        "BITGET:BTTUSDT_SPBL": false,
         "BYBIT:BTTUSDT-SPOT": false,
         "KRAKEN:BTT/USD": false,
         "KUCOIN:BTT-USDT": false,
         "MEXC:BTTUSDC": false,
-        "MEXC:BTTUSDT": false,
         "OKEX:BTT-USDT": false,
         "UPBIT:KRW-BTT": true
       },
