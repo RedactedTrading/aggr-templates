@@ -24,7 +24,6 @@
             "KRAKEN:PF_DASHUSD",
             "KUCOIN:DASH-USDT",
             "KUCOIN:DASHUSDTM",
-            "MEXC:DASHUSDT",
             "MEXC:DASH_USDT",
             "OKEX:DASH-USD-SWAP",
             "OKEX:DASH-USDC",
@@ -60,7 +59,6 @@
             "COINBASE:DASH-USD",
             "KRAKEN:DASH/USD",
             "KUCOIN:DASH-USDT",
-            "MEXC:DASHUSDT",
             "OKEX:DASH-USDC",
             "OKEX:DASH-USDT"
           ]
@@ -543,7 +541,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:dashbusd;\n\nvar b = BINANCE:dashusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:DASH-USD;line(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar d = KUCOIN:DASH-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:DASHUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:DASH-USDC;\n\nvar g = OKEX:DASH-USDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:dashbusd;\n\nvar b = BINANCE:dashusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:DASH-USD;line(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar d = KUCOIN:DASH-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = OKEX:DASH-USDC;\n\nvar f = OKEX:DASH-USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -911,7 +909,6 @@
         "KRAKEN:PF_DASHUSD": false,
         "KUCOIN:DASH-USDT": false,
         "KUCOIN:DASHUSDTM": false,
-        "MEXC:DASHUSDT": false,
         "MEXC:DASH_USDT": false,
         "OKEX:DASH-USD-SWAP": false,
         "OKEX:DASH-USDC": false,
