@@ -16,8 +16,7 @@
           "markets": [
             "BINANCE:bifibusd",
             "BINANCE:bifiusdt",
-            "KUCOIN:BIFI-USDT",
-            "MEXC:BIFIUSDT"
+            "KUCOIN:BIFI-USDT"
           ],
           "zoom": 1
         },
@@ -36,8 +35,7 @@
           "markets": [
             "BINANCE:bifibusd",
             "BINANCE:bifiusdt",
-            "KUCOIN:BIFI-USDT",
-            "MEXC:BIFIUSDT"
+            "KUCOIN:BIFI-USDT"
           ]
         }
       },
@@ -377,10 +375,6 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
-      },
-      "MEXC": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -514,7 +508,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bifibusd;\n\nvar b = BINANCE:bifiusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = KUCOIN:BIFI-USDT;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:BIFIUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bifibusd;\n\nvar b = BINANCE:bifiusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = KUCOIN:BIFI-USDT;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -874,8 +868,7 @@
       "hiddenMarkets": {
         "BINANCE:bifibusd": false,
         "BINANCE:bifiusdt": false,
-        "KUCOIN:BIFI-USDT": false,
-        "MEXC:BIFIUSDT": false
+        "KUCOIN:BIFI-USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
