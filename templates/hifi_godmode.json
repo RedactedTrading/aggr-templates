@@ -17,7 +17,6 @@
             "BINANCE:hifiusdt",
             "KUCOIN:HIFI-USDT",
             "MEXC:HIFIUSDT",
-            "MEXC:HIFI_USDT",
             "UPBIT:KRW-HIFI"
           ],
           "zoom": 1
@@ -27,9 +26,7 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": [
-            "MEXC:HIFI_USDT"
-          ]
+          "markets": []
         },
         "trades2": {
           "id": "trades2",
@@ -473,7 +470,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = MEXC:HIFI_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -878,7 +875,6 @@
         "BINANCE:hifiusdt": false,
         "KUCOIN:HIFI-USDT": false,
         "MEXC:HIFIUSDT": false,
-        "MEXC:HIFI_USDT": false,
         "UPBIT:KRW-HIFI": true
       },
       "barSpacing": 0.39437454420364615,
