@@ -17,7 +17,7 @@
             "BINANCE:cotibusd",
             "BINANCE:cotiusdt",
             "BINANCE_FUTURES:cotiusdt",
-            "BITGET:COTIUSDT",
+            "BITGET:COTIUSDT_SPBL",
             "BITGET:COTIUSDT_UMCBL",
             "BYBIT:COTIUSDT",
             "COINBASE:COTI-USD",
@@ -48,7 +48,7 @@
           "markets": [
             "BINANCE:cotibusd",
             "BINANCE:cotiusdt",
-            "BITGET:COTIUSDT",
+            "BITGET:COTIUSDT_SPBL",
             "COINBASE:COTI-USD",
             "KRAKEN:COTI/USD",
             "KUCOIN:COTI-USDT",
@@ -533,7 +533,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:cotibusd;\n\nvar b = BINANCE:cotiusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:COTIUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:COTI-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = KUCOIN:COTI-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:COTIUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:cotibusd;\n\nvar b = BINANCE:cotiusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:COTIUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:COTI-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = KUCOIN:COTI-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:COTIUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -894,7 +894,7 @@
         "BINANCE:cotibusd": false,
         "BINANCE:cotiusdt": false,
         "BINANCE_FUTURES:cotiusdt": false,
-        "BITGET:COTIUSDT": false,
+        "BITGET:COTIUSDT_SPBL": false,
         "BITGET:COTIUSDT_UMCBL": false,
         "BYBIT:COTIUSDT": false,
         "COINBASE:COTI-USD": false,
