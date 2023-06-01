@@ -14,6 +14,7 @@
           "name": "",
           "type": "chart",
           "markets": [
+            "BITGET:PIPUSDT_SPBL",
             "BYBIT:PIPUSDT-SPOT",
             "MEXC:PIPUSDT"
           ],
@@ -24,7 +25,9 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "BITGET:PIPUSDT_SPBL"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -374,6 +377,10 @@
         "disabled": true,
         "fetched": false
       },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -466,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:PIPUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -868,6 +875,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
+        "BITGET:PIPUSDT_SPBL": false,
         "BYBIT:PIPUSDT-SPOT": false,
         "MEXC:PIPUSDT": false
       },
