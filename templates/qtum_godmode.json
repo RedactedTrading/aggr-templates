@@ -17,7 +17,7 @@
             "BINANCE:qtumbusd",
             "BINANCE:qtumusdt",
             "BINANCE_FUTURES:qtumusdt",
-            "BITGET:QTUMUSDT",
+            "BITGET:QTUMUSDT_SPBL",
             "BITGET:QTUMUSDT_UMCBL",
             "BYBIT:QTUMUSDT",
             "BYBIT:QTUMUSDT-SPOT",
@@ -39,6 +39,7 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE_FUTURES:qtumusdt",
+            "BITGET:QTUMUSDT_SPBL",
             "BITGET:QTUMUSDT_UMCBL",
             "BYBIT:QTUMUSDT",
             "KRAKEN:PF_QTUMUSD",
@@ -55,7 +56,6 @@
           "markets": [
             "BINANCE:qtumbusd",
             "BINANCE:qtumusdt",
-            "BITGET:QTUMUSDT",
             "BYBIT:QTUMUSDT-SPOT",
             "KRAKEN:QTUM/USD",
             "MEXC:QTUMUSDT",
@@ -497,7 +497,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:qtumusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:QTUMUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:QTUMUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KUCOIN:QTUMUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:QTUM_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:QTUM-USDT-SWAP;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:qtumusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:QTUMUSDT_SPBL;\n\nvar c = BITGET:QTUMUSDT_UMCBL;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:QTUMUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KUCOIN:QTUMUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:QTUM_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:QTUM-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -541,7 +541,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:qtumbusd;\n\nvar b = BINANCE:qtumusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:QTUMUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:QTUMUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = MEXC:QTUMUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:QTUM-USDT;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = UPBIT:KRW-QTUM;line(cum(g.vbuy-g.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:qtumbusd;\n\nvar b = BINANCE:qtumusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BYBIT:QTUMUSDT-SPOT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = MEXC:QTUMUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar e = OKEX:QTUM-USDT;line(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = UPBIT:KRW-QTUM;line(cum(f.vbuy-f.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -902,7 +902,7 @@
         "BINANCE:qtumbusd": false,
         "BINANCE:qtumusdt": false,
         "BINANCE_FUTURES:qtumusdt": false,
-        "BITGET:QTUMUSDT": false,
+        "BITGET:QTUMUSDT_SPBL": false,
         "BITGET:QTUMUSDT_UMCBL": false,
         "BYBIT:QTUMUSDT": false,
         "BYBIT:QTUMUSDT-SPOT": false,
