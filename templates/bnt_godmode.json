@@ -17,12 +17,11 @@
             "BINANCE:bntbusd",
             "BINANCE:bntusdt",
             "BITFINEX:BNTUSD",
-            "BITGET:BNTUSDT",
+            "BITGET:BNTUSDT_SPBL",
             "BYBIT:BNTUSDT-SPOT",
             "COINBASE:BNT-USD",
             "KRAKEN:BNT/USD",
             "MEXC:BNTUSDT",
-            "MEXC:BNT_USDT",
             "OKEX:BNT-USDT",
             "OKEX:BNT-USDT-SWAP"
           ],
@@ -34,7 +33,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "MEXC:BNT_USDT",
+            "BITGET:BNTUSDT_SPBL",
             "OKEX:BNT-USDT-SWAP"
           ]
         },
@@ -47,7 +46,6 @@
             "BINANCE:bntbusd",
             "BINANCE:bntusdt",
             "BITFINEX:BNTUSD",
-            "BITGET:BNTUSDT",
             "BYBIT:BNTUSDT-SPOT",
             "COINBASE:BNT-USD",
             "KRAKEN:BNT/USD",
@@ -489,7 +487,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = MEXC:BNT_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar b = OKEX:BNT-USDT-SWAP;line(cum(b.vbuy-b.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:BNTUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = OKEX:BNT-USDT-SWAP;line(cum(b.vbuy-b.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -533,7 +531,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bntbusd;\n\nvar b = BINANCE:bntusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:BNTUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:BNTUSDT;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BYBIT:BNTUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:BNT-USD;line(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = MEXC:BNTUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:BNT-USDT;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bntbusd;\n\nvar b = BINANCE:bntusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:BNTUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BYBIT:BNTUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = COINBASE:BNT-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = MEXC:BNTUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:BNT-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -894,12 +892,11 @@
         "BINANCE:bntbusd": false,
         "BINANCE:bntusdt": false,
         "BITFINEX:BNTUSD": false,
-        "BITGET:BNTUSDT": false,
+        "BITGET:BNTUSDT_SPBL": false,
         "BYBIT:BNTUSDT-SPOT": false,
         "COINBASE:BNT-USD": false,
         "KRAKEN:BNT/USD": false,
         "MEXC:BNTUSDT": false,
-        "MEXC:BNT_USDT": false,
         "OKEX:BNT-USDT": false,
         "OKEX:BNT-USDT-SWAP": false
       },
