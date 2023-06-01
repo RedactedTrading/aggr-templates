@@ -17,7 +17,7 @@
             "BINANCE:perpbusd",
             "BINANCE:perpusdt",
             "BINANCE_FUTURES:perpusdt",
-            "BITGET:PERPUSDT",
+            "BITGET:PERPUSDT_SPBL",
             "BYBIT:PERPUSDT-SPOT",
             "COINBASE:PERP-USD",
             "COINBASE:PERP-USDT",
@@ -55,7 +55,7 @@
           "markets": [
             "BINANCE:perpbusd",
             "BINANCE:perpusdt",
-            "BITGET:PERPUSDT",
+            "BITGET:PERPUSDT_SPBL",
             "BYBIT:PERPUSDT-SPOT",
             "COINBASE:PERP-USD",
             "COINBASE:PERP-USDT",
@@ -541,7 +541,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:perpbusd;\n\nvar b = BINANCE:perpusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:PERPUSDT;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:PERPUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = COINBASE:PERP-USD;\n\nvar f = COINBASE:PERP-USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = MEXC:PERPUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:perpbusd;\n\nvar b = BINANCE:perpusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:PERPUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:PERPUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = COINBASE:PERP-USD;\n\nvar f = COINBASE:PERP-USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = MEXC:PERPUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -902,7 +902,7 @@
         "BINANCE:perpbusd": false,
         "BINANCE:perpusdt": false,
         "BINANCE_FUTURES:perpusdt": false,
-        "BITGET:PERPUSDT": false,
+        "BITGET:PERPUSDT_SPBL": false,
         "BYBIT:PERPUSDT-SPOT": false,
         "COINBASE:PERP-USD": false,
         "COINBASE:PERP-USDT": false,
