@@ -15,7 +15,6 @@
           "type": "chart",
           "markets": [
             "BINANCE:coverbusd",
-            "MEXC:COVERUSDT",
             "OKEX:COVER-USDT"
           ],
           "zoom": 1
@@ -34,7 +33,6 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:coverbusd",
-            "MEXC:COVERUSDT",
             "OKEX:COVER-USDT"
           ]
         }
@@ -375,10 +373,6 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
-      },
-      "MEXC": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -512,7 +506,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:coverbusd;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = MEXC:COVERUSDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar c = OKEX:COVER-USDT;line(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:coverbusd;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = OKEX:COVER-USDT;line(cum(b.vbuy-b.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -871,7 +865,6 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:coverbusd": false,
-        "MEXC:COVERUSDT": false,
         "OKEX:COVER-USDT": false
       },
       "barSpacing": 0.39437454420364615,
