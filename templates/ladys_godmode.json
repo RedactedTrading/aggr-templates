@@ -14,8 +14,11 @@
           "name": "",
           "type": "chart",
           "markets": [
+            "BITGET:10000LADYSUSDT_UMCBL",
             "BITGET:LADYSUSDT_SPBL",
+            "BYBIT:10000LADYSUSDT",
             "BYBIT:LADYSUSDT-SPOT",
+            "KUCOIN:10000LADYSUSDTM",
             "KUCOIN:LADYS-USDT",
             "MEXC:LADYS_USDT"
           ],
@@ -27,7 +30,9 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BITGET:LADYSUSDT_SPBL",
+            "BITGET:10000LADYSUSDT_UMCBL",
+            "BYBIT:10000LADYSUSDT",
+            "KUCOIN:10000LADYSUSDTM",
             "MEXC:LADYS_USDT"
           ]
         },
@@ -37,6 +42,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BITGET:LADYSUSDT_SPBL",
             "BYBIT:LADYSUSDT-SPOT",
             "KUCOIN:LADYS-USDT"
           ]
@@ -475,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITGET:LADYSUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = MEXC:LADYS_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:10000LADYSUSDT_UMCBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:10000LADYSUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KUCOIN:10000LADYSUSDTM;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:LADYS_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -519,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:LADYSUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = KUCOIN:LADYS-USDT;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:LADYSUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:LADYSUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KUCOIN:LADYS-USDT;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -877,8 +883,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
+        "BITGET:10000LADYSUSDT_UMCBL": false,
         "BITGET:LADYSUSDT_SPBL": false,
+        "BYBIT:10000LADYSUSDT": false,
         "BYBIT:LADYSUSDT-SPOT": false,
+        "KUCOIN:10000LADYSUSDTM": false,
         "KUCOIN:LADYS-USDT": false,
         "MEXC:LADYS_USDT": false
       },
