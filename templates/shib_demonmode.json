@@ -16,8 +16,10 @@
           "markets": [
             "BINANCE:shibbusd",
             "BINANCE:shibusdt",
+            "BINANCE_FUTURES:1000shibusdt",
             "BITGET:SHIBUSDT_SPBL",
             "BITGET:SHIBUSDT_UMCBL",
+            "BYBIT:SHIB1000USDT",
             "BYBIT:SHIBUSDC-SPOT",
             "BYBIT:SHIBUSDT-SPOT",
             "COINBASE:SHIB-USD",
@@ -43,8 +45,9 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BITGET:SHIBUSDT_SPBL",
+            "BINANCE_FUTURES:1000shibusdt",
             "BITGET:SHIBUSDT_UMCBL",
+            "BYBIT:SHIB1000USDT",
             "KRAKEN:PF_SHIBUSD",
             "KUCOIN:SHIBUSDTM",
             "MEXC:SHIB_USDT",
@@ -59,6 +62,7 @@
           "markets": [
             "BINANCE:shibbusd",
             "BINANCE:shibusdt",
+            "BITGET:SHIBUSDT_SPBL",
             "BYBIT:SHIBUSDC-SPOT",
             "BYBIT:SHIBUSDT-SPOT",
             "COINBASE:SHIB-USD",
@@ -335,7 +339,7 @@
         "fetched": false
       },
       "BINANCE_FUTURES": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BINANCE_US": {
@@ -507,7 +511,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITGET:SHIBUSDT_SPBL;\n\nvar b = BITGET:SHIBUSDT_UMCBL;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = KRAKEN:PF_SHIBUSD;line(cum(c.vbuy-c.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = KUCOIN:SHIBUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:SHIB_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:SHIB-USDT-SWAP;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:1000shibusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:SHIBUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:SHIB1000USDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_SHIBUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:SHIBUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:SHIB_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:SHIB-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -551,7 +555,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:shibbusd;\n\nvar b = BINANCE:shibusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BYBIT:SHIBUSDC-SPOT;\n\nvar d = BYBIT:SHIBUSDT-SPOT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = COINBASE:SHIB-USD;\n\nvar f = COINBASE:SHIB-USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = KRAKEN:SHIB/USD;\n\nvar h = KRAKEN:SHIB/USDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = KUCOIN:SHIB-USDC;\n\nvar j = KUCOIN:SHIB-USDT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar k = MEXC:SHIBUSDC;line(cum(k.vbuy-k.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar l = OKEX:SHIB-USDC;\n\nvar m = OKEX:SHIB-USDT;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar n = UPBIT:KRW-SHIB;line(cum(n.vbuy-n.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:shibbusd;\n\nvar b = BINANCE:shibusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:SHIBUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:SHIBUSDC-SPOT;\n\nvar e = BYBIT:SHIBUSDT-SPOT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:SHIB-USD;\n\nvar g = COINBASE:SHIB-USDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = KRAKEN:SHIB/USD;\n\nvar i = KRAKEN:SHIB/USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar j = KUCOIN:SHIB-USDC;\n\nvar k = KUCOIN:SHIB-USDT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar l = MEXC:SHIBUSDC;line(cum(l.vbuy-l.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar m = OKEX:SHIB-USDC;\n\nvar n = OKEX:SHIB-USDT;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar o = UPBIT:KRW-SHIB;line(cum(o.vbuy-o.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -911,8 +915,10 @@
       "hiddenMarkets": {
         "BINANCE:shibbusd": false,
         "BINANCE:shibusdt": false,
+        "BINANCE_FUTURES:1000shibusdt": false,
         "BITGET:SHIBUSDT_SPBL": false,
         "BITGET:SHIBUSDT_UMCBL": false,
+        "BYBIT:SHIB1000USDT": false,
         "BYBIT:SHIBUSDC-SPOT": false,
         "BYBIT:SHIBUSDT-SPOT": false,
         "COINBASE:SHIB-USD": false,
