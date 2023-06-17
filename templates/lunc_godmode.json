@@ -16,9 +16,12 @@
           "markets": [
             "BINANCE:luncbusd",
             "BINANCE:luncusdt",
+            "BINANCE_FUTURES:1000luncbusd",
+            "BINANCE_FUTURES:1000luncusdt",
             "BITGET:LUNCUSDC_SPBL",
             "BITGET:LUNCUSDT_SPBL",
             "BITGET:LUNCUSDT_UMCBL",
+            "BYBIT:1000LUNCUSDT",
             "BYBIT:LUNCUSDC-SPOT",
             "BYBIT:LUNCUSDT-SPOT",
             "KUCOIN:LUNC-USDC",
@@ -38,9 +41,10 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BITGET:LUNCUSDC_SPBL",
-            "BITGET:LUNCUSDT_SPBL",
+            "BINANCE_FUTURES:1000luncbusd",
+            "BINANCE_FUTURES:1000luncusdt",
             "BITGET:LUNCUSDT_UMCBL",
+            "BYBIT:1000LUNCUSDT",
             "KUCOIN:LUNCUSDTM",
             "MEXC:LUNC_USDT",
             "OKEX:LUNC-USDT-SWAP"
@@ -54,6 +58,8 @@
           "markets": [
             "BINANCE:luncbusd",
             "BINANCE:luncusdt",
+            "BITGET:LUNCUSDC_SPBL",
+            "BITGET:LUNCUSDT_SPBL",
             "BYBIT:LUNCUSDC-SPOT",
             "BYBIT:LUNCUSDT-SPOT",
             "KUCOIN:LUNC-USDC",
@@ -325,7 +331,7 @@
         "fetched": false
       },
       "BINANCE_FUTURES": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BINANCE_US": {
@@ -497,7 +503,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITGET:LUNCUSDC_SPBL;\n\nvar b = BITGET:LUNCUSDT_SPBL;\n\nvar c = BITGET:LUNCUSDT_UMCBL;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = KUCOIN:LUNCUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:LUNC_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:LUNC-USDT-SWAP;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:1000luncbusd;\n\nvar b = BINANCE_FUTURES:1000luncusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:LUNCUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:1000LUNCUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KUCOIN:LUNCUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:LUNC_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:LUNC-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -541,7 +547,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:luncbusd;\n\nvar b = BINANCE:luncusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BYBIT:LUNCUSDC-SPOT;\n\nvar d = BYBIT:LUNCUSDT-SPOT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KUCOIN:LUNC-USDC;\n\nvar f = KUCOIN:LUNC-USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:LUNCUSDC;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:LUNC-USDC;\n\nvar i = OKEX:LUNC-USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:luncbusd;\n\nvar b = BINANCE:luncusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:LUNCUSDC_SPBL;\n\nvar d = BITGET:LUNCUSDT_SPBL;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BYBIT:LUNCUSDC-SPOT;\n\nvar f = BYBIT:LUNCUSDT-SPOT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = KUCOIN:LUNC-USDC;\n\nvar h = KUCOIN:LUNC-USDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar i = MEXC:LUNCUSDC;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar j = OKEX:LUNC-USDC;\n\nvar k = OKEX:LUNC-USDT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -901,9 +907,12 @@
       "hiddenMarkets": {
         "BINANCE:luncbusd": false,
         "BINANCE:luncusdt": false,
+        "BINANCE_FUTURES:1000luncbusd": false,
+        "BINANCE_FUTURES:1000luncusdt": false,
         "BITGET:LUNCUSDC_SPBL": false,
         "BITGET:LUNCUSDT_SPBL": false,
         "BITGET:LUNCUSDT_UMCBL": false,
+        "BYBIT:1000LUNCUSDT": false,
         "BYBIT:LUNCUSDC-SPOT": false,
         "BYBIT:LUNCUSDT-SPOT": false,
         "KUCOIN:LUNC-USDC": false,
