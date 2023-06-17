@@ -15,7 +15,9 @@
           "type": "chart",
           "markets": [
             "BITGET:BONKUSDT_SPBL",
-            "BYBIT:BONKUSDT-SPOT"
+            "BYBIT:1000BONKUSDT",
+            "BYBIT:BONKUSDT-SPOT",
+            "MEXC:1000BONK_USDT"
           ],
           "zoom": 1
         },
@@ -25,7 +27,8 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BITGET:BONKUSDT_SPBL"
+            "BYBIT:1000BONKUSDT",
+            "MEXC:1000BONK_USDT"
           ]
         },
         "trades2": {
@@ -34,6 +37,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BITGET:BONKUSDT_SPBL",
             "BYBIT:BONKUSDT-SPOT"
           ]
         }
@@ -378,6 +382,10 @@
       "BITGET": {
         "disabled": false,
         "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -467,7 +475,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITGET:BONKUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:1000BONKUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:1000BONK_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -511,7 +519,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:BONKUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:BONKUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:BONKUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -870,7 +878,9 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITGET:BONKUSDT_SPBL": false,
-        "BYBIT:BONKUSDT-SPOT": false
+        "BYBIT:1000BONKUSDT": false,
+        "BYBIT:BONKUSDT-SPOT": false,
+        "MEXC:1000BONK_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
