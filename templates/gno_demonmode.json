@@ -31,9 +31,7 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": [
-            "BITGET:GNOUSDT_SPBL"
-          ]
+          "markets": []
         },
         "trades2": {
           "id": "trades2",
@@ -45,6 +43,7 @@
             "BINANCE:gnobusd",
             "BINANCE:gnousdt",
             "BITFINEX:GNOUSD",
+            "BITGET:GNOUSDT_SPBL",
             "COINBASE:GNO-USD",
             "KRAKEN:GNO/USD",
             "MEXC:GNOUSDT",
@@ -493,7 +492,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITGET:GNOUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -537,7 +536,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BALANCERETHEREUM:GNO/WETH;line(cum(a.vbuy-a.vsell), title=\"BLNETH\", color=\"rgb(89, 157, 208)\");\n\n\nvar b = BINANCE:gnobusd;\n\nvar c = BINANCE:gnousdt;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar d = BITFINEX:GNOUSD;line(cum(d.vbuy-d.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar e = COINBASE:GNO-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = KRAKEN:GNO/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = MEXC:GNOUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = UNISWAPETHEREUM:GNO/WETH;line(cum(h.vbuy-h.vsell), title=\"UNIETH\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BALANCERETHEREUM:GNO/WETH;line(cum(a.vbuy-a.vsell), title=\"BLNETH\", color=\"rgb(89, 157, 208)\");\n\n\nvar b = BINANCE:gnobusd;\n\nvar c = BINANCE:gnousdt;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar d = BITFINEX:GNOUSD;line(cum(d.vbuy-d.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar e = BITGET:GNOUSDT_SPBL;line(cum(e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = COINBASE:GNO-USD;line(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = KRAKEN:GNO/USD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = MEXC:GNOUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar i = UNISWAPETHEREUM:GNO/WETH;line(cum(i.vbuy-i.vsell), title=\"UNIETH\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
