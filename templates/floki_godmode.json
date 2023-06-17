@@ -16,10 +16,12 @@
           "markets": [
             "BINANCE:flokitusd",
             "BINANCE:flokiusdt",
+            "BINANCE_FUTURES:1000flokiusdt",
             "BITGET:FLOKIUSDT_SPBL",
             "BITGET:FLOKIUSDT_UMCBL",
             "BITMEX:FLOKIUSD",
             "BITMEX:FLOKIUSDT",
+            "BYBIT:1000FLOKIUSDT",
             "BYBIT:FLOKIUSDT-SPOT",
             "KUCOIN:FLOKI-USDC",
             "KUCOIN:FLOKI-USDT",
@@ -37,10 +39,11 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BITGET:FLOKIUSDT_SPBL",
+            "BINANCE_FUTURES:1000flokiusdt",
             "BITGET:FLOKIUSDT_UMCBL",
             "BITMEX:FLOKIUSD",
             "BITMEX:FLOKIUSDT",
+            "BYBIT:1000FLOKIUSDT",
             "KUCOIN:FLOKIUSDTM",
             "MEXC:FLOKI_USDT",
             "OKEX:FLOKI-USDT-SWAP"
@@ -54,6 +57,7 @@
           "markets": [
             "BINANCE:flokitusd",
             "BINANCE:flokiusdt",
+            "BITGET:FLOKIUSDT_SPBL",
             "BYBIT:FLOKIUSDT-SPOT",
             "KUCOIN:FLOKI-USDC",
             "KUCOIN:FLOKI-USDT",
@@ -323,7 +327,7 @@
         "fetched": false
       },
       "BINANCE_FUTURES": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BINANCE_US": {
@@ -495,7 +499,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITGET:FLOKIUSDT_SPBL;\n\nvar b = BITGET:FLOKIUSDT_UMCBL;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BITMEX:FLOKIUSD;\n\nvar d = BITMEX:FLOKIUSDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar e = KUCOIN:FLOKIUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:FLOKI_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:FLOKI-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:1000flokiusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:FLOKIUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BITMEX:FLOKIUSD;\n\nvar d = BITMEX:FLOKIUSDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar e = BYBIT:1000FLOKIUSDT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = KUCOIN:FLOKIUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:FLOKI_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:FLOKI-USDT-SWAP;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -539,7 +543,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:flokitusd;\n\nvar b = BINANCE:flokiusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BYBIT:FLOKIUSDT-SPOT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KUCOIN:FLOKI-USDC;\n\nvar e = KUCOIN:FLOKI-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = OKEX:FLOKI-USDC;\n\nvar g = OKEX:FLOKI-USDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:flokitusd;\n\nvar b = BINANCE:flokiusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:FLOKIUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:FLOKIUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KUCOIN:FLOKI-USDC;\n\nvar f = KUCOIN:FLOKI-USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = OKEX:FLOKI-USDC;\n\nvar h = OKEX:FLOKI-USDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -899,10 +903,12 @@
       "hiddenMarkets": {
         "BINANCE:flokitusd": false,
         "BINANCE:flokiusdt": false,
+        "BINANCE_FUTURES:1000flokiusdt": false,
         "BITGET:FLOKIUSDT_SPBL": false,
         "BITGET:FLOKIUSDT_UMCBL": false,
         "BITMEX:FLOKIUSD": false,
         "BITMEX:FLOKIUSDT": false,
+        "BYBIT:1000FLOKIUSDT": false,
         "BYBIT:FLOKIUSDT-SPOT": false,
         "KUCOIN:FLOKI-USDC": false,
         "KUCOIN:FLOKI-USDT": false,
