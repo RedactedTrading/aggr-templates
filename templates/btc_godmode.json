@@ -28,6 +28,7 @@
             "BITGET:BTCUSD_DMCBL",
             "BITMEX:XBTUSDT",
             "BITMEX:XBT_USDT",
+            "BTCTURK:BTCUSDT",
             "BYBIT:BTCUSD",
             "BYBIT:BTCUSDC-SPOT",
             "BYBIT:BTCUSDT",
@@ -35,6 +36,8 @@
             "COINBASE:BTC-USD",
             "COINBASE:BTC-USDT",
             "DERIBIT:BTC_USDC-PERPETUAL",
+            "HITBTC:BTCUSD",
+            "HITBTC:BTCUSDC",
             "KRAKEN:PF_XBTUSD",
             "KRAKEN:PI_XBTUSD",
             "KRAKEN:XBT/USD",
@@ -92,10 +95,13 @@
             "BITFINEX:BTCUSD",
             "BITGET:BTCUSDC_SPBL",
             "BITGET:BTCUSDT_SPBL",
+            "BTCTURK:BTCUSDT",
             "BYBIT:BTCUSDC-SPOT",
             "BYBIT:BTCUSDT-SPOT",
             "COINBASE:BTC-USD",
             "COINBASE:BTC-USDT",
+            "HITBTC:BTCUSD",
+            "HITBTC:BTCUSDC",
             "KRAKEN:XBT/USD",
             "KRAKEN:XBT/USDC",
             "KRAKEN:XBT/USDT",
@@ -411,7 +417,7 @@
         "fetched": false
       },
       "HITBTC": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "HUOBI": {
@@ -448,6 +454,10 @@
         "fetched": false
       },
       "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "BTCTURK": {
         "disabled": false,
         "fetched": false
       },
@@ -587,7 +597,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:btcbusd;\n\nvar b = BINANCE:btctusd;\n\nvar c = BINANCE:btcusdc;\n\nvar d = BINANCE:btcusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:BTCUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:BTCUSDC_SPBL;\n\nvar g = BITGET:BTCUSDT_SPBL;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar h = BYBIT:BTCUSDC-SPOT;\n\nvar i = BYBIT:BTCUSDT-SPOT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar j = COINBASE:BTC-USD;\n\nvar k = COINBASE:BTC-USDT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar l = KRAKEN:XBT/USD;\n\nvar m = KRAKEN:XBT/USDC;\n\nvar n = KRAKEN:XBT/USDT;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar o = KUCOIN:BTC-TUSD;\n\nvar p = KUCOIN:BTC-USDC;\n\nvar q = KUCOIN:BTC-USDT;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar r = MEXC:BTCUSDC;line(cum(r.vbuy-r.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar s = OKEX:BTC-USDC;\n\nvar t = OKEX:BTC-USDT;line(cum(s.vbuy-s.vsell+t.vbuy-t.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar u = UPBIT:KRW-BTC;\n\nvar v = UPBIT:USDT-BTC;line(cum(u.vbuy-u.vsell+v.vbuy-v.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:btcbusd;\n\nvar b = BINANCE:btctusd;\n\nvar c = BINANCE:btcusdc;\n\nvar d = BINANCE:btcusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:BTCUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:BTCUSDC_SPBL;\n\nvar g = BITGET:BTCUSDT_SPBL;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar h = BTCTURK:BTCUSDT;line(cum(h.vbuy-h.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar i = BYBIT:BTCUSDC-SPOT;\n\nvar j = BYBIT:BTCUSDT-SPOT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar k = COINBASE:BTC-USD;\n\nvar l = COINBASE:BTC-USDT;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar m = HITBTC:BTCUSD;\n\nvar n = HITBTC:BTCUSDC;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar o = KRAKEN:XBT/USD;\n\nvar p = KRAKEN:XBT/USDC;\n\nvar q = KRAKEN:XBT/USDT;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar r = KUCOIN:BTC-TUSD;\n\nvar s = KUCOIN:BTC-USDC;\n\nvar t = KUCOIN:BTC-USDT;line(cum(r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar u = MEXC:BTCUSDC;line(cum(u.vbuy-u.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar v = OKEX:BTC-USDC;\n\nvar w = OKEX:BTC-USDT;line(cum(v.vbuy-v.vsell+w.vbuy-w.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar x = UPBIT:KRW-BTC;\n\nvar y = UPBIT:USDT-BTC;line(cum(x.vbuy-x.vsell+y.vbuy-y.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell+w.vbuy-w.vsell+x.vbuy-x.vsell+y.vbuy-y.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -959,6 +969,7 @@
         "BITGET:BTCUSD_DMCBL": false,
         "BITMEX:XBTUSDT": false,
         "BITMEX:XBT_USDT": false,
+        "BTCTURK:BTCUSDT": false,
         "BYBIT:BTCUSD": false,
         "BYBIT:BTCUSDC-SPOT": false,
         "BYBIT:BTCUSDT": false,
@@ -966,6 +977,8 @@
         "COINBASE:BTC-USD": false,
         "COINBASE:BTC-USDT": false,
         "DERIBIT:BTC_USDC-PERPETUAL": false,
+        "HITBTC:BTCUSD": false,
+        "HITBTC:BTCUSDC": false,
         "KRAKEN:PF_XBTUSD": false,
         "KRAKEN:PI_XBTUSD": false,
         "KRAKEN:XBT/USD": false,
