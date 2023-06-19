@@ -1,7 +1,7 @@
 {
-  "version": 6,
-  "createdAt": 1670005411532,
-  "updatedAt": 1676921095623,
+  "version": 7,
+  "createdAt": 1687205318227,
+  "updatedAt": 1687205563240,
   "name": "omg_godmode",
   "id": "omg_godmode",
   "states": {
@@ -20,8 +20,12 @@
             "BITFINEX:OMGUSD",
             "BITGET:OMGUSDT_SPBL",
             "BITGET:OMGUSDT_UMCBL",
+            "BTCTURK:OMGTRY",
+            "BTCTURK:OMGUSDT",
             "BYBIT:OMGUSDT",
             "BYBIT:OMGUSDT-SPOT",
+            "HITBTC:OMGUSD",
+            "HITBTC:OMGUSDC",
             "KRAKEN:OMG/USD",
             "KRAKEN:PF_OMGUSD",
             "KUCOIN:OMG-USDT",
@@ -38,10 +42,9 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 1.0,
+          "zoom": 1,
           "markets": [
             "BINANCE_FUTURES:omgusdt",
-            "BITGET:OMGUSDT_SPBL",
             "BITGET:OMGUSDT_UMCBL",
             "BYBIT:OMGUSDT",
             "KRAKEN:PF_OMGUSD",
@@ -54,12 +57,17 @@
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 1.0,
+          "zoom": 1,
           "markets": [
             "BINANCE:omgbusd",
             "BINANCE:omgusdt",
             "BITFINEX:OMGUSD",
+            "BITGET:OMGUSDT_SPBL",
+            "BTCTURK:OMGTRY",
+            "BTCTURK:OMGUSDT",
             "BYBIT:OMGUSDT-SPOT",
+            "HITBTC:OMGUSD",
+            "HITBTC:OMGUSDC",
             "KRAKEN:OMG/USD",
             "KUCOIN:OMG-USDT",
             "MEXC:OMGUSDT",
@@ -106,8 +114,9 @@
       "wsProxyUrl": null,
       "disableAnimations": true,
       "autoHideHeaders": false,
+      "autoHideNames": true,
       "theme": "dark",
-      "backgroundColor": "rgb(0,0,0)",
+      "backgroundColor": "rgb(16,17,21)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -130,7 +139,10 @@
         "search-quotes",
         "trades-display",
         "trades-thresholds",
-        "trades-audio"
+        "trades-audio",
+        "settings-colors",
+        "settings-exchanges",
+        "settings-other"
       ],
       "searchTypes": {
         "historical": false,
@@ -295,12 +307,13 @@
         "14400": "4h"
       },
       "normalizeWatermarks": false,
-      "alerts": false,
-      "alertsColor": "red",
+      "alerts": true,
+      "alertsColor": "rgb(255, 0, 0)",
       "alertsLineStyle": 2,
       "alertsLineWidth": 2,
       "alertsClick": false,
       "alertSound": null,
+      "showThresholdsAsTable": true,
       "timeframeGroups": [
         "seconds",
         "minutes",
@@ -369,7 +382,7 @@
         "fetched": false
       },
       "HITBTC": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "HUOBI": {
@@ -409,6 +422,14 @@
         "disabled": false,
         "fetched": false
       },
+      "BITHUMB": {
+        "disabled": true,
+        "fetched": false
+      },
+      "BTCTURK": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -443,7 +464,7 @@
           "updatedAt": null,
           "series": [
             "volume",
-            "d1luwfp8"
+            "uq1a453w"
           ],
           "navigationState": {
             "sections": [
@@ -501,7 +522,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:omgusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:OMGUSDT_SPBL;\n\nvar c = BITGET:OMGUSDT_UMCBL;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:OMGUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KRAKEN:PF_OMGUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = KUCOIN:OMGUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:OMG_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:OMG-USDT-SWAP;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:omgusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:OMGUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:OMGUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_OMGUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:OMGUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:OMG_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:OMG-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -521,13 +542,14 @@
           },
           "series": [
             "cvd-eth-perp",
-            "owwobn1s",
-            "j67eiadg",
-            "it60ipa8",
-            "gk4toukv",
-            "3fsysrwz",
-            "a7nzxt8f",
-            "5aed9ad4"
+            "pcr46x5h",
+            "t3wdxbh6",
+            "ld37k4pd",
+            "hq7bhazh",
+            "3fhj7bbc",
+            "aikruoo2",
+            "r94yqzoe",
+            "og29n6r5"
           ],
           "displayName": "CVD ETH Perp",
           "unsavedChanges": false,
@@ -545,7 +567,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:omgbusd;\n\nvar b = BINANCE:omgusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:OMGUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BYBIT:OMGUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KRAKEN:OMG/USD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = KUCOIN:OMG-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:OMGUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:OMG-USDC;\n\nvar i = OKEX:OMG-USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:omgbusd;\n\nvar b = BINANCE:omgusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:OMGUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:OMGUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BTCTURK:OMGTRY;\n\nvar f = BTCTURK:OMGUSDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar g = BYBIT:OMGUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = HITBTC:OMGUSD;\n\nvar i = HITBTC:OMGUSDC;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = KRAKEN:OMG/USD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = KUCOIN:OMG-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar l = MEXC:OMGUSDT;line(cum(l.vbuy-l.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar m = OKEX:OMG-USDC;\n\nvar n = OKEX:OMG-USDT;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -566,13 +588,19 @@
           },
           "series": [
             "cvd-eth-spot copy 1",
-            "1dvqsejg",
-            "f88sj5yi",
-            "smke8f18",
-            "opi99vv9",
-            "vxgq9je2",
-            "vbl9aw1h",
-            "d37xpku2"
+            "z5bjfoq3",
+            "z5q5ixbs",
+            "s3jdiczi",
+            "kd3eu8ui",
+            "svx1yzbp",
+            "lmycllku",
+            "fhx0hol3",
+            "r3fx8mnn",
+            "wnthw15h",
+            "q875yb5t",
+            "5fc8ruwj",
+            "c0m6m6vz",
+            "4rj23n8y"
           ],
           "displayName": "CVD ETH Spot",
           "unsavedChanges": false,
@@ -605,7 +633,7 @@
           "updatedAt": null,
           "series": [
             "vwap",
-            "7jwz8x87"
+            "4euw0btw"
           ],
           "displayName": "VWAP",
           "navigationState": {
@@ -641,7 +669,7 @@
           "uses": 2,
           "series": [
             "liquidations",
-            "l4y3kmkg"
+            "6ga8ouvw"
           ],
           "displayName": "Liquidations"
         }
@@ -887,9 +915,12 @@
         }
       },
       "layouting": false,
+      "showIndicators": true,
       "timeframe": "10",
       "refreshRate": 0,
-      "showLegend": false,
+      "showAlerts": true,
+      "showAlertsLabel": true,
+      "showLegend": true,
       "fillGapsWithEmpty": true,
       "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
@@ -909,8 +940,12 @@
         "BITFINEX:OMGUSD": false,
         "BITGET:OMGUSDT_SPBL": false,
         "BITGET:OMGUSDT_UMCBL": false,
+        "BTCTURK:OMGTRY": true,
+        "BTCTURK:OMGUSDT": false,
         "BYBIT:OMGUSDT": false,
         "BYBIT:OMGUSDT-SPOT": false,
+        "HITBTC:OMGUSD": false,
+        "HITBTC:OMGUSDC": false,
         "KRAKEN:OMG/USD": false,
         "KRAKEN:PF_OMGUSD": false,
         "KUCOIN:OMG-USDT": false,
@@ -921,7 +956,7 @@
         "OKEX:OMG-USDT": false,
         "OKEX:OMG-USDT-SWAP": false
       },
-      "barSpacing": 0.39437454420364615,
+      "barSpacing": 0.2929530100599413,
       "navigationState": {
         "tab": "script",
         "optionsQuery": "",
@@ -1009,12 +1044,11 @@
       ],
       "audioThreshold": null,
       "multipliers": {},
-      "showThresholdsAsTable": false,
       "maxRows": "477",
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": false,
+      "showPairs": true,
       "showTrades": true,
       "showLiquidations": true,
       "showLogos": true,
@@ -1023,7 +1057,8 @@
       "showPrices": true,
       "showHistograms": true,
       "thresholdsMultipler": 1.45,
-      "_id": "trades"
+      "_id": "trades",
+      "showThresholdsAsTable": false
     },
     "trades2": {
       "liquidations": [
