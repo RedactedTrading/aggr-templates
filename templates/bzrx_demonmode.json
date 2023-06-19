@@ -1,7 +1,7 @@
 {
-  "version": 6,
-  "createdAt": 1670005411532,
-  "updatedAt": 1676921095623,
+  "version": 7,
+  "createdAt": 1687205318227,
+  "updatedAt": 1687205563240,
   "name": "bzrx_demonmode",
   "id": "bzrx_demonmode",
   "states": {
@@ -15,7 +15,8 @@
           "type": "chart",
           "markets": [
             "BINANCE:bzrxbusd",
-            "BINANCE:bzrxusdt"
+            "BINANCE:bzrxusdt",
+            "HITBTC:BZRXUSD"
           ],
           "zoom": 1
         },
@@ -23,17 +24,18 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 1.0,
+          "zoom": 1,
           "markets": []
         },
         "trades2": {
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 1.0,
+          "zoom": 1,
           "markets": [
             "BINANCE:bzrxbusd",
-            "BINANCE:bzrxusdt"
+            "BINANCE:bzrxusdt",
+            "HITBTC:BZRXUSD"
           ]
         }
       },
@@ -75,8 +77,9 @@
       "wsProxyUrl": null,
       "disableAnimations": true,
       "autoHideHeaders": false,
+      "autoHideNames": true,
       "theme": "dark",
-      "backgroundColor": "rgb(0,0,0)",
+      "backgroundColor": "rgb(16,17,21)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -99,7 +102,10 @@
         "search-quotes",
         "trades-display",
         "trades-thresholds",
-        "trades-audio"
+        "trades-audio",
+        "settings-colors",
+        "settings-exchanges",
+        "settings-other"
       ],
       "searchTypes": {
         "historical": false,
@@ -264,12 +270,13 @@
         "14400": "4h"
       },
       "normalizeWatermarks": false,
-      "alerts": false,
-      "alertsColor": "red",
+      "alerts": true,
+      "alertsColor": "rgb(255, 0, 0)",
       "alertsLineStyle": 2,
       "alertsLineWidth": 2,
       "alertsClick": false,
       "alertSound": null,
+      "showThresholdsAsTable": true,
       "timeframeGroups": [
         "seconds",
         "minutes",
@@ -338,7 +345,7 @@
         "fetched": false
       },
       "HITBTC": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "HUOBI": {
@@ -373,6 +380,22 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "BITGET": {
+        "disabled": true,
+        "fetched": false
+      },
+      "BITHUMB": {
+        "disabled": true,
+        "fetched": false
+      },
+      "BTCTURK": {
+        "disabled": true,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": true,
+        "fetched": false
       }
     },
     "chart": {
@@ -404,7 +427,7 @@
           "updatedAt": null,
           "series": [
             "volume",
-            "d1luwfp8"
+            "uq1a453w"
           ],
           "navigationState": {
             "sections": [
@@ -482,13 +505,14 @@
           },
           "series": [
             "cvd-eth-perp",
-            "owwobn1s",
-            "j67eiadg",
-            "it60ipa8",
-            "gk4toukv",
-            "3fsysrwz",
-            "a7nzxt8f",
-            "5aed9ad4"
+            "pcr46x5h",
+            "t3wdxbh6",
+            "ld37k4pd",
+            "hq7bhazh",
+            "3fhj7bbc",
+            "aikruoo2",
+            "r94yqzoe",
+            "og29n6r5"
           ],
           "displayName": "CVD ETH Perp",
           "unsavedChanges": false,
@@ -506,7 +530,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bzrxbusd;\n\nvar b = BINANCE:bzrxusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bzrxbusd;\n\nvar b = BINANCE:bzrxusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = HITBTC:BZRXUSD;line(cum(c.vbuy-c.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -527,13 +551,19 @@
           },
           "series": [
             "cvd-eth-spot copy 1",
-            "1dvqsejg",
-            "f88sj5yi",
-            "smke8f18",
-            "opi99vv9",
-            "vxgq9je2",
-            "vbl9aw1h",
-            "d37xpku2"
+            "z5bjfoq3",
+            "z5q5ixbs",
+            "s3jdiczi",
+            "kd3eu8ui",
+            "svx1yzbp",
+            "lmycllku",
+            "fhx0hol3",
+            "r3fx8mnn",
+            "wnthw15h",
+            "q875yb5t",
+            "5fc8ruwj",
+            "c0m6m6vz",
+            "4rj23n8y"
           ],
           "displayName": "CVD ETH Spot",
           "unsavedChanges": false,
@@ -566,7 +596,7 @@
           "updatedAt": null,
           "series": [
             "vwap",
-            "7jwz8x87"
+            "4euw0btw"
           ],
           "displayName": "VWAP",
           "navigationState": {
@@ -602,7 +632,7 @@
           "uses": 2,
           "series": [
             "liquidations",
-            "l4y3kmkg"
+            "6ga8ouvw"
           ],
           "displayName": "Liquidations"
         }
@@ -848,9 +878,12 @@
         }
       },
       "layouting": false,
+      "showIndicators": true,
       "timeframe": "10",
       "refreshRate": 0,
-      "showLegend": false,
+      "showAlerts": true,
+      "showAlertsLabel": true,
+      "showLegend": true,
       "fillGapsWithEmpty": true,
       "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
@@ -865,9 +898,10 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:bzrxbusd": false,
-        "BINANCE:bzrxusdt": false
+        "BINANCE:bzrxusdt": false,
+        "HITBTC:BZRXUSD": false
       },
-      "barSpacing": 0.39437454420364615,
+      "barSpacing": 0.2929530100599413,
       "navigationState": {
         "tab": "script",
         "optionsQuery": "",
@@ -955,12 +989,11 @@
       ],
       "audioThreshold": null,
       "multipliers": {},
-      "showThresholdsAsTable": false,
       "maxRows": "477",
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": false,
+      "showPairs": true,
       "showTrades": true,
       "showLiquidations": true,
       "showLogos": true,
@@ -969,7 +1002,8 @@
       "showPrices": true,
       "showHistograms": true,
       "thresholdsMultipler": 1.45,
-      "_id": "trades"
+      "_id": "trades",
+      "showThresholdsAsTable": false
     },
     "trades2": {
       "liquidations": [
