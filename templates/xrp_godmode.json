@@ -1,7 +1,7 @@
 {
-  "version": 6,
-  "createdAt": 1670005411532,
-  "updatedAt": 1676921095623,
+  "version": 7,
+  "createdAt": 1687205318227,
+  "updatedAt": 1687205563240,
   "name": "xrp_godmode",
   "id": "xrp_godmode",
   "states": {
@@ -26,13 +26,18 @@
             "BITGET:XRPUSDT_SPBL",
             "BITGET:XRPUSDT_UMCBL",
             "BITGET:XRPUSD_DMCBL",
+            "BITHUMB:XRP_KRW",
             "BITMEX:XRPUSD",
             "BITMEX:XRPUSDT",
+            "BTCTURK:XRPTRY",
+            "BTCTURK:XRPUSDT",
             "BYBIT:XRPUSD",
             "BYBIT:XRPUSDC-SPOT",
             "BYBIT:XRPUSDT",
             "BYBIT:XRPUSDT-SPOT",
             "DERIBIT:XRP_USDC-PERPETUAL",
+            "HITBTC:XRPUSDC",
+            "HITBTC:XRPUSDT",
             "KRAKEN:PF_XRPUSD",
             "KRAKEN:PI_XRPUSD",
             "KRAKEN:XRP/USD",
@@ -57,7 +62,7 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 1.0,
+          "zoom": 1,
           "markets": [
             "BINANCE_FUTURES:xrpbusd",
             "BINANCE_FUTURES:xrpusd_perp",
@@ -82,7 +87,7 @@
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 1.0,
+          "zoom": 1,
           "markets": [
             "BINANCE:xrpbusd",
             "BINANCE:xrptusd",
@@ -91,8 +96,13 @@
             "BITFINEX:XRPUSD",
             "BITGET:XRPUSDC_SPBL",
             "BITGET:XRPUSDT_SPBL",
+            "BITHUMB:XRP_KRW",
+            "BTCTURK:XRPTRY",
+            "BTCTURK:XRPUSDT",
             "BYBIT:XRPUSDC-SPOT",
             "BYBIT:XRPUSDT-SPOT",
+            "HITBTC:XRPUSDC",
+            "HITBTC:XRPUSDT",
             "KRAKEN:XRP/USD",
             "KRAKEN:XRP/USDT",
             "KUCOIN:XRP-TUSD",
@@ -144,8 +154,9 @@
       "wsProxyUrl": null,
       "disableAnimations": true,
       "autoHideHeaders": false,
+      "autoHideNames": true,
       "theme": "dark",
-      "backgroundColor": "rgb(0,0,0)",
+      "backgroundColor": "rgb(16,17,21)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -168,7 +179,10 @@
         "search-quotes",
         "trades-display",
         "trades-thresholds",
-        "trades-audio"
+        "trades-audio",
+        "settings-colors",
+        "settings-exchanges",
+        "settings-other"
       ],
       "searchTypes": {
         "historical": false,
@@ -333,12 +347,13 @@
         "14400": "4h"
       },
       "normalizeWatermarks": false,
-      "alerts": false,
-      "alertsColor": "red",
+      "alerts": true,
+      "alertsColor": "rgb(255, 0, 0)",
       "alertsLineStyle": 2,
       "alertsLineWidth": 2,
       "alertsClick": false,
       "alertSound": null,
+      "showThresholdsAsTable": true,
       "timeframeGroups": [
         "seconds",
         "minutes",
@@ -407,7 +422,7 @@
         "fetched": false
       },
       "HITBTC": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "HUOBI": {
@@ -447,6 +462,14 @@
         "disabled": false,
         "fetched": false
       },
+      "BITHUMB": {
+        "disabled": false,
+        "fetched": false
+      },
+      "BTCTURK": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -481,7 +504,7 @@
           "updatedAt": null,
           "series": [
             "volume",
-            "d1luwfp8"
+            "uq1a453w"
           ],
           "navigationState": {
             "sections": [
@@ -559,13 +582,14 @@
           },
           "series": [
             "cvd-eth-perp",
-            "owwobn1s",
-            "j67eiadg",
-            "it60ipa8",
-            "gk4toukv",
-            "3fsysrwz",
-            "a7nzxt8f",
-            "5aed9ad4"
+            "pcr46x5h",
+            "t3wdxbh6",
+            "ld37k4pd",
+            "hq7bhazh",
+            "3fhj7bbc",
+            "aikruoo2",
+            "r94yqzoe",
+            "og29n6r5"
           ],
           "displayName": "CVD ETH Perp",
           "unsavedChanges": false,
@@ -583,7 +607,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:xrpbusd;\n\nvar b = BINANCE:xrptusd;\n\nvar c = BINANCE:xrpusdc;\n\nvar d = BINANCE:xrpusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:XRPUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:XRPUSDC_SPBL;\n\nvar g = BITGET:XRPUSDT_SPBL;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar h = BYBIT:XRPUSDC-SPOT;\n\nvar i = BYBIT:XRPUSDT-SPOT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar j = KRAKEN:XRP/USD;\n\nvar k = KRAKEN:XRP/USDT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar l = KUCOIN:XRP-TUSD;\n\nvar m = KUCOIN:XRP-USDC;\n\nvar n = KUCOIN:XRP-USDT;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar o = MEXC:XRPUSDC;line(cum(o.vbuy-o.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar p = OKEX:XRP-USDC;\n\nvar q = OKEX:XRP-USDT;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar r = UPBIT:KRW-XRP;\n\nvar s = UPBIT:USDT-XRP;line(cum(r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:xrpbusd;\n\nvar b = BINANCE:xrptusd;\n\nvar c = BINANCE:xrpusdc;\n\nvar d = BINANCE:xrpusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:XRPUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:XRPUSDC_SPBL;\n\nvar g = BITGET:XRPUSDT_SPBL;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar h = BITHUMB:XRP_KRW;line(cum(h.vbuy-h.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar i = BTCTURK:XRPTRY;\n\nvar j = BTCTURK:XRPUSDT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar k = BYBIT:XRPUSDC-SPOT;\n\nvar l = BYBIT:XRPUSDT-SPOT;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar m = HITBTC:XRPUSDC;\n\nvar n = HITBTC:XRPUSDT;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar o = KRAKEN:XRP/USD;\n\nvar p = KRAKEN:XRP/USDT;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar q = KUCOIN:XRP-TUSD;\n\nvar r = KUCOIN:XRP-USDC;\n\nvar s = KUCOIN:XRP-USDT;line(cum(q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar t = MEXC:XRPUSDC;line(cum(t.vbuy-t.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar u = OKEX:XRP-USDC;\n\nvar v = OKEX:XRP-USDT;line(cum(u.vbuy-u.vsell+v.vbuy-v.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar w = UPBIT:KRW-XRP;\n\nvar x = UPBIT:USDT-XRP;line(cum(w.vbuy-w.vsell+x.vbuy-x.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell+w.vbuy-w.vsell+x.vbuy-x.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -604,13 +628,19 @@
           },
           "series": [
             "cvd-eth-spot copy 1",
-            "1dvqsejg",
-            "f88sj5yi",
-            "smke8f18",
-            "opi99vv9",
-            "vxgq9je2",
-            "vbl9aw1h",
-            "d37xpku2"
+            "z5bjfoq3",
+            "z5q5ixbs",
+            "s3jdiczi",
+            "kd3eu8ui",
+            "svx1yzbp",
+            "lmycllku",
+            "fhx0hol3",
+            "r3fx8mnn",
+            "wnthw15h",
+            "q875yb5t",
+            "5fc8ruwj",
+            "c0m6m6vz",
+            "4rj23n8y"
           ],
           "displayName": "CVD ETH Spot",
           "unsavedChanges": false,
@@ -643,7 +673,7 @@
           "updatedAt": null,
           "series": [
             "vwap",
-            "7jwz8x87"
+            "4euw0btw"
           ],
           "displayName": "VWAP",
           "navigationState": {
@@ -679,7 +709,7 @@
           "uses": 2,
           "series": [
             "liquidations",
-            "l4y3kmkg"
+            "6ga8ouvw"
           ],
           "displayName": "Liquidations"
         }
@@ -925,9 +955,12 @@
         }
       },
       "layouting": false,
+      "showIndicators": true,
       "timeframe": "10",
       "refreshRate": 0,
-      "showLegend": false,
+      "showAlerts": true,
+      "showAlertsLabel": true,
+      "showLegend": true,
       "fillGapsWithEmpty": true,
       "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
@@ -953,13 +986,18 @@
         "BITGET:XRPUSDT_SPBL": false,
         "BITGET:XRPUSDT_UMCBL": false,
         "BITGET:XRPUSD_DMCBL": false,
+        "BITHUMB:XRP_KRW": true,
         "BITMEX:XRPUSD": false,
         "BITMEX:XRPUSDT": false,
+        "BTCTURK:XRPTRY": true,
+        "BTCTURK:XRPUSDT": false,
         "BYBIT:XRPUSD": false,
         "BYBIT:XRPUSDC-SPOT": false,
         "BYBIT:XRPUSDT": false,
         "BYBIT:XRPUSDT-SPOT": false,
         "DERIBIT:XRP_USDC-PERPETUAL": false,
+        "HITBTC:XRPUSDC": false,
+        "HITBTC:XRPUSDT": false,
         "KRAKEN:PF_XRPUSD": false,
         "KRAKEN:PI_XRPUSD": false,
         "KRAKEN:XRP/USD": false,
@@ -976,9 +1014,9 @@
         "OKEX:XRP-USDT": false,
         "OKEX:XRP-USDT-SWAP": false,
         "UPBIT:KRW-XRP": true,
-        "UPBIT:USDT-XRP": false
+        "UPBIT:USDT-XRP": true
       },
-      "barSpacing": 0.39437454420364615,
+      "barSpacing": 0.2929530100599413,
       "navigationState": {
         "tab": "script",
         "optionsQuery": "",
@@ -1066,12 +1104,11 @@
       ],
       "audioThreshold": null,
       "multipliers": {},
-      "showThresholdsAsTable": false,
       "maxRows": "477",
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": false,
+      "showPairs": true,
       "showTrades": true,
       "showLiquidations": true,
       "showLogos": true,
@@ -1080,7 +1117,8 @@
       "showPrices": true,
       "showHistograms": true,
       "thresholdsMultipler": 1.45,
-      "_id": "trades"
+      "_id": "trades",
+      "showThresholdsAsTable": false
     },
     "trades2": {
       "liquidations": [
