@@ -1,7 +1,7 @@
 {
-  "version": 6,
-  "createdAt": 1670005411532,
-  "updatedAt": 1676921095623,
+  "version": 7,
+  "createdAt": 1687205318227,
+  "updatedAt": 1687205563240,
   "name": "wbtc_demonmode",
   "id": "wbtc_demonmode",
   "states": {
@@ -22,6 +22,8 @@
             "BYBIT:WBTCUSDT-SPOT",
             "COINBASE:WBTC-USD",
             "EQUILIBREKAVA:WBTC/ETH",
+            "HITBTC:WBTCUSD",
+            "HITBTC:WBTCUSDC",
             "KRAKEN:WBTC/USD",
             "MEXC:WBTCUSDC",
             "MEXC:WBTCUSDT",
@@ -42,14 +44,14 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 1.0,
+          "zoom": 1,
           "markets": []
         },
         "trades2": {
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 1.0,
+          "zoom": 1,
           "markets": [
             "ARBIDEXARBITRUM:WBTC/USDC",
             "ARBIDEXARBITRUM:WBTC/WETH",
@@ -59,6 +61,8 @@
             "BYBIT:WBTCUSDT-SPOT",
             "COINBASE:WBTC-USD",
             "EQUILIBREKAVA:WBTC/ETH",
+            "HITBTC:WBTCUSD",
+            "HITBTC:WBTCUSDC",
             "KRAKEN:WBTC/USD",
             "MEXC:WBTCUSDC",
             "MEXC:WBTCUSDT",
@@ -113,8 +117,9 @@
       "wsProxyUrl": null,
       "disableAnimations": true,
       "autoHideHeaders": false,
+      "autoHideNames": true,
       "theme": "dark",
-      "backgroundColor": "rgb(0,0,0)",
+      "backgroundColor": "rgb(16,17,21)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -137,7 +142,10 @@
         "search-quotes",
         "trades-display",
         "trades-thresholds",
-        "trades-audio"
+        "trades-audio",
+        "settings-colors",
+        "settings-exchanges",
+        "settings-other"
       ],
       "searchTypes": {
         "historical": false,
@@ -302,12 +310,13 @@
         "14400": "4h"
       },
       "normalizeWatermarks": false,
-      "alerts": false,
-      "alertsColor": "red",
+      "alerts": true,
+      "alertsColor": "rgb(255, 0, 0)",
       "alertsLineStyle": 2,
       "alertsLineWidth": 2,
       "alertsClick": false,
       "alertSound": null,
+      "showThresholdsAsTable": true,
       "timeframeGroups": [
         "seconds",
         "minutes",
@@ -376,7 +385,7 @@
         "fetched": false
       },
       "HITBTC": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "HUOBI": {
@@ -412,19 +421,27 @@
         "disabled": true,
         "fetched": false
       },
-      "ARBIDEXARBITRUM": {
-        "disabled": false,
-        "fetched": false
-      },
       "BITGET": {
         "disabled": false,
         "fetched": false
       },
-      "EQUILIBREKAVA": {
-        "disabled": false,
+      "BITHUMB": {
+        "disabled": true,
+        "fetched": false
+      },
+      "BTCTURK": {
+        "disabled": true,
         "fetched": false
       },
       "MEXC": {
+        "disabled": false,
+        "fetched": false
+      },
+      "ARBIDEXARBITRUM": {
+        "disabled": false,
+        "fetched": false
+      },
+      "EQUILIBREKAVA": {
         "disabled": false,
         "fetched": false
       },
@@ -490,7 +507,7 @@
           "updatedAt": null,
           "series": [
             "volume",
-            "d1luwfp8"
+            "uq1a453w"
           ],
           "navigationState": {
             "sections": [
@@ -568,13 +585,14 @@
           },
           "series": [
             "cvd-eth-perp",
-            "owwobn1s",
-            "j67eiadg",
-            "it60ipa8",
-            "gk4toukv",
-            "3fsysrwz",
-            "a7nzxt8f",
-            "5aed9ad4"
+            "pcr46x5h",
+            "t3wdxbh6",
+            "ld37k4pd",
+            "hq7bhazh",
+            "3fhj7bbc",
+            "aikruoo2",
+            "r94yqzoe",
+            "og29n6r5"
           ],
           "displayName": "CVD ETH Perp",
           "unsavedChanges": false,
@@ -592,7 +610,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = ARBIDEXARBITRUM:WBTC/USDC;\n\nvar b = ARBIDEXARBITRUM:WBTC/WETH;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"ARBDXAB\", color=\"rgb(89, 157, 208)\");\n\n\nvar c = BINANCE:wbtcbusd;\n\nvar d = BINANCE:wbtcusdt;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITGET:WBTCUSDT_SPBL;line(cum(e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = BYBIT:WBTCUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:WBTC-USD;line(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = EQUILIBREKAVA:WBTC/ETH;line(cum(h.vbuy-h.vsell), title=\"EQUILIBRE\", color=\"rgb(89, 157, 208)\");\n\n\nvar i = KRAKEN:WBTC/USD;line(cum(i.vbuy-i.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar j = MEXC:WBTCUSDC;\n\nvar k = MEXC:WBTCUSDT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar l = OKEX:WBTC-USDT;line(cum(l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = QUICKSWAPPOLYGON:WBTC/WETH;line(cum(m.vbuy-m.vsell), title=\"QSPOL\", color=\"rgb(89, 157, 208)\");\n\n\nvar n = SUSHISWAPETHEREUM:WBTC/WETH;line(cum(n.vbuy-n.vsell), title=\"SUSHIETH\", color=\"rgb(89, 157, 208)\");\n\n\nvar o = SWAPPICONFLUX:WBTC/USDT;line(cum(o.vbuy-o.vsell), title=\"SWAPICON\", color=\"rgb(89, 157, 208)\");\n\n\nvar p = UNISWAPARBITRUM:WBTC/WETH;line(cum(p.vbuy-p.vsell), title=\"UNIAB\", color=\"rgb(89, 157, 208)\");\n\n\nvar q = UNISWAPETHEREUM:WBTC/USDC;\n\nvar r = UNISWAPETHEREUM:WBTC/WETH;line(cum(q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"UNIETH\", color=\"rgb(89, 157, 208)\");\n\n\nvar s = UNISWAPOPTIMISM:WBTC/WETH;line(cum(s.vbuy-s.vsell), title=\"UNIOPT\", color=\"rgb(89, 157, 208)\");\n\n\nvar t = UNISWAPPOLYGON:WBTC/WETH;line(cum(t.vbuy-t.vsell), title=\"UNIPOL\", color=\"rgb(89, 157, 208)\");\n\n\nvar u = UNISWAPV2ETHEREUM:WBTC/WETH;line(cum(u.vbuy-u.vsell), title=\"UNI2ETH\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = ARBIDEXARBITRUM:WBTC/USDC;\n\nvar b = ARBIDEXARBITRUM:WBTC/WETH;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"ARBDXAB\", color=\"rgb(89, 157, 208)\");\n\n\nvar c = BINANCE:wbtcbusd;\n\nvar d = BINANCE:wbtcusdt;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITGET:WBTCUSDT_SPBL;line(cum(e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = BYBIT:WBTCUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:WBTC-USD;line(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = EQUILIBREKAVA:WBTC/ETH;line(cum(h.vbuy-h.vsell), title=\"EQUILIBRE\", color=\"rgb(89, 157, 208)\");\n\n\nvar i = HITBTC:WBTCUSD;\n\nvar j = HITBTC:WBTCUSDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar k = KRAKEN:WBTC/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar l = MEXC:WBTCUSDC;\n\nvar m = MEXC:WBTCUSDT;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar n = OKEX:WBTC-USDT;line(cum(n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar o = QUICKSWAPPOLYGON:WBTC/WETH;line(cum(o.vbuy-o.vsell), title=\"QSPOL\", color=\"rgb(89, 157, 208)\");\n\n\nvar p = SUSHISWAPETHEREUM:WBTC/WETH;line(cum(p.vbuy-p.vsell), title=\"SUSHIETH\", color=\"rgb(89, 157, 208)\");\n\n\nvar q = SWAPPICONFLUX:WBTC/USDT;line(cum(q.vbuy-q.vsell), title=\"SWAPICON\", color=\"rgb(89, 157, 208)\");\n\n\nvar r = UNISWAPARBITRUM:WBTC/WETH;line(cum(r.vbuy-r.vsell), title=\"UNIAB\", color=\"rgb(89, 157, 208)\");\n\n\nvar s = UNISWAPETHEREUM:WBTC/USDC;\n\nvar t = UNISWAPETHEREUM:WBTC/WETH;line(cum(s.vbuy-s.vsell+t.vbuy-t.vsell), title=\"UNIETH\", color=\"rgb(89, 157, 208)\");\n\n\nvar u = UNISWAPOPTIMISM:WBTC/WETH;line(cum(u.vbuy-u.vsell), title=\"UNIOPT\", color=\"rgb(89, 157, 208)\");\n\n\nvar v = UNISWAPPOLYGON:WBTC/WETH;line(cum(v.vbuy-v.vsell), title=\"UNIPOL\", color=\"rgb(89, 157, 208)\");\n\n\nvar w = UNISWAPV2ETHEREUM:WBTC/WETH;line(cum(w.vbuy-w.vsell), title=\"UNI2ETH\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell+w.vbuy-w.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -613,13 +631,19 @@
           },
           "series": [
             "cvd-eth-spot copy 1",
-            "1dvqsejg",
-            "f88sj5yi",
-            "smke8f18",
-            "opi99vv9",
-            "vxgq9je2",
-            "vbl9aw1h",
-            "d37xpku2"
+            "z5bjfoq3",
+            "z5q5ixbs",
+            "s3jdiczi",
+            "kd3eu8ui",
+            "svx1yzbp",
+            "lmycllku",
+            "fhx0hol3",
+            "r3fx8mnn",
+            "wnthw15h",
+            "q875yb5t",
+            "5fc8ruwj",
+            "c0m6m6vz",
+            "4rj23n8y"
           ],
           "displayName": "CVD ETH Spot",
           "unsavedChanges": false,
@@ -652,7 +676,7 @@
           "updatedAt": null,
           "series": [
             "vwap",
-            "7jwz8x87"
+            "4euw0btw"
           ],
           "displayName": "VWAP",
           "navigationState": {
@@ -688,7 +712,7 @@
           "uses": 2,
           "series": [
             "liquidations",
-            "l4y3kmkg"
+            "6ga8ouvw"
           ],
           "displayName": "Liquidations"
         }
@@ -934,9 +958,12 @@
         }
       },
       "layouting": false,
+      "showIndicators": true,
       "timeframe": "10",
       "refreshRate": 0,
-      "showLegend": false,
+      "showAlerts": true,
+      "showAlertsLabel": true,
+      "showLegend": true,
       "fillGapsWithEmpty": true,
       "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
@@ -958,6 +985,8 @@
         "BYBIT:WBTCUSDT-SPOT": false,
         "COINBASE:WBTC-USD": false,
         "EQUILIBREKAVA:WBTC/ETH": true,
+        "HITBTC:WBTCUSD": false,
+        "HITBTC:WBTCUSDC": false,
         "KRAKEN:WBTC/USD": false,
         "MEXC:WBTCUSDC": false,
         "MEXC:WBTCUSDT": false,
@@ -972,7 +1001,7 @@
         "UNISWAPPOLYGON:WBTC/WETH": true,
         "UNISWAPV2ETHEREUM:WBTC/WETH": true
       },
-      "barSpacing": 0.39437454420364615,
+      "barSpacing": 0.2929530100599413,
       "navigationState": {
         "tab": "script",
         "optionsQuery": "",
@@ -1060,12 +1089,11 @@
       ],
       "audioThreshold": null,
       "multipliers": {},
-      "showThresholdsAsTable": false,
       "maxRows": "477",
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": false,
+      "showPairs": true,
       "showTrades": true,
       "showLiquidations": true,
       "showLogos": true,
@@ -1074,7 +1102,8 @@
       "showPrices": true,
       "showHistograms": true,
       "thresholdsMultipler": 1.45,
-      "_id": "trades"
+      "_id": "trades",
+      "showThresholdsAsTable": false
     },
     "trades2": {
       "liquidations": [
