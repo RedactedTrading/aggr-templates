@@ -990,7 +990,7 @@
         "BITMEX:XRPUSD": false,
         "BITMEX:XRPUSDT": false,
         "BTCTURK:XRPTRY": true,
-        "BTCTURK:XRPUSDT": false,
+        "BTCTURK:XRPUSDT": true,
         "BYBIT:XRPUSD": false,
         "BYBIT:XRPUSDC-SPOT": false,
         "BYBIT:XRPUSDT": false,
