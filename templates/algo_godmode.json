@@ -959,7 +959,7 @@
         "BITGET:ALGOUSDT_UMCBL": false,
         "BITHUMB:ALGO_KRW": true,
         "BTCTURK:ALGOTRY": true,
-        "BTCTURK:ALGOUSDT": false,
+        "BTCTURK:ALGOUSDT": true,
         "BYBIT:ALGOUSDT": false,
         "BYBIT:ALGOUSDT-SPOT": false,
         "COINBASE:ALGO-USD": false,
