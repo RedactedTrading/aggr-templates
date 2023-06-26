@@ -940,7 +940,7 @@
         "BITGET:MASKUSDT_SPBL": false,
         "BITGET:MASKUSDT_UMCBL": false,
         "BTCTURK:MASKTRY": true,
-        "BTCTURK:MASKUSDT": false,
+        "BTCTURK:MASKUSDT": true,
         "BYBIT:MASKUSDT": false,
         "BYBIT:MASKUSDT-SPOT": false,
         "COINBASE:MASK-USD": false,
