@@ -955,7 +955,7 @@
         "BITGET:FTMUSDT_SPBL": false,
         "BITGET:FTMUSDT_UMCBL": false,
         "BTCTURK:FTMTRY": true,
-        "BTCTURK:FTMUSDT": false,
+        "BTCTURK:FTMUSDT": true,
         "BYBIT:FTMUSDT": false,
         "BYBIT:FTMUSDT-SPOT": false,
         "HITBTC:FTMUSD": false,
