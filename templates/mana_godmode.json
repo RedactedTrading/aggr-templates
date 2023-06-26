@@ -959,7 +959,7 @@
         "BITGET:MANAUSDT_UMCBL": false,
         "BITHUMB:MANA_KRW": true,
         "BTCTURK:MANATRY": true,
-        "BTCTURK:MANAUSDT": false,
+        "BTCTURK:MANAUSDT": true,
         "BYBIT:MANAUSD": false,
         "BYBIT:MANAUSDC-SPOT": false,
         "BYBIT:MANAUSDT": false,
