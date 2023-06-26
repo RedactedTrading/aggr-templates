@@ -953,7 +953,7 @@
         "BITGET:SHIBUSDT_UMCBL": false,
         "BITHUMB:SHIB_KRW": true,
         "BTCTURK:SHIBTRY": true,
-        "BTCTURK:SHIBUSDT": false,
+        "BTCTURK:SHIBUSDT": true,
         "BYBIT:SHIB1000USDT": false,
         "BYBIT:SHIBUSDC-SPOT": false,
         "BYBIT:SHIBUSDT-SPOT": false,
