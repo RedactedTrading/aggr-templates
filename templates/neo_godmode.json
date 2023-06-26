@@ -943,7 +943,7 @@
         "BITGET:NEOUSDT_SPBL": false,
         "BITGET:NEOUSDT_UMCBL": false,
         "BTCTURK:NEOTRY": true,
-        "BTCTURK:NEOUSDT": false,
+        "BTCTURK:NEOUSDT": true,
         "BYBIT:NEOUSDT": false,
         "HITBTC:NEOUSD": false,
         "HITBTC:NEOUSDC": false,
