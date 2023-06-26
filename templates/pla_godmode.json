@@ -918,7 +918,7 @@
         "BITGET:PLAUSDT_SPBL": false,
         "BITHUMB:PLA_KRW": true,
         "BTCTURK:PLATRY": true,
-        "BTCTURK:PLAUSDT": false,
+        "BTCTURK:PLAUSDT": true,
         "COINBASE:PLA-USD": false,
         "HITBTC:PLAUSD": false,
         "KRAKEN:PLA/USD": false,
