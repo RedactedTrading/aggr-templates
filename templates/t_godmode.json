@@ -934,7 +934,7 @@
         "BITGET:TUSDT_SPBL": false,
         "BITHUMB:T_KRW": true,
         "BTCTURK:TTRY": true,
-        "BTCTURK:TUSDT": false,
+        "BTCTURK:TUSDT": true,
         "BYBIT:TUSDT": false,
         "BYBIT:TUSDT-SPOT": false,
         "COINBASE:T-USD": false,
