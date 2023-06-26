@@ -973,7 +973,7 @@
         "BITMEX:MATICUSDT": false,
         "BITMEX:MATIC_USDT": false,
         "BTCTURK:MATICTRY": true,
-        "BTCTURK:MATICUSDT": false,
+        "BTCTURK:MATICUSDT": true,
         "BYBIT:MATICUSDC-SPOT": false,
         "BYBIT:MATICUSDT": false,
         "BYBIT:MATICUSDT-SPOT": false,
