@@ -994,7 +994,7 @@
         "BITMEX:XBTUSDT": false,
         "BITMEX:XBT_USDT": false,
         "BTCTURK:BTCTRY": true,
-        "BTCTURK:BTCUSDT": false,
+        "BTCTURK:BTCUSDT": true,
         "BYBIT:BTCUSD": false,
         "BYBIT:BTCUSDC-SPOT": false,
         "BYBIT:BTCUSDT": false,
