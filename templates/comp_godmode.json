@@ -943,7 +943,7 @@
         "BITGET:COMPUSDT_UMCBL": false,
         "BITHUMB:COMP_KRW": true,
         "BTCTURK:COMPTRY": true,
-        "BTCTURK:COMPUSDT": false,
+        "BTCTURK:COMPUSDT": true,
         "BYBIT:COMPUSDT": false,
         "BYBIT:COMPUSDT-SPOT": false,
         "COINBASE:COMP-USD": false,
