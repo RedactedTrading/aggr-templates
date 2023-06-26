@@ -938,7 +938,7 @@
         "BITGET:FLOWUSDT_UMCBL": false,
         "BITHUMB:FLOW_KRW": true,
         "BTCTURK:FLOWTRY": true,
-        "BTCTURK:FLOWUSDT": false,
+        "BTCTURK:FLOWUSDT": true,
         "BYBIT:FLOWUSDT": false,
         "BYBIT:FLOWUSDT-SPOT": false,
         "COINBASE:FLOW-USD": false,
