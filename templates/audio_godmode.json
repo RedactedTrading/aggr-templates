@@ -930,7 +930,7 @@
         "BITGET:AUDIOUSDT_SPBL": false,
         "BITGET:AUDIOUSDT_UMCBL": false,
         "BTCTURK:AUDIOTRY": true,
-        "BTCTURK:AUDIOUSDT": false,
+        "BTCTURK:AUDIOUSDT": true,
         "BYBIT:AUDIOUSDT": false,
         "COINBASE:AUDIO-USD": false,
         "HITBTC:AUDIOUSD": false,
