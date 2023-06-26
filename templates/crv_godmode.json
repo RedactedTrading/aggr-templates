@@ -948,7 +948,7 @@
         "BITGET:CRVUSDT_UMCBL": false,
         "BITHUMB:CRV_KRW": true,
         "BTCTURK:CRVTRY": true,
-        "BTCTURK:CRVUSDT": false,
+        "BTCTURK:CRVUSDT": true,
         "BYBIT:CRVUSDT": false,
         "BYBIT:CRVUSDT-SPOT": false,
         "COINBASE:CRV-USD": false,
