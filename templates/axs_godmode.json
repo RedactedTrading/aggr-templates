@@ -959,7 +959,7 @@
         "BITMEX:AXSUSD": false,
         "BITMEX:AXS_USDT": false,
         "BTCTURK:AXSTRY": true,
-        "BTCTURK:AXSUSDT": false,
+        "BTCTURK:AXSUSDT": true,
         "BYBIT:AXSUSDT": false,
         "BYBIT:AXSUSDT-SPOT": false,
         "COINBASE:AXS-USD": false,
