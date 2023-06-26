@@ -953,7 +953,7 @@
         "BITGET:AAVEUSDT_UMCBL": false,
         "BITHUMB:AAVE_KRW": true,
         "BTCTURK:AAVETRY": true,
-        "BTCTURK:AAVEUSDT": false,
+        "BTCTURK:AAVEUSDT": true,
         "BYBIT:AAVEUSDT": false,
         "BYBIT:AAVEUSDT-SPOT": false,
         "COINBASE:AAVE-USD": false,
