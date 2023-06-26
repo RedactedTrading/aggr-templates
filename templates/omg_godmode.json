@@ -941,7 +941,7 @@
         "BITGET:OMGUSDT_SPBL": false,
         "BITGET:OMGUSDT_UMCBL": false,
         "BTCTURK:OMGTRY": true,
-        "BTCTURK:OMGUSDT": false,
+        "BTCTURK:OMGUSDT": true,
         "BYBIT:OMGUSDT": false,
         "BYBIT:OMGUSDT-SPOT": false,
         "HITBTC:OMGUSD": false,
