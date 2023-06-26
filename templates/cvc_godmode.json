@@ -921,7 +921,7 @@
         "BINANCE:cvcbusd": false,
         "BINANCE:cvcusdt": false,
         "BTCTURK:CVCTRY": true,
-        "BTCTURK:CVCUSDT": false,
+        "BTCTURK:CVCUSDT": true,
         "BYBIT:CVCUSDT": false,
         "COINBASE:CVC-USD": false,
         "HITBTC:CVCUSD": false,
