@@ -922,7 +922,7 @@
       "hiddenMarkets": {
         "BITGET:ETHWUSDT_SPBL": false,
         "BTCTURK:ETHWTRY": true,
-        "BTCTURK:ETHWUSDT": false,
+        "BTCTURK:ETHWUSDT": true,
         "BYBIT:ETHWUSDT": false,
         "BYBIT:ETHWUSDT-SPOT": false,
         "HITBTC:ETHWUSDC": false,
