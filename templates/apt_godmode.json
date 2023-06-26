@@ -951,7 +951,7 @@
         "BITGET:APTUSDT_UMCBL": false,
         "BITHUMB:APT_KRW": true,
         "BTCTURK:APTTRY": true,
-        "BTCTURK:APTUSDT": false,
+        "BTCTURK:APTUSDT": true,
         "BYBIT:APTUSDC-SPOT": false,
         "BYBIT:APTUSDT": false,
         "BYBIT:APTUSDT-SPOT": false,
