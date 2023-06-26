@@ -939,7 +939,7 @@
         "BITGET:RNDRUSDT_UMCBL": false,
         "BITMEX:RNDRUSD": false,
         "BTCTURK:RNDRTRY": true,
-        "BTCTURK:RNDRUSDT": false,
+        "BTCTURK:RNDRUSDT": true,
         "BYBIT:RNDRUSDT": false,
         "BYBIT:RNDRUSDT-SPOT": false,
         "COINBASE:RNDR-USD": false,
