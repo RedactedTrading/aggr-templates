@@ -930,7 +930,7 @@
         "BITGET:SPELLUSDT_SPBL": false,
         "BITGET:SPELLUSDT_UMCBL": false,
         "BTCTURK:SPELLTRY": true,
-        "BTCTURK:SPELLUSDT": false,
+        "BTCTURK:SPELLUSDT": true,
         "BYBIT:SPELLUSDT": false,
         "BYBIT:SPELLUSDT-SPOT": false,
         "COINBASE:SPELL-USD": false,
