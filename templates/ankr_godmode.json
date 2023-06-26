@@ -945,7 +945,7 @@
         "BITGET:ANKRUSDT_UMCBL": false,
         "BITHUMB:ANKR_KRW": true,
         "BTCTURK:ANKRTRY": true,
-        "BTCTURK:ANKRUSDT": false,
+        "BTCTURK:ANKRUSDT": true,
         "BYBIT:ANKRUSDT": false,
         "BYBIT:ANKRUSDT-SPOT": false,
         "COINBASE:ANKR-USD": false,
