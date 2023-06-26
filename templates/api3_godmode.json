@@ -933,7 +933,7 @@
         "BINANCE_FUTURES:api3usdt": false,
         "BITGET:API3USDT_UMCBL": false,
         "BTCTURK:API3TRY": true,
-        "BTCTURK:API3USDT": false,
+        "BTCTURK:API3USDT": true,
         "BYBIT:API3USDT": false,
         "COINBASE:API3-USD": false,
         "COINBASE:API3-USDT": false,
