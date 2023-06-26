@@ -928,7 +928,7 @@
         "BITGET:BNTUSDT_SPBL": false,
         "BITHUMB:BNT_KRW": true,
         "BTCTURK:BNTTRY": true,
-        "BTCTURK:BNTUSDT": false,
+        "BTCTURK:BNTUSDT": true,
         "BYBIT:BNTUSDT-SPOT": false,
         "COINBASE:BNT-USD": false,
         "HITBTC:BNTUSD": false,
