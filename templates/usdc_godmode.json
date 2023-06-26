@@ -935,7 +935,7 @@
         "BITGET:USDCUSDT_SPBL": false,
         "BITGET:USDCUSDT_UMCBL": false,
         "BTCTURK:USDCTRY": true,
-        "BTCTURK:USDCUSDT": false,
+        "BTCTURK:USDCUSDT": true,
         "BYBIT:USDCUSDT": false,
         "BYBIT:USDCUSDT-SPOT": false,
         "KRAKEN:USDC/USD": false,
