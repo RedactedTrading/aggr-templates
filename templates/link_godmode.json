@@ -976,7 +976,7 @@
         "BITMEX:LINKUSD": false,
         "BITMEX:LINK_USDT": false,
         "BTCTURK:LINKTRY": true,
-        "BTCTURK:LINKUSDT": false,
+        "BTCTURK:LINKUSDT": true,
         "BYBIT:LINKUSDC-SPOT": false,
         "BYBIT:LINKUSDT": false,
         "BYBIT:LINKUSDT-SPOT": false,
