@@ -948,7 +948,7 @@
         "BITGET:LRCUSDT_UMCBL": false,
         "BITHUMB:LRC_KRW": true,
         "BTCTURK:LRCTRY": true,
-        "BTCTURK:LRCUSDT": false,
+        "BTCTURK:LRCUSDT": true,
         "BYBIT:LRCUSDT": false,
         "BYBIT:LRCUSDT-SPOT": false,
         "COINBASE:LRC-USD": false,
