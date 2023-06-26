@@ -926,7 +926,7 @@
         "BITHUMB:FLR_KRW": true,
         "BITMEX:FLRUSD": false,
         "BTCTURK:FLRTRY": true,
-        "BTCTURK:FLRUSDT": false,
+        "BTCTURK:FLRUSDT": true,
         "BYBIT:FLRUSDT": false,
         "BYBIT:FLRUSDT-SPOT": false,
         "COINBASE:FLR-USD": false,
