@@ -966,7 +966,7 @@
         "BITHUMB:DOT_KRW": true,
         "BITMEX:DOTUSDT": false,
         "BTCTURK:DOTTRY": true,
-        "BTCTURK:DOTUSDT": false,
+        "BTCTURK:DOTUSDT": true,
         "BYBIT:DOTUSDC-SPOT": false,
         "BYBIT:DOTUSDT": false,
         "BYBIT:DOTUSDT-SPOT": false,
