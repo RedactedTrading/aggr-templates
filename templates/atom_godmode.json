@@ -965,7 +965,7 @@
         "BITGET:ATOMUSDT_UMCBL": false,
         "BITHUMB:ATOM_KRW": true,
         "BTCTURK:ATOMTRY": true,
-        "BTCTURK:ATOMUSDT": false,
+        "BTCTURK:ATOMUSDT": true,
         "BYBIT:ATOMUSDT": false,
         "BYBIT:ATOMUSDT-SPOT": false,
         "COINBASE:ATOM-USD": false,
