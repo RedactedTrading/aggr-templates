@@ -940,7 +940,7 @@
         "BITGET:GALAUSDT_UMCBL": false,
         "BITHUMB:GALA_KRW": true,
         "BTCTURK:GALATRY": true,
-        "BTCTURK:GALAUSDT": false,
+        "BTCTURK:GALAUSDT": true,
         "BYBIT:GALAUSDT": false,
         "BYBIT:GALAUSDT-SPOT": false,
         "HITBTC:GALAUSDC": false,
