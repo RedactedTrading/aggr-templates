@@ -932,7 +932,7 @@
         "BITGET:BANDUSDT_SPBL": false,
         "BITGET:BANDUSDT_UMCBL": false,
         "BTCTURK:BANDTRY": true,
-        "BTCTURK:BANDUSDT": false,
+        "BTCTURK:BANDUSDT": true,
         "BYBIT:BANDUSDT": false,
         "COINBASE:BAND-USD": false,
         "HITBTC:BANDUSDT": false,
