@@ -922,7 +922,7 @@
         "BITGET:HOTUSDT_SPBL": false,
         "BITGET:HOTUSDT_UMCBL": false,
         "BTCTURK:HOTTRY": true,
-        "BTCTURK:HOTUSDT": false,
+        "BTCTURK:HOTUSDT": true,
         "BYBIT:HOTUSDT": false,
         "BYBIT:HOTUSDT-SPOT": false,
         "HITBTC:HOTUSD": false,
