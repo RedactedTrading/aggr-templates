@@ -933,7 +933,7 @@
         "BINANCE_FUTURES:dashusdt": false,
         "BITGET:DASHUSDT_UMCBL": false,
         "BTCTURK:DASHTRY": true,
-        "BTCTURK:DASHUSDT": false,
+        "BTCTURK:DASHUSDT": true,
         "BYBIT:DASHUSDT": false,
         "COINBASE:DASH-USD": false,
         "HITBTC:DASHUSD": false,
