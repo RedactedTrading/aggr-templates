@@ -964,7 +964,7 @@
         "BITHUMB:UNI_KRW": true,
         "BITMEX:UNI_USDT": false,
         "BTCTURK:UNITRY": true,
-        "BTCTURK:UNIUSDT": false,
+        "BTCTURK:UNIUSDT": true,
         "BYBIT:UNIUSDT": false,
         "BYBIT:UNIUSDT-SPOT": false,
         "COINBASE:UNI-USD": false,
