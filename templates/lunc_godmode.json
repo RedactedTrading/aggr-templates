@@ -941,7 +941,7 @@
         "BITGET:LUNCUSDT_SPBL": false,
         "BITGET:LUNCUSDT_UMCBL": false,
         "BTCTURK:LUNCTRY": true,
-        "BTCTURK:LUNCUSDT": false,
+        "BTCTURK:LUNCUSDT": true,
         "BYBIT:1000LUNCUSDT": false,
         "BYBIT:LUNCUSDC-SPOT": false,
         "BYBIT:LUNCUSDT-SPOT": false,
