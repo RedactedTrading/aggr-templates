@@ -974,7 +974,7 @@
         "BITHUMB:TRX_KRW": true,
         "BITMEX:TRX_USDT": false,
         "BTCTURK:TRXTRY": true,
-        "BTCTURK:TRXUSDT": false,
+        "BTCTURK:TRXUSDT": true,
         "BYBIT:TRXUSDC-SPOT": false,
         "BYBIT:TRXUSDT": false,
         "BYBIT:TRXUSDT-SPOT": false,
