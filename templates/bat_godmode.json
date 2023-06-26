@@ -956,7 +956,7 @@
         "BITGET:BATUSDT_UMCBL": false,
         "BITHUMB:BAT_KRW": true,
         "BTCTURK:BATTRY": true,
-        "BTCTURK:BATUSDT": false,
+        "BTCTURK:BATUSDT": true,
         "BYBIT:BATUSDT": false,
         "BYBIT:BATUSDT-SPOT": false,
         "COINBASE:BAT-USD": false,
