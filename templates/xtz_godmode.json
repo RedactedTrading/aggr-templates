@@ -950,7 +950,7 @@
         "BITGET:XTZUSDT_UMCBL": false,
         "BITHUMB:XTZ_KRW": true,
         "BTCTURK:XTZTRY": true,
-        "BTCTURK:XTZUSDT": false,
+        "BTCTURK:XTZUSDT": true,
         "BYBIT:XTZUSDT": false,
         "BYBIT:XTZUSDT-SPOT": false,
         "COINBASE:XTZ-USD": false,
