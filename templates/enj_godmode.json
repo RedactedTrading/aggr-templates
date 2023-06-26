@@ -946,7 +946,7 @@
         "BITGET:ENJUSDT_UMCBL": false,
         "BITHUMB:ENJ_KRW": true,
         "BTCTURK:ENJTRY": true,
-        "BTCTURK:ENJUSDT": false,
+        "BTCTURK:ENJUSDT": true,
         "BYBIT:ENJUSDT": false,
         "BYBIT:ENJUSDT-SPOT": false,
         "COINBASE:ENJ-USD": false,
