@@ -948,7 +948,7 @@
         "BITGET:GRTUSDT_UMCBL": false,
         "BITHUMB:GRT_KRW": true,
         "BTCTURK:GRTTRY": true,
-        "BTCTURK:GRTUSDT": false,
+        "BTCTURK:GRTUSDT": true,
         "BYBIT:GRTUSDT": false,
         "BYBIT:GRTUSDT-SPOT": false,
         "COINBASE:GRT-USD": false,
