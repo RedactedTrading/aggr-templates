@@ -946,7 +946,7 @@
         "BITGET:MKRUSDT_UMCBL": false,
         "BITHUMB:MKR_KRW": true,
         "BTCTURK:MKRTRY": true,
-        "BTCTURK:MKRUSDT": false,
+        "BTCTURK:MKRUSDT": true,
         "BYBIT:MKRUSDT": false,
         "BYBIT:MKRUSDT-SPOT": false,
         "COINBASE:MKR-USD": false,
