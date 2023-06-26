@@ -931,7 +931,7 @@
         "BITGET:CTSIUSDT_UMCBL": false,
         "BITHUMB:CTSI_KRW": true,
         "BTCTURK:CTSITRY": true,
-        "BTCTURK:CTSIUSDT": false,
+        "BTCTURK:CTSIUSDT": true,
         "BYBIT:CTSIUSDT": false,
         "COINBASE:CTSI-USD": false,
         "HITBTC:CTSIUSD": false,
