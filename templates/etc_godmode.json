@@ -961,7 +961,7 @@
         "BITGET:ETCUSDT_UMCBL": false,
         "BITHUMB:ETC_KRW": true,
         "BTCTURK:ETCTRY": true,
-        "BTCTURK:ETCUSDT": false,
+        "BTCTURK:ETCUSDT": true,
         "BYBIT:ETCUSDT": false,
         "BYBIT:ETCUSDT-SPOT": false,
         "COINBASE:ETC-USD": false,
