@@ -937,7 +937,7 @@
         "BITMEX:LUNAUSD": false,
         "BITMEX:LUNAUSDT": false,
         "BTCTURK:LUNATRY": true,
-        "BTCTURK:LUNAUSDT": false,
+        "BTCTURK:LUNAUSDT": true,
         "BYBIT:LUNAUSDT-SPOT": false,
         "HITBTC:LUNAUSDC": false,
         "HITBTC:LUNAUSDT": false,
