@@ -983,7 +983,7 @@
         "BITMEX:LTCUSD": false,
         "BITMEX:LTCUSDT": false,
         "BTCTURK:LTCTRY": true,
-        "BTCTURK:LTCUSDT": false,
+        "BTCTURK:LTCUSDT": true,
         "BYBIT:LTCUSD": false,
         "BYBIT:LTCUSDC-SPOT": false,
         "BYBIT:LTCUSDT": false,
