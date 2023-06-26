@@ -923,7 +923,7 @@
         "BINANCE_FUTURES:sklusdt": false,
         "BITGET:SKLUSDT_UMCBL": false,
         "BTCTURK:SKLTRY": true,
-        "BTCTURK:SKLUSDT": false,
+        "BTCTURK:SKLUSDT": true,
         "BYBIT:SKLUSDT": false,
         "COINBASE:SKL-USD": false,
         "HITBTC:SKLUSD": false,
