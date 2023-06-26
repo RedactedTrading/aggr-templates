@@ -974,7 +974,7 @@
         "BITMEX:DOGEUSD": false,
         "BITMEX:DOGEUSDT": false,
         "BTCTURK:DOGETRY": true,
-        "BTCTURK:DOGEUSDT": false,
+        "BTCTURK:DOGEUSDT": true,
         "BYBIT:DOGEUSDC-SPOT": false,
         "BYBIT:DOGEUSDT": false,
         "BYBIT:DOGEUSDT-SPOT": false,
