@@ -965,7 +965,7 @@
         "BITMEX:APEUSDT": false,
         "BITMEX:APE_USDT": false,
         "BTCTURK:APETRY": true,
-        "BTCTURK:APEUSDT": false,
+        "BTCTURK:APEUSDT": true,
         "BYBIT:APEUSDC-SPOT": false,
         "BYBIT:APEUSDT": false,
         "BYBIT:APEUSDT-SPOT": false,
