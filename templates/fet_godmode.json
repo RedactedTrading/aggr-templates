@@ -936,7 +936,7 @@
         "BITGET:FETUSDT_UMCBL": false,
         "BITHUMB:FET_KRW": true,
         "BTCTURK:FETTRY": true,
-        "BTCTURK:FETUSDT": false,
+        "BTCTURK:FETUSDT": true,
         "BYBIT:FETUSDT": false,
         "COINBASE:FET-USD": false,
         "COINBASE:FET-USDT": false,
