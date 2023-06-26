@@ -920,7 +920,7 @@
         "BITGET:GLMUSDT_SPBL": false,
         "BITHUMB:GLM_KRW": true,
         "BTCTURK:GLMTRY": true,
-        "BTCTURK:GLMUSDT": false,
+        "BTCTURK:GLMUSDT": true,
         "COINBASE:GLM-USD": false,
         "HITBTC:GLMUSD": false,
         "HITBTC:GLMUSDC": false,
