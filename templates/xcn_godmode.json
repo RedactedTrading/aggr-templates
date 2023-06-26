@@ -926,7 +926,7 @@
         "BITGET:XCNUSDT_SPBL": false,
         "BITHUMB:XCN_KRW": true,
         "BTCTURK:XCNTRY": true,
-        "BTCTURK:XCNUSDT": false,
+        "BTCTURK:XCNUSDT": true,
         "BYBIT:XCNUSDT": false,
         "COINBASE:XCN-USD": false,
         "COINBASE:XCN-USDT": false,
