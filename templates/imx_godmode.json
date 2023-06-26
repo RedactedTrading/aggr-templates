@@ -940,7 +940,7 @@
         "BITGET:IMXUSDT_SPBL": false,
         "BITGET:IMXUSDT_UMCBL": false,
         "BTCTURK:IMXTRY": true,
-        "BTCTURK:IMXUSDT": false,
+        "BTCTURK:IMXUSDT": true,
         "BYBIT:IMXUSDT": false,
         "BYBIT:IMXUSDT-SPOT": false,
         "COINBASE:IMX-USD": false,
