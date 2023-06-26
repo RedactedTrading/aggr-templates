@@ -945,7 +945,7 @@
         "BITGET:STXUSDT_UMCBL": false,
         "BITHUMB:STX_KRW": true,
         "BTCTURK:STXTRY": true,
-        "BTCTURK:STXUSDT": false,
+        "BTCTURK:STXUSDT": true,
         "BYBIT:STXUSDT": false,
         "BYBIT:STXUSDT-SPOT": false,
         "COINBASE:STX-USD": false,
