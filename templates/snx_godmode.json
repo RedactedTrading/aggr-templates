@@ -944,7 +944,7 @@
         "BITGET:SNXUSDT_UMCBL": false,
         "BITHUMB:SNX_KRW": true,
         "BTCTURK:SNXTRY": true,
-        "BTCTURK:SNXUSDT": false,
+        "BTCTURK:SNXUSDT": true,
         "BYBIT:SNXUSDT": false,
         "BYBIT:SNXUSDT-SPOT": false,
         "COINBASE:SNX-USD": false,
