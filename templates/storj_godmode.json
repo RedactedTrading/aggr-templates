@@ -940,7 +940,7 @@
         "BITGET:STORJUSDT_SPBL": false,
         "BITGET:STORJUSDT_UMCBL": false,
         "BTCTURK:STORJTRY": true,
-        "BTCTURK:STORJUSDT": false,
+        "BTCTURK:STORJUSDT": true,
         "BYBIT:STORJUSDT": false,
         "COINBASE:STORJ-USD": false,
         "HITBTC:STORJUSD": false,
