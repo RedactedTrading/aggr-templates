@@ -941,7 +941,7 @@
         "BITMEX:BLURUSD": false,
         "BITMEX:BLURUSDT": false,
         "BTCTURK:BLURTRY": true,
-        "BTCTURK:BLURUSDT": false,
+        "BTCTURK:BLURUSDT": true,
         "BYBIT:BLURUSDT": false,
         "BYBIT:BLURUSDT-SPOT": false,
         "COINBASE:BLUR-USD": false,
