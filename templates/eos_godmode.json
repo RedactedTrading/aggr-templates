@@ -976,7 +976,7 @@
         "BITHUMB:EOS_KRW": true,
         "BITMEX:EOSUSD": false,
         "BTCTURK:EOSTRY": true,
-        "BTCTURK:EOSUSDT": false,
+        "BTCTURK:EOSUSDT": true,
         "BYBIT:EOSUSD": false,
         "BYBIT:EOSUSDC-SPOT": false,
         "BYBIT:EOSUSDT": false,
