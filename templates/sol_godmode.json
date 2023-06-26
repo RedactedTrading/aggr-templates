@@ -984,7 +984,7 @@
         "BITMEX:SOLUSDT": false,
         "BITMEX:SOL_USDT": false,
         "BTCTURK:SOLTRY": true,
-        "BTCTURK:SOLUSDT": false,
+        "BTCTURK:SOLUSDT": true,
         "BYBIT:SOLUSDC-SPOT": false,
         "BYBIT:SOLUSDT": false,
         "BYBIT:SOLUSDT-SPOT": false,
