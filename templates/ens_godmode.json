@@ -947,7 +947,7 @@
         "BITGET:ENSUSDT_SPBL": false,
         "BITGET:ENSUSDT_UMCBL": false,
         "BTCTURK:ENSTRY": true,
-        "BTCTURK:ENSUSDT": false,
+        "BTCTURK:ENSUSDT": true,
         "BYBIT:ENSUSDT": false,
         "BYBIT:ENSUSDT-SPOT": false,
         "COINBASE:ENS-USD": false,
