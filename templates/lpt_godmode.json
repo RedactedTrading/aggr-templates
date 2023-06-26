@@ -934,7 +934,7 @@
         "BITGET:LPTUSDT_SPBL": false,
         "BITHUMB:LPT_KRW": true,
         "BTCTURK:LPTTRY": true,
-        "BTCTURK:LPTUSDT": false,
+        "BTCTURK:LPTUSDT": true,
         "BYBIT:LPTUSDT": false,
         "COINBASE:LPT-USD": false,
         "HITBTC:LPTUSD": false,
