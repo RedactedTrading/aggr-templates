@@ -1001,7 +1001,7 @@
         "BITMEX:ETHUSDT": false,
         "BITMEX:ETH_USDT": false,
         "BTCTURK:ETHTRY": true,
-        "BTCTURK:ETHUSDT": false,
+        "BTCTURK:ETHUSDT": true,
         "BYBIT:ETHUSD": false,
         "BYBIT:ETHUSDC-SPOT": false,
         "BYBIT:ETHUSDT": false,
