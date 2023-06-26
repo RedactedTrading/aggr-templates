@@ -916,7 +916,7 @@
         "BITFINEX:AMPUSD": false,
         "BITGET:AMPUSDT_SPBL": false,
         "BTCTURK:AMPTRY": true,
-        "BTCTURK:AMPUSDT": false,
+        "BTCTURK:AMPUSDT": true,
         "COINBASE:AMP-USD": false,
         "HITBTC:AMPUSDT": false,
         "KUCOIN:AMP-USDT": false,
