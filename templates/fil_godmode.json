@@ -951,7 +951,7 @@
         "BITGET:FILUSDT_SPBL": false,
         "BITGET:FILUSDT_UMCBL": false,
         "BTCTURK:FILTRY": true,
-        "BTCTURK:FILUSDT": false,
+        "BTCTURK:FILUSDT": true,
         "BYBIT:FILUSDC-SPOT": false,
         "BYBIT:FILUSDT": false,
         "BYBIT:FILUSDT-SPOT": false,
