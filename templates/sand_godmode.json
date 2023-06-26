@@ -952,7 +952,7 @@
         "BITGET:SANDUSDT_UMCBL": false,
         "BITHUMB:SAND_KRW": true,
         "BTCTURK:SANDTRY": true,
-        "BTCTURK:SANDUSDT": false,
+        "BTCTURK:SANDUSDT": true,
         "BYBIT:SANDUSDC-SPOT": false,
         "BYBIT:SANDUSDT": false,
         "BYBIT:SANDUSDT-SPOT": false,
