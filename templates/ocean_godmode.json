@@ -933,7 +933,7 @@
         "BITGET:OCEANUSDT_UMCBL": false,
         "BITHUMB:OCEAN_KRW": true,
         "BTCTURK:OCEANTRY": true,
-        "BTCTURK:OCEANUSDT": false,
+        "BTCTURK:OCEANUSDT": true,
         "BYBIT:OCEANUSDT": false,
         "COINBASE:OCEAN-USD": false,
         "HITBTC:OCEANUSD": false,
