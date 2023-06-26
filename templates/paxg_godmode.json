@@ -924,7 +924,7 @@
         "BINANCE:paxgusdt": false,
         "BITGET:PAXGUSDT_SPBL": false,
         "BTCTURK:PAXGTRY": true,
-        "BTCTURK:PAXGUSDT": false,
+        "BTCTURK:PAXGUSDT": true,
         "BYBIT:PAXGUSDT": false,
         "BYBIT:PAXGUSDT-SPOT": false,
         "HITBTC:PAXGUSD": false,
