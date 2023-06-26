@@ -939,7 +939,7 @@
         "BITGET:UMAUSDT_UMCBL": false,
         "BITHUMB:UMA_KRW": true,
         "BTCTURK:UMATRY": true,
-        "BTCTURK:UMAUSDT": false,
+        "BTCTURK:UMAUSDT": true,
         "BYBIT:UMAUSDT": false,
         "BYBIT:UMAUSDT-SPOT": false,
         "COINBASE:UMA-USD": false,
