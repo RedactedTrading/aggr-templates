@@ -950,7 +950,7 @@
         "BITMEX:ARBUSD": false,
         "BITMEX:ARBUSDT": false,
         "BTCTURK:ARBTRY": true,
-        "BTCTURK:ARBUSDT": false,
+        "BTCTURK:ARBUSDT": true,
         "BYBIT:ARBUSDC-SPOT": false,
         "BYBIT:ARBUSDT": false,
         "BYBIT:ARBUSDT-SPOT": false,
