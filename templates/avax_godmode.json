@@ -972,7 +972,7 @@
         "BITMEX:AVAXUSD": false,
         "BITMEX:AVAXUSDT": false,
         "BTCTURK:AVAXTRY": true,
-        "BTCTURK:AVAXUSDT": false,
+        "BTCTURK:AVAXUSDT": true,
         "BYBIT:AVAXUSDC-SPOT": false,
         "BYBIT:AVAXUSDT": false,
         "BYBIT:AVAXUSDT-SPOT": false,
