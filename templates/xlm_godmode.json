@@ -958,7 +958,7 @@
         "BITGET:XLMUSDT_UMCBL": false,
         "BITHUMB:XLM_KRW": true,
         "BTCTURK:XLMTRY": true,
-        "BTCTURK:XLMUSDT": false,
+        "BTCTURK:XLMUSDT": true,
         "BYBIT:XLMUSDC-SPOT": false,
         "BYBIT:XLMUSDT": false,
         "BYBIT:XLMUSDT-SPOT": false,
