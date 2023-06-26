@@ -985,7 +985,7 @@
         "BITMEX:ADAUSD": false,
         "BITMEX:ADAUSDT": false,
         "BTCTURK:ADATRY": true,
-        "BTCTURK:ADAUSDT": false,
+        "BTCTURK:ADAUSDT": true,
         "BYBIT:ADAUSD": false,
         "BYBIT:ADAUSDC-SPOT": false,
         "BYBIT:ADAUSDT": false,
