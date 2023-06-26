@@ -953,7 +953,7 @@
         "BITGET:CHZUSDT_UMCBL": false,
         "BITHUMB:CHZ_KRW": true,
         "BTCTURK:CHZTRY": true,
-        "BTCTURK:CHZUSDT": false,
+        "BTCTURK:CHZUSDT": true,
         "BYBIT:CHZUSDC-SPOT": false,
         "BYBIT:CHZUSDT": false,
         "BYBIT:CHZUSDT-SPOT": false,
