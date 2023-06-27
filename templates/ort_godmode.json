@@ -895,7 +895,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:ORTUSDT-SPOT": true,
+        "BYBIT:ORTUSDT-SPOT": false,
         "MEXC:ORTUSDT": true
       },
       "barSpacing": 0.2929530100599413,
