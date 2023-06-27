@@ -899,9 +899,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:MVLUSDT-SPOT": false,
-        "HITBTC:MVLUSDT": false,
-        "MEXC:MVLUSDT": false,
+        "BYBIT:MVLUSDT-SPOT": true,
+        "HITBTC:MVLUSDT": true,
+        "MEXC:MVLUSDT": true,
         "UPBIT:KRW-MVL": true
       },
       "barSpacing": 0.2929530100599413,
