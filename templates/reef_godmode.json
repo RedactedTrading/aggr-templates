@@ -914,17 +914,17 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:reefbusd": false,
+        "BINANCE:reefbusd": true,
         "BINANCE:reefusdt": false,
-        "BINANCE_FUTURES:reefusdt": false,
-        "BITGET:REEFUSDT_SPBL": false,
-        "BITGET:REEFUSDT_UMCBL": false,
+        "BINANCE_FUTURES:reefusdt": true,
+        "BITGET:REEFUSDT_SPBL": true,
+        "BITGET:REEFUSDT_UMCBL": true,
         "BYBIT:REEFUSDT": false,
-        "HITBTC:REEFUSD": false,
-        "KUCOIN:REEF-USDT": false,
-        "KUCOIN:REEFUSDTM": false,
-        "MEXC:REEFUSDT": false,
-        "MEXC:REEF_USDT": false
+        "HITBTC:REEFUSD": true,
+        "KUCOIN:REEF-USDT": true,
+        "KUCOIN:REEFUSDTM": true,
+        "MEXC:REEFUSDT": true,
+        "MEXC:REEF_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
