@@ -901,8 +901,8 @@
       "hiddenMarkets": {
         "BINANCE:perlusdc": false,
         "BINANCE:perlusdt": false,
-        "BITGET:PERLUSDT_SPBL": false,
-        "HITBTC:PERLUSD": false
+        "BITGET:PERLUSDT_SPBL": true,
+        "HITBTC:PERLUSD": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
