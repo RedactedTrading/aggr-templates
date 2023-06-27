@@ -907,8 +907,8 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITHUMB:CTC_KRW": true,
-        "BYBIT:CTCUSDT": false,
-        "BYBIT:CTCUSDT-SPOT": true,
+        "BYBIT:CTCUSDT": true,
+        "BYBIT:CTCUSDT-SPOT": false,
         "HITBTC:CTCUSDT": true,
         "KUCOIN:CTC-USDT": true,
         "MEXC:CTCUSDT": true,
