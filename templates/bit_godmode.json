@@ -910,15 +910,15 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:BITUSDC-SPOT": false,
+        "BYBIT:BITUSDC-SPOT": true,
         "BYBIT:BITUSDT": false,
-        "BYBIT:BITUSDT-SPOT": false,
-        "COINBASE:BIT-USD": false,
-        "COINBASE:BIT-USDT": false,
-        "HITBTC:BITUSDT": false,
-        "KRAKEN:BIT/USD": false,
-        "MEXC:BITUSDT": false,
-        "MEXC:BIT_USDT": false
+        "BYBIT:BITUSDT-SPOT": true,
+        "COINBASE:BIT-USD": true,
+        "COINBASE:BIT-USDT": true,
+        "HITBTC:BITUSDT": true,
+        "KRAKEN:BIT/USD": true,
+        "MEXC:BITUSDT": true,
+        "MEXC:BIT_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
