@@ -907,12 +907,12 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:vgxusdt": false,
-        "BITGET:VGXUSDT_SPBL": false,
-        "COINBASE:VGX-USD": false,
-        "COINBASE:VGX-USDT": false,
-        "HITBTC:VGXUSDT": false,
-        "MEXC:VGXUSDT": false,
-        "MEXC:VGX_USDT": false
+        "BITGET:VGXUSDT_SPBL": true,
+        "COINBASE:VGX-USD": true,
+        "COINBASE:VGX-USDT": true,
+        "HITBTC:VGXUSDT": true,
+        "MEXC:VGXUSDT": true,
+        "MEXC:VGX_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
