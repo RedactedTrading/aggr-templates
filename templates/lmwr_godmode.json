@@ -897,7 +897,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:LMWRUSDT-SPOT": true,
+        "BYBIT:LMWRUSDT-SPOT": false,
         "KRAKEN:LMWR/USD": true,
         "KUCOIN:LMWR-USDT": true
       },
@@ -1093,9 +1093,9 @@
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": false,
+      "showPairs": true,
       "showTrades": true,
-      "showLiquidations": false,
+      "showLiquidations": true,
       "showLogos": true,
       "monochromeLogos": false,
       "showTimeAgo": false,
