@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:ookibusd": false,
+        "BINANCE:ookibusd": true,
         "BINANCE:ookiusdt": false,
-        "COINBASE:OOKI-USD": false,
-        "MEXC:OOKIUSDT": false
+        "COINBASE:OOKI-USD": true,
+        "MEXC:OOKIUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
