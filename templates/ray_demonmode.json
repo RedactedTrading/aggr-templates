@@ -916,16 +916,16 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:raybusd": false,
+        "BINANCE:raybusd": true,
         "BINANCE:rayusdt": false,
-        "BITGET:RAYUSDT_SPBL": false,
-        "HITBTC:RAYUSDT": false,
-        "KRAKEN:RAY/USD": false,
-        "MEXC:RAYUSDC": false,
-        "MEXC:RAYUSDT": false,
-        "MEXC:RAY_USDT": false,
-        "OKEX:RAY-USDT": false,
-        "RAYDIUMSOLANA:RAY/USDC": false
+        "BITGET:RAYUSDT_SPBL": true,
+        "HITBTC:RAYUSDT": true,
+        "KRAKEN:RAY/USD": true,
+        "MEXC:RAYUSDC": true,
+        "MEXC:RAYUSDT": true,
+        "MEXC:RAY_USDT": true,
+        "OKEX:RAY-USDT": true,
+        "RAYDIUMSOLANA:RAY/USDC": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
