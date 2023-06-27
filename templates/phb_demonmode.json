@@ -916,18 +916,18 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:phbbusd": false,
-        "BINANCE:phbtusd": false,
+        "BINANCE:phbbusd": true,
+        "BINANCE:phbtusd": true,
         "BINANCE:phbusdc": false,
         "BINANCE:phbusdt": false,
-        "BINANCE_FUTURES:phbusdt": false,
-        "BITGET:PHBUSDT_SPBL": false,
-        "BITGET:PHBUSDT_UMCBL": false,
+        "BINANCE_FUTURES:phbusdt": true,
+        "BITGET:PHBUSDT_SPBL": true,
+        "BITGET:PHBUSDT_UMCBL": true,
         "BYBIT:PHBUSDT": false,
-        "HITBTC:PHBUSDT": false,
-        "KUCOIN:PHBUSDTM": false,
-        "MEXC:PHBUSDT": false,
-        "MEXC:PHB_USDT": false
+        "HITBTC:PHBUSDT": true,
+        "KUCOIN:PHBUSDTM": true,
+        "MEXC:PHBUSDT": true,
+        "MEXC:PHB_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
