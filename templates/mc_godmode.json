@@ -905,13 +905,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:mcbusd": false,
+        "BINANCE:mcbusd": true,
         "BINANCE:mcusdt": false,
-        "HITBTC:MCUSDC": false,
-        "HITBTC:MCUSDT": false,
-        "KRAKEN:MC/USD": false,
-        "KUCOIN:MC-USDT": false,
-        "MEXC:MCUSDT": false
+        "HITBTC:MCUSDC": true,
+        "HITBTC:MCUSDT": true,
+        "KRAKEN:MC/USD": true,
+        "KUCOIN:MC-USDT": true,
+        "MEXC:MCUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
