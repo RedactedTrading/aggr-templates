@@ -905,7 +905,7 @@
       "hiddenMarkets": {
         "BINANCE:dcrbusd": true,
         "BINANCE:dcrusdt": false,
-        "BYBIT:DCRUSDT-SPOT": true,
+        "BYBIT:DCRUSDT-SPOT": false,
         "HITBTC:DCRUSD": true,
         "MEXC:DCRUSDT": true,
         "OKEX:DCR-USDT": true
