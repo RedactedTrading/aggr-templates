@@ -895,8 +895,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:FAMEUSDT-SPOT": false,
-        "OKEX:FAME-USDT": false
+        "BYBIT:FAMEUSDT-SPOT": true,
+        "OKEX:FAME-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
