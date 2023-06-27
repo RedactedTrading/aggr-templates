@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:nulsbusd": false,
+        "BINANCE:nulsbusd": true,
         "BINANCE:nulsusdt": false,
-        "HITBTC:NULSUSDT": false,
-        "MEXC:NULSUSDT": false,
-        "OKEX:NULS-USDT": false
+        "HITBTC:NULSUSDT": true,
+        "MEXC:NULSUSDT": true,
+        "OKEX:NULS-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
