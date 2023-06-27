@@ -907,14 +907,14 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:ghstbusd": false,
+        "BINANCE:ghstbusd": true,
         "BINANCE:ghstusdt": false,
-        "BITGET:GHSTUSDT_SPBL": false,
-        "COINBASE:GHST-USD": false,
-        "HITBTC:GHSTUSD": false,
-        "KRAKEN:GHST/USD": false,
-        "MEXC:GHSTUSDT": false,
-        "OKEX:GHST-USDT": false
+        "BITGET:GHSTUSDT_SPBL": true,
+        "COINBASE:GHST-USD": true,
+        "HITBTC:GHSTUSD": true,
+        "KRAKEN:GHST/USD": true,
+        "MEXC:GHSTUSDT": true,
+        "OKEX:GHST-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
