@@ -900,10 +900,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:BONKUSDT_SPBL": false,
+        "BITGET:BONKUSDT_SPBL": true,
         "BYBIT:1000BONKUSDT": false,
-        "BYBIT:BONKUSDT-SPOT": false,
-        "MEXC:1000BONK_USDT": false
+        "BYBIT:BONKUSDT-SPOT": true,
+        "MEXC:1000BONK_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
