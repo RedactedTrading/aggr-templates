@@ -898,8 +898,8 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:hcusdt": false,
-        "MEXC:HCUSDT": false,
-        "OKEX:HC-USDT": false
+        "MEXC:HCUSDT": true,
+        "OKEX:HC-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
