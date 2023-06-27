@@ -903,12 +903,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:kp3rbusd": false,
+        "BINANCE:kp3rbusd": true,
         "BINANCE:kp3rusdt": false,
-        "BITGET:KP3RUSDT_SPBL": false,
-        "KRAKEN:KP3R/USD": false,
-        "MEXC:KP3RUSDT": false,
-        "OKEX:KP3R-USDT": false
+        "BITGET:KP3RUSDT_SPBL": true,
+        "KRAKEN:KP3R/USD": true,
+        "MEXC:KP3RUSDT": true,
+        "OKEX:KP3R-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
