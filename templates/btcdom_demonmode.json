@@ -893,7 +893,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE_FUTURES:btcdomusdt": false
+        "BINANCE_FUTURES:btcdomusdt": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
