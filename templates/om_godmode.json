@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:ombusd": false,
+        "BINANCE:ombusd": true,
         "BINANCE:omusdt": false,
-        "HITBTC:OMUSD": false,
-        "KUCOIN:OM-USDT": false,
-        "OKEX:OM-USDT": false
+        "HITBTC:OMUSD": true,
+        "KUCOIN:OM-USDT": true,
+        "OKEX:OM-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
