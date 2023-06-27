@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:nanobusd": false,
+        "BINANCE:nanobusd": true,
         "BINANCE:nanousdt": false,
-        "KRAKEN:NANO/USD": false
+        "KRAKEN:NANO/USD": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
