@@ -905,12 +905,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:lskbusd": false,
+        "BINANCE:lskbusd": true,
         "BINANCE:lskusdt": false,
-        "HITBTC:LSKUSD": false,
-        "HITBTC:LSKUSDC": false,
-        "KRAKEN:LSK/USD": false,
-        "OKEX:LSK-USDT": false,
+        "HITBTC:LSKUSD": true,
+        "HITBTC:LSKUSDC": true,
+        "KRAKEN:LSK/USD": true,
+        "OKEX:LSK-USDT": true,
         "UPBIT:KRW-LSK": true
       },
       "barSpacing": 0.2929530100599413,
