@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:SHILLUSDT_SPBL": false,
-        "BYBIT:SHILLUSDT-SPOT": false,
-        "KUCOIN:SHILL-USDT": false,
-        "MEXC:SHILLUSDT": false
+        "BITGET:SHILLUSDT_SPBL": true,
+        "BYBIT:SHILLUSDT-SPOT": true,
+        "KUCOIN:SHILL-USDT": true,
+        "MEXC:SHILLUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
