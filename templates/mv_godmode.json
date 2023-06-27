@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:MVUSDT-SPOT": false,
-        "HITBTC:MVUSDT": false,
-        "KRAKEN:MV/USD": false,
-        "KUCOIN:MV-USDT": false
+        "BYBIT:MVUSDT-SPOT": true,
+        "HITBTC:MVUSDT": true,
+        "KRAKEN:MV/USD": true,
+        "KUCOIN:MV-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
