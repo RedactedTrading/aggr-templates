@@ -914,17 +914,17 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:sfpbusd": false,
+        "BINANCE:sfpbusd": true,
         "BINANCE:sfpusdt": false,
-        "BINANCE_FUTURES:sfpusdt": false,
-        "BITGET:SFPUSDT_SPBL": false,
-        "BITGET:SFPUSDT_UMCBL": false,
+        "BINANCE_FUTURES:sfpusdt": true,
+        "BITGET:SFPUSDT_SPBL": true,
+        "BITGET:SFPUSDT_UMCBL": true,
         "BITHUMB:SFP_KRW": true,
         "BYBIT:SFPUSDT": false,
-        "HITBTC:SFPUSD": false,
-        "KUCOIN:SFP-USDT": false,
-        "MEXC:SFPUSDT": false,
-        "MEXC:SFP_USDT": false
+        "HITBTC:SFPUSD": true,
+        "KUCOIN:SFP-USDT": true,
+        "MEXC:SFPUSDT": true,
+        "MEXC:SFP_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
