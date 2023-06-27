@@ -904,12 +904,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:BABYDOGEUSDT_SPBL": false,
-        "BYBIT:BABYDOGEUSDT-SPOT": false,
-        "KUCOIN:BABYDOGE-USDT": false,
-        "MEXC:BABYDOGEUSDT": false,
-        "MEXC:BABYDOGE_USDT": false,
-        "OKEX:BABYDOGE-USDT": false
+        "BITGET:BABYDOGEUSDT_SPBL": true,
+        "BYBIT:BABYDOGEUSDT-SPOT": true,
+        "KUCOIN:BABYDOGE-USDT": true,
+        "MEXC:BABYDOGEUSDT": true,
+        "MEXC:BABYDOGE_USDT": true,
+        "OKEX:BABYDOGE-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
