@@ -903,12 +903,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:PSTAKEUSDT_SPBL": false,
-        "BYBIT:PSTAKEUSDT-SPOT": false,
-        "KRAKEN:PSTAKE/USD": false,
-        "KUCOIN:PSTAKE-USDT": false,
-        "MEXC:PSTAKEUSDT": false,
-        "OKEX:PSTAKE-USDT": false
+        "BITGET:PSTAKEUSDT_SPBL": true,
+        "BYBIT:PSTAKEUSDT-SPOT": true,
+        "KRAKEN:PSTAKE/USD": true,
+        "KUCOIN:PSTAKE-USDT": true,
+        "MEXC:PSTAKEUSDT": true,
+        "OKEX:PSTAKE-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
