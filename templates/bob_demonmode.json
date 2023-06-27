@@ -904,12 +904,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITMEX:BOBUSD": false,
-        "BYBIT:BOBUSDT-SPOT": false,
-        "KUCOIN:BOB-USDT": false,
-        "KUCOIN:BOBUSDTM": false,
-        "MEXC:BOBUSDT": false,
-        "MEXC:BOB_USDT": false
+        "BITMEX:BOBUSD": true,
+        "BYBIT:BOBUSDT-SPOT": true,
+        "KUCOIN:BOB-USDT": true,
+        "KUCOIN:BOBUSDTM": true,
+        "MEXC:BOBUSDT": true,
+        "MEXC:BOB_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
