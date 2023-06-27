@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:reibusd": false,
+        "BINANCE:reibusd": true,
         "BINANCE:reiusdt": false,
         "BITHUMB:REI_KRW": true,
-        "HITBTC:REIUSDT": false,
-        "MEXC:REIUSDT": false
+        "HITBTC:REIUSDT": true,
+        "MEXC:REIUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
