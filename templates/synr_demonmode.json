@@ -895,7 +895,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:SYNRUSDT-SPOT": true,
+        "BYBIT:SYNRUSDT-SPOT": false,
         "KUCOIN:SYNR-USDT": true
       },
       "barSpacing": 0.2929530100599413,
