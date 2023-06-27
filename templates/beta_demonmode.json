@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:betabusd": false,
+        "BINANCE:betabusd": true,
         "BINANCE:betausdt": false,
-        "BITGET:BETAUSDT_SPBL": false,
-        "HITBTC:BETAUSDT": false,
-        "MEXC:BETAUSDT": false
+        "BITGET:BETAUSDT_SPBL": true,
+        "HITBTC:BETAUSDT": true,
+        "MEXC:BETAUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
