@@ -906,13 +906,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:psgbusd": false,
+        "BINANCE:psgbusd": true,
         "BINANCE:psgusdt": false,
-        "BITGET:PSGUSDT_SPBL": false,
-        "BYBIT:PSGUSDT-SPOT": false,
-        "HITBTC:PSGUSD": false,
-        "MEXC:PSGUSDT": false,
-        "MEXC:PSG_USDT": false
+        "BITGET:PSGUSDT_SPBL": true,
+        "BYBIT:PSGUSDT-SPOT": true,
+        "HITBTC:PSGUSD": true,
+        "MEXC:PSGUSDT": true,
+        "MEXC:PSG_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
