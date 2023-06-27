@@ -903,12 +903,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:ctxcbusd": false,
+        "BINANCE:ctxcbusd": true,
         "BINANCE:ctxcusdt": false,
         "BITHUMB:CTXC_KRW": true,
-        "HITBTC:CTXCUSDT": false,
-        "MEXC:CTXCUSDT": false,
-        "OKEX:CTXC-USDT": false
+        "HITBTC:CTXCUSDT": true,
+        "MEXC:CTXCUSDT": true,
+        "OKEX:CTXC-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
