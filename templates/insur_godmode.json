@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:INSURUSDT-SPOT": false,
-        "HITBTC:INSURUSD": false,
-        "MEXC:INSURUSDT": false
+        "BYBIT:INSURUSDT-SPOT": true,
+        "HITBTC:INSURUSD": true,
+        "MEXC:INSURUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
