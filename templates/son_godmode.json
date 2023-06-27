@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:SONUSDT-SPOT": false,
-        "KUCOIN:SON-USDT": false,
-        "MEXC:SONUSDT": false
+        "BYBIT:SONUSDT-SPOT": true,
+        "KUCOIN:SON-USDT": true,
+        "MEXC:SONUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
