@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:TELUSDT_SPBL": false,
-        "BYBIT:TELUSDT-SPOT": false,
-        "KUCOIN:TEL-USDT": false
+        "BITGET:TELUSDT_SPBL": true,
+        "BYBIT:TELUSDT-SPOT": true,
+        "KUCOIN:TEL-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
