@@ -895,8 +895,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:CBXUSDT-SPOT": false,
-        "MEXC:CBXUSDT": false
+        "BYBIT:CBXUSDT-SPOT": true,
+        "MEXC:CBXUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
