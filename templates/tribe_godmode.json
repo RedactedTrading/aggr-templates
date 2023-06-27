@@ -905,7 +905,7 @@
       "hiddenMarkets": {
         "BINANCE:tribebusd": true,
         "BINANCE:tribeusdt": false,
-        "BYBIT:TRIBEUSDT-SPOT": true,
+        "BYBIT:TRIBEUSDT-SPOT": false,
         "HITBTC:TRIBEUSDT": true,
         "KUCOIN:TRIBE-USDT": true,
         "MEXC:TRIBEUSDT": true
@@ -1102,9 +1102,9 @@
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": false,
+      "showPairs": true,
       "showTrades": true,
-      "showLiquidations": false,
+      "showLiquidations": true,
       "showLogos": true,
       "monochromeLogos": false,
       "showTimeAgo": false,
