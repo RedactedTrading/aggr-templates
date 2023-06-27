@@ -910,15 +910,15 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:superbusd": false,
+        "BINANCE:superbusd": true,
         "BINANCE:superusdt": false,
-        "BITGET:SUPERUSDT_SPBL": false,
-        "COINBASE:SUPER-USD": false,
-        "COINBASE:SUPER-USDT": false,
-        "HITBTC:SUPERUSD": false,
-        "KRAKEN:SUPER/USD": false,
-        "KUCOIN:SUPER-USDT": false,
-        "MEXC:SUPER_USDT": false
+        "BITGET:SUPERUSDT_SPBL": true,
+        "COINBASE:SUPER-USD": true,
+        "COINBASE:SUPER-USDT": true,
+        "HITBTC:SUPERUSD": true,
+        "KRAKEN:SUPER/USD": true,
+        "KUCOIN:SUPER-USDT": true,
+        "MEXC:SUPER_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
