@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:firobusd": false,
+        "BINANCE:firobusd": true,
         "BINANCE:firousdt": false,
-        "HITBTC:FIROUSD": false,
-        "MEXC:FIROUSDT": false
+        "HITBTC:FIROUSD": true,
+        "MEXC:FIROUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
