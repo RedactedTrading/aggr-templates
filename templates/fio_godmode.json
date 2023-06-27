@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:fiobusd": false,
+        "BINANCE:fiobusd": true,
         "BINANCE:fiousdt": false,
-        "MEXC:FIOUSDT": false
+        "MEXC:FIOUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
