@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:STETHUSDT_SPBL": false,
-        "BYBIT:STETHUSDT-SPOT": false,
-        "HITBTC:STETHUSDT": false,
-        "MEXC:STETHUSDC": false,
-        "MEXC:STETHUSDT": false
+        "BITGET:STETHUSDT_SPBL": true,
+        "BYBIT:STETHUSDT-SPOT": true,
+        "HITBTC:STETHUSDT": true,
+        "MEXC:STETHUSDC": true,
+        "MEXC:STETHUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
