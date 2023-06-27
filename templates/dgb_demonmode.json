@@ -914,17 +914,17 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:dgbbusd": false,
+        "BINANCE:dgbbusd": true,
         "BINANCE:dgbusdt": false,
-        "BINANCE_FUTURES:dgbusdt": false,
-        "BITFINEX:DGBUSD": false,
+        "BINANCE_FUTURES:dgbusdt": true,
+        "BITFINEX:DGBUSD": true,
         "BYBIT:DGBUSDT": false,
-        "BYBIT:DGBUSDT-SPOT": false,
-        "HITBTC:DGBUSD": false,
-        "HITBTC:DGBUSDC": false,
-        "KUCOIN:DGB-USDT": false,
-        "KUCOIN:DGBUSDTM": false,
-        "OKEX:DGB-USDT": false
+        "BYBIT:DGBUSDT-SPOT": true,
+        "HITBTC:DGBUSD": true,
+        "HITBTC:DGBUSDC": true,
+        "KUCOIN:DGB-USDT": true,
+        "KUCOIN:DGBUSDTM": true,
+        "OKEX:DGB-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
