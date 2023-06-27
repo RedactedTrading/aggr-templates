@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:IZIUSDT-SPOT": false,
-        "KUCOIN:IZI-USDT": false,
-        "MEXC:IZIUSDT": false
+        "BYBIT:IZIUSDT-SPOT": true,
+        "KUCOIN:IZI-USDT": true,
+        "MEXC:IZIUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
