@@ -916,18 +916,18 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:unfibusd": false,
+        "BINANCE:unfibusd": true,
         "BINANCE:unfiusdt": false,
-        "BINANCE_FUTURES:unfiusdt": false,
-        "BITGET:UNFIUSDT_SPBL": false,
-        "BITGET:UNFIUSDT_UMCBL": false,
+        "BINANCE_FUTURES:unfiusdt": true,
+        "BITGET:UNFIUSDT_SPBL": true,
+        "BITGET:UNFIUSDT_UMCBL": true,
         "BYBIT:UNFIUSDT": false,
-        "COINBASE:UNFI-USD": false,
-        "KRAKEN:UNFI/USD": false,
-        "KUCOIN:UNFI-USDT": false,
-        "KUCOIN:UNFIUSDTM": false,
-        "MEXC:UNFIUSDT": false,
-        "MEXC:UNFI_USDT": false
+        "COINBASE:UNFI-USD": true,
+        "KRAKEN:UNFI/USD": true,
+        "KUCOIN:UNFI-USDT": true,
+        "KUCOIN:UNFIUSDTM": true,
+        "MEXC:UNFIUSDT": true,
+        "MEXC:UNFI_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
