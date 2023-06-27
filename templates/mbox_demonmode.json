@@ -903,12 +903,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:mboxbusd": false,
+        "BINANCE:mboxbusd": true,
         "BINANCE:mboxusdt": false,
-        "BITGET:MBOXUSDT_SPBL": false,
-        "HITBTC:MBOXUSDC": false,
-        "HITBTC:MBOXUSDT": false,
-        "MEXC:MBOXUSDT": false
+        "BITGET:MBOXUSDT_SPBL": true,
+        "HITBTC:MBOXUSDC": true,
+        "HITBTC:MBOXUSDT": true,
+        "MEXC:MBOXUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
