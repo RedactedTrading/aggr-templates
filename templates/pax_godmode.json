@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:paxbusd": false,
-        "BINANCE:paxtusd": false,
+        "BINANCE:paxbusd": true,
+        "BINANCE:paxtusd": true,
         "BINANCE:paxusdt": false,
-        "BITFINEX:PAXUSD": false,
-        "COINBASE:PAX-USD": false
+        "BITFINEX:PAXUSD": true,
+        "COINBASE:PAX-USD": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
