@@ -901,10 +901,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:straxbusd": false,
+        "BINANCE:straxbusd": true,
         "BINANCE:straxusdt": false,
         "BITHUMB:STRAX_KRW": true,
-        "KUCOIN:STRAX-USDT": false,
+        "KUCOIN:STRAX-USDT": true,
         "UPBIT:KRW-STRAX": true
       },
       "barSpacing": 0.2929530100599413,
