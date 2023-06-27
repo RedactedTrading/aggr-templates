@@ -904,12 +904,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:VELOUSDT_SPBL": false,
+        "BITGET:VELOUSDT_SPBL": true,
         "BITHUMB:VELO_KRW": true,
-        "BYBIT:VELOUSDT-SPOT": false,
-        "KUCOIN:VELO-USDT": false,
-        "MEXC:VELO_USDT": false,
-        "OKEX:VELO-USDT": false
+        "BYBIT:VELOUSDT-SPOT": true,
+        "KUCOIN:VELO-USDT": true,
+        "MEXC:VELO_USDT": true,
+        "OKEX:VELO-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
