@@ -905,13 +905,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:pyrbusd": false,
+        "BINANCE:pyrbusd": true,
         "BINANCE:pyrusdt": false,
-        "BITGET:PYRUSDT_SPBL": false,
-        "COINBASE:PYR-USD": false,
-        "HITBTC:PYRUSDT": false,
-        "KUCOIN:PYR-USDT": false,
-        "MEXC:PYRUSDT": false
+        "BITGET:PYRUSDT_SPBL": true,
+        "COINBASE:PYR-USD": true,
+        "HITBTC:PYRUSDT": true,
+        "KUCOIN:PYR-USDT": true,
+        "MEXC:PYRUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
