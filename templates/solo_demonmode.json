@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:SOLOUSDT-SPOT": false,
-        "HITBTC:SOLOUSD": false,
-        "MEXC:SOLOUSDT": false
+        "BYBIT:SOLOUSDT-SPOT": true,
+        "HITBTC:SOLOUSD": true,
+        "MEXC:SOLOUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
