@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:hegicbusd": false,
-        "KUCOIN:HEGIC-USDT": false,
-        "MEXC:HEGICUSDT": false,
-        "OKEX:HEGIC-USDT": false
+        "BINANCE:hegicbusd": true,
+        "KUCOIN:HEGIC-USDT": true,
+        "MEXC:HEGICUSDT": true,
+        "OKEX:HEGIC-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
