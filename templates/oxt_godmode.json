@@ -911,16 +911,16 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:oxtbusd": false,
+        "BINANCE:oxtbusd": true,
         "BINANCE:oxtusdt": false,
-        "BITGET:OXTUSDT_SPBL": false,
+        "BITGET:OXTUSDT_SPBL": true,
         "BITHUMB:OXT_KRW": true,
-        "COINBASE:OXT-USD": false,
-        "HITBTC:OXTUSD": false,
-        "KRAKEN:OXT/USD": false,
-        "KUCOIN:OXT-USDT": false,
-        "MEXC:OXTUSDT": false,
-        "OKEX:OXT-USDT": false
+        "COINBASE:OXT-USD": true,
+        "HITBTC:OXTUSD": true,
+        "KRAKEN:OXT/USD": true,
+        "KUCOIN:OXT-USDT": true,
+        "MEXC:OXTUSDT": true,
+        "OKEX:OXT-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
