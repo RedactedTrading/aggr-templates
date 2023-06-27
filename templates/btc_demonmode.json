@@ -152,7 +152,7 @@
       "aggregationLength": 100,
       "calculateSlippage": false,
       "wsProxyUrl": null,
-      "disableAnimations": false,
+      "disableAnimations": true,
       "autoHideHeaders": true,
       "autoHideNames": true,
       "theme": "dark",
