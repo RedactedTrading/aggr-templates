@@ -903,7 +903,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITGET:WEMIXUSDT_SPBL": true,
-        "BYBIT:WEMIXUSDT-SPOT": true,
+        "BYBIT:WEMIXUSDT-SPOT": false,
         "KUCOIN:WEMIX-USDT": true,
         "MEXC:WEMIXUSDT": true,
         "MEXC:WEMIX_USDT": true
