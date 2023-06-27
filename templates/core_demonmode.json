@@ -908,14 +908,14 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:COREUSDT_SPBL": false,
-        "BITGET:COREUSDT_UMCBL": false,
+        "BITGET:COREUSDT_SPBL": true,
+        "BITGET:COREUSDT_UMCBL": true,
         "BYBIT:COREUSDT": false,
-        "BYBIT:COREUSDT-SPOT": false,
-        "MEXC:CORE_USDT": false,
-        "OKEX:CORE-USDC": false,
-        "OKEX:CORE-USDT": false,
-        "OKEX:CORE-USDT-SWAP": false
+        "BYBIT:COREUSDT-SPOT": true,
+        "MEXC:CORE_USDT": true,
+        "OKEX:CORE-USDC": true,
+        "OKEX:CORE-USDT": true,
+        "OKEX:CORE-USDT-SWAP": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
