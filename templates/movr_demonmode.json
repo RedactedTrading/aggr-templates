@@ -909,15 +909,15 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:movrbusd": false,
+        "BINANCE:movrbusd": true,
         "BINANCE:movrusdt": false,
-        "BITGET:MOVRUSDT_SPBL": false,
-        "BYBIT:MOVRUSDT-SPOT": false,
-        "HITBTC:MOVRUSDT": false,
-        "KRAKEN:MOVR/USD": false,
-        "KUCOIN:MOVR-USDT": false,
-        "MEXC:MOVRUSDT": false,
-        "OKEX:MOVR-USDT": false
+        "BITGET:MOVRUSDT_SPBL": true,
+        "BYBIT:MOVRUSDT-SPOT": true,
+        "HITBTC:MOVRUSDT": true,
+        "KRAKEN:MOVR/USD": true,
+        "KUCOIN:MOVR-USDT": true,
+        "MEXC:MOVRUSDT": true,
+        "OKEX:MOVR-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
