@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:adxbusd": false,
+        "BINANCE:adxbusd": true,
         "BINANCE:adxusdt": false,
-        "KRAKEN:ADX/USD": false,
-        "KUCOIN:ADX-USDT": false
+        "KRAKEN:ADX/USD": true,
+        "KUCOIN:ADX-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
