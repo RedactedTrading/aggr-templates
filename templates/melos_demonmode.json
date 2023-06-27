@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:MELOSUSDT-SPOT": false,
-        "KUCOIN:MELOS-USDT": false,
-        "MEXC:MELOSUSDT": false
+        "BYBIT:MELOSUSDT-SPOT": true,
+        "KUCOIN:MELOS-USDT": true,
+        "MEXC:MELOSUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
