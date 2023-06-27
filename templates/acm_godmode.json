@@ -903,12 +903,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:acmbusd": false,
+        "BINANCE:acmbusd": true,
         "BINANCE:acmusdt": false,
-        "BITGET:ACMUSDT_SPBL": false,
-        "BYBIT:ACMUSDT-SPOT": false,
-        "HITBTC:ACMUSD": false,
-        "MEXC:ACMUSDT": false
+        "BITGET:ACMUSDT_SPBL": true,
+        "BYBIT:ACMUSDT-SPOT": true,
+        "HITBTC:ACMUSD": true,
+        "MEXC:ACMUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
