@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:dntbusd": false,
+        "BINANCE:dntbusd": true,
         "BINANCE:dntusdt": false,
-        "COINBASE:DNT-USD": false
+        "COINBASE:DNT-USD": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
