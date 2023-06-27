@@ -914,17 +914,17 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:badgerbusd": false,
+        "BINANCE:badgerbusd": true,
         "BINANCE:badgerusdt": false,
-        "BITGET:BADGERUSDT_SPBL": false,
-        "COINBASE:BADGER-USD": false,
-        "COINBASE:BADGER-USDT": false,
-        "HITBTC:BADGERUSDT": false,
-        "KRAKEN:BADGER/USD": false,
-        "MEXC:BADGERUSDT": false,
-        "MEXC:BADGER_USDT": false,
-        "OKEX:BADGER-USDT": false,
-        "OKEX:BADGER-USDT-SWAP": false
+        "BITGET:BADGERUSDT_SPBL": true,
+        "COINBASE:BADGER-USD": true,
+        "COINBASE:BADGER-USDT": true,
+        "HITBTC:BADGERUSDT": true,
+        "KRAKEN:BADGER/USD": true,
+        "MEXC:BADGERUSDT": true,
+        "MEXC:BADGER_USDT": true,
+        "OKEX:BADGER-USDT": true,
+        "OKEX:BADGER-USDT-SWAP": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
