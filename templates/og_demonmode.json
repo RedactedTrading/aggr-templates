@@ -900,10 +900,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:ogbusd": false,
+        "BINANCE:ogbusd": true,
         "BINANCE:ogusdt": false,
-        "BITGET:OGUSDT_SPBL": false,
-        "MEXC:OG_USDT": false
+        "BITGET:OGUSDT_SPBL": true,
+        "MEXC:OG_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
