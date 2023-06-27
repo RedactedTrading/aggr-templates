@@ -913,17 +913,17 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:wbtcbusd": false,
+        "BINANCE:wbtcbusd": true,
         "BINANCE:wbtcusdt": false,
-        "BITGET:WBTCUSDT_SPBL": false,
-        "BYBIT:WBTCUSDT-SPOT": false,
-        "COINBASE:WBTC-USD": false,
-        "HITBTC:WBTCUSD": false,
-        "HITBTC:WBTCUSDC": false,
-        "KRAKEN:WBTC/USD": false,
-        "MEXC:WBTCUSDC": false,
-        "MEXC:WBTCUSDT": false,
-        "OKEX:WBTC-USDT": false
+        "BITGET:WBTCUSDT_SPBL": true,
+        "BYBIT:WBTCUSDT-SPOT": true,
+        "COINBASE:WBTC-USD": true,
+        "HITBTC:WBTCUSD": true,
+        "HITBTC:WBTCUSDC": true,
+        "KRAKEN:WBTC/USD": true,
+        "MEXC:WBTCUSDC": true,
+        "MEXC:WBTCUSDT": true,
+        "OKEX:WBTC-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
