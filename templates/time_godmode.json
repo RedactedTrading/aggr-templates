@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:TIMEUSDT_SPBL": false,
-        "BYBIT:TIMEUSDT-SPOT": false,
-        "COINBASE:TIME-USD": false,
-        "COINBASE:TIME-USDT": false,
-        "KUCOIN:TIME-USDT": false
+        "BITGET:TIMEUSDT_SPBL": true,
+        "BYBIT:TIMEUSDT-SPOT": true,
+        "COINBASE:TIME-USD": true,
+        "COINBASE:TIME-USDT": true,
+        "KUCOIN:TIME-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
