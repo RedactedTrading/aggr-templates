@@ -914,17 +914,17 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:srmbusd": false,
+        "BINANCE:srmbusd": true,
         "BINANCE:srmusdt": false,
-        "BITGET:SRMUSDT_SPBL": false,
-        "BYBIT:SRMUSDT-SPOT": false,
-        "HITBTC:SRMUSD": false,
-        "KRAKEN:SRM/USD": false,
-        "KUCOIN:SRM-USDT": false,
-        "MEXC:SRMUSDT": false,
-        "MEXC:SRM_USDT": false,
-        "OKEX:SRM-USDC": false,
-        "OKEX:SRM-USDT": false
+        "BITGET:SRMUSDT_SPBL": true,
+        "BYBIT:SRMUSDT-SPOT": true,
+        "HITBTC:SRMUSD": true,
+        "KRAKEN:SRM/USD": true,
+        "KUCOIN:SRM-USDT": true,
+        "MEXC:SRMUSDT": true,
+        "MEXC:SRM_USDT": true,
+        "OKEX:SRM-USDC": true,
+        "OKEX:SRM-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
