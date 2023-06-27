@@ -898,7 +898,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITHUMB:MBX_KRW": true,
-        "BYBIT:MBXUSDT-SPOT": true,
+        "BYBIT:MBXUSDT-SPOT": false,
         "MEXC:MBXUSDT": true
       },
       "barSpacing": 0.2929530100599413,
@@ -1093,9 +1093,9 @@
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": false,
+      "showPairs": true,
       "showTrades": true,
-      "showLiquidations": false,
+      "showLiquidations": true,
       "showLogos": true,
       "monochromeLogos": false,
       "showTimeAgo": false,
