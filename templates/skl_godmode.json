@@ -918,19 +918,19 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:sklbusd": false,
+        "BINANCE:sklbusd": true,
         "BINANCE:sklusdt": false,
-        "BINANCE_FUTURES:sklusdt": false,
-        "BITGET:SKLUSDT_UMCBL": false,
+        "BINANCE_FUTURES:sklusdt": true,
+        "BITGET:SKLUSDT_UMCBL": true,
         "BTCTURK:SKLTRY": true,
         "BTCTURK:SKLUSDT": true,
         "BYBIT:SKLUSDT": false,
-        "COINBASE:SKL-USD": false,
-        "HITBTC:SKLUSD": false,
-        "KUCOIN:SKL-USDT": false,
-        "MEXC:SKLUSDT": false,
-        "MEXC:SKL_USDT": false,
-        "OKEX:SKL-USDT": false
+        "COINBASE:SKL-USD": true,
+        "HITBTC:SKLUSD": true,
+        "KUCOIN:SKL-USDT": true,
+        "MEXC:SKLUSDT": true,
+        "MEXC:SKL_USDT": true,
+        "OKEX:SKL-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
