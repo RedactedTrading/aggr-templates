@@ -903,11 +903,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:tusdbusd": false,
+        "BINANCE:tusdbusd": true,
         "BINANCE:tusdusdt": false,
-        "BITGET:TUSDUSDT_SPBL": false,
-        "HITBTC:TUSDUSDC": false,
-        "MEXC:TUSDUSDT": false,
+        "BITGET:TUSDUSDT_SPBL": true,
+        "HITBTC:TUSDUSDC": true,
+        "MEXC:TUSDUSDT": true,
         "UPBIT:USDT-TUSD": true
       },
       "barSpacing": 0.2929530100599413,
