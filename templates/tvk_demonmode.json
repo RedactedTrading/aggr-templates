@@ -903,12 +903,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:tvkbusd": false,
+        "BINANCE:tvkbusd": true,
         "BINANCE:tvkusdt": false,
-        "BITGET:TVKUSDT_SPBL": false,
-        "COINBASE:TVK-USD": false,
-        "KRAKEN:TVK/USD": false,
-        "KUCOIN:TVK-USDT": false
+        "BITGET:TVKUSDT_SPBL": true,
+        "COINBASE:TVK-USD": true,
+        "KRAKEN:TVK/USD": true,
+        "KUCOIN:TVK-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
