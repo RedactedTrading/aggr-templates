@@ -908,14 +908,14 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:ernbusd": false,
+        "BINANCE:ernbusd": true,
         "BINANCE:ernusdt": false,
-        "COINBASE:ERN-USD": false,
-        "COINBASE:ERN-USDT": false,
-        "KUCOIN:ERN-USDT": false,
-        "KUCOIN:ERNUSDTM": false,
-        "MEXC:ERN_USDT": false,
-        "OKEX:ERN-USDT": false
+        "COINBASE:ERN-USD": true,
+        "COINBASE:ERN-USDT": true,
+        "KUCOIN:ERN-USDT": true,
+        "KUCOIN:ERNUSDTM": true,
+        "MEXC:ERN_USDT": true,
+        "OKEX:ERN-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
