@@ -902,11 +902,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:MXUSDT-SPOT": false,
-        "HITBTC:MXUSDT": false,
-        "MEXC:MXUSDC": false,
-        "MEXC:MXUSDT": false,
-        "MEXC:MX_USDT": false
+        "BYBIT:MXUSDT-SPOT": true,
+        "HITBTC:MXUSDT": true,
+        "MEXC:MXUSDC": true,
+        "MEXC:MXUSDT": true,
+        "MEXC:MX_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
