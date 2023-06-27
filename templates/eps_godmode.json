@@ -895,7 +895,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:epsbusd": false,
+        "BINANCE:epsbusd": true,
         "BINANCE:epsusdt": false
       },
       "barSpacing": 0.2929530100599413,
