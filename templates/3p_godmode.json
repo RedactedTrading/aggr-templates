@@ -895,8 +895,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:3PUSDT-SPOT": false,
-        "MEXC:3PUSDT": false
+        "BYBIT:3PUSDT-SPOT": true,
+        "MEXC:3PUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
