@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:HEROUSDT-SPOT": false,
-        "KUCOIN:HERO-USDT": false,
-        "MEXC:HEROUSDT": false
+        "BYBIT:HEROUSDT-SPOT": true,
+        "KUCOIN:HERO-USDT": true,
+        "MEXC:HEROUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
