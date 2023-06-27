@@ -902,11 +902,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE_FUTURES:luna2usdt": false,
-        "BITGET:LUNA2USDT_UMCBL": false,
+        "BINANCE_FUTURES:luna2usdt": true,
+        "BITGET:LUNA2USDT_UMCBL": true,
         "BYBIT:LUNA2USDT": false,
-        "KRAKEN:LUNA2/USD": false,
-        "KRAKEN:PF_LUNA2USD": false
+        "KRAKEN:LUNA2/USD": true,
+        "KRAKEN:PF_LUNA2USD": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
