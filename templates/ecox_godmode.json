@@ -895,8 +895,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:ECOXUSDT-SPOT": false,
-        "KUCOIN:ECOX-USDT": false
+        "BYBIT:ECOXUSDT-SPOT": true,
+        "KUCOIN:ECOX-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
