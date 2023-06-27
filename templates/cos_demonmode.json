@@ -897,7 +897,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:cosbusd": false,
+        "BINANCE:cosbusd": true,
         "BINANCE:cosusdt": false,
         "BITHUMB:COS_KRW": true
       },
