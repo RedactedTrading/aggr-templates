@@ -895,8 +895,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:coverbusd": false,
-        "OKEX:COVER-USDT": false
+        "BINANCE:coverbusd": true,
+        "OKEX:COVER-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
