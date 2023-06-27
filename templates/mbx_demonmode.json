@@ -898,8 +898,8 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITHUMB:MBX_KRW": true,
-        "BYBIT:MBXUSDT-SPOT": false,
-        "MEXC:MBXUSDT": false
+        "BYBIT:MBXUSDT-SPOT": true,
+        "MEXC:MBXUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
