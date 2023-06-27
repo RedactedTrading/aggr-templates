@@ -916,18 +916,18 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:linabusd": false,
+        "BINANCE:linabusd": true,
         "BINANCE:linausdt": false,
-        "BINANCE_FUTURES:linausdt": false,
-        "BITGET:LINAUSDT_SPBL": false,
-        "BITGET:LINAUSDT_UMCBL": false,
+        "BINANCE_FUTURES:linausdt": true,
+        "BITGET:LINAUSDT_SPBL": true,
+        "BITGET:LINAUSDT_UMCBL": true,
         "BITHUMB:LINA_KRW": true,
         "BYBIT:LINAUSDT": false,
-        "HITBTC:LINAUSD": false,
-        "HITBTC:LINAUSDC": false,
-        "KUCOIN:LINA-USDT": false,
-        "KUCOIN:LINAUSDTM": false,
-        "MEXC:LINA_USDT": false
+        "HITBTC:LINAUSD": true,
+        "HITBTC:LINAUSDC": true,
+        "KUCOIN:LINA-USDT": true,
+        "KUCOIN:LINAUSDTM": true,
+        "MEXC:LINA_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
