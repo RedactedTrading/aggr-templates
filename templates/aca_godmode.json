@@ -907,14 +907,14 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:acabusd": false,
+        "BINANCE:acabusd": true,
         "BINANCE:acausdt": false,
-        "BITGET:ACAUSDT_SPBL": false,
-        "BYBIT:ACAUSDT-SPOT": false,
-        "KRAKEN:ACA/USD": false,
-        "KUCOIN:ACA-USDT": false,
-        "MEXC:ACAUSDT": false,
-        "OKEX:ACA-USDT": false
+        "BITGET:ACAUSDT_SPBL": true,
+        "BYBIT:ACAUSDT-SPOT": true,
+        "KRAKEN:ACA/USD": true,
+        "KUCOIN:ACA-USDT": true,
+        "MEXC:ACAUSDT": true,
+        "OKEX:ACA-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
