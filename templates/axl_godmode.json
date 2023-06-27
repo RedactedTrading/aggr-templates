@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:AXLUSDT-SPOT": false,
-        "COINBASE:AXL-USD": false,
-        "HITBTC:AXLUSDT": false
+        "BYBIT:AXLUSDT-SPOT": true,
+        "COINBASE:AXL-USD": true,
+        "HITBTC:AXLUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
