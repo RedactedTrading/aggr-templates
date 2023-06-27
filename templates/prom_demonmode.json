@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:prombusd": false,
+        "BINANCE:prombusd": true,
         "BINANCE:promusdt": false,
-        "BITGET:PROMUSDT_SPBL": false,
-        "HITBTC:PROMUSDT": false,
-        "KUCOIN:PROM-USDT": false
+        "BITGET:PROMUSDT_SPBL": true,
+        "HITBTC:PROMUSDT": true,
+        "KUCOIN:PROM-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
