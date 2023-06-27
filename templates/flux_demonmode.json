@@ -908,14 +908,14 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:fluxbusd": false,
+        "BINANCE:fluxbusd": true,
         "BINANCE:fluxusdt": false,
-        "BITGET:FLUXUSDT_SPBL": false,
-        "HITBTC:FLUXUSDC": false,
-        "HITBTC:FLUXUSDT": false,
-        "KUCOIN:FLUX-USDT": false,
-        "KUCOIN:FLUXUSDTM": false,
-        "MEXC:FLUX_USDT": false
+        "BITGET:FLUXUSDT_SPBL": true,
+        "HITBTC:FLUXUSDC": true,
+        "HITBTC:FLUXUSDT": true,
+        "KUCOIN:FLUX-USDT": true,
+        "KUCOIN:FLUXUSDTM": true,
+        "MEXC:FLUX_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
