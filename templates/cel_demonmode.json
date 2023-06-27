@@ -910,15 +910,15 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:CELUSDT_SPBL": false,
-        "BYBIT:CELUSDT-SPOT": false,
-        "HITBTC:CELUSDT": false,
-        "MEXC:CELUSDC": false,
-        "MEXC:CELUSDT": false,
-        "MEXC:CEL_USDT": false,
-        "OKEX:CEL-USDC": false,
-        "OKEX:CEL-USDT": false,
-        "OKEX:CEL-USDT-SWAP": false
+        "BITGET:CELUSDT_SPBL": true,
+        "BYBIT:CELUSDT-SPOT": true,
+        "HITBTC:CELUSDT": true,
+        "MEXC:CELUSDC": true,
+        "MEXC:CELUSDT": true,
+        "MEXC:CEL_USDT": true,
+        "OKEX:CEL-USDC": true,
+        "OKEX:CEL-USDT": true,
+        "OKEX:CEL-USDT-SWAP": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
