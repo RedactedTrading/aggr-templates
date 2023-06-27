@@ -893,7 +893,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:MTKUSDT-SPOT": false
+        "BYBIT:MTKUSDT-SPOT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
