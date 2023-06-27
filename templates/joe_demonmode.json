@@ -917,7 +917,7 @@
         "BINANCE_FUTURES:joeusdt": true,
         "BITGET:JOEUSDT_SPBL": true,
         "BITGET:JOEUSDT_UMCBL": true,
-        "BYBIT:JOEUSDT": false,
+        "BYBIT:JOEUSDT": true,
         "HITBTC:JOEUSDT": true,
         "KUCOIN:JOEUSDTM": true,
         "MEXC:JOE_USDT": true,
