@@ -901,9 +901,9 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:rifusdt": false,
-        "HITBTC:RIFUSD": false,
-        "MEXC:RIFUSDT": false,
-        "MEXC:RIF_USDT": false
+        "HITBTC:RIFUSD": true,
+        "MEXC:RIFUSDT": true,
+        "MEXC:RIF_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
