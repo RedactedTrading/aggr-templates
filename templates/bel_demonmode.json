@@ -914,17 +914,17 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:belbusd": false,
+        "BINANCE:belbusd": true,
         "BINANCE:belusdt": false,
-        "BINANCE_FUTURES:belusdt": false,
-        "BITGET:BELUSDT_SPBL": false,
-        "BITGET:BELUSDT_UMCBL": false,
+        "BINANCE_FUTURES:belusdt": true,
+        "BITGET:BELUSDT_SPBL": true,
+        "BITGET:BELUSDT_UMCBL": true,
         "BITHUMB:BEL_KRW": true,
         "BYBIT:BELUSDT": false,
-        "BYBIT:BELUSDT-SPOT": false,
-        "KUCOIN:BELUSDTM": false,
-        "MEXC:BELUSDT": false,
-        "MEXC:BEL_USDT": false
+        "BYBIT:BELUSDT-SPOT": true,
+        "KUCOIN:BELUSDTM": true,
+        "MEXC:BELUSDT": true,
+        "MEXC:BEL_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
