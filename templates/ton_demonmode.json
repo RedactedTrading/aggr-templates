@@ -912,7 +912,7 @@
       "hiddenMarkets": {
         "BITFINEX:TONUSD": true,
         "BITGET:TONUSDT_UMCBL": true,
-        "BYBIT:TONUSDT-SPOT": true,
+        "BYBIT:TONUSDT-SPOT": false,
         "KUCOIN:TON-USDT": true,
         "KUCOIN:TONUSDTM": true,
         "OKEX:TON-USDC": true,
