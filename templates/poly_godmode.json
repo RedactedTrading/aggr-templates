@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:polybusd": false,
+        "BINANCE:polybusd": true,
         "BINANCE:polyusdt": false,
-        "BITGET:POLYUSDT_SPBL": false,
-        "COINBASE:POLY-USD": false,
-        "COINBASE:POLY-USDT": false
+        "BITGET:POLYUSDT_SPBL": true,
+        "COINBASE:POLY-USD": true,
+        "COINBASE:POLY-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
