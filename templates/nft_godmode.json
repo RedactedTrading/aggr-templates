@@ -912,16 +912,16 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:NFTUSDT_SPBL": false,
+        "BITGET:NFTUSDT_SPBL": true,
         "BITHUMB:NFT_KRW": true,
         "BYBIT:10000NFTUSDT": false,
-        "BYBIT:NFTUSDT-SPOT": false,
-        "HITBTC:NFTUSD": false,
-        "KUCOIN:NFT-USDT": false,
-        "KUCOIN:NFTUSDTM": false,
-        "MEXC:NFTUSDT": false,
-        "OKEX:NFT-USDT": false,
-        "OKEX:NFT-USDT-SWAP": false
+        "BYBIT:NFTUSDT-SPOT": true,
+        "HITBTC:NFTUSD": true,
+        "KUCOIN:NFT-USDT": true,
+        "KUCOIN:NFTUSDTM": true,
+        "MEXC:NFTUSDT": true,
+        "OKEX:NFT-USDT": true,
+        "OKEX:NFT-USDT-SWAP": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
