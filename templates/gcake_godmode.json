@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:GCAKEUSDT_SPBL": false,
-        "BYBIT:GCAKEUSDT-SPOT": false,
-        "MEXC:GCAKEUSDT": false
+        "BITGET:GCAKEUSDT_SPBL": true,
+        "BYBIT:GCAKEUSDT-SPOT": true,
+        "MEXC:GCAKEUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
