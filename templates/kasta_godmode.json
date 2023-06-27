@@ -895,8 +895,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:KASTAUSDT-SPOT": false,
-        "MEXC:KASTAUSDT": false
+        "BYBIT:KASTAUSDT-SPOT": true,
+        "MEXC:KASTAUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
