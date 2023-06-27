@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:CMPUSDT_SPBL": false,
-        "BYBIT:CMPUSDT-SPOT": false,
-        "KUCOIN:CMP-USDT": false,
-        "MEXC:CMPUSDT": false
+        "BITGET:CMPUSDT_SPBL": true,
+        "BYBIT:CMPUSDT-SPOT": true,
+        "KUCOIN:CMP-USDT": true,
+        "MEXC:CMPUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
