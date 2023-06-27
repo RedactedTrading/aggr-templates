@@ -898,8 +898,8 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITHUMB:STAT_KRW": true,
-        "BYBIT:STATUSDT-SPOT": false,
-        "MEXC:STATUSDT": false
+        "BYBIT:STATUSDT-SPOT": true,
+        "MEXC:STATUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
