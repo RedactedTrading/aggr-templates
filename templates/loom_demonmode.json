@@ -903,11 +903,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:loombusd": false,
+        "BINANCE:loombusd": true,
         "BINANCE:loomusdt": false,
-        "BITGET:LOOMUSDT_SPBL": false,
+        "BITGET:LOOMUSDT_SPBL": true,
         "BITHUMB:LOOM_KRW": true,
-        "MEXC:LOOMUSDT": false,
+        "MEXC:LOOMUSDT": true,
         "UPBIT:KRW-LOOM": true
       },
       "barSpacing": 0.2929530100599413,
