@@ -912,16 +912,16 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITFINEX:VRAUSD": false,
-        "BITGET:VRAUSDT_SPBL": false,
+        "BITFINEX:VRAUSD": true,
+        "BITGET:VRAUSDT_SPBL": true,
         "BITHUMB:VRA_KRW": true,
-        "BYBIT:VRAUSDT-SPOT": false,
-        "HITBTC:VRAUSDT": false,
-        "KUCOIN:VRA-USDC": false,
-        "KUCOIN:VRA-USDT": false,
-        "KUCOIN:VRAUSDTM": false,
-        "MEXC:VRA_USDT": false,
-        "OKEX:VRA-USDT": false
+        "BYBIT:VRAUSDT-SPOT": true,
+        "HITBTC:VRAUSDT": true,
+        "KUCOIN:VRA-USDC": true,
+        "KUCOIN:VRA-USDT": true,
+        "KUCOIN:VRAUSDTM": true,
+        "MEXC:VRA_USDT": true,
+        "OKEX:VRA-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
