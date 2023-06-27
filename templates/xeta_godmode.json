@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:XETAUSDT_SPBL": false,
-        "BYBIT:XETAUSDT-SPOT": false,
-        "HITBTC:XETAUSDT": false,
-        "KUCOIN:XETA-USDT": false,
-        "OKEX:XETA-USDT": false
+        "BITGET:XETAUSDT_SPBL": true,
+        "BYBIT:XETAUSDT-SPOT": true,
+        "HITBTC:XETAUSDT": true,
+        "KUCOIN:XETA-USDT": true,
+        "OKEX:XETA-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
