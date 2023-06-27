@@ -903,9 +903,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:bifibusd": false,
+        "BINANCE:bifibusd": true,
         "BINANCE:bifiusdt": false,
-        "KUCOIN:BIFI-USDT": false,
+        "KUCOIN:BIFI-USDT": true,
         "VELODROMEOPTIMISM:BIFI/WETH": true
       },
       "barSpacing": 0.2929530100599413,
