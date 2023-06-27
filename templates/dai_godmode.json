@@ -923,7 +923,7 @@
         "BITGET:DAIUSDC_SPBL": true,
         "BITGET:DAIUSDT_SPBL": true,
         "BITHUMB:DAI_KRW": true,
-        "BYBIT:DAIUSDT-SPOT": true,
+        "BYBIT:DAIUSDT-SPOT": false,
         "COINBASE:DAI-USD": true,
         "HITBTC:DAIUSDC": true,
         "KRAKEN:DAI/USD": true,
