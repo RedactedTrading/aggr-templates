@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:KARATEUSDT-SPOT": false,
-        "KUCOIN:KARATE-USDT": false,
-        "MEXC:KARATEUSDT": false
+        "BYBIT:KARATEUSDT-SPOT": true,
+        "KUCOIN:KARATE-USDT": true,
+        "MEXC:KARATEUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
