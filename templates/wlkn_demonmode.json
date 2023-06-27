@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:WLKNUSDT_SPBL": false,
-        "BYBIT:WLKNUSDT-SPOT": false,
-        "KUCOIN:WLKN-USDT": false
+        "BITGET:WLKNUSDT_SPBL": true,
+        "BYBIT:WLKNUSDT-SPOT": true,
+        "KUCOIN:WLKN-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
