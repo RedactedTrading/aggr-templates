@@ -912,16 +912,16 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:keybusd": false,
+        "BINANCE:keybusd": true,
         "BINANCE:keyusdt": false,
-        "BINANCE_FUTURES:keyusdt": false,
-        "BITGET:KEYUSDT_SPBL": false,
-        "BITGET:KEYUSDT_UMCBL": false,
+        "BINANCE_FUTURES:keyusdt": true,
+        "BITGET:KEYUSDT_SPBL": true,
+        "BITGET:KEYUSDT_UMCBL": true,
         "BYBIT:KEYUSDT": false,
-        "HITBTC:KEYUSD": false,
-        "KRAKEN:KEY/USD": false,
-        "KUCOIN:KEYUSDTM": false,
-        "MEXC:KEY_USDT": false
+        "HITBTC:KEYUSD": true,
+        "KRAKEN:KEY/USD": true,
+        "KUCOIN:KEYUSDTM": true,
+        "MEXC:KEY_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
