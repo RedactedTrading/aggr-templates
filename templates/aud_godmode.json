@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:audbusd": false,
+        "BINANCE:audbusd": true,
         "BINANCE:audusdc": false,
         "BINANCE:audusdt": false,
-        "KRAKEN:AUD/USD": false
+        "KRAKEN:AUD/USD": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
