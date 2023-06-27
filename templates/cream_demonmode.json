@@ -901,7 +901,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:creambusd": true,
-        "BYBIT:CREAMUSDT": false,
+        "BYBIT:CREAMUSDT": true,
         "KUCOIN:CREAM-USDT": true,
         "MEXC:CREAM_USDT": true
       },
@@ -1097,9 +1097,9 @@
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": false,
+      "showPairs": true,
       "showTrades": true,
-      "showLiquidations": false,
+      "showLiquidations": true,
       "showLogos": true,
       "monochromeLogos": false,
       "showTimeAgo": false,
