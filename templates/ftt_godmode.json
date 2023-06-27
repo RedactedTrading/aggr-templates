@@ -912,16 +912,16 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:fttbusd": false,
+        "BINANCE:fttbusd": true,
         "BINANCE:fttusdt": false,
-        "BITGET:FTTUSDT_SPBL": false,
-        "BYBIT:FTTUSDT-SPOT": false,
-        "HITBTC:FTTUSD": false,
-        "HITBTC:FTTUSDC": false,
-        "KUCOIN:FTT-USDT": false,
-        "MEXC:FTTUSDC": false,
-        "MEXC:FTTUSDT": false,
-        "MEXC:FTT_USDT": false
+        "BITGET:FTTUSDT_SPBL": true,
+        "BYBIT:FTTUSDT-SPOT": true,
+        "HITBTC:FTTUSD": true,
+        "HITBTC:FTTUSDC": true,
+        "KUCOIN:FTT-USDT": true,
+        "MEXC:FTTUSDC": true,
+        "MEXC:FTTUSDT": true,
+        "MEXC:FTT_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
