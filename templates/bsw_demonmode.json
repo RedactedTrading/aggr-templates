@@ -908,14 +908,14 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:bswbusd": false,
+        "BINANCE:bswbusd": true,
         "BINANCE:bswusdt": false,
-        "BITGET:BSWUSDT_SPBL": false,
+        "BITGET:BSWUSDT_SPBL": true,
         "BYBIT:BSWUSDT": false,
-        "HITBTC:BSWUSDT": false,
-        "KUCOIN:BSW-USDT": false,
-        "MEXC:BSWUSDT": false,
-        "MEXC:BSW_USDT": false
+        "HITBTC:BSWUSDT": true,
+        "KUCOIN:BSW-USDT": true,
+        "MEXC:BSWUSDT": true,
+        "MEXC:BSW_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
