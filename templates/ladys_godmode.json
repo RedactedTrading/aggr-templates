@@ -906,13 +906,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:10000LADYSUSDT_UMCBL": false,
-        "BITGET:LADYSUSDT_SPBL": false,
+        "BITGET:10000LADYSUSDT_UMCBL": true,
+        "BITGET:LADYSUSDT_SPBL": true,
         "BYBIT:10000LADYSUSDT": false,
-        "BYBIT:LADYSUSDT-SPOT": false,
-        "KUCOIN:10000LADYSUSDTM": false,
-        "KUCOIN:LADYS-USDT": false,
-        "MEXC:LADYS_USDT": false
+        "BYBIT:LADYSUSDT-SPOT": true,
+        "KUCOIN:10000LADYSUSDTM": true,
+        "KUCOIN:LADYS-USDT": true,
+        "MEXC:LADYS_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
