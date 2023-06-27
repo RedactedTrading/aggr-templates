@@ -895,8 +895,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:MDAOUSDT_SPBL": false,
-        "BYBIT:MDAOUSDT-SPOT": false
+        "BITGET:MDAOUSDT_SPBL": true,
+        "BYBIT:MDAOUSDT-SPOT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
