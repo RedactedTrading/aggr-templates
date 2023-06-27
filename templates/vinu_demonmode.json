@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:VINUUSDT_SPBL": false,
-        "BYBIT:VINUUSDT-SPOT": false,
-        "MEXC:VINUUSDT": false
+        "BITGET:VINUUSDT_SPBL": true,
+        "BYBIT:VINUUSDT-SPOT": true,
+        "MEXC:VINUUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
