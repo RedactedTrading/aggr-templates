@@ -914,17 +914,17 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:kdabusd": false,
+        "BINANCE:kdabusd": true,
         "BINANCE:kdausdt": false,
-        "BITGET:KDAUSDT_SPBL": false,
+        "BITGET:KDAUSDT_SPBL": true,
         "BYBIT:KDAUSDT": false,
-        "BYBIT:KDAUSDT-SPOT": false,
-        "HITBTC:KDAUSDT": false,
-        "KUCOIN:KDA-USDC": false,
-        "KUCOIN:KDA-USDT": false,
-        "KUCOIN:KDAUSDTM": false,
-        "MEXC:KDA_USDT": false,
-        "OKEX:KDA-USDT": false
+        "BYBIT:KDAUSDT-SPOT": true,
+        "HITBTC:KDAUSDT": true,
+        "KUCOIN:KDA-USDC": true,
+        "KUCOIN:KDA-USDT": true,
+        "KUCOIN:KDAUSDTM": true,
+        "MEXC:KDA_USDT": true,
+        "OKEX:KDA-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
