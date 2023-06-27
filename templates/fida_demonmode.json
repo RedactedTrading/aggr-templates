@@ -912,16 +912,16 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:fidabusd": false,
+        "BINANCE:fidabusd": true,
         "BINANCE:fidausdt": false,
-        "BYBIT:FIDAUSDT-SPOT": false,
-        "COINBASE:FIDA-USD": false,
-        "COINBASE:FIDA-USDT": false,
-        "HITBTC:FIDAUSDT": false,
-        "KRAKEN:FIDA/USD": false,
-        "KUCOIN:FIDA-USDT": false,
-        "MEXC:FIDAUSDT": false,
-        "MEXC:FIDA_USDT": false
+        "BYBIT:FIDAUSDT-SPOT": true,
+        "COINBASE:FIDA-USD": true,
+        "COINBASE:FIDA-USDT": true,
+        "HITBTC:FIDAUSDT": true,
+        "KRAKEN:FIDA/USD": true,
+        "KUCOIN:FIDA-USDT": true,
+        "MEXC:FIDAUSDT": true,
+        "MEXC:FIDA_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
