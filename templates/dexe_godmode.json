@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:dexebusd": false,
+        "BINANCE:dexebusd": true,
         "BINANCE:dexeusdt": false,
-        "KUCOIN:DEXE-USDT": false,
-        "MEXC:DEXEUSDT": false
+        "KUCOIN:DEXE-USDT": true,
+        "MEXC:DEXEUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
