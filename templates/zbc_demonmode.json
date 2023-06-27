@@ -907,12 +907,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:ZBCUSDT_SPBL": false,
-        "BYBIT:ZBCUSDT-SPOT": false,
-        "KUCOIN:ZBC-USDT": false,
-        "MEXC:ZBCUSDT": false,
-        "OKEX:ZBC-USDT": false,
-        "RAYDIUMSOLANA:ZBC/USDC": false
+        "BITGET:ZBCUSDT_SPBL": true,
+        "BYBIT:ZBCUSDT-SPOT": true,
+        "KUCOIN:ZBC-USDT": true,
+        "MEXC:ZBCUSDT": true,
+        "OKEX:ZBC-USDT": true,
+        "RAYDIUMSOLANA:ZBC/USDC": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
