@@ -916,7 +916,7 @@
         "BINANCE:wbtcbusd": true,
         "BINANCE:wbtcusdt": false,
         "BITGET:WBTCUSDT_SPBL": true,
-        "BYBIT:WBTCUSDT-SPOT": true,
+        "BYBIT:WBTCUSDT-SPOT": false,
         "COINBASE:WBTC-USD": true,
         "HITBTC:WBTCUSD": true,
         "HITBTC:WBTCUSDC": true,
