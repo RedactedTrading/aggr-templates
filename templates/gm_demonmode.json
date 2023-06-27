@@ -902,11 +902,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE_FUTURES:gmtusd_perp": false,
-        "BITMEX:GMTUSD": false,
-        "BYBIT:GMUSDT-SPOT": false,
-        "MEXC:GMUSDT": false,
-        "OKEX:GM-USDT": false
+        "BINANCE_FUTURES:gmtusd_perp": true,
+        "BITMEX:GMTUSD": true,
+        "BYBIT:GMUSDT-SPOT": true,
+        "MEXC:GMUSDT": true,
+        "OKEX:GM-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
