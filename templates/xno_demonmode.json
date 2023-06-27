@@ -906,13 +906,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:xnobusd": false,
+        "BINANCE:xnobusd": true,
         "BINANCE:xnousdt": false,
         "BYBIT:XNOUSDT": false,
-        "HITBTC:XNOUSDC": false,
-        "HITBTC:XNOUSDT": false,
-        "KUCOIN:XNO-USDT": false,
-        "OKEX:XNO-USDT": false
+        "HITBTC:XNOUSDC": true,
+        "HITBTC:XNOUSDT": true,
+        "KUCOIN:XNO-USDT": true,
+        "OKEX:XNO-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
