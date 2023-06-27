@@ -910,15 +910,15 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:scrtbusd": false,
+        "BINANCE:scrtbusd": true,
         "BINANCE:scrtusdt": false,
         "BYBIT:SCRTUSDT": false,
-        "BYBIT:SCRTUSDT-SPOT": false,
-        "HITBTC:SCRTUSDT": false,
-        "KRAKEN:SCRT/USD": false,
-        "KUCOIN:SCRT-USDT": false,
-        "MEXC:SCRTUSDT": false,
-        "MEXC:SCRT_USDT": false
+        "BYBIT:SCRTUSDT-SPOT": true,
+        "HITBTC:SCRTUSDT": true,
+        "KRAKEN:SCRT/USD": true,
+        "KUCOIN:SCRT-USDT": true,
+        "MEXC:SCRTUSDT": true,
+        "MEXC:SCRT_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
