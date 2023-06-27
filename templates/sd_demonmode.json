@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:SDUSDT_SPBL": false,
-        "BYBIT:SDUSDT-SPOT": false,
-        "KUCOIN:SD-USDT": false,
-        "MEXC:SDUSDT": false,
-        "OKEX:SD-USDT": false
+        "BITGET:SDUSDT_SPBL": true,
+        "BYBIT:SDUSDT-SPOT": true,
+        "KUCOIN:SD-USDT": true,
+        "MEXC:SDUSDT": true,
+        "OKEX:SD-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
