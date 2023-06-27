@@ -904,12 +904,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:laziobusd": false,
+        "BINANCE:laziobusd": true,
         "BINANCE:laziousdt": false,
-        "BITGET:LAZIOUSDT_SPBL": false,
-        "HITBTC:LAZIOUSDT": false,
-        "MEXC:LAZIOUSDT": false,
-        "MEXC:LAZIO_USDT": false
+        "BITGET:LAZIOUSDT_SPBL": true,
+        "HITBTC:LAZIOUSDT": true,
+        "MEXC:LAZIOUSDT": true,
+        "MEXC:LAZIO_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
