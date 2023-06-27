@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:neblbusd": false,
+        "BINANCE:neblbusd": true,
         "BINANCE:neblusdt": false,
-        "BITGET:NEBLUSDT_SPBL": false,
-        "MEXC:NEBLUSDT": false
+        "BITGET:NEBLUSDT_SPBL": true,
+        "MEXC:NEBLUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
