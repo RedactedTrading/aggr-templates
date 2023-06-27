@@ -905,13 +905,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:multibusd": false,
+        "BINANCE:multibusd": true,
         "BINANCE:multiusdt": false,
-        "BITGET:MULTIUSDT_SPBL": false,
-        "COINBASE:MULTI-USD": false,
-        "HITBTC:MULTIUSDT": false,
-        "KRAKEN:MULTI/USD": false,
-        "MEXC:MULTIUSDT": false
+        "BITGET:MULTIUSDT_SPBL": true,
+        "COINBASE:MULTI-USD": true,
+        "HITBTC:MULTIUSDT": true,
+        "KRAKEN:MULTI/USD": true,
+        "MEXC:MULTIUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
