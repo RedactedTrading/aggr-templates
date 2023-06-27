@@ -903,12 +903,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:phabusd": false,
+        "BINANCE:phabusd": true,
         "BINANCE:phausdt": false,
-        "KRAKEN:PHA/USD": false,
-        "KUCOIN:PHA-USDT": false,
-        "MEXC:PHAUSDT": false,
-        "OKEX:PHA-USDT": false
+        "KRAKEN:PHA/USD": true,
+        "KUCOIN:PHA-USDT": true,
+        "MEXC:PHAUSDT": true,
+        "OKEX:PHA-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
