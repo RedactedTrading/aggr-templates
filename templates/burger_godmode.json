@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:burgerbusd": false,
+        "BINANCE:burgerbusd": true,
         "BINANCE:burgerusdt": false,
-        "BITGET:BURGERUSDT_SPBL": false,
-        "KUCOIN:BURGER-USDT": false,
-        "MEXC:BURGERUSDT": false
+        "BITGET:BURGERUSDT_SPBL": true,
+        "KUCOIN:BURGER-USDT": true,
+        "MEXC:BURGERUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
