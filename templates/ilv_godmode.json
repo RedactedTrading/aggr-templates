@@ -914,17 +914,17 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:ilvbusd": false,
+        "BINANCE:ilvbusd": true,
         "BINANCE:ilvusdt": false,
-        "BITGET:ILVUSDT_SPBL": false,
+        "BITGET:ILVUSDT_SPBL": true,
         "BYBIT:ILVUSDT": false,
-        "COINBASE:ILV-USD": false,
-        "HITBTC:ILVUSDC": false,
-        "HITBTC:ILVUSDT": false,
-        "KUCOIN:ILV-USDT": false,
-        "MEXC:ILVUSDT": false,
-        "MEXC:ILV_USDT": false,
-        "OKEX:ILV-USDT": false
+        "COINBASE:ILV-USD": true,
+        "HITBTC:ILVUSDC": true,
+        "HITBTC:ILVUSDT": true,
+        "KUCOIN:ILV-USDT": true,
+        "MEXC:ILVUSDT": true,
+        "MEXC:ILV_USDT": true,
+        "OKEX:ILV-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
