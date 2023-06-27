@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:TAMAUSDT_SPBL": false,
-        "BYBIT:TAMAUSDT-SPOT": false,
-        "MEXC:TAMAUSDT": false,
-        "OKEX:TAMA-USDC": false,
-        "OKEX:TAMA-USDT": false
+        "BITGET:TAMAUSDT_SPBL": true,
+        "BYBIT:TAMAUSDT-SPOT": true,
+        "MEXC:TAMAUSDT": true,
+        "OKEX:TAMA-USDC": true,
+        "OKEX:TAMA-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
