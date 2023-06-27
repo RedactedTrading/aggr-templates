@@ -902,11 +902,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:CGPTUSDT_SPBL": false,
-        "BYBIT:CGPTUSDT-SPOT": false,
-        "KUCOIN:CGPT-USDT": false,
-        "MEXC:CGPTUSDT": false,
-        "MEXC:CGPT_USDT": false
+        "BITGET:CGPTUSDT_SPBL": true,
+        "BYBIT:CGPTUSDT-SPOT": true,
+        "KUCOIN:CGPT-USDT": true,
+        "MEXC:CGPTUSDT": true,
+        "MEXC:CGPT_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
