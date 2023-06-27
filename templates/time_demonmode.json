@@ -902,7 +902,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITGET:TIMEUSDT_SPBL": true,
-        "BYBIT:TIMEUSDT-SPOT": true,
+        "BYBIT:TIMEUSDT-SPOT": false,
         "COINBASE:TIME-USD": true,
         "COINBASE:TIME-USDT": true,
         "KUCOIN:TIME-USDT": true
@@ -1101,7 +1101,7 @@
       "audioVolume": null,
       "showPairs": false,
       "showTrades": true,
-      "showLiquidations": false,
+      "showLiquidations": true,
       "showLogos": true,
       "monochromeLogos": false,
       "showTimeAgo": false,
