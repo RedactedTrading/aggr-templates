@@ -910,15 +910,15 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:dodobusd": false,
+        "BINANCE:dodobusd": true,
         "BINANCE:dodousdt": false,
-        "BINANCE_FUTURES:dodobusd": false,
-        "BITGET:DODOUSDT_SPBL": false,
+        "BINANCE_FUTURES:dodobusd": true,
+        "BITGET:DODOUSDT_SPBL": true,
         "BYBIT:DODOUSDT": false,
-        "HITBTC:DODOUSD": false,
-        "KUCOIN:DODO-USDT": false,
-        "KUCOIN:DODOUSDTM": false,
-        "MEXC:DODO_USDT": false
+        "HITBTC:DODOUSD": true,
+        "KUCOIN:DODO-USDT": true,
+        "KUCOIN:DODOUSDTM": true,
+        "MEXC:DODO_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
