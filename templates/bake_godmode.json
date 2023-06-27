@@ -908,14 +908,14 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:bakebusd": false,
+        "BINANCE:bakebusd": true,
         "BINANCE:bakeusdt": false,
-        "BINANCE_FUTURES:bakeusdt": false,
-        "BITGET:BAKEUSDT_SPBL": false,
+        "BINANCE_FUTURES:bakeusdt": true,
+        "BITGET:BAKEUSDT_SPBL": true,
         "BYBIT:BAKEUSDT": false,
-        "HITBTC:BAKEUSD": false,
-        "MEXC:BAKEUSDT": false,
-        "MEXC:BAKE_USDT": false
+        "HITBTC:BAKEUSD": true,
+        "MEXC:BAKEUSDT": true,
+        "MEXC:BAKE_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
