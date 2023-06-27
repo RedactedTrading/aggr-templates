@@ -895,8 +895,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:CHRPUSDT-SPOT": false,
-        "MEXC:CHRPUSDT": false
+        "BYBIT:CHRPUSDT-SPOT": true,
+        "MEXC:CHRPUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
