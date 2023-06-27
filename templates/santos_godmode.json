@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:santosbusd": false,
+        "BINANCE:santosbusd": true,
         "BINANCE:santosusdt": false,
-        "BITGET:SANTOSUSDT_SPBL": false,
-        "HITBTC:SANTOSUSDT": false,
-        "MEXC:SANTOSUSDT": false
+        "BITGET:SANTOSUSDT_SPBL": true,
+        "HITBTC:SANTOSUSDT": true,
+        "MEXC:SANTOSUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
