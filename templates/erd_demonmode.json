@@ -897,7 +897,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:erdbusd": false,
+        "BINANCE:erdbusd": true,
         "BINANCE:erdusdc": false,
         "BINANCE:erdusdt": false
       },
