@@ -484,7 +484,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = BINANCE:suiusdt;var x1 = BYBIT:SUIUSDT-SPOT;var x2 = OKEX:SUI-USDT;plotcandlestick((BINANCE:suiusdt.open+BYBIT:SUIUSDT-SPOT.open+OKEX:SUI-USDT.open) / 3,(BINANCE:suiusdt.high+BYBIT:SUIUSDT-SPOT.high+OKEX:SUI-USDT.high) / 3,(BINANCE:suiusdt.low+BYBIT:SUIUSDT-SPOT.low+OKEX:SUI-USDT.low) / 3,(BINANCE:suiusdt.close+BYBIT:SUIUSDT-SPOT.close+OKEX:SUI-USDT.close) / 3);",
+          "script": "var x0 = BINANCE:suiusdt;var x1 = BYBIT:SUIUSDT-SPOT;var x2 = OKEX:SUI-USDT;plotcandlestick((x0.open+x1.open+x2.open) / 3,(x0.high+x1.high+x2.high) / 3,(x0.low+x1.low+x2.low) / 3,(x0.close+x1.close+x2.close) / 3);",
           "enabled": true,
           "name": "Price",
           "options": {
