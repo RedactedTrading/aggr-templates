@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:osmobusd": false,
+        "BINANCE:osmobusd": true,
         "BINANCE:osmousdt": false,
-        "BITGET:OSMOUSDT_SPBL": false,
-        "COINBASE:OSMO-USD": false,
-        "KUCOIN:OSMO-USDT": false
+        "BITGET:OSMOUSDT_SPBL": true,
+        "COINBASE:OSMO-USD": true,
+        "KUCOIN:OSMO-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
