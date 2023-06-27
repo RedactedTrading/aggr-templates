@@ -895,7 +895,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:AGIUSDT-SPOT": true,
+        "BYBIT:AGIUSDT-SPOT": false,
         "MEXC:AGIUSDT": true
       },
       "barSpacing": 0.2929530100599413,
@@ -1092,7 +1092,7 @@
       "audioVolume": null,
       "showPairs": false,
       "showTrades": true,
-      "showLiquidations": false,
+      "showLiquidations": true,
       "showLogos": true,
       "monochromeLogos": false,
       "showTimeAgo": false,
