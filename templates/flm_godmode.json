@@ -914,17 +914,17 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:flmbusd": false,
+        "BINANCE:flmbusd": true,
         "BINANCE:flmusdt": false,
-        "BINANCE_FUTURES:flmusdt": false,
-        "BITGET:FLMUSDT_SPBL": false,
-        "BITGET:FLMUSDT_UMCBL": false,
+        "BINANCE_FUTURES:flmusdt": true,
+        "BITGET:FLMUSDT_SPBL": true,
+        "BITGET:FLMUSDT_UMCBL": true,
         "BYBIT:FLMUSDT": false,
-        "MEXC:FLMUSDT": false,
-        "MEXC:FLM_USDT": false,
-        "OKEX:FLM-USDC": false,
-        "OKEX:FLM-USDT": false,
-        "OKEX:FLM-USDT-SWAP": false
+        "MEXC:FLMUSDT": true,
+        "MEXC:FLM_USDT": true,
+        "OKEX:FLM-USDC": true,
+        "OKEX:FLM-USDT": true,
+        "OKEX:FLM-USDT-SWAP": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
