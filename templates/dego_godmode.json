@@ -902,11 +902,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:degobusd": false,
+        "BINANCE:degobusd": true,
         "BINANCE:degousdt": false,
-        "KUCOIN:DEGO-USDT": false,
-        "MEXC:DEGOUSDT": false,
-        "MEXC:DEGO_USDT": false
+        "KUCOIN:DEGO-USDT": true,
+        "MEXC:DEGOUSDT": true,
+        "MEXC:DEGO_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
