@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:utkbusd": false,
+        "BINANCE:utkbusd": true,
         "BINANCE:utkusdt": false,
-        "BITFINEX:UTKUSD": false,
-        "HITBTC:UTKUSD": false,
-        "OKEX:UTK-USDT": false
+        "BITFINEX:UTKUSD": true,
+        "HITBTC:UTKUSD": true,
+        "OKEX:UTK-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
