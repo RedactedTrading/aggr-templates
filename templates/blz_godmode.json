@@ -914,17 +914,17 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:blzbusd": false,
+        "BINANCE:blzbusd": true,
         "BINANCE:blzusdt": false,
-        "BINANCE_FUTURES:blzusdt": false,
-        "BITGET:BLZUSDT_SPBL": false,
-        "BITGET:BLZUSDT_UMCBL": false,
+        "BINANCE_FUTURES:blzusdt": true,
+        "BITGET:BLZUSDT_SPBL": true,
+        "BITGET:BLZUSDT_UMCBL": true,
         "BYBIT:BLZUSDT": false,
-        "COINBASE:BLZ-USD": false,
-        "KRAKEN:BLZ/USD": false,
-        "KUCOIN:BLZ-USDT": false,
-        "MEXC:BLZUSDT": false,
-        "MEXC:BLZ_USDT": false
+        "COINBASE:BLZ-USD": true,
+        "KRAKEN:BLZ/USD": true,
+        "KUCOIN:BLZ-USDT": true,
+        "MEXC:BLZUSDT": true,
+        "MEXC:BLZ_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
