@@ -895,8 +895,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:AGIUSDT-SPOT": false,
-        "MEXC:AGIUSDT": false
+        "BYBIT:AGIUSDT-SPOT": true,
+        "MEXC:AGIUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
