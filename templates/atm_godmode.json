@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:atmbusd": false,
+        "BINANCE:atmbusd": true,
         "BINANCE:atmusdt": false,
-        "BITGET:ATMUSDT_SPBL": false,
-        "HITBTC:ATMUSD": false
+        "BITGET:ATMUSDT_SPBL": true,
+        "HITBTC:ATMUSD": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
