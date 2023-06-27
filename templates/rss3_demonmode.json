@@ -904,12 +904,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:RSS3USDT_SPBL": false,
+        "BITGET:RSS3USDT_SPBL": true,
         "BYBIT:RSS3USDT": false,
-        "BYBIT:RSS3USDT-SPOT": false,
-        "MEXC:RSS3USDT": false,
-        "MEXC:RSS3_USDT": false,
-        "OKEX:RSS3-USDT": false
+        "BYBIT:RSS3USDT-SPOT": true,
+        "MEXC:RSS3USDT": true,
+        "MEXC:RSS3_USDT": true,
+        "OKEX:RSS3-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
