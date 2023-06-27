@@ -905,13 +905,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:rarebusd": false,
+        "BINANCE:rarebusd": true,
         "BINANCE:rareusdt": false,
-        "BITGET:RAREUSDT_SPBL": false,
-        "COINBASE:RARE-USD": false,
-        "HITBTC:RAREUSDT": false,
-        "KRAKEN:RARE/USD": false,
-        "MEXC:RAREUSDT": false
+        "BITGET:RAREUSDT_SPBL": true,
+        "COINBASE:RARE-USD": true,
+        "HITBTC:RAREUSDT": true,
+        "KRAKEN:RARE/USD": true,
+        "MEXC:RAREUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
