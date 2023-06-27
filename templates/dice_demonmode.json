@@ -895,8 +895,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:DICEUSDT-SPOT": false,
-        "MEXC:DICEUSDT": false
+        "BYBIT:DICEUSDT-SPOT": true,
+        "MEXC:DICEUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
