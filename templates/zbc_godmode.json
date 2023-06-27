@@ -902,7 +902,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITGET:ZBCUSDT_SPBL": true,
-        "BYBIT:ZBCUSDT-SPOT": true,
+        "BYBIT:ZBCUSDT-SPOT": false,
         "KUCOIN:ZBC-USDT": true,
         "MEXC:ZBCUSDT": true,
         "OKEX:ZBC-USDT": true
