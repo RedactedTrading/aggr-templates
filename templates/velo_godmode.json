@@ -906,7 +906,7 @@
       "hiddenMarkets": {
         "BITGET:VELOUSDT_SPBL": true,
         "BITHUMB:VELO_KRW": true,
-        "BYBIT:VELOUSDT-SPOT": true,
+        "BYBIT:VELOUSDT-SPOT": false,
         "KUCOIN:VELO-USDT": true,
         "MEXC:VELO_USDT": true,
         "OKEX:VELO-USDT": true
@@ -1103,9 +1103,9 @@
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": false,
+      "showPairs": true,
       "showTrades": true,
-      "showLiquidations": false,
+      "showLiquidations": true,
       "showLogos": true,
       "monochromeLogos": false,
       "showTimeAgo": false,
