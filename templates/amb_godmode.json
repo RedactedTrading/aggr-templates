@@ -912,16 +912,16 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:ambbusd": false,
+        "BINANCE:ambbusd": true,
         "BINANCE:ambusdt": false,
-        "BINANCE_FUTURES:ambusdt": false,
-        "BITGET:AMBUSDT_UMCBL": false,
+        "BINANCE_FUTURES:ambusdt": true,
+        "BITGET:AMBUSDT_UMCBL": true,
         "BYBIT:AMBUSDT": false,
-        "HITBTC:AMBUSD": false,
-        "KUCOIN:AMB-USDT": false,
-        "KUCOIN:AMBUSDTM": false,
-        "MEXC:AMBUSDT": false,
-        "MEXC:AMB_USDT": false
+        "HITBTC:AMBUSD": true,
+        "KUCOIN:AMB-USDT": true,
+        "KUCOIN:AMBUSDTM": true,
+        "MEXC:AMBUSDT": true,
+        "MEXC:AMB_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
