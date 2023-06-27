@@ -903,12 +903,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:diabusd": false,
+        "BINANCE:diabusd": true,
         "BINANCE:diausdt": false,
-        "COINBASE:DIA-USD": false,
-        "COINBASE:DIA-USDT": false,
-        "KUCOIN:DIA-USDT": false,
-        "OKEX:DIA-USDT": false
+        "COINBASE:DIA-USD": true,
+        "COINBASE:DIA-USDT": true,
+        "KUCOIN:DIA-USDT": true,
+        "OKEX:DIA-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
