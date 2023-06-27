@@ -902,11 +902,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:WEMIXUSDT_SPBL": false,
-        "BYBIT:WEMIXUSDT-SPOT": false,
-        "KUCOIN:WEMIX-USDT": false,
-        "MEXC:WEMIXUSDT": false,
-        "MEXC:WEMIX_USDT": false
+        "BITGET:WEMIXUSDT_SPBL": true,
+        "BYBIT:WEMIXUSDT-SPOT": true,
+        "KUCOIN:WEMIX-USDT": true,
+        "MEXC:WEMIXUSDT": true,
+        "MEXC:WEMIX_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
