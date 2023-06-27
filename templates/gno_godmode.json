@@ -905,13 +905,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:gnobusd": false,
+        "BINANCE:gnobusd": true,
         "BINANCE:gnousdt": false,
-        "BITFINEX:GNOUSD": false,
-        "BITGET:GNOUSDT_SPBL": false,
-        "COINBASE:GNO-USD": false,
-        "KRAKEN:GNO/USD": false,
-        "MEXC:GNOUSDT": false
+        "BITFINEX:GNOUSD": true,
+        "BITGET:GNOUSDT_SPBL": true,
+        "COINBASE:GNO-USD": true,
+        "KRAKEN:GNO/USD": true,
+        "MEXC:GNOUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
