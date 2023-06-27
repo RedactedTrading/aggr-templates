@@ -902,7 +902,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITGET:CULTUSDT_SPBL": true,
-        "BYBIT:CULTUSDT-SPOT": true,
+        "BYBIT:CULTUSDT-SPOT": false,
         "HITBTC:CULTUSDT": true,
         "KUCOIN:CULT-USDT": true,
         "MEXC:CULTUSDT": true
@@ -1099,9 +1099,9 @@
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": false,
+      "showPairs": true,
       "showTrades": true,
-      "showLiquidations": false,
+      "showLiquidations": true,
       "showLogos": true,
       "monochromeLogos": false,
       "showTimeAgo": false,
