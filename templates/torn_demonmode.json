@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:tornbusd": false,
+        "BINANCE:tornbusd": true,
         "BINANCE:tornusdt": false,
-        "HITBTC:TORNUSD": false,
-        "MEXC:TORNUSDT": false
+        "HITBTC:TORNUSD": true,
+        "MEXC:TORNUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
