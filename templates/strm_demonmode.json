@@ -900,7 +900,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITGET:STRMUSDT_SPBL": true,
-        "BYBIT:STRMUSDT-SPOT": true,
+        "BYBIT:STRMUSDT-SPOT": false,
         "HITBTC:STRMUSDT": true,
         "MEXC:STRMUSDT": true
       },
