@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:POKTUSDT-SPOT": false,
-        "KUCOIN:POKT-USDT": false,
-        "MEXC:POKTUSDT": false
+        "BYBIT:POKTUSDT-SPOT": true,
+        "KUCOIN:POKT-USDT": true,
+        "MEXC:POKTUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
