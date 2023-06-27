@@ -907,14 +907,14 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:mirbusd": false,
+        "BINANCE:mirbusd": true,
         "BINANCE:mirusdt": false,
-        "BITGET:MIRUSDT_SPBL": false,
-        "HITBTC:MIRUSD": false,
-        "KRAKEN:MIR/USD": false,
-        "KUCOIN:MIR-USDT": false,
-        "MEXC:MIRUSDT": false,
-        "OKEX:MIR-USDT": false
+        "BITGET:MIRUSDT_SPBL": true,
+        "HITBTC:MIRUSD": true,
+        "KRAKEN:MIR/USD": true,
+        "KUCOIN:MIR-USDT": true,
+        "MEXC:MIRUSDT": true,
+        "OKEX:MIR-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
