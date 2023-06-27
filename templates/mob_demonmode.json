@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:mobbusd": false,
+        "BINANCE:mobbusd": true,
         "BINANCE:mobusdt": false,
-        "BITFINEX:MOBUSD": false,
-        "HITBTC:MOBUSD": false
+        "BITFINEX:MOBUSD": true,
+        "HITBTC:MOBUSD": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
