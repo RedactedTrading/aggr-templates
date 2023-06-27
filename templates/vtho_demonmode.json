@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:vthobusd": false,
+        "BINANCE:vthobusd": true,
         "BINANCE:vthousdt": false,
-        "HITBTC:VTHOUSD": false,
-        "MEXC:VTHOUSDT": false
+        "HITBTC:VTHOUSD": true,
+        "MEXC:VTHOUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
