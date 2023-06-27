@@ -903,11 +903,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:hivebusd": false,
+        "BINANCE:hivebusd": true,
         "BINANCE:hiveusdt": false,
         "BITHUMB:HIVE_KRW": true,
-        "HITBTC:HIVEUSDT": false,
-        "MEXC:HIVEUSDT": false,
+        "HITBTC:HIVEUSDT": true,
+        "MEXC:HIVEUSDT": true,
         "UPBIT:KRW-HIVE": true
       },
       "barSpacing": 0.2929530100599413,
