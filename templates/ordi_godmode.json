@@ -910,15 +910,15 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:ORDIUSDT_SPBL": false,
-        "BITGET:ORDIUSDT_UMCBL": false,
-        "BITMEX:ORDIUSD": false,
+        "BITGET:ORDIUSDT_SPBL": true,
+        "BITGET:ORDIUSDT_UMCBL": true,
+        "BITMEX:ORDIUSD": true,
         "BYBIT:ORDIUSDT": false,
-        "KUCOIN:ORDI-USDT": false,
-        "KUCOIN:ORDIUSDTM": false,
-        "MEXC:ORDI_USDT": false,
-        "OKEX:ORDI-USDT": false,
-        "OKEX:ORDI-USDT-SWAP": false
+        "KUCOIN:ORDI-USDT": true,
+        "KUCOIN:ORDIUSDTM": true,
+        "MEXC:ORDI_USDT": true,
+        "OKEX:ORDI-USDT": true,
+        "OKEX:ORDI-USDT-SWAP": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
