@@ -900,9 +900,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:polyxbusd": false,
+        "BINANCE:polyxbusd": true,
         "BINANCE:polyxusdt": false,
-        "MEXC:POLYX_USDT": false,
+        "MEXC:POLYX_USDT": true,
         "UPBIT:KRW-POLYX": true
       },
       "barSpacing": 0.2929530100599413,
