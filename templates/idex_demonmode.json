@@ -916,18 +916,18 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:idexbusd": false,
+        "BINANCE:idexbusd": true,
         "BINANCE:idexusdt": false,
-        "BINANCE_FUTURES:idexusdt": false,
-        "BITGET:IDEXUSDT_SPBL": false,
-        "BITGET:IDEXUSDT_UMCBL": false,
+        "BINANCE_FUTURES:idexusdt": true,
+        "BITGET:IDEXUSDT_SPBL": true,
+        "BITGET:IDEXUSDT_UMCBL": true,
         "BYBIT:IDEXUSDT": false,
-        "COINBASE:IDEX-USD": false,
-        "COINBASE:IDEX-USDT": false,
-        "HITBTC:IDEXUSDT": false,
-        "KRAKEN:IDEX/USD": false,
-        "KUCOIN:IDEXUSDTM": false,
-        "MEXC:IDEX_USDT": false
+        "COINBASE:IDEX-USD": true,
+        "COINBASE:IDEX-USDT": true,
+        "HITBTC:IDEXUSDT": true,
+        "KRAKEN:IDEX/USD": true,
+        "KUCOIN:IDEXUSDTM": true,
+        "MEXC:IDEX_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
