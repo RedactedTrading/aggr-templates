@@ -912,16 +912,16 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:edutusd": false,
+        "BINANCE:edutusd": true,
         "BINANCE:eduusdt": false,
-        "BINANCE_FUTURES:eduusdt": false,
-        "BITGET:EDUUSDT_SPBL": false,
-        "BITGET:EDUUSDT_UMCBL": false,
+        "BINANCE_FUTURES:eduusdt": true,
+        "BITGET:EDUUSDT_SPBL": true,
+        "BITGET:EDUUSDT_UMCBL": true,
         "BYBIT:EDUUSDT": false,
-        "HITBTC:EDUUSDT": false,
-        "KUCOIN:EDU-USDT": false,
-        "KUCOIN:EDUUSDTM": false,
-        "MEXC:EDU_USDT": false
+        "HITBTC:EDUUSDT": true,
+        "KUCOIN:EDU-USDT": true,
+        "KUCOIN:EDUUSDTM": true,
+        "MEXC:EDU_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
