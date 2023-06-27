@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:kmdbusd": false,
+        "BINANCE:kmdbusd": true,
         "BINANCE:kmdusdt": false,
-        "HITBTC:KMDUSD": false,
-        "KUCOIN:KMD-USDT": false
+        "HITBTC:KMDUSD": true,
+        "KUCOIN:KMD-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
