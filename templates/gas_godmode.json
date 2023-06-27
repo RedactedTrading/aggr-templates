@@ -905,12 +905,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:gasbusd": false,
+        "BINANCE:gasbusd": true,
         "BINANCE:gasusdt": false,
-        "HITBTC:GASUSD": false,
-        "KUCOIN:GAS-USDT": false,
-        "MEXC:GASUSDT": false,
-        "OKEX:GAS-USDT": false,
+        "HITBTC:GASUSD": true,
+        "KUCOIN:GAS-USDT": true,
+        "MEXC:GASUSDT": true,
+        "OKEX:GAS-USDT": true,
         "UPBIT:KRW-GAS": true
       },
       "barSpacing": 0.2929530100599413,
