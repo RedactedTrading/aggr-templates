@@ -932,7 +932,7 @@
         "BITFINEX:BALUSD": true,
         "BITGET:BALUSDT_SPBL": true,
         "BITHUMB:BAL_KRW": true,
-        "BYBIT:BALUSDT": false,
+        "BYBIT:BALUSDT": true,
         "COINBASE:BAL-USD": true,
         "HITBTC:BALUSDT": true,
         "KRAKEN:BAL/USD": true,
