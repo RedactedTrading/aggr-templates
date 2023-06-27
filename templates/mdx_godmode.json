@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:mdxbusd": false,
+        "BINANCE:mdxbusd": true,
         "BINANCE:mdxusdt": false,
-        "HITBTC:MDXUSD": false,
-        "MEXC:MDXUSDT": false
+        "HITBTC:MDXUSD": true,
+        "MEXC:MDXUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
