@@ -903,12 +903,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:avabusd": false,
+        "BINANCE:avabusd": true,
         "BINANCE:avausdt": false,
-        "BYBIT:AVAUSDT-SPOT": false,
-        "HITBTC:AVAUSD": false,
-        "KUCOIN:AVA-USDT": false,
-        "MEXC:AVAUSDT": false
+        "BYBIT:AVAUSDT-SPOT": true,
+        "HITBTC:AVAUSD": true,
+        "KUCOIN:AVA-USDT": true,
+        "MEXC:AVAUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
