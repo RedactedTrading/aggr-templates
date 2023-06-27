@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:databusd": false,
+        "BINANCE:databusd": true,
         "BINANCE:datausdt": false,
-        "HITBTC:DATAUSDT": false,
-        "KUCOIN:DATA-USDT": false
+        "HITBTC:DATAUSDT": true,
+        "KUCOIN:DATA-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
