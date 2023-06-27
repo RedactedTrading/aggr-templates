@@ -899,7 +899,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:XWGUSDT-SPOT": true,
+        "BYBIT:XWGUSDT-SPOT": false,
         "KUCOIN:XWG-USDT": true,
         "MEXC:XWGUSDC": true,
         "MEXC:XWGUSDT": true
