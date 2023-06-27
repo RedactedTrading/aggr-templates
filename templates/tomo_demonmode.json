@@ -912,16 +912,16 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:tomobusd": false,
+        "BINANCE:tomobusd": true,
         "BINANCE:tomousdc": false,
         "BINANCE:tomousdt": false,
-        "BINANCE_FUTURES:tomousdt": false,
-        "BITGET:TOMOUSDT_UMCBL": false,
+        "BINANCE_FUTURES:tomousdt": true,
+        "BITGET:TOMOUSDT_UMCBL": true,
         "BYBIT:TOMOUSDT": false,
-        "HITBTC:TOMOUSD": false,
-        "KUCOIN:TOMOUSDTM": false,
-        "MEXC:TOMOUSDT": false,
-        "MEXC:TOMO_USDT": false
+        "HITBTC:TOMOUSD": true,
+        "KUCOIN:TOMOUSDTM": true,
+        "MEXC:TOMOUSDT": true,
+        "MEXC:TOMO_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
