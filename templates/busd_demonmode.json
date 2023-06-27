@@ -909,13 +909,13 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:busdusdt": false,
-        "BITGET:BUSDUSDT_SPBL": false,
+        "BITGET:BUSDUSDT_SPBL": true,
         "BYBIT:BUSDUSDT": false,
-        "BYBIT:BUSDUSDT-SPOT": false,
-        "KUCOIN:BUSD-USDC": false,
-        "KUCOIN:BUSD-USDT": false,
-        "MEXC:BUSDUSDT": false,
-        "MEXC:BUSD_USDT": false
+        "BYBIT:BUSDUSDT-SPOT": true,
+        "KUCOIN:BUSD-USDC": true,
+        "KUCOIN:BUSD-USDT": true,
+        "MEXC:BUSDUSDT": true,
+        "MEXC:BUSD_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
