@@ -896,7 +896,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:mcousdt": false,
-        "OKEX:MCO-USDT": false
+        "OKEX:MCO-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
