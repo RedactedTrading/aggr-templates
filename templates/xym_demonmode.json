@@ -903,12 +903,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:XYMUSDT_SPBL": false,
+        "BITGET:XYMUSDT_SPBL": true,
         "BITHUMB:XYM_KRW": true,
-        "BYBIT:XYMUSDT-SPOT": false,
-        "HITBTC:XYMUSD": false,
-        "KUCOIN:XYM-USDT": false,
-        "MEXC:XYMUSDT": false
+        "BYBIT:XYMUSDT-SPOT": true,
+        "HITBTC:XYMUSD": true,
+        "KUCOIN:XYM-USDT": true,
+        "MEXC:XYMUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
