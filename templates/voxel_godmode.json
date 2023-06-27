@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:voxelbusd": false,
+        "BINANCE:voxelbusd": true,
         "BINANCE:voxelusdt": false,
-        "COINBASE:VOXEL-USD": false,
-        "KUCOIN:VOXEL-USDT": false
+        "COINBASE:VOXEL-USD": true,
+        "KUCOIN:VOXEL-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
