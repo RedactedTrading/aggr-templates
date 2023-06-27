@@ -911,7 +911,7 @@
         "BINANCE:btgusdt": false,
         "BITFINEX:BTGUSD": true,
         "BITHUMB:BTG_KRW": true,
-        "BYBIT:BTGUSDT-SPOT": true,
+        "BYBIT:BTGUSDT-SPOT": false,
         "HITBTC:BTGUSD": true,
         "HITBTC:BTGUSDC": true,
         "UPBIT:KRW-BTG": true
