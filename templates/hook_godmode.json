@@ -914,17 +914,17 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:hookbusd": false,
+        "BINANCE:hookbusd": true,
         "BINANCE:hookusdt": false,
-        "BINANCE_FUTURES:hookusdt": false,
-        "BITGET:HOOKUSDT_SPBL": false,
-        "BITGET:HOOKUSDT_UMCBL": false,
+        "BINANCE_FUTURES:hookusdt": true,
+        "BITGET:HOOKUSDT_SPBL": true,
+        "BITGET:HOOKUSDT_UMCBL": true,
         "BITHUMB:HOOK_KRW": true,
         "BYBIT:HOOKUSDT": false,
-        "BYBIT:HOOKUSDT-SPOT": false,
-        "HITBTC:HOOKUSDT": false,
-        "KUCOIN:HOOKUSDTM": false,
-        "MEXC:HOOK_USDT": false
+        "BYBIT:HOOKUSDT-SPOT": true,
+        "HITBTC:HOOKUSDT": true,
+        "KUCOIN:HOOKUSDTM": true,
+        "MEXC:HOOK_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
