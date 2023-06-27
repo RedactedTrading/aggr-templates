@@ -903,12 +903,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:ustbusd": false,
+        "BINANCE:ustbusd": true,
         "BINANCE:ustusdt": false,
-        "BITFINEX:USTUSD": false,
-        "KRAKEN:UST/USD": false,
-        "KRAKEN:UST/USDC": false,
-        "KRAKEN:UST/USDT": false
+        "BITFINEX:USTUSD": true,
+        "KRAKEN:UST/USD": true,
+        "KRAKEN:UST/USDC": true,
+        "KRAKEN:UST/USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
