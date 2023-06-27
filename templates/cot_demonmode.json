@@ -893,7 +893,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:COTUSDT-SPOT": true
+        "BYBIT:COTUSDT-SPOT": false
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
@@ -1087,9 +1087,9 @@
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": false,
+      "showPairs": true,
       "showTrades": true,
-      "showLiquidations": false,
+      "showLiquidations": true,
       "showLogos": true,
       "monochromeLogos": false,
       "showTimeAgo": false,
