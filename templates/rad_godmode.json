@@ -916,18 +916,18 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:radbusd": false,
+        "BINANCE:radbusd": true,
         "BINANCE:radusdt": false,
-        "BINANCE_FUTURES:radusdt": false,
-        "BITGET:RADUSDT_SPBL": false,
-        "BITGET:RADUSDT_UMCBL": false,
+        "BINANCE_FUTURES:radusdt": true,
+        "BITGET:RADUSDT_SPBL": true,
+        "BITGET:RADUSDT_UMCBL": true,
         "BYBIT:RADUSDT": false,
-        "COINBASE:RAD-USD": false,
-        "COINBASE:RAD-USDT": false,
-        "HITBTC:RADUSDT": false,
-        "KRAKEN:RAD/USD": false,
-        "KUCOIN:RADUSDTM": false,
-        "MEXC:RAD_USDT": false
+        "COINBASE:RAD-USD": true,
+        "COINBASE:RAD-USDT": true,
+        "HITBTC:RADUSDT": true,
+        "KRAKEN:RAD/USD": true,
+        "KUCOIN:RADUSDTM": true,
+        "MEXC:RAD_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
