@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:bethbusd": false,
+        "BINANCE:bethbusd": true,
         "BINANCE:bethusdt": false,
-        "HITBTC:BETHUSDT": false,
-        "OKEX:BETH-USDT": false
+        "HITBTC:BETHUSDT": true,
+        "OKEX:BETH-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
