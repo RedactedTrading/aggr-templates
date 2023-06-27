@@ -908,11 +908,11 @@
       "hiddenMarkets": {
         "BITHUMB:CTC_KRW": true,
         "BYBIT:CTCUSDT": false,
-        "BYBIT:CTCUSDT-SPOT": false,
-        "HITBTC:CTCUSDT": false,
-        "KUCOIN:CTC-USDT": false,
-        "MEXC:CTCUSDT": false,
-        "OKEX:CTC-USDT": false
+        "BYBIT:CTCUSDT-SPOT": true,
+        "HITBTC:CTCUSDT": true,
+        "KUCOIN:CTC-USDT": true,
+        "MEXC:CTCUSDT": true,
+        "OKEX:CTC-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
