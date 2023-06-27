@@ -899,8 +899,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:bchabcbusd": false,
-        "BINANCE:bchabctusd": false,
+        "BINANCE:bchabcbusd": true,
+        "BINANCE:bchabctusd": true,
         "BINANCE:bchabcusdc": false,
         "BINANCE:bchabcusdt": false
       },
