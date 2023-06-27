@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:XWGUSDT-SPOT": false,
-        "KUCOIN:XWG-USDT": false,
-        "MEXC:XWGUSDC": false,
-        "MEXC:XWGUSDT": false
+        "BYBIT:XWGUSDT-SPOT": true,
+        "KUCOIN:XWG-USDT": true,
+        "MEXC:XWGUSDC": true,
+        "MEXC:XWGUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
