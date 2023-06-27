@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:wrxbusd": false,
+        "BINANCE:wrxbusd": true,
         "BINANCE:wrxusdt": false,
-        "HITBTC:WRXUSD": false,
-        "KUCOIN:WRX-USDT": false
+        "HITBTC:WRXUSD": true,
+        "KUCOIN:WRX-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
