@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:PUMLXUSDT_SPBL": false,
-        "BYBIT:PUMLXUSDT-SPOT": false,
-        "KUCOIN:PUMLX-USDT": false
+        "BITGET:PUMLXUSDT_SPBL": true,
+        "BYBIT:PUMLXUSDT-SPOT": true,
+        "KUCOIN:PUMLX-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
