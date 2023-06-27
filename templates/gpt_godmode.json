@@ -897,7 +897,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:GPTUSDT": false,
-        "BYBIT:GPTUSDT-SPOT": false
+        "BYBIT:GPTUSDT-SPOT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
