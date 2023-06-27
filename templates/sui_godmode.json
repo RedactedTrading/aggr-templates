@@ -484,7 +484,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var m = BINANCE:suiusdt;plotcandlestick(m.open, m.high, m.low, m.close);",
+          "script": "var x0 = BINANCE:suiusdt;var x1 = BITFINEX:SUIUSD;var x2 = BITMEX:SUIUSD;var x3 = BYBIT:SUIUSDT-SPOT;var x4 = COINBASE:SUI-USD;var x5 = KRAKEN:PF_SUIUSD;var x6 = KRAKEN:SUI/USD;var x7 = OKEX:SUI-USDT;plotcandlestick((BINANCE:suiusdt.open+BITFINEX:SUIUSD.open+BITMEX:SUIUSD.open+BYBIT:SUIUSDT-SPOT.open+COINBASE:SUI-USD.open+KRAKEN:PF_SUIUSD.open+KRAKEN:SUI/USD.open+OKEX:SUI-USDT.open) / 8,(BINANCE:suiusdt.high+BITFINEX:SUIUSD.high+BITMEX:SUIUSD.high+BYBIT:SUIUSDT-SPOT.high+COINBASE:SUI-USD.high+KRAKEN:PF_SUIUSD.high+KRAKEN:SUI/USD.high+OKEX:SUI-USDT.high) / 8,(BINANCE:suiusdt.low+BITFINEX:SUIUSD.low+BITMEX:SUIUSD.low+BYBIT:SUIUSDT-SPOT.low+COINBASE:SUI-USD.low+KRAKEN:PF_SUIUSD.low+KRAKEN:SUI/USD.low+OKEX:SUI-USDT.low) / 8,(BINANCE:suiusdt.close+BITFINEX:SUIUSD.close+BITMEX:SUIUSD.close+BYBIT:SUIUSDT-SPOT.close+COINBASE:SUI-USD.close+KRAKEN:PF_SUIUSD.close+KRAKEN:SUI/USD.close+OKEX:SUI-USDT.close) / 8);",
           "enabled": true,
           "name": "Price",
           "options": {
