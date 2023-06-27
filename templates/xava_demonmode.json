@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:XAVAUSDT-SPOT": false,
-        "KUCOIN:XAVA-USDT": false,
-        "MEXC:XAVAUSDT": false
+        "BYBIT:XAVAUSDT-SPOT": true,
+        "KUCOIN:XAVA-USDT": true,
+        "MEXC:XAVAUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
