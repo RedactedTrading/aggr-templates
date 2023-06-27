@@ -933,7 +933,7 @@
         "BITGET:BANDUSDT_UMCBL": true,
         "BTCTURK:BANDTRY": true,
         "BTCTURK:BANDUSDT": true,
-        "BYBIT:BANDUSDT": false,
+        "BYBIT:BANDUSDT": true,
         "COINBASE:BAND-USD": true,
         "HITBTC:BANDUSDT": true,
         "KRAKEN:BAND/USD": true,
