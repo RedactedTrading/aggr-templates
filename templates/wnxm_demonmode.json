@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:wnxmbusd": false,
+        "BINANCE:wnxmbusd": true,
         "BINANCE:wnxmusdt": false,
-        "BITGET:WNXMUSDT_SPBL": false,
-        "MEXC:WNXMUSDT": false
+        "BITGET:WNXMUSDT_SPBL": true,
+        "MEXC:WNXMUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
