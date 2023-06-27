@@ -905,13 +905,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:alcxbusd": false,
+        "BINANCE:alcxbusd": true,
         "BINANCE:alcxusdt": false,
-        "COINBASE:ALCX-USD": false,
-        "COINBASE:ALCX-USDT": false,
-        "HITBTC:ALCXUSDT": false,
-        "KRAKEN:ALCX/USD": false,
-        "OKEX:ALCX-USDT": false
+        "COINBASE:ALCX-USD": true,
+        "COINBASE:ALCX-USDT": true,
+        "HITBTC:ALCXUSDT": true,
+        "KRAKEN:ALCX/USD": true,
+        "OKEX:ALCX-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
