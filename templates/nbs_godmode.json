@@ -896,7 +896,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:nbsusdt": false,
-        "MEXC:NBSUSDT": false
+        "MEXC:NBSUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
