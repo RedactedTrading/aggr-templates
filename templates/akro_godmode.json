@@ -908,14 +908,14 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:akrobusd": false,
+        "BINANCE:akrobusd": true,
         "BINANCE:akrousdt": false,
-        "BITGET:AKROUSDT_SPBL": false,
+        "BITGET:AKROUSDT_SPBL": true,
         "BYBIT:AKROUSDT": false,
-        "HITBTC:AKROUSD": false,
-        "KUCOIN:AKRO-USDT": false,
-        "MEXC:AKROUSDT": false,
-        "MEXC:AKRO_USDT": false
+        "HITBTC:AKROUSD": true,
+        "KUCOIN:AKRO-USDT": true,
+        "MEXC:AKROUSDT": true,
+        "MEXC:AKRO_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
