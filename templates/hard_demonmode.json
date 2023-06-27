@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:hardbusd": false,
+        "BINANCE:hardbusd": true,
         "BINANCE:hardusdt": false,
-        "KUCOIN:HARD-USDT": false,
-        "MEXC:HARDUSDT": false
+        "KUCOIN:HARD-USDT": true,
+        "MEXC:HARDUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
