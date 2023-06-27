@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:PIPUSDT_SPBL": false,
-        "BYBIT:PIPUSDT-SPOT": false,
-        "KUCOIN:PIP-USDT": false,
-        "MEXC:PIPUSDT": false
+        "BITGET:PIPUSDT_SPBL": true,
+        "BYBIT:PIPUSDT-SPOT": true,
+        "KUCOIN:PIP-USDT": true,
+        "MEXC:PIPUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
