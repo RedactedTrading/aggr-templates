@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:TOMIUSDT_SPBL": false,
-        "BYBIT:TOMIUSDT-SPOT": false,
-        "KUCOIN:TOMI-USDT": false,
-        "MEXC:TOMIUSDT": false
+        "BITGET:TOMIUSDT_SPBL": true,
+        "BYBIT:TOMIUSDT-SPOT": true,
+        "KUCOIN:TOMI-USDT": true,
+        "MEXC:TOMIUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
