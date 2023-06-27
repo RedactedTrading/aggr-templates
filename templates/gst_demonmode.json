@@ -908,14 +908,14 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:GSTUSDT_SPBL": false,
-        "BYBIT:GSTUSDT-SPOT": false,
-        "COINBASE:GST-USD": false,
-        "HITBTC:GSTUSD": false,
-        "KRAKEN:GST/USD": false,
-        "KUCOIN:GST-USDT": false,
-        "MEXC:GSTUSDT": false,
-        "MEXC:GST_USDT": false
+        "BITGET:GSTUSDT_SPBL": true,
+        "BYBIT:GSTUSDT-SPOT": true,
+        "COINBASE:GST-USD": true,
+        "HITBTC:GSTUSD": true,
+        "KRAKEN:GST/USD": true,
+        "KUCOIN:GST-USDT": true,
+        "MEXC:GSTUSDT": true,
+        "MEXC:GST_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
