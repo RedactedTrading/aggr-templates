@@ -899,9 +899,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:arkbusd": false,
-        "HITBTC:ARKUSD": false,
-        "MEXC:ARKUSDT": false,
+        "BINANCE:arkbusd": true,
+        "HITBTC:ARKUSD": true,
+        "MEXC:ARKUSDT": true,
         "UPBIT:KRW-ARK": true
       },
       "barSpacing": 0.2929530100599413,
