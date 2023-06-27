@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:PRIMEUSDT_SPBL": false,
-        "BYBIT:PRIMEUSDT-SPOT": false,
-        "COINBASE:PRIME-USD": false
+        "BITGET:PRIMEUSDT_SPBL": true,
+        "BYBIT:PRIMEUSDT-SPOT": true,
+        "COINBASE:PRIME-USD": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
