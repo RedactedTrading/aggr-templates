@@ -903,12 +903,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:tribebusd": false,
+        "BINANCE:tribebusd": true,
         "BINANCE:tribeusdt": false,
-        "BYBIT:TRIBEUSDT-SPOT": false,
-        "HITBTC:TRIBEUSDT": false,
-        "KUCOIN:TRIBE-USDT": false,
-        "MEXC:TRIBEUSDT": false
+        "BYBIT:TRIBEUSDT-SPOT": true,
+        "HITBTC:TRIBEUSDT": true,
+        "KUCOIN:TRIBE-USDT": true,
+        "MEXC:TRIBEUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
