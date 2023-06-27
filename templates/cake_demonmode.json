@@ -910,15 +910,15 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:cakebusd": false,
+        "BINANCE:cakebusd": true,
         "BINANCE:cakeusdt": false,
-        "BITGET:CAKEUSDT_SPBL": false,
+        "BITGET:CAKEUSDT_SPBL": true,
         "BITHUMB:CAKE_KRW": true,
-        "BYBIT:CAKEUSDT-SPOT": false,
-        "HITBTC:CAKEUSD": false,
-        "HITBTC:CAKEUSDC": false,
-        "KUCOIN:CAKE-USDT": false,
-        "MEXC:CAKE_USDT": false
+        "BYBIT:CAKEUSDT-SPOT": true,
+        "HITBTC:CAKEUSD": true,
+        "HITBTC:CAKEUSDC": true,
+        "KUCOIN:CAKE-USDT": true,
+        "MEXC:CAKE_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
