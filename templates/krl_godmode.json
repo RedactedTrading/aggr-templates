@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:KRLUSDT-SPOT": false,
-        "COINBASE:KRL-USD": false,
-        "COINBASE:KRL-USDT": false,
-        "KUCOIN:KRL-USDT": false
+        "BYBIT:KRLUSDT-SPOT": true,
+        "COINBASE:KRL-USD": true,
+        "COINBASE:KRL-USDT": true,
+        "KUCOIN:KRL-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
