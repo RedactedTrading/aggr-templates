@@ -905,13 +905,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:citybusd": false,
+        "BINANCE:citybusd": true,
         "BINANCE:cityusdt": false,
-        "BITGET:CITYUSDT_SPBL": false,
-        "BYBIT:CITYUSDT-SPOT": false,
-        "HITBTC:CITYUSDT": false,
-        "MEXC:CITYUSDT": false,
-        "OKEX:CITY-USDT": false
+        "BITGET:CITYUSDT_SPBL": true,
+        "BYBIT:CITYUSDT-SPOT": true,
+        "HITBTC:CITYUSDT": true,
+        "MEXC:CITYUSDT": true,
+        "OKEX:CITY-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
