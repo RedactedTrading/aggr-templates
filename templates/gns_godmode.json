@@ -905,11 +905,11 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:gnsusdt": false,
-        "BITGET:GNSUSDT_SPBL": false,
-        "BYBIT:GNSUSDT-SPOT": false,
-        "KUCOIN:GNS-USDT": false,
-        "KUCOIN:GNSUSDTM": false,
-        "MEXC:GNS_USDT": false
+        "BITGET:GNSUSDT_SPBL": true,
+        "BYBIT:GNSUSDT-SPOT": true,
+        "KUCOIN:GNS-USDT": true,
+        "KUCOIN:GNSUSDTM": true,
+        "MEXC:GNS_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
