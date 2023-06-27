@@ -895,8 +895,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:GENEUSDT-SPOT": false,
-        "MEXC:GENEUSDT": false
+        "BYBIT:GENEUSDT-SPOT": true,
+        "MEXC:GENEUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
