@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:sysbusd": false,
+        "BINANCE:sysbusd": true,
         "BINANCE:sysusdt": false,
-        "BITGET:SYSUSDT_SPBL": false,
-        "KUCOIN:SYS-USDT": false,
-        "MEXC:SYSUSDT": false
+        "BITGET:SYSUSDT_SPBL": true,
+        "KUCOIN:SYS-USDT": true,
+        "MEXC:SYSUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
