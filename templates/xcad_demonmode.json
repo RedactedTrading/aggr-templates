@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:XCADUSDT_SPBL": false,
-        "BYBIT:XCADUSDT-SPOT": false,
-        "KUCOIN:XCAD-USDT": false,
-        "MEXC:XCADUSDT": false
+        "BITGET:XCADUSDT_SPBL": true,
+        "BYBIT:XCADUSDT-SPOT": true,
+        "KUCOIN:XCAD-USDT": true,
+        "MEXC:XCADUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
