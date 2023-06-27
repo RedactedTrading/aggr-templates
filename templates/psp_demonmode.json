@@ -895,7 +895,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:PSPUSDT-SPOT": true,
+        "BYBIT:PSPUSDT-SPOT": false,
         "MEXC:PSPUSDT": true
       },
       "barSpacing": 0.2929530100599413,
@@ -1090,9 +1090,9 @@
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": false,
+      "showPairs": true,
       "showTrades": true,
-      "showLiquidations": false,
+      "showLiquidations": true,
       "showLogos": true,
       "monochromeLogos": false,
       "showTimeAgo": false,
