@@ -906,13 +906,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:atabusd": false,
+        "BINANCE:atabusd": true,
         "BINANCE:atausdt": false,
-        "BINANCE_FUTURES:atausdt": false,
-        "COINBASE:ATA-USD": false,
-        "HITBTC:ATAUSD": false,
-        "KUCOIN:ATA-USDT": false,
-        "MEXC:ATA_USDT": false
+        "BINANCE_FUTURES:atausdt": true,
+        "COINBASE:ATA-USD": true,
+        "HITBTC:ATAUSD": true,
+        "KUCOIN:ATA-USDT": true,
+        "MEXC:ATA_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
