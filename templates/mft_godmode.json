@@ -896,7 +896,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:mftusdt": false,
-        "BITGET:MFTUSDT_SPBL": false
+        "BITGET:MFTUSDT_SPBL": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
