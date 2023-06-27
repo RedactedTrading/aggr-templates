@@ -912,16 +912,16 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:winbusd": false,
+        "BINANCE:winbusd": true,
         "BINANCE:winusdc": false,
         "BINANCE:winusdt": false,
-        "BITGET:WINUSDT_SPBL": false,
-        "HITBTC:WINUSD": false,
-        "HITBTC:WINUSDC": false,
-        "KUCOIN:WIN-USDT": false,
-        "MEXC:WINUSDT": false,
-        "MEXC:WIN_USDT": false,
-        "OKEX:WIN-USDT": false
+        "BITGET:WINUSDT_SPBL": true,
+        "HITBTC:WINUSD": true,
+        "HITBTC:WINUSDC": true,
+        "KUCOIN:WIN-USDT": true,
+        "MEXC:WINUSDT": true,
+        "MEXC:WIN_USDT": true,
+        "OKEX:WIN-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
