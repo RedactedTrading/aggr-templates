@@ -908,14 +908,14 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:hntbusd": false,
+        "BINANCE:hntbusd": true,
         "BINANCE:hntusdt": false,
-        "BITGET:HNTUSDT_SPBL": false,
+        "BITGET:HNTUSDT_SPBL": true,
         "BYBIT:HNTUSDT": false,
-        "BYBIT:HNTUSDT-SPOT": false,
-        "KUCOIN:HNT-USDT": false,
-        "MEXC:HNT_USDT": false,
-        "OKEX:HNT-USDT": false
+        "BYBIT:HNTUSDT-SPOT": true,
+        "KUCOIN:HNT-USDT": true,
+        "MEXC:HNT_USDT": true,
+        "OKEX:HNT-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
