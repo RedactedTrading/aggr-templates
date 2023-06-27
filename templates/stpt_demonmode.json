@@ -901,9 +901,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:stptbusd": false,
+        "BINANCE:stptbusd": true,
         "BINANCE:stptusdt": false,
-        "BITGET:STPTUSDT_SPBL": false,
+        "BITGET:STPTUSDT_SPBL": true,
         "BITHUMB:STPT_KRW": true,
         "UPBIT:KRW-STPT": true
       },
