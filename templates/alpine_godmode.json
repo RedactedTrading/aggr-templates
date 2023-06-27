@@ -904,12 +904,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:alpinebusd": false,
+        "BINANCE:alpinebusd": true,
         "BINANCE:alpineusdt": false,
-        "BITGET:ALPINEUSDT_SPBL": false,
-        "KUCOIN:ALPINE-USDT": false,
-        "MEXC:ALPINEUSDT": false,
-        "MEXC:ALPINE_USDT": false
+        "BITGET:ALPINEUSDT_SPBL": true,
+        "KUCOIN:ALPINE-USDT": true,
+        "MEXC:ALPINEUSDT": true,
+        "MEXC:ALPINE_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
