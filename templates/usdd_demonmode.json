@@ -905,13 +905,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:USDDUSDT-SPOT": false,
-        "HITBTC:USDDUSDC": false,
-        "HITBTC:USDDUSDT": false,
-        "KUCOIN:USDD-USDC": false,
-        "KUCOIN:USDD-USDT": false,
-        "MEXC:USDDUSDC": false,
-        "MEXC:USDDUSDT": false
+        "BYBIT:USDDUSDT-SPOT": true,
+        "HITBTC:USDDUSDC": true,
+        "HITBTC:USDDUSDT": true,
+        "KUCOIN:USDD-USDC": true,
+        "KUCOIN:USDD-USDT": true,
+        "MEXC:USDDUSDC": true,
+        "MEXC:USDDUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
