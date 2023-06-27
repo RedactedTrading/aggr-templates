@@ -921,17 +921,17 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BALANCERETHEREUM:LIT/WETH": true,
-        "BINANCE:litbusd": false,
+        "BINANCE:litbusd": true,
         "BINANCE:litusdt": false,
-        "BINANCE_FUTURES:litusdt": false,
-        "BITGET:LITUSDT_SPBL": false,
-        "BITGET:LITUSDT_UMCBL": false,
+        "BINANCE_FUTURES:litusdt": true,
+        "BITGET:LITUSDT_SPBL": true,
+        "BITGET:LITUSDT_UMCBL": true,
         "BYBIT:LITUSDT": false,
-        "COINBASE:LIT-USD": false,
-        "KUCOIN:LIT-USDT": false,
-        "KUCOIN:LITUSDTM": false,
-        "MEXC:LITUSDT": false,
-        "MEXC:LIT_USDT": false
+        "COINBASE:LIT-USD": true,
+        "KUCOIN:LIT-USDT": true,
+        "KUCOIN:LITUSDTM": true,
+        "MEXC:LITUSDT": true,
+        "MEXC:LIT_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
