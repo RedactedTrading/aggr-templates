@@ -906,13 +906,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:SWEATUSDT_SPBL": false,
+        "BITGET:SWEATUSDT_SPBL": true,
         "BYBIT:SWEATUSDT": false,
-        "BYBIT:SWEATUSDT-SPOT": false,
-        "KUCOIN:SWEAT-USDT": false,
-        "MEXC:SWEATUSDT": false,
-        "OKEX:SWEAT-USDT": false,
-        "OKEX:SWEAT-USDT-SWAP": false
+        "BYBIT:SWEATUSDT-SPOT": true,
+        "KUCOIN:SWEAT-USDT": true,
+        "MEXC:SWEATUSDT": true,
+        "OKEX:SWEAT-USDT": true,
+        "OKEX:SWEAT-USDT-SWAP": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
