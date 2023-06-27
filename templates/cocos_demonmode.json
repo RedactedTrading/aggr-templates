@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:cocosbusd": false,
+        "BINANCE:cocosbusd": true,
         "BINANCE:cocosusdt": false,
-        "BITGET:COCOSUSDT_SPBL": false,
-        "HITBTC:COCOSUSDT": false
+        "BITGET:COCOSUSDT_SPBL": true,
+        "HITBTC:COCOSUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
