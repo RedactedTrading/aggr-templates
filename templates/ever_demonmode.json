@@ -902,10 +902,10 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITHUMB:EVER_KRW": true,
-        "BYBIT:EVERUSDT-SPOT": false,
-        "HITBTC:EVERUSDT": false,
-        "KUCOIN:EVER-USDT": false,
-        "MEXC:EVERUSDT": false
+        "BYBIT:EVERUSDT-SPOT": true,
+        "HITBTC:EVERUSDT": true,
+        "KUCOIN:EVER-USDT": true,
+        "MEXC:EVERUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
