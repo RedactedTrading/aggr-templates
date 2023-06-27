@@ -906,13 +906,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:xvsbusd": false,
+        "BINANCE:xvsbusd": true,
         "BINANCE:xvsusdt": false,
-        "BINANCE_FUTURES:xvsusdt": false,
+        "BINANCE_FUTURES:xvsusdt": true,
         "BITHUMB:XVS_KRW": true,
-        "HITBTC:XVSUSD": false,
-        "MEXC:XVSUSDT": false,
-        "MEXC:XVS_USDT": false
+        "HITBTC:XVSUSD": true,
+        "MEXC:XVSUSDT": true,
+        "MEXC:XVS_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
