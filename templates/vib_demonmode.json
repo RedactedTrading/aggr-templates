@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:vibbusd": false,
+        "BINANCE:vibbusd": true,
         "BINANCE:vibusdt": false,
-        "BITGET:VIBUSDT_SPBL": false,
-        "HITBTC:VIBUSD": false
+        "BITGET:VIBUSDT_SPBL": true,
+        "HITBTC:VIBUSD": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
