@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:vidtbusd": false,
+        "BINANCE:vidtbusd": true,
         "BINANCE:vidtusdt": false,
-        "KUCOIN:VIDT-USDT": false
+        "KUCOIN:VIDT-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
