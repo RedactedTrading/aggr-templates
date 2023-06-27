@@ -897,7 +897,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:MELOSUSDT-SPOT": true,
+        "BYBIT:MELOSUSDT-SPOT": false,
         "KUCOIN:MELOS-USDT": true,
         "MEXC:MELOSUSDT": true
       },
@@ -1093,9 +1093,9 @@
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": false,
+      "showPairs": true,
       "showTrades": true,
-      "showLiquidations": false,
+      "showLiquidations": true,
       "showLogos": true,
       "monochromeLogos": false,
       "showTimeAgo": false,
