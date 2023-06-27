@@ -908,14 +908,14 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:clvbusd": false,
+        "BINANCE:clvbusd": true,
         "BINANCE:clvusdt": false,
-        "COINBASE:CLV-USD": false,
-        "COINBASE:CLV-USDT": false,
-        "KUCOIN:CLV-USDT": false,
-        "MEXC:CLVUSDT": false,
-        "MEXC:CLV_USDT": false,
-        "OKEX:CLV-USDT": false
+        "COINBASE:CLV-USD": true,
+        "COINBASE:CLV-USDT": true,
+        "KUCOIN:CLV-USDT": true,
+        "MEXC:CLVUSDT": true,
+        "MEXC:CLV_USDT": true,
+        "OKEX:CLV-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
