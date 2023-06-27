@@ -898,7 +898,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITGET:KUNCIUSDT_SPBL": true,
-        "BYBIT:KUNCIUSDT-SPOT": true,
+        "BYBIT:KUNCIUSDT-SPOT": false,
         "MEXC:KUNCIUSDT": true
       },
       "barSpacing": 0.2929530100599413,
