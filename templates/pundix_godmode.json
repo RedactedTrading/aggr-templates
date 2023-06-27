@@ -905,12 +905,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:pundixbusd": false,
+        "BINANCE:pundixbusd": true,
         "BINANCE:pundixusdt": false,
-        "BITGET:PUNDIXUSDT_SPBL": false,
+        "BITGET:PUNDIXUSDT_SPBL": true,
         "BITHUMB:PUNDIX_KRW": true,
-        "COINBASE:PUNDIX-USD": false,
-        "KUCOIN:PUNDIX-USDT": false,
+        "COINBASE:PUNDIX-USD": true,
+        "KUCOIN:PUNDIX-USDT": true,
         "UPBIT:KRW-PUNDIX": true
       },
       "barSpacing": 0.2929530100599413,
