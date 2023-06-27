@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:SAITAMAUSDT_SPBL": false,
-        "BYBIT:SAITAMAUSDT-SPOT": false,
-        "MEXC:SAITAMAUSDT": false,
-        "OKEX:SAITAMA-USDT": false
+        "BITGET:SAITAMAUSDT_SPBL": true,
+        "BYBIT:SAITAMAUSDT-SPOT": true,
+        "MEXC:SAITAMAUSDT": true,
+        "OKEX:SAITAMA-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
