@@ -909,15 +909,15 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:pondbusd": false,
+        "BINANCE:pondbusd": true,
         "BINANCE:pondusdt": false,
-        "BITGET:PONDUSDT_SPBL": false,
-        "COINBASE:POND-USD": false,
-        "COINBASE:POND-USDT": false,
-        "HITBTC:PONDUSD": false,
-        "KRAKEN:POND/USD": false,
-        "KUCOIN:POND-USDT": false,
-        "MEXC:PONDUSDT": false
+        "BITGET:PONDUSDT_SPBL": true,
+        "COINBASE:POND-USD": true,
+        "COINBASE:POND-USDT": true,
+        "HITBTC:PONDUSD": true,
+        "KRAKEN:POND/USD": true,
+        "KUCOIN:POND-USDT": true,
+        "MEXC:PONDUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
