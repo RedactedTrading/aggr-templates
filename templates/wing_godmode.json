@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:wingbusd": false,
+        "BINANCE:wingbusd": true,
         "BINANCE:wingusdt": false,
-        "BITGET:WINGUSDT_SPBL": false,
-        "MEXC:WINGUSDT": false,
-        "OKEX:WING-USDT": false
+        "BITGET:WINGUSDT_SPBL": true,
+        "MEXC:WINGUSDT": true,
+        "OKEX:WING-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
