@@ -909,15 +909,15 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:polsbusd": false,
+        "BINANCE:polsbusd": true,
         "BINANCE:polsusdt": false,
-        "COINBASE:POLS-USD": false,
-        "COINBASE:POLS-USDT": false,
-        "HITBTC:POLSUSD": false,
-        "KRAKEN:POLS/USD": false,
-        "KUCOIN:POLS-USDT": false,
-        "MEXC:POLSUSDT": false,
-        "OKEX:POLS-USDT": false
+        "COINBASE:POLS-USD": true,
+        "COINBASE:POLS-USDT": true,
+        "HITBTC:POLSUSD": true,
+        "KRAKEN:POLS/USD": true,
+        "KUCOIN:POLS-USDT": true,
+        "MEXC:POLSUSDT": true,
+        "OKEX:POLS-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
