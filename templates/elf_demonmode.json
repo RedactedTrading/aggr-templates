@@ -907,13 +907,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:elfbusd": false,
+        "BINANCE:elfbusd": true,
         "BINANCE:elfusdt": false,
-        "BITGET:ELFUSDT_SPBL": false,
+        "BITGET:ELFUSDT_SPBL": true,
         "BITHUMB:ELF_KRW": true,
-        "HITBTC:ELFUSD": false,
-        "MEXC:ELFUSDT": false,
-        "OKEX:ELF-USDT": false,
+        "HITBTC:ELFUSD": true,
+        "MEXC:ELFUSDT": true,
+        "OKEX:ELF-USDT": true,
         "UPBIT:KRW-ELF": true
       },
       "barSpacing": 0.2929530100599413,
