@@ -907,14 +907,14 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:mlnbusd": false,
+        "BINANCE:mlnbusd": true,
         "BINANCE:mlnusdt": false,
-        "BITFINEX:MLNUSD": false,
-        "COINBASE:MLN-USD": false,
-        "KRAKEN:MLN/USD": false,
-        "KUCOIN:MLN-USDT": false,
-        "MEXC:MLNUSDT": false,
-        "OKEX:MLN-USDT": false
+        "BITFINEX:MLNUSD": true,
+        "COINBASE:MLN-USD": true,
+        "KRAKEN:MLN/USD": true,
+        "KUCOIN:MLN-USDT": true,
+        "MEXC:MLNUSDT": true,
+        "OKEX:MLN-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
