@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:STRMUSDT_SPBL": false,
-        "BYBIT:STRMUSDT-SPOT": false,
-        "HITBTC:STRMUSDT": false,
-        "MEXC:STRMUSDT": false
+        "BITGET:STRMUSDT_SPBL": true,
+        "BYBIT:STRMUSDT-SPOT": true,
+        "HITBTC:STRMUSDT": true,
+        "MEXC:STRMUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
