@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:FORTUSDT_SPBL": false,
-        "BYBIT:FORTUSDT-SPOT": false,
-        "COINBASE:FORT-USD": false,
-        "KUCOIN:FORT-USDT": false,
-        "MEXC:FORTUSDT": false
+        "BITGET:FORTUSDT_SPBL": true,
+        "BYBIT:FORTUSDT-SPOT": true,
+        "COINBASE:FORT-USD": true,
+        "KUCOIN:FORT-USDT": true,
+        "MEXC:FORTUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
