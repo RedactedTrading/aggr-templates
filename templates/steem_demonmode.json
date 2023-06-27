@@ -901,10 +901,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:steembusd": false,
+        "BINANCE:steembusd": true,
         "BINANCE:steemusdt": false,
         "BITHUMB:STEEM_KRW": true,
-        "MEXC:STEEMUSDT": false,
+        "MEXC:STEEMUSDT": true,
         "UPBIT:KRW-STEEM": true
       },
       "barSpacing": 0.2929530100599413,
