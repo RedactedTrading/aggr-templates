@@ -898,7 +898,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITGET:KOKUSDT_SPBL": true,
-        "BYBIT:KOKUSDT-SPOT": true,
+        "BYBIT:KOKUSDT-SPOT": false,
         "KUCOIN:KOK-USDT": true
       },
       "barSpacing": 0.2929530100599413,
