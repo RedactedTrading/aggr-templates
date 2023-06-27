@@ -908,14 +908,14 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:GODSUSDT_SPBL": false,
-        "BYBIT:GODSUSDT-SPOT": false,
-        "COINBASE:GODS-USD": false,
-        "HITBTC:GODSUSDT": false,
-        "KUCOIN:GODS-USDT": false,
-        "MEXC:GODSUSDT": false,
-        "OKEX:GODS-USDT": false,
-        "OKEX:GODS-USDT-SWAP": false
+        "BITGET:GODSUSDT_SPBL": true,
+        "BYBIT:GODSUSDT-SPOT": true,
+        "COINBASE:GODS-USD": true,
+        "HITBTC:GODSUSDT": true,
+        "KUCOIN:GODS-USDT": true,
+        "MEXC:GODSUSDT": true,
+        "OKEX:GODS-USDT": true,
+        "OKEX:GODS-USDT-SWAP": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
