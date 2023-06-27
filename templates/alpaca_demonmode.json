@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:alpacabusd": false,
+        "BINANCE:alpacabusd": true,
         "BINANCE:alpacausdt": false,
-        "BITGET:ALPACAUSDT_SPBL": false,
-        "HITBTC:ALPACAUSDT": false,
-        "MEXC:ALPACAUSDT": false
+        "BITGET:ALPACAUSDT_SPBL": true,
+        "HITBTC:ALPACAUSDT": true,
+        "MEXC:ALPACAUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
