@@ -901,10 +901,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:iqbusd": false,
-        "HITBTC:IQUSD": false,
-        "MEXC:IQUSDT": false,
-        "OKEX:IQ-USDT": false,
+        "BINANCE:iqbusd": true,
+        "HITBTC:IQUSD": true,
+        "MEXC:IQUSDT": true,
+        "OKEX:IQ-USDT": true,
         "UPBIT:KRW-IQ": true
       },
       "barSpacing": 0.2929530100599413,
