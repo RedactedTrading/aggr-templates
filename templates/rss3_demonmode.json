@@ -905,8 +905,8 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITGET:RSS3USDT_SPBL": true,
-        "BYBIT:RSS3USDT": false,
-        "BYBIT:RSS3USDT-SPOT": true,
+        "BYBIT:RSS3USDT": true,
+        "BYBIT:RSS3USDT-SPOT": false,
         "MEXC:RSS3USDT": true,
         "MEXC:RSS3_USDT": true,
         "OKEX:RSS3-USDT": true
