@@ -896,7 +896,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:pntusdt": false,
-        "KUCOIN:PNT-USDT": false
+        "KUCOIN:PNT-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
