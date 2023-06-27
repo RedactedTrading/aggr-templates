@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:cvpbusd": false,
+        "BINANCE:cvpbusd": true,
         "BINANCE:cvpusdt": false,
-        "HITBTC:CVPUSD": false,
-        "MEXC:CVPUSDT": false,
-        "OKEX:CVP-USDT": false
+        "HITBTC:CVPUSD": true,
+        "MEXC:CVPUSDT": true,
+        "OKEX:CVP-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
