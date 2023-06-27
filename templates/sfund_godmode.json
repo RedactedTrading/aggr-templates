@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:SFUNDUSDT-SPOT": false,
-        "KUCOIN:SFUND-USDT": false,
-        "MEXC:SFUNDUSDT": false
+        "BYBIT:SFUNDUSDT-SPOT": true,
+        "KUCOIN:SFUND-USDT": true,
+        "MEXC:SFUNDUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
