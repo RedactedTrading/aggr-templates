@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:CAPSUSDT_SPBL": false,
-        "BYBIT:CAPSUSDT-SPOT": false,
-        "HITBTC:CAPSUSDT": false
+        "BITGET:CAPSUSDT_SPBL": true,
+        "BYBIT:CAPSUSDT-SPOT": true,
+        "HITBTC:CAPSUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
