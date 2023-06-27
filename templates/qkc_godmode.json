@@ -903,11 +903,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:qkcbusd": false,
+        "BINANCE:qkcbusd": true,
         "BINANCE:qkcusdt": false,
-        "BITGET:QKCUSDT_SPBL": false,
+        "BITGET:QKCUSDT_SPBL": true,
         "BITHUMB:QKC_KRW": true,
-        "MEXC:QKCUSDT": false,
+        "MEXC:QKCUSDT": true,
         "UPBIT:KRW-QKC": true
       },
       "barSpacing": 0.2929530100599413,
