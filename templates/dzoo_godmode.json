@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:DZOOUSDT_SPBL": false,
-        "BYBIT:DZOOUSDT-SPOT": false,
-        "MEXC:DZOOUSDT": false
+        "BITGET:DZOOUSDT_SPBL": true,
+        "BYBIT:DZOOUSDT-SPOT": true,
+        "MEXC:DZOOUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
