@@ -903,12 +903,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:fisbusd": false,
+        "BINANCE:fisbusd": true,
         "BINANCE:fisusdt": false,
-        "BITGET:FISUSDT_SPBL": false,
-        "COINBASE:FIS-USD": false,
-        "COINBASE:FIS-USDT": false,
-        "KRAKEN:FIS/USD": false
+        "BITGET:FISUSDT_SPBL": true,
+        "COINBASE:FIS-USD": true,
+        "COINBASE:FIS-USDT": true,
+        "KRAKEN:FIS/USD": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
