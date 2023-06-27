@@ -900,10 +900,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:ACSUSDT-SPOT": false,
-        "COINBASE:ACS-USD": false,
-        "KUCOIN:ACS-USDT": false,
-        "MEXC:ACS_USDT": false
+        "BYBIT:ACSUSDT-SPOT": true,
+        "COINBASE:ACS-USD": true,
+        "KUCOIN:ACS-USDT": true,
+        "MEXC:ACS_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
