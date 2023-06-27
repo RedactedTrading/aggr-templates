@@ -910,15 +910,15 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:twtbusd": false,
+        "BINANCE:twtbusd": true,
         "BINANCE:twtusdt": false,
-        "BITGET:TWTUSDT_SPBL": false,
+        "BITGET:TWTUSDT_SPBL": true,
         "BYBIT:TWTUSDT": false,
-        "BYBIT:TWTUSDT-SPOT": false,
-        "HITBTC:TWTUSDC": false,
-        "HITBTC:TWTUSDT": false,
-        "KUCOIN:TWT-USDT": false,
-        "MEXC:TWT_USDT": false
+        "BYBIT:TWTUSDT-SPOT": true,
+        "HITBTC:TWTUSDC": true,
+        "HITBTC:TWTUSDT": true,
+        "KUCOIN:TWT-USDT": true,
+        "MEXC:TWT_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
