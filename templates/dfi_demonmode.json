@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:DFIUSDT_SPBL": false,
-        "BYBIT:DFIUSDT-SPOT": false,
-        "HITBTC:DFIUSDT": false,
-        "KUCOIN:DFI-USDT": false,
-        "MEXC:DFIUSDT": false
+        "BITGET:DFIUSDT_SPBL": true,
+        "BYBIT:DFIUSDT-SPOT": true,
+        "HITBTC:DFIUSDT": true,
+        "KUCOIN:DFI-USDT": true,
+        "MEXC:DFIUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
