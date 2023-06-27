@@ -914,17 +914,17 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:hotbusd": false,
+        "BINANCE:hotbusd": true,
         "BINANCE:hotusdt": false,
-        "BINANCE_FUTURES:hotusdt": false,
-        "BITGET:HOTUSDT_SPBL": false,
-        "BITGET:HOTUSDT_UMCBL": false,
+        "BINANCE_FUTURES:hotusdt": true,
+        "BITGET:HOTUSDT_SPBL": true,
+        "BITGET:HOTUSDT_UMCBL": true,
         "BTCTURK:HOTTRY": true,
         "BYBIT:HOTUSDT": false,
-        "BYBIT:HOTUSDT-SPOT": false,
-        "HITBTC:HOTUSD": false,
-        "HITBTC:HOTUSDC": false,
-        "MEXC:HOT_USDT": false
+        "BYBIT:HOTUSDT-SPOT": true,
+        "HITBTC:HOTUSD": true,
+        "HITBTC:HOTUSDC": true,
+        "MEXC:HOT_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
