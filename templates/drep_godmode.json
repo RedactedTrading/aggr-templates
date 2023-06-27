@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:drepbusd": false,
+        "BINANCE:drepbusd": true,
         "BINANCE:drepusdt": false,
-        "BITGET:DREPUSDT_SPBL": false,
-        "COINBASE:DREP-USD": false
+        "BITGET:DREPUSDT_SPBL": true,
+        "COINBASE:DREP-USD": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
