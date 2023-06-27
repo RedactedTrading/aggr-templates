@@ -916,18 +916,18 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:alphabusd": false,
+        "BINANCE:alphabusd": true,
         "BINANCE:alphausdt": false,
-        "BINANCE_FUTURES:alphausdt": false,
-        "BITGET:ALPHAUSDT_SPBL": false,
-        "BITGET:ALPHAUSDT_UMCBL": false,
+        "BINANCE_FUTURES:alphausdt": true,
+        "BITGET:ALPHAUSDT_SPBL": true,
+        "BITGET:ALPHAUSDT_UMCBL": true,
         "BYBIT:ALPHAUSDT": false,
-        "HITBTC:ALPHAUSD": false,
-        "KRAKEN:ALPHA/USD": false,
-        "KUCOIN:ALPHA-USDT": false,
-        "MEXC:ALPHA_USDT": false,
-        "OKEX:ALPHA-USDT": false,
-        "OKEX:ALPHA-USDT-SWAP": false
+        "HITBTC:ALPHAUSD": true,
+        "KRAKEN:ALPHA/USD": true,
+        "KUCOIN:ALPHA-USDT": true,
+        "MEXC:ALPHA_USDT": true,
+        "OKEX:ALPHA-USDT": true,
+        "OKEX:ALPHA-USDT-SWAP": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
