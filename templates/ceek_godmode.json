@@ -904,12 +904,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:CEEKUSDT_SPBL": false,
+        "BITGET:CEEKUSDT_SPBL": true,
         "BYBIT:CEEKUSDT": false,
-        "HITBTC:CEEKUSDT": false,
-        "KUCOIN:CEEK-USDT": false,
-        "MEXC:CEEK_USDT": false,
-        "OKEX:CEEK-USDT": false
+        "HITBTC:CEEKUSDT": true,
+        "KUCOIN:CEEK-USDT": true,
+        "MEXC:CEEK_USDT": true,
+        "OKEX:CEEK-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
