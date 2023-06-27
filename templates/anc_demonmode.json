@@ -906,13 +906,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:ancbusd": false,
+        "BINANCE:ancbusd": true,
         "BINANCE:ancusdt": false,
-        "HITBTC:ANCUSDT": false,
-        "KUCOIN:ANC-USDT": false,
-        "MEXC:ANCUSDT": false,
-        "MEXC:ANC_USDT": false,
-        "OKEX:ANC-USDT": false
+        "HITBTC:ANCUSDT": true,
+        "KUCOIN:ANC-USDT": true,
+        "MEXC:ANCUSDT": true,
+        "MEXC:ANC_USDT": true,
+        "OKEX:ANC-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
