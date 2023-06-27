@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:MOVEZUSDT_SPBL": false,
-        "BYBIT:MOVEZUSDT-SPOT": false,
-        "OKEX:MOVEZ-USDT": false
+        "BITGET:MOVEZUSDT_SPBL": true,
+        "BYBIT:MOVEZUSDT-SPOT": true,
+        "OKEX:MOVEZ-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
