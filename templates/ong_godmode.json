@@ -903,8 +903,8 @@
       "hiddenMarkets": {
         "BINANCE:ongusdt": false,
         "BITHUMB:ONG_KRW": true,
-        "HITBTC:ONGUSD": false,
-        "MEXC:ONGUSDT": false,
+        "HITBTC:ONGUSD": true,
+        "MEXC:ONGUSDT": true,
         "UPBIT:KRW-ONG": true
       },
       "barSpacing": 0.2929530100599413,
