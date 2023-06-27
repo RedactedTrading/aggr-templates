@@ -905,12 +905,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:mblbusd": false,
+        "BINANCE:mblbusd": true,
         "BINANCE:mblusdt": false,
         "BITHUMB:MBL_KRW": true,
-        "HITBTC:MBLUSD": false,
-        "KUCOIN:MBL-USDT": false,
-        "MEXC:MBLUSDT": false,
+        "HITBTC:MBLUSD": true,
+        "KUCOIN:MBL-USDT": true,
+        "MEXC:MBLUSDT": true,
         "UPBIT:KRW-MBL": true
       },
       "barSpacing": 0.2929530100599413,
