@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:CULTUSDT_SPBL": false,
-        "BYBIT:CULTUSDT-SPOT": false,
-        "HITBTC:CULTUSDT": false,
-        "KUCOIN:CULT-USDT": false,
-        "MEXC:CULTUSDT": false
+        "BITGET:CULTUSDT_SPBL": true,
+        "BYBIT:CULTUSDT-SPOT": true,
+        "HITBTC:CULTUSDT": true,
+        "KUCOIN:CULT-USDT": true,
+        "MEXC:CULTUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
