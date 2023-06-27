@@ -895,8 +895,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:GALFTUSDT-SPOT": false,
-        "OKEX:GALFT-USDT": false
+        "BYBIT:GALFTUSDT-SPOT": true,
+        "OKEX:GALFT-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
