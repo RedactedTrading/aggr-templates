@@ -910,15 +910,15 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:ctkbusd": false,
+        "BINANCE:ctkbusd": true,
         "BINANCE:ctkusdt": false,
-        "BINANCE_FUTURES:ctkusdt": false,
-        "BITGET:CTKUSDT_UMCBL": false,
+        "BINANCE_FUTURES:ctkusdt": true,
+        "BITGET:CTKUSDT_UMCBL": true,
         "BITHUMB:CTK_KRW": true,
         "BYBIT:CTKUSDT": false,
-        "HITBTC:CTKUSDT": false,
-        "MEXC:CTKUSDT": false,
-        "MEXC:CTK_USDT": false
+        "HITBTC:CTKUSDT": true,
+        "MEXC:CTKUSDT": true,
+        "MEXC:CTK_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
