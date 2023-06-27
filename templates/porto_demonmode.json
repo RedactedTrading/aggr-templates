@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:portobusd": false,
+        "BINANCE:portobusd": true,
         "BINANCE:portousdt": false,
-        "BITGET:PORTOUSDT_SPBL": false,
-        "HITBTC:PORTOUSDT": false
+        "BITGET:PORTOUSDT_SPBL": true,
+        "HITBTC:PORTOUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
