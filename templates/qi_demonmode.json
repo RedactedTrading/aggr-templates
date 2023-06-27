@@ -903,12 +903,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:qibusd": false,
+        "BINANCE:qibusd": true,
         "BINANCE:qiusdt": false,
-        "COINBASE:QI-USD": false,
-        "HITBTC:QIUSDT": false,
-        "KUCOIN:QI-USDT": false,
-        "MEXC:QIUSDT": false
+        "COINBASE:QI-USD": true,
+        "HITBTC:QIUSDT": true,
+        "KUCOIN:QI-USDT": true,
+        "MEXC:QIUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
