@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:PRIMALUSDT_SPBL": false,
-        "BYBIT:PRIMALUSDT-SPOT": false,
-        "KUCOIN:PRIMAL-USDC": false,
-        "KUCOIN:PRIMAL-USDT": false,
-        "MEXC:PRIMALUSDT": false
+        "BITGET:PRIMALUSDT_SPBL": true,
+        "BYBIT:PRIMALUSDT-SPOT": true,
+        "KUCOIN:PRIMAL-USDC": true,
+        "KUCOIN:PRIMAL-USDT": true,
+        "MEXC:PRIMALUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
