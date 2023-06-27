@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:TRVLUSDT-SPOT": false,
-        "KUCOIN:TRVL-USDT": false,
-        "MEXC:TRVLUSDT": false
+        "BYBIT:TRVLUSDT-SPOT": true,
+        "KUCOIN:TRVL-USDT": true,
+        "MEXC:TRVLUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
