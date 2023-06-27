@@ -902,11 +902,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:RACAUSDT_SPBL": false,
-        "BYBIT:RACAUSDT-SPOT": false,
-        "KUCOIN:RACA-USDT": false,
-        "MEXC:RACA_USDT": false,
-        "OKEX:RACA-USDT": false
+        "BITGET:RACAUSDT_SPBL": true,
+        "BYBIT:RACAUSDT-SPOT": true,
+        "KUCOIN:RACA-USDT": true,
+        "MEXC:RACA_USDT": true,
+        "OKEX:RACA-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
