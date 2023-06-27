@@ -910,8 +910,8 @@
       "hiddenMarkets": {
         "BITGET:COREUSDT_SPBL": true,
         "BITGET:COREUSDT_UMCBL": true,
-        "BYBIT:COREUSDT": false,
-        "BYBIT:COREUSDT-SPOT": true,
+        "BYBIT:COREUSDT": true,
+        "BYBIT:COREUSDT-SPOT": false,
         "MEXC:CORE_USDT": true,
         "OKEX:CORE-USDC": true,
         "OKEX:CORE-USDT": true,
