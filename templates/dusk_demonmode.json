@@ -916,18 +916,18 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:duskbusd": false,
+        "BINANCE:duskbusd": true,
         "BINANCE:duskusdc": false,
         "BINANCE:duskusdt": false,
-        "BINANCE_FUTURES:duskusdt": false,
-        "BITGET:DUSKUSDT_SPBL": false,
-        "BITGET:DUSKUSDT_UMCBL": false,
+        "BINANCE_FUTURES:duskusdt": true,
+        "BITGET:DUSKUSDT_SPBL": true,
+        "BITGET:DUSKUSDT_UMCBL": true,
         "BYBIT:DUSKUSDT": false,
-        "HITBTC:DUSKUSDT": false,
-        "KUCOIN:DUSK-USDT": false,
-        "KUCOIN:DUSKUSDTM": false,
-        "MEXC:DUSKUSDT": false,
-        "MEXC:DUSK_USDT": false
+        "HITBTC:DUSKUSDT": true,
+        "KUCOIN:DUSK-USDT": true,
+        "KUCOIN:DUSKUSDTM": true,
+        "MEXC:DUSKUSDT": true,
+        "MEXC:DUSK_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
