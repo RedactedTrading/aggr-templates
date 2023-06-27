@@ -907,14 +907,14 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:bondbusd": false,
+        "BINANCE:bondbusd": true,
         "BINANCE:bondusdt": false,
-        "BITGET:BONDUSDT_SPBL": false,
-        "COINBASE:BOND-USD": false,
-        "COINBASE:BOND-USDT": false,
-        "KRAKEN:BOND/USD": false,
-        "KUCOIN:BOND-USDT": false,
-        "MEXC:BONDUSDT": false
+        "BITGET:BONDUSDT_SPBL": true,
+        "COINBASE:BOND-USD": true,
+        "COINBASE:BOND-USDT": true,
+        "KRAKEN:BOND/USD": true,
+        "KUCOIN:BOND-USDT": true,
+        "MEXC:BONDUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
