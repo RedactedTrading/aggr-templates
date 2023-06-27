@@ -895,8 +895,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:TURBOSUSDT-SPOT": false,
-        "KUCOIN:TURBOS-USDT": false
+        "BYBIT:TURBOSUSDT-SPOT": true,
+        "KUCOIN:TURBOS-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
