@@ -912,16 +912,16 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:reqbusd": false,
+        "BINANCE:reqbusd": true,
         "BINANCE:requsdt": false,
-        "BITFINEX:REQUSD": false,
+        "BITFINEX:REQUSD": true,
         "BITHUMB:REQ_KRW": true,
         "BYBIT:REQUSDT": false,
-        "COINBASE:REQ-USD": false,
-        "COINBASE:REQ-USDT": false,
-        "HITBTC:REQUSDT": false,
-        "KRAKEN:REQ/USD": false,
-        "KUCOIN:REQ-USDT": false
+        "COINBASE:REQ-USD": true,
+        "COINBASE:REQ-USDT": true,
+        "HITBTC:REQUSDT": true,
+        "KRAKEN:REQ/USD": true,
+        "KUCOIN:REQ-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
