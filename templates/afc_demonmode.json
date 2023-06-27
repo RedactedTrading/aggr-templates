@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:AFCUSDT_SPBL": false,
-        "BYBIT:AFCUSDT-SPOT": false,
-        "MEXC:AFCUSDT": false
+        "BITGET:AFCUSDT_SPBL": true,
+        "BYBIT:AFCUSDT-SPOT": true,
+        "MEXC:AFCUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
