@@ -895,8 +895,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:TAPUSDT_SPBL": false,
-        "BYBIT:TAPUSDT-SPOT": false
+        "BITGET:TAPUSDT_SPBL": true,
+        "BYBIT:TAPUSDT-SPOT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
