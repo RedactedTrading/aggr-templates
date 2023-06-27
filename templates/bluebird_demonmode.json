@@ -893,7 +893,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE_FUTURES:bluebirdusdt": false
+        "BINANCE_FUTURES:bluebirdusdt": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
