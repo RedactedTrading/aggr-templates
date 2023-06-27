@@ -895,8 +895,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:MBSUSDT-SPOT": false,
-        "MEXC:MBSUSDT": false
+        "BYBIT:MBSUSDT-SPOT": true,
+        "MEXC:MBSUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
