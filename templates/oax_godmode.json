@@ -901,9 +901,9 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:oaxusdt": false,
-        "BITGET:OAXUSDT_SPBL": false,
-        "HITBTC:OAXUSD": false,
-        "MEXC:OAX_USDT": false
+        "BITGET:OAXUSDT_SPBL": true,
+        "HITBTC:OAXUSD": true,
+        "MEXC:OAX_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
