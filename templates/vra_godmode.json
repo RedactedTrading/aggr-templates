@@ -915,7 +915,7 @@
         "BITFINEX:VRAUSD": true,
         "BITGET:VRAUSDT_SPBL": true,
         "BITHUMB:VRA_KRW": true,
-        "BYBIT:VRAUSDT-SPOT": true,
+        "BYBIT:VRAUSDT-SPOT": false,
         "HITBTC:VRAUSDT": true,
         "KUCOIN:VRA-USDC": true,
         "KUCOIN:VRA-USDT": true,
