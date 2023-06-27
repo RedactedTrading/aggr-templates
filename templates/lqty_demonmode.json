@@ -917,17 +917,17 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:lqtyusdt": false,
-        "BINANCE_FUTURES:lqtyusdt": false,
-        "BITGET:LQTYUSDT_SPBL": false,
-        "BITGET:LQTYUSDT_UMCBL": false,
+        "BINANCE_FUTURES:lqtyusdt": true,
+        "BITGET:LQTYUSDT_SPBL": true,
+        "BITGET:LQTYUSDT_UMCBL": true,
         "BYBIT:LQTYUSDT": false,
-        "COINBASE:LQTY-USD": false,
-        "COINBASE:LQTY-USDT": false,
-        "HITBTC:LQTYUSDT": false,
-        "KUCOIN:LQTY-USDT": false,
-        "KUCOIN:LQTYUSDTM": false,
-        "MEXC:LQTY_USDT": false,
-        "OKEX:LQTY-USDT": false
+        "COINBASE:LQTY-USD": true,
+        "COINBASE:LQTY-USDT": true,
+        "HITBTC:LQTYUSDT": true,
+        "KUCOIN:LQTY-USDT": true,
+        "KUCOIN:LQTYUSDTM": true,
+        "MEXC:LQTY_USDT": true,
+        "OKEX:LQTY-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
