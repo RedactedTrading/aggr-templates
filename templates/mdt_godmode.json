@@ -910,15 +910,15 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:mdtbusd": false,
+        "BINANCE:mdtbusd": true,
         "BINANCE:mdtusdt": false,
-        "BITGET:MDTUSDT_SPBL": false,
-        "COINBASE:MDT-USD": false,
-        "COINBASE:MDT-USDT": false,
-        "HITBTC:MDTUSDT": false,
-        "MEXC:MDTUSDT": false,
-        "MEXC:MDT_USDT": false,
-        "OKEX:MDT-USDT": false
+        "BITGET:MDTUSDT_SPBL": true,
+        "COINBASE:MDT-USD": true,
+        "COINBASE:MDT-USDT": true,
+        "HITBTC:MDTUSDT": true,
+        "MEXC:MDTUSDT": true,
+        "MEXC:MDT_USDT": true,
+        "OKEX:MDT-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
