@@ -895,8 +895,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:PLYUSDT-SPOT": false,
-        "KUCOIN:PLY-USDT": false
+        "BYBIT:PLYUSDT-SPOT": true,
+        "KUCOIN:PLY-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
