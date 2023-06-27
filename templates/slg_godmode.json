@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:SLGUSDT_SPBL": false,
-        "BYBIT:SLGUSDC-SPOT": false,
-        "BYBIT:SLGUSDT-SPOT": false,
-        "MEXC:SLGUSDT": false
+        "BITGET:SLGUSDT_SPBL": true,
+        "BYBIT:SLGUSDC-SPOT": true,
+        "BYBIT:SLGUSDT-SPOT": true,
+        "MEXC:SLGUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
