@@ -905,13 +905,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:frontbusd": false,
+        "BINANCE:frontbusd": true,
         "BINANCE:frontusdt": false,
-        "BITGET:FRONTUSDT_SPBL": false,
+        "BITGET:FRONTUSDT_SPBL": true,
         "BITHUMB:FRONT_KRW": true,
-        "KUCOIN:FRONT-USDT": false,
-        "MEXC:FRONTUSDT": false,
-        "OKEX:FRONT-USDT": false
+        "KUCOIN:FRONT-USDT": true,
+        "MEXC:FRONTUSDT": true,
+        "OKEX:FRONT-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
