@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:asrbusd": false,
+        "BINANCE:asrbusd": true,
         "BINANCE:asrusdt": false,
-        "BITGET:ASRUSDT_SPBL": false
+        "BITGET:ASRUSDT_SPBL": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
