@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:swrvbusd": false,
-        "HITBTC:SWRVUSD": false,
-        "MEXC:SWRVUSDT": false
+        "BINANCE:swrvbusd": true,
+        "HITBTC:SWRVUSD": true,
+        "MEXC:SWRVUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
