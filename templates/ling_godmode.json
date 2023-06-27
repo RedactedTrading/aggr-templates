@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:LINGUSDT_SPBL": false,
-        "BYBIT:LINGUSDT-SPOT": false,
-        "OKEX:LING-USDT": false
+        "BITGET:LINGUSDT_SPBL": true,
+        "BYBIT:LINGUSDT-SPOT": true,
+        "OKEX:LING-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
