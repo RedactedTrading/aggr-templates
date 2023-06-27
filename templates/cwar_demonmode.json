@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:CWARUSDT-SPOT": false,
-        "KUCOIN:CWAR-USDT": false,
-        "MEXC:CWARUSDT": false
+        "BYBIT:CWARUSDT-SPOT": true,
+        "KUCOIN:CWAR-USDT": true,
+        "MEXC:CWARUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
