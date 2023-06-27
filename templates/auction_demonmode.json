@@ -907,14 +907,14 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:auctionbusd": false,
+        "BINANCE:auctionbusd": true,
         "BINANCE:auctionusdt": false,
-        "BITGET:AUCTIONUSDT_SPBL": false,
-        "COINBASE:AUCTION-USD": false,
-        "COINBASE:AUCTION-USDT": false,
-        "HITBTC:AUCTIONUSDT": false,
-        "MEXC:AUCTIONUSDT": false,
-        "OKEX:AUCTION-USDT": false
+        "BITGET:AUCTIONUSDT_SPBL": true,
+        "COINBASE:AUCTION-USD": true,
+        "COINBASE:AUCTION-USDT": true,
+        "HITBTC:AUCTIONUSDT": true,
+        "MEXC:AUCTIONUSDT": true,
+        "OKEX:AUCTION-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
