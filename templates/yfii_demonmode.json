@@ -910,15 +910,15 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:yfiibusd": false,
+        "BINANCE:yfiibusd": true,
         "BINANCE:yfiiusdt": false,
-        "BITGET:YFIIUSDT_SPBL": false,
-        "HITBTC:YFIIUSD": false,
-        "MEXC:YFIIUSDT": false,
-        "MEXC:YFII_USDT": false,
-        "OKEX:YFII-USDC": false,
-        "OKEX:YFII-USDT": false,
-        "OKEX:YFII-USDT-SWAP": false
+        "BITGET:YFIIUSDT_SPBL": true,
+        "HITBTC:YFIIUSD": true,
+        "MEXC:YFIIUSDT": true,
+        "MEXC:YFII_USDT": true,
+        "OKEX:YFII-USDC": true,
+        "OKEX:YFII-USDT": true,
+        "OKEX:YFII-USDT-SWAP": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
