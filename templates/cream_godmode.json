@@ -900,10 +900,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:creambusd": false,
+        "BINANCE:creambusd": true,
         "BYBIT:CREAMUSDT": false,
-        "KUCOIN:CREAM-USDT": false,
-        "MEXC:CREAM_USDT": false
+        "KUCOIN:CREAM-USDT": true,
+        "MEXC:CREAM_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
