@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:autobusd": false,
+        "BINANCE:autobusd": true,
         "BINANCE:autousdt": false,
-        "HITBTC:AUTOUSD": false,
-        "MEXC:AUTOUSDT": false
+        "HITBTC:AUTOUSD": true,
+        "MEXC:AUTOUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
