@@ -1105,7 +1105,7 @@
       "audioVolume": null,
       "showPairs": false,
       "showTrades": true,
-      "showLiquidations": false,
+      "showLiquidations": true,
       "showLogos": true,
       "monochromeLogos": false,
       "showTimeAgo": false,
