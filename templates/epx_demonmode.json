@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:epxbusd": false,
+        "BINANCE:epxbusd": true,
         "BINANCE:epxusdt": false,
-        "HITBTC:EPXUSDT": false,
-        "KUCOIN:EPX-USDT": false,
-        "MEXC:EPXUSDT": false
+        "HITBTC:EPXUSDT": true,
+        "KUCOIN:EPX-USDT": true,
+        "MEXC:EPXUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
