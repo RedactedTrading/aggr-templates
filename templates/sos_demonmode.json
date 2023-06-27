@@ -904,12 +904,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:SOSUSDT_SPBL": false,
-        "BYBIT:SOSUSDT-SPOT": false,
-        "KUCOIN:SOS-USDT": false,
-        "MEXC:1000SOS_USDT": false,
-        "MEXC:SOSUSDT": false,
-        "OKEX:SOS-USDT": false
+        "BITGET:SOSUSDT_SPBL": true,
+        "BYBIT:SOSUSDT-SPOT": true,
+        "KUCOIN:SOS-USDT": true,
+        "MEXC:1000SOS_USDT": true,
+        "MEXC:SOSUSDT": true,
+        "OKEX:SOS-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
