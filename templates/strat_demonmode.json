@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:stratbusd": false,
+        "BINANCE:stratbusd": true,
         "BINANCE:stratusdt": false,
-        "HITBTC:STRATUSD": false
+        "HITBTC:STRATUSD": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
