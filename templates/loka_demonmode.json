@@ -906,13 +906,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:lokabusd": false,
+        "BINANCE:lokabusd": true,
         "BINANCE:lokausdt": false,
-        "BITGET:LOKAUSDT_SPBL": false,
-        "COINBASE:LOKA-USD": false,
-        "HITBTC:LOKAUSDT": false,
-        "KUCOIN:LOKA-USDT": false,
-        "MEXC:LOKA_USDT": false
+        "BITGET:LOKAUSDT_SPBL": true,
+        "COINBASE:LOKA-USD": true,
+        "HITBTC:LOKAUSDT": true,
+        "KUCOIN:LOKA-USDT": true,
+        "MEXC:LOKA_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
