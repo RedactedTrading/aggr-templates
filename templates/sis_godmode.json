@@ -895,8 +895,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:SISUSDT-SPOT": false,
-        "OKEX:SIS-USDT": false
+        "BYBIT:SISUSDT-SPOT": true,
+        "OKEX:SIS-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
