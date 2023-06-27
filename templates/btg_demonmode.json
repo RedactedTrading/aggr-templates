@@ -907,13 +907,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:btgbusd": false,
+        "BINANCE:btgbusd": true,
         "BINANCE:btgusdt": false,
-        "BITFINEX:BTGUSD": false,
+        "BITFINEX:BTGUSD": true,
         "BITHUMB:BTG_KRW": true,
-        "BYBIT:BTGUSDT-SPOT": false,
-        "HITBTC:BTGUSD": false,
-        "HITBTC:BTGUSDC": false,
+        "BYBIT:BTGUSDT-SPOT": true,
+        "HITBTC:BTGUSD": true,
+        "HITBTC:BTGUSDC": true,
         "UPBIT:KRW-BTG": true
       },
       "barSpacing": 0.2929530100599413,
