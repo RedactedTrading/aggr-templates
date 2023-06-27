@@ -907,14 +907,14 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:forthbusd": false,
+        "BINANCE:forthbusd": true,
         "BINANCE:forthusdt": false,
-        "COINBASE:FORTH-USD": false,
-        "HITBTC:FORTHUSD": false,
-        "KRAKEN:FORTH/USD": false,
-        "KUCOIN:FORTH-USDT": false,
-        "MEXC:FORTHUSDT": false,
-        "OKEX:FORTH-USDT": false
+        "COINBASE:FORTH-USD": true,
+        "HITBTC:FORTHUSD": true,
+        "KRAKEN:FORTH/USD": true,
+        "KUCOIN:FORTH-USDT": true,
+        "MEXC:FORTHUSDT": true,
+        "OKEX:FORTH-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
