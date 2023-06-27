@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE_FUTURES:footballusdt": false,
-        "BITGET:FOOTBALLUSDT_UMCBL": false,
-        "MEXC:FOOTBALL_USDT": false
+        "BINANCE_FUTURES:footballusdt": true,
+        "BITGET:FOOTBALLUSDT_UMCBL": true,
+        "MEXC:FOOTBALL_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
