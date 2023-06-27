@@ -901,11 +901,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:barbusd": false,
+        "BINANCE:barbusd": true,
         "BINANCE:barusdt": false,
-        "BITGET:BARUSDT_SPBL": false,
-        "BYBIT:BARUSDT-SPOT": false,
-        "MEXC:BARUSDT": false
+        "BITGET:BARUSDT_SPBL": true,
+        "BYBIT:BARUSDT-SPOT": true,
+        "MEXC:BARUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
