@@ -902,7 +902,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITGET:DFIUSDT_SPBL": true,
-        "BYBIT:DFIUSDT-SPOT": true,
+        "BYBIT:DFIUSDT-SPOT": false,
         "HITBTC:DFIUSDT": true,
         "KUCOIN:DFI-USDT": true,
         "MEXC:DFIUSDT": true
