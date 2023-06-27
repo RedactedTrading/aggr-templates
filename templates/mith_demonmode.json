@@ -900,9 +900,9 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:mithusdt": false,
-        "BITGET:MITHUSDT_SPBL": false,
-        "HITBTC:MITHUSD": false,
-        "OKEX:MITH-USDT": false
+        "BITGET:MITHUSDT_SPBL": true,
+        "HITBTC:MITHUSD": true,
+        "OKEX:MITH-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
