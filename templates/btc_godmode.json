@@ -524,7 +524,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var m = BINANCE:btcusdt;\nplotcandlestick(m.open, m.high, m.low, m.close);",
+          "script": "var m = BINANCE:btcusdt;plotcandlestick(m.open, m.high, m.low, m.close);",
           "enabled": true,
           "name": "Price",
           "options": {
