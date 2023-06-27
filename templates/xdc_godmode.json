@@ -903,12 +903,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITFINEX:XDCUSD": false,
-        "BITGET:XDCUSDT_SPBL": false,
-        "BYBIT:XDCUSDT-SPOT": false,
-        "HITBTC:XDCUSD": false,
-        "HITBTC:XDCUSDC": false,
-        "KUCOIN:XDC-USDT": false
+        "BITFINEX:XDCUSD": true,
+        "BITGET:XDCUSDT_SPBL": true,
+        "BYBIT:XDCUSDT-SPOT": true,
+        "HITBTC:XDCUSD": true,
+        "HITBTC:XDCUSDC": true,
+        "KUCOIN:XDC-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
