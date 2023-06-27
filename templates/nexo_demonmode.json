@@ -903,12 +903,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:nexobusd": false,
+        "BINANCE:nexobusd": true,
         "BINANCE:nexousdt": false,
-        "BITGET:NEXOUSDT_SPBL": false,
-        "BYBIT:NEXOUSDT-SPOT": false,
-        "HITBTC:NEXOUSD": false,
-        "HITBTC:NEXOUSDC": false
+        "BITGET:NEXOUSDT_SPBL": true,
+        "BYBIT:NEXOUSDT-SPOT": true,
+        "HITBTC:NEXOUSD": true,
+        "HITBTC:NEXOUSDC": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
