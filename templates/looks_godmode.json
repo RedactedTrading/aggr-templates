@@ -918,8 +918,8 @@
       "hiddenMarkets": {
         "BITGET:LOOKSUSDT_SPBL": true,
         "BITGET:LOOKSUSDT_UMCBL": true,
-        "BYBIT:LOOKSUSDT": false,
-        "BYBIT:LOOKSUSDT-SPOT": true,
+        "BYBIT:LOOKSUSDT": true,
+        "BYBIT:LOOKSUSDT-SPOT": false,
         "HITBTC:LOOKSUSDT": true,
         "KUCOIN:LOOKS-USDT": true,
         "KUCOIN:LOOKSUSDTM": true,
