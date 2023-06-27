@@ -900,9 +900,9 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:funusdt": false,
-        "BITFINEX:FUNUSD": false,
-        "HITBTC:FUNUSD": false,
-        "MEXC:FUNUSDT": false
+        "BITFINEX:FUNUSD": true,
+        "HITBTC:FUNUSD": true,
+        "MEXC:FUNUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
