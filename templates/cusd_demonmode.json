@@ -895,8 +895,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:CUSDUSDT_SPBL": false,
-        "BYBIT:CUSDUSDT-SPOT": false
+        "BITGET:CUSDUSDT_SPBL": true,
+        "BYBIT:CUSDUSDT-SPOT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
