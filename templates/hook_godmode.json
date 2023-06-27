@@ -920,8 +920,8 @@
         "BITGET:HOOKUSDT_SPBL": true,
         "BITGET:HOOKUSDT_UMCBL": true,
         "BITHUMB:HOOK_KRW": true,
-        "BYBIT:HOOKUSDT": false,
-        "BYBIT:HOOKUSDT-SPOT": true,
+        "BYBIT:HOOKUSDT": true,
+        "BYBIT:HOOKUSDT-SPOT": false,
         "HITBTC:HOOKUSDT": true,
         "KUCOIN:HOOKUSDTM": true,
         "MEXC:HOOK_USDT": true
