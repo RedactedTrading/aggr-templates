@@ -899,10 +899,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:usdpbusd": false,
+        "BINANCE:usdpbusd": true,
         "BINANCE:usdpusdt": false,
-        "KUCOIN:USDP-USDT": false,
-        "MEXC:USDPUSDT": false
+        "KUCOIN:USDP-USDT": true,
+        "MEXC:USDPUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
