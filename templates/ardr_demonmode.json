@@ -898,7 +898,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:ardrusdt": false,
-        "HITBTC:ARDRUSD": false,
+        "HITBTC:ARDRUSD": true,
         "UPBIT:KRW-ARDR": true
       },
       "barSpacing": 0.2929530100599413,
