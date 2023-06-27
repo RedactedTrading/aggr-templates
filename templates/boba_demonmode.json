@@ -912,13 +912,13 @@
       "hiddenMarkets": {
         "BITHUMB:BOBA_KRW": true,
         "BYBIT:BOBAUSDT": false,
-        "BYBIT:BOBAUSDT-SPOT": false,
-        "COINBASE:BOBA-USD": false,
-        "COINBASE:BOBA-USDT": false,
-        "KRAKEN:BOBA/USD": false,
-        "KUCOIN:BOBA-USDT": false,
-        "MEXC:BOBAUSDT": false,
-        "MEXC:BOBA_USDT": false
+        "BYBIT:BOBAUSDT-SPOT": true,
+        "COINBASE:BOBA-USD": true,
+        "COINBASE:BOBA-USDT": true,
+        "KRAKEN:BOBA/USD": true,
+        "KUCOIN:BOBA-USDT": true,
+        "MEXC:BOBAUSDT": true,
+        "MEXC:BOBA_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
