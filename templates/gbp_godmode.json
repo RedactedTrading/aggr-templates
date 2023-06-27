@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:gbpbusd": false,
+        "BINANCE:gbpbusd": true,
         "BINANCE:gbpusdt": false,
-        "KRAKEN:GBP/USD": false
+        "KRAKEN:GBP/USD": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
