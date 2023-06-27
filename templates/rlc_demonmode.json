@@ -929,7 +929,7 @@
         "BITGET:RLCUSDT_UMCBL": true,
         "BITHUMB:RLC_KRW": true,
         "BTCTURK:RLCTRY": true,
-        "BYBIT:RLCUSDT": false,
+        "BYBIT:RLCUSDT": true,
         "COINBASE:RLC-USD": true,
         "HITBTC:RLCUSDT": true,
         "KRAKEN:PF_RLCUSD": true,
