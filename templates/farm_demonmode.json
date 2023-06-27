@@ -905,13 +905,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:farmbusd": false,
+        "BINANCE:farmbusd": true,
         "BINANCE:farmusdt": false,
-        "COINBASE:FARM-USD": false,
-        "COINBASE:FARM-USDT": false,
-        "HITBTC:FARMUSD": false,
-        "KRAKEN:FARM/USD": false,
-        "MEXC:FARMUSDT": false
+        "COINBASE:FARM-USD": true,
+        "COINBASE:FARM-USDT": true,
+        "HITBTC:FARMUSD": true,
+        "KRAKEN:FARM/USD": true,
+        "MEXC:FARMUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
