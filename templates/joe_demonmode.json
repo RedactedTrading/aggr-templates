@@ -912,16 +912,16 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:joebusd": false,
+        "BINANCE:joebusd": true,
         "BINANCE:joeusdt": false,
-        "BINANCE_FUTURES:joeusdt": false,
-        "BITGET:JOEUSDT_SPBL": false,
-        "BITGET:JOEUSDT_UMCBL": false,
+        "BINANCE_FUTURES:joeusdt": true,
+        "BITGET:JOEUSDT_SPBL": true,
+        "BITGET:JOEUSDT_UMCBL": true,
         "BYBIT:JOEUSDT": false,
-        "HITBTC:JOEUSDT": false,
-        "KUCOIN:JOEUSDTM": false,
-        "MEXC:JOE_USDT": false,
-        "OKEX:JOE-USDT": false
+        "HITBTC:JOEUSDT": true,
+        "KUCOIN:JOEUSDTM": true,
+        "MEXC:JOE_USDT": true,
+        "OKEX:JOE-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
