@@ -912,16 +912,16 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:dentbusd": false,
+        "BINANCE:dentbusd": true,
         "BINANCE:dentusdt": false,
-        "BINANCE_FUTURES:dentusdt": false,
-        "BITGET:DENTUSDT_SPBL": false,
-        "BITGET:DENTUSDT_UMCBL": false,
+        "BINANCE_FUTURES:dentusdt": true,
+        "BITGET:DENTUSDT_SPBL": true,
+        "BITGET:DENTUSDT_UMCBL": true,
         "BYBIT:DENTUSDT": false,
-        "HITBTC:DENTUSD": false,
-        "KRAKEN:DENT/USD": false,
-        "KUCOIN:DENTUSDTM": false,
-        "MEXC:DENT_USDT": false
+        "HITBTC:DENTUSD": true,
+        "KRAKEN:DENT/USD": true,
+        "KUCOIN:DENTUSDTM": true,
+        "MEXC:DENT_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
