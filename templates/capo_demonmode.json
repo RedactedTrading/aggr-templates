@@ -902,11 +902,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:CAPOUSDT_SPBL": false,
-        "BYBIT:CAPOUSDT-SPOT": false,
-        "MEXC:CAPOUSDT": false,
-        "MEXC:CAPO_USDT": false,
-        "OKEX:CAPO-USDT": false
+        "BITGET:CAPOUSDT_SPBL": true,
+        "BYBIT:CAPOUSDT-SPOT": true,
+        "MEXC:CAPOUSDT": true,
+        "MEXC:CAPO_USDT": true,
+        "OKEX:CAPO-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
