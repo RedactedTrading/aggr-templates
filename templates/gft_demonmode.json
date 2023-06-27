@@ -910,15 +910,15 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:gftbusd": false,
-        "BITGET:GFTUSDT_SPBL": false,
-        "BITGET:GFTUSDT_UMCBL": false,
+        "BINANCE:gftbusd": true,
+        "BITGET:GFTUSDT_SPBL": true,
+        "BITGET:GFTUSDT_UMCBL": true,
         "BYBIT:GFTUSDT": false,
-        "KUCOIN:GFT-USDT": false,
-        "MEXC:GFTUSDT": false,
-        "MEXC:GFT_USDT": false,
-        "OKEX:GFT-USDT": false,
-        "OKEX:GFT-USDT-SWAP": false
+        "KUCOIN:GFT-USDT": true,
+        "MEXC:GFTUSDT": true,
+        "MEXC:GFT_USDT": true,
+        "OKEX:GFT-USDT": true,
+        "OKEX:GFT-USDT-SWAP": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
