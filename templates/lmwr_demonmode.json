@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:LMWRUSDT-SPOT": false,
-        "KRAKEN:LMWR/USD": false,
-        "KUCOIN:LMWR-USDT": false
+        "BYBIT:LMWRUSDT-SPOT": true,
+        "KRAKEN:LMWR/USD": true,
+        "KUCOIN:LMWR-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
