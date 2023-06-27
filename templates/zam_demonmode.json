@@ -895,8 +895,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:ZAMUSDT-SPOT": false,
-        "MEXC:ZAMUSDT": false
+        "BYBIT:ZAMUSDT-SPOT": true,
+        "MEXC:ZAMUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
