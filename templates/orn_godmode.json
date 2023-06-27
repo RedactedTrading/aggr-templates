@@ -907,14 +907,14 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:ornbusd": false,
+        "BINANCE:ornbusd": true,
         "BINANCE:ornusdt": false,
-        "BITGET:ORNUSDT_SPBL": false,
-        "COINBASE:ORN-USD": false,
-        "COINBASE:ORN-USDT": false,
-        "HITBTC:ORNUSD": false,
-        "KUCOIN:ORN-USDT": false,
-        "MEXC:ORNUSDT": false
+        "BITGET:ORNUSDT_SPBL": true,
+        "COINBASE:ORN-USD": true,
+        "COINBASE:ORN-USDT": true,
+        "HITBTC:ORNUSD": true,
+        "KUCOIN:ORN-USDT": true,
+        "MEXC:ORNUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
