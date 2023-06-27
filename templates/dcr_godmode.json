@@ -903,12 +903,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:dcrbusd": false,
+        "BINANCE:dcrbusd": true,
         "BINANCE:dcrusdt": false,
-        "BYBIT:DCRUSDT-SPOT": false,
-        "HITBTC:DCRUSD": false,
-        "MEXC:DCRUSDT": false,
-        "OKEX:DCR-USDT": false
+        "BYBIT:DCRUSDT-SPOT": true,
+        "HITBTC:DCRUSD": true,
+        "MEXC:DCRUSDT": true,
+        "OKEX:DCR-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
