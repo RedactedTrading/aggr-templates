@@ -911,16 +911,16 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:nmrbusd": false,
+        "BINANCE:nmrbusd": true,
         "BINANCE:nmrusdt": false,
-        "BITGET:NMRUSDT_SPBL": false,
+        "BITGET:NMRUSDT_SPBL": true,
         "BITHUMB:NMR_KRW": true,
-        "COINBASE:NMR-USD": false,
-        "HITBTC:NMRUSD": false,
-        "KRAKEN:NMR/USD": false,
-        "KUCOIN:NMR-USDT": false,
-        "MEXC:NMRUSDT": false,
-        "OKEX:NMR-USDT": false
+        "COINBASE:NMR-USD": true,
+        "HITBTC:NMRUSD": true,
+        "KRAKEN:NMR/USD": true,
+        "KUCOIN:NMR-USDT": true,
+        "MEXC:NMRUSDT": true,
+        "OKEX:NMR-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
