@@ -903,12 +903,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:OASUSDT_SPBL": false,
+        "BITGET:OASUSDT_SPBL": true,
         "BITHUMB:OAS_KRW": true,
-        "BYBIT:OASUSDT-SPOT": false,
-        "KUCOIN:OAS-USDT": false,
-        "MEXC:OASUSDT": false,
-        "OKEX:OAS-USDT": false
+        "BYBIT:OASUSDT-SPOT": true,
+        "KUCOIN:OAS-USDT": true,
+        "MEXC:OASUSDT": true,
+        "OKEX:OAS-USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
