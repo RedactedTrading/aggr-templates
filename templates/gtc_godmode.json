@@ -916,18 +916,18 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:gtcbusd": false,
+        "BINANCE:gtcbusd": true,
         "BINANCE:gtcusdt": false,
-        "BINANCE_FUTURES:gtcusdt": false,
-        "BITGET:GTCUSDT_SPBL": false,
-        "BITGET:GTCUSDT_UMCBL": false,
+        "BINANCE_FUTURES:gtcusdt": true,
+        "BITGET:GTCUSDT_SPBL": true,
+        "BITGET:GTCUSDT_UMCBL": true,
         "BYBIT:GTCUSDT": false,
-        "COINBASE:GTC-USD": false,
-        "HITBTC:GTCUSD": false,
-        "KRAKEN:GTC/USD": false,
-        "KUCOIN:GTC-USDT": false,
-        "MEXC:GTCUSDT": false,
-        "MEXC:GTC_USDT": false
+        "COINBASE:GTC-USD": true,
+        "HITBTC:GTCUSD": true,
+        "KRAKEN:GTC/USD": true,
+        "KUCOIN:GTC-USDT": true,
+        "MEXC:GTCUSDT": true,
+        "MEXC:GTC_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
