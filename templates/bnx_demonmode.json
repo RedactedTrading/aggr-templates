@@ -908,14 +908,14 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:bnxbusd": false,
+        "BINANCE:bnxbusd": true,
         "BINANCE:bnxusdt": false,
-        "BINANCE_FUTURES:bnxusdt": false,
-        "BITGET:BNXUSDT_SPBL": false,
-        "BITGET:BNXUSDT_UMCBL": false,
+        "BINANCE_FUTURES:bnxusdt": true,
+        "BITGET:BNXUSDT_SPBL": true,
+        "BITGET:BNXUSDT_UMCBL": true,
         "BYBIT:BNXUSDT": false,
-        "HITBTC:BNXUSDT": false,
-        "MEXC:BNXUSDT": false
+        "HITBTC:BNXUSDT": true,
+        "MEXC:BNXUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
