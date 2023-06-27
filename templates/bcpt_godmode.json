@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:bcpttusd": false,
+        "BINANCE:bcpttusd": true,
         "BINANCE:bcptusdc": false,
-        "HITBTC:BCPTUSDT": false
+        "HITBTC:BCPTUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
