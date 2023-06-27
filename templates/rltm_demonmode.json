@@ -897,9 +897,9 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:RLTMUSDT-SPOT": false,
-        "KUCOIN:RLTM-USDT": false,
-        "MEXC:RLTMUSDT": false
+        "BYBIT:RLTMUSDT-SPOT": true,
+        "KUCOIN:RLTM-USDT": true,
+        "MEXC:RLTMUSDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
