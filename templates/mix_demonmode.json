@@ -898,7 +898,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BITHUMB:MIX_KRW": true,
-        "BYBIT:MIXUSDT-SPOT": true,
+        "BYBIT:MIXUSDT-SPOT": false,
         "MEXC:MIXUSDT": true
       },
       "barSpacing": 0.2929530100599413,
