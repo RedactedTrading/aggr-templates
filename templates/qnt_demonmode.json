@@ -929,7 +929,7 @@
         "BINANCE_FUTURES:qntusdt": true,
         "BITGET:QNTUSDT_SPBL": true,
         "BTCTURK:QNTTRY": true,
-        "BYBIT:QNTUSDT-SPOT": true,
+        "BYBIT:QNTUSDT-SPOT": false,
         "COINBASE:QNT-USD": true,
         "COINBASE:QNT-USDT": true,
         "HITBTC:QNTUSDC": true,
