@@ -907,13 +907,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:powrbusd": false,
+        "BINANCE:powrbusd": true,
         "BINANCE:powrusdt": false,
-        "BITGET:POWRUSDT_SPBL": false,
+        "BITGET:POWRUSDT_SPBL": true,
         "BITHUMB:POWR_KRW": true,
-        "COINBASE:POWR-USD": false,
-        "COINBASE:POWR-USDT": false,
-        "KRAKEN:POWR/USD": false,
+        "COINBASE:POWR-USD": true,
+        "COINBASE:POWR-USDT": true,
+        "KRAKEN:POWR/USD": true,
         "UPBIT:KRW-POWR": true
       },
       "barSpacing": 0.2929530100599413,
