@@ -902,11 +902,11 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BITGET:TENETUSDT_SPBL": false,
-        "BYBIT:TENETUSDT-SPOT": false,
-        "KUCOIN:TENET-USDT": false,
-        "MEXC:TENETUSDT": false,
-        "MEXC:TENET_USDT": false
+        "BITGET:TENETUSDT_SPBL": true,
+        "BYBIT:TENETUSDT-SPOT": true,
+        "KUCOIN:TENET-USDT": true,
+        "MEXC:TENETUSDT": true,
+        "MEXC:TENET_USDT": true
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
