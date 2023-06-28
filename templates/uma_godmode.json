@@ -14,26 +14,26 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BINANCE:umabusd",
             "BINANCE:umausdt",
+            "BYBIT:UMAUSDT-SPOT",
+            "BYBIT:UMAUSDT",
+            "BINANCE:umabusd",
             "BINANCE_FUTURES:umausdt",
             "BITGET:UMAUSDT_SPBL",
             "BITGET:UMAUSDT_UMCBL",
-            "BITHUMB:UMA_KRW",
-            "BTCTURK:UMATRY",
             "BTCTURK:UMAUSDT",
-            "BYBIT:UMAUSDT",
-            "BYBIT:UMAUSDT-SPOT",
             "COINBASE:UMA-USD",
             "HITBTC:UMAUSD",
-            "HITBTC:UMAUSDC",
             "KRAKEN:UMA/USD",
             "KUCOIN:UMA-USDT",
             "KUCOIN:UMAUSDTM",
             "MEXC:UMAUSDT",
             "MEXC:UMA_USDT",
             "OKEX:UMA-USDT",
-            "OKEX:UMA-USDT-SWAP"
+            "OKEX:UMA-USDT-SWAP",
+            "BITHUMB:UMA_KRW",
+            "BTCTURK:UMATRY",
+            "HITBTC:UMAUSDC"
           ],
           "zoom": 1
         },
@@ -43,9 +43,9 @@
           "type": "trades",
           "zoom": 1,
           "markets": [
+            "BYBIT:UMAUSDT",
             "BINANCE_FUTURES:umausdt",
             "BITGET:UMAUSDT_UMCBL",
-            "BYBIT:UMAUSDT",
             "KUCOIN:UMAUSDTM",
             "MEXC:UMA_USDT",
             "OKEX:UMA-USDT-SWAP"
@@ -57,20 +57,20 @@
           "type": "trades",
           "zoom": 1,
           "markets": [
-            "BINANCE:umabusd",
             "BINANCE:umausdt",
-            "BITGET:UMAUSDT_SPBL",
-            "BITHUMB:UMA_KRW",
-            "BTCTURK:UMATRY",
-            "BTCTURK:UMAUSDT",
             "BYBIT:UMAUSDT-SPOT",
+            "BINANCE:umabusd",
+            "BITGET:UMAUSDT_SPBL",
+            "BTCTURK:UMAUSDT",
             "COINBASE:UMA-USD",
             "HITBTC:UMAUSD",
-            "HITBTC:UMAUSDC",
             "KRAKEN:UMA/USD",
             "KUCOIN:UMA-USDT",
             "MEXC:UMAUSDT",
-            "OKEX:UMA-USDT"
+            "OKEX:UMA-USDT",
+            "BITHUMB:UMA_KRW",
+            "BTCTURK:UMATRY",
+            "HITBTC:UMAUSDC"
           ]
         }
       },
@@ -111,7 +111,7 @@
       "calculateSlippage": false,
       "wsProxyUrl": null,
       "disableAnimations": true,
-      "autoHideHeaders": false,
+      "autoHideHeaders": true,
       "autoHideNames": true,
       "theme": "dark",
       "backgroundColor": "rgb(16,17,21)",
@@ -153,7 +153,7 @@
       "searchQuotes": {
         "USD": true,
         "USDT": true,
-        "USDC": false,
+        "USDC": true,
         "BUSD": true
       },
       "previousSearchSelections": [],
@@ -478,7 +478,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "plotcandlestick(avg_ohlc(bar))",
+          "script": "var x0 = BINANCE:umausdt;var x1 = BYBIT:UMAUSDT-SPOT;var x2 = OKEX:UMA-USDT;plotcandlestick((x0.open+x1.open+x2.open) / 3,(x0.high+x1.high+x2.high) / 3,(x0.low+x1.low+x2.low) / 3,(x0.close+x1.close+x2.close) / 3);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -506,7 +506,7 @@
           "series": [
             "price"
           ],
-          "unsavedChanges": true,
+          "unsavedChanges": false,
           "navigationState": {
             "sections": [
               "position",
@@ -932,26 +932,26 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:umabusd": true,
         "BINANCE:umausdt": false,
-        "BINANCE_FUTURES:umausdt": true,
-        "BITGET:UMAUSDT_SPBL": true,
-        "BITGET:UMAUSDT_UMCBL": true,
+        "BYBIT:UMAUSDT-SPOT": false,
+        "BYBIT:UMAUSDT": false,
+        "BINANCE:umabusd": false,
+        "BINANCE_FUTURES:umausdt": false,
+        "BITGET:UMAUSDT_SPBL": false,
+        "BITGET:UMAUSDT_UMCBL": false,
+        "BTCTURK:UMAUSDT": true,
+        "COINBASE:UMA-USD": false,
+        "HITBTC:UMAUSD": false,
+        "KRAKEN:UMA/USD": false,
+        "KUCOIN:UMA-USDT": false,
+        "KUCOIN:UMAUSDTM": false,
+        "MEXC:UMAUSDT": false,
+        "MEXC:UMA_USDT": false,
+        "OKEX:UMA-USDT": false,
+        "OKEX:UMA-USDT-SWAP": false,
         "BITHUMB:UMA_KRW": true,
         "BTCTURK:UMATRY": true,
-        "BTCTURK:UMAUSDT": true,
-        "BYBIT:UMAUSDT": true,
-        "BYBIT:UMAUSDT-SPOT": false,
-        "COINBASE:UMA-USD": true,
-        "HITBTC:UMAUSD": true,
-        "HITBTC:UMAUSDC": true,
-        "KRAKEN:UMA/USD": true,
-        "KUCOIN:UMA-USDT": true,
-        "KUCOIN:UMAUSDTM": true,
-        "MEXC:UMAUSDT": true,
-        "MEXC:UMA_USDT": true,
-        "OKEX:UMA-USDT": true,
-        "OKEX:UMA-USDT-SWAP": true
+        "HITBTC:UMAUSDC": false
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
@@ -966,7 +966,7 @@
       "liquidations": [
         {
           "id": "liquidation_threshold",
-          "amount": 57275,
+          "amount": 1500.0,
           "buyColor": "rgba(236,64,122,0.5)",
           "sellColor": "rgba(255,152,0,0.5)",
           "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*2,0,,,'sine')\nplay(329.63, srqtR, srqtR*4,0.08,,,'sine')",
@@ -974,7 +974,7 @@
         },
         {
           "id": "liquidation_significant",
-          "amount": 217232.6,
+          "amount": 4242.640687119286,
           "buyColor": "rgba(236,64,122,0.6)",
           "sellColor": "rgba(255,152,0,0.7)",
           "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*4,0,,,'sine')\nplay(329.63, srqtR, srqtR*6,0.08,,,'sine')",
@@ -982,7 +982,7 @@
         },
         {
           "id": "liquidation_huge",
-          "amount": 1585053.5,
+          "amount": 7794.228634059948,
           "buyGif": "flying money",
           "sellGif": "flying money",
           "buyColor": "rgba(236,64,122,0.7)",
@@ -992,7 +992,7 @@
         },
         {
           "id": "liquidation_rare",
-          "amount": 15848334.1,
+          "amount": 12000.0,
           "buyGif": "explosion",
           "sellGif": "explosion",
           "buyColor": "rgb(156,39,176)",
@@ -1004,7 +1004,7 @@
       "thresholds": [
         {
           "id": "threshold",
-          "amount": 115953.5308551202,
+          "amount": 1500.0,
           "buyColor": "rgb(0,19,20)",
           "sellColor": "rgb(30,0,15)",
           "buyAudio": "play(659.26, gain / 10, 0.1 + gain / 7)",
@@ -1012,7 +1012,7 @@
         },
         {
           "id": "significant",
-          "amount": 640205.281914687,
+          "amount": 4242.640687119286,
           "buyColor": "rgb(10,85,142)",
           "sellColor": "rgb(65,0,33)",
           "buyAudio": "play(659.26, 0.05 + gain / 10, 0.2 + ratio * 0.23,0,,0);\nplay(830.6, 0.05 + gain / 10, 0.2 + ratio * 0.23, 0.08,,0)",
@@ -1020,7 +1020,7 @@
         },
         {
           "id": "rare",
-          "amount": 2160228.6504333816,
+          "amount": 7794.228634059948,
           "buyGif": "explosion",
           "sellGif": "explosion",
           "buyColor": "rgb(100,181,246)",
@@ -1030,7 +1030,7 @@
         },
         {
           "id": "huge",
-          "amount": 4532726.439922552,
+          "amount": 12000.0,
           "buyGif": "cash bullish",
           "sellGif": "cash bearish",
           "buyColor": "rgb(16,133,222)",
@@ -1040,8 +1040,10 @@
         }
       ],
       "audioThreshold": null,
-      "multipliers": {},
-      "maxRows": "477",
+      "multipliers": {
+        "COINBASE:UMA-USD": 0.5
+      },
+      "maxRows": "500",
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
@@ -1053,7 +1055,7 @@
       "showTimeAgo": false,
       "showPrices": true,
       "showHistograms": true,
-      "thresholdsMultipler": 1.45,
+      "thresholdsMultipler": 1.0,
       "_id": "trades",
       "showThresholdsAsTable": false
     },
@@ -1061,7 +1063,7 @@
       "liquidations": [
         {
           "id": "liquidation_threshold",
-          "amount": 22000,
+          "amount": 1500.0,
           "buyColor": "rgba(236,64,122,0.5)",
           "sellColor": "rgba(255,152,0,0.5)",
           "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*2,0,,,'sine')\nplay(329.63, srqtR, srqtR*4,0.08,,,'sine')",
@@ -1069,7 +1071,7 @@
         },
         {
           "id": "liquidation_significant",
-          "amount": 44000,
+          "amount": 4242.640687119286,
           "buyColor": "rgba(236,64,122,0.6)",
           "sellColor": "rgba(255,152,0,0.7)",
           "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*4,0,,,'sine')\nplay(329.63, srqtR, srqtR*6,0.08,,,'sine')",
@@ -1077,7 +1079,7 @@
         },
         {
           "id": "liquidation_huge",
-          "amount": 88000,
+          "amount": 7794.228634059948,
           "buyGif": "flying money",
           "sellGif": "flying money",
           "buyColor": "rgba(236,64,122,0.7)",
@@ -1087,7 +1089,7 @@
         },
         {
           "id": "liquidation_rare",
-          "amount": 440000,
+          "amount": 12000.0,
           "buyGif": "explosion",
           "sellGif": "explosion",
           "buyColor": "rgb(156,39,176)",
@@ -1099,7 +1101,7 @@
       "thresholds": [
         {
           "id": "threshold",
-          "amount": 25818.5,
+          "amount": 1500.0,
           "buyColor": "rgb(0,19,20)",
           "sellColor": "rgb(30,0,15)",
           "buyAudio": "play(659.26, gain / 10, 0.1 + gain / 7)",
@@ -1108,7 +1110,7 @@
         },
         {
           "id": "significant",
-          "amount": 115089.7,
+          "amount": 4242.640687119286,
           "buyColor": "rgb(10,85,142)",
           "sellColor": "rgb(65,0,33)",
           "buyAudio": "play(659.26, 0.05 + gain / 10, 0.2 + ratio * 0.23,0,,0);\nplay(830.6, 0.05 + gain / 10, 0.2 + ratio * 0.23, 0.08,,0)",
@@ -1116,7 +1118,7 @@
         },
         {
           "id": "rare",
-          "amount": 534562.9,
+          "amount": 7794.228634059948,
           "buyGif": "explosion",
           "sellGif": "explosion",
           "buyColor": "rgb(100,181,246)",
@@ -1127,7 +1129,7 @@
         },
         {
           "id": "huge",
-          "amount": 1444564.6,
+          "amount": 12000.0,
           "buyGif": "cash bullish",
           "sellGif": "cash bearish",
           "buyColor": "rgb(16,133,222)",
@@ -1138,16 +1140,16 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:BTC-USD": 0.53
+        "COINBASE:UMA-USD": 0.5
       },
       "showThresholdsAsTable": false,
-      "maxRows": "475",
+      "maxRows": "500",
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": false,
+      "showPairs": true,
       "showTrades": true,
-      "showLiquidations": false,
+      "showLiquidations": true,
       "showLogos": true,
       "monochromeLogos": false,
       "showTimeAgo": false,
