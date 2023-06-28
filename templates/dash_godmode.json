@@ -14,13 +14,12 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BINANCE:dashbusd",
             "BINANCE:dashusdt",
+            "BYBIT:DASHUSDT",
+            "BINANCE:dashbusd",
             "BINANCE_FUTURES:dashusdt",
             "BITGET:DASHUSDT_UMCBL",
-            "BTCTURK:DASHTRY",
             "BTCTURK:DASHUSDT",
-            "BYBIT:DASHUSDT",
             "COINBASE:DASH-USD",
             "HITBTC:DASHUSD",
             "KRAKEN:DASH/USD",
@@ -28,10 +27,11 @@
             "KUCOIN:DASH-USDT",
             "KUCOIN:DASHUSDTM",
             "MEXC:DASH_USDT",
-            "OKEX:DASH-USD-SWAP",
-            "OKEX:DASH-USDC",
             "OKEX:DASH-USDT",
-            "OKEX:DASH-USDT-SWAP"
+            "OKEX:DASH-USD-SWAP",
+            "OKEX:DASH-USDT-SWAP",
+            "BTCTURK:DASHTRY",
+            "OKEX:DASH-USDC"
           ],
           "zoom": 1
         },
@@ -41,9 +41,9 @@
           "type": "trades",
           "zoom": 1,
           "markets": [
+            "BYBIT:DASHUSDT",
             "BINANCE_FUTURES:dashusdt",
             "BITGET:DASHUSDT_UMCBL",
-            "BYBIT:DASHUSDT",
             "KRAKEN:PF_DASHUSD",
             "KUCOIN:DASHUSDTM",
             "MEXC:DASH_USDT",
@@ -57,16 +57,16 @@
           "type": "trades",
           "zoom": 1,
           "markets": [
-            "BINANCE:dashbusd",
             "BINANCE:dashusdt",
-            "BTCTURK:DASHTRY",
+            "BINANCE:dashbusd",
             "BTCTURK:DASHUSDT",
             "COINBASE:DASH-USD",
             "HITBTC:DASHUSD",
             "KRAKEN:DASH/USD",
             "KUCOIN:DASH-USDT",
-            "OKEX:DASH-USDC",
-            "OKEX:DASH-USDT"
+            "OKEX:DASH-USDT",
+            "BTCTURK:DASHTRY",
+            "OKEX:DASH-USDC"
           ]
         }
       },
@@ -107,7 +107,7 @@
       "calculateSlippage": false,
       "wsProxyUrl": null,
       "disableAnimations": true,
-      "autoHideHeaders": false,
+      "autoHideHeaders": true,
       "autoHideNames": true,
       "theme": "dark",
       "backgroundColor": "rgb(16,17,21)",
@@ -149,7 +149,7 @@
       "searchQuotes": {
         "USD": true,
         "USDT": true,
-        "USDC": false,
+        "USDC": true,
         "BUSD": true
       },
       "previousSearchSelections": [],
@@ -474,7 +474,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "plotcandlestick(avg_ohlc(bar))",
+          "script": "var x0 = BINANCE:dashusdt;var x1 = OKEX:DASH-USDT;plotcandlestick((x0.open+x1.open) / 2,(x0.high+x1.high) / 2,(x0.low+x1.low) / 2,(x0.close+x1.close) / 2);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -502,7 +502,7 @@
           "series": [
             "price"
           ],
-          "unsavedChanges": true,
+          "unsavedChanges": false,
           "navigationState": {
             "sections": [
               "position",
@@ -928,24 +928,24 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:dashbusd": true,
         "BINANCE:dashusdt": false,
-        "BINANCE_FUTURES:dashusdt": true,
-        "BITGET:DASHUSDT_UMCBL": true,
-        "BTCTURK:DASHTRY": true,
+        "BYBIT:DASHUSDT": false,
+        "BINANCE:dashbusd": false,
+        "BINANCE_FUTURES:dashusdt": false,
+        "BITGET:DASHUSDT_UMCBL": false,
         "BTCTURK:DASHUSDT": true,
-        "BYBIT:DASHUSDT": true,
-        "COINBASE:DASH-USD": true,
-        "HITBTC:DASHUSD": true,
-        "KRAKEN:DASH/USD": true,
-        "KRAKEN:PF_DASHUSD": true,
-        "KUCOIN:DASH-USDT": true,
-        "KUCOIN:DASHUSDTM": true,
-        "MEXC:DASH_USDT": true,
-        "OKEX:DASH-USD-SWAP": true,
-        "OKEX:DASH-USDC": true,
-        "OKEX:DASH-USDT": true,
-        "OKEX:DASH-USDT-SWAP": true
+        "COINBASE:DASH-USD": false,
+        "HITBTC:DASHUSD": false,
+        "KRAKEN:DASH/USD": false,
+        "KRAKEN:PF_DASHUSD": false,
+        "KUCOIN:DASH-USDT": false,
+        "KUCOIN:DASHUSDTM": false,
+        "MEXC:DASH_USDT": false,
+        "OKEX:DASH-USDT": false,
+        "OKEX:DASH-USD-SWAP": false,
+        "OKEX:DASH-USDT-SWAP": false,
+        "BTCTURK:DASHTRY": true,
+        "OKEX:DASH-USDC": false
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
@@ -960,7 +960,7 @@
       "liquidations": [
         {
           "id": "liquidation_threshold",
-          "amount": 57275,
+          "amount": 1500.0,
           "buyColor": "rgba(236,64,122,0.5)",
           "sellColor": "rgba(255,152,0,0.5)",
           "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*2,0,,,'sine')\nplay(329.63, srqtR, srqtR*4,0.08,,,'sine')",
@@ -968,7 +968,7 @@
         },
         {
           "id": "liquidation_significant",
-          "amount": 217232.6,
+          "amount": 4242.640687119286,
           "buyColor": "rgba(236,64,122,0.6)",
           "sellColor": "rgba(255,152,0,0.7)",
           "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*4,0,,,'sine')\nplay(329.63, srqtR, srqtR*6,0.08,,,'sine')",
@@ -976,7 +976,7 @@
         },
         {
           "id": "liquidation_huge",
-          "amount": 1585053.5,
+          "amount": 7794.228634059948,
           "buyGif": "flying money",
           "sellGif": "flying money",
           "buyColor": "rgba(236,64,122,0.7)",
@@ -986,7 +986,7 @@
         },
         {
           "id": "liquidation_rare",
-          "amount": 15848334.1,
+          "amount": 12000.0,
           "buyGif": "explosion",
           "sellGif": "explosion",
           "buyColor": "rgb(156,39,176)",
@@ -998,7 +998,7 @@
       "thresholds": [
         {
           "id": "threshold",
-          "amount": 115953.5308551202,
+          "amount": 1500.0,
           "buyColor": "rgb(0,19,20)",
           "sellColor": "rgb(30,0,15)",
           "buyAudio": "play(659.26, gain / 10, 0.1 + gain / 7)",
@@ -1006,7 +1006,7 @@
         },
         {
           "id": "significant",
-          "amount": 640205.281914687,
+          "amount": 4242.640687119286,
           "buyColor": "rgb(10,85,142)",
           "sellColor": "rgb(65,0,33)",
           "buyAudio": "play(659.26, 0.05 + gain / 10, 0.2 + ratio * 0.23,0,,0);\nplay(830.6, 0.05 + gain / 10, 0.2 + ratio * 0.23, 0.08,,0)",
@@ -1014,7 +1014,7 @@
         },
         {
           "id": "rare",
-          "amount": 2160228.6504333816,
+          "amount": 7794.228634059948,
           "buyGif": "explosion",
           "sellGif": "explosion",
           "buyColor": "rgb(100,181,246)",
@@ -1024,7 +1024,7 @@
         },
         {
           "id": "huge",
-          "amount": 4532726.439922552,
+          "amount": 12000.0,
           "buyGif": "cash bullish",
           "sellGif": "cash bearish",
           "buyColor": "rgb(16,133,222)",
@@ -1034,8 +1034,10 @@
         }
       ],
       "audioThreshold": null,
-      "multipliers": {},
-      "maxRows": "477",
+      "multipliers": {
+        "COINBASE:DASH-USD": 0.5
+      },
+      "maxRows": "500",
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
@@ -1047,7 +1049,7 @@
       "showTimeAgo": false,
       "showPrices": true,
       "showHistograms": true,
-      "thresholdsMultipler": 1.45,
+      "thresholdsMultipler": 1.0,
       "_id": "trades",
       "showThresholdsAsTable": false
     },
@@ -1055,7 +1057,7 @@
       "liquidations": [
         {
           "id": "liquidation_threshold",
-          "amount": 22000,
+          "amount": 1500.0,
           "buyColor": "rgba(236,64,122,0.5)",
           "sellColor": "rgba(255,152,0,0.5)",
           "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*2,0,,,'sine')\nplay(329.63, srqtR, srqtR*4,0.08,,,'sine')",
@@ -1063,7 +1065,7 @@
         },
         {
           "id": "liquidation_significant",
-          "amount": 44000,
+          "amount": 4242.640687119286,
           "buyColor": "rgba(236,64,122,0.6)",
           "sellColor": "rgba(255,152,0,0.7)",
           "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*4,0,,,'sine')\nplay(329.63, srqtR, srqtR*6,0.08,,,'sine')",
@@ -1071,7 +1073,7 @@
         },
         {
           "id": "liquidation_huge",
-          "amount": 88000,
+          "amount": 7794.228634059948,
           "buyGif": "flying money",
           "sellGif": "flying money",
           "buyColor": "rgba(236,64,122,0.7)",
@@ -1081,7 +1083,7 @@
         },
         {
           "id": "liquidation_rare",
-          "amount": 440000,
+          "amount": 12000.0,
           "buyGif": "explosion",
           "sellGif": "explosion",
           "buyColor": "rgb(156,39,176)",
@@ -1093,7 +1095,7 @@
       "thresholds": [
         {
           "id": "threshold",
-          "amount": 25818.5,
+          "amount": 1500.0,
           "buyColor": "rgb(0,19,20)",
           "sellColor": "rgb(30,0,15)",
           "buyAudio": "play(659.26, gain / 10, 0.1 + gain / 7)",
@@ -1102,7 +1104,7 @@
         },
         {
           "id": "significant",
-          "amount": 115089.7,
+          "amount": 4242.640687119286,
           "buyColor": "rgb(10,85,142)",
           "sellColor": "rgb(65,0,33)",
           "buyAudio": "play(659.26, 0.05 + gain / 10, 0.2 + ratio * 0.23,0,,0);\nplay(830.6, 0.05 + gain / 10, 0.2 + ratio * 0.23, 0.08,,0)",
@@ -1110,7 +1112,7 @@
         },
         {
           "id": "rare",
-          "amount": 534562.9,
+          "amount": 7794.228634059948,
           "buyGif": "explosion",
           "sellGif": "explosion",
           "buyColor": "rgb(100,181,246)",
@@ -1121,7 +1123,7 @@
         },
         {
           "id": "huge",
-          "amount": 1444564.6,
+          "amount": 12000.0,
           "buyGif": "cash bullish",
           "sellGif": "cash bearish",
           "buyColor": "rgb(16,133,222)",
@@ -1132,10 +1134,10 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:BTC-USD": 0.53
+        "COINBASE:DASH-USD": 0.5
       },
       "showThresholdsAsTable": false,
-      "maxRows": "475",
+      "maxRows": "500",
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
