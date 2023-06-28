@@ -14,30 +14,30 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BINANCE:sandbusd",
             "BINANCE:sandusdt",
-            "BINANCE_FUTURES:sandusd_perp",
+            "BYBIT:SANDUSDT-SPOT",
+            "BYBIT:SANDUSDT",
+            "BINANCE:sandbusd",
+            "BYBIT:SANDUSDC-SPOT",
             "BINANCE_FUTURES:sandusdt",
+            "BINANCE_FUTURES:sandusd_perp",
             "BITGET:SANDUSDT_SPBL",
             "BITGET:SANDUSDT_UMCBL",
-            "BITHUMB:SAND_KRW",
-            "BTCTURK:SANDTRY",
-            "BYBIT:SANDUSDC-SPOT",
-            "BYBIT:SANDUSDT",
-            "BYBIT:SANDUSDT-SPOT",
-            "COINBASE:SAND-USD",
             "COINBASE:SAND-USDT",
+            "COINBASE:SAND-USD",
             "HITBTC:SANDUSD",
-            "HITBTC:SANDUSDC",
-            "KRAKEN:PF_SANDUSD",
             "KRAKEN:SAND/USD",
+            "KRAKEN:PF_SANDUSD",
             "KUCOIN:SAND-USDT",
             "KUCOIN:SANDUSDTM",
             "MEXC:SAND_USDT",
-            "OKEX:SAND-USD-SWAP",
-            "OKEX:SAND-USDC",
             "OKEX:SAND-USDT",
+            "OKEX:SAND-USD-SWAP",
             "OKEX:SAND-USDT-SWAP",
+            "BITHUMB:SAND_KRW",
+            "BTCTURK:SANDTRY",
+            "HITBTC:SANDUSDC",
+            "OKEX:SAND-USDC",
             "UPBIT:KRW-SAND"
           ],
           "zoom": 1
@@ -48,10 +48,10 @@
           "type": "trades",
           "zoom": 1,
           "markets": [
-            "BINANCE_FUTURES:sandusd_perp",
-            "BINANCE_FUTURES:sandusdt",
-            "BITGET:SANDUSDT_UMCBL",
             "BYBIT:SANDUSDT",
+            "BINANCE_FUTURES:sandusdt",
+            "BINANCE_FUTURES:sandusd_perp",
+            "BITGET:SANDUSDT_UMCBL",
             "KRAKEN:PF_SANDUSD",
             "KUCOIN:SANDUSDTM",
             "MEXC:SAND_USDT",
@@ -65,21 +65,21 @@
           "type": "trades",
           "zoom": 1,
           "markets": [
-            "BINANCE:sandbusd",
             "BINANCE:sandusdt",
-            "BITGET:SANDUSDT_SPBL",
-            "BITHUMB:SAND_KRW",
-            "BTCTURK:SANDTRY",
-            "BYBIT:SANDUSDC-SPOT",
             "BYBIT:SANDUSDT-SPOT",
-            "COINBASE:SAND-USD",
+            "BINANCE:sandbusd",
+            "BYBIT:SANDUSDC-SPOT",
+            "BITGET:SANDUSDT_SPBL",
             "COINBASE:SAND-USDT",
+            "COINBASE:SAND-USD",
             "HITBTC:SANDUSD",
-            "HITBTC:SANDUSDC",
             "KRAKEN:SAND/USD",
             "KUCOIN:SAND-USDT",
-            "OKEX:SAND-USDC",
             "OKEX:SAND-USDT",
+            "BITHUMB:SAND_KRW",
+            "BTCTURK:SANDTRY",
+            "HITBTC:SANDUSDC",
+            "OKEX:SAND-USDC",
             "UPBIT:KRW-SAND"
           ]
         }
@@ -121,7 +121,7 @@
       "calculateSlippage": false,
       "wsProxyUrl": null,
       "disableAnimations": true,
-      "autoHideHeaders": false,
+      "autoHideHeaders": true,
       "autoHideNames": true,
       "theme": "dark",
       "backgroundColor": "rgb(16,17,21)",
@@ -163,7 +163,7 @@
       "searchQuotes": {
         "USD": true,
         "USDT": true,
-        "USDC": false,
+        "USDC": true,
         "BUSD": true
       },
       "previousSearchSelections": [],
@@ -488,7 +488,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "plotcandlestick(avg_ohlc(bar))",
+          "script": "var x0 = BINANCE:sandusdt;var x1 = BYBIT:SANDUSDT-SPOT;var x2 = OKEX:SAND-USDT;plotcandlestick((x0.open+x1.open+x2.open) / 3,(x0.high+x1.high+x2.high) / 3,(x0.low+x1.low+x2.low) / 3,(x0.close+x1.close+x2.close) / 3);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -516,7 +516,7 @@
           "series": [
             "price"
           ],
-          "unsavedChanges": true,
+          "unsavedChanges": false,
           "navigationState": {
             "sections": [
               "position",
@@ -942,30 +942,30 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:sandbusd": true,
         "BINANCE:sandusdt": false,
-        "BINANCE_FUTURES:sandusd_perp": true,
-        "BINANCE_FUTURES:sandusdt": true,
-        "BITGET:SANDUSDT_SPBL": true,
-        "BITGET:SANDUSDT_UMCBL": true,
+        "BYBIT:SANDUSDT-SPOT": false,
+        "BYBIT:SANDUSDT": false,
+        "BINANCE:sandbusd": false,
+        "BYBIT:SANDUSDC-SPOT": false,
+        "BINANCE_FUTURES:sandusdt": false,
+        "BINANCE_FUTURES:sandusd_perp": false,
+        "BITGET:SANDUSDT_SPBL": false,
+        "BITGET:SANDUSDT_UMCBL": false,
+        "COINBASE:SAND-USDT": false,
+        "COINBASE:SAND-USD": false,
+        "HITBTC:SANDUSD": false,
+        "KRAKEN:SAND/USD": false,
+        "KRAKEN:PF_SANDUSD": false,
+        "KUCOIN:SAND-USDT": false,
+        "KUCOIN:SANDUSDTM": false,
+        "MEXC:SAND_USDT": false,
+        "OKEX:SAND-USDT": false,
+        "OKEX:SAND-USD-SWAP": false,
+        "OKEX:SAND-USDT-SWAP": false,
         "BITHUMB:SAND_KRW": true,
         "BTCTURK:SANDTRY": true,
-        "BYBIT:SANDUSDC-SPOT": false,
-        "BYBIT:SANDUSDT": true,
-        "BYBIT:SANDUSDT-SPOT": false,
-        "COINBASE:SAND-USD": true,
-        "COINBASE:SAND-USDT": true,
-        "HITBTC:SANDUSD": true,
-        "HITBTC:SANDUSDC": true,
-        "KRAKEN:PF_SANDUSD": true,
-        "KRAKEN:SAND/USD": true,
-        "KUCOIN:SAND-USDT": true,
-        "KUCOIN:SANDUSDTM": true,
-        "MEXC:SAND_USDT": true,
-        "OKEX:SAND-USD-SWAP": true,
-        "OKEX:SAND-USDC": true,
-        "OKEX:SAND-USDT": true,
-        "OKEX:SAND-USDT-SWAP": true,
+        "HITBTC:SANDUSDC": false,
+        "OKEX:SAND-USDC": false,
         "UPBIT:KRW-SAND": true
       },
       "barSpacing": 0.2929530100599413,
@@ -981,7 +981,7 @@
       "liquidations": [
         {
           "id": "liquidation_threshold",
-          "amount": 57275,
+          "amount": 1500.0,
           "buyColor": "rgba(236,64,122,0.5)",
           "sellColor": "rgba(255,152,0,0.5)",
           "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*2,0,,,'sine')\nplay(329.63, srqtR, srqtR*4,0.08,,,'sine')",
@@ -989,7 +989,7 @@
         },
         {
           "id": "liquidation_significant",
-          "amount": 217232.6,
+          "amount": 4242.640687119286,
           "buyColor": "rgba(236,64,122,0.6)",
           "sellColor": "rgba(255,152,0,0.7)",
           "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*4,0,,,'sine')\nplay(329.63, srqtR, srqtR*6,0.08,,,'sine')",
@@ -997,7 +997,7 @@
         },
         {
           "id": "liquidation_huge",
-          "amount": 1585053.5,
+          "amount": 7794.228634059948,
           "buyGif": "flying money",
           "sellGif": "flying money",
           "buyColor": "rgba(236,64,122,0.7)",
@@ -1007,7 +1007,7 @@
         },
         {
           "id": "liquidation_rare",
-          "amount": 15848334.1,
+          "amount": 12000.0,
           "buyGif": "explosion",
           "sellGif": "explosion",
           "buyColor": "rgb(156,39,176)",
@@ -1019,7 +1019,7 @@
       "thresholds": [
         {
           "id": "threshold",
-          "amount": 115953.5308551202,
+          "amount": 1500.0,
           "buyColor": "rgb(0,19,20)",
           "sellColor": "rgb(30,0,15)",
           "buyAudio": "play(659.26, gain / 10, 0.1 + gain / 7)",
@@ -1027,7 +1027,7 @@
         },
         {
           "id": "significant",
-          "amount": 640205.281914687,
+          "amount": 4242.640687119286,
           "buyColor": "rgb(10,85,142)",
           "sellColor": "rgb(65,0,33)",
           "buyAudio": "play(659.26, 0.05 + gain / 10, 0.2 + ratio * 0.23,0,,0);\nplay(830.6, 0.05 + gain / 10, 0.2 + ratio * 0.23, 0.08,,0)",
@@ -1035,7 +1035,7 @@
         },
         {
           "id": "rare",
-          "amount": 2160228.6504333816,
+          "amount": 7794.228634059948,
           "buyGif": "explosion",
           "sellGif": "explosion",
           "buyColor": "rgb(100,181,246)",
@@ -1045,7 +1045,7 @@
         },
         {
           "id": "huge",
-          "amount": 4532726.439922552,
+          "amount": 12000.0,
           "buyGif": "cash bullish",
           "sellGif": "cash bearish",
           "buyColor": "rgb(16,133,222)",
@@ -1055,8 +1055,11 @@
         }
       ],
       "audioThreshold": null,
-      "multipliers": {},
-      "maxRows": "477",
+      "multipliers": {
+        "COINBASE:SAND-USDT": 0.5,
+        "COINBASE:SAND-USD": 0.5
+      },
+      "maxRows": "500",
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
@@ -1068,7 +1071,7 @@
       "showTimeAgo": false,
       "showPrices": true,
       "showHistograms": true,
-      "thresholdsMultipler": 1.45,
+      "thresholdsMultipler": 1.0,
       "_id": "trades",
       "showThresholdsAsTable": false
     },
@@ -1076,7 +1079,7 @@
       "liquidations": [
         {
           "id": "liquidation_threshold",
-          "amount": 22000,
+          "amount": 1500.0,
           "buyColor": "rgba(236,64,122,0.5)",
           "sellColor": "rgba(255,152,0,0.5)",
           "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*2,0,,,'sine')\nplay(329.63, srqtR, srqtR*4,0.08,,,'sine')",
@@ -1084,7 +1087,7 @@
         },
         {
           "id": "liquidation_significant",
-          "amount": 44000,
+          "amount": 4242.640687119286,
           "buyColor": "rgba(236,64,122,0.6)",
           "sellColor": "rgba(255,152,0,0.7)",
           "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*4,0,,,'sine')\nplay(329.63, srqtR, srqtR*6,0.08,,,'sine')",
@@ -1092,7 +1095,7 @@
         },
         {
           "id": "liquidation_huge",
-          "amount": 88000,
+          "amount": 7794.228634059948,
           "buyGif": "flying money",
           "sellGif": "flying money",
           "buyColor": "rgba(236,64,122,0.7)",
@@ -1102,7 +1105,7 @@
         },
         {
           "id": "liquidation_rare",
-          "amount": 440000,
+          "amount": 12000.0,
           "buyGif": "explosion",
           "sellGif": "explosion",
           "buyColor": "rgb(156,39,176)",
@@ -1114,7 +1117,7 @@
       "thresholds": [
         {
           "id": "threshold",
-          "amount": 25818.5,
+          "amount": 1500.0,
           "buyColor": "rgb(0,19,20)",
           "sellColor": "rgb(30,0,15)",
           "buyAudio": "play(659.26, gain / 10, 0.1 + gain / 7)",
@@ -1123,7 +1126,7 @@
         },
         {
           "id": "significant",
-          "amount": 115089.7,
+          "amount": 4242.640687119286,
           "buyColor": "rgb(10,85,142)",
           "sellColor": "rgb(65,0,33)",
           "buyAudio": "play(659.26, 0.05 + gain / 10, 0.2 + ratio * 0.23,0,,0);\nplay(830.6, 0.05 + gain / 10, 0.2 + ratio * 0.23, 0.08,,0)",
@@ -1131,7 +1134,7 @@
         },
         {
           "id": "rare",
-          "amount": 534562.9,
+          "amount": 7794.228634059948,
           "buyGif": "explosion",
           "sellGif": "explosion",
           "buyColor": "rgb(100,181,246)",
@@ -1142,7 +1145,7 @@
         },
         {
           "id": "huge",
-          "amount": 1444564.6,
+          "amount": 12000.0,
           "buyGif": "cash bullish",
           "sellGif": "cash bearish",
           "buyColor": "rgb(16,133,222)",
@@ -1153,16 +1156,17 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:BTC-USD": 0.53
+        "COINBASE:SAND-USDT": 0.5,
+        "COINBASE:SAND-USD": 0.5
       },
       "showThresholdsAsTable": false,
-      "maxRows": "475",
+      "maxRows": "500",
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": false,
+      "showPairs": true,
       "showTrades": true,
-      "showLiquidations": false,
+      "showLiquidations": true,
       "showLogos": true,
       "monochromeLogos": false,
       "showTimeAgo": false,
