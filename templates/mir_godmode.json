@@ -14,14 +14,13 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BINANCE:mirbusd",
             "BINANCE:mirusdt",
+            "BINANCE:mirbusd",
             "BITGET:MIRUSDT_SPBL",
             "HITBTC:MIRUSD",
             "KRAKEN:MIR/USD",
             "KUCOIN:MIR-USDT",
-            "MEXC:MIRUSDT",
-            "OKEX:MIR-USDT"
+            "MEXC:MIRUSDT"
           ],
           "zoom": 1
         },
@@ -38,14 +37,13 @@
           "type": "trades",
           "zoom": 1,
           "markets": [
-            "BINANCE:mirbusd",
             "BINANCE:mirusdt",
+            "BINANCE:mirbusd",
             "BITGET:MIRUSDT_SPBL",
             "HITBTC:MIRUSD",
             "KRAKEN:MIR/USD",
             "KUCOIN:MIR-USDT",
-            "MEXC:MIRUSDT",
-            "OKEX:MIR-USDT"
+            "MEXC:MIRUSDT"
           ]
         }
       },
@@ -86,7 +84,7 @@
       "calculateSlippage": false,
       "wsProxyUrl": null,
       "disableAnimations": true,
-      "autoHideHeaders": false,
+      "autoHideHeaders": true,
       "autoHideNames": true,
       "theme": "dark",
       "backgroundColor": "rgb(16,17,21)",
@@ -128,7 +126,7 @@
       "searchQuotes": {
         "USD": true,
         "USDT": true,
-        "USDC": false,
+        "USDC": true,
         "BUSD": true
       },
       "previousSearchSelections": [],
@@ -371,7 +369,7 @@
         "fetched": false
       },
       "OKEX": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "PHEMEX": {
@@ -453,7 +451,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "plotcandlestick(avg_ohlc(bar))",
+          "script": "var x0 = BINANCE:mirusdt;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -481,7 +479,7 @@
           "series": [
             "price"
           ],
-          "unsavedChanges": true,
+          "unsavedChanges": false,
           "navigationState": {
             "sections": [
               "position",
@@ -540,7 +538,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:mirbusd;\n\nvar b = BINANCE:mirusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MIRUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = HITBTC:MIRUSD;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar e = KRAKEN:MIR/USD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = KUCOIN:MIR-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:MIRUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:MIR-USDT;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:mirbusd;\n\nvar b = BINANCE:mirusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MIRUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = HITBTC:MIRUSD;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar e = KRAKEN:MIR/USD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = KUCOIN:MIR-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:MIRUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -907,14 +905,13 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:mirbusd": true,
         "BINANCE:mirusdt": false,
-        "BITGET:MIRUSDT_SPBL": true,
-        "HITBTC:MIRUSD": true,
-        "KRAKEN:MIR/USD": true,
-        "KUCOIN:MIR-USDT": true,
-        "MEXC:MIRUSDT": true,
-        "OKEX:MIR-USDT": true
+        "BINANCE:mirbusd": false,
+        "BITGET:MIRUSDT_SPBL": false,
+        "HITBTC:MIRUSD": false,
+        "KRAKEN:MIR/USD": false,
+        "KUCOIN:MIR-USDT": false,
+        "MEXC:MIRUSDT": false
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
@@ -929,7 +926,7 @@
       "liquidations": [
         {
           "id": "liquidation_threshold",
-          "amount": 57275,
+          "amount": 1500.0,
           "buyColor": "rgba(236,64,122,0.5)",
           "sellColor": "rgba(255,152,0,0.5)",
           "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*2,0,,,'sine')\nplay(329.63, srqtR, srqtR*4,0.08,,,'sine')",
@@ -937,7 +934,7 @@
         },
         {
           "id": "liquidation_significant",
-          "amount": 217232.6,
+          "amount": 4242.640687119286,
           "buyColor": "rgba(236,64,122,0.6)",
           "sellColor": "rgba(255,152,0,0.7)",
           "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*4,0,,,'sine')\nplay(329.63, srqtR, srqtR*6,0.08,,,'sine')",
@@ -945,7 +942,7 @@
         },
         {
           "id": "liquidation_huge",
-          "amount": 1585053.5,
+          "amount": 7794.228634059948,
           "buyGif": "flying money",
           "sellGif": "flying money",
           "buyColor": "rgba(236,64,122,0.7)",
@@ -955,7 +952,7 @@
         },
         {
           "id": "liquidation_rare",
-          "amount": 15848334.1,
+          "amount": 12000.0,
           "buyGif": "explosion",
           "sellGif": "explosion",
           "buyColor": "rgb(156,39,176)",
@@ -967,7 +964,7 @@
       "thresholds": [
         {
           "id": "threshold",
-          "amount": 115953.5308551202,
+          "amount": 1500.0,
           "buyColor": "rgb(0,19,20)",
           "sellColor": "rgb(30,0,15)",
           "buyAudio": "play(659.26, gain / 10, 0.1 + gain / 7)",
@@ -975,7 +972,7 @@
         },
         {
           "id": "significant",
-          "amount": 640205.281914687,
+          "amount": 4242.640687119286,
           "buyColor": "rgb(10,85,142)",
           "sellColor": "rgb(65,0,33)",
           "buyAudio": "play(659.26, 0.05 + gain / 10, 0.2 + ratio * 0.23,0,,0);\nplay(830.6, 0.05 + gain / 10, 0.2 + ratio * 0.23, 0.08,,0)",
@@ -983,7 +980,7 @@
         },
         {
           "id": "rare",
-          "amount": 2160228.6504333816,
+          "amount": 7794.228634059948,
           "buyGif": "explosion",
           "sellGif": "explosion",
           "buyColor": "rgb(100,181,246)",
@@ -993,7 +990,7 @@
         },
         {
           "id": "huge",
-          "amount": 4532726.439922552,
+          "amount": 12000.0,
           "buyGif": "cash bullish",
           "sellGif": "cash bearish",
           "buyColor": "rgb(16,133,222)",
@@ -1004,7 +1001,7 @@
       ],
       "audioThreshold": null,
       "multipliers": {},
-      "maxRows": "477",
+      "maxRows": "500",
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
@@ -1016,7 +1013,7 @@
       "showTimeAgo": false,
       "showPrices": true,
       "showHistograms": true,
-      "thresholdsMultipler": 1.45,
+      "thresholdsMultipler": 1.0,
       "_id": "trades",
       "showThresholdsAsTable": false
     },
@@ -1024,7 +1021,7 @@
       "liquidations": [
         {
           "id": "liquidation_threshold",
-          "amount": 22000,
+          "amount": 1500.0,
           "buyColor": "rgba(236,64,122,0.5)",
           "sellColor": "rgba(255,152,0,0.5)",
           "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*2,0,,,'sine')\nplay(329.63, srqtR, srqtR*4,0.08,,,'sine')",
@@ -1032,7 +1029,7 @@
         },
         {
           "id": "liquidation_significant",
-          "amount": 44000,
+          "amount": 4242.640687119286,
           "buyColor": "rgba(236,64,122,0.6)",
           "sellColor": "rgba(255,152,0,0.7)",
           "buyAudio": "var srqtR = Math.min(1, gain / 4)\nplay(329.63, srqtR, srqtR*4,0,,,'sine')\nplay(329.63, srqtR, srqtR*6,0.08,,,'sine')",
@@ -1040,7 +1037,7 @@
         },
         {
           "id": "liquidation_huge",
-          "amount": 88000,
+          "amount": 7794.228634059948,
           "buyGif": "flying money",
           "sellGif": "flying money",
           "buyColor": "rgba(236,64,122,0.7)",
@@ -1050,7 +1047,7 @@
         },
         {
           "id": "liquidation_rare",
-          "amount": 440000,
+          "amount": 12000.0,
           "buyGif": "explosion",
           "sellGif": "explosion",
           "buyColor": "rgb(156,39,176)",
@@ -1062,7 +1059,7 @@
       "thresholds": [
         {
           "id": "threshold",
-          "amount": 25818.5,
+          "amount": 1500.0,
           "buyColor": "rgb(0,19,20)",
           "sellColor": "rgb(30,0,15)",
           "buyAudio": "play(659.26, gain / 10, 0.1 + gain / 7)",
@@ -1071,7 +1068,7 @@
         },
         {
           "id": "significant",
-          "amount": 115089.7,
+          "amount": 4242.640687119286,
           "buyColor": "rgb(10,85,142)",
           "sellColor": "rgb(65,0,33)",
           "buyAudio": "play(659.26, 0.05 + gain / 10, 0.2 + ratio * 0.23,0,,0);\nplay(830.6, 0.05 + gain / 10, 0.2 + ratio * 0.23, 0.08,,0)",
@@ -1079,7 +1076,7 @@
         },
         {
           "id": "rare",
-          "amount": 534562.9,
+          "amount": 7794.228634059948,
           "buyGif": "explosion",
           "sellGif": "explosion",
           "buyColor": "rgb(100,181,246)",
@@ -1090,7 +1087,7 @@
         },
         {
           "id": "huge",
-          "amount": 1444564.6,
+          "amount": 12000.0,
           "buyGif": "cash bullish",
           "sellGif": "cash bearish",
           "buyColor": "rgb(16,133,222)",
@@ -1100,17 +1097,15 @@
         }
       ],
       "audioThreshold": null,
-      "multipliers": {
-        "COINBASE:BTC-USD": 0.53
-      },
+      "multipliers": {},
       "showThresholdsAsTable": false,
-      "maxRows": "475",
+      "maxRows": "500",
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": false,
+      "showPairs": true,
       "showTrades": true,
-      "showLiquidations": false,
+      "showLiquidations": true,
       "showLogos": true,
       "monochromeLogos": false,
       "showTimeAgo": false,
