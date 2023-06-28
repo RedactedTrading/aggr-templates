@@ -15,13 +15,13 @@
           "type": "chart",
           "markets": [
             "BINANCE:mavusdt",
-            "BITGET:MAVUSDT_SPBL",
             "BYBIT:MAVUSDT",
+            "BINANCE:mavtusd",
+            "BITGET:MAVUSDT_SPBL",
             "KUCOIN:MAV-USDT",
             "KUCOIN:MAVUSDTM",
             "MEXC:MAVUSDT",
-            "MEXC:MAV_USDT",
-            "BINANCE:mavtusd"
+            "MEXC:MAV_USDT"
           ],
           "zoom": 1
         },
@@ -43,10 +43,10 @@
           "zoom": 1,
           "markets": [
             "BINANCE:mavusdt",
+            "BINANCE:mavtusd",
             "BITGET:MAVUSDT_SPBL",
             "KUCOIN:MAV-USDT",
-            "MEXC:MAVUSDT",
-            "BINANCE:mavtusd"
+            "MEXC:MAVUSDT"
           ]
         }
       },
@@ -909,13 +909,13 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:mavusdt": false,
-        "BITGET:MAVUSDT_SPBL": false,
         "BYBIT:MAVUSDT": false,
+        "BINANCE:mavtusd": true,
+        "BITGET:MAVUSDT_SPBL": false,
         "KUCOIN:MAV-USDT": false,
         "KUCOIN:MAVUSDTM": false,
         "MEXC:MAVUSDT": false,
-        "MEXC:MAV_USDT": false,
-        "BINANCE:mavtusd": true
+        "MEXC:MAV_USDT": false
       },
       "barSpacing": 0.2929530100599413,
       "navigationState": {
