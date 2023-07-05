@@ -1,7 +1,7 @@
 {
-  "version": 7,
-  "createdAt": 1687205318227,
-  "updatedAt": 1687205563240,
+  "version": 6,
+  "createdAt": 1670005411532,
+  "updatedAt": 1676921095623,
   "name": "bit_demonmode",
   "id": "bit_demonmode",
   "states": {
@@ -15,10 +15,9 @@
           "type": "chart",
           "markets": [
             "BYBIT:BITUSDT-SPOT",
-            "BYBIT:BITUSDT",
             "BYBIT:BITUSDC-SPOT",
-            "COINBASE:BIT-USDT",
             "COINBASE:BIT-USD",
+            "COINBASE:BIT-USDT",
             "HITBTC:BITUSDT",
             "KRAKEN:BIT/USD",
             "MEXC:BITUSDT",
@@ -31,9 +30,8 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 1,
+          "zoom": 1.0,
           "markets": [
-            "BYBIT:BITUSDT",
             "MEXC:BIT_USDT"
           ]
         },
@@ -41,12 +39,12 @@
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 1,
+          "zoom": 1.0,
           "markets": [
             "BYBIT:BITUSDT-SPOT",
             "BYBIT:BITUSDC-SPOT",
-            "COINBASE:BIT-USDT",
             "COINBASE:BIT-USD",
+            "COINBASE:BIT-USDT",
             "HITBTC:BITUSDT",
             "KRAKEN:BIT/USD",
             "MEXC:BITUSDT",
@@ -91,10 +89,9 @@
       "calculateSlippage": false,
       "wsProxyUrl": null,
       "disableAnimations": true,
-      "autoHideHeaders": true,
-      "autoHideNames": true,
+      "autoHideHeaders": false,
       "theme": "dark",
-      "backgroundColor": "rgb(16,17,21)",
+      "backgroundColor": "rgb(0,0,0)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -117,10 +114,7 @@
         "search-quotes",
         "trades-display",
         "trades-thresholds",
-        "trades-audio",
-        "settings-colors",
-        "settings-exchanges",
-        "settings-other"
+        "trades-audio"
       ],
       "searchTypes": {
         "historical": false,
@@ -133,7 +127,7 @@
       "searchQuotes": {
         "USD": true,
         "USDT": true,
-        "USDC": true,
+        "USDC": false,
         "BUSD": true
       },
       "previousSearchSelections": [],
@@ -285,13 +279,12 @@
         "14400": "4h"
       },
       "normalizeWatermarks": false,
-      "alerts": true,
-      "alertsColor": "rgb(255, 0, 0)",
+      "alerts": false,
+      "alertsColor": "red",
       "alertsLineStyle": 2,
       "alertsLineWidth": 2,
       "alertsClick": false,
       "alertSound": null,
-      "showThresholdsAsTable": true,
       "timeframeGroups": [
         "seconds",
         "minutes",
@@ -396,18 +389,6 @@
         "disabled": true,
         "fetched": false
       },
-      "BITGET": {
-        "disabled": true,
-        "fetched": false
-      },
-      "BITHUMB": {
-        "disabled": true,
-        "fetched": false
-      },
-      "BTCTURK": {
-        "disabled": true,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -446,7 +427,7 @@
           "updatedAt": null,
           "series": [
             "volume",
-            "uq1a453w"
+            "d1luwfp8"
           ],
           "navigationState": {
             "sections": [
@@ -490,7 +471,7 @@
           "series": [
             "price"
           ],
-          "unsavedChanges": false,
+          "unsavedChanges": true,
           "navigationState": {
             "sections": [
               "position",
@@ -504,7 +485,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:BITUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:BIT_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = MEXC:BIT_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -524,14 +505,13 @@
           },
           "series": [
             "cvd-eth-perp",
-            "pcr46x5h",
-            "t3wdxbh6",
-            "ld37k4pd",
-            "hq7bhazh",
-            "3fhj7bbc",
-            "aikruoo2",
-            "r94yqzoe",
-            "og29n6r5"
+            "owwobn1s",
+            "j67eiadg",
+            "it60ipa8",
+            "gk4toukv",
+            "3fsysrwz",
+            "a7nzxt8f",
+            "5aed9ad4"
           ],
           "displayName": "CVD ETH Perp",
           "unsavedChanges": false,
@@ -549,7 +529,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:BITUSDC-SPOT;\n\nvar b = BYBIT:BITUSDT-SPOT;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = COINBASE:BIT-USD;\n\nvar d = COINBASE:BIT-USDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = HITBTC:BITUSDT;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = KRAKEN:BIT/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = MEXC:BITUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = UNISWAPETHEREUM:BIT/WETH;line(cum(h.vbuy-h.vsell), title=\"UNIETH\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:BITUSDC-SPOT;\n\nvar b = BYBIT:BITUSDT-SPOT;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = COINBASE:BIT-USD;\n\nvar d = COINBASE:BIT-USDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = HITBTC:BITUSDT;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = KRAKEN:BIT/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = MEXC:BITUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = UNISWAPETHEREUM:BIT/WETH;line(cum(h.vbuy-h.vsell), title=\"UNIETH\", color=\"rgb(205, 246, 247)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -570,19 +550,13 @@
           },
           "series": [
             "cvd-eth-spot copy 1",
-            "z5bjfoq3",
-            "z5q5ixbs",
-            "s3jdiczi",
-            "kd3eu8ui",
-            "svx1yzbp",
-            "lmycllku",
-            "fhx0hol3",
-            "r3fx8mnn",
-            "wnthw15h",
-            "q875yb5t",
-            "5fc8ruwj",
-            "c0m6m6vz",
-            "4rj23n8y"
+            "1dvqsejg",
+            "f88sj5yi",
+            "smke8f18",
+            "opi99vv9",
+            "vxgq9je2",
+            "vbl9aw1h",
+            "d37xpku2"
           ],
           "displayName": "CVD ETH Spot",
           "unsavedChanges": false,
@@ -615,7 +589,7 @@
           "updatedAt": null,
           "series": [
             "vwap",
-            "4euw0btw"
+            "7jwz8x87"
           ],
           "displayName": "VWAP",
           "navigationState": {
@@ -651,7 +625,7 @@
           "uses": 2,
           "series": [
             "liquidations",
-            "6ga8ouvw"
+            "l4y3kmkg"
           ],
           "displayName": "Liquidations"
         }
@@ -897,12 +871,9 @@
         }
       },
       "layouting": false,
-      "showIndicators": true,
       "timeframe": "10",
       "refreshRate": 0,
-      "showAlerts": true,
-      "showAlertsLabel": true,
-      "showLegend": true,
+      "showLegend": false,
       "fillGapsWithEmpty": true,
       "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
@@ -917,17 +888,16 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:BITUSDT-SPOT": false,
-        "BYBIT:BITUSDT": false,
         "BYBIT:BITUSDC-SPOT": false,
-        "COINBASE:BIT-USDT": false,
         "COINBASE:BIT-USD": false,
+        "COINBASE:BIT-USDT": false,
         "HITBTC:BITUSDT": false,
         "KRAKEN:BIT/USD": false,
         "MEXC:BITUSDT": false,
         "MEXC:BIT_USDT": false,
         "UNISWAPETHEREUM:BIT/WETH": true
       },
-      "barSpacing": 0.2929530100599413,
+      "barSpacing": 0.39437454420364615,
       "navigationState": {
         "tab": "script",
         "optionsQuery": "",
@@ -1015,14 +985,15 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:BIT-USDT": 0.5,
-        "COINBASE:BIT-USD": 0.5
+        "COINBASE:BIT-USD": 0.5,
+        "COINBASE:BIT-USDT": 0.5
       },
-      "maxRows": "500",
+      "showThresholdsAsTable": false,
+      "maxRows": "477",
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": true,
+      "showPairs": false,
       "showTrades": true,
       "showLiquidations": true,
       "showLogos": true,
@@ -1030,9 +1001,8 @@
       "showTimeAgo": false,
       "showPrices": true,
       "showHistograms": true,
-      "thresholdsMultipler": 1.0,
-      "_id": "trades",
-      "showThresholdsAsTable": false
+      "thresholdsMultipler": 1.45,
+      "_id": "trades"
     },
     "trades2": {
       "liquidations": [
@@ -1115,17 +1085,18 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:BIT-USDT": 0.5,
-        "COINBASE:BIT-USD": 0.5
+        "COINBASE:BTC-USD": 0.53,
+        "COINBASE:BIT-USD": 0.5,
+        "COINBASE:BIT-USDT": 0.5
       },
       "showThresholdsAsTable": false,
-      "maxRows": "500",
+      "maxRows": "475",
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": true,
+      "showPairs": false,
       "showTrades": true,
-      "showLiquidations": true,
+      "showLiquidations": false,
       "showLogos": true,
       "monochromeLogos": false,
       "showTimeAgo": false,
