@@ -1,7 +1,7 @@
 {
-  "version": 7,
-  "createdAt": 1687205318227,
-  "updatedAt": 1687205563240,
+  "version": 6,
+  "createdAt": 1670005411532,
+  "updatedAt": 1676921095623,
   "name": "mina_demonmode",
   "id": "mina_demonmode",
   "states": {
@@ -23,6 +23,9 @@
             "BITGET:MINAUSDT_UMCBL",
             "COINBASE:MINA-USD",
             "COINBASE:MINA-USDT",
+            "CRYPTOCOM:MINAUSD-PERP",
+            "CRYPTOCOM:MINA_USD",
+            "CRYPTOCOM:MINA_USDT",
             "HITBTC:MINAUSD",
             "KRAKEN:MINA/USD",
             "KRAKEN:PF_MINAUSD",
@@ -40,11 +43,12 @@
           "id": "trades",
           "name": "Perp Trades",
           "type": "trades",
-          "zoom": 1,
+          "zoom": 1.0,
           "markets": [
             "BYBIT:MINAUSDT",
             "BINANCE_FUTURES:minausdt",
             "BITGET:MINAUSDT_UMCBL",
+            "CRYPTOCOM:MINAUSD-PERP",
             "KRAKEN:PF_MINAUSD",
             "KUCOIN:MINAUSDTM",
             "MEXC:MINA_USDT",
@@ -55,7 +59,7 @@
           "id": "trades2",
           "name": "Spot Trades",
           "type": "trades",
-          "zoom": 1,
+          "zoom": 1.0,
           "markets": [
             "BINANCE:minausdt",
             "BYBIT:MINAUSDT-SPOT",
@@ -63,6 +67,8 @@
             "BITGET:MINAUSDT_SPBL",
             "COINBASE:MINA-USD",
             "COINBASE:MINA-USDT",
+            "CRYPTOCOM:MINA_USD",
+            "CRYPTOCOM:MINA_USDT",
             "HITBTC:MINAUSD",
             "KRAKEN:MINA/USD",
             "KUCOIN:MINA-USDT",
@@ -109,10 +115,9 @@
       "calculateSlippage": false,
       "wsProxyUrl": null,
       "disableAnimations": true,
-      "autoHideHeaders": true,
-      "autoHideNames": true,
+      "autoHideHeaders": false,
       "theme": "dark",
-      "backgroundColor": "rgb(16,17,21)",
+      "backgroundColor": "rgb(0,0,0)",
       "textColor": "",
       "buyColor": "rgb(100, 157, 102)",
       "sellColor": "rgb(239, 67, 82)",
@@ -135,10 +140,7 @@
         "search-quotes",
         "trades-display",
         "trades-thresholds",
-        "trades-audio",
-        "settings-colors",
-        "settings-exchanges",
-        "settings-other"
+        "trades-audio"
       ],
       "searchTypes": {
         "historical": false,
@@ -151,7 +153,7 @@
       "searchQuotes": {
         "USD": true,
         "USDT": true,
-        "USDC": true,
+        "USDC": false,
         "BUSD": true
       },
       "previousSearchSelections": [],
@@ -303,13 +305,12 @@
         "14400": "4h"
       },
       "normalizeWatermarks": false,
-      "alerts": true,
-      "alertsColor": "rgb(255, 0, 0)",
+      "alerts": false,
+      "alertsColor": "red",
       "alertsLineStyle": 2,
       "alertsLineWidth": 2,
       "alertsClick": false,
       "alertSound": null,
-      "showThresholdsAsTable": true,
       "timeframeGroups": [
         "seconds",
         "minutes",
@@ -418,12 +419,8 @@
         "disabled": false,
         "fetched": false
       },
-      "BITHUMB": {
-        "disabled": true,
-        "fetched": false
-      },
-      "BTCTURK": {
-        "disabled": true,
+      "CRYPTOCOM": {
+        "disabled": false,
         "fetched": false
       },
       "MEXC": {
@@ -460,7 +457,7 @@
           "updatedAt": null,
           "series": [
             "volume",
-            "uq1a453w"
+            "d1luwfp8"
           ],
           "navigationState": {
             "sections": [
@@ -504,7 +501,7 @@
           "series": [
             "price"
           ],
-          "unsavedChanges": false,
+          "unsavedChanges": true,
           "navigationState": {
             "sections": [
               "position",
@@ -518,7 +515,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:minausdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:MINAUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:MINAUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_MINAUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:MINAUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:MINA_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:MINA-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:minausdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:MINAUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:MINAUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = CRYPTOCOM:MINAUSD-PERP;line(cum(d.vbuy-d.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KRAKEN:PF_MINAUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:MINAUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:MINA_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = OKEX:MINA-USDT-SWAP;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -538,14 +535,13 @@
           },
           "series": [
             "cvd-eth-perp",
-            "pcr46x5h",
-            "t3wdxbh6",
-            "ld37k4pd",
-            "hq7bhazh",
-            "3fhj7bbc",
-            "aikruoo2",
-            "r94yqzoe",
-            "og29n6r5"
+            "owwobn1s",
+            "j67eiadg",
+            "it60ipa8",
+            "gk4toukv",
+            "3fsysrwz",
+            "a7nzxt8f",
+            "5aed9ad4"
           ],
           "displayName": "CVD ETH Perp",
           "unsavedChanges": false,
@@ -563,7 +559,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:minabusd;\n\nvar b = BINANCE:minausdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MINAUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:MINAUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = COINBASE:MINA-USD;\n\nvar f = COINBASE:MINA-USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = HITBTC:MINAUSD;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = KRAKEN:MINA/USD;line(cum(h.vbuy-h.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = KUCOIN:MINA-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar j = MEXC:MINAUSDC;line(cum(j.vbuy-j.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar k = OKEX:MINA-USDC;\n\nvar l = OKEX:MINA-USDT;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:minabusd;\n\nvar b = BINANCE:minausdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MINAUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:MINAUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = COINBASE:MINA-USD;\n\nvar f = COINBASE:MINA-USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = CRYPTOCOM:MINA_USD;\n\nvar h = CRYPTOCOM:MINA_USDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = HITBTC:MINAUSD;line(cum(i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar j = KRAKEN:MINA/USD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar k = KUCOIN:MINA-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar l = MEXC:MINAUSDC;line(cum(l.vbuy-l.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar m = OKEX:MINA-USDC;\n\nvar n = OKEX:MINA-USDT;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -584,19 +580,13 @@
           },
           "series": [
             "cvd-eth-spot copy 1",
-            "z5bjfoq3",
-            "z5q5ixbs",
-            "s3jdiczi",
-            "kd3eu8ui",
-            "svx1yzbp",
-            "lmycllku",
-            "fhx0hol3",
-            "r3fx8mnn",
-            "wnthw15h",
-            "q875yb5t",
-            "5fc8ruwj",
-            "c0m6m6vz",
-            "4rj23n8y"
+            "1dvqsejg",
+            "f88sj5yi",
+            "smke8f18",
+            "opi99vv9",
+            "vxgq9je2",
+            "vbl9aw1h",
+            "d37xpku2"
           ],
           "displayName": "CVD ETH Spot",
           "unsavedChanges": false,
@@ -629,7 +619,7 @@
           "updatedAt": null,
           "series": [
             "vwap",
-            "4euw0btw"
+            "7jwz8x87"
           ],
           "displayName": "VWAP",
           "navigationState": {
@@ -665,7 +655,7 @@
           "uses": 2,
           "series": [
             "liquidations",
-            "6ga8ouvw"
+            "l4y3kmkg"
           ],
           "displayName": "Liquidations"
         }
@@ -911,12 +901,9 @@
         }
       },
       "layouting": false,
-      "showIndicators": true,
       "timeframe": "10",
       "refreshRate": 0,
-      "showAlerts": true,
-      "showAlertsLabel": true,
-      "showLegend": true,
+      "showLegend": false,
       "fillGapsWithEmpty": true,
       "showHorizontalGridlines": true,
       "horizontalGridlinesColor": "rgba(255,255,255,.1)",
@@ -939,6 +926,9 @@
         "BITGET:MINAUSDT_UMCBL": false,
         "COINBASE:MINA-USD": false,
         "COINBASE:MINA-USDT": false,
+        "CRYPTOCOM:MINAUSD-PERP": false,
+        "CRYPTOCOM:MINA_USD": false,
+        "CRYPTOCOM:MINA_USDT": false,
         "HITBTC:MINAUSD": false,
         "KRAKEN:MINA/USD": false,
         "KRAKEN:PF_MINAUSD": false,
@@ -950,7 +940,7 @@
         "MEXC:MINAUSDC": false,
         "OKEX:MINA-USDC": false
       },
-      "barSpacing": 0.2929530100599413,
+      "barSpacing": 0.39437454420364615,
       "navigationState": {
         "tab": "script",
         "optionsQuery": "",
@@ -1041,11 +1031,12 @@
         "COINBASE:MINA-USD": 0.5,
         "COINBASE:MINA-USDT": 0.5
       },
-      "maxRows": "500",
+      "showThresholdsAsTable": false,
+      "maxRows": "477",
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": true,
+      "showPairs": false,
       "showTrades": true,
       "showLiquidations": true,
       "showLogos": true,
@@ -1053,9 +1044,8 @@
       "showTimeAgo": false,
       "showPrices": true,
       "showHistograms": true,
-      "thresholdsMultipler": 1.0,
-      "_id": "trades",
-      "showThresholdsAsTable": false
+      "thresholdsMultipler": 1.45,
+      "_id": "trades"
     },
     "trades2": {
       "liquidations": [
@@ -1138,17 +1128,18 @@
       ],
       "audioThreshold": null,
       "multipliers": {
+        "COINBASE:BTC-USD": 0.53,
         "COINBASE:MINA-USD": 0.5,
         "COINBASE:MINA-USDT": 0.5
       },
       "showThresholdsAsTable": false,
-      "maxRows": "500",
+      "maxRows": "475",
       "muted": false,
       "audioPitch": null,
       "audioVolume": null,
-      "showPairs": true,
+      "showPairs": false,
       "showTrades": true,
-      "showLiquidations": true,
+      "showLiquidations": false,
       "showLogos": true,
       "monochromeLogos": false,
       "showTimeAgo": false,
