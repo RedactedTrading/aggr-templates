@@ -22,9 +22,6 @@
             "BITGET:OGNUSDT_SPBL",
             "BTCTURK:OGNUSDT",
             "COINBASE:OGN-USD",
-            "CRYPTOCOM:OGNUSD-PERP",
-            "CRYPTOCOM:OGN_USD",
-            "CRYPTOCOM:OGN_USDT",
             "HITBTC:OGNUSD",
             "KRAKEN:OGN/USD",
             "KRAKEN:PF_OGNUSD",
@@ -46,7 +43,6 @@
           "markets": [
             "BYBIT:OGNUSDT",
             "BINANCE_FUTURES:ognusdt",
-            "CRYPTOCOM:OGNUSD-PERP",
             "KRAKEN:PF_OGNUSD",
             "KUCOIN:OGNUSDTM",
             "MEXC:OGN_USDT"
@@ -64,8 +60,6 @@
             "BITGET:OGNUSDT_SPBL",
             "BTCTURK:OGNUSDT",
             "COINBASE:OGN-USD",
-            "CRYPTOCOM:OGN_USD",
-            "CRYPTOCOM:OGN_USDT",
             "HITBTC:OGNUSD",
             "KRAKEN:OGN/USD",
             "KUCOIN:OGN-USDT",
@@ -421,10 +415,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -521,7 +511,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:ognusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:OGNUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = CRYPTOCOM:OGNUSD-PERP;line(cum(c.vbuy-c.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = KRAKEN:PF_OGNUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar e = KUCOIN:OGNUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:OGN_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:ognusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:OGNUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KRAKEN:PF_OGNUSD;line(cum(c.vbuy-c.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = KUCOIN:OGNUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:OGN_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -565,7 +555,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ognbusd;\n\nvar b = BINANCE:ognusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:OGNUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:OGNUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:OGN_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BTCTURK:OGNTRY;\n\nvar g = BTCTURK:OGNUSDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar h = COINBASE:OGN-USD;line(cum(h.vbuy-h.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar i = CRYPTOCOM:OGN_USD;\n\nvar j = CRYPTOCOM:OGN_USDT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = HITBTC:OGNUSD;\n\nvar l = HITBTC:OGNUSDC;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar m = KRAKEN:OGN/USD;line(cum(m.vbuy-m.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar n = KUCOIN:OGN-USDT;line(cum(n.vbuy-n.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar o = MEXC:OGNUSDT;line(cum(o.vbuy-o.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ognusdt;\n\nvar b = BINANCE:ognbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:OGNUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:OGNUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:OGN_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = BTCTURK:OGNUSDT;\n\nvar g = BTCTURK:OGNTRY;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar h = COINBASE:OGN-USD;line(cum(h.vbuy-h.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar i = HITBTC:OGNUSD;\n\nvar j = HITBTC:OGNUSDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar k = KRAKEN:OGN/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar l = KUCOIN:OGN-USDT;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar m = MEXC:OGNUSDT;line(cum(m.vbuy-m.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -664,7 +654,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:ognusdt;\n\nvar b = COINALYZE_OI:BYBIT:OGNUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:ognusdt;\n\nvar b = COINALYZE_PFR:BYBIT:OGNUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -931,9 +923,6 @@
         "BITGET:OGNUSDT_SPBL": false,
         "BTCTURK:OGNUSDT": true,
         "COINBASE:OGN-USD": false,
-        "CRYPTOCOM:OGNUSD-PERP": false,
-        "CRYPTOCOM:OGN_USD": false,
-        "CRYPTOCOM:OGN_USDT": false,
         "HITBTC:OGNUSD": false,
         "KRAKEN:OGN/USD": false,
         "KRAKEN:PF_OGNUSD": false,
