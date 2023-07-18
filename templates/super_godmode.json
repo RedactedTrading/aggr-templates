@@ -19,12 +19,9 @@
             "BITGET:SUPERUSDT_SPBL",
             "COINBASE:SUPER-USD",
             "COINBASE:SUPER-USDT",
-            "CRYPTOCOM:SUPER_USD",
-            "CRYPTOCOM:SUPER_USDT",
             "HITBTC:SUPERUSD",
             "KRAKEN:SUPER/USD",
-            "KUCOIN:SUPER-USDT",
-            "MEXC:SUPER_USDT"
+            "KUCOIN:SUPER-USDT"
           ],
           "zoom": 1
         },
@@ -33,9 +30,7 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": [
-            "MEXC:SUPER_USDT"
-          ]
+          "markets": []
         },
         "trades2": {
           "id": "trades2",
@@ -48,8 +43,6 @@
             "BITGET:SUPERUSDT_SPBL",
             "COINBASE:SUPER-USD",
             "COINBASE:SUPER-USDT",
-            "CRYPTOCOM:SUPER_USD",
-            "CRYPTOCOM:SUPER_USDT",
             "HITBTC:SUPERUSD",
             "KRAKEN:SUPER/USD",
             "KUCOIN:SUPER-USDT"
@@ -396,14 +389,6 @@
       "BITGET": {
         "disabled": false,
         "fetched": false
-      },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
-      "MEXC": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -493,7 +478,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = MEXC:SUPER_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -537,7 +522,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:superbusd;\n\nvar b = BINANCE:superusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:SUPERUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:SUPER-USD;\n\nvar e = COINBASE:SUPER-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = CRYPTOCOM:SUPER_USD;\n\nvar g = CRYPTOCOM:SUPER_USDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = HITBTC:SUPERUSD;line(cum(h.vbuy-h.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar i = KRAKEN:SUPER/USD;line(cum(i.vbuy-i.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar j = KUCOIN:SUPER-USDT;line(cum(j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:superusdt;\n\nvar b = BINANCE:superbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:SUPERUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:SUPER-USD;\n\nvar e = COINBASE:SUPER-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = HITBTC:SUPERUSD;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = KRAKEN:SUPER/USD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = KUCOIN:SUPER-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -636,7 +621,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -900,12 +887,9 @@
         "BITGET:SUPERUSDT_SPBL": false,
         "COINBASE:SUPER-USD": false,
         "COINBASE:SUPER-USDT": false,
-        "CRYPTOCOM:SUPER_USD": false,
-        "CRYPTOCOM:SUPER_USDT": false,
         "HITBTC:SUPERUSD": false,
         "KRAKEN:SUPER/USD": false,
-        "KUCOIN:SUPER-USDT": false,
-        "MEXC:SUPER_USDT": false
+        "KUCOIN:SUPER-USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
