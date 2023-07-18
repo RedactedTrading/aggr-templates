@@ -20,11 +20,8 @@
             "BINANCE:hbarbusd",
             "BINANCE_FUTURES:hbarusdt",
             "BITGET:HBARUSDT_UMCBL",
-            "COINBASE:HBAR-USD",
             "COINBASE:HBAR-USDT",
-            "CRYPTOCOM:HBARUSD-PERP",
-            "CRYPTOCOM:HBAR_USD",
-            "CRYPTOCOM:HBAR_USDT",
+            "COINBASE:HBAR-USD",
             "HITBTC:HBARUSD",
             "KUCOIN:HBAR-USDT",
             "KUCOIN:HBARUSDTM",
@@ -46,7 +43,6 @@
             "BYBIT:HBARUSDT",
             "BINANCE_FUTURES:hbarusdt",
             "BITGET:HBARUSDT_UMCBL",
-            "CRYPTOCOM:HBARUSD-PERP",
             "KUCOIN:HBARUSDTM",
             "MEXC:HBAR_USDT"
           ]
@@ -60,10 +56,8 @@
             "BINANCE:hbarusdt",
             "BYBIT:HBARUSDT-SPOT",
             "BINANCE:hbarbusd",
-            "COINBASE:HBAR-USD",
             "COINBASE:HBAR-USDT",
-            "CRYPTOCOM:HBAR_USD",
-            "CRYPTOCOM:HBAR_USDT",
+            "COINBASE:HBAR-USD",
             "HITBTC:HBARUSD",
             "KUCOIN:HBAR-USDT",
             "MEXC:HBARUSDT",
@@ -415,10 +409,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -469,7 +459,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = BINANCE:hbarusdt;var x1 = BYBIT:HBARUSDT-SPOT;var x2 = OKEX:HBAR-USDT;plotcandlestick((x0.open+x1.open+x2.open) / 3,(x0.high+x1.high+x2.high) / 3,(x0.low+x1.low+x2.low) / 3,(x0.close+x1.close+x2.close) / 3);",
+          "script": "var x0 = BINANCE:hbarusdt;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -511,7 +501,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:hbarusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:HBARUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:HBARUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = CRYPTOCOM:HBARUSD-PERP;line(cum(d.vbuy-d.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:HBARUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:HBAR_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:hbarusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:HBARUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:HBARUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KUCOIN:HBARUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:HBAR_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -555,7 +545,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:hbarbusd;\n\nvar b = BINANCE:hbarusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BYBIT:HBARUSDT-SPOT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = COINBASE:HBAR-USD;\n\nvar e = COINBASE:HBAR-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = CRYPTOCOM:HBAR_USD;\n\nvar g = CRYPTOCOM:HBAR_USDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = HITBTC:HBARUSD;\n\nvar i = HITBTC:HBARUSDC;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar j = KUCOIN:HBAR-USDT;line(cum(j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar k = MEXC:HBARUSDT;line(cum(k.vbuy-k.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar l = OKEX:HBAR-USDC;\n\nvar m = OKEX:HBAR-USDT;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar n = UPBIT:KRW-HBAR;line(cum(n.vbuy-n.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:hbarusdt;\n\nvar b = BINANCE:hbarbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BYBIT:HBARUSDT-SPOT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = COINBASE:HBAR-USDT;\n\nvar e = COINBASE:HBAR-USD;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = HITBTC:HBARUSD;\n\nvar g = HITBTC:HBARUSDC;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = KUCOIN:HBAR-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar i = MEXC:HBARUSDT;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar j = OKEX:HBAR-USDT;\n\nvar k = OKEX:HBAR-USDC;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar l = UPBIT:KRW-HBAR;line(cum(l.vbuy-l.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -654,7 +644,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:hbarusdt;\n\nvar b = COINALYZE_OI:BYBIT:HBARUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:hbarusdt;\n\nvar b = COINALYZE_PFR:BYBIT:HBARUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -919,11 +911,8 @@
         "BINANCE:hbarbusd": false,
         "BINANCE_FUTURES:hbarusdt": false,
         "BITGET:HBARUSDT_UMCBL": false,
-        "COINBASE:HBAR-USD": false,
         "COINBASE:HBAR-USDT": false,
-        "CRYPTOCOM:HBARUSD-PERP": false,
-        "CRYPTOCOM:HBAR_USD": false,
-        "CRYPTOCOM:HBAR_USDT": false,
+        "COINBASE:HBAR-USD": false,
         "HITBTC:HBARUSD": false,
         "KUCOIN:HBAR-USDT": false,
         "KUCOIN:HBARUSDTM": false,
@@ -1022,8 +1011,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:HBAR-USD": 0.5,
-        "COINBASE:HBAR-USDT": 0.5
+        "COINBASE:HBAR-USDT": 0.5,
+        "COINBASE:HBAR-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1123,8 +1112,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:HBAR-USD": 0.5,
-        "COINBASE:HBAR-USDT": 0.5
+        "COINBASE:HBAR-USDT": 0.5,
+        "COINBASE:HBAR-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
