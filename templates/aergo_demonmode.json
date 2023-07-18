@@ -18,8 +18,6 @@
             "BINANCE:aergobusd",
             "BITGET:AERGOUSDT_SPBL",
             "COINBASE:AERGO-USD",
-            "CRYPTOCOM:AERGO_USD",
-            "CRYPTOCOM:AERGO_USDT",
             "KUCOIN:AERGO-USDT",
             "MEXC:AERGOUSDT",
             "OKEX:AERGO-USDT",
@@ -45,8 +43,6 @@
             "BINANCE:aergobusd",
             "BITGET:AERGOUSDT_SPBL",
             "COINBASE:AERGO-USD",
-            "CRYPTOCOM:AERGO_USD",
-            "CRYPTOCOM:AERGO_USDT",
             "KUCOIN:AERGO-USDT",
             "MEXC:AERGOUSDT",
             "OKEX:AERGO-USDT",
@@ -396,10 +392,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -454,7 +446,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = BINANCE:aergousdt;var x1 = OKEX:AERGO-USDT;plotcandlestick((x0.open+x1.open) / 2,(x0.high+x1.high) / 2,(x0.low+x1.low) / 2,(x0.close+x1.close) / 2);",
+          "script": "var x0 = BINANCE:aergousdt;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -540,7 +532,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:aergobusd;\n\nvar b = BINANCE:aergousdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:AERGOUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:AERGO_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = COINBASE:AERGO-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = CRYPTOCOM:AERGO_USD;\n\nvar g = CRYPTOCOM:AERGO_USDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = KUCOIN:AERGO-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = MEXC:AERGOUSDT;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = OKEX:AERGO-USDT;line(cum(j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar k = UPBIT:KRW-AERGO;line(cum(k.vbuy-k.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:aergousdt;\n\nvar b = BINANCE:aergobusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:AERGOUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:AERGO_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = COINBASE:AERGO-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = KUCOIN:AERGO-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:AERGOUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:AERGO-USDT;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = UPBIT:KRW-AERGO;line(cum(i.vbuy-i.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -639,7 +631,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -902,8 +896,6 @@
         "BINANCE:aergobusd": false,
         "BITGET:AERGOUSDT_SPBL": false,
         "COINBASE:AERGO-USD": false,
-        "CRYPTOCOM:AERGO_USD": false,
-        "CRYPTOCOM:AERGO_USDT": false,
         "KUCOIN:AERGO-USDT": false,
         "MEXC:AERGOUSDT": false,
         "OKEX:AERGO-USDT": false,
