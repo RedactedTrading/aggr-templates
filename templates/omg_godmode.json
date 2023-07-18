@@ -23,7 +23,6 @@
             "BITGET:OMGUSDT_SPBL",
             "BITGET:OMGUSDT_UMCBL",
             "BTCTURK:OMGUSDT",
-            "CRYPTOCOM:OMG_USD",
             "HITBTC:OMGUSD",
             "KRAKEN:OMG/USD",
             "KRAKEN:PF_OMGUSD",
@@ -66,7 +65,6 @@
             "BITFINEX:OMGUSD",
             "BITGET:OMGUSDT_SPBL",
             "BTCTURK:OMGUSDT",
-            "CRYPTOCOM:OMG_USD",
             "HITBTC:OMGUSD",
             "KRAKEN:OMG/USD",
             "KUCOIN:OMG-USDT",
@@ -423,10 +421,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -477,7 +471,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = BINANCE:omgusdt;var x1 = BYBIT:OMGUSDT-SPOT;var x2 = OKEX:OMG-USDT;plotcandlestick((x0.open+x1.open+x2.open) / 3,(x0.high+x1.high+x2.high) / 3,(x0.low+x1.low+x2.low) / 3,(x0.close+x1.close+x2.close) / 3);",
+          "script": "var x0 = BINANCE:omgusdt;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -519,7 +513,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:omgusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:OMGUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:OMGUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_OMGUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar e = KUCOIN:OMGUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:OMG_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = OKEX:OMG-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:omgusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:OMGUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:OMGUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_OMGUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:OMGUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:OMG_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:OMG-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -563,7 +557,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:omgbusd;\n\nvar b = BINANCE:omgusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:OMGUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:OMGUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BTCTURK:OMGTRY;\n\nvar f = BTCTURK:OMGUSDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = BYBIT:OMGUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = CRYPTOCOM:OMG_USD;line(cum(h.vbuy-h.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = HITBTC:OMGUSD;\n\nvar j = HITBTC:OMGUSDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar k = KRAKEN:OMG/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar l = KUCOIN:OMG-USDT;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = MEXC:OMGUSDT;line(cum(m.vbuy-m.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar n = OKEX:OMG-USDC;\n\nvar o = OKEX:OMG-USDT;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:omgusdt;\n\nvar b = BINANCE:omgbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:OMGUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:OMGUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BTCTURK:OMGUSDT;\n\nvar f = BTCTURK:OMGTRY;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar g = BYBIT:OMGUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = HITBTC:OMGUSD;\n\nvar i = HITBTC:OMGUSDC;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = KRAKEN:OMG/USD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = KUCOIN:OMG-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar l = MEXC:OMGUSDT;line(cum(l.vbuy-l.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar m = OKEX:OMG-USDT;\n\nvar n = OKEX:OMG-USDC;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -662,7 +656,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:omgusdt;\n\nvar b = COINALYZE_OI:BYBIT:OMGUSDT;\n\nvar c = COINALYZE_OI:OKEX:OMG-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:omgusdt;\n\nvar b = COINALYZE_PFR:BYBIT:OMGUSDT;\n\nvar c = COINALYZE_PFR:OKEX:OMG-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -930,7 +926,6 @@
         "BITGET:OMGUSDT_SPBL": false,
         "BITGET:OMGUSDT_UMCBL": false,
         "BTCTURK:OMGUSDT": true,
-        "CRYPTOCOM:OMG_USD": false,
         "HITBTC:OMGUSD": false,
         "KRAKEN:OMG/USD": false,
         "KRAKEN:PF_OMGUSD": false,
