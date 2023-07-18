@@ -14,8 +14,7 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BINANCE:wtcusdt",
-            "CRYPTOCOM:WTC_USD"
+            "BINANCE:wtcusdt"
           ],
           "zoom": 1
         },
@@ -32,8 +31,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BINANCE:wtcusdt",
-            "CRYPTOCOM:WTC_USD"
+            "BINANCE:wtcusdt"
           ]
         }
       },
@@ -373,10 +371,6 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
-      },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -510,7 +504,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:wtcusdt;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = CRYPTOCOM:WTC_USD;line(cum(b.vbuy-b.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:wtcusdt;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -609,7 +603,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -868,8 +864,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BINANCE:wtcusdt": false,
-        "CRYPTOCOM:WTC_USD": false
+        "BINANCE:wtcusdt": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
