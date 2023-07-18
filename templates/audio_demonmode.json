@@ -21,9 +21,6 @@
             "BITGET:AUDIOUSDT_SPBL",
             "BITGET:AUDIOUSDT_UMCBL",
             "COINBASE:AUDIO-USD",
-            "CRYPTOCOM:AUDIOUSD-PERP",
-            "CRYPTOCOM:AUDIO_USD",
-            "CRYPTOCOM:AUDIO_USDT",
             "HITBTC:AUDIOUSD",
             "KRAKEN:AUDIO/USD",
             "KRAKEN:PF_AUDIOUSD",
@@ -44,7 +41,6 @@
             "BYBIT:AUDIOUSDT",
             "BINANCE_FUTURES:audiousdt",
             "BITGET:AUDIOUSDT_UMCBL",
-            "CRYPTOCOM:AUDIOUSD-PERP",
             "KRAKEN:PF_AUDIOUSD",
             "KUCOIN:AUDIOUSDTM",
             "MEXC:AUDIO_USDT"
@@ -60,8 +56,6 @@
             "BINANCE:audiobusd",
             "BITGET:AUDIOUSDT_SPBL",
             "COINBASE:AUDIO-USD",
-            "CRYPTOCOM:AUDIO_USD",
-            "CRYPTOCOM:AUDIO_USDT",
             "HITBTC:AUDIOUSD",
             "KRAKEN:AUDIO/USD",
             "KUCOIN:AUDIO-USDT",
@@ -411,10 +405,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -511,7 +501,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:audiousdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:AUDIOUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:AUDIOUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = CRYPTOCOM:AUDIOUSD-PERP;line(cum(d.vbuy-d.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KRAKEN:PF_AUDIOUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:AUDIOUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:AUDIO_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:audiousdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:AUDIOUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:AUDIOUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_AUDIOUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:AUDIOUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:AUDIO_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -555,7 +545,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:audiobusd;\n\nvar b = BINANCE:audiousdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:AUDIOUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BTCTURK:AUDIOTRY;line(cum(d.vbuy-d.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar e = COINBASE:AUDIO-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = CRYPTOCOM:AUDIO_USD;\n\nvar g = CRYPTOCOM:AUDIO_USDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = HITBTC:AUDIOUSD;\n\nvar i = HITBTC:AUDIOUSDC;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar j = KRAKEN:AUDIO/USD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar k = KUCOIN:AUDIO-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:audiousdt;\n\nvar b = BINANCE:audiobusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:AUDIOUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BTCTURK:AUDIOTRY;line(cum(d.vbuy-d.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = COINBASE:AUDIO-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = HITBTC:AUDIOUSD;\n\nvar g = HITBTC:AUDIOUSDC;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = KRAKEN:AUDIO/USD;line(cum(h.vbuy-h.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = KUCOIN:AUDIO-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -654,7 +644,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:audiousdt;\n\nvar b = COINALYZE_OI:BYBIT:AUDIOUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:audiousdt;\n\nvar b = COINALYZE_PFR:BYBIT:AUDIOUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -920,9 +912,6 @@
         "BITGET:AUDIOUSDT_SPBL": false,
         "BITGET:AUDIOUSDT_UMCBL": false,
         "COINBASE:AUDIO-USD": false,
-        "CRYPTOCOM:AUDIOUSD-PERP": false,
-        "CRYPTOCOM:AUDIO_USD": false,
-        "CRYPTOCOM:AUDIO_USDT": false,
         "HITBTC:AUDIOUSD": false,
         "KRAKEN:AUDIO/USD": false,
         "KRAKEN:PF_AUDIOUSD": false,
