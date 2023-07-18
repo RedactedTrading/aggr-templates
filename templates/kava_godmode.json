@@ -21,15 +21,11 @@
             "BITGET:KAVAUSDT_SPBL",
             "BITGET:KAVAUSDT_UMCBL",
             "COINBASE:KAVA-USD",
-            "CRYPTOCOM:KAVAUSD-PERP",
-            "CRYPTOCOM:KAVA_USD",
-            "CRYPTOCOM:KAVA_USDT",
             "HITBTC:KAVAUSDT",
             "KRAKEN:KAVA/USD",
             "KRAKEN:PF_KAVAUSD",
             "KUCOIN:KAVA-USDT",
             "KUCOIN:KAVAUSDTM",
-            "MEXC:KAVAUSDT",
             "MEXC:KAVA_USDT",
             "UPBIT:KRW-KAVA"
           ],
@@ -44,7 +40,6 @@
             "BYBIT:KAVAUSDT",
             "BINANCE_FUTURES:kavausdt",
             "BITGET:KAVAUSDT_UMCBL",
-            "CRYPTOCOM:KAVAUSD-PERP",
             "KRAKEN:PF_KAVAUSD",
             "KUCOIN:KAVAUSDTM",
             "MEXC:KAVA_USDT"
@@ -60,12 +55,9 @@
             "BINANCE:kavabusd",
             "BITGET:KAVAUSDT_SPBL",
             "COINBASE:KAVA-USD",
-            "CRYPTOCOM:KAVA_USD",
-            "CRYPTOCOM:KAVA_USDT",
             "HITBTC:KAVAUSDT",
             "KRAKEN:KAVA/USD",
             "KUCOIN:KAVA-USDT",
-            "MEXC:KAVAUSDT",
             "UPBIT:KRW-KAVA"
           ]
         }
@@ -411,10 +403,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -507,7 +495,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:kavausdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:KAVAUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:KAVAUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = CRYPTOCOM:KAVAUSD-PERP;line(cum(d.vbuy-d.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KRAKEN:PF_KAVAUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:KAVAUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:KAVA_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:kavausdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:KAVAUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:KAVAUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_KAVAUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:KAVAUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:KAVA_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -551,7 +539,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:kavabusd;\n\nvar b = BINANCE:kavausdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:KAVAUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:KAVA-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = CRYPTOCOM:KAVA_USD;\n\nvar f = CRYPTOCOM:KAVA_USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = HITBTC:KAVAUSDT;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KRAKEN:KAVA/USD;line(cum(h.vbuy-h.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar i = KUCOIN:KAVA-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = MEXC:KAVAUSDT;line(cum(j.vbuy-j.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar k = UPBIT:KRW-KAVA;line(cum(k.vbuy-k.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:kavausdt;\n\nvar b = BINANCE:kavabusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:KAVAUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:KAVA-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = HITBTC:KAVAUSDT;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = KRAKEN:KAVA/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = KUCOIN:KAVA-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = UPBIT:KRW-KAVA;line(cum(h.vbuy-h.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -650,7 +638,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:kavausdt;\n\nvar b = COINALYZE_OI:BYBIT:KAVAUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:kavausdt;\n\nvar b = COINALYZE_PFR:BYBIT:KAVAUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -916,15 +906,11 @@
         "BITGET:KAVAUSDT_SPBL": false,
         "BITGET:KAVAUSDT_UMCBL": false,
         "COINBASE:KAVA-USD": false,
-        "CRYPTOCOM:KAVAUSD-PERP": false,
-        "CRYPTOCOM:KAVA_USD": false,
-        "CRYPTOCOM:KAVA_USDT": false,
         "HITBTC:KAVAUSDT": false,
         "KRAKEN:KAVA/USD": false,
         "KRAKEN:PF_KAVAUSD": false,
         "KUCOIN:KAVA-USDT": false,
         "KUCOIN:KAVAUSDTM": false,
-        "MEXC:KAVAUSDT": false,
         "MEXC:KAVA_USDT": false,
         "UPBIT:KRW-KAVA": true
       },
