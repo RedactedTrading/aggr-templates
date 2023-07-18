@@ -16,7 +16,6 @@
           "markets": [
             "BINANCE:gasusdt",
             "BINANCE:gasbusd",
-            "CRYPTOCOM:GAS_USD",
             "HITBTC:GASUSD",
             "KUCOIN:GAS-USDT",
             "MEXC:GASUSDT",
@@ -40,7 +39,6 @@
           "markets": [
             "BINANCE:gasusdt",
             "BINANCE:gasbusd",
-            "CRYPTOCOM:GAS_USD",
             "HITBTC:GASUSD",
             "KUCOIN:GAS-USDT",
             "MEXC:GASUSDT",
@@ -386,10 +384,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -440,7 +434,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = BINANCE:gasusdt;var x1 = OKEX:GAS-USDT;plotcandlestick((x0.open+x1.open) / 2,(x0.high+x1.high) / 2,(x0.low+x1.low) / 2,(x0.close+x1.close) / 2);",
+          "script": "var x0 = BINANCE:gasusdt;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -526,7 +520,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:gasbusd;\n\nvar b = BINANCE:gasusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = CRYPTOCOM:GAS_USD;line(cum(c.vbuy-c.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = HITBTC:GASUSD;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = KUCOIN:GAS-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:GASUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = OKEX:GAS-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar h = UPBIT:KRW-GAS;line(cum(h.vbuy-h.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:gasusdt;\n\nvar b = BINANCE:gasbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = HITBTC:GASUSD;line(cum(c.vbuy-c.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar d = KUCOIN:GAS-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:GASUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:GAS-USDT;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = UPBIT:KRW-GAS;line(cum(g.vbuy-g.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -625,7 +619,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -886,7 +882,6 @@
       "hiddenMarkets": {
         "BINANCE:gasusdt": false,
         "BINANCE:gasbusd": false,
-        "CRYPTOCOM:GAS_USD": false,
         "HITBTC:GASUSD": false,
         "KUCOIN:GAS-USDT": false,
         "MEXC:GASUSDT": false,
