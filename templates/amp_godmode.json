@@ -20,8 +20,6 @@
             "BITGET:AMPUSDT_SPBL",
             "BTCTURK:AMPUSDT",
             "COINBASE:AMP-USD",
-            "CRYPTOCOM:AMP_USD",
-            "CRYPTOCOM:AMP_USDT",
             "HITBTC:AMPUSDT",
             "KUCOIN:AMP-USDT",
             "MEXC:AMPUSDT",
@@ -48,8 +46,6 @@
             "BITGET:AMPUSDT_SPBL",
             "BTCTURK:AMPUSDT",
             "COINBASE:AMP-USD",
-            "CRYPTOCOM:AMP_USD",
-            "CRYPTOCOM:AMP_USDT",
             "HITBTC:AMPUSDT",
             "KUCOIN:AMP-USDT",
             "MEXC:AMPUSDT",
@@ -402,10 +398,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -542,7 +534,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ampbusd;\n\nvar b = BINANCE:ampusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:AMPUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:AMPUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BTCTURK:AMPTRY;\n\nvar f = BTCTURK:AMPUSDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = COINBASE:AMP-USD;line(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = CRYPTOCOM:AMP_USD;\n\nvar i = CRYPTOCOM:AMP_USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar j = HITBTC:AMPUSDT;line(cum(j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar k = KUCOIN:AMP-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar l = MEXC:AMPUSDT;line(cum(l.vbuy-l.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ampusdt;\n\nvar b = BINANCE:ampbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:AMPUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:AMPUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BTCTURK:AMPUSDT;\n\nvar f = BTCTURK:AMPTRY;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar g = COINBASE:AMP-USD;line(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = HITBTC:AMPUSDT;line(cum(h.vbuy-h.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar i = KUCOIN:AMP-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar j = MEXC:AMPUSDT;line(cum(j.vbuy-j.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -641,7 +633,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -906,8 +900,6 @@
         "BITGET:AMPUSDT_SPBL": false,
         "BTCTURK:AMPUSDT": true,
         "COINBASE:AMP-USD": false,
-        "CRYPTOCOM:AMP_USD": false,
-        "CRYPTOCOM:AMP_USDT": false,
         "HITBTC:AMPUSDT": false,
         "KUCOIN:AMP-USDT": false,
         "MEXC:AMPUSDT": false,
