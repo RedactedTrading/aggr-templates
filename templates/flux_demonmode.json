@@ -17,8 +17,6 @@
             "BINANCE:fluxusdt",
             "BINANCE:fluxbusd",
             "BITGET:FLUXUSDT_SPBL",
-            "CRYPTOCOM:FLUX_USD",
-            "CRYPTOCOM:FLUX_USDT",
             "HITBTC:FLUXUSDT",
             "KUCOIN:FLUX-USDT",
             "KUCOIN:FLUXUSDTM",
@@ -46,8 +44,6 @@
             "BINANCE:fluxusdt",
             "BINANCE:fluxbusd",
             "BITGET:FLUXUSDT_SPBL",
-            "CRYPTOCOM:FLUX_USD",
-            "CRYPTOCOM:FLUX_USDT",
             "HITBTC:FLUXUSDT",
             "KUCOIN:FLUX-USDT",
             "HITBTC:FLUXUSDC"
@@ -395,10 +391,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -491,7 +483,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = KUCOIN:FLUXUSDTM;line(cum(a.vbuy-a.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar b = MEXC:FLUX_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = KUCOIN:FLUXUSDTM;line(cum(a.vbuy-a.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar b = MEXC:FLUX_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -535,7 +527,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:fluxbusd;\n\nvar b = BINANCE:fluxusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:FLUXUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = CRYPTOCOM:FLUX_USD;\n\nvar e = CRYPTOCOM:FLUX_USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = HITBTC:FLUXUSDC;\n\nvar g = HITBTC:FLUXUSDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KUCOIN:FLUX-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:fluxusdt;\n\nvar b = BINANCE:fluxbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:FLUXUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = HITBTC:FLUXUSDT;\n\nvar e = HITBTC:FLUXUSDC;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = KUCOIN:FLUX-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -634,7 +626,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -896,8 +890,6 @@
         "BINANCE:fluxusdt": false,
         "BINANCE:fluxbusd": false,
         "BITGET:FLUXUSDT_SPBL": false,
-        "CRYPTOCOM:FLUX_USD": false,
-        "CRYPTOCOM:FLUX_USDT": false,
         "HITBTC:FLUXUSDT": false,
         "KUCOIN:FLUX-USDT": false,
         "KUCOIN:FLUXUSDTM": false,
