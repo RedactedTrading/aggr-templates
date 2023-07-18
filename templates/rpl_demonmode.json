@@ -20,7 +20,6 @@
             "BINANCE:rplbusd",
             "BITGET:RPLUSDT_SPBL",
             "COINBASE:RPL-USD",
-            "CRYPTOCOM:RPL_USD",
             "HITBTC:RPLUSDT",
             "KRAKEN:RPL/USD",
             "KUCOIN:RPL-USDT",
@@ -54,7 +53,6 @@
             "BINANCE:rplbusd",
             "BITGET:RPLUSDT_SPBL",
             "COINBASE:RPL-USD",
-            "CRYPTOCOM:RPL_USD",
             "HITBTC:RPLUSDT",
             "KRAKEN:RPL/USD",
             "KUCOIN:RPL-USDT",
@@ -407,10 +405,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -469,7 +463,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = BINANCE:rplusdt;var x1 = BYBIT:RPLUSDT-SPOT;var x2 = OKEX:RPL-USDT;plotcandlestick((x0.open+x1.open+x2.open) / 3,(x0.high+x1.high+x2.high) / 3,(x0.low+x1.low+x2.low) / 3,(x0.close+x1.close+x2.close) / 3);",
+          "script": "var x0 = BINANCE:rplusdt;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -511,7 +505,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:RPLUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:RPL_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:RPLUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:RPL_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -555,7 +549,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:rplbusd;\n\nvar b = BINANCE:rplusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:RPLUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:RPL_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BYBIT:RPLUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:RPL-USD;line(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = CRYPTOCOM:RPL_USD;line(cum(g.vbuy-g.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = HITBTC:RPLUSDT;line(cum(h.vbuy-h.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar i = KRAKEN:RPL/USD;line(cum(i.vbuy-i.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar j = KUCOIN:RPL-USDT;line(cum(j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar k = MEXC:RPLUSDT;line(cum(k.vbuy-k.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar l = OKEX:RPL-USDC;\n\nvar m = OKEX:RPL-USDT;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar n = UNISWAPETHEREUM:RPL/WETH;line(cum(n.vbuy-n.vsell), title=\"UNIETH\", color=\"rgb(205, 246, 247)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:rplusdt;\n\nvar b = BINANCE:rplbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:RPLUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:RPL_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = BYBIT:RPLUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:RPL-USD;line(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = HITBTC:RPLUSDT;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = KRAKEN:RPL/USD;line(cum(h.vbuy-h.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = KUCOIN:RPL-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar j = MEXC:RPLUSDT;line(cum(j.vbuy-j.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar k = OKEX:RPL-USDT;\n\nvar l = OKEX:RPL-USDC;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = UNISWAPETHEREUM:RPL/WETH;line(cum(m.vbuy-m.vsell), title=\"UNIETH\", color=\"rgb(205, 246, 247)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -654,7 +648,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "var a = COINALYZE_OI:BYBIT:RPLUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BYBIT:RPLUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -919,7 +915,6 @@
         "BINANCE:rplbusd": false,
         "BITGET:RPLUSDT_SPBL": false,
         "COINBASE:RPL-USD": false,
-        "CRYPTOCOM:RPL_USD": false,
         "HITBTC:RPLUSDT": false,
         "KRAKEN:RPL/USD": false,
         "KUCOIN:RPL-USDT": false,
