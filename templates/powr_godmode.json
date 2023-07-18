@@ -17,10 +17,8 @@
             "BINANCE:powrusdt",
             "BINANCE:powrbusd",
             "BITGET:POWRUSDT_SPBL",
-            "COINBASE:POWR-USD",
             "COINBASE:POWR-USDT",
-            "CRYPTOCOM:POWR_USD",
-            "CRYPTOCOM:POWR_USDT",
+            "COINBASE:POWR-USD",
             "KRAKEN:POWR/USD",
             "BITHUMB:POWR_KRW",
             "UPBIT:KRW-POWR"
@@ -43,10 +41,8 @@
             "BINANCE:powrusdt",
             "BINANCE:powrbusd",
             "BITGET:POWRUSDT_SPBL",
-            "COINBASE:POWR-USD",
             "COINBASE:POWR-USDT",
-            "CRYPTOCOM:POWR_USD",
-            "CRYPTOCOM:POWR_USDT",
+            "COINBASE:POWR-USD",
             "KRAKEN:POWR/USD",
             "BITHUMB:POWR_KRW",
             "UPBIT:KRW-POWR"
@@ -394,10 +390,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "BITHUMB": {
         "disabled": false,
         "fetched": false
@@ -534,7 +526,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:powrbusd;\n\nvar b = BINANCE:powrusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:POWRUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:POWR_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = COINBASE:POWR-USD;\n\nvar f = COINBASE:POWR-USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = CRYPTOCOM:POWR_USD;\n\nvar h = CRYPTOCOM:POWR_USDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = KRAKEN:POWR/USD;line(cum(i.vbuy-i.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar j = UPBIT:KRW-POWR;line(cum(j.vbuy-j.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:powrusdt;\n\nvar b = BINANCE:powrbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:POWRUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:POWR_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = COINBASE:POWR-USDT;\n\nvar f = COINBASE:POWR-USD;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = KRAKEN:POWR/USD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = UPBIT:KRW-POWR;line(cum(h.vbuy-h.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -633,7 +625,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -895,10 +889,8 @@
         "BINANCE:powrusdt": false,
         "BINANCE:powrbusd": false,
         "BITGET:POWRUSDT_SPBL": false,
-        "COINBASE:POWR-USD": false,
         "COINBASE:POWR-USDT": false,
-        "CRYPTOCOM:POWR_USD": false,
-        "CRYPTOCOM:POWR_USDT": false,
+        "COINBASE:POWR-USD": false,
         "KRAKEN:POWR/USD": false,
         "BITHUMB:POWR_KRW": true,
         "UPBIT:KRW-POWR": true
@@ -991,8 +983,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:POWR-USD": 0.5,
-        "COINBASE:POWR-USDT": 0.5
+        "COINBASE:POWR-USDT": 0.5,
+        "COINBASE:POWR-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1092,8 +1084,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:POWR-USD": 0.5,
-        "COINBASE:POWR-USDT": 0.5
+        "COINBASE:POWR-USDT": 0.5,
+        "COINBASE:POWR-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
