@@ -17,8 +17,6 @@
             "BYBIT:VRAUSDT-SPOT",
             "BITFINEX:VRAUSD",
             "BITGET:VRAUSDT_SPBL",
-            "CRYPTOCOM:VRA_USD",
-            "CRYPTOCOM:VRA_USDT",
             "HITBTC:VRAUSDT",
             "KUCOIN:VRA-USDT",
             "KUCOIN:VRAUSDTM",
@@ -48,8 +46,6 @@
             "BYBIT:VRAUSDT-SPOT",
             "BITFINEX:VRAUSD",
             "BITGET:VRAUSDT_SPBL",
-            "CRYPTOCOM:VRA_USD",
-            "CRYPTOCOM:VRA_USDT",
             "HITBTC:VRAUSDT",
             "KUCOIN:VRA-USDT",
             "OKEX:VRA-USDT",
@@ -399,10 +395,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -457,7 +449,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = BYBIT:VRAUSDT-SPOT;var x1 = OKEX:VRA-USDT;plotcandlestick((x0.open+x1.open) / 2,(x0.high+x1.high) / 2,(x0.low+x1.low) / 2,(x0.close+x1.close) / 2);",
+          "script": "var x0 = BYBIT:VRAUSDT-SPOT;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -499,7 +491,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = KUCOIN:VRAUSDTM;line(cum(a.vbuy-a.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar b = MEXC:VRA_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = KUCOIN:VRAUSDTM;line(cum(a.vbuy-a.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar b = MEXC:VRA_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -543,7 +535,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITFINEX:VRAUSD;line(cum(a.vbuy-a.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar b = BITGET:VRAUSDT_SPBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BITHUMB:VRA_KRW;line(cum(c.vbuy-c.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar d = BYBIT:VRAUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = CRYPTOCOM:VRA_USD;\n\nvar f = CRYPTOCOM:VRA_USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = HITBTC:VRAUSDT;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KUCOIN:VRA-USDC;\n\nvar i = KUCOIN:VRA-USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = OKEX:VRA-USDT;line(cum(j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITFINEX:VRAUSD;line(cum(a.vbuy-a.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar b = BITGET:VRAUSDT_SPBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BITHUMB:VRA_KRW;line(cum(c.vbuy-c.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar d = BYBIT:VRAUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = HITBTC:VRAUSDT;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = KUCOIN:VRA-USDT;\n\nvar g = KUCOIN:VRA-USDC;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = OKEX:VRA-USDT;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -642,7 +634,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -904,8 +898,6 @@
         "BYBIT:VRAUSDT-SPOT": false,
         "BITFINEX:VRAUSD": false,
         "BITGET:VRAUSDT_SPBL": false,
-        "CRYPTOCOM:VRA_USD": false,
-        "CRYPTOCOM:VRA_USDT": false,
         "HITBTC:VRAUSDT": false,
         "KUCOIN:VRA-USDT": false,
         "KUCOIN:VRAUSDTM": false,
