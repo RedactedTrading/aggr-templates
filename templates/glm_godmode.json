@@ -19,8 +19,6 @@
             "BITGET:GLMUSDT_SPBL",
             "BTCTURK:GLMUSDT",
             "COINBASE:GLM-USD",
-            "CRYPTOCOM:GLM_USD",
-            "CRYPTOCOM:GLM_USDT",
             "HITBTC:GLMUSD",
             "KUCOIN:GLM-USDT",
             "OKEX:GLM-USDT",
@@ -49,8 +47,6 @@
             "BITGET:GLMUSDT_SPBL",
             "BTCTURK:GLMUSDT",
             "COINBASE:GLM-USD",
-            "CRYPTOCOM:GLM_USD",
-            "CRYPTOCOM:GLM_USDT",
             "HITBTC:GLMUSD",
             "KUCOIN:GLM-USDT",
             "OKEX:GLM-USDT",
@@ -406,10 +402,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "BITHUMB": {
         "disabled": false,
         "fetched": false
@@ -460,7 +452,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = BINANCE:glmusdt;var x1 = OKEX:GLM-USDT;plotcandlestick((x0.open+x1.open) / 2,(x0.high+x1.high) / 2,(x0.low+x1.low) / 2,(x0.close+x1.close) / 2);",
+          "script": "var x0 = BINANCE:glmusdt;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -546,7 +538,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:glmbusd;\n\nvar b = BINANCE:glmusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:GLMUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:GLM_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BTCTURK:GLMTRY;\n\nvar f = BTCTURK:GLMUSDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = COINBASE:GLM-USD;line(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = CRYPTOCOM:GLM_USD;\n\nvar i = CRYPTOCOM:GLM_USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar j = HITBTC:GLMUSD;\n\nvar k = HITBTC:GLMUSDC;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar l = KUCOIN:GLM-USDT;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = OKEX:GLM-USDT;line(cum(m.vbuy-m.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar n = UPBIT:KRW-GLM;line(cum(n.vbuy-n.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:glmusdt;\n\nvar b = BINANCE:glmbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:GLMUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:GLM_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = BTCTURK:GLMUSDT;\n\nvar f = BTCTURK:GLMTRY;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar g = COINBASE:GLM-USD;line(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = HITBTC:GLMUSD;\n\nvar i = HITBTC:GLMUSDC;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = KUCOIN:GLM-USDT;line(cum(j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar k = OKEX:GLM-USDT;line(cum(k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar l = UPBIT:KRW-GLM;line(cum(l.vbuy-l.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -645,7 +637,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -909,8 +903,6 @@
         "BITGET:GLMUSDT_SPBL": false,
         "BTCTURK:GLMUSDT": true,
         "COINBASE:GLM-USD": false,
-        "CRYPTOCOM:GLM_USD": false,
-        "CRYPTOCOM:GLM_USDT": false,
         "HITBTC:GLMUSD": false,
         "KUCOIN:GLM-USDT": false,
         "OKEX:GLM-USDT": false,
