@@ -16,8 +16,6 @@
           "markets": [
             "BINANCE:mblusdt",
             "BINANCE:mblbusd",
-            "CRYPTOCOM:MBL_USD",
-            "CRYPTOCOM:MBL_USDT",
             "HITBTC:MBLUSD",
             "KUCOIN:MBL-USDT",
             "BITHUMB:MBL_KRW",
@@ -40,8 +38,6 @@
           "markets": [
             "BINANCE:mblusdt",
             "BINANCE:mblbusd",
-            "CRYPTOCOM:MBL_USD",
-            "CRYPTOCOM:MBL_USDT",
             "HITBTC:MBLUSD",
             "KUCOIN:MBL-USDT",
             "BITHUMB:MBL_KRW",
@@ -386,10 +382,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "BITHUMB": {
         "disabled": false,
         "fetched": false
@@ -526,7 +518,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:mblbusd;\n\nvar b = BINANCE:mblusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITHUMB:MBL_KRW;line(cum(c.vbuy-c.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar d = CRYPTOCOM:MBL_USD;\n\nvar e = CRYPTOCOM:MBL_USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = HITBTC:MBLUSD;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = KUCOIN:MBL-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = UPBIT:KRW-MBL;line(cum(h.vbuy-h.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:mblusdt;\n\nvar b = BINANCE:mblbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITHUMB:MBL_KRW;line(cum(c.vbuy-c.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar d = HITBTC:MBLUSD;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar e = KUCOIN:MBL-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = UPBIT:KRW-MBL;line(cum(f.vbuy-f.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -625,7 +617,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -886,8 +880,6 @@
       "hiddenMarkets": {
         "BINANCE:mblusdt": false,
         "BINANCE:mblbusd": false,
-        "CRYPTOCOM:MBL_USD": false,
-        "CRYPTOCOM:MBL_USDT": false,
         "HITBTC:MBLUSD": false,
         "KUCOIN:MBL-USDT": false,
         "BITHUMB:MBL_KRW": true,
