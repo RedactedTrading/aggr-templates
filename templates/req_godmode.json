@@ -20,8 +20,6 @@
             "BITFINEX:REQUSD",
             "COINBASE:REQ-USD",
             "COINBASE:REQ-USDT",
-            "CRYPTOCOM:REQ_USD",
-            "CRYPTOCOM:REQ_USDT",
             "HITBTC:REQUSDT",
             "KRAKEN:REQ/USD",
             "KUCOIN:REQ-USDT",
@@ -49,8 +47,6 @@
             "BITFINEX:REQUSD",
             "COINBASE:REQ-USD",
             "COINBASE:REQ-USDT",
-            "CRYPTOCOM:REQ_USD",
-            "CRYPTOCOM:REQ_USDT",
             "HITBTC:REQUSDT",
             "KRAKEN:REQ/USD",
             "KUCOIN:REQ-USDT",
@@ -395,10 +391,6 @@
         "disabled": true,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "BITHUMB": {
         "disabled": false,
         "fetched": false
@@ -535,7 +527,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:reqbusd;\n\nvar b = BINANCE:requsdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:REQUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITHUMB:REQ_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = COINBASE:REQ-USD;\n\nvar f = COINBASE:REQ-USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = CRYPTOCOM:REQ_USD;\n\nvar h = CRYPTOCOM:REQ_USDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = HITBTC:REQUSDT;line(cum(i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar j = KRAKEN:REQ/USD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar k = KUCOIN:REQ-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:requsdt;\n\nvar b = BINANCE:reqbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:REQUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITHUMB:REQ_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = COINBASE:REQ-USD;\n\nvar f = COINBASE:REQ-USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = HITBTC:REQUSDT;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = KRAKEN:REQ/USD;line(cum(h.vbuy-h.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = KUCOIN:REQ-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -634,7 +626,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "var a = COINALYZE_OI:BYBIT:REQUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BYBIT:REQUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -899,8 +893,6 @@
         "BITFINEX:REQUSD": false,
         "COINBASE:REQ-USD": false,
         "COINBASE:REQ-USDT": false,
-        "CRYPTOCOM:REQ_USD": false,
-        "CRYPTOCOM:REQ_USDT": false,
         "HITBTC:REQUSDT": false,
         "KRAKEN:REQ/USD": false,
         "KUCOIN:REQ-USDT": false,
