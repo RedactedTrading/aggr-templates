@@ -29,11 +29,8 @@
             "BITGET:ADAUSDT_UMCBL",
             "BITMEX:ADAUSDT",
             "BITMEX:ADAUSD",
-            "COINBASE:ADA-USDT",
             "COINBASE:ADA-USD",
-            "CRYPTOCOM:ADAUSD-PERP",
-            "CRYPTOCOM:ADA_USD",
-            "CRYPTOCOM:ADA_USDT",
+            "COINBASE:ADA-USDT",
             "HITBTC:ADAUSD",
             "KRAKEN:ADA/USD",
             "KRAKEN:ADA/USDT",
@@ -70,7 +67,6 @@
             "BITGET:ADAUSDT_UMCBL",
             "BITMEX:ADAUSDT",
             "BITMEX:ADAUSD",
-            "CRYPTOCOM:ADAUSD-PERP",
             "KRAKEN:PF_ADAUSD",
             "KUCOIN:ADAUSDTM",
             "MEXC:ADA_USDT",
@@ -94,10 +90,8 @@
             "BYBIT:ADAUSDC-SPOT",
             "BITFINEX:ADAUSD",
             "BITGET:ADAUSDT_SPBL",
-            "COINBASE:ADA-USDT",
             "COINBASE:ADA-USD",
-            "CRYPTOCOM:ADA_USD",
-            "CRYPTOCOM:ADA_USDT",
+            "COINBASE:ADA-USDT",
             "HITBTC:ADAUSD",
             "KRAKEN:ADA/USD",
             "KRAKEN:ADA/USDT",
@@ -455,10 +449,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -517,7 +507,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = BINANCE:adausdt;var x1 = BYBIT:ADAUSDT-SPOT;var x2 = OKEX:ADA-USDT;plotcandlestick((x0.open+x1.open+x2.open) / 3,(x0.high+x1.high+x2.high) / 3,(x0.low+x1.low+x2.low) / 3,(x0.close+x1.close+x2.close) / 3);",
+          "script": "var x0 = BINANCE:adausdt;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -559,7 +549,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:adabusd;\n\nvar b = BINANCE_FUTURES:adausd_perp;\n\nvar c = BINANCE_FUTURES:adausdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar d = BITGET:ADAUSDT_UMCBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITMEX:ADAUSD;\n\nvar f = BITMEX:ADAUSDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar g = BYBIT:ADAUSD;\n\nvar h = BYBIT:ADAUSDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar i = CRYPTOCOM:ADAUSD-PERP;line(cum(i.vbuy-i.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar j = DERIBIT:ADA_USDC-PERPETUAL;line(cum(j.vbuy-j.vsell), title=\"DRBT\", color=\"rgb(234, 238, 245)\");\n\n\nvar k = KRAKEN:PF_ADAUSD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar l = KUCOIN:ADAUSDTM;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = MEXC:ADA_USDT;line(cum(m.vbuy-m.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar n = OKEX:ADA-USD-SWAP;\n\nvar o = OKEX:ADA-USDT-SWAP;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:adausdt;\n\nvar b = BINANCE_FUTURES:adausd_perp;\n\nvar c = BINANCE_FUTURES:adabusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar d = BITGET:ADAUSDT_UMCBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITMEX:ADAUSDT;\n\nvar f = BITMEX:ADAUSD;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar g = BYBIT:ADAUSD;\n\nvar h = BYBIT:ADAUSDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar i = DERIBIT:ADA_USDC-PERPETUAL;line(cum(i.vbuy-i.vsell), title=\"DRBT\", color=\"rgb(180, 242, 243)\");\n\n\nvar j = KRAKEN:PF_ADAUSD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = KUCOIN:ADAUSDTM;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar l = MEXC:ADA_USDT;line(cum(l.vbuy-l.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar m = OKEX:ADA-USD-SWAP;\n\nvar n = OKEX:ADA-USDT-SWAP;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -603,7 +593,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:adabusd;\n\nvar b = BINANCE:adatusd;\n\nvar c = BINANCE:adausdc;\n\nvar d = BINANCE:adausdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:ADAUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:ADAUSDC_SPBL;\n\nvar g = BITGET:ADAUSDT_SPBL;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar h = BITHUMB:ADA_KRW;line(cum(h.vbuy-h.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar i = BTCTURK:ADATRY;line(cum(i.vbuy-i.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar j = BYBIT:ADAUSDC-SPOT;\n\nvar k = BYBIT:ADAUSDT-SPOT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar l = COINBASE:ADA-USD;\n\nvar m = COINBASE:ADA-USDT;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar n = CRYPTOCOM:ADA_USD;\n\nvar o = CRYPTOCOM:ADA_USDT;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar p = HITBTC:ADAUSD;\n\nvar q = HITBTC:ADAUSDC;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar r = KRAKEN:ADA/USD;\n\nvar s = KRAKEN:ADA/USDT;line(cum(r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar t = KUCOIN:ADA-USDC;\n\nvar u = KUCOIN:ADA-USDT;line(cum(t.vbuy-t.vsell+u.vbuy-u.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar v = MEXC:ADAUSDC;line(cum(v.vbuy-v.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar w = OKEX:ADA-USDC;\n\nvar x = OKEX:ADA-USDT;line(cum(w.vbuy-w.vsell+x.vbuy-x.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar y = UPBIT:KRW-ADA;line(cum(y.vbuy-y.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell+w.vbuy-w.vsell+x.vbuy-x.vsell+y.vbuy-y.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:adausdt;\n\nvar b = BINANCE:adatusd;\n\nvar c = BINANCE:adausdc;\n\nvar d = BINANCE:adabusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:ADAUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:ADAUSDT_SPBL;\n\nvar g = BITGET:ADAUSDC_SPBL;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar h = BITHUMB:ADA_KRW;line(cum(h.vbuy-h.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar i = BTCTURK:ADATRY;line(cum(i.vbuy-i.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar j = BYBIT:ADAUSDT-SPOT;\n\nvar k = BYBIT:ADAUSDC-SPOT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar l = COINBASE:ADA-USD;\n\nvar m = COINBASE:ADA-USDT;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar n = HITBTC:ADAUSD;\n\nvar o = HITBTC:ADAUSDC;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar p = KRAKEN:ADA/USD;\n\nvar q = KRAKEN:ADA/USDT;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar r = KUCOIN:ADA-USDT;\n\nvar s = KUCOIN:ADA-USDC;line(cum(r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar t = MEXC:ADAUSDC;line(cum(t.vbuy-t.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar u = OKEX:ADA-USDT;\n\nvar v = OKEX:ADA-USDC;line(cum(u.vbuy-u.vsell+v.vbuy-v.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar w = UPBIT:KRW-ADA;line(cum(w.vbuy-w.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell+w.vbuy-w.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -702,7 +692,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:adausdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:adausd_perp;\n\nvar c = COINALYZE_OI:BITMEX:ADAUSDT;\n\nvar d = COINALYZE_OI:BITMEX:ADAUSD;\n\nvar e = COINALYZE_OI:BYBIT:ADAUSD;\n\nvar f = COINALYZE_OI:BYBIT:ADAUSDT;\n\nvar g = COINALYZE_OI:DERIBIT:ADA_USDC-PERPETUAL;\n\nvar h = COINALYZE_OI:OKEX:ADA-USD-SWAP;\n\nvar i = COINALYZE_OI:OKEX:ADA-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close+i.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close+i.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:adausdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:adausd_perp;\n\nvar c = COINALYZE_PFR:BITMEX:ADAUSDT;\n\nvar d = COINALYZE_PFR:BITMEX:ADAUSD;\n\nvar e = COINALYZE_PFR:BYBIT:ADAUSD;\n\nvar f = COINALYZE_PFR:BYBIT:ADAUSDT;\n\nvar g = COINALYZE_PFR:DERIBIT:ADA_USDC-PERPETUAL;\n\nvar h = COINALYZE_PFR:OKEX:ADA-USD-SWAP;\n\nvar i = COINALYZE_PFR:OKEX:ADA-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close+i.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close+i.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -976,11 +968,8 @@
         "BITGET:ADAUSDT_UMCBL": false,
         "BITMEX:ADAUSDT": false,
         "BITMEX:ADAUSD": false,
-        "COINBASE:ADA-USDT": false,
         "COINBASE:ADA-USD": false,
-        "CRYPTOCOM:ADAUSD-PERP": false,
-        "CRYPTOCOM:ADA_USD": false,
-        "CRYPTOCOM:ADA_USDT": false,
+        "COINBASE:ADA-USDT": false,
         "HITBTC:ADAUSD": false,
         "KRAKEN:ADA/USD": false,
         "KRAKEN:ADA/USDT": false,
@@ -1090,8 +1079,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:ADA-USDT": 0.5,
-        "COINBASE:ADA-USD": 0.5
+        "COINBASE:ADA-USD": 0.5,
+        "COINBASE:ADA-USDT": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1191,8 +1180,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:ADA-USDT": 0.5,
-        "COINBASE:ADA-USD": 0.5
+        "COINBASE:ADA-USD": 0.5,
+        "COINBASE:ADA-USDT": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
