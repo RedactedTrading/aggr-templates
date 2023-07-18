@@ -16,7 +16,6 @@
           "markets": [
             "BYBIT:WEMIXUSDT-SPOT",
             "BITGET:WEMIXUSDT_SPBL",
-            "CRYPTOCOM:WEMIX_USD",
             "KUCOIN:WEMIX-USDT",
             "MEXC:WEMIXUSDT",
             "MEXC:WEMIX_USDT"
@@ -40,7 +39,6 @@
           "markets": [
             "BYBIT:WEMIXUSDT-SPOT",
             "BITGET:WEMIXUSDT_SPBL",
-            "CRYPTOCOM:WEMIX_USD",
             "KUCOIN:WEMIX-USDT",
             "MEXC:WEMIXUSDT"
           ]
@@ -387,10 +385,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -483,7 +477,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = MEXC:WEMIX_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = MEXC:WEMIX_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -527,7 +521,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:WEMIXUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:WEMIXUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = CRYPTOCOM:WEMIX_USD;line(cum(c.vbuy-c.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = KUCOIN:WEMIX-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:WEMIXUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:WEMIXUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:WEMIXUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KUCOIN:WEMIX-USDT;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:WEMIXUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -626,7 +620,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -887,7 +883,6 @@
       "hiddenMarkets": {
         "BYBIT:WEMIXUSDT-SPOT": false,
         "BITGET:WEMIXUSDT_SPBL": false,
-        "CRYPTOCOM:WEMIX_USD": false,
         "KUCOIN:WEMIX-USDT": false,
         "MEXC:WEMIXUSDT": false,
         "MEXC:WEMIX_USDT": false
