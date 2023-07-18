@@ -19,7 +19,6 @@
             "BITFINEX:FLRUSD",
             "BITMEX:FLRUSD",
             "COINBASE:FLR-USD",
-            "CRYPTOCOM:FLR_USD",
             "KRAKEN:FLR/USD",
             "KRAKEN:PF_FLRUSD",
             "KUCOIN:FLR-USDT",
@@ -53,7 +52,6 @@
             "BYBIT:FLRUSDT-SPOT",
             "BITFINEX:FLRUSD",
             "COINBASE:FLR-USD",
-            "CRYPTOCOM:FLR_USD",
             "KRAKEN:FLR/USD",
             "KUCOIN:FLR-USDT",
             "OKEX:FLR-USDT",
@@ -401,10 +399,6 @@
         "disabled": true,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -463,7 +457,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = BYBIT:FLRUSDT-SPOT;var x1 = OKEX:FLR-USDT;plotcandlestick((x0.open+x1.open) / 2,(x0.high+x1.high) / 2,(x0.low+x1.low) / 2,(x0.close+x1.close) / 2);",
+          "script": "var x0 = BYBIT:FLRUSDT-SPOT;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -505,7 +499,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITMEX:FLRUSD;line(cum(a.vbuy-a.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar b = BYBIT:FLRUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KRAKEN:PF_FLRUSD;line(cum(c.vbuy-c.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar d = MEXC:FLR_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITMEX:FLRUSD;line(cum(a.vbuy-a.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar b = BYBIT:FLRUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KRAKEN:PF_FLRUSD;line(cum(c.vbuy-c.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = MEXC:FLR_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -549,7 +543,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITFINEX:FLRUSD;line(cum(a.vbuy-a.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar b = BITHUMB:FLR_KRW;line(cum(b.vbuy-b.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar c = BTCTURK:FLRTRY;line(cum(c.vbuy-c.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar d = BYBIT:FLRUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = COINBASE:FLR-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = CRYPTOCOM:FLR_USD;line(cum(f.vbuy-f.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = KRAKEN:FLR/USD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar h = KUCOIN:FLR-USDC;\n\nvar i = KUCOIN:FLR-USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = OKEX:FLR-USDC;\n\nvar k = OKEX:FLR-USDT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITFINEX:FLRUSD;line(cum(a.vbuy-a.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar b = BITHUMB:FLR_KRW;line(cum(b.vbuy-b.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar c = BTCTURK:FLRTRY;line(cum(c.vbuy-c.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar d = BYBIT:FLRUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = COINBASE:FLR-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = KRAKEN:FLR/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = KUCOIN:FLR-USDT;\n\nvar h = KUCOIN:FLR-USDC;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar i = OKEX:FLR-USDT;\n\nvar j = OKEX:FLR-USDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -648,7 +642,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "var a = COINALYZE_OI:BITMEX:FLRUSD;\n\nvar b = COINALYZE_OI:BYBIT:FLRUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BITMEX:FLRUSD;\n\nvar b = COINALYZE_PFR:BYBIT:FLRUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -912,7 +908,6 @@
         "BITFINEX:FLRUSD": false,
         "BITMEX:FLRUSD": false,
         "COINBASE:FLR-USD": false,
-        "CRYPTOCOM:FLR_USD": false,
         "KRAKEN:FLR/USD": false,
         "KRAKEN:PF_FLRUSD": false,
         "KUCOIN:FLR-USDT": false,
