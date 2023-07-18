@@ -15,7 +15,6 @@
           "type": "chart",
           "markets": [
             "BYBIT:PRIMALUSDT-SPOT",
-            "BITGET:PRIMALUSDT_SPBL",
             "KUCOIN:PRIMAL-USDT",
             "MEXC:PRIMALUSDT",
             "KUCOIN:PRIMAL-USDC"
@@ -36,7 +35,6 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:PRIMALUSDT-SPOT",
-            "BITGET:PRIMALUSDT_SPBL",
             "KUCOIN:PRIMAL-USDT",
             "MEXC:PRIMALUSDT",
             "KUCOIN:PRIMAL-USDC"
@@ -380,10 +378,6 @@
         "disabled": true,
         "fetched": false
       },
-      "BITGET": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -520,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:PRIMALUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:PRIMALUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KUCOIN:PRIMAL-USDC;\n\nvar d = KUCOIN:PRIMAL-USDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:PRIMALUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:PRIMALUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = KUCOIN:PRIMAL-USDT;\n\nvar c = KUCOIN:PRIMAL-USDC;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:PRIMALUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -619,7 +613,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -879,7 +875,6 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:PRIMALUSDT-SPOT": false,
-        "BITGET:PRIMALUSDT_SPBL": false,
         "KUCOIN:PRIMAL-USDT": false,
         "MEXC:PRIMALUSDT": false,
         "KUCOIN:PRIMAL-USDC": false
