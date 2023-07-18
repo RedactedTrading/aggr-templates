@@ -17,9 +17,8 @@
             "BINANCE:fisusdt",
             "BINANCE:fisbusd",
             "BITGET:FISUSDT_SPBL",
-            "COINBASE:FIS-USD",
             "COINBASE:FIS-USDT",
-            "CRYPTOCOM:FIS_USD",
+            "COINBASE:FIS-USD",
             "KRAKEN:FIS/USD"
           ],
           "zoom": 1
@@ -40,9 +39,8 @@
             "BINANCE:fisusdt",
             "BINANCE:fisbusd",
             "BITGET:FISUSDT_SPBL",
-            "COINBASE:FIS-USD",
             "COINBASE:FIS-USDT",
-            "CRYPTOCOM:FIS_USD",
+            "COINBASE:FIS-USD",
             "KRAKEN:FIS/USD"
           ]
         }
@@ -387,10 +385,6 @@
       "BITGET": {
         "disabled": false,
         "fetched": false
-      },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -524,7 +518,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:fisbusd;\n\nvar b = BINANCE:fisusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:FISUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:FIS-USD;\n\nvar e = COINBASE:FIS-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = CRYPTOCOM:FIS_USD;line(cum(f.vbuy-f.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = KRAKEN:FIS/USD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:fisusdt;\n\nvar b = BINANCE:fisbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:FISUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:FIS-USDT;\n\nvar e = COINBASE:FIS-USD;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = KRAKEN:FIS/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -623,7 +617,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -885,9 +881,8 @@
         "BINANCE:fisusdt": false,
         "BINANCE:fisbusd": false,
         "BITGET:FISUSDT_SPBL": false,
-        "COINBASE:FIS-USD": false,
         "COINBASE:FIS-USDT": false,
-        "CRYPTOCOM:FIS_USD": false,
+        "COINBASE:FIS-USD": false,
         "KRAKEN:FIS/USD": false
       },
       "barSpacing": 0.39437454420364615,
@@ -978,8 +973,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:FIS-USD": 0.5,
-        "COINBASE:FIS-USDT": 0.5
+        "COINBASE:FIS-USDT": 0.5,
+        "COINBASE:FIS-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1079,8 +1074,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:FIS-USD": 0.5,
-        "COINBASE:FIS-USDT": 0.5
+        "COINBASE:FIS-USDT": 0.5,
+        "COINBASE:FIS-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
