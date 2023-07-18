@@ -426,7 +426,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = BYBIT:VELAUSDT-SPOT;var x1 = OKEX:VELA-USDT;plotcandlestick((x0.open+x1.open) / 2,(x0.high+x1.high) / 2,(x0.low+x1.low) / 2,(x0.close+x1.close) / 2);",
+          "script": "var x0 = BYBIT:VELAUSDT-SPOT;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -512,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:VELAUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:VELAUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = OKEX:VELA-USDT;line(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:VELAUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:VELAUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = OKEX:VELA-USDT;line(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -611,7 +611,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
