@@ -16,9 +16,8 @@
           "markets": [
             "BINANCE:farmusdt",
             "BINANCE:farmbusd",
-            "COINBASE:FARM-USDT",
             "COINBASE:FARM-USD",
-            "CRYPTOCOM:FARM_USD",
+            "COINBASE:FARM-USDT",
             "HITBTC:FARMUSD",
             "KRAKEN:FARM/USD",
             "MEXC:FARMUSDT"
@@ -40,9 +39,8 @@
           "markets": [
             "BINANCE:farmusdt",
             "BINANCE:farmbusd",
-            "COINBASE:FARM-USDT",
             "COINBASE:FARM-USD",
-            "CRYPTOCOM:FARM_USD",
+            "COINBASE:FARM-USDT",
             "HITBTC:FARMUSD",
             "KRAKEN:FARM/USD",
             "MEXC:FARMUSDT"
@@ -386,10 +384,6 @@
         "disabled": true,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -526,7 +520,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:farmbusd;\n\nvar b = BINANCE:farmusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:FARM-USD;\n\nvar d = COINBASE:FARM-USDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = CRYPTOCOM:FARM_USD;line(cum(e.vbuy-e.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = HITBTC:FARMUSD;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = KRAKEN:FARM/USD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar h = MEXC:FARMUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:farmusdt;\n\nvar b = BINANCE:farmbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:FARM-USD;\n\nvar d = COINBASE:FARM-USDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = HITBTC:FARMUSD;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = KRAKEN:FARM/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = MEXC:FARMUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -625,7 +619,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -886,9 +882,8 @@
       "hiddenMarkets": {
         "BINANCE:farmusdt": false,
         "BINANCE:farmbusd": false,
-        "COINBASE:FARM-USDT": false,
         "COINBASE:FARM-USD": false,
-        "CRYPTOCOM:FARM_USD": false,
+        "COINBASE:FARM-USDT": false,
         "HITBTC:FARMUSD": false,
         "KRAKEN:FARM/USD": false,
         "MEXC:FARMUSDT": false
@@ -981,8 +976,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:FARM-USDT": 0.5,
-        "COINBASE:FARM-USD": 0.5
+        "COINBASE:FARM-USD": 0.5,
+        "COINBASE:FARM-USDT": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1082,8 +1077,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:FARM-USDT": 0.5,
-        "COINBASE:FARM-USD": 0.5
+        "COINBASE:FARM-USD": 0.5,
+        "COINBASE:FARM-USDT": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
