@@ -19,12 +19,10 @@
             "BYBIT:DGBUSDT",
             "BINANCE:dgbbusd",
             "BINANCE_FUTURES:dgbusdt",
-            "CRYPTOCOM:DGB_USD",
             "KUCOIN:DGB-USDT",
             "KUCOIN:DGBUSDTM",
             "OKEX:DGB-USDT",
             "BITFINEX:DGBUSD",
-            "CRYPTOCOM:DGBUSD-PERP",
             "HITBTC:DGBUSDC",
             "HITBTC:DGBUSD"
           ],
@@ -38,8 +36,7 @@
           "markets": [
             "BYBIT:DGBUSDT",
             "BINANCE_FUTURES:dgbusdt",
-            "KUCOIN:DGBUSDTM",
-            "CRYPTOCOM:DGBUSD-PERP"
+            "KUCOIN:DGBUSDTM"
           ]
         },
         "trades2": {
@@ -51,7 +48,6 @@
             "BINANCE:dgbusdt",
             "BYBIT:DGBUSDT-SPOT",
             "BINANCE:dgbbusd",
-            "CRYPTOCOM:DGB_USD",
             "KUCOIN:DGB-USDT",
             "OKEX:DGB-USDT",
             "BITFINEX:DGBUSD",
@@ -396,10 +392,6 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
-      },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -447,7 +439,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = BINANCE:dgbusdt;var x1 = BYBIT:DGBUSDT-SPOT;var x2 = OKEX:DGB-USDT;plotcandlestick((x0.open+x1.open+x2.open) / 3,(x0.high+x1.high+x2.high) / 3,(x0.low+x1.low+x2.low) / 3,(x0.close+x1.close+x2.close) / 3);",
+          "script": "var x0 = BINANCE:dgbusdt;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -489,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:dgbusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:DGBUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = CRYPTOCOM:DGBUSD-PERP;line(cum(c.vbuy-c.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = KUCOIN:DGBUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:dgbusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:DGBUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KUCOIN:DGBUSDTM;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -533,7 +525,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:dgbbusd;\n\nvar b = BINANCE:dgbusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:DGBUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BYBIT:DGBUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = CRYPTOCOM:DGB_USD;line(cum(e.vbuy-e.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = HITBTC:DGBUSD;\n\nvar g = HITBTC:DGBUSDC;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KUCOIN:DGB-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = OKEX:DGB-USDT;line(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:dgbusdt;\n\nvar b = BINANCE:dgbbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:DGBUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BYBIT:DGBUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = HITBTC:DGBUSDC;\n\nvar f = HITBTC:DGBUSD;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = KUCOIN:DGB-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = OKEX:DGB-USDT;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -632,7 +624,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:dgbusdt;\n\nvar b = COINALYZE_OI:BYBIT:DGBUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:dgbusdt;\n\nvar b = COINALYZE_PFR:BYBIT:DGBUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -896,12 +890,10 @@
         "BYBIT:DGBUSDT": false,
         "BINANCE:dgbbusd": false,
         "BINANCE_FUTURES:dgbusdt": false,
-        "CRYPTOCOM:DGB_USD": false,
         "KUCOIN:DGB-USDT": false,
         "KUCOIN:DGBUSDTM": false,
         "OKEX:DGB-USDT": false,
         "BITFINEX:DGBUSD": false,
-        "CRYPTOCOM:DGBUSD-PERP": false,
         "HITBTC:DGBUSDC": false,
         "HITBTC:DGBUSD": false
       },
