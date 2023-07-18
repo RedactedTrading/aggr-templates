@@ -24,8 +24,6 @@
             "BITGET:NEOUSDT_SPBL",
             "BITGET:NEOUSDT_UMCBL",
             "BTCTURK:NEOUSDT",
-            "CRYPTOCOM:NEO_USD",
-            "CRYPTOCOM:NEO_USDT",
             "HITBTC:NEOUSD",
             "KUCOIN:NEO-USDT",
             "KUCOIN:NEOUSDTM",
@@ -68,8 +66,6 @@
             "BITFINEX:NEOUSD",
             "BITGET:NEOUSDT_SPBL",
             "BTCTURK:NEOUSDT",
-            "CRYPTOCOM:NEO_USD",
-            "CRYPTOCOM:NEO_USDT",
             "HITBTC:NEOUSD",
             "KUCOIN:NEO-USDT",
             "MEXC:NEOUSDT",
@@ -425,10 +421,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -479,7 +471,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = BINANCE:neousdt;var x1 = OKEX:NEO-USDT;plotcandlestick((x0.open+x1.open) / 2,(x0.high+x1.high) / 2,(x0.low+x1.low) / 2,(x0.close+x1.close) / 2);",
+          "script": "var x0 = BINANCE:neousdt;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -521,7 +513,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:neousdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:NEOUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:NEOUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KUCOIN:NEOUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:NEO_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = OKEX:NEO-USD-SWAP;\n\nvar g = OKEX:NEO-USDT-SWAP;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:neousdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:NEOUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:NEOUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KUCOIN:NEOUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:NEO_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:NEO-USD-SWAP;\n\nvar g = OKEX:NEO-USDT-SWAP;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -565,7 +557,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:neobusd;\n\nvar b = BINANCE:neotusd;\n\nvar c = BINANCE:neousdc;\n\nvar d = BINANCE:neousdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:NEOUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:NEOUSDT_SPBL;line(cum(f.vbuy-f.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar g = BTCTURK:NEOTRY;\n\nvar h = BTCTURK:NEOUSDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar i = CRYPTOCOM:NEO_USD;\n\nvar j = CRYPTOCOM:NEO_USDT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = HITBTC:NEOUSD;\n\nvar l = HITBTC:NEOUSDC;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar m = KUCOIN:NEO-USDT;line(cum(m.vbuy-m.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar n = MEXC:NEOUSDT;line(cum(n.vbuy-n.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar o = OKEX:NEO-USDT;line(cum(o.vbuy-o.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar p = UPBIT:KRW-NEO;line(cum(p.vbuy-p.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:neousdt;\n\nvar b = BINANCE:neotusd;\n\nvar c = BINANCE:neousdc;\n\nvar d = BINANCE:neobusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:NEOUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:NEOUSDT_SPBL;line(cum(f.vbuy-f.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar g = BTCTURK:NEOUSDT;\n\nvar h = BTCTURK:NEOTRY;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar i = HITBTC:NEOUSD;\n\nvar j = HITBTC:NEOUSDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar k = KUCOIN:NEO-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar l = MEXC:NEOUSDT;line(cum(l.vbuy-l.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar m = OKEX:NEO-USDT;line(cum(m.vbuy-m.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar n = UPBIT:KRW-NEO;line(cum(n.vbuy-n.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -664,7 +656,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:neousdt;\n\nvar b = COINALYZE_OI:BYBIT:NEOUSDT;\n\nvar c = COINALYZE_OI:OKEX:NEO-USD-SWAP;\n\nvar d = COINALYZE_OI:OKEX:NEO-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:neousdt;\n\nvar b = COINALYZE_PFR:BYBIT:NEOUSDT;\n\nvar c = COINALYZE_PFR:OKEX:NEO-USD-SWAP;\n\nvar d = COINALYZE_PFR:OKEX:NEO-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -933,8 +927,6 @@
         "BITGET:NEOUSDT_SPBL": false,
         "BITGET:NEOUSDT_UMCBL": false,
         "BTCTURK:NEOUSDT": true,
-        "CRYPTOCOM:NEO_USD": false,
-        "CRYPTOCOM:NEO_USDT": false,
         "HITBTC:NEOUSD": false,
         "KUCOIN:NEO-USDT": false,
         "KUCOIN:NEOUSDTM": false,
