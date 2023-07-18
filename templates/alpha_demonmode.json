@@ -20,9 +20,6 @@
             "BINANCE_FUTURES:alphausdt",
             "BITGET:ALPHAUSDT_SPBL",
             "BITGET:ALPHAUSDT_UMCBL",
-            "CRYPTOCOM:ALPHAUSD-PERP",
-            "CRYPTOCOM:ALPHA_USD",
-            "CRYPTOCOM:ALPHA_USDT",
             "HITBTC:ALPHAUSD",
             "KRAKEN:ALPHA/USD",
             "KUCOIN:ALPHA-USDT",
@@ -42,7 +39,6 @@
             "BYBIT:ALPHAUSDT",
             "BINANCE_FUTURES:alphausdt",
             "BITGET:ALPHAUSDT_UMCBL",
-            "CRYPTOCOM:ALPHAUSD-PERP",
             "KUCOIN:ALPHAUSDTM",
             "MEXC:ALPHA_USDT",
             "OKEX:ALPHA-USDT-SWAP"
@@ -57,8 +53,6 @@
             "BINANCE:alphausdt",
             "BINANCE:alphabusd",
             "BITGET:ALPHAUSDT_SPBL",
-            "CRYPTOCOM:ALPHA_USD",
-            "CRYPTOCOM:ALPHA_USDT",
             "HITBTC:ALPHAUSD",
             "KRAKEN:ALPHA/USD",
             "KUCOIN:ALPHA-USDT",
@@ -407,10 +401,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -461,7 +451,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = BINANCE:alphausdt;var x1 = OKEX:ALPHA-USDT;plotcandlestick((x0.open+x1.open) / 2,(x0.high+x1.high) / 2,(x0.low+x1.low) / 2,(x0.close+x1.close) / 2);",
+          "script": "var x0 = BINANCE:alphausdt;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -503,7 +493,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:alphausdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:ALPHAUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:ALPHAUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = CRYPTOCOM:ALPHAUSD-PERP;line(cum(d.vbuy-d.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:ALPHAUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:ALPHA_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = OKEX:ALPHA-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:alphausdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:ALPHAUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:ALPHAUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KUCOIN:ALPHAUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:ALPHA_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:ALPHA-USDT-SWAP;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -547,7 +537,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:alphabusd;\n\nvar b = BINANCE:alphausdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:ALPHAUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = CRYPTOCOM:ALPHA_USD;\n\nvar e = CRYPTOCOM:ALPHA_USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = HITBTC:ALPHAUSD;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = KRAKEN:ALPHA/USD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar h = KUCOIN:ALPHA-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = OKEX:ALPHA-USDT;line(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:alphausdt;\n\nvar b = BINANCE:alphabusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:ALPHAUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = HITBTC:ALPHAUSD;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar e = KRAKEN:ALPHA/USD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = KUCOIN:ALPHA-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = OKEX:ALPHA-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -646,7 +636,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:alphausdt;\n\nvar b = COINALYZE_OI:BYBIT:ALPHAUSDT;\n\nvar c = COINALYZE_OI:OKEX:ALPHA-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:alphausdt;\n\nvar b = COINALYZE_PFR:BYBIT:ALPHAUSDT;\n\nvar c = COINALYZE_PFR:OKEX:ALPHA-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -911,9 +903,6 @@
         "BINANCE_FUTURES:alphausdt": false,
         "BITGET:ALPHAUSDT_SPBL": false,
         "BITGET:ALPHAUSDT_UMCBL": false,
-        "CRYPTOCOM:ALPHAUSD-PERP": false,
-        "CRYPTOCOM:ALPHA_USD": false,
-        "CRYPTOCOM:ALPHA_USDT": false,
         "HITBTC:ALPHAUSD": false,
         "KRAKEN:ALPHA/USD": false,
         "KUCOIN:ALPHA-USDT": false,
