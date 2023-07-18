@@ -19,7 +19,6 @@
             "BITGET:ORNUSDT_SPBL",
             "COINBASE:ORN-USD",
             "COINBASE:ORN-USDT",
-            "CRYPTOCOM:ORN_USD",
             "HITBTC:ORNUSD",
             "KUCOIN:ORN-USDT",
             "MEXC:ORNUSDT"
@@ -44,7 +43,6 @@
             "BITGET:ORNUSDT_SPBL",
             "COINBASE:ORN-USD",
             "COINBASE:ORN-USDT",
-            "CRYPTOCOM:ORN_USD",
             "HITBTC:ORNUSD",
             "KUCOIN:ORN-USDT",
             "MEXC:ORNUSDT"
@@ -392,10 +390,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -532,7 +526,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ornbusd;\n\nvar b = BINANCE:ornusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:ORNUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:ORN-USD;\n\nvar e = COINBASE:ORN-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = CRYPTOCOM:ORN_USD;line(cum(f.vbuy-f.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = HITBTC:ORNUSD;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KUCOIN:ORN-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = MEXC:ORNUSDT;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ornusdt;\n\nvar b = BINANCE:ornbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:ORNUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:ORN-USD;\n\nvar e = COINBASE:ORN-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = HITBTC:ORNUSD;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = KUCOIN:ORN-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = MEXC:ORNUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -631,7 +625,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -895,7 +891,6 @@
         "BITGET:ORNUSDT_SPBL": false,
         "COINBASE:ORN-USD": false,
         "COINBASE:ORN-USDT": false,
-        "CRYPTOCOM:ORN_USD": false,
         "HITBTC:ORNUSD": false,
         "KUCOIN:ORN-USDT": false,
         "MEXC:ORNUSDT": false
