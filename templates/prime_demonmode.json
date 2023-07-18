@@ -611,7 +611,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
