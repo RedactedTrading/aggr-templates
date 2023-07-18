@@ -16,7 +16,6 @@
           "markets": [
             "BINANCE:bifiusdt",
             "BINANCE:bifibusd",
-            "CRYPTOCOM:BIFI_USD",
             "KUCOIN:BIFI-USDT",
             "VELODROMEOPTIMISM:BIFI/WETH"
           ],
@@ -37,7 +36,6 @@
           "markets": [
             "BINANCE:bifiusdt",
             "BINANCE:bifibusd",
-            "CRYPTOCOM:BIFI_USD",
             "KUCOIN:BIFI-USDT",
             "VELODROMEOPTIMISM:BIFI/WETH"
           ]
@@ -380,10 +378,6 @@
         "disabled": true,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "VELODROMEOPTIMISM": {
         "disabled": false,
         "fetched": false
@@ -520,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bifibusd;\n\nvar b = BINANCE:bifiusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = CRYPTOCOM:BIFI_USD;line(cum(c.vbuy-c.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = KUCOIN:BIFI-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = VELODROMEOPTIMISM:BIFI/WETH;line(cum(e.vbuy-e.vsell), title=\"VLOPT\", color=\"rgb(205, 246, 247)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bifiusdt;\n\nvar b = BINANCE:bifibusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = KUCOIN:BIFI-USDT;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = VELODROMEOPTIMISM:BIFI/WETH;line(cum(d.vbuy-d.vsell), title=\"VLOPT\", color=\"rgb(205, 246, 247)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -619,7 +613,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -880,7 +876,6 @@
       "hiddenMarkets": {
         "BINANCE:bifiusdt": false,
         "BINANCE:bifibusd": false,
-        "CRYPTOCOM:BIFI_USD": false,
         "KUCOIN:BIFI-USDT": false,
         "VELODROMEOPTIMISM:BIFI/WETH": true
       },
