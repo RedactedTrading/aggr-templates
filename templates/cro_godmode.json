@@ -17,11 +17,8 @@
             "BYBIT:CROUSDT",
             "BITGET:CROUSDT_SPBL",
             "BITMEX:CROUSD",
-            "COINBASE:CRO-USD",
             "COINBASE:CRO-USDT",
-            "CRYPTOCOM:CROUSD-PERP",
-            "CRYPTOCOM:CRO_USD",
-            "CRYPTOCOM:CRO_USDT",
+            "COINBASE:CRO-USD",
             "KUCOIN:CRO-USDT",
             "KUCOIN:CROUSDTM",
             "MEXC:CRO_USDT",
@@ -41,7 +38,6 @@
           "markets": [
             "BYBIT:CROUSDT",
             "BITMEX:CROUSD",
-            "CRYPTOCOM:CROUSD-PERP",
             "KUCOIN:CROUSDTM",
             "MEXC:CRO_USDT",
             "OKEX:CRO-USDT-SWAP"
@@ -54,10 +50,8 @@
           "zoom": 1.0,
           "markets": [
             "BITGET:CROUSDT_SPBL",
-            "COINBASE:CRO-USD",
             "COINBASE:CRO-USDT",
-            "CRYPTOCOM:CRO_USD",
-            "CRYPTOCOM:CRO_USDT",
+            "COINBASE:CRO-USD",
             "KUCOIN:CRO-USDT",
             "OKEX:CRO-USDT",
             "BITHUMB:CRO_KRW",
@@ -407,10 +401,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -507,7 +497,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITMEX:CROUSD;line(cum(a.vbuy-a.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar b = BYBIT:CROUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = CRYPTOCOM:CROUSD-PERP;line(cum(c.vbuy-c.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = KUCOIN:CROUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:CRO_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = OKEX:CRO-USDT-SWAP;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITMEX:CROUSD;line(cum(a.vbuy-a.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar b = BYBIT:CROUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KUCOIN:CROUSDTM;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:CRO_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar e = OKEX:CRO-USDT-SWAP;line(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -551,7 +541,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:CROUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BITHUMB:CRO_KRW;line(cum(b.vbuy-b.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar c = COINBASE:CRO-USD;\n\nvar d = COINBASE:CRO-USDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = CRYPTOCOM:CRO_USD;\n\nvar f = CRYPTOCOM:CRO_USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = KUCOIN:CRO-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = OKEX:CRO-USDC;\n\nvar i = OKEX:CRO-USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar j = UPBIT:KRW-CRO;line(cum(j.vbuy-j.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:CROUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BITHUMB:CRO_KRW;line(cum(b.vbuy-b.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar c = COINBASE:CRO-USDT;\n\nvar d = COINBASE:CRO-USD;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = KUCOIN:CRO-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = OKEX:CRO-USDT;\n\nvar g = OKEX:CRO-USDC;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = UPBIT:KRW-CRO;line(cum(h.vbuy-h.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -650,7 +640,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "var a = COINALYZE_OI:BITMEX:CROUSD;\n\nvar b = COINALYZE_OI:BYBIT:CROUSDT;\n\nvar c = COINALYZE_OI:OKEX:CRO-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BITMEX:CROUSD;\n\nvar b = COINALYZE_PFR:BYBIT:CROUSDT;\n\nvar c = COINALYZE_PFR:OKEX:CRO-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -912,11 +904,8 @@
         "BYBIT:CROUSDT": false,
         "BITGET:CROUSDT_SPBL": false,
         "BITMEX:CROUSD": false,
-        "COINBASE:CRO-USD": false,
         "COINBASE:CRO-USDT": false,
-        "CRYPTOCOM:CROUSD-PERP": false,
-        "CRYPTOCOM:CRO_USD": false,
-        "CRYPTOCOM:CRO_USDT": false,
+        "COINBASE:CRO-USD": false,
         "KUCOIN:CRO-USDT": false,
         "KUCOIN:CROUSDTM": false,
         "MEXC:CRO_USDT": false,
@@ -1014,8 +1003,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:CRO-USD": 0.5,
-        "COINBASE:CRO-USDT": 0.5
+        "COINBASE:CRO-USDT": 0.5,
+        "COINBASE:CRO-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1115,8 +1104,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:CRO-USD": 0.5,
-        "COINBASE:CRO-USDT": 0.5
+        "COINBASE:CRO-USDT": 0.5,
+        "COINBASE:CRO-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
