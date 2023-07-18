@@ -20,7 +20,6 @@
             "BITGET:FTTUSDT_SPBL",
             "KUCOIN:FTT-USDT",
             "KUCOIN:FTTUSDTM",
-            "MEXC:FTTUSDT",
             "MEXC:FTT_USDT",
             "HITBTC:FTTUSD",
             "HITBTC:FTTUSDC",
@@ -49,7 +48,6 @@
             "BINANCE:fttbusd",
             "BITGET:FTTUSDT_SPBL",
             "KUCOIN:FTT-USDT",
-            "MEXC:FTTUSDT",
             "HITBTC:FTTUSD",
             "HITBTC:FTTUSDC",
             "MEXC:FTTUSDC"
@@ -447,7 +445,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = BINANCE:fttusdt;var x1 = BYBIT:FTTUSDT-SPOT;plotcandlestick((x0.open+x1.open) / 2,(x0.high+x1.high) / 2,(x0.low+x1.low) / 2,(x0.close+x1.close) / 2);",
+          "script": "var x0 = BINANCE:fttusdt;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -489,7 +487,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = KUCOIN:FTTUSDTM;line(cum(a.vbuy-a.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar b = MEXC:FTT_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = KUCOIN:FTTUSDTM;line(cum(a.vbuy-a.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar b = MEXC:FTT_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -533,7 +531,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:fttbusd;\n\nvar b = BINANCE:fttusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:FTTUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:FTTUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = HITBTC:FTTUSD;\n\nvar f = HITBTC:FTTUSDC;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = KUCOIN:FTT-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:FTTUSDC;\n\nvar i = MEXC:FTTUSDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:fttusdt;\n\nvar b = BINANCE:fttbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:FTTUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:FTTUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = HITBTC:FTTUSD;\n\nvar f = HITBTC:FTTUSDC;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = KUCOIN:FTT-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = MEXC:FTTUSDC;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -632,7 +630,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -897,7 +897,6 @@
         "BITGET:FTTUSDT_SPBL": false,
         "KUCOIN:FTT-USDT": false,
         "KUCOIN:FTTUSDTM": false,
-        "MEXC:FTTUSDT": false,
         "MEXC:FTT_USDT": false,
         "HITBTC:FTTUSD": true,
         "HITBTC:FTTUSDC": false,
