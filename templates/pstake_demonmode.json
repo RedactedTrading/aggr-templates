@@ -16,7 +16,6 @@
           "markets": [
             "BYBIT:PSTAKEUSDT-SPOT",
             "BITGET:PSTAKEUSDT_SPBL",
-            "CRYPTOCOM:PSTAKE_USD",
             "KRAKEN:PSTAKE/USD",
             "KUCOIN:PSTAKE-USDT",
             "MEXC:PSTAKEUSDT",
@@ -39,7 +38,6 @@
           "markets": [
             "BYBIT:PSTAKEUSDT-SPOT",
             "BITGET:PSTAKEUSDT_SPBL",
-            "CRYPTOCOM:PSTAKE_USD",
             "KRAKEN:PSTAKE/USD",
             "KUCOIN:PSTAKE-USDT",
             "MEXC:PSTAKEUSDT",
@@ -388,10 +386,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -442,7 +436,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = BYBIT:PSTAKEUSDT-SPOT;var x1 = OKEX:PSTAKE-USDT;plotcandlestick((x0.open+x1.open) / 2,(x0.high+x1.high) / 2,(x0.low+x1.low) / 2,(x0.close+x1.close) / 2);",
+          "script": "var x0 = BYBIT:PSTAKEUSDT-SPOT;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -528,7 +522,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:PSTAKEUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:PSTAKEUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = CRYPTOCOM:PSTAKE_USD;line(cum(c.vbuy-c.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = KRAKEN:PSTAKE/USD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar e = KUCOIN:PSTAKE-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:PSTAKEUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = OKEX:PSTAKE-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:PSTAKEUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:PSTAKEUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KRAKEN:PSTAKE/USD;line(cum(c.vbuy-c.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = KUCOIN:PSTAKE-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:PSTAKEUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:PSTAKE-USDT;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -627,7 +621,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -888,7 +884,6 @@
       "hiddenMarkets": {
         "BYBIT:PSTAKEUSDT-SPOT": false,
         "BITGET:PSTAKEUSDT_SPBL": false,
-        "CRYPTOCOM:PSTAKE_USD": false,
         "KRAKEN:PSTAKE/USD": false,
         "KUCOIN:PSTAKE-USDT": false,
         "MEXC:PSTAKEUSDT": false,
