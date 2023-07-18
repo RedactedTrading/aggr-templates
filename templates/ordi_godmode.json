@@ -18,8 +18,6 @@
             "BITGET:ORDIUSDT_SPBL",
             "BITGET:ORDIUSDT_UMCBL",
             "BITMEX:ORDIUSD",
-            "CRYPTOCOM:ORDIUSD-PERP",
-            "CRYPTOCOM:ORDI_USD",
             "KUCOIN:ORDI-USDT",
             "KUCOIN:ORDIUSDTM",
             "MEXC:ORDI_USDT",
@@ -37,7 +35,6 @@
             "BYBIT:ORDIUSDT",
             "BITGET:ORDIUSDT_UMCBL",
             "BITMEX:ORDIUSD",
-            "CRYPTOCOM:ORDIUSD-PERP",
             "KUCOIN:ORDIUSDTM",
             "MEXC:ORDI_USDT",
             "OKEX:ORDI-USDT-SWAP"
@@ -50,7 +47,6 @@
           "zoom": 1.0,
           "markets": [
             "BITGET:ORDIUSDT_SPBL",
-            "CRYPTOCOM:ORDI_USD",
             "KUCOIN:ORDI-USDT",
             "OKEX:ORDI-USDT"
           ]
@@ -397,10 +393,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -493,7 +485,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITGET:ORDIUSDT_UMCBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BITMEX:ORDIUSD;line(cum(b.vbuy-b.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar c = BYBIT:ORDIUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = CRYPTOCOM:ORDIUSD-PERP;line(cum(d.vbuy-d.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:ORDIUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:ORDI_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = OKEX:ORDI-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:ORDIUSDT_UMCBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BITMEX:ORDIUSD;line(cum(b.vbuy-b.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar c = BYBIT:ORDIUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KUCOIN:ORDIUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:ORDI_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:ORDI-USDT-SWAP;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -537,7 +529,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:ORDIUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = CRYPTOCOM:ORDI_USD;line(cum(b.vbuy-b.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar c = KUCOIN:ORDI-USDT;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar d = OKEX:ORDI-USDT;line(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:ORDIUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = KUCOIN:ORDI-USDT;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar c = OKEX:ORDI-USDT;line(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -636,7 +628,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "var a = COINALYZE_OI:BITMEX:ORDIUSD;\n\nvar b = COINALYZE_OI:BYBIT:ORDIUSDT;\n\nvar c = COINALYZE_OI:OKEX:ORDI-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BITMEX:ORDIUSD;\n\nvar b = COINALYZE_PFR:BYBIT:ORDIUSDT;\n\nvar c = COINALYZE_PFR:OKEX:ORDI-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -899,8 +893,6 @@
         "BITGET:ORDIUSDT_SPBL": false,
         "BITGET:ORDIUSDT_UMCBL": false,
         "BITMEX:ORDIUSD": false,
-        "CRYPTOCOM:ORDIUSD-PERP": false,
-        "CRYPTOCOM:ORDI_USD": false,
         "KUCOIN:ORDI-USDT": false,
         "KUCOIN:ORDIUSDTM": false,
         "MEXC:ORDI_USDT": false,
