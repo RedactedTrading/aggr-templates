@@ -21,11 +21,8 @@
             "BINANCE_FUTURES:flowusdt",
             "BITGET:FLOWUSDT_UMCBL",
             "BTCTURK:FLOWUSDT",
-            "COINBASE:FLOW-USD",
             "COINBASE:FLOW-USDT",
-            "CRYPTOCOM:FLOWUSD-PERP",
-            "CRYPTOCOM:FLOW_USD",
-            "CRYPTOCOM:FLOW_USDT",
+            "COINBASE:FLOW-USD",
             "HITBTC:FLOWUSD",
             "KRAKEN:FLOW/USD",
             "KRAKEN:PF_FLOWUSD",
@@ -49,7 +46,6 @@
             "BYBIT:FLOWUSDT",
             "BINANCE_FUTURES:flowusdt",
             "BITGET:FLOWUSDT_UMCBL",
-            "CRYPTOCOM:FLOWUSD-PERP",
             "KRAKEN:PF_FLOWUSD",
             "KUCOIN:FLOWUSDTM",
             "MEXC:FLOW_USDT"
@@ -65,10 +61,8 @@
             "BYBIT:FLOWUSDT-SPOT",
             "BINANCE:flowbusd",
             "BTCTURK:FLOWUSDT",
-            "COINBASE:FLOW-USD",
             "COINBASE:FLOW-USDT",
-            "CRYPTOCOM:FLOW_USD",
-            "CRYPTOCOM:FLOW_USDT",
+            "COINBASE:FLOW-USD",
             "HITBTC:FLOWUSD",
             "KRAKEN:FLOW/USD",
             "KUCOIN:FLOW-USDT",
@@ -425,10 +419,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -483,7 +473,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = BINANCE:flowusdt;var x1 = BYBIT:FLOWUSDT-SPOT;var x2 = OKEX:FLOW-USDT;plotcandlestick((x0.open+x1.open+x2.open) / 3,(x0.high+x1.high+x2.high) / 3,(x0.low+x1.low+x2.low) / 3,(x0.close+x1.close+x2.close) / 3);",
+          "script": "var x0 = BINANCE:flowusdt;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -525,7 +515,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:flowusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:FLOWUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:FLOWUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = CRYPTOCOM:FLOWUSD-PERP;line(cum(d.vbuy-d.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KRAKEN:PF_FLOWUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:FLOWUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:FLOW_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:flowusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:FLOWUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:FLOWUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_FLOWUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:FLOWUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:FLOW_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -569,7 +559,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:flowbusd;\n\nvar b = BINANCE:flowusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITHUMB:FLOW_KRW;line(cum(c.vbuy-c.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar d = BTCTURK:FLOWTRY;\n\nvar e = BTCTURK:FLOWUSDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar f = BYBIT:FLOWUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:FLOW-USD;\n\nvar h = COINBASE:FLOW-USDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar i = CRYPTOCOM:FLOW_USD;\n\nvar j = CRYPTOCOM:FLOW_USDT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = HITBTC:FLOWUSD;line(cum(k.vbuy-k.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar l = KRAKEN:FLOW/USD;line(cum(l.vbuy-l.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar m = KUCOIN:FLOW-USDT;line(cum(m.vbuy-m.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar n = OKEX:FLOW-USDC;\n\nvar o = OKEX:FLOW-USDT;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar p = UPBIT:KRW-FLOW;line(cum(p.vbuy-p.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:flowusdt;\n\nvar b = BINANCE:flowbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITHUMB:FLOW_KRW;line(cum(c.vbuy-c.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar d = BTCTURK:FLOWUSDT;\n\nvar e = BTCTURK:FLOWTRY;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BYBIT:FLOWUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:FLOW-USDT;\n\nvar h = COINBASE:FLOW-USD;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar i = HITBTC:FLOWUSD;line(cum(i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = KRAKEN:FLOW/USD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = KUCOIN:FLOW-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar l = OKEX:FLOW-USDT;\n\nvar m = OKEX:FLOW-USDC;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar n = UPBIT:KRW-FLOW;line(cum(n.vbuy-n.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -668,7 +658,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:flowusdt;\n\nvar b = COINALYZE_OI:BYBIT:FLOWUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:flowusdt;\n\nvar b = COINALYZE_PFR:BYBIT:FLOWUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -934,11 +926,8 @@
         "BINANCE_FUTURES:flowusdt": false,
         "BITGET:FLOWUSDT_UMCBL": false,
         "BTCTURK:FLOWUSDT": true,
-        "COINBASE:FLOW-USD": false,
         "COINBASE:FLOW-USDT": false,
-        "CRYPTOCOM:FLOWUSD-PERP": false,
-        "CRYPTOCOM:FLOW_USD": false,
-        "CRYPTOCOM:FLOW_USDT": false,
+        "COINBASE:FLOW-USD": false,
         "HITBTC:FLOWUSD": false,
         "KRAKEN:FLOW/USD": false,
         "KRAKEN:PF_FLOWUSD": false,
@@ -1039,8 +1028,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:FLOW-USD": 0.5,
-        "COINBASE:FLOW-USDT": 0.5
+        "COINBASE:FLOW-USDT": 0.5,
+        "COINBASE:FLOW-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1140,8 +1129,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:FLOW-USD": 0.5,
-        "COINBASE:FLOW-USDT": 0.5
+        "COINBASE:FLOW-USDT": 0.5,
+        "COINBASE:FLOW-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
