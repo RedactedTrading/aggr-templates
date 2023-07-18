@@ -22,11 +22,8 @@
             "BITGET:STXUSDT_SPBL",
             "BITGET:STXUSDT_UMCBL",
             "BTCTURK:STXUSDT",
-            "COINBASE:STX-USD",
             "COINBASE:STX-USDT",
-            "CRYPTOCOM:STXUSD-PERP",
-            "CRYPTOCOM:STX_USD",
-            "CRYPTOCOM:STX_USDT",
+            "COINBASE:STX-USD",
             "HITBTC:STXUSDT",
             "KRAKEN:STX/USD",
             "KRAKEN:PF_STXUSD",
@@ -51,7 +48,6 @@
             "BYBIT:STXUSDT",
             "BINANCE_FUTURES:stxusdt",
             "BITGET:STXUSDT_UMCBL",
-            "CRYPTOCOM:STXUSD-PERP",
             "KRAKEN:PF_STXUSD",
             "KUCOIN:STXUSDTM",
             "MEXC:STX_USDT",
@@ -69,10 +65,8 @@
             "BINANCE:stxbusd",
             "BITGET:STXUSDT_SPBL",
             "BTCTURK:STXUSDT",
-            "COINBASE:STX-USD",
             "COINBASE:STX-USDT",
-            "CRYPTOCOM:STX_USD",
-            "CRYPTOCOM:STX_USDT",
+            "COINBASE:STX-USD",
             "HITBTC:STXUSDT",
             "KRAKEN:STX/USD",
             "KUCOIN:STX-USDT",
@@ -429,10 +423,6 @@
         "disabled": false,
         "fetched": false
       },
-      "CRYPTOCOM": {
-        "disabled": false,
-        "fetched": false
-      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -487,7 +477,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = BINANCE:stxusdt;var x1 = BYBIT:STXUSDT-SPOT;var x2 = OKEX:STX-USDT;plotcandlestick((x0.open+x1.open+x2.open) / 3,(x0.high+x1.high+x2.high) / 3,(x0.low+x1.low+x2.low) / 3,(x0.close+x1.close+x2.close) / 3);",
+          "script": "var x0 = BINANCE:stxusdt;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -529,7 +519,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:stxusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:STXUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:STXUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = CRYPTOCOM:STXUSD-PERP;line(cum(d.vbuy-d.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KRAKEN:PF_STXUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:STXUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:STX_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = OKEX:STX-USDT-SWAP;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:stxusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:STXUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:STXUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_STXUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:STXUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:STX_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:STX-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -573,7 +563,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:stxbusd;\n\nvar b = BINANCE:stxusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:STXUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:STX_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BTCTURK:STXTRY;\n\nvar f = BTCTURK:STXUSDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = BYBIT:STXUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = COINBASE:STX-USD;\n\nvar i = COINBASE:STX-USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar j = CRYPTOCOM:STX_USD;\n\nvar k = CRYPTOCOM:STX_USDT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"CCOM\", color=\"rgb(50, 121, 175)\");\n\n\nvar l = HITBTC:STXUSDT;line(cum(l.vbuy-l.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar m = KRAKEN:STX/USD;line(cum(m.vbuy-m.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar n = KUCOIN:STX-USDT;line(cum(n.vbuy-n.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar o = OKEX:STX-USDC;\n\nvar p = OKEX:STX-USDT;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar q = UPBIT:KRW-STX;line(cum(q.vbuy-q.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:stxusdt;\n\nvar b = BINANCE:stxbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:STXUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:STX_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = BTCTURK:STXUSDT;\n\nvar f = BTCTURK:STXTRY;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar g = BYBIT:STXUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = COINBASE:STX-USDT;\n\nvar i = COINBASE:STX-USD;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar j = HITBTC:STXUSDT;line(cum(j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar k = KRAKEN:STX/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar l = KUCOIN:STX-USDT;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar m = OKEX:STX-USDT;\n\nvar n = OKEX:STX-USDC;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar o = UPBIT:KRW-STX;line(cum(o.vbuy-o.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -672,7 +662,9 @@
             "l4y3kmkg"
           ],
           "displayName": "Liquidations"
-        }
+        },
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:stxusdt;\n\nvar b = COINALYZE_OI:BYBIT:STXUSDT;\n\nvar c = COINALYZE_OI:OKEX:STX-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:stxusdt;\n\nvar b = COINALYZE_PFR:BYBIT:STXUSDT;\n\nvar c = COINALYZE_PFR:OKEX:STX-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -939,11 +931,8 @@
         "BITGET:STXUSDT_SPBL": false,
         "BITGET:STXUSDT_UMCBL": false,
         "BTCTURK:STXUSDT": true,
-        "COINBASE:STX-USD": false,
         "COINBASE:STX-USDT": false,
-        "CRYPTOCOM:STXUSD-PERP": false,
-        "CRYPTOCOM:STX_USD": false,
-        "CRYPTOCOM:STX_USDT": false,
+        "COINBASE:STX-USD": false,
         "HITBTC:STXUSDT": false,
         "KRAKEN:STX/USD": false,
         "KRAKEN:PF_STXUSD": false,
@@ -1045,8 +1034,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:STX-USD": 0.5,
-        "COINBASE:STX-USDT": 0.5
+        "COINBASE:STX-USDT": 0.5,
+        "COINBASE:STX-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1146,8 +1135,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:STX-USD": 0.5,
-        "COINBASE:STX-USDT": 0.5
+        "COINBASE:STX-USDT": 0.5,
+        "COINBASE:STX-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
