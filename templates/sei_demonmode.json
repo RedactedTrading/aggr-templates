@@ -20,7 +20,8 @@
             "BITGET:SEIUSDT_SPBL",
             "BITMEX:SEIUSDT",
             "KRAKEN:SEI/USD",
-            "KUCOIN:SEI-USDT"
+            "KUCOIN:SEI-USDT",
+            "UPBIT:KRW-SEI"
           ],
           "zoom": 1
         },
@@ -44,7 +45,8 @@
             "BITFINEX:SEIUSD",
             "BITGET:SEIUSDT_SPBL",
             "KRAKEN:SEI/USD",
-            "KUCOIN:SEI-USDT"
+            "KUCOIN:SEI-USDT",
+            "UPBIT:KRW-SEI"
           ]
         }
       },
@@ -382,7 +384,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITGET": {
@@ -521,7 +523,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:seiusdt;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = BITFINEX:SEIUSD;line(cum(b.vbuy-b.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar c = BITGET:SEIUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:SEIUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KRAKEN:SEI/USD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:SEI-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:seiusdt;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = BITFINEX:SEIUSD;line(cum(b.vbuy-b.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar c = BITGET:SEIUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:SEIUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KRAKEN:SEI/USD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:SEI-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = UPBIT:KRW-SEI;line(cum(g.vbuy-g.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -887,7 +889,8 @@
         "BITGET:SEIUSDT_SPBL": false,
         "BITMEX:SEIUSDT": false,
         "KRAKEN:SEI/USD": false,
-        "KUCOIN:SEI-USDT": false
+        "KUCOIN:SEI-USDT": false,
+        "UPBIT:KRW-SEI": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
