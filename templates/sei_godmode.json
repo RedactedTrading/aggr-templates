@@ -16,11 +16,19 @@
           "markets": [
             "BINANCE:seiusdt",
             "BYBIT:SEIUSDT-SPOT",
+            "BYBIT:SEIUSDT",
             "BITFINEX:SEIUSD",
             "BITGET:SEIUSDT_SPBL",
             "BITMEX:SEIUSDT",
+            "COINBASE:SEI-USD",
+            "HITBTC:SEIUSDT",
             "KRAKEN:SEI/USD",
-            "KUCOIN:SEI-USDT"
+            "KUCOIN:SEI-USDT",
+            "KUCOIN:SEIUSDTM",
+            "MEXC:SEIUSDT",
+            "MEXC:SEI_USDT",
+            "BITHUMB:SEI_KRW",
+            "UPBIT:KRW-SEI"
           ],
           "zoom": 1
         },
@@ -30,7 +38,10 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BITMEX:SEIUSDT"
+            "BYBIT:SEIUSDT",
+            "BITMEX:SEIUSDT",
+            "KUCOIN:SEIUSDTM",
+            "MEXC:SEI_USDT"
           ]
         },
         "trades2": {
@@ -43,8 +54,13 @@
             "BYBIT:SEIUSDT-SPOT",
             "BITFINEX:SEIUSD",
             "BITGET:SEIUSDT_SPBL",
+            "COINBASE:SEI-USD",
+            "HITBTC:SEIUSDT",
             "KRAKEN:SEI/USD",
-            "KUCOIN:SEI-USDT"
+            "KUCOIN:SEI-USDT",
+            "MEXC:SEIUSDT",
+            "BITHUMB:SEI_KRW",
+            "UPBIT:KRW-SEI"
           ]
         }
       },
@@ -333,7 +349,7 @@
         "fetched": false
       },
       "COINBASE": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "DERIBIT": {
@@ -349,7 +365,7 @@
         "fetched": false
       },
       "HITBTC": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "HUOBI": {
@@ -382,10 +398,18 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
+      },
+      "BITHUMB": {
         "disabled": false,
         "fetched": false
       }
@@ -477,7 +501,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITMEX:SEIUSDT;line(cum(a.vbuy-a.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITMEX:SEIUSDT;line(cum(a.vbuy-a.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar b = BYBIT:SEIUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KUCOIN:SEIUSDTM;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar d = MEXC:SEI_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -521,7 +545,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:seiusdt;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = BITFINEX:SEIUSD;line(cum(b.vbuy-b.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar c = BITGET:SEIUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:SEIUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KRAKEN:SEI/USD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:SEI-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:seiusdt;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = BITFINEX:SEIUSD;line(cum(b.vbuy-b.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar c = BITGET:SEIUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:SEI_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BYBIT:SEIUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:SEI-USD;line(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = HITBTC:SEIUSDT;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KRAKEN:SEI/USD;line(cum(h.vbuy-h.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar i = KUCOIN:SEI-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = MEXC:SEIUSDT;line(cum(j.vbuy-j.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar k = UPBIT:KRW-SEI;line(cum(k.vbuy-k.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -621,8 +645,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BITMEX:SEIUSDT;line(a.close, title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BITMEX:SEIUSDT;line(a.close, title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BITMEX:SEIUSDT;\n\nvar b = COINALYZE_OI:BYBIT:SEIUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BITMEX:SEIUSDT;\n\nvar b = COINALYZE_PFR:BYBIT:SEIUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -883,11 +907,19 @@
       "hiddenMarkets": {
         "BINANCE:seiusdt": false,
         "BYBIT:SEIUSDT-SPOT": false,
+        "BYBIT:SEIUSDT": false,
         "BITFINEX:SEIUSD": false,
         "BITGET:SEIUSDT_SPBL": false,
         "BITMEX:SEIUSDT": false,
+        "COINBASE:SEI-USD": false,
+        "HITBTC:SEIUSDT": false,
         "KRAKEN:SEI/USD": false,
-        "KUCOIN:SEI-USDT": false
+        "KUCOIN:SEI-USDT": false,
+        "KUCOIN:SEIUSDTM": false,
+        "MEXC:SEIUSDT": false,
+        "MEXC:SEI_USDT": false,
+        "BITHUMB:SEI_KRW": true,
+        "UPBIT:KRW-SEI": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
@@ -976,7 +1008,9 @@
         }
       ],
       "audioThreshold": null,
-      "multipliers": {},
+      "multipliers": {
+        "COINBASE:SEI-USD": 0.5
+      },
       "showThresholdsAsTable": false,
       "maxRows": "477",
       "muted": false,
@@ -1074,7 +1108,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:BTC-USD": 0.53
+        "COINBASE:BTC-USD": 0.53,
+        "COINBASE:SEI-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
