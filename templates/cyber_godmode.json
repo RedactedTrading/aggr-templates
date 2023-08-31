@@ -27,7 +27,8 @@
             "HITBTC:CYBERUSDT",
             "KUCOIN:CYBERUSDTM",
             "MEXC:CYBER_USDT",
-            "BITHUMB:CYBER_KRW"
+            "BITHUMB:CYBER_KRW",
+            "UPBIT:BTC-CYBER"
           ],
           "zoom": 1
         },
@@ -58,7 +59,8 @@
             "BITGET:CYBERUSDT_SPBL",
             "GATEIO:CYBER_USDT_SPOT",
             "HITBTC:CYBERUSDT",
-            "BITHUMB:CYBER_KRW"
+            "BITHUMB:CYBER_KRW",
+            "UPBIT:BTC-CYBER"
           ]
         }
       },
@@ -396,7 +398,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITGET": {
@@ -547,7 +549,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:cyberusdt;\n\nvar b = BINANCE:cybertusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:CYBERUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:CYBER_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BYBIT:CYBERUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = GATEIO:CYBER_USDT_SPOT;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = HITBTC:CYBERUSDT;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:cyberusdt;\n\nvar b = BINANCE:cybertusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:CYBERUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:CYBER_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BYBIT:CYBERUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = GATEIO:CYBER_USDT_SPOT;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = HITBTC:CYBERUSDT;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = UPBIT:BTC-CYBER;line(cum(h.vbuy-h.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -920,7 +922,8 @@
         "HITBTC:CYBERUSDT": false,
         "KUCOIN:CYBERUSDTM": false,
         "MEXC:CYBER_USDT": false,
-        "BITHUMB:CYBER_KRW": true
+        "BITHUMB:CYBER_KRW": true,
+        "UPBIT:BTC-CYBER": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
