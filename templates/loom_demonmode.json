@@ -15,11 +15,16 @@
           "type": "chart",
           "markets": [
             "BINANCE:loomusdt",
+            "BYBIT:LOOMUSDT",
             "BINANCE:loombusd",
             "BITGET:LOOMUSDT_SPBL",
+            "GATEIO:LOOM_USDT_SPOT",
+            "GATEIO:LOOM_USDT_FUTURES",
             "MEXC:LOOMUSDT",
+            "MEXC:LOOM_USDT",
             "BITHUMB:LOOM_KRW",
-            "UPBIT:KRW-LOOM"
+            "UPBIT:KRW-LOOM",
+            "UPBIT:BTC-LOOM"
           ],
           "zoom": 1
         },
@@ -28,7 +33,11 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "BYBIT:LOOMUSDT",
+            "GATEIO:LOOM_USDT_FUTURES",
+            "MEXC:LOOM_USDT"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -39,9 +48,11 @@
             "BINANCE:loomusdt",
             "BINANCE:loombusd",
             "BITGET:LOOMUSDT_SPBL",
+            "GATEIO:LOOM_USDT_SPOT",
             "MEXC:LOOMUSDT",
             "BITHUMB:LOOM_KRW",
-            "UPBIT:KRW-LOOM"
+            "UPBIT:KRW-LOOM",
+            "UPBIT:BTC-LOOM"
           ]
         }
       },
@@ -326,7 +337,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -383,6 +394,10 @@
         "fetched": false
       },
       "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -482,7 +497,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:LOOMUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = GATEIO:LOOM_USDT_FUTURES;line(cum(b.vbuy-b.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar c = MEXC:LOOM_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -526,7 +541,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:loomusdt;\n\nvar b = BINANCE:loombusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:LOOMUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:LOOM_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = MEXC:LOOMUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = UPBIT:KRW-LOOM;line(cum(f.vbuy-f.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:loomusdt;\n\nvar b = BINANCE:loombusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:LOOMUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:LOOM_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = GATEIO:LOOM_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = MEXC:LOOMUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = UPBIT:KRW-LOOM;\n\nvar h = UPBIT:BTC-LOOM;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -626,8 +641,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BYBIT:LOOMUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BYBIT:LOOMUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -887,11 +902,16 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:loomusdt": false,
+        "BYBIT:LOOMUSDT": false,
         "BINANCE:loombusd": false,
         "BITGET:LOOMUSDT_SPBL": false,
+        "GATEIO:LOOM_USDT_SPOT": false,
+        "GATEIO:LOOM_USDT_FUTURES": false,
         "MEXC:LOOMUSDT": false,
+        "MEXC:LOOM_USDT": false,
         "BITHUMB:LOOM_KRW": true,
-        "UPBIT:KRW-LOOM": true
+        "UPBIT:KRW-LOOM": true,
+        "UPBIT:BTC-LOOM": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
