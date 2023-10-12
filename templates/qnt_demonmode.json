@@ -21,13 +21,14 @@
             "BINANCE_FUTURES:qntusdt",
             "BITGET:QNTUSDT_SPBL",
             "BITGET:QNTUSDT_UMCBL",
-            "COINBASE:QNT-USD",
             "COINBASE:QNT-USDT",
+            "COINBASE:QNT-USD",
+            "GATEIO:QNT_USDT_SPOT",
+            "GATEIO:QNT_USDT_FUTURES",
             "HITBTC:QNTUSDT",
             "KRAKEN:QNT/USD",
             "KUCOIN:QNT-USDT",
             "KUCOIN:QNTUSDTM",
-            "MEXC:QNTUSDT",
             "MEXC:QNT_USDT",
             "BTCTURK:QNTTRY",
             "HITBTC:QNTUSDC",
@@ -44,6 +45,7 @@
             "BYBIT:QNTUSDT",
             "BINANCE_FUTURES:qntusdt",
             "BITGET:QNTUSDT_UMCBL",
+            "GATEIO:QNT_USDT_FUTURES",
             "KUCOIN:QNTUSDTM",
             "MEXC:QNT_USDT",
             "KRAKEN:PF_QNTUSD"
@@ -59,12 +61,12 @@
             "BYBIT:QNTUSDT-SPOT",
             "BINANCE:qntbusd",
             "BITGET:QNTUSDT_SPBL",
-            "COINBASE:QNT-USD",
             "COINBASE:QNT-USDT",
+            "COINBASE:QNT-USD",
+            "GATEIO:QNT_USDT_SPOT",
             "HITBTC:QNTUSDT",
             "KRAKEN:QNT/USD",
             "KUCOIN:QNT-USDT",
-            "MEXC:QNTUSDT",
             "BTCTURK:QNTTRY",
             "HITBTC:QNTUSDC"
           ]
@@ -411,6 +413,10 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -507,7 +513,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:qntusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:QNTUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:QNTUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_QNTUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:QNTUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:QNT_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:qntusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:QNTUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:QNTUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:QNT_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KRAKEN:PF_QNTUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:QNTUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:QNT_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -551,7 +557,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:qntusdt;\n\nvar b = BINANCE:qntbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:QNTUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BTCTURK:QNTTRY;line(cum(d.vbuy-d.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BYBIT:QNTUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:QNT-USD;\n\nvar g = COINBASE:QNT-USDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = HITBTC:QNTUSDT;\n\nvar i = HITBTC:QNTUSDC;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = KRAKEN:QNT/USD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = KUCOIN:QNT-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar l = MEXC:QNTUSDT;line(cum(l.vbuy-l.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:qntusdt;\n\nvar b = BINANCE:qntbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:QNTUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BTCTURK:QNTTRY;line(cum(d.vbuy-d.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar e = BYBIT:QNTUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:QNT-USDT;\n\nvar g = COINBASE:QNT-USD;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = GATEIO:QNT_USDT_SPOT;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = HITBTC:QNTUSDT;\n\nvar j = HITBTC:QNTUSDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar k = KRAKEN:QNT/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar l = KUCOIN:QNT-USDT;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -918,13 +924,14 @@
         "BINANCE_FUTURES:qntusdt": false,
         "BITGET:QNTUSDT_SPBL": false,
         "BITGET:QNTUSDT_UMCBL": false,
-        "COINBASE:QNT-USD": false,
         "COINBASE:QNT-USDT": false,
+        "COINBASE:QNT-USD": false,
+        "GATEIO:QNT_USDT_SPOT": false,
+        "GATEIO:QNT_USDT_FUTURES": false,
         "HITBTC:QNTUSDT": false,
         "KRAKEN:QNT/USD": false,
         "KUCOIN:QNT-USDT": false,
         "KUCOIN:QNTUSDTM": false,
-        "MEXC:QNTUSDT": false,
         "MEXC:QNT_USDT": false,
         "BTCTURK:QNTTRY": true,
         "HITBTC:QNTUSDC": false,
@@ -1018,8 +1025,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:QNT-USD": 0.5,
-        "COINBASE:QNT-USDT": 0.5
+        "COINBASE:QNT-USDT": 0.5,
+        "COINBASE:QNT-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1119,8 +1126,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:QNT-USD": 0.5,
-        "COINBASE:QNT-USDT": 0.5
+        "COINBASE:QNT-USDT": 0.5,
+        "COINBASE:QNT-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
