@@ -16,6 +16,7 @@
           "markets": [
             "BYBIT:CAPSUSDT-SPOT",
             "BITGET:CAPSUSDT_SPBL",
+            "GATEIO:CAPS_USDT_SPOT",
             "HITBTC:CAPSUSDT"
           ],
           "zoom": 1
@@ -35,6 +36,7 @@
           "markets": [
             "BYBIT:CAPSUSDT-SPOT",
             "BITGET:CAPSUSDT_SPBL",
+            "GATEIO:CAPS_USDT_SPOT",
             "HITBTC:CAPSUSDT"
           ]
         }
@@ -379,6 +381,10 @@
       "BITGET": {
         "disabled": false,
         "fetched": false
+      },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -512,7 +518,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:CAPSUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:CAPSUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = HITBTC:CAPSUSDT;line(cum(c.vbuy-c.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:CAPSUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:CAPSUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:CAPS_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = HITBTC:CAPSUSDT;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -874,6 +880,7 @@
       "hiddenMarkets": {
         "BYBIT:CAPSUSDT-SPOT": false,
         "BITGET:CAPSUSDT_SPBL": false,
+        "GATEIO:CAPS_USDT_SPOT": false,
         "HITBTC:CAPSUSDT": false
       },
       "barSpacing": 0.39437454420364615,
