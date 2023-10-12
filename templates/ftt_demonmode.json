@@ -18,6 +18,8 @@
             "BYBIT:FTTUSDT-SPOT",
             "BINANCE:fttbusd",
             "BITGET:FTTUSDT_SPBL",
+            "GATEIO:FTT_USDT_SPOT",
+            "GATEIO:FTT_USDT_FUTURES",
             "KUCOIN:FTT-USDT",
             "KUCOIN:FTTUSDTM",
             "MEXC:FTT_USDT",
@@ -33,6 +35,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "GATEIO:FTT_USDT_FUTURES",
             "KUCOIN:FTTUSDTM",
             "MEXC:FTT_USDT"
           ]
@@ -47,6 +50,7 @@
             "BYBIT:FTTUSDT-SPOT",
             "BINANCE:fttbusd",
             "BITGET:FTTUSDT_SPBL",
+            "GATEIO:FTT_USDT_SPOT",
             "KUCOIN:FTT-USDT",
             "HITBTC:FTTUSD",
             "HITBTC:FTTUSDC",
@@ -395,6 +399,10 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -487,7 +495,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = KUCOIN:FTTUSDTM;line(cum(a.vbuy-a.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar b = MEXC:FTT_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = GATEIO:FTT_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar b = KUCOIN:FTTUSDTM;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar c = MEXC:FTT_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -531,7 +539,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:fttusdt;\n\nvar b = BINANCE:fttbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:FTTUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:FTTUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = HITBTC:FTTUSD;\n\nvar f = HITBTC:FTTUSDC;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = KUCOIN:FTT-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = MEXC:FTTUSDC;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:fttusdt;\n\nvar b = BINANCE:fttbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:FTTUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:FTTUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:FTT_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:FTTUSD;\n\nvar g = HITBTC:FTTUSDC;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KUCOIN:FTT-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = MEXC:FTTUSDC;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -895,6 +903,8 @@
         "BYBIT:FTTUSDT-SPOT": false,
         "BINANCE:fttbusd": false,
         "BITGET:FTTUSDT_SPBL": false,
+        "GATEIO:FTT_USDT_SPOT": false,
+        "GATEIO:FTT_USDT_FUTURES": false,
         "KUCOIN:FTT-USDT": false,
         "KUCOIN:FTTUSDTM": false,
         "MEXC:FTT_USDT": false,
