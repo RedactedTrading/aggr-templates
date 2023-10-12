@@ -23,8 +23,11 @@
             "BINANCE_FUTURES:algousdt",
             "BINANCE_FUTURES:algousd_perp",
             "BITGET:ALGOUSDT_UMCBL",
+            "BITSTAMP:algousd",
             "BTCTURK:ALGOUSDT",
             "COINBASE:ALGO-USD",
+            "GATEIO:ALGO_USDT_SPOT",
+            "GATEIO:ALGO_USDT_FUTURES",
             "HITBTC:ALGOUSD",
             "KRAKEN:ALGO/USD",
             "KRAKEN:ALGO/USDT",
@@ -42,6 +45,7 @@
             "KUCOIN:ALGO-USDC",
             "MEXC:ALGOUSDC",
             "OKEX:ALGO-USDC",
+            "UPBIT:BTC-ALGO",
             "UPBIT:KRW-ALGO"
           ],
           "zoom": 1
@@ -56,6 +60,7 @@
             "BINANCE_FUTURES:algousdt",
             "BINANCE_FUTURES:algousd_perp",
             "BITGET:ALGOUSDT_UMCBL",
+            "GATEIO:ALGO_USDT_FUTURES",
             "KRAKEN:PF_ALGOUSD",
             "KUCOIN:ALGOUSDTM",
             "MEXC:ALGO_USDT",
@@ -75,8 +80,10 @@
             "BINANCE:algotusd",
             "BINANCE:algousdc",
             "BINANCE:algobusd",
+            "BITSTAMP:algousd",
             "BTCTURK:ALGOUSDT",
             "COINBASE:ALGO-USD",
+            "GATEIO:ALGO_USDT_SPOT",
             "HITBTC:ALGOUSD",
             "KRAKEN:ALGO/USD",
             "KRAKEN:ALGO/USDT",
@@ -88,6 +95,7 @@
             "KUCOIN:ALGO-USDC",
             "MEXC:ALGOUSDC",
             "OKEX:ALGO-USDC",
+            "UPBIT:BTC-ALGO",
             "UPBIT:KRW-ALGO"
           ]
         }
@@ -369,7 +377,7 @@
         "fetched": false
       },
       "BITSTAMP": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BYBIT": {
@@ -434,6 +442,10 @@
         "fetched": false
       },
       "BTCTURK": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -533,7 +545,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:algousdt;\n\nvar b = BINANCE_FUTURES:algousd_perp;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:ALGOUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:ALGOUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = DERIBIT:ALGO_USDC-PERPETUAL;line(cum(e.vbuy-e.vsell), title=\"DRBT\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KRAKEN:PF_ALGOUSD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = KUCOIN:ALGOUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = MEXC:ALGO_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar i = OKEX:ALGO-USD-SWAP;\n\nvar j = OKEX:ALGO-USDT-SWAP;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:algousdt;\n\nvar b = BINANCE_FUTURES:algousd_perp;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:ALGOUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:ALGOUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = DERIBIT:ALGO_USDC-PERPETUAL;line(cum(e.vbuy-e.vsell), title=\"DRBT\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = GATEIO:ALGO_USDT_FUTURES;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = KRAKEN:PF_ALGOUSD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar h = KUCOIN:ALGOUSDTM;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = MEXC:ALGO_USDT;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = OKEX:ALGO-USD-SWAP;\n\nvar k = OKEX:ALGO-USDT-SWAP;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -577,7 +589,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:algousdt;\n\nvar b = BINANCE:algotusd;\n\nvar c = BINANCE:algousdc;\n\nvar d = BINANCE:algobusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITHUMB:ALGO_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = BTCTURK:ALGOUSDT;\n\nvar g = BTCTURK:ALGOTRY;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar h = BYBIT:ALGOUSDT-SPOT;line(cum(h.vbuy-h.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar i = COINBASE:ALGO-USD;line(cum(i.vbuy-i.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar j = HITBTC:ALGOUSD;\n\nvar k = HITBTC:ALGOUSDC;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar l = KRAKEN:ALGO/USD;\n\nvar m = KRAKEN:ALGO/USDT;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar n = KUCOIN:ALGO-USDT;\n\nvar o = KUCOIN:ALGO-USDC;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar p = MEXC:ALGOUSDC;line(cum(p.vbuy-p.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar q = OKEX:ALGO-USDT;\n\nvar r = OKEX:ALGO-USDC;line(cum(q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar s = UPBIT:KRW-ALGO;line(cum(s.vbuy-s.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:algousdt;\n\nvar b = BINANCE:algotusd;\n\nvar c = BINANCE:algousdc;\n\nvar d = BINANCE:algobusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITHUMB:ALGO_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BITSTAMP:algousd;line(cum(f.vbuy-f.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = BTCTURK:ALGOUSDT;\n\nvar h = BTCTURK:ALGOTRY;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar i = BYBIT:ALGOUSDT-SPOT;line(cum(i.vbuy-i.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar j = COINBASE:ALGO-USD;line(cum(j.vbuy-j.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = GATEIO:ALGO_USDT_SPOT;line(cum(k.vbuy-k.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar l = HITBTC:ALGOUSD;\n\nvar m = HITBTC:ALGOUSDC;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar n = KRAKEN:ALGO/USD;\n\nvar o = KRAKEN:ALGO/USDT;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar p = KUCOIN:ALGO-USDT;\n\nvar q = KUCOIN:ALGO-USDC;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar r = MEXC:ALGOUSDC;line(cum(r.vbuy-r.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar s = OKEX:ALGO-USDT;\n\nvar t = OKEX:ALGO-USDC;line(cum(s.vbuy-s.vsell+t.vbuy-t.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar u = UPBIT:BTC-ALGO;\n\nvar v = UPBIT:KRW-ALGO;line(cum(u.vbuy-u.vsell+v.vbuy-v.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -677,8 +689,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:algousdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:algousd_perp;\n\nvar c = COINALYZE_OI:BYBIT:ALGOUSDT;\n\nvar d = COINALYZE_OI:DERIBIT:ALGO_USDC-PERPETUAL;\n\nvar e = COINALYZE_OI:OKEX:ALGO-USD-SWAP;\n\nvar f = COINALYZE_OI:OKEX:ALGO-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:algousdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:algousd_perp;\n\nvar c = COINALYZE_PFR:BYBIT:ALGOUSDT;\n\nvar d = COINALYZE_PFR:DERIBIT:ALGO_USDC-PERPETUAL;\n\nvar e = COINALYZE_PFR:OKEX:ALGO-USD-SWAP;\n\nvar f = COINALYZE_PFR:OKEX:ALGO-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:algousdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:algousd_perp;\n\nvar c = COINALYZE_OI:BYBIT:ALGOUSDT;\n\nvar d = COINALYZE_OI:DERIBIT:ALGO_USDC-PERPETUAL;\n\nvar e = COINALYZE_OI:OKEX:ALGO-USD-SWAP;\n\nvar f = COINALYZE_OI:OKEX:ALGO-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:algousdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:algousd_perp;\n\nvar c = COINALYZE_PFR:BYBIT:ALGOUSDT;\n\nvar d = COINALYZE_PFR:DERIBIT:ALGO_USDC-PERPETUAL;\n\nvar e = COINALYZE_PFR:OKEX:ALGO-USD-SWAP;\n\nvar f = COINALYZE_PFR:OKEX:ALGO-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -946,8 +958,11 @@
         "BINANCE_FUTURES:algousdt": false,
         "BINANCE_FUTURES:algousd_perp": false,
         "BITGET:ALGOUSDT_UMCBL": false,
+        "BITSTAMP:algousd": false,
         "BTCTURK:ALGOUSDT": true,
         "COINBASE:ALGO-USD": false,
+        "GATEIO:ALGO_USDT_SPOT": false,
+        "GATEIO:ALGO_USDT_FUTURES": false,
         "HITBTC:ALGOUSD": false,
         "KRAKEN:ALGO/USD": false,
         "KRAKEN:ALGO/USDT": false,
@@ -965,6 +980,7 @@
         "KUCOIN:ALGO-USDC": false,
         "MEXC:ALGOUSDC": false,
         "OKEX:ALGO-USDC": false,
+        "UPBIT:BTC-ALGO": true,
         "UPBIT:KRW-ALGO": true
       },
       "barSpacing": 0.39437454420364615,
