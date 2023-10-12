@@ -22,9 +22,12 @@
             "BINANCE_FUTURES:ensusd_perp",
             "BITGET:ENSUSDT_SPBL",
             "BITGET:ENSUSDT_UMCBL",
+            "BITSTAMP:ensusd",
             "BTCTURK:ENSUSDT",
             "COINBASE:ENS-USD",
             "COINBASE:ENS-USDT",
+            "GATEIO:ENS_USDT_SPOT",
+            "GATEIO:ENS_USDT_FUTURES",
             "HITBTC:ENSUSDT",
             "KRAKEN:ENS/USD",
             "KRAKEN:PF_ENSUSD",
@@ -37,7 +40,8 @@
             "BTCTURK:ENSTRY",
             "HITBTC:ENSUSDC",
             "MEXC:ENSUSDC",
-            "OKEX:ENS-USDC"
+            "OKEX:ENS-USDC",
+            "UPBIT:BTC-ENS"
           ],
           "zoom": 1
         },
@@ -51,6 +55,7 @@
             "BINANCE_FUTURES:ensusdt",
             "BINANCE_FUTURES:ensusd_perp",
             "BITGET:ENSUSDT_UMCBL",
+            "GATEIO:ENS_USDT_FUTURES",
             "KRAKEN:PF_ENSUSD",
             "KUCOIN:ENSUSDTM",
             "MEXC:ENS_USDT",
@@ -67,9 +72,11 @@
             "BYBIT:ENSUSDT-SPOT",
             "BINANCE:ensbusd",
             "BITGET:ENSUSDT_SPBL",
+            "BITSTAMP:ensusd",
             "BTCTURK:ENSUSDT",
             "COINBASE:ENS-USD",
             "COINBASE:ENS-USDT",
+            "GATEIO:ENS_USDT_SPOT",
             "HITBTC:ENSUSDT",
             "KRAKEN:ENS/USD",
             "KUCOIN:ENS-USDT",
@@ -78,7 +85,8 @@
             "BTCTURK:ENSTRY",
             "HITBTC:ENSUSDC",
             "MEXC:ENSUSDC",
-            "OKEX:ENS-USDC"
+            "OKEX:ENS-USDC",
+            "UPBIT:BTC-ENS"
           ]
         }
       },
@@ -359,7 +367,7 @@
         "fetched": false
       },
       "BITSTAMP": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BYBIT": {
@@ -416,7 +424,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITGET": {
@@ -424,6 +432,10 @@
         "fetched": false
       },
       "BTCTURK": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -519,7 +531,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:ensusdt;\n\nvar b = BINANCE_FUTURES:ensusd_perp;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:ENSUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:ENSUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KRAKEN:PF_ENSUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = KUCOIN:ENSUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:ENS_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:ENS-USDT-SWAP;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:ensusdt;\n\nvar b = BINANCE_FUTURES:ensusd_perp;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:ENSUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:ENSUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:ENS_USDT_FUTURES;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = KRAKEN:PF_ENSUSD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = KUCOIN:ENSUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:ENS_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar i = OKEX:ENS-USDT-SWAP;line(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -563,7 +575,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ensusdt;\n\nvar b = BINANCE:ensbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:ENSUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BTCTURK:ENSUSDT;\n\nvar e = BTCTURK:ENSTRY;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BYBIT:ENSUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:ENS-USD;\n\nvar h = COINBASE:ENS-USDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar i = HITBTC:ENSUSDT;\n\nvar j = HITBTC:ENSUSDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar k = KRAKEN:ENS/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar l = KUCOIN:ENS-USDT;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar m = MEXC:ENSUSDT;\n\nvar n = MEXC:ENSUSDC;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar o = OKEX:ENS-USDT;\n\nvar p = OKEX:ENS-USDC;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ensusdt;\n\nvar b = BINANCE:ensbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:ENSUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITSTAMP:ensusd;line(cum(d.vbuy-d.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = BTCTURK:ENSUSDT;\n\nvar f = BTCTURK:ENSTRY;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = BYBIT:ENSUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = COINBASE:ENS-USD;\n\nvar i = COINBASE:ENS-USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar j = GATEIO:ENS_USDT_SPOT;line(cum(j.vbuy-j.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar k = HITBTC:ENSUSDT;\n\nvar l = HITBTC:ENSUSDC;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar m = KRAKEN:ENS/USD;line(cum(m.vbuy-m.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar n = KUCOIN:ENS-USDT;line(cum(n.vbuy-n.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar o = MEXC:ENSUSDT;\n\nvar p = MEXC:ENSUSDC;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar q = OKEX:ENS-USDT;\n\nvar r = OKEX:ENS-USDC;line(cum(q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar s = UPBIT:BTC-ENS;line(cum(s.vbuy-s.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -663,8 +675,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:ensusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:ensusd_perp;\n\nvar c = COINALYZE_OI:BYBIT:ENSUSDT;\n\nvar d = COINALYZE_OI:OKEX:ENS-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:ensusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:ensusd_perp;\n\nvar c = COINALYZE_PFR:BYBIT:ENSUSDT;\n\nvar d = COINALYZE_PFR:OKEX:ENS-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:ensusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:ensusd_perp;\n\nvar c = COINALYZE_OI:BYBIT:ENSUSDT;\n\nvar d = COINALYZE_OI:OKEX:ENS-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:ensusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:ensusd_perp;\n\nvar c = COINALYZE_PFR:BYBIT:ENSUSDT;\n\nvar d = COINALYZE_PFR:OKEX:ENS-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -931,9 +943,12 @@
         "BINANCE_FUTURES:ensusd_perp": false,
         "BITGET:ENSUSDT_SPBL": false,
         "BITGET:ENSUSDT_UMCBL": false,
+        "BITSTAMP:ensusd": false,
         "BTCTURK:ENSUSDT": true,
         "COINBASE:ENS-USD": false,
         "COINBASE:ENS-USDT": false,
+        "GATEIO:ENS_USDT_SPOT": false,
+        "GATEIO:ENS_USDT_FUTURES": false,
         "HITBTC:ENSUSDT": false,
         "KRAKEN:ENS/USD": false,
         "KRAKEN:PF_ENSUSD": false,
@@ -946,7 +961,8 @@
         "BTCTURK:ENSTRY": true,
         "HITBTC:ENSUSDC": false,
         "MEXC:ENSUSDC": false,
-        "OKEX:ENS-USDC": false
+        "OKEX:ENS-USDC": false,
+        "UPBIT:BTC-ENS": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
