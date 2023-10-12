@@ -18,11 +18,15 @@
             "BYBIT:COMPUSDT-SPOT",
             "BYBIT:COMPUSDT",
             "BINANCE:compbusd",
+            "BINANCE:comptusd",
             "BINANCE_FUTURES:compusdt",
             "BITGET:COMPUSDT_SPBL",
             "BITGET:COMPUSDT_UMCBL",
+            "BITSTAMP:compusd",
             "BTCTURK:COMPUSDT",
             "COINBASE:COMP-USD",
+            "GATEIO:COMP_USDT_SPOT",
+            "GATEIO:COMP_USDT_FUTURES",
             "HITBTC:COMPUSD",
             "KRAKEN:COMP/USD",
             "KRAKEN:PF_COMPUSD",
@@ -34,7 +38,8 @@
             "BITHUMB:COMP_KRW",
             "BTCTURK:COMPTRY",
             "HITBTC:COMPUSDC",
-            "OKEX:COMP-USDC"
+            "OKEX:COMP-USDC",
+            "UPBIT:BTC-COMP"
           ],
           "zoom": 1
         },
@@ -47,6 +52,7 @@
             "BYBIT:COMPUSDT",
             "BINANCE_FUTURES:compusdt",
             "BITGET:COMPUSDT_UMCBL",
+            "GATEIO:COMP_USDT_FUTURES",
             "KRAKEN:PF_COMPUSD",
             "KUCOIN:COMPUSDTM",
             "MEXC:COMP_USDT",
@@ -62,9 +68,12 @@
             "BINANCE:compusdt",
             "BYBIT:COMPUSDT-SPOT",
             "BINANCE:compbusd",
+            "BINANCE:comptusd",
             "BITGET:COMPUSDT_SPBL",
+            "BITSTAMP:compusd",
             "BTCTURK:COMPUSDT",
             "COINBASE:COMP-USD",
+            "GATEIO:COMP_USDT_SPOT",
             "HITBTC:COMPUSD",
             "KRAKEN:COMP/USD",
             "KUCOIN:COMP-USDT",
@@ -72,7 +81,8 @@
             "BITHUMB:COMP_KRW",
             "BTCTURK:COMPTRY",
             "HITBTC:COMPUSDC",
-            "OKEX:COMP-USDC"
+            "OKEX:COMP-USDC",
+            "UPBIT:BTC-COMP"
           ]
         }
       },
@@ -353,7 +363,7 @@
         "fetched": false
       },
       "BITSTAMP": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BYBIT": {
@@ -410,7 +420,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITGET": {
@@ -418,6 +428,10 @@
         "fetched": false
       },
       "BTCTURK": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -517,7 +531,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:compusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:COMPUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:COMPUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_COMPUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:COMPUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:COMP_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:COMP-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:compusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:COMPUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:COMPUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:COMP_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KRAKEN:PF_COMPUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:COMPUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:COMP_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = OKEX:COMP-USDT-SWAP;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -561,7 +575,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:compusdt;\n\nvar b = BINANCE:compbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:COMPUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:COMP_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = BTCTURK:COMPUSDT;\n\nvar f = BTCTURK:COMPTRY;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar g = BYBIT:COMPUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = COINBASE:COMP-USD;line(cum(h.vbuy-h.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar i = HITBTC:COMPUSD;\n\nvar j = HITBTC:COMPUSDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar k = KRAKEN:COMP/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar l = KUCOIN:COMP-USDT;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar m = OKEX:COMP-USDT;\n\nvar n = OKEX:COMP-USDC;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:compusdt;\n\nvar b = BINANCE:compbusd;\n\nvar c = BINANCE:comptusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar d = BITGET:COMPUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:COMP_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BITSTAMP:compusd;line(cum(f.vbuy-f.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = BTCTURK:COMPUSDT;\n\nvar h = BTCTURK:COMPTRY;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar i = BYBIT:COMPUSDT-SPOT;line(cum(i.vbuy-i.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar j = COINBASE:COMP-USD;line(cum(j.vbuy-j.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = GATEIO:COMP_USDT_SPOT;line(cum(k.vbuy-k.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar l = HITBTC:COMPUSD;\n\nvar m = HITBTC:COMPUSDC;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar n = KRAKEN:COMP/USD;line(cum(n.vbuy-n.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar o = KUCOIN:COMP-USDT;line(cum(o.vbuy-o.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar p = OKEX:COMP-USDT;\n\nvar q = OKEX:COMP-USDC;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar r = UPBIT:BTC-COMP;line(cum(r.vbuy-r.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -661,8 +675,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:compusdt;\n\nvar b = COINALYZE_OI:BYBIT:COMPUSDT;\n\nvar c = COINALYZE_OI:OKEX:COMP-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:compusdt;\n\nvar b = COINALYZE_PFR:BYBIT:COMPUSDT;\n\nvar c = COINALYZE_PFR:OKEX:COMP-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:compusdt;\n\nvar b = COINALYZE_OI:BYBIT:COMPUSDT;\n\nvar c = COINALYZE_OI:OKEX:COMP-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:compusdt;\n\nvar b = COINALYZE_PFR:BYBIT:COMPUSDT;\n\nvar c = COINALYZE_PFR:OKEX:COMP-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -925,11 +939,15 @@
         "BYBIT:COMPUSDT-SPOT": false,
         "BYBIT:COMPUSDT": false,
         "BINANCE:compbusd": false,
+        "BINANCE:comptusd": true,
         "BINANCE_FUTURES:compusdt": false,
         "BITGET:COMPUSDT_SPBL": false,
         "BITGET:COMPUSDT_UMCBL": false,
+        "BITSTAMP:compusd": false,
         "BTCTURK:COMPUSDT": true,
         "COINBASE:COMP-USD": false,
+        "GATEIO:COMP_USDT_SPOT": false,
+        "GATEIO:COMP_USDT_FUTURES": false,
         "HITBTC:COMPUSD": false,
         "KRAKEN:COMP/USD": false,
         "KRAKEN:PF_COMPUSD": false,
@@ -941,7 +959,8 @@
         "BITHUMB:COMP_KRW": true,
         "BTCTURK:COMPTRY": true,
         "HITBTC:COMPUSDC": false,
-        "OKEX:COMP-USDC": false
+        "OKEX:COMP-USDC": false,
+        "UPBIT:BTC-COMP": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
