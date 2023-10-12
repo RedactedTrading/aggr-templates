@@ -21,7 +21,10 @@
             "BINANCE_FUTURES:injusdt",
             "BITGET:INJUSDT_SPBL",
             "BITGET:INJUSDT_UMCBL",
+            "BITSTAMP:injusd",
             "COINBASE:INJ-USD",
+            "GATEIO:INJ_USDT_SPOT",
+            "GATEIO:INJ_USDT_FUTURES",
             "HITBTC:INJUSD",
             "KRAKEN:INJ/USD",
             "KRAKEN:PF_INJUSD",
@@ -29,7 +32,8 @@
             "KUCOIN:INJUSDTM",
             "MEXC:INJ_USDT",
             "BITHUMB:INJ_KRW",
-            "BTCTURK:INJTRY"
+            "BTCTURK:INJTRY",
+            "UPBIT:BTC-INJ"
           ],
           "zoom": 1
         },
@@ -42,6 +46,7 @@
             "BYBIT:INJUSDT",
             "BINANCE_FUTURES:injusdt",
             "BITGET:INJUSDT_UMCBL",
+            "GATEIO:INJ_USDT_FUTURES",
             "KRAKEN:PF_INJUSD",
             "KUCOIN:INJUSDTM",
             "MEXC:INJ_USDT"
@@ -57,12 +62,15 @@
             "BYBIT:INJUSDT-SPOT",
             "BINANCE:injbusd",
             "BITGET:INJUSDT_SPBL",
+            "BITSTAMP:injusd",
             "COINBASE:INJ-USD",
+            "GATEIO:INJ_USDT_SPOT",
             "HITBTC:INJUSD",
             "KRAKEN:INJ/USD",
             "KUCOIN:INJ-USDT",
             "BITHUMB:INJ_KRW",
-            "BTCTURK:INJTRY"
+            "BTCTURK:INJTRY",
+            "UPBIT:BTC-INJ"
           ]
         }
       },
@@ -343,7 +351,7 @@
         "fetched": false
       },
       "BITSTAMP": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BYBIT": {
@@ -400,10 +408,14 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -507,7 +519,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:injusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:INJUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:INJUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_INJUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:INJUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:INJ_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:injusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:INJUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:INJUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:INJ_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KRAKEN:PF_INJUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:INJUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:INJ_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -551,7 +563,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:injusdt;\n\nvar b = BINANCE:injbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:INJUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:INJ_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = BTCTURK:INJTRY;line(cum(e.vbuy-e.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BYBIT:INJUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:INJ-USD;line(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = HITBTC:INJUSD;line(cum(h.vbuy-h.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar i = KRAKEN:INJ/USD;line(cum(i.vbuy-i.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar j = KUCOIN:INJ-USDT;line(cum(j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:injusdt;\n\nvar b = BINANCE:injbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:INJUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:INJ_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BITSTAMP:injusd;line(cum(e.vbuy-e.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = BTCTURK:INJTRY;line(cum(f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = BYBIT:INJUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = COINBASE:INJ-USD;line(cum(h.vbuy-h.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = GATEIO:INJ_USDT_SPOT;line(cum(i.vbuy-i.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar j = HITBTC:INJUSD;line(cum(j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar k = KRAKEN:INJ/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar l = KUCOIN:INJ-USDT;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = UPBIT:BTC-INJ;line(cum(m.vbuy-m.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -918,7 +930,10 @@
         "BINANCE_FUTURES:injusdt": false,
         "BITGET:INJUSDT_SPBL": false,
         "BITGET:INJUSDT_UMCBL": false,
+        "BITSTAMP:injusd": false,
         "COINBASE:INJ-USD": false,
+        "GATEIO:INJ_USDT_SPOT": false,
+        "GATEIO:INJ_USDT_FUTURES": false,
         "HITBTC:INJUSD": false,
         "KRAKEN:INJ/USD": false,
         "KRAKEN:PF_INJUSD": false,
@@ -926,7 +941,8 @@
         "KUCOIN:INJUSDTM": false,
         "MEXC:INJ_USDT": false,
         "BITHUMB:INJ_KRW": true,
-        "BTCTURK:INJTRY": true
+        "BTCTURK:INJTRY": true,
+        "UPBIT:BTC-INJ": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
