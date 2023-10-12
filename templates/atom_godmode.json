@@ -25,8 +25,10 @@
             "BITGET:ATOMUSDT_SPBL",
             "BITGET:ATOMUSDT_UMCBL",
             "BTCTURK:ATOMUSDT",
-            "COINBASE:ATOM-USD",
             "COINBASE:ATOM-USDT",
+            "COINBASE:ATOM-USD",
+            "GATEIO:ATOM_USDT_SPOT",
+            "GATEIO:ATOM_USDT_FUTURES",
             "HITBTC:ATOMUSD",
             "KRAKEN:ATOM/USD",
             "KRAKEN:ATOM/USDT",
@@ -44,7 +46,8 @@
             "KUCOIN:ATOM-USDC",
             "MEXC:ATOMUSDC",
             "OKEX:ATOM-USDC",
-            "UPBIT:KRW-ATOM"
+            "UPBIT:KRW-ATOM",
+            "UPBIT:BTC-ATOM"
           ],
           "zoom": 1
         },
@@ -58,6 +61,7 @@
             "BINANCE_FUTURES:atomusdt",
             "BINANCE_FUTURES:atomusd_perp",
             "BITGET:ATOMUSDT_UMCBL",
+            "GATEIO:ATOM_USDT_FUTURES",
             "KRAKEN:PF_ATOMUSD",
             "KUCOIN:ATOMUSDTM",
             "MEXC:ATOM_USDT",
@@ -78,8 +82,9 @@
             "BINANCE:atombusd",
             "BITGET:ATOMUSDT_SPBL",
             "BTCTURK:ATOMUSDT",
-            "COINBASE:ATOM-USD",
             "COINBASE:ATOM-USDT",
+            "COINBASE:ATOM-USD",
+            "GATEIO:ATOM_USDT_SPOT",
             "HITBTC:ATOMUSD",
             "KRAKEN:ATOM/USD",
             "KRAKEN:ATOM/USDT",
@@ -92,7 +97,8 @@
             "KUCOIN:ATOM-USDC",
             "MEXC:ATOMUSDC",
             "OKEX:ATOM-USDC",
-            "UPBIT:KRW-ATOM"
+            "UPBIT:KRW-ATOM",
+            "UPBIT:BTC-ATOM"
           ]
         }
       },
@@ -441,6 +447,10 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -537,7 +547,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:atomusdt;\n\nvar b = BINANCE_FUTURES:atomusd_perp;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:ATOMUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:ATOMUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KRAKEN:PF_ATOMUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = KUCOIN:ATOMUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:ATOM_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:ATOM-USD-SWAP;\n\nvar i = OKEX:ATOM-USDT-SWAP;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:atomusdt;\n\nvar b = BINANCE_FUTURES:atomusd_perp;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:ATOMUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:ATOMUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:ATOM_USDT_FUTURES;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = KRAKEN:PF_ATOMUSD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = KUCOIN:ATOMUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:ATOM_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar i = OKEX:ATOM-USD-SWAP;\n\nvar j = OKEX:ATOM-USDT-SWAP;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -581,7 +591,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:atomusdt;\n\nvar b = BINANCE:atomusdc;\n\nvar c = BINANCE:atomtusd;\n\nvar d = BINANCE:atombusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITGET:ATOMUSDT_SPBL;\n\nvar f = BITGET:ATOMUSDC_SPBL;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar g = BITHUMB:ATOM_KRW;line(cum(g.vbuy-g.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = BTCTURK:ATOMUSDT;\n\nvar i = BTCTURK:ATOMTRY;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar j = BYBIT:ATOMUSDT-SPOT;line(cum(j.vbuy-j.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar k = COINBASE:ATOM-USD;\n\nvar l = COINBASE:ATOM-USDT;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar m = HITBTC:ATOMUSD;\n\nvar n = HITBTC:ATOMUSDC;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar o = KRAKEN:ATOM/USD;\n\nvar p = KRAKEN:ATOM/USDT;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar q = KUCOIN:ATOM-USDT;\n\nvar r = KUCOIN:ATOM-USDC;line(cum(q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar s = MEXC:ATOMUSDC;line(cum(s.vbuy-s.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar t = OKEX:ATOM-USDT;\n\nvar u = OKEX:ATOM-USDC;line(cum(t.vbuy-t.vsell+u.vbuy-u.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar v = UPBIT:KRW-ATOM;line(cum(v.vbuy-v.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:atomusdt;\n\nvar b = BINANCE:atomusdc;\n\nvar c = BINANCE:atomtusd;\n\nvar d = BINANCE:atombusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITGET:ATOMUSDT_SPBL;\n\nvar f = BITGET:ATOMUSDC_SPBL;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar g = BITHUMB:ATOM_KRW;line(cum(g.vbuy-g.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar h = BTCTURK:ATOMUSDT;\n\nvar i = BTCTURK:ATOMTRY;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar j = BYBIT:ATOMUSDT-SPOT;line(cum(j.vbuy-j.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar k = COINBASE:ATOM-USDT;\n\nvar l = COINBASE:ATOM-USD;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar m = GATEIO:ATOM_USDT_SPOT;line(cum(m.vbuy-m.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar n = HITBTC:ATOMUSD;\n\nvar o = HITBTC:ATOMUSDC;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar p = KRAKEN:ATOM/USD;\n\nvar q = KRAKEN:ATOM/USDT;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar r = KUCOIN:ATOM-USDT;\n\nvar s = KUCOIN:ATOM-USDC;line(cum(r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar t = MEXC:ATOMUSDC;line(cum(t.vbuy-t.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar u = OKEX:ATOM-USDT;\n\nvar v = OKEX:ATOM-USDC;line(cum(u.vbuy-u.vsell+v.vbuy-v.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar w = UPBIT:KRW-ATOM;\n\nvar x = UPBIT:BTC-ATOM;line(cum(w.vbuy-w.vsell+x.vbuy-x.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell+w.vbuy-w.vsell+x.vbuy-x.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -681,8 +691,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:atomusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:atomusd_perp;\n\nvar c = COINALYZE_OI:BYBIT:ATOMUSDT;\n\nvar d = COINALYZE_OI:OKEX:ATOM-USD-SWAP;\n\nvar e = COINALYZE_OI:OKEX:ATOM-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:atomusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:atomusd_perp;\n\nvar c = COINALYZE_PFR:BYBIT:ATOMUSDT;\n\nvar d = COINALYZE_PFR:OKEX:ATOM-USD-SWAP;\n\nvar e = COINALYZE_PFR:OKEX:ATOM-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:atomusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:atomusd_perp;\n\nvar c = COINALYZE_OI:BYBIT:ATOMUSDT;\n\nvar d = COINALYZE_OI:OKEX:ATOM-USD-SWAP;\n\nvar e = COINALYZE_OI:OKEX:ATOM-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:atomusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:atomusd_perp;\n\nvar c = COINALYZE_PFR:BYBIT:ATOMUSDT;\n\nvar d = COINALYZE_PFR:OKEX:ATOM-USD-SWAP;\n\nvar e = COINALYZE_PFR:OKEX:ATOM-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -952,8 +962,10 @@
         "BITGET:ATOMUSDT_SPBL": false,
         "BITGET:ATOMUSDT_UMCBL": false,
         "BTCTURK:ATOMUSDT": true,
-        "COINBASE:ATOM-USD": false,
         "COINBASE:ATOM-USDT": false,
+        "COINBASE:ATOM-USD": false,
+        "GATEIO:ATOM_USDT_SPOT": false,
+        "GATEIO:ATOM_USDT_FUTURES": false,
         "HITBTC:ATOMUSD": false,
         "KRAKEN:ATOM/USD": false,
         "KRAKEN:ATOM/USDT": false,
@@ -971,7 +983,8 @@
         "KUCOIN:ATOM-USDC": false,
         "MEXC:ATOMUSDC": false,
         "OKEX:ATOM-USDC": false,
-        "UPBIT:KRW-ATOM": true
+        "UPBIT:KRW-ATOM": true,
+        "UPBIT:BTC-ATOM": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
@@ -1061,8 +1074,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:ATOM-USD": 0.5,
-        "COINBASE:ATOM-USDT": 0.5
+        "COINBASE:ATOM-USDT": 0.5,
+        "COINBASE:ATOM-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1162,8 +1175,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:ATOM-USD": 0.5,
-        "COINBASE:ATOM-USDT": 0.5
+        "COINBASE:ATOM-USDT": 0.5,
+        "COINBASE:ATOM-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
