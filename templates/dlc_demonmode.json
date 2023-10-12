@@ -14,7 +14,8 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BYBIT:DLCUSDT-SPOT"
+            "BYBIT:DLCUSDT-SPOT",
+            "GATEIO:DLC_USDT_SPOT"
           ],
           "zoom": 1
         },
@@ -31,7 +32,8 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BYBIT:DLCUSDT-SPOT"
+            "BYBIT:DLCUSDT-SPOT",
+            "GATEIO:DLC_USDT_SPOT"
           ]
         }
       },
@@ -371,6 +373,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -504,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:DLCUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:DLCUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = GATEIO:DLC_USDT_SPOT;line(cum(b.vbuy-b.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -864,7 +870,8 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:DLCUSDT-SPOT": false
+        "BYBIT:DLCUSDT-SPOT": false,
+        "GATEIO:DLC_USDT_SPOT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
