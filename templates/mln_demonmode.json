@@ -18,8 +18,8 @@
             "BINANCE:mlnbusd",
             "BITFINEX:MLNUSD",
             "COINBASE:MLN-USD",
+            "GATEIO:MLN_USDT_SPOT",
             "KRAKEN:MLN/USD",
-            "KUCOIN:MLN-USDT",
             "MEXC:MLNUSDT",
             "OKEX:MLN-USDT"
           ],
@@ -42,8 +42,8 @@
             "BINANCE:mlnbusd",
             "BITFINEX:MLNUSD",
             "COINBASE:MLN-USD",
+            "GATEIO:MLN_USDT_SPOT",
             "KRAKEN:MLN/USD",
-            "KUCOIN:MLN-USDT",
             "MEXC:MLNUSDT",
             "OKEX:MLN-USDT"
           ]
@@ -362,7 +362,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "OKEX": {
@@ -384,6 +384,10 @@
       "_id": "exchanges",
       "UPBIT": {
         "disabled": true,
+        "fetched": false
+      },
+      "GATEIO": {
+        "disabled": false,
         "fetched": false
       },
       "MEXC": {
@@ -522,7 +526,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:mlnusdt;\n\nvar b = BINANCE:mlnbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:MLNUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = COINBASE:MLN-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = KRAKEN:MLN/USD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = KUCOIN:MLN-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:MLNUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:MLN-USDT;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:mlnusdt;\n\nvar b = BINANCE:mlnbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:MLNUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = COINBASE:MLN-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = GATEIO:MLN_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = KRAKEN:MLN/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = MEXC:MLNUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = OKEX:MLN-USDT;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -886,8 +890,8 @@
         "BINANCE:mlnbusd": false,
         "BITFINEX:MLNUSD": false,
         "COINBASE:MLN-USD": false,
+        "GATEIO:MLN_USDT_SPOT": false,
         "KRAKEN:MLN/USD": false,
-        "KUCOIN:MLN-USDT": false,
         "MEXC:MLNUSDT": false,
         "OKEX:MLN-USDT": false
       },
