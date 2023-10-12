@@ -16,6 +16,7 @@
           "markets": [
             "BINANCE:adxusdt",
             "BINANCE:adxbusd",
+            "GATEIO:ADX_USDT_SPOT",
             "KRAKEN:ADX/USD",
             "KUCOIN:ADX-USDT"
           ],
@@ -36,6 +37,7 @@
           "markets": [
             "BINANCE:adxusdt",
             "BINANCE:adxbusd",
+            "GATEIO:ADX_USDT_SPOT",
             "KRAKEN:ADX/USD",
             "KUCOIN:ADX-USDT"
           ]
@@ -377,6 +379,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -510,7 +516,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:adxusdt;\n\nvar b = BINANCE:adxbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = KRAKEN:ADX/USD;line(cum(c.vbuy-c.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = KUCOIN:ADX-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:adxusdt;\n\nvar b = BINANCE:adxbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = GATEIO:ADX_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KRAKEN:ADX/USD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar e = KUCOIN:ADX-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -872,6 +878,7 @@
       "hiddenMarkets": {
         "BINANCE:adxusdt": false,
         "BINANCE:adxbusd": false,
+        "GATEIO:ADX_USDT_SPOT": false,
         "KRAKEN:ADX/USD": false,
         "KUCOIN:ADX-USDT": false
       },
