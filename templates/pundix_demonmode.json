@@ -18,8 +18,10 @@
             "BINANCE:pundixbusd",
             "BITGET:PUNDIXUSDT_SPBL",
             "COINBASE:PUNDIX-USD",
+            "GATEIO:PUNDIX_USDT_SPOT",
             "KUCOIN:PUNDIX-USDT",
             "BITHUMB:PUNDIX_KRW",
+            "UPBIT:BTC-PUNDIX",
             "UPBIT:KRW-PUNDIX"
           ],
           "zoom": 1
@@ -41,8 +43,10 @@
             "BINANCE:pundixbusd",
             "BITGET:PUNDIXUSDT_SPBL",
             "COINBASE:PUNDIX-USD",
+            "GATEIO:PUNDIX_USDT_SPOT",
             "KUCOIN:PUNDIX-USDT",
             "BITHUMB:PUNDIX_KRW",
+            "UPBIT:BTC-PUNDIX",
             "UPBIT:KRW-PUNDIX"
           ]
         }
@@ -388,6 +392,10 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "BITHUMB": {
         "disabled": false,
         "fetched": false
@@ -524,7 +532,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:pundixusdt;\n\nvar b = BINANCE:pundixbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:PUNDIXUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:PUNDIX_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = COINBASE:PUNDIX-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = KUCOIN:PUNDIX-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = UPBIT:KRW-PUNDIX;line(cum(g.vbuy-g.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:pundixusdt;\n\nvar b = BINANCE:pundixbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:PUNDIXUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:PUNDIX_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = COINBASE:PUNDIX-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = GATEIO:PUNDIX_USDT_SPOT;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = KUCOIN:PUNDIX-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = UPBIT:BTC-PUNDIX;\n\nvar i = UPBIT:KRW-PUNDIX;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -888,8 +896,10 @@
         "BINANCE:pundixbusd": false,
         "BITGET:PUNDIXUSDT_SPBL": false,
         "COINBASE:PUNDIX-USD": false,
+        "GATEIO:PUNDIX_USDT_SPOT": false,
         "KUCOIN:PUNDIX-USDT": false,
         "BITHUMB:PUNDIX_KRW": true,
+        "UPBIT:BTC-PUNDIX": true,
         "UPBIT:KRW-PUNDIX": true
       },
       "barSpacing": 0.39437454420364615,
