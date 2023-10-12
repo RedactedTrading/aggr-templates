@@ -16,8 +16,11 @@
           "markets": [
             "BYBIT:ACSUSDT-SPOT",
             "COINBASE:ACS-USD",
+            "GATEIO:ACS_USDT_SPOT",
+            "HITBTC:ACSUSDT",
             "KUCOIN:ACS-USDT",
-            "BITHUMB:ACS_KRW"
+            "BITHUMB:ACS_KRW",
+            "UPBIT:BTC-ACS"
           ],
           "zoom": 1
         },
@@ -36,8 +39,11 @@
           "markets": [
             "BYBIT:ACSUSDT-SPOT",
             "COINBASE:ACS-USD",
+            "GATEIO:ACS_USDT_SPOT",
+            "HITBTC:ACSUSDT",
             "KUCOIN:ACS-USDT",
-            "BITHUMB:ACS_KRW"
+            "BITHUMB:ACS_KRW",
+            "UPBIT:BTC-ACS"
           ]
         }
       },
@@ -342,7 +348,7 @@
         "fetched": false
       },
       "HITBTC": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "HUOBI": {
@@ -375,7 +381,11 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
+        "disabled": false,
         "fetched": false
       },
       "BITHUMB": {
@@ -514,7 +524,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITHUMB:ACS_KRW;line(cum(a.vbuy-a.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar b = BYBIT:ACSUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = COINBASE:ACS-USD;line(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar d = KUCOIN:ACS-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITHUMB:ACS_KRW;line(cum(a.vbuy-a.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar b = BYBIT:ACSUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = COINBASE:ACS-USD;line(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = GATEIO:ACS_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:ACSUSDT;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = KUCOIN:ACS-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = UPBIT:BTC-ACS;line(cum(g.vbuy-g.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -876,8 +886,11 @@
       "hiddenMarkets": {
         "BYBIT:ACSUSDT-SPOT": false,
         "COINBASE:ACS-USD": false,
+        "GATEIO:ACS_USDT_SPOT": false,
+        "HITBTC:ACSUSDT": false,
         "KUCOIN:ACS-USDT": false,
-        "BITHUMB:ACS_KRW": true
+        "BITHUMB:ACS_KRW": true,
+        "UPBIT:BTC-ACS": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
