@@ -18,11 +18,12 @@
             "BINANCE:sntbusd",
             "BITGET:SNTUSDT_SPBL",
             "COINBASE:SNT-USD",
-            "MEXC:SNTUSDT",
+            "GATEIO:SNT_USDT_SPOT",
             "OKEX:SNT-USDT",
             "BITHUMB:SNT_KRW",
             "HITBTC:SNTUSDC",
             "HITBTC:SNTUSD",
+            "UPBIT:BTC-SNT",
             "UPBIT:KRW-SNT"
           ],
           "zoom": 1
@@ -44,11 +45,12 @@
             "BINANCE:sntbusd",
             "BITGET:SNTUSDT_SPBL",
             "COINBASE:SNT-USD",
-            "MEXC:SNTUSDT",
+            "GATEIO:SNT_USDT_SPOT",
             "OKEX:SNT-USDT",
             "BITHUMB:SNT_KRW",
             "HITBTC:SNTUSDC",
             "HITBTC:SNTUSD",
+            "UPBIT:BTC-SNT",
             "UPBIT:KRW-SNT"
           ]
         }
@@ -394,7 +396,7 @@
         "disabled": false,
         "fetched": false
       },
-      "MEXC": {
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -534,7 +536,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:sntusdt;\n\nvar b = BINANCE:sntbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:SNTUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:SNT_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = COINBASE:SNT-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = HITBTC:SNTUSDC;\n\nvar g = HITBTC:SNTUSD;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = MEXC:SNTUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar i = OKEX:SNT-USDT;line(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = UPBIT:KRW-SNT;line(cum(j.vbuy-j.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:sntusdt;\n\nvar b = BINANCE:sntbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:SNTUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:SNT_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = COINBASE:SNT-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = GATEIO:SNT_USDT_SPOT;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = HITBTC:SNTUSDC;\n\nvar h = HITBTC:SNTUSD;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar i = OKEX:SNT-USDT;line(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar j = UPBIT:BTC-SNT;\n\nvar k = UPBIT:KRW-SNT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -898,11 +900,12 @@
         "BINANCE:sntbusd": false,
         "BITGET:SNTUSDT_SPBL": false,
         "COINBASE:SNT-USD": false,
-        "MEXC:SNTUSDT": false,
+        "GATEIO:SNT_USDT_SPOT": false,
         "OKEX:SNT-USDT": false,
         "BITHUMB:SNT_KRW": true,
         "HITBTC:SNTUSDC": false,
         "HITBTC:SNTUSD": true,
+        "UPBIT:BTC-SNT": true,
         "UPBIT:KRW-SNT": true
       },
       "barSpacing": 0.39437454420364615,
