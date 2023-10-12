@@ -17,8 +17,7 @@
             "BINANCE:bondusdt",
             "BINANCE:bondbusd",
             "BITGET:BONDUSDT_SPBL",
-            "COINBASE:BOND-USD",
-            "COINBASE:BOND-USDT",
+            "GATEIO:BOND_USDT_SPOT",
             "KRAKEN:BOND/USD",
             "KUCOIN:BOND-USDT",
             "MEXC:BONDUSDT"
@@ -41,8 +40,7 @@
             "BINANCE:bondusdt",
             "BINANCE:bondbusd",
             "BITGET:BONDUSDT_SPBL",
-            "COINBASE:BOND-USD",
-            "COINBASE:BOND-USDT",
+            "GATEIO:BOND_USDT_SPOT",
             "KRAKEN:BOND/USD",
             "KUCOIN:BOND-USDT",
             "MEXC:BONDUSDT"
@@ -334,7 +332,7 @@
         "fetched": false
       },
       "COINBASE": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "DERIBIT": {
@@ -387,6 +385,10 @@
         "fetched": false
       },
       "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -526,7 +528,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bondusdt;\n\nvar b = BINANCE:bondbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:BONDUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:BOND-USD;\n\nvar e = COINBASE:BOND-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = KRAKEN:BOND/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = KUCOIN:BOND-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = MEXC:BONDUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bondusdt;\n\nvar b = BINANCE:bondbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:BONDUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = GATEIO:BOND_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KRAKEN:BOND/USD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:BOND-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:BONDUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -889,8 +891,7 @@
         "BINANCE:bondusdt": false,
         "BINANCE:bondbusd": false,
         "BITGET:BONDUSDT_SPBL": false,
-        "COINBASE:BOND-USD": false,
-        "COINBASE:BOND-USDT": false,
+        "GATEIO:BOND_USDT_SPOT": false,
         "KRAKEN:BOND/USD": false,
         "KUCOIN:BOND-USDT": false,
         "MEXC:BONDUSDT": false
@@ -982,10 +983,7 @@
         }
       ],
       "audioThreshold": null,
-      "multipliers": {
-        "COINBASE:BOND-USD": 0.5,
-        "COINBASE:BOND-USDT": 0.5
-      },
+      "multipliers": {},
       "showThresholdsAsTable": false,
       "maxRows": "477",
       "muted": false,
@@ -1083,9 +1081,7 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:BTC-USD": 0.53,
-        "COINBASE:BOND-USD": 0.5,
-        "COINBASE:BOND-USDT": 0.5
+        "COINBASE:BTC-USD": 0.53
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
