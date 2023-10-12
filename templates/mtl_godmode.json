@@ -19,14 +19,16 @@
             "BINANCE:mtlbusd",
             "BINANCE_FUTURES:mtlusdt",
             "BITGET:MTLUSDT_SPBL",
-            "BITGET:MTLUSDT_UMCBL",
             "COINBASE:MTL-USD",
+            "GATEIO:MTL_USDT_SPOT",
+            "GATEIO:MTL_USDT_FUTURES",
             "HITBTC:MTLUSDT",
             "KUCOIN:MTL-USDT",
             "KUCOIN:MTLUSDTM",
             "MEXC:MTL_USDT",
             "BITHUMB:MTL_KRW",
-            "UPBIT:KRW-MTL"
+            "UPBIT:KRW-MTL",
+            "UPBIT:BTC-MTL"
           ],
           "zoom": 1
         },
@@ -38,7 +40,7 @@
           "markets": [
             "BYBIT:MTLUSDT",
             "BINANCE_FUTURES:mtlusdt",
-            "BITGET:MTLUSDT_UMCBL",
+            "GATEIO:MTL_USDT_FUTURES",
             "KUCOIN:MTLUSDTM",
             "MEXC:MTL_USDT"
           ]
@@ -53,10 +55,12 @@
             "BINANCE:mtlbusd",
             "BITGET:MTLUSDT_SPBL",
             "COINBASE:MTL-USD",
+            "GATEIO:MTL_USDT_SPOT",
             "HITBTC:MTLUSDT",
             "KUCOIN:MTL-USDT",
             "BITHUMB:MTL_KRW",
-            "UPBIT:KRW-MTL"
+            "UPBIT:KRW-MTL",
+            "UPBIT:BTC-MTL"
           ]
         }
       },
@@ -401,6 +405,10 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -497,7 +505,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:mtlusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:MTLUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:MTLUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KUCOIN:MTLUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:MTL_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:mtlusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:MTLUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:MTL_USDT_FUTURES;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KUCOIN:MTLUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:MTL_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -541,7 +549,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:mtlusdt;\n\nvar b = BINANCE:mtlbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MTLUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:MTL_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = COINBASE:MTL-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = HITBTC:MTLUSDT;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = KUCOIN:MTL-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = UPBIT:KRW-MTL;line(cum(h.vbuy-h.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:mtlusdt;\n\nvar b = BINANCE:mtlbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MTLUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:MTL_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = COINBASE:MTL-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = GATEIO:MTL_USDT_SPOT;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = HITBTC:MTLUSDT;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KUCOIN:MTL-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = UPBIT:KRW-MTL;\n\nvar j = UPBIT:BTC-MTL;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -906,14 +914,16 @@
         "BINANCE:mtlbusd": false,
         "BINANCE_FUTURES:mtlusdt": false,
         "BITGET:MTLUSDT_SPBL": false,
-        "BITGET:MTLUSDT_UMCBL": false,
         "COINBASE:MTL-USD": false,
+        "GATEIO:MTL_USDT_SPOT": false,
+        "GATEIO:MTL_USDT_FUTURES": false,
         "HITBTC:MTLUSDT": false,
         "KUCOIN:MTL-USDT": false,
         "KUCOIN:MTLUSDTM": false,
         "MEXC:MTL_USDT": false,
         "BITHUMB:MTL_KRW": true,
-        "UPBIT:KRW-MTL": true
+        "UPBIT:KRW-MTL": true,
+        "UPBIT:BTC-MTL": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
