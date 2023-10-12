@@ -22,13 +22,17 @@
             "BINANCE_FUTURES:hftusdt",
             "BITGET:HFTUSDT_SPBL",
             "BITGET:HFTUSDT_UMCBL",
-            "COINBASE:HFT-USDT",
             "COINBASE:HFT-USD",
+            "COINBASE:HFT-USDT",
+            "GATEIO:HFT_USDT_SPOT",
+            "GATEIO:HFT_USDT_FUTURES",
             "HITBTC:HFTUSDT",
             "KRAKEN:HFT/USD",
             "KUCOIN:HFT-USDT",
             "KUCOIN:HFTUSDTM",
             "MEXC:HFT_USDT",
+            "BITHUMB:HFT_KRW",
+            "KRAKEN:PF_HFTUSD",
             "KUCOIN:HFT-USDC"
           ],
           "zoom": 1
@@ -42,8 +46,10 @@
             "BYBIT:HFTUSDT",
             "BINANCE_FUTURES:hftusdt",
             "BITGET:HFTUSDT_UMCBL",
+            "GATEIO:HFT_USDT_FUTURES",
             "KUCOIN:HFTUSDTM",
-            "MEXC:HFT_USDT"
+            "MEXC:HFT_USDT",
+            "KRAKEN:PF_HFTUSD"
           ]
         },
         "trades2": {
@@ -57,11 +63,13 @@
             "BINANCE:hftbusd",
             "BYBIT:HFTUSDC-SPOT",
             "BITGET:HFTUSDT_SPBL",
-            "COINBASE:HFT-USDT",
             "COINBASE:HFT-USD",
+            "COINBASE:HFT-USDT",
+            "GATEIO:HFT_USDT_SPOT",
             "HITBTC:HFTUSDT",
             "KRAKEN:HFT/USD",
             "KUCOIN:HFT-USDT",
+            "BITHUMB:HFT_KRW",
             "KUCOIN:HFT-USDC"
           ]
         }
@@ -407,7 +415,15 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
+        "disabled": false,
+        "fetched": false
+      },
+      "BITHUMB": {
         "disabled": false,
         "fetched": false
       }
@@ -499,7 +515,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:hftusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:HFTUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:HFTUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KUCOIN:HFTUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:HFT_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:hftusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:HFTUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:HFTUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:HFT_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KRAKEN:PF_HFTUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:HFTUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:HFT_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -543,7 +559,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:hftusdt;\n\nvar b = BINANCE:hftbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:HFTUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:HFTUSDT-SPOT;\n\nvar e = BYBIT:HFTUSDC-SPOT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:HFT-USDT;\n\nvar g = COINBASE:HFT-USD;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = HITBTC:HFTUSDT;line(cum(h.vbuy-h.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar i = KRAKEN:HFT/USD;line(cum(i.vbuy-i.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar j = KUCOIN:HFT-USDT;\n\nvar k = KUCOIN:HFT-USDC;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:hftusdt;\n\nvar b = BINANCE:hftbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:HFTUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:HFT_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BYBIT:HFTUSDT-SPOT;\n\nvar f = BYBIT:HFTUSDC-SPOT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:HFT-USD;\n\nvar h = COINBASE:HFT-USDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = GATEIO:HFT_USDT_SPOT;line(cum(i.vbuy-i.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar j = HITBTC:HFTUSDT;line(cum(j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar k = KRAKEN:HFT/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar l = KUCOIN:HFT-USDT;\n\nvar m = KUCOIN:HFT-USDC;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -911,13 +927,17 @@
         "BINANCE_FUTURES:hftusdt": false,
         "BITGET:HFTUSDT_SPBL": false,
         "BITGET:HFTUSDT_UMCBL": false,
-        "COINBASE:HFT-USDT": false,
         "COINBASE:HFT-USD": false,
+        "COINBASE:HFT-USDT": false,
+        "GATEIO:HFT_USDT_SPOT": false,
+        "GATEIO:HFT_USDT_FUTURES": false,
         "HITBTC:HFTUSDT": false,
         "KRAKEN:HFT/USD": false,
         "KUCOIN:HFT-USDT": false,
         "KUCOIN:HFTUSDTM": false,
         "MEXC:HFT_USDT": false,
+        "BITHUMB:HFT_KRW": true,
+        "KRAKEN:PF_HFTUSD": true,
         "KUCOIN:HFT-USDC": false
       },
       "barSpacing": 0.39437454420364615,
@@ -1008,8 +1028,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:HFT-USDT": 0.5,
-        "COINBASE:HFT-USD": 0.5
+        "COINBASE:HFT-USD": 0.5,
+        "COINBASE:HFT-USDT": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1109,8 +1129,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:HFT-USDT": 0.5,
-        "COINBASE:HFT-USD": 0.5
+        "COINBASE:HFT-USD": 0.5,
+        "COINBASE:HFT-USDT": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
