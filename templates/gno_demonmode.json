@@ -19,6 +19,7 @@
             "BITFINEX:GNOUSD",
             "BITGET:GNOUSDT_SPBL",
             "COINBASE:GNO-USD",
+            "GATEIO:GNO_USDT_SPOT",
             "KRAKEN:GNO/USD",
             "MEXC:GNOUSDT",
             "BALANCERETHEREUM:GNO/WETH",
@@ -44,6 +45,7 @@
             "BITFINEX:GNOUSD",
             "BITGET:GNOUSDT_SPBL",
             "COINBASE:GNO-USD",
+            "GATEIO:GNO_USDT_SPOT",
             "KRAKEN:GNO/USD",
             "MEXC:GNOUSDT",
             "BALANCERETHEREUM:GNO/WETH",
@@ -392,6 +394,10 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -536,7 +542,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BALANCERETHEREUM:GNO/WETH;line(cum(a.vbuy-a.vsell), title=\"BLNETH\", color=\"rgb(205, 246, 247)\");\n\n\nvar b = BINANCE:gnousdt;\n\nvar c = BINANCE:gnobusd;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar d = BITFINEX:GNOUSD;line(cum(d.vbuy-d.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar e = BITGET:GNOUSDT_SPBL;line(cum(e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = COINBASE:GNO-USD;line(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = KRAKEN:GNO/USD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = MEXC:GNOUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar i = UNISWAPETHEREUM:GNO/WETH;line(cum(i.vbuy-i.vsell), title=\"UNIETH\", color=\"rgb(205, 246, 247)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BALANCERETHEREUM:GNO/WETH;line(cum(a.vbuy-a.vsell), title=\"BLNETH\", color=\"rgb(197, 246, 101)\");\n\n\nvar b = BINANCE:gnousdt;\n\nvar c = BINANCE:gnobusd;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar d = BITFINEX:GNOUSD;line(cum(d.vbuy-d.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar e = BITGET:GNOUSDT_SPBL;line(cum(e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = COINBASE:GNO-USD;line(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = GATEIO:GNO_USDT_SPOT;line(cum(g.vbuy-g.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar h = KRAKEN:GNO/USD;line(cum(h.vbuy-h.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar i = MEXC:GNOUSDT;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = UNISWAPETHEREUM:GNO/WETH;line(cum(j.vbuy-j.vsell), title=\"UNIETH\", color=\"rgb(197, 246, 101)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -901,6 +907,7 @@
         "BITFINEX:GNOUSD": false,
         "BITGET:GNOUSDT_SPBL": false,
         "COINBASE:GNO-USD": false,
+        "GATEIO:GNO_USDT_SPOT": false,
         "KRAKEN:GNO/USD": false,
         "MEXC:GNOUSDT": false,
         "BALANCERETHEREUM:GNO/WETH": true,
