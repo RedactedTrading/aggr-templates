@@ -20,13 +20,15 @@
             "BINANCE:rvnbusd",
             "BINANCE_FUTURES:rvnusdt",
             "BITGET:RVNUSDT_UMCBL",
+            "GATEIO:RVN_USDT_SPOT",
+            "GATEIO:RVN_USDT_FUTURES",
             "HITBTC:RVNUSDT",
             "KUCOIN:RVN-USDT",
             "KUCOIN:RVNUSDTM",
-            "MEXC:RVNUSDT",
             "MEXC:RVN_USDT",
             "OKEX:RVN-USDT",
-            "OKEX:RVN-USDT-SWAP"
+            "OKEX:RVN-USDT-SWAP",
+            "UPBIT:BTC-RVN"
           ],
           "zoom": 1
         },
@@ -39,6 +41,7 @@
             "BYBIT:RVNUSDT",
             "BINANCE_FUTURES:rvnusdt",
             "BITGET:RVNUSDT_UMCBL",
+            "GATEIO:RVN_USDT_FUTURES",
             "KUCOIN:RVNUSDTM",
             "MEXC:RVN_USDT",
             "OKEX:RVN-USDT-SWAP"
@@ -53,10 +56,11 @@
             "BINANCE:rvnusdt",
             "BYBIT:RVNUSDT-SPOT",
             "BINANCE:rvnbusd",
+            "GATEIO:RVN_USDT_SPOT",
             "HITBTC:RVNUSDT",
             "KUCOIN:RVN-USDT",
-            "MEXC:RVNUSDT",
-            "OKEX:RVN-USDT"
+            "OKEX:RVN-USDT",
+            "UPBIT:BTC-RVN"
           ]
         }
       },
@@ -394,10 +398,14 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -493,7 +501,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:rvnusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:RVNUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:RVNUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KUCOIN:RVNUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:RVN_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = OKEX:RVN-USDT-SWAP;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:rvnusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:RVNUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:RVNUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:RVN_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KUCOIN:RVNUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:RVN_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = OKEX:RVN-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -537,7 +545,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:rvnusdt;\n\nvar b = BINANCE:rvnbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BYBIT:RVNUSDT-SPOT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = HITBTC:RVNUSDT;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar e = KUCOIN:RVN-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:RVNUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:RVN-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:rvnusdt;\n\nvar b = BINANCE:rvnbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BYBIT:RVNUSDT-SPOT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:RVN_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:RVNUSDT;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = KUCOIN:RVN-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = OKEX:RVN-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar h = UPBIT:BTC-RVN;line(cum(h.vbuy-h.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -637,8 +645,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:rvnusdt;\n\nvar b = COINALYZE_OI:BYBIT:RVNUSDT;\n\nvar c = COINALYZE_OI:OKEX:RVN-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:rvnusdt;\n\nvar b = COINALYZE_PFR:BYBIT:RVNUSDT;\n\nvar c = COINALYZE_PFR:OKEX:RVN-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:rvnusdt;\n\nvar b = COINALYZE_OI:BYBIT:RVNUSDT;\n\nvar c = COINALYZE_OI:OKEX:RVN-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:rvnusdt;\n\nvar b = COINALYZE_PFR:BYBIT:RVNUSDT;\n\nvar c = COINALYZE_PFR:OKEX:RVN-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -903,13 +911,15 @@
         "BINANCE:rvnbusd": false,
         "BINANCE_FUTURES:rvnusdt": false,
         "BITGET:RVNUSDT_UMCBL": false,
+        "GATEIO:RVN_USDT_SPOT": false,
+        "GATEIO:RVN_USDT_FUTURES": false,
         "HITBTC:RVNUSDT": false,
         "KUCOIN:RVN-USDT": false,
         "KUCOIN:RVNUSDTM": false,
-        "MEXC:RVNUSDT": false,
         "MEXC:RVN_USDT": false,
         "OKEX:RVN-USDT": false,
-        "OKEX:RVN-USDT-SWAP": false
+        "OKEX:RVN-USDT-SWAP": false,
+        "UPBIT:BTC-RVN": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
