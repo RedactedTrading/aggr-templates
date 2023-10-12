@@ -17,8 +17,8 @@
             "BINANCE:tribeusdt",
             "BYBIT:TRIBEUSDT-SPOT",
             "BINANCE:tribebusd",
+            "GATEIO:TRIBE_USDT_SPOT",
             "HITBTC:TRIBEUSDT",
-            "KUCOIN:TRIBE-USDT",
             "MEXC:TRIBEUSDT"
           ],
           "zoom": 1
@@ -39,8 +39,8 @@
             "BINANCE:tribeusdt",
             "BYBIT:TRIBEUSDT-SPOT",
             "BINANCE:tribebusd",
+            "GATEIO:TRIBE_USDT_SPOT",
             "HITBTC:TRIBEUSDT",
-            "KUCOIN:TRIBE-USDT",
             "MEXC:TRIBEUSDT"
           ]
         }
@@ -358,7 +358,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "OKEX": {
@@ -380,6 +380,10 @@
       "_id": "exchanges",
       "UPBIT": {
         "disabled": true,
+        "fetched": false
+      },
+      "GATEIO": {
+        "disabled": false,
         "fetched": false
       },
       "MEXC": {
@@ -518,7 +522,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:tribeusdt;\n\nvar b = BINANCE:tribebusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BYBIT:TRIBEUSDT-SPOT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = HITBTC:TRIBEUSDT;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar e = KUCOIN:TRIBE-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:TRIBEUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:tribeusdt;\n\nvar b = BINANCE:tribebusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BYBIT:TRIBEUSDT-SPOT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:TRIBE_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:TRIBEUSDT;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = MEXC:TRIBEUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -881,8 +885,8 @@
         "BINANCE:tribeusdt": false,
         "BYBIT:TRIBEUSDT-SPOT": false,
         "BINANCE:tribebusd": false,
+        "GATEIO:TRIBE_USDT_SPOT": false,
         "HITBTC:TRIBEUSDT": false,
-        "KUCOIN:TRIBE-USDT": false,
         "MEXC:TRIBEUSDT": false
       },
       "barSpacing": 0.39437454420364615,
