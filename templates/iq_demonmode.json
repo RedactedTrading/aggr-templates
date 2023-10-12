@@ -14,11 +14,12 @@
           "name": "",
           "type": "chart",
           "markets": [
+            "BINANCE:iqusdt",
             "BINANCE:iqbusd",
-            "HITBTC:IQUSD",
             "MEXC:IQUSDT",
             "OKEX:IQ-USDT",
-            "UPBIT:KRW-IQ"
+            "UPBIT:KRW-IQ",
+            "UPBIT:BTC-IQ"
           ],
           "zoom": 1
         },
@@ -35,11 +36,12 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BINANCE:iqusdt",
             "BINANCE:iqbusd",
-            "HITBTC:IQUSD",
             "MEXC:IQUSDT",
             "OKEX:IQ-USDT",
-            "UPBIT:KRW-IQ"
+            "UPBIT:KRW-IQ",
+            "UPBIT:BTC-IQ"
           ]
         }
       },
@@ -344,7 +346,7 @@
         "fetched": false
       },
       "HITBTC": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "HUOBI": {
@@ -430,7 +432,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = OKEX:IQ-USDT;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
+          "script": "var x0 = BINANCE:iqusdt;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -516,7 +518,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:iqbusd;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = HITBTC:IQUSD;line(cum(b.vbuy-b.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar c = MEXC:IQUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar d = OKEX:IQ-USDT;line(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = UPBIT:KRW-IQ;line(cum(e.vbuy-e.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:iqusdt;\n\nvar b = BINANCE:iqbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = MEXC:IQUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar d = OKEX:IQ-USDT;line(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar e = UPBIT:KRW-IQ;\n\nvar f = UPBIT:BTC-IQ;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -876,11 +878,12 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
+        "BINANCE:iqusdt": false,
         "BINANCE:iqbusd": false,
-        "HITBTC:IQUSD": false,
         "MEXC:IQUSDT": false,
         "OKEX:IQ-USDT": false,
-        "UPBIT:KRW-IQ": true
+        "UPBIT:KRW-IQ": true,
+        "UPBIT:BTC-IQ": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
