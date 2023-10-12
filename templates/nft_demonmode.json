@@ -17,9 +17,8 @@
             "BYBIT:NFTUSDT-SPOT",
             "BYBIT:10000NFTUSDT",
             "BITGET:NFTUSDT_SPBL",
+            "GATEIO:NFT_USDT_SPOT",
             "KUCOIN:NFT-USDT",
-            "KUCOIN:NFTUSDTM",
-            "MEXC:NFTUSDT",
             "OKEX:NFT-USDT",
             "OKEX:NFT-USDT-SWAP",
             "BITHUMB:NFT_KRW",
@@ -34,7 +33,6 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:10000NFTUSDT",
-            "KUCOIN:NFTUSDTM",
             "OKEX:NFT-USDT-SWAP"
           ]
         },
@@ -46,8 +44,8 @@
           "markets": [
             "BYBIT:NFTUSDT-SPOT",
             "BITGET:NFTUSDT_SPBL",
+            "GATEIO:NFT_USDT_SPOT",
             "KUCOIN:NFT-USDT",
-            "MEXC:NFTUSDT",
             "OKEX:NFT-USDT",
             "BITHUMB:NFT_KRW",
             "HITBTC:NFTUSD"
@@ -395,7 +393,7 @@
         "disabled": false,
         "fetched": false
       },
-      "MEXC": {
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -491,7 +489,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:10000NFTUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = KUCOIN:NFTUSDTM;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar c = OKEX:NFT-USDT-SWAP;line(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:10000NFTUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = OKEX:NFT-USDT-SWAP;line(cum(b.vbuy-b.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -535,7 +533,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:NFTUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BITHUMB:NFT_KRW;line(cum(b.vbuy-b.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar c = BYBIT:NFTUSDT-SPOT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = HITBTC:NFTUSD;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar e = KUCOIN:NFT-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:NFTUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:NFT-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:NFTUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BITHUMB:NFT_KRW;line(cum(b.vbuy-b.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar c = BYBIT:NFTUSDT-SPOT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:NFT_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:NFTUSD;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = KUCOIN:NFT-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = OKEX:NFT-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -635,8 +633,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BYBIT:10000NFTUSDT;\n\nvar b = COINALYZE_OI:OKEX:NFT-USDT-SWAP;line(a.close+b.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BYBIT:10000NFTUSDT;\n\nvar b = COINALYZE_PFR:OKEX:NFT-USDT-SWAP;line(a.close+b.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BYBIT:10000NFTUSDT;\n\nvar b = COINALYZE_OI:OKEX:NFT-USDT-SWAP;line(a.close+b.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BYBIT:10000NFTUSDT;\n\nvar b = COINALYZE_PFR:OKEX:NFT-USDT-SWAP;line(a.close+b.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -898,9 +896,8 @@
         "BYBIT:NFTUSDT-SPOT": false,
         "BYBIT:10000NFTUSDT": false,
         "BITGET:NFTUSDT_SPBL": false,
+        "GATEIO:NFT_USDT_SPOT": false,
         "KUCOIN:NFT-USDT": false,
-        "KUCOIN:NFTUSDTM": false,
-        "MEXC:NFTUSDT": false,
         "OKEX:NFT-USDT": false,
         "OKEX:NFT-USDT-SWAP": false,
         "BITHUMB:NFT_KRW": true,
