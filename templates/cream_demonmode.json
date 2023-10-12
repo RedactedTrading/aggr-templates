@@ -14,7 +14,10 @@
           "name": "",
           "type": "chart",
           "markets": [
+            "BINANCE:creamusdt",
             "BINANCE:creambusd",
+            "GATEIO:CREAM_USDT_SPOT",
+            "GATEIO:CREAM_USDT_FUTURES",
             "KUCOIN:CREAM-USDT",
             "MEXC:CREAM_USDT"
           ],
@@ -26,6 +29,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "GATEIO:CREAM_USDT_FUTURES",
             "MEXC:CREAM_USDT"
           ]
         },
@@ -35,7 +39,9 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BINANCE:creamusdt",
             "BINANCE:creambusd",
+            "GATEIO:CREAM_USDT_SPOT",
             "KUCOIN:CREAM-USDT"
           ]
         }
@@ -377,6 +383,10 @@
         "disabled": true,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -427,7 +437,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "plotcandlestick(() / 0,() / 0,() / 0,() / 0);",
+          "script": "var x0 = BINANCE:creamusdt;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -469,7 +479,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = MEXC:CREAM_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = GATEIO:CREAM_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar b = MEXC:CREAM_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -513,7 +523,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:creambusd;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = KUCOIN:CREAM-USDT;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:creamusdt;\n\nvar b = BINANCE:creambusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = GATEIO:CREAM_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KUCOIN:CREAM-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -873,7 +883,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
+        "BINANCE:creamusdt": false,
         "BINANCE:creambusd": false,
+        "GATEIO:CREAM_USDT_SPOT": false,
+        "GATEIO:CREAM_USDT_FUTURES": false,
         "KUCOIN:CREAM-USDT": false,
         "MEXC:CREAM_USDT": false
       },
