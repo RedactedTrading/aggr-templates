@@ -24,13 +24,14 @@
             "BITGET:XTZUSDT_UMCBL",
             "BTCTURK:XTZUSDT",
             "COINBASE:XTZ-USD",
+            "GATEIO:XTZ_USDT_SPOT",
+            "GATEIO:XTZ_USDT_FUTURES",
             "HITBTC:XTZUSD",
             "KRAKEN:XTZ/USD",
             "KRAKEN:XTZ/USDT",
             "KRAKEN:PF_XTZUSD",
             "KUCOIN:XTZ-USDT",
             "KUCOIN:XTZUSDTM",
-            "MEXC:XTZUSDT",
             "MEXC:XTZ_USDT",
             "OKEX:XTZ-USDT",
             "OKEX:XTZ-USDT-SWAP",
@@ -38,6 +39,7 @@
             "BTCTURK:XTZTRY",
             "HITBTC:XTZUSDC",
             "OKEX:XTZ-USDC",
+            "UPBIT:BTC-XTZ",
             "UPBIT:KRW-XTZ"
           ],
           "zoom": 1
@@ -52,6 +54,7 @@
             "BINANCE_FUTURES:xtzusdt",
             "BINANCE_FUTURES:xtzusd_perp",
             "BITGET:XTZUSDT_UMCBL",
+            "GATEIO:XTZ_USDT_FUTURES",
             "KRAKEN:PF_XTZUSD",
             "KUCOIN:XTZUSDTM",
             "MEXC:XTZ_USDT",
@@ -70,16 +73,17 @@
             "BITFINEX:XTZUSD",
             "BTCTURK:XTZUSDT",
             "COINBASE:XTZ-USD",
+            "GATEIO:XTZ_USDT_SPOT",
             "HITBTC:XTZUSD",
             "KRAKEN:XTZ/USD",
             "KRAKEN:XTZ/USDT",
             "KUCOIN:XTZ-USDT",
-            "MEXC:XTZUSDT",
             "OKEX:XTZ-USDT",
             "BITHUMB:XTZ_KRW",
             "BTCTURK:XTZTRY",
             "HITBTC:XTZUSDC",
             "OKEX:XTZ-USDC",
+            "UPBIT:BTC-XTZ",
             "UPBIT:KRW-XTZ"
           ]
         }
@@ -429,6 +433,10 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -525,7 +533,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:xtzusdt;\n\nvar b = BINANCE_FUTURES:xtzusd_perp;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:XTZUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:XTZUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KRAKEN:PF_XTZUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = KUCOIN:XTZUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:XTZ_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:XTZ-USDT-SWAP;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:xtzusdt;\n\nvar b = BINANCE_FUTURES:xtzusd_perp;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:XTZUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:XTZUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:XTZ_USDT_FUTURES;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = KRAKEN:PF_XTZUSD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = KUCOIN:XTZUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:XTZ_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar i = OKEX:XTZ-USDT-SWAP;line(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -569,7 +577,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:xtzusdt;\n\nvar b = BINANCE:xtzbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:XTZUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITHUMB:XTZ_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = BTCTURK:XTZUSDT;\n\nvar f = BTCTURK:XTZTRY;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar g = BYBIT:XTZUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = COINBASE:XTZ-USD;line(cum(h.vbuy-h.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar i = HITBTC:XTZUSD;\n\nvar j = HITBTC:XTZUSDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar k = KRAKEN:XTZ/USD;\n\nvar l = KRAKEN:XTZ/USDT;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar m = KUCOIN:XTZ-USDT;line(cum(m.vbuy-m.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar n = MEXC:XTZUSDT;line(cum(n.vbuy-n.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar o = OKEX:XTZ-USDT;\n\nvar p = OKEX:XTZ-USDC;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar q = UPBIT:KRW-XTZ;line(cum(q.vbuy-q.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:xtzusdt;\n\nvar b = BINANCE:xtzbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:XTZUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITHUMB:XTZ_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BTCTURK:XTZUSDT;\n\nvar f = BTCTURK:XTZTRY;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = BYBIT:XTZUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = COINBASE:XTZ-USD;line(cum(h.vbuy-h.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = GATEIO:XTZ_USDT_SPOT;line(cum(i.vbuy-i.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar j = HITBTC:XTZUSD;\n\nvar k = HITBTC:XTZUSDC;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar l = KRAKEN:XTZ/USD;\n\nvar m = KRAKEN:XTZ/USDT;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar n = KUCOIN:XTZ-USDT;line(cum(n.vbuy-n.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar o = OKEX:XTZ-USDT;\n\nvar p = OKEX:XTZ-USDC;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar q = UPBIT:BTC-XTZ;\n\nvar r = UPBIT:KRW-XTZ;line(cum(q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -669,8 +677,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:xtzusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:xtzusd_perp;\n\nvar c = COINALYZE_OI:BYBIT:XTZUSDT;\n\nvar d = COINALYZE_OI:OKEX:XTZ-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:xtzusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:xtzusd_perp;\n\nvar c = COINALYZE_PFR:BYBIT:XTZUSDT;\n\nvar d = COINALYZE_PFR:OKEX:XTZ-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:xtzusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:xtzusd_perp;\n\nvar c = COINALYZE_OI:BYBIT:XTZUSDT;\n\nvar d = COINALYZE_OI:OKEX:XTZ-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:xtzusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:xtzusd_perp;\n\nvar c = COINALYZE_PFR:BYBIT:XTZUSDT;\n\nvar d = COINALYZE_PFR:OKEX:XTZ-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -939,13 +947,14 @@
         "BITGET:XTZUSDT_UMCBL": false,
         "BTCTURK:XTZUSDT": true,
         "COINBASE:XTZ-USD": false,
+        "GATEIO:XTZ_USDT_SPOT": false,
+        "GATEIO:XTZ_USDT_FUTURES": false,
         "HITBTC:XTZUSD": false,
         "KRAKEN:XTZ/USD": false,
         "KRAKEN:XTZ/USDT": false,
         "KRAKEN:PF_XTZUSD": false,
         "KUCOIN:XTZ-USDT": false,
         "KUCOIN:XTZUSDTM": false,
-        "MEXC:XTZUSDT": false,
         "MEXC:XTZ_USDT": false,
         "OKEX:XTZ-USDT": false,
         "OKEX:XTZ-USDT-SWAP": false,
@@ -953,6 +962,7 @@
         "BTCTURK:XTZTRY": true,
         "HITBTC:XTZUSDC": false,
         "OKEX:XTZ-USDC": false,
+        "UPBIT:BTC-XTZ": true,
         "UPBIT:KRW-XTZ": true
       },
       "barSpacing": 0.39437454420364615,
