@@ -22,16 +22,23 @@
             "BITGET:RNDRUSDT_SPBL",
             "BITGET:RNDRUSDT_UMCBL",
             "BITMEX:RNDRUSD",
+            "BITSTAMP:rndrusd",
             "COINBASE:RNDR-USDT",
             "COINBASE:RNDR-USD",
+            "GATEIO:RNDR_USDT_SPOT",
+            "GATEIO:RNDR_USDT_FUTURES",
             "HITBTC:RNDRUSD",
             "KRAKEN:RNDR/USD",
             "KRAKEN:PF_RNDRUSD",
             "KUCOIN:RNDR-USDT",
             "KUCOIN:RNDRUSDTM",
             "MEXC:RNDR_USDT",
+            "OKEX:RNDR-USDT",
+            "OKEX:RNDR-USDT-SWAP",
+            "BITHUMB:RNDR_KRW",
             "BTCTURK:RNDRTRY",
-            "HITBTC:RNDRUSDC"
+            "HITBTC:RNDRUSDC",
+            "UPBIT:BTC-RNDR"
           ],
           "zoom": 1
         },
@@ -45,9 +52,11 @@
             "BINANCE_FUTURES:rndrusdt",
             "BITGET:RNDRUSDT_UMCBL",
             "BITMEX:RNDRUSD",
+            "GATEIO:RNDR_USDT_FUTURES",
             "KRAKEN:PF_RNDRUSD",
             "KUCOIN:RNDRUSDTM",
-            "MEXC:RNDR_USDT"
+            "MEXC:RNDR_USDT",
+            "OKEX:RNDR-USDT-SWAP"
           ]
         },
         "trades2": {
@@ -60,13 +69,18 @@
             "BYBIT:RNDRUSDT-SPOT",
             "BINANCE:rndrbusd",
             "BITGET:RNDRUSDT_SPBL",
+            "BITSTAMP:rndrusd",
             "COINBASE:RNDR-USDT",
             "COINBASE:RNDR-USD",
+            "GATEIO:RNDR_USDT_SPOT",
             "HITBTC:RNDRUSD",
             "KRAKEN:RNDR/USD",
             "KUCOIN:RNDR-USDT",
+            "OKEX:RNDR-USDT",
+            "BITHUMB:RNDR_KRW",
             "BTCTURK:RNDRTRY",
-            "HITBTC:RNDRUSDC"
+            "HITBTC:RNDRUSDC",
+            "UPBIT:BTC-RNDR"
           ]
         }
       },
@@ -347,7 +361,7 @@
         "fetched": false
       },
       "BITSTAMP": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BYBIT": {
@@ -387,7 +401,7 @@
         "fetched": false
       },
       "OKEX": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "PHEMEX": {
@@ -404,14 +418,22 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITGET": {
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
+        "disabled": false,
+        "fetched": false
+      },
+      "BITHUMB": {
         "disabled": false,
         "fetched": false
       },
@@ -507,7 +529,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:rndrusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:RNDRUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BITMEX:RNDRUSD;line(cum(c.vbuy-c.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar d = BYBIT:RNDRUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KRAKEN:PF_RNDRUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = KUCOIN:RNDRUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:RNDR_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:rndrusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:RNDRUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BITMEX:RNDRUSD;line(cum(c.vbuy-c.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar d = BYBIT:RNDRUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:RNDR_USDT_FUTURES;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = KRAKEN:PF_RNDRUSD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = KUCOIN:RNDRUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:RNDR_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar i = OKEX:RNDR-USDT-SWAP;line(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -551,7 +573,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:rndrusdt;\n\nvar b = BINANCE:rndrbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:RNDRUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BTCTURK:RNDRTRY;line(cum(d.vbuy-d.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BYBIT:RNDRUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:RNDR-USDT;\n\nvar g = COINBASE:RNDR-USD;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = HITBTC:RNDRUSD;\n\nvar i = HITBTC:RNDRUSDC;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = KRAKEN:RNDR/USD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = KUCOIN:RNDR-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:rndrusdt;\n\nvar b = BINANCE:rndrbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:RNDRUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:RNDR_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BITSTAMP:rndrusd;line(cum(e.vbuy-e.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = BTCTURK:RNDRTRY;line(cum(f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = BYBIT:RNDRUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = COINBASE:RNDR-USDT;\n\nvar i = COINBASE:RNDR-USD;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar j = GATEIO:RNDR_USDT_SPOT;line(cum(j.vbuy-j.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar k = HITBTC:RNDRUSD;\n\nvar l = HITBTC:RNDRUSDC;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar m = KRAKEN:RNDR/USD;line(cum(m.vbuy-m.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar n = KUCOIN:RNDR-USDT;line(cum(n.vbuy-n.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar o = OKEX:RNDR-USDT;line(cum(o.vbuy-o.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar p = UPBIT:BTC-RNDR;line(cum(p.vbuy-p.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -651,8 +673,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:rndrusdt;\n\nvar b = COINALYZE_OI:BITMEX:RNDRUSD;\n\nvar c = COINALYZE_OI:BYBIT:RNDRUSDT;line(a.close+b.close+c.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:rndrusdt;\n\nvar b = COINALYZE_PFR:BITMEX:RNDRUSD;\n\nvar c = COINALYZE_PFR:BYBIT:RNDRUSDT;line(a.close+b.close+c.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:rndrusdt;\n\nvar b = COINALYZE_OI:BITMEX:RNDRUSD;\n\nvar c = COINALYZE_OI:BYBIT:RNDRUSDT;\n\nvar d = COINALYZE_OI:OKEX:RNDR-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:rndrusdt;\n\nvar b = COINALYZE_PFR:BITMEX:RNDRUSD;\n\nvar c = COINALYZE_PFR:BYBIT:RNDRUSDT;\n\nvar d = COINALYZE_PFR:OKEX:RNDR-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -919,16 +941,23 @@
         "BITGET:RNDRUSDT_SPBL": false,
         "BITGET:RNDRUSDT_UMCBL": false,
         "BITMEX:RNDRUSD": false,
+        "BITSTAMP:rndrusd": false,
         "COINBASE:RNDR-USDT": false,
         "COINBASE:RNDR-USD": false,
+        "GATEIO:RNDR_USDT_SPOT": false,
+        "GATEIO:RNDR_USDT_FUTURES": false,
         "HITBTC:RNDRUSD": false,
         "KRAKEN:RNDR/USD": false,
         "KRAKEN:PF_RNDRUSD": false,
         "KUCOIN:RNDR-USDT": false,
         "KUCOIN:RNDRUSDTM": false,
         "MEXC:RNDR_USDT": false,
+        "OKEX:RNDR-USDT": false,
+        "OKEX:RNDR-USDT-SWAP": false,
+        "BITHUMB:RNDR_KRW": true,
         "BTCTURK:RNDRTRY": true,
-        "HITBTC:RNDRUSDC": false
+        "HITBTC:RNDRUSDC": false,
+        "UPBIT:BTC-RNDR": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
