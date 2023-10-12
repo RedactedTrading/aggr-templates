@@ -18,15 +18,20 @@
             "BYBIT:GLMRUSDT-SPOT",
             "BYBIT:GLMRUSDT",
             "BINANCE:glmrbusd",
+            "BINANCE_FUTURES:glmrusdt",
             "BITGET:GLMRUSDT_SPBL",
+            "BITGET:GLMRUSDT_UMCBL",
+            "BITMEX:GLMRUSDT",
+            "GATEIO:GLMR_USDT_SPOT",
+            "GATEIO:GLMR_USDT_FUTURES",
             "HITBTC:GLMRUSDT",
             "KRAKEN:GLMR/USD",
             "KRAKEN:PF_GLMRUSD",
             "KUCOIN:GLMR-USDT",
-            "MEXC:GLMRUSDT",
+            "KUCOIN:GLMRUSDTM",
             "MEXC:GLMR_USDT",
             "OKEX:GLMR-USDT",
-            "OKEX:GLMR-USDC"
+            "UPBIT:BTC-GLMR"
           ],
           "zoom": 1
         },
@@ -37,7 +42,12 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:GLMRUSDT",
+            "BINANCE_FUTURES:glmrusdt",
+            "BITGET:GLMRUSDT_UMCBL",
+            "BITMEX:GLMRUSDT",
+            "GATEIO:GLMR_USDT_FUTURES",
             "KRAKEN:PF_GLMRUSD",
+            "KUCOIN:GLMRUSDTM",
             "MEXC:GLMR_USDT"
           ]
         },
@@ -51,12 +61,12 @@
             "BYBIT:GLMRUSDT-SPOT",
             "BINANCE:glmrbusd",
             "BITGET:GLMRUSDT_SPBL",
+            "GATEIO:GLMR_USDT_SPOT",
             "HITBTC:GLMRUSDT",
             "KRAKEN:GLMR/USD",
             "KUCOIN:GLMR-USDT",
-            "MEXC:GLMRUSDT",
             "OKEX:GLMR-USDT",
-            "OKEX:GLMR-USDC"
+            "UPBIT:BTC-GLMR"
           ]
         }
       },
@@ -321,7 +331,7 @@
         "fetched": false
       },
       "BINANCE_FUTURES": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BINANCE_US": {
@@ -333,7 +343,7 @@
         "fetched": false
       },
       "BITMEX": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITSTAMP": {
@@ -394,10 +404,14 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -493,7 +507,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:GLMRUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = KRAKEN:PF_GLMRUSD;line(cum(b.vbuy-b.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar c = MEXC:GLMR_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:glmrusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:GLMRUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BITMEX:GLMRUSDT;line(cum(c.vbuy-c.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar d = BYBIT:GLMRUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:GLMR_USDT_FUTURES;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = KRAKEN:PF_GLMRUSD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = KUCOIN:GLMRUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:GLMR_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -537,7 +551,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:glmrusdt;\n\nvar b = BINANCE:glmrbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:GLMRUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:GLMRUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = HITBTC:GLMRUSDT;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = KRAKEN:GLMR/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = KUCOIN:GLMR-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = MEXC:GLMRUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar i = OKEX:GLMR-USDT;\n\nvar j = OKEX:GLMR-USDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:glmrusdt;\n\nvar b = BINANCE:glmrbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:GLMRUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:GLMRUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:GLMR_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:GLMRUSDT;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = KRAKEN:GLMR/USD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar h = KUCOIN:GLMR-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = OKEX:GLMR-USDT;line(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar j = UPBIT:BTC-GLMR;line(cum(j.vbuy-j.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -637,8 +651,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BYBIT:GLMRUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BYBIT:GLMRUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:glmrusdt;\n\nvar b = COINALYZE_OI:BITMEX:GLMRUSDT;\n\nvar c = COINALYZE_OI:BYBIT:GLMRUSDT;line(a.close+b.close+c.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:glmrusdt;\n\nvar b = COINALYZE_PFR:BITMEX:GLMRUSDT;\n\nvar c = COINALYZE_PFR:BYBIT:GLMRUSDT;line(a.close+b.close+c.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -901,15 +915,20 @@
         "BYBIT:GLMRUSDT-SPOT": false,
         "BYBIT:GLMRUSDT": false,
         "BINANCE:glmrbusd": false,
+        "BINANCE_FUTURES:glmrusdt": false,
         "BITGET:GLMRUSDT_SPBL": false,
+        "BITGET:GLMRUSDT_UMCBL": false,
+        "BITMEX:GLMRUSDT": false,
+        "GATEIO:GLMR_USDT_SPOT": false,
+        "GATEIO:GLMR_USDT_FUTURES": false,
         "HITBTC:GLMRUSDT": false,
         "KRAKEN:GLMR/USD": false,
         "KRAKEN:PF_GLMRUSD": false,
         "KUCOIN:GLMR-USDT": false,
-        "MEXC:GLMRUSDT": false,
+        "KUCOIN:GLMRUSDTM": false,
         "MEXC:GLMR_USDT": false,
         "OKEX:GLMR-USDT": false,
-        "OKEX:GLMR-USDC": false
+        "UPBIT:BTC-GLMR": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
