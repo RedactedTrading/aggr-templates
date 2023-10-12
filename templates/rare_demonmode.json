@@ -18,6 +18,8 @@
             "BINANCE:rarebusd",
             "BITGET:RAREUSDT_SPBL",
             "COINBASE:RARE-USD",
+            "GATEIO:RARE_USDT_SPOT",
+            "GATEIO:RARE_USDT_FUTURES",
             "HITBTC:RAREUSDT",
             "KRAKEN:RARE/USD",
             "MEXC:RAREUSDT"
@@ -29,7 +31,9 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "GATEIO:RARE_USDT_FUTURES"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -41,6 +45,7 @@
             "BINANCE:rarebusd",
             "BITGET:RAREUSDT_SPBL",
             "COINBASE:RARE-USD",
+            "GATEIO:RARE_USDT_SPOT",
             "HITBTC:RAREUSDT",
             "KRAKEN:RARE/USD",
             "MEXC:RAREUSDT"
@@ -388,6 +393,10 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -480,7 +489,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = GATEIO:RARE_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -524,7 +533,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:rareusdt;\n\nvar b = BINANCE:rarebusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:RAREUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:RARE-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = HITBTC:RAREUSDT;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = KRAKEN:RARE/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = MEXC:RAREUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:rareusdt;\n\nvar b = BINANCE:rarebusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:RAREUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:RARE-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = GATEIO:RARE_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:RAREUSDT;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = KRAKEN:RARE/USD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar h = MEXC:RAREUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -888,6 +897,8 @@
         "BINANCE:rarebusd": false,
         "BITGET:RAREUSDT_SPBL": false,
         "COINBASE:RARE-USD": false,
+        "GATEIO:RARE_USDT_SPOT": false,
+        "GATEIO:RARE_USDT_FUTURES": false,
         "HITBTC:RAREUSDT": false,
         "KRAKEN:RARE/USD": false,
         "MEXC:RAREUSDT": false
