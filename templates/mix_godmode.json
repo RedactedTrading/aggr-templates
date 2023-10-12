@@ -15,6 +15,7 @@
           "type": "chart",
           "markets": [
             "BYBIT:MIXUSDT-SPOT",
+            "GATEIO:MIX_USDT_SPOT",
             "BITHUMB:MIX_KRW"
           ],
           "zoom": 1
@@ -33,6 +34,7 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:MIXUSDT-SPOT",
+            "GATEIO:MIX_USDT_SPOT",
             "BITHUMB:MIX_KRW"
           ]
         }
@@ -374,6 +376,10 @@
         "disabled": true,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "BITHUMB": {
         "disabled": false,
         "fetched": false
@@ -510,7 +516,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITHUMB:MIX_KRW;line(cum(a.vbuy-a.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar b = BYBIT:MIXUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITHUMB:MIX_KRW;line(cum(a.vbuy-a.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar b = BYBIT:MIXUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:MIX_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -871,6 +877,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:MIXUSDT-SPOT": false,
+        "GATEIO:MIX_USDT_SPOT": false,
         "BITHUMB:MIX_KRW": true
       },
       "barSpacing": 0.39437454420364615,
