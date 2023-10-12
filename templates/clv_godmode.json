@@ -16,8 +16,9 @@
           "markets": [
             "BINANCE:clvusdt",
             "BINANCE:clvbusd",
-            "COINBASE:CLV-USDT",
             "COINBASE:CLV-USD",
+            "GATEIO:CLV_USDT_SPOT",
+            "HITBTC:CLVUSDT",
             "KUCOIN:CLV-USDT",
             "MEXC:CLVUSDT",
             "MEXC:CLV_USDT",
@@ -42,8 +43,9 @@
           "markets": [
             "BINANCE:clvusdt",
             "BINANCE:clvbusd",
-            "COINBASE:CLV-USDT",
             "COINBASE:CLV-USD",
+            "GATEIO:CLV_USDT_SPOT",
+            "HITBTC:CLVUSDT",
             "KUCOIN:CLV-USDT",
             "MEXC:CLVUSDT",
             "OKEX:CLV-USDT"
@@ -351,7 +353,7 @@
         "fetched": false
       },
       "HITBTC": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "HUOBI": {
@@ -385,6 +387,10 @@
       "_id": "exchanges",
       "UPBIT": {
         "disabled": true,
+        "fetched": false
+      },
+      "GATEIO": {
+        "disabled": false,
         "fetched": false
       },
       "MEXC": {
@@ -479,7 +485,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = MEXC:CLV_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = MEXC:CLV_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -523,7 +529,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:clvusdt;\n\nvar b = BINANCE:clvbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:CLV-USDT;\n\nvar d = COINBASE:CLV-USD;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = KUCOIN:CLV-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:CLVUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:CLV-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:clvusdt;\n\nvar b = BINANCE:clvbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:CLV-USD;line(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = GATEIO:CLV_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:CLVUSDT;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = KUCOIN:CLV-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:CLVUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = OKEX:CLV-USDT;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -885,8 +891,9 @@
       "hiddenMarkets": {
         "BINANCE:clvusdt": false,
         "BINANCE:clvbusd": false,
-        "COINBASE:CLV-USDT": false,
         "COINBASE:CLV-USD": false,
+        "GATEIO:CLV_USDT_SPOT": false,
+        "HITBTC:CLVUSDT": false,
         "KUCOIN:CLV-USDT": false,
         "MEXC:CLVUSDT": false,
         "MEXC:CLV_USDT": false,
@@ -980,7 +987,6 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:CLV-USDT": 0.5,
         "COINBASE:CLV-USD": 0.5
       },
       "showThresholdsAsTable": false,
@@ -1081,7 +1087,6 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:CLV-USDT": 0.5,
         "COINBASE:CLV-USD": 0.5
       },
       "showThresholdsAsTable": false,
