@@ -15,6 +15,7 @@
           "type": "chart",
           "markets": [
             "BYBIT:AZYUSDT-SPOT",
+            "GATEIO:AZY_USDT_SPOT",
             "MEXC:AZYUSDT",
             "OKEX:AZY-USDT"
           ],
@@ -34,6 +35,7 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:AZYUSDT-SPOT",
+            "GATEIO:AZY_USDT_SPOT",
             "MEXC:AZYUSDT",
             "OKEX:AZY-USDT"
           ]
@@ -376,6 +378,10 @@
         "disabled": true,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -512,7 +518,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:AZYUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:AZYUSDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar c = OKEX:AZY-USDT;line(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:AZYUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = GATEIO:AZY_USDT_SPOT;line(cum(b.vbuy-b.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar c = MEXC:AZYUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar d = OKEX:AZY-USDT;line(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -873,6 +879,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:AZYUSDT-SPOT": false,
+        "GATEIO:AZY_USDT_SPOT": false,
         "MEXC:AZYUSDT": false,
         "OKEX:AZY-USDT": false
       },
