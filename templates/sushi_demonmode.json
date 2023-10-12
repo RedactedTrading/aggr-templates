@@ -21,7 +21,10 @@
             "BINANCE_FUTURES:sushiusdt",
             "BITGET:SUSHIUSDT_SPBL",
             "BITGET:SUSHIUSDT_UMCBL",
+            "BITSTAMP:sushiusd",
             "COINBASE:SUSHI-USD",
+            "GATEIO:SUSHI_USDT_SPOT",
+            "GATEIO:SUSHI_USDT_FUTURES",
             "HITBTC:SUSHIUSD",
             "KRAKEN:SUSHI/USD",
             "KRAKEN:PF_SUSHIUSD",
@@ -33,6 +36,7 @@
             "OKEX:SUSHI-USD-SWAP",
             "OKEX:SUSHI-USDT-SWAP",
             "BITHUMB:SUSHI_KRW",
+            "BTCTURK:SUSHITRY",
             "HITBTC:SUSHIUSDC",
             "OKEX:SUSHI-USDC",
             "SUSHISWAPETHEREUM:SUSHI/WETH"
@@ -48,6 +52,7 @@
             "BYBIT:SUSHIUSDT",
             "BINANCE_FUTURES:sushiusdt",
             "BITGET:SUSHIUSDT_UMCBL",
+            "GATEIO:SUSHI_USDT_FUTURES",
             "KRAKEN:PF_SUSHIUSD",
             "KUCOIN:SUSHIUSDTM",
             "MEXC:SUSHI_USDT",
@@ -65,13 +70,16 @@
             "BYBIT:SUSHIUSDT-SPOT",
             "BINANCE:sushibusd",
             "BITGET:SUSHIUSDT_SPBL",
+            "BITSTAMP:sushiusd",
             "COINBASE:SUSHI-USD",
+            "GATEIO:SUSHI_USDT_SPOT",
             "HITBTC:SUSHIUSD",
             "KRAKEN:SUSHI/USD",
             "KUCOIN:SUSHI-USDT",
             "MEXC:SUSHIUSDT",
             "OKEX:SUSHI-USDT",
             "BITHUMB:SUSHI_KRW",
+            "BTCTURK:SUSHITRY",
             "HITBTC:SUSHIUSDC",
             "OKEX:SUSHI-USDC",
             "SUSHISWAPETHEREUM:SUSHI/WETH"
@@ -355,7 +363,7 @@
         "fetched": false
       },
       "BITSTAMP": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BYBIT": {
@@ -419,11 +427,19 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
       },
       "BITHUMB": {
+        "disabled": false,
+        "fetched": false
+      },
+      "BTCTURK": {
         "disabled": false,
         "fetched": false
       },
@@ -519,7 +535,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:sushiusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:SUSHIUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:SUSHIUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_SUSHIUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:SUSHIUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:SUSHI_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:SUSHI-USD-SWAP;\n\nvar h = OKEX:SUSHI-USDT-SWAP;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:sushiusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:SUSHIUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:SUSHIUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:SUSHI_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KRAKEN:PF_SUSHIUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:SUSHIUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:SUSHI_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = OKEX:SUSHI-USD-SWAP;\n\nvar i = OKEX:SUSHI-USDT-SWAP;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -563,7 +579,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:sushiusdt;\n\nvar b = BINANCE:sushibusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:SUSHIUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:SUSHI_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = BYBIT:SUSHIUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:SUSHI-USD;line(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = HITBTC:SUSHIUSD;\n\nvar h = HITBTC:SUSHIUSDC;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar i = KRAKEN:SUSHI/USD;line(cum(i.vbuy-i.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar j = KUCOIN:SUSHI-USDT;line(cum(j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar k = MEXC:SUSHIUSDT;line(cum(k.vbuy-k.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar l = OKEX:SUSHI-USDT;\n\nvar m = OKEX:SUSHI-USDC;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar n = SUSHISWAPETHEREUM:SUSHI/WETH;line(cum(n.vbuy-n.vsell), title=\"SUSHIETH\", color=\"rgb(205, 246, 247)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:sushiusdt;\n\nvar b = BINANCE:sushibusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:SUSHIUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:SUSHI_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BITSTAMP:sushiusd;line(cum(e.vbuy-e.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = BTCTURK:SUSHITRY;line(cum(f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = BYBIT:SUSHIUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = COINBASE:SUSHI-USD;line(cum(h.vbuy-h.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = GATEIO:SUSHI_USDT_SPOT;line(cum(i.vbuy-i.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar j = HITBTC:SUSHIUSD;\n\nvar k = HITBTC:SUSHIUSDC;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar l = KRAKEN:SUSHI/USD;line(cum(l.vbuy-l.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar m = KUCOIN:SUSHI-USDT;line(cum(m.vbuy-m.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar n = MEXC:SUSHIUSDT;line(cum(n.vbuy-n.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar o = OKEX:SUSHI-USDT;\n\nvar p = OKEX:SUSHI-USDC;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar q = SUSHISWAPETHEREUM:SUSHI/WETH;line(cum(q.vbuy-q.vsell), title=\"SUSHIETH\", color=\"rgb(197, 246, 101)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -663,8 +679,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:sushiusdt;\n\nvar b = COINALYZE_OI:BYBIT:SUSHIUSDT;\n\nvar c = COINALYZE_OI:OKEX:SUSHI-USD-SWAP;\n\nvar d = COINALYZE_OI:OKEX:SUSHI-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:sushiusdt;\n\nvar b = COINALYZE_PFR:BYBIT:SUSHIUSDT;\n\nvar c = COINALYZE_PFR:OKEX:SUSHI-USD-SWAP;\n\nvar d = COINALYZE_PFR:OKEX:SUSHI-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:sushiusdt;\n\nvar b = COINALYZE_OI:BYBIT:SUSHIUSDT;\n\nvar c = COINALYZE_OI:OKEX:SUSHI-USD-SWAP;\n\nvar d = COINALYZE_OI:OKEX:SUSHI-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:sushiusdt;\n\nvar b = COINALYZE_PFR:BYBIT:SUSHIUSDT;\n\nvar c = COINALYZE_PFR:OKEX:SUSHI-USD-SWAP;\n\nvar d = COINALYZE_PFR:OKEX:SUSHI-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -930,7 +946,10 @@
         "BINANCE_FUTURES:sushiusdt": false,
         "BITGET:SUSHIUSDT_SPBL": false,
         "BITGET:SUSHIUSDT_UMCBL": false,
+        "BITSTAMP:sushiusd": false,
         "COINBASE:SUSHI-USD": false,
+        "GATEIO:SUSHI_USDT_SPOT": false,
+        "GATEIO:SUSHI_USDT_FUTURES": false,
         "HITBTC:SUSHIUSD": false,
         "KRAKEN:SUSHI/USD": false,
         "KRAKEN:PF_SUSHIUSD": false,
@@ -942,6 +961,7 @@
         "OKEX:SUSHI-USD-SWAP": false,
         "OKEX:SUSHI-USDT-SWAP": false,
         "BITHUMB:SUSHI_KRW": true,
+        "BTCTURK:SUSHITRY": true,
         "HITBTC:SUSHIUSDC": false,
         "OKEX:SUSHI-USDC": false,
         "SUSHISWAPETHEREUM:SUSHI/WETH": true
