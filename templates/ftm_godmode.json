@@ -25,7 +25,10 @@
             "BITFINEX:FTMUSD",
             "BITGET:FTMUSDT_SPBL",
             "BITGET:FTMUSDT_UMCBL",
+            "BITSTAMP:ftmusd",
             "BTCTURK:FTMUSDT",
+            "GATEIO:FTM_USDT_SPOT",
+            "GATEIO:FTM_USDT_FUTURES",
             "HITBTC:FTMUSD",
             "KRAKEN:FTM/USD",
             "KRAKEN:PF_FTMUSD",
@@ -34,7 +37,7 @@
             "MEXC:FTM_USDT",
             "OKEX:FTM-USDT",
             "OKEX:FTM-USDT-SWAP",
-            "BINANCE_FUTURES:ftmbusd",
+            "BITHUMB:FTM_KRW",
             "BTCTURK:FTMTRY",
             "HITBTC:FTMUSDC",
             "KUCOIN:FTM-USDC",
@@ -53,11 +56,11 @@
             "BINANCE_FUTURES:ftmusdt",
             "BINANCE_FUTURES:ftmusd_perp",
             "BITGET:FTMUSDT_UMCBL",
+            "GATEIO:FTM_USDT_FUTURES",
             "KRAKEN:PF_FTMUSD",
             "KUCOIN:FTMUSDTM",
             "MEXC:FTM_USDT",
-            "OKEX:FTM-USDT-SWAP",
-            "BINANCE_FUTURES:ftmbusd"
+            "OKEX:FTM-USDT-SWAP"
           ]
         },
         "trades2": {
@@ -73,11 +76,14 @@
             "BINANCE:ftmbusd",
             "BITFINEX:FTMUSD",
             "BITGET:FTMUSDT_SPBL",
+            "BITSTAMP:ftmusd",
             "BTCTURK:FTMUSDT",
+            "GATEIO:FTM_USDT_SPOT",
             "HITBTC:FTMUSD",
             "KRAKEN:FTM/USD",
             "KUCOIN:FTM-USDT",
             "OKEX:FTM-USDT",
+            "BITHUMB:FTM_KRW",
             "BTCTURK:FTMTRY",
             "HITBTC:FTMUSDC",
             "KUCOIN:FTM-USDC",
@@ -363,7 +369,7 @@
         "fetched": false
       },
       "BITSTAMP": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BYBIT": {
@@ -431,7 +437,15 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
+        "disabled": false,
+        "fetched": false
+      },
+      "BITHUMB": {
         "disabled": false,
         "fetched": false
       }
@@ -523,7 +537,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:ftmusdt;\n\nvar b = BINANCE_FUTURES:ftmusd_perp;\n\nvar c = BINANCE_FUTURES:ftmbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar d = BITGET:FTMUSDT_UMCBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BYBIT:FTMUSDT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = KRAKEN:PF_FTMUSD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = KUCOIN:FTMUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = MEXC:FTM_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar i = OKEX:FTM-USDT-SWAP;line(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:ftmusdt;\n\nvar b = BINANCE_FUTURES:ftmusd_perp;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:FTMUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:FTMUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:FTM_USDT_FUTURES;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = KRAKEN:PF_FTMUSD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = KUCOIN:FTMUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:FTM_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar i = OKEX:FTM-USDT-SWAP;line(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -567,7 +581,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ftmusdt;\n\nvar b = BINANCE:ftmtusd;\n\nvar c = BINANCE:ftmusdc;\n\nvar d = BINANCE:ftmbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:FTMUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:FTMUSDT_SPBL;line(cum(f.vbuy-f.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar g = BTCTURK:FTMUSDT;\n\nvar h = BTCTURK:FTMTRY;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar i = BYBIT:FTMUSDT-SPOT;line(cum(i.vbuy-i.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar j = HITBTC:FTMUSD;\n\nvar k = HITBTC:FTMUSDC;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar l = KRAKEN:FTM/USD;line(cum(l.vbuy-l.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar m = KUCOIN:FTM-USDT;\n\nvar n = KUCOIN:FTM-USDC;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar o = MEXC:FTMUSDC;line(cum(o.vbuy-o.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar p = OKEX:FTM-USDT;\n\nvar q = OKEX:FTM-USDC;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ftmusdt;\n\nvar b = BINANCE:ftmtusd;\n\nvar c = BINANCE:ftmusdc;\n\nvar d = BINANCE:ftmbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:FTMUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:FTMUSDT_SPBL;line(cum(f.vbuy-f.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar g = BITHUMB:FTM_KRW;line(cum(g.vbuy-g.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar h = BITSTAMP:ftmusd;line(cum(h.vbuy-h.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar i = BTCTURK:FTMUSDT;\n\nvar j = BTCTURK:FTMTRY;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar k = BYBIT:FTMUSDT-SPOT;line(cum(k.vbuy-k.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar l = GATEIO:FTM_USDT_SPOT;line(cum(l.vbuy-l.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar m = HITBTC:FTMUSD;\n\nvar n = HITBTC:FTMUSDC;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar o = KRAKEN:FTM/USD;line(cum(o.vbuy-o.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar p = KUCOIN:FTM-USDT;\n\nvar q = KUCOIN:FTM-USDC;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar r = MEXC:FTMUSDC;line(cum(r.vbuy-r.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar s = OKEX:FTM-USDT;\n\nvar t = OKEX:FTM-USDC;line(cum(s.vbuy-s.vsell+t.vbuy-t.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -667,8 +681,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:ftmusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:ftmusd_perp;\n\nvar c = COINALYZE_OI:BYBIT:FTMUSDT;\n\nvar d = COINALYZE_OI:OKEX:FTM-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:ftmusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:ftmusd_perp;\n\nvar c = COINALYZE_PFR:BYBIT:FTMUSDT;\n\nvar d = COINALYZE_PFR:OKEX:FTM-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:ftmusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:ftmusd_perp;\n\nvar c = COINALYZE_OI:BYBIT:FTMUSDT;\n\nvar d = COINALYZE_OI:OKEX:FTM-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:ftmusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:ftmusd_perp;\n\nvar c = COINALYZE_PFR:BYBIT:FTMUSDT;\n\nvar d = COINALYZE_PFR:OKEX:FTM-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -938,7 +952,10 @@
         "BITFINEX:FTMUSD": false,
         "BITGET:FTMUSDT_SPBL": false,
         "BITGET:FTMUSDT_UMCBL": false,
+        "BITSTAMP:ftmusd": false,
         "BTCTURK:FTMUSDT": true,
+        "GATEIO:FTM_USDT_SPOT": false,
+        "GATEIO:FTM_USDT_FUTURES": false,
         "HITBTC:FTMUSD": false,
         "KRAKEN:FTM/USD": false,
         "KRAKEN:PF_FTMUSD": false,
@@ -947,7 +964,7 @@
         "MEXC:FTM_USDT": false,
         "OKEX:FTM-USDT": false,
         "OKEX:FTM-USDT-SWAP": false,
-        "BINANCE_FUTURES:ftmbusd": false,
+        "BITHUMB:FTM_KRW": true,
         "BTCTURK:FTMTRY": true,
         "HITBTC:FTMUSDC": false,
         "KUCOIN:FTM-USDC": false,
