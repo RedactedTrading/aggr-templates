@@ -16,6 +16,7 @@
           "markets": [
             "BINANCE:irisusdt",
             "BINANCE:irisbusd",
+            "GATEIO:IRIS_USDT_SPOT",
             "MEXC:IRISUSDT"
           ],
           "zoom": 1
@@ -35,6 +36,7 @@
           "markets": [
             "BINANCE:irisusdt",
             "BINANCE:irisbusd",
+            "GATEIO:IRIS_USDT_SPOT",
             "MEXC:IRISUSDT"
           ]
         }
@@ -376,6 +378,10 @@
         "disabled": true,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -512,7 +518,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:irisusdt;\n\nvar b = BINANCE:irisbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = MEXC:IRISUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:irisusdt;\n\nvar b = BINANCE:irisbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = GATEIO:IRIS_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = MEXC:IRISUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -874,6 +880,7 @@
       "hiddenMarkets": {
         "BINANCE:irisusdt": false,
         "BINANCE:irisbusd": false,
+        "GATEIO:IRIS_USDT_SPOT": false,
         "MEXC:IRISUSDT": false
       },
       "barSpacing": 0.39437454420364615,
