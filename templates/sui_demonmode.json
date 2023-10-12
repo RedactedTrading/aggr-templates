@@ -23,9 +23,12 @@
             "BITFINEX:SUIUSD",
             "BITGET:SUIUSDT_SPBL",
             "BITGET:SUIUSDT_UMCBL",
-            "BITMEX:SUIUSD",
             "BITMEX:SUIUSDT",
+            "BITMEX:SUIUSD",
+            "BITSTAMP:suiusd",
             "COINBASE:SUI-USD",
+            "GATEIO:SUI_USDT_SPOT",
+            "GATEIO:SUI_USDT_FUTURES",
             "HITBTC:SUIUSDT",
             "KRAKEN:SUI/USD",
             "KRAKEN:PF_SUIUSD",
@@ -36,7 +39,8 @@
             "OKEX:SUI-USDT",
             "OKEX:SUI-USDT-SWAP",
             "BITHUMB:SUI_KRW",
-            "UPBIT:KRW-SUI"
+            "UPBIT:KRW-SUI",
+            "UPBIT:BTC-SUI"
           ],
           "zoom": 1
         },
@@ -49,8 +53,9 @@
             "BYBIT:SUIUSDT",
             "BINANCE_FUTURES:suiusdt",
             "BITGET:SUIUSDT_UMCBL",
-            "BITMEX:SUIUSD",
             "BITMEX:SUIUSDT",
+            "BITMEX:SUIUSD",
+            "GATEIO:SUI_USDT_FUTURES",
             "KRAKEN:PF_SUIUSD",
             "KUCOIN:SUIUSDTM",
             "MEXC:SUI_USDT",
@@ -69,14 +74,17 @@
             "BYBIT:SUIUSDC-SPOT",
             "BITFINEX:SUIUSD",
             "BITGET:SUIUSDT_SPBL",
+            "BITSTAMP:suiusd",
             "COINBASE:SUI-USD",
+            "GATEIO:SUI_USDT_SPOT",
             "HITBTC:SUIUSDT",
             "KRAKEN:SUI/USD",
             "KUCOIN:SUI-USDT",
             "MEXC:SUIUSDT",
             "OKEX:SUI-USDT",
             "BITHUMB:SUI_KRW",
-            "UPBIT:KRW-SUI"
+            "UPBIT:KRW-SUI",
+            "UPBIT:BTC-SUI"
           ]
         }
       },
@@ -357,7 +365,7 @@
         "fetched": false
       },
       "BITSTAMP": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BYBIT": {
@@ -418,6 +426,10 @@
         "fetched": false
       },
       "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -517,7 +529,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:suiusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:SUIUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BITMEX:SUIUSD;\n\nvar d = BITMEX:SUIUSDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar e = BYBIT:SUIUSDT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = KRAKEN:PF_SUIUSD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = KUCOIN:SUIUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = MEXC:SUI_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar i = OKEX:SUI-USDT-SWAP;line(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:suiusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:SUIUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BITMEX:SUIUSDT;\n\nvar d = BITMEX:SUIUSD;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar e = BYBIT:SUIUSDT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = GATEIO:SUI_USDT_FUTURES;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = KRAKEN:PF_SUIUSD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar h = KUCOIN:SUIUSDTM;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = MEXC:SUI_USDT;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = OKEX:SUI-USDT-SWAP;line(cum(j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -561,7 +573,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:suiusdt;\n\nvar b = BINANCE:suitusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:SUIUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:SUIUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:SUI_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = BYBIT:SUIUSDT-SPOT;\n\nvar g = BYBIT:SUIUSDC-SPOT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = COINBASE:SUI-USD;line(cum(h.vbuy-h.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar i = HITBTC:SUIUSDT;line(cum(i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = KRAKEN:SUI/USD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = KUCOIN:SUI-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar l = MEXC:SUIUSDT;line(cum(l.vbuy-l.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar m = OKEX:SUI-USDT;line(cum(m.vbuy-m.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar n = UPBIT:KRW-SUI;line(cum(n.vbuy-n.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:suiusdt;\n\nvar b = BINANCE:suitusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:SUIUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:SUIUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:SUI_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BITSTAMP:suiusd;line(cum(f.vbuy-f.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = BYBIT:SUIUSDT-SPOT;\n\nvar h = BYBIT:SUIUSDC-SPOT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar i = COINBASE:SUI-USD;line(cum(i.vbuy-i.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar j = GATEIO:SUI_USDT_SPOT;line(cum(j.vbuy-j.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar k = HITBTC:SUIUSDT;line(cum(k.vbuy-k.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar l = KRAKEN:SUI/USD;line(cum(l.vbuy-l.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar m = KUCOIN:SUI-USDT;line(cum(m.vbuy-m.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar n = MEXC:SUIUSDT;line(cum(n.vbuy-n.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar o = OKEX:SUI-USDT;line(cum(o.vbuy-o.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar p = UPBIT:KRW-SUI;\n\nvar q = UPBIT:BTC-SUI;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -661,8 +673,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:suiusdt;\n\nvar b = COINALYZE_OI:BITMEX:SUIUSD;\n\nvar c = COINALYZE_OI:BITMEX:SUIUSDT;\n\nvar d = COINALYZE_OI:BYBIT:SUIUSDT;\n\nvar e = COINALYZE_OI:OKEX:SUI-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:suiusdt;\n\nvar b = COINALYZE_PFR:BITMEX:SUIUSD;\n\nvar c = COINALYZE_PFR:BITMEX:SUIUSDT;\n\nvar d = COINALYZE_PFR:BYBIT:SUIUSDT;\n\nvar e = COINALYZE_PFR:OKEX:SUI-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:suiusdt;\n\nvar b = COINALYZE_OI:BITMEX:SUIUSDT;\n\nvar c = COINALYZE_OI:BITMEX:SUIUSD;\n\nvar d = COINALYZE_OI:BYBIT:SUIUSDT;\n\nvar e = COINALYZE_OI:OKEX:SUI-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:suiusdt;\n\nvar b = COINALYZE_PFR:BITMEX:SUIUSDT;\n\nvar c = COINALYZE_PFR:BITMEX:SUIUSD;\n\nvar d = COINALYZE_PFR:BYBIT:SUIUSDT;\n\nvar e = COINALYZE_PFR:OKEX:SUI-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -930,9 +942,12 @@
         "BITFINEX:SUIUSD": false,
         "BITGET:SUIUSDT_SPBL": false,
         "BITGET:SUIUSDT_UMCBL": false,
-        "BITMEX:SUIUSD": false,
         "BITMEX:SUIUSDT": false,
+        "BITMEX:SUIUSD": false,
+        "BITSTAMP:suiusd": false,
         "COINBASE:SUI-USD": false,
+        "GATEIO:SUI_USDT_SPOT": false,
+        "GATEIO:SUI_USDT_FUTURES": false,
         "HITBTC:SUIUSDT": false,
         "KRAKEN:SUI/USD": false,
         "KRAKEN:PF_SUIUSD": false,
@@ -943,7 +958,8 @@
         "OKEX:SUI-USDT": false,
         "OKEX:SUI-USDT-SWAP": false,
         "BITHUMB:SUI_KRW": true,
-        "UPBIT:KRW-SUI": true
+        "UPBIT:KRW-SUI": true,
+        "UPBIT:BTC-SUI": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
