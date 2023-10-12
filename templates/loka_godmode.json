@@ -18,9 +18,10 @@
             "BINANCE:lokabusd",
             "BITGET:LOKAUSDT_SPBL",
             "COINBASE:LOKA-USD",
+            "GATEIO:LOKA_USDT_SPOT",
+            "GATEIO:LOKA_USDT_FUTURES",
             "HITBTC:LOKAUSDT",
-            "KUCOIN:LOKA-USDT",
-            "MEXC:LOKA_USDT"
+            "KUCOIN:LOKA-USDT"
           ],
           "zoom": 1
         },
@@ -30,7 +31,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "MEXC:LOKA_USDT"
+            "GATEIO:LOKA_USDT_FUTURES"
           ]
         },
         "trades2": {
@@ -43,6 +44,7 @@
             "BINANCE:lokabusd",
             "BITGET:LOKAUSDT_SPBL",
             "COINBASE:LOKA-USD",
+            "GATEIO:LOKA_USDT_SPOT",
             "HITBTC:LOKAUSDT",
             "KUCOIN:LOKA-USDT"
           ]
@@ -389,7 +391,7 @@
         "disabled": false,
         "fetched": false
       },
-      "MEXC": {
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       }
@@ -481,7 +483,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = MEXC:LOKA_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = GATEIO:LOKA_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -525,7 +527,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:lokausdt;\n\nvar b = BINANCE:lokabusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:LOKAUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:LOKA-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = HITBTC:LOKAUSDT;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = KUCOIN:LOKA-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:lokausdt;\n\nvar b = BINANCE:lokabusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:LOKAUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:LOKA-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = GATEIO:LOKA_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:LOKAUSDT;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = KUCOIN:LOKA-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -889,9 +891,10 @@
         "BINANCE:lokabusd": false,
         "BITGET:LOKAUSDT_SPBL": false,
         "COINBASE:LOKA-USD": false,
+        "GATEIO:LOKA_USDT_SPOT": false,
+        "GATEIO:LOKA_USDT_FUTURES": false,
         "HITBTC:LOKAUSDT": false,
-        "KUCOIN:LOKA-USDT": false,
-        "MEXC:LOKA_USDT": false
+        "KUCOIN:LOKA-USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
