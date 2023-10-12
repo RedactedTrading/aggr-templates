@@ -15,14 +15,18 @@
           "type": "chart",
           "markets": [
             "BINANCE:leverusdt",
+            "BYBIT:LEVERUSDT-SPOT",
             "BYBIT:LEVERUSDT",
             "BINANCE:leverbusd",
             "BINANCE_FUTURES:leverusdt",
             "BITGET:LEVERUSDT_SPBL",
             "BITGET:LEVERUSDT_UMCBL",
+            "GATEIO:LEVER_USDT_SPOT",
+            "HITBTC:LEVERUSDT",
             "KUCOIN:LEVERUSDTM",
             "MEXC:LEVERUSDT",
-            "MEXC:LEVER_USDT"
+            "MEXC:LEVER_USDT",
+            "BITHUMB:LEVER_KRW"
           ],
           "zoom": 1
         },
@@ -46,9 +50,13 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:leverusdt",
+            "BYBIT:LEVERUSDT-SPOT",
             "BINANCE:leverbusd",
             "BITGET:LEVERUSDT_SPBL",
-            "MEXC:LEVERUSDT"
+            "GATEIO:LEVER_USDT_SPOT",
+            "HITBTC:LEVERUSDT",
+            "MEXC:LEVERUSDT",
+            "BITHUMB:LEVER_KRW"
           ]
         }
       },
@@ -353,7 +361,7 @@
         "fetched": false
       },
       "HITBTC": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "HUOBI": {
@@ -393,7 +401,15 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
+        "disabled": false,
+        "fetched": false
+      },
+      "BITHUMB": {
         "disabled": false,
         "fetched": false
       }
@@ -485,7 +501,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:leverusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:LEVERUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:LEVERUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KUCOIN:LEVERUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:LEVER_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:leverusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:LEVERUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:LEVERUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KUCOIN:LEVERUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:LEVER_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -529,7 +545,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:leverusdt;\n\nvar b = BINANCE:leverbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:LEVERUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = MEXC:LEVERUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:leverusdt;\n\nvar b = BINANCE:leverbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:LEVERUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:LEVER_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BYBIT:LEVERUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = GATEIO:LEVER_USDT_SPOT;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = HITBTC:LEVERUSDT;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = MEXC:LEVERUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -890,14 +906,18 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:leverusdt": false,
+        "BYBIT:LEVERUSDT-SPOT": false,
         "BYBIT:LEVERUSDT": false,
         "BINANCE:leverbusd": false,
         "BINANCE_FUTURES:leverusdt": false,
         "BITGET:LEVERUSDT_SPBL": false,
         "BITGET:LEVERUSDT_UMCBL": false,
+        "GATEIO:LEVER_USDT_SPOT": false,
+        "HITBTC:LEVERUSDT": false,
         "KUCOIN:LEVERUSDTM": false,
         "MEXC:LEVERUSDT": false,
-        "MEXC:LEVER_USDT": false
+        "MEXC:LEVER_USDT": false,
+        "BITHUMB:LEVER_KRW": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
