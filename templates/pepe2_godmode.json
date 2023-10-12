@@ -16,6 +16,8 @@
           "markets": [
             "BYBIT:PEPE2USDT-SPOT",
             "BITGET:PEPE2USDT_SPBL",
+            "GATEIO:PEPE2_USDT_SPOT",
+            "GATEIO:PEPE2_USDT_FUTURES",
             "KUCOIN:PEPE2-USDT",
             "KUCOIN:1000PEPE2USDTM",
             "MEXC:PEPE2USDT",
@@ -29,6 +31,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "GATEIO:PEPE2_USDT_FUTURES",
             "KUCOIN:1000PEPE2USDTM",
             "MEXC:1000PEPE2_USDT"
           ]
@@ -41,6 +44,7 @@
           "markets": [
             "BYBIT:PEPE2USDT-SPOT",
             "BITGET:PEPE2USDT_SPBL",
+            "GATEIO:PEPE2_USDT_SPOT",
             "KUCOIN:PEPE2-USDT",
             "MEXC:PEPE2USDT"
           ]
@@ -387,6 +391,10 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -479,7 +487,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = KUCOIN:1000PEPE2USDTM;line(cum(a.vbuy-a.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar b = MEXC:1000PEPE2_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = GATEIO:PEPE2_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar b = KUCOIN:1000PEPE2USDTM;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar c = MEXC:1000PEPE2_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -523,7 +531,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:PEPE2USDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:PEPE2USDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KUCOIN:PEPE2-USDT;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:PEPE2USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:PEPE2USDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:PEPE2USDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:PEPE2_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KUCOIN:PEPE2-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:PEPE2USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -885,6 +893,8 @@
       "hiddenMarkets": {
         "BYBIT:PEPE2USDT-SPOT": false,
         "BITGET:PEPE2USDT_SPBL": false,
+        "GATEIO:PEPE2_USDT_SPOT": false,
+        "GATEIO:PEPE2_USDT_FUTURES": false,
         "KUCOIN:PEPE2-USDT": false,
         "KUCOIN:1000PEPE2USDTM": false,
         "MEXC:PEPE2USDT": false,
