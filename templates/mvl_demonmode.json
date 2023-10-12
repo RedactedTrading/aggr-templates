@@ -17,6 +17,7 @@
             "BYBIT:MVLUSDT-SPOT",
             "HITBTC:MVLUSDT",
             "MEXC:MVLUSDT",
+            "UPBIT:BTC-MVL",
             "UPBIT:KRW-MVL"
           ],
           "zoom": 1
@@ -37,6 +38,7 @@
             "BYBIT:MVLUSDT-SPOT",
             "HITBTC:MVLUSDT",
             "MEXC:MVLUSDT",
+            "UPBIT:BTC-MVL",
             "UPBIT:KRW-MVL"
           ]
         }
@@ -514,7 +516,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:MVLUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = HITBTC:MVLUSDT;line(cum(b.vbuy-b.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar c = MEXC:MVLUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar d = UPBIT:KRW-MVL;line(cum(d.vbuy-d.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:MVLUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = HITBTC:MVLUSDT;line(cum(b.vbuy-b.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar c = MEXC:MVLUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar d = UPBIT:BTC-MVL;\n\nvar e = UPBIT:KRW-MVL;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -877,6 +879,7 @@
         "BYBIT:MVLUSDT-SPOT": false,
         "HITBTC:MVLUSDT": false,
         "MEXC:MVLUSDT": false,
+        "UPBIT:BTC-MVL": true,
         "UPBIT:KRW-MVL": true
       },
       "barSpacing": 0.39437454420364615,
