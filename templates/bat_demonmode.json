@@ -23,7 +23,10 @@
             "BINANCE_FUTURES:batusdt",
             "BITGET:BATUSDT_SPBL",
             "BITGET:BATUSDT_UMCBL",
+            "BITSTAMP:batusd",
             "COINBASE:BAT-USD",
+            "GATEIO:BAT_USDT_SPOT",
+            "GATEIO:BAT_USDT_FUTURES",
             "KRAKEN:BAT/USD",
             "KUCOIN:BAT-USDT",
             "KUCOIN:BATUSDTM",
@@ -37,7 +40,7 @@
             "HITBTC:BATUSD",
             "HITBTC:BATUSDC",
             "KRAKEN:PF_BATUSD",
-            "OKEX:BAT-USDC",
+            "UPBIT:BTC-BAT",
             "UPBIT:KRW-BAT"
           ],
           "zoom": 1
@@ -51,6 +54,7 @@
             "BYBIT:BATUSDT",
             "BINANCE_FUTURES:batusdt",
             "BITGET:BATUSDT_UMCBL",
+            "GATEIO:BAT_USDT_FUTURES",
             "KUCOIN:BATUSDTM",
             "MEXC:BAT_USDT",
             "OKEX:BAT-USDT-SWAP",
@@ -69,7 +73,9 @@
             "BINANCE:battusd",
             "BINANCE:batbusd",
             "BITGET:BATUSDT_SPBL",
+            "BITSTAMP:batusd",
             "COINBASE:BAT-USD",
+            "GATEIO:BAT_USDT_SPOT",
             "KRAKEN:BAT/USD",
             "KUCOIN:BAT-USDT",
             "MEXC:BATUSDT",
@@ -79,7 +85,7 @@
             "BTCTURK:BATTRY",
             "HITBTC:BATUSD",
             "HITBTC:BATUSDC",
-            "OKEX:BAT-USDC",
+            "UPBIT:BTC-BAT",
             "UPBIT:KRW-BAT"
           ]
         }
@@ -361,7 +367,7 @@
         "fetched": false
       },
       "BITSTAMP": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BYBIT": {
@@ -422,6 +428,10 @@
         "fetched": false
       },
       "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -525,7 +535,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:batusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:BATUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:BATUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_BATUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:BATUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:BAT_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:BAT-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:batusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:BATUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:BATUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:BAT_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KRAKEN:PF_BATUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:BATUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:BAT_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = OKEX:BAT-USDT-SWAP;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -569,7 +579,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:batusdt;\n\nvar b = BINANCE:batusdc;\n\nvar c = BINANCE:battusd;\n\nvar d = BINANCE:batbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:BATUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:BATUSDT_SPBL;line(cum(f.vbuy-f.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar g = BITHUMB:BAT_KRW;line(cum(g.vbuy-g.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = BTCTURK:BATTRY;line(cum(h.vbuy-h.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar i = BYBIT:BATUSDT-SPOT;line(cum(i.vbuy-i.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar j = COINBASE:BAT-USD;line(cum(j.vbuy-j.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar k = HITBTC:BATUSD;\n\nvar l = HITBTC:BATUSDC;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar m = KRAKEN:BAT/USD;line(cum(m.vbuy-m.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar n = KUCOIN:BAT-USDT;line(cum(n.vbuy-n.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar o = MEXC:BATUSDT;line(cum(o.vbuy-o.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar p = OKEX:BAT-USDT;\n\nvar q = OKEX:BAT-USDC;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar r = UPBIT:KRW-BAT;line(cum(r.vbuy-r.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:batusdt;\n\nvar b = BINANCE:batusdc;\n\nvar c = BINANCE:battusd;\n\nvar d = BINANCE:batbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:BATUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:BATUSDT_SPBL;line(cum(f.vbuy-f.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar g = BITHUMB:BAT_KRW;line(cum(g.vbuy-g.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar h = BITSTAMP:batusd;line(cum(h.vbuy-h.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar i = BTCTURK:BATTRY;line(cum(i.vbuy-i.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar j = BYBIT:BATUSDT-SPOT;line(cum(j.vbuy-j.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar k = COINBASE:BAT-USD;line(cum(k.vbuy-k.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar l = GATEIO:BAT_USDT_SPOT;line(cum(l.vbuy-l.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar m = HITBTC:BATUSD;\n\nvar n = HITBTC:BATUSDC;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar o = KRAKEN:BAT/USD;line(cum(o.vbuy-o.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar p = KUCOIN:BAT-USDT;line(cum(p.vbuy-p.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar q = MEXC:BATUSDT;line(cum(q.vbuy-q.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar r = OKEX:BAT-USDT;line(cum(r.vbuy-r.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar s = UPBIT:BTC-BAT;\n\nvar t = UPBIT:KRW-BAT;line(cum(s.vbuy-s.vsell+t.vbuy-t.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -669,8 +679,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:batusdt;\n\nvar b = COINALYZE_OI:BYBIT:BATUSDT;\n\nvar c = COINALYZE_OI:OKEX:BAT-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:batusdt;\n\nvar b = COINALYZE_PFR:BYBIT:BATUSDT;\n\nvar c = COINALYZE_PFR:OKEX:BAT-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:batusdt;\n\nvar b = COINALYZE_OI:BYBIT:BATUSDT;\n\nvar c = COINALYZE_OI:OKEX:BAT-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:batusdt;\n\nvar b = COINALYZE_PFR:BYBIT:BATUSDT;\n\nvar c = COINALYZE_PFR:OKEX:BAT-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -938,7 +948,10 @@
         "BINANCE_FUTURES:batusdt": false,
         "BITGET:BATUSDT_SPBL": false,
         "BITGET:BATUSDT_UMCBL": false,
+        "BITSTAMP:batusd": false,
         "COINBASE:BAT-USD": false,
+        "GATEIO:BAT_USDT_SPOT": false,
+        "GATEIO:BAT_USDT_FUTURES": false,
         "KRAKEN:BAT/USD": false,
         "KUCOIN:BAT-USDT": false,
         "KUCOIN:BATUSDTM": false,
@@ -952,7 +965,7 @@
         "HITBTC:BATUSD": true,
         "HITBTC:BATUSDC": false,
         "KRAKEN:PF_BATUSD": true,
-        "OKEX:BAT-USDC": false,
+        "UPBIT:BTC-BAT": true,
         "UPBIT:KRW-BAT": true
       },
       "barSpacing": 0.39437454420364615,
