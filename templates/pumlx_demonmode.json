@@ -16,6 +16,7 @@
           "markets": [
             "BYBIT:PUMLXUSDT-SPOT",
             "BITGET:PUMLXUSDT_SPBL",
+            "GATEIO:PUMLX_USDT_SPOT",
             "KUCOIN:PUMLX-USDT"
           ],
           "zoom": 1
@@ -35,6 +36,7 @@
           "markets": [
             "BYBIT:PUMLXUSDT-SPOT",
             "BITGET:PUMLXUSDT_SPBL",
+            "GATEIO:PUMLX_USDT_SPOT",
             "KUCOIN:PUMLX-USDT"
           ]
         }
@@ -379,6 +381,10 @@
       "BITGET": {
         "disabled": false,
         "fetched": false
+      },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -512,7 +518,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:PUMLXUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:PUMLXUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KUCOIN:PUMLX-USDT;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:PUMLXUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:PUMLXUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:PUMLX_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KUCOIN:PUMLX-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -874,6 +880,7 @@
       "hiddenMarkets": {
         "BYBIT:PUMLXUSDT-SPOT": false,
         "BITGET:PUMLXUSDT_SPBL": false,
+        "GATEIO:PUMLX_USDT_SPOT": false,
         "KUCOIN:PUMLX-USDT": false
       },
       "barSpacing": 0.39437454420364615,
