@@ -15,6 +15,7 @@
           "type": "chart",
           "markets": [
             "BYBIT:USDDUSDT-SPOT",
+            "GATEIO:USDD_USDT_SPOT",
             "HITBTC:USDDUSDT",
             "KUCOIN:USDD-USDT",
             "MEXC:USDDUSDT",
@@ -38,6 +39,7 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:USDDUSDT-SPOT",
+            "GATEIO:USDD_USDT_SPOT",
             "HITBTC:USDDUSDT",
             "KUCOIN:USDD-USDT",
             "MEXC:USDDUSDT",
@@ -384,6 +386,10 @@
         "disabled": true,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -520,7 +526,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:USDDUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = HITBTC:USDDUSDT;\n\nvar c = HITBTC:USDDUSDC;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar d = KUCOIN:USDD-USDT;\n\nvar e = KUCOIN:USDD-USDC;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:USDDUSDT;\n\nvar g = MEXC:USDDUSDC;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:USDDUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = GATEIO:USDD_USDT_SPOT;line(cum(b.vbuy-b.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar c = HITBTC:USDDUSDT;\n\nvar d = HITBTC:USDDUSDC;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = KUCOIN:USDD-USDT;\n\nvar f = KUCOIN:USDD-USDC;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:USDDUSDT;\n\nvar h = MEXC:USDDUSDC;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -881,6 +887,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:USDDUSDT-SPOT": false,
+        "GATEIO:USDD_USDT_SPOT": false,
         "HITBTC:USDDUSDT": false,
         "KUCOIN:USDD-USDT": false,
         "MEXC:USDDUSDT": false,
