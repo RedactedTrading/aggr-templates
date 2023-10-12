@@ -15,13 +15,17 @@
           "type": "chart",
           "markets": [
             "BINANCE:fetusdt",
+            "BYBIT:FETUSDT-SPOT",
             "BYBIT:FETUSDT",
             "BINANCE:fetbusd",
             "BINANCE_FUTURES:fetusdt",
             "BITGET:FETUSDT_SPBL",
             "BITGET:FETUSDT_UMCBL",
-            "COINBASE:FET-USD",
+            "BITSTAMP:fetusd",
             "COINBASE:FET-USDT",
+            "COINBASE:FET-USD",
+            "GATEIO:FET_USDT_SPOT",
+            "GATEIO:FET_USDT_FUTURES",
             "HITBTC:FETUSDT",
             "KRAKEN:FET/USD",
             "KUCOIN:FET-USDT",
@@ -43,6 +47,7 @@
             "BYBIT:FETUSDT",
             "BINANCE_FUTURES:fetusdt",
             "BITGET:FETUSDT_UMCBL",
+            "GATEIO:FET_USDT_FUTURES",
             "KUCOIN:FETUSDTM",
             "MEXC:FET_USDT",
             "KRAKEN:PF_FETUSD"
@@ -55,10 +60,13 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:fetusdt",
+            "BYBIT:FETUSDT-SPOT",
             "BINANCE:fetbusd",
             "BITGET:FETUSDT_SPBL",
-            "COINBASE:FET-USD",
+            "BITSTAMP:fetusd",
             "COINBASE:FET-USDT",
+            "COINBASE:FET-USD",
+            "GATEIO:FET_USDT_SPOT",
             "HITBTC:FETUSDT",
             "KRAKEN:FET/USD",
             "KUCOIN:FET-USDT",
@@ -345,7 +353,7 @@
         "fetched": false
       },
       "BITSTAMP": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BYBIT": {
@@ -406,6 +414,10 @@
         "fetched": false
       },
       "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -509,7 +521,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:fetusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:FETUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:FETUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_FETUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:FETUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:FET_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:fetusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:FETUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:FETUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:FET_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KRAKEN:PF_FETUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:FETUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:FET_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -553,7 +565,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:fetusdt;\n\nvar b = BINANCE:fetbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:FETUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:FETUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:FET_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = BTCTURK:FETTRY;line(cum(f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar g = COINBASE:FET-USD;\n\nvar h = COINBASE:FET-USDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar i = HITBTC:FETUSDT;line(cum(i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = KRAKEN:FET/USD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = KUCOIN:FET-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:fetusdt;\n\nvar b = BINANCE:fetbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:FETUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:FETUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:FET_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BITSTAMP:fetusd;line(cum(f.vbuy-f.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = BTCTURK:FETTRY;line(cum(g.vbuy-g.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar h = BYBIT:FETUSDT-SPOT;line(cum(h.vbuy-h.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar i = COINBASE:FET-USDT;\n\nvar j = COINBASE:FET-USD;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = GATEIO:FET_USDT_SPOT;line(cum(k.vbuy-k.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar l = HITBTC:FETUSDT;line(cum(l.vbuy-l.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar m = KRAKEN:FET/USD;line(cum(m.vbuy-m.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar n = KUCOIN:FET-USDT;line(cum(n.vbuy-n.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -914,13 +926,17 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:fetusdt": false,
+        "BYBIT:FETUSDT-SPOT": false,
         "BYBIT:FETUSDT": false,
         "BINANCE:fetbusd": false,
         "BINANCE_FUTURES:fetusdt": false,
         "BITGET:FETUSDT_SPBL": false,
         "BITGET:FETUSDT_UMCBL": false,
-        "COINBASE:FET-USD": false,
+        "BITSTAMP:fetusd": false,
         "COINBASE:FET-USDT": false,
+        "COINBASE:FET-USD": false,
+        "GATEIO:FET_USDT_SPOT": false,
+        "GATEIO:FET_USDT_FUTURES": false,
         "HITBTC:FETUSDT": false,
         "KRAKEN:FET/USD": false,
         "KUCOIN:FET-USDT": false,
@@ -1019,8 +1035,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:FET-USD": 0.5,
-        "COINBASE:FET-USDT": 0.5
+        "COINBASE:FET-USDT": 0.5,
+        "COINBASE:FET-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1120,8 +1136,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:FET-USD": 0.5,
-        "COINBASE:FET-USDT": 0.5
+        "COINBASE:FET-USDT": 0.5,
+        "COINBASE:FET-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
