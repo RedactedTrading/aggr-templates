@@ -16,13 +16,17 @@
           "markets": [
             "BINANCE:waxpusdt",
             "BYBIT:WAXPUSDT-SPOT",
+            "BYBIT:WAXPUSDT",
             "BINANCE:waxpbusd",
+            "GATEIO:WAXP_USDT_SPOT",
             "HITBTC:WAXPUSD",
             "KUCOIN:WAXPUSDTM",
             "MEXC:WAXPUSDT",
+            "MEXC:WAXP_USDT",
             "OKEX:WAXP-USDT",
             "BITHUMB:WAXP_KRW",
-            "UPBIT:KRW-WAXP"
+            "UPBIT:KRW-WAXP",
+            "UPBIT:BTC-WAXP"
           ],
           "zoom": 1
         },
@@ -32,7 +36,9 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "KUCOIN:WAXPUSDTM"
+            "BYBIT:WAXPUSDT",
+            "KUCOIN:WAXPUSDTM",
+            "MEXC:WAXP_USDT"
           ]
         },
         "trades2": {
@@ -44,11 +50,13 @@
             "BINANCE:waxpusdt",
             "BYBIT:WAXPUSDT-SPOT",
             "BINANCE:waxpbusd",
+            "GATEIO:WAXP_USDT_SPOT",
             "HITBTC:WAXPUSD",
             "MEXC:WAXPUSDT",
             "OKEX:WAXP-USDT",
             "BITHUMB:WAXP_KRW",
-            "UPBIT:KRW-WAXP"
+            "UPBIT:KRW-WAXP",
+            "UPBIT:BTC-WAXP"
           ]
         }
       },
@@ -389,6 +397,10 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -485,7 +497,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = KUCOIN:WAXPUSDTM;line(cum(a.vbuy-a.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:WAXPUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = KUCOIN:WAXPUSDTM;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar c = MEXC:WAXP_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -529,7 +541,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:waxpusdt;\n\nvar b = BINANCE:waxpbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITHUMB:WAXP_KRW;line(cum(c.vbuy-c.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar d = BYBIT:WAXPUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = HITBTC:WAXPUSD;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = MEXC:WAXPUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:WAXP-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = UPBIT:KRW-WAXP;line(cum(h.vbuy-h.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:waxpusdt;\n\nvar b = BINANCE:waxpbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITHUMB:WAXP_KRW;line(cum(c.vbuy-c.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar d = BYBIT:WAXPUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:WAXP_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:WAXPUSD;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = MEXC:WAXPUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = OKEX:WAXP-USDT;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar i = UPBIT:KRW-WAXP;\n\nvar j = UPBIT:BTC-WAXP;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -629,8 +641,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BYBIT:WAXPUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BYBIT:WAXPUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -891,13 +903,17 @@
       "hiddenMarkets": {
         "BINANCE:waxpusdt": false,
         "BYBIT:WAXPUSDT-SPOT": false,
+        "BYBIT:WAXPUSDT": false,
         "BINANCE:waxpbusd": false,
+        "GATEIO:WAXP_USDT_SPOT": false,
         "HITBTC:WAXPUSD": false,
         "KUCOIN:WAXPUSDTM": false,
         "MEXC:WAXPUSDT": false,
+        "MEXC:WAXP_USDT": false,
         "OKEX:WAXP-USDT": false,
         "BITHUMB:WAXP_KRW": true,
-        "UPBIT:KRW-WAXP": true
+        "UPBIT:KRW-WAXP": true,
+        "UPBIT:BTC-WAXP": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
