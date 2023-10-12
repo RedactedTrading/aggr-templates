@@ -15,12 +15,13 @@
           "type": "chart",
           "markets": [
             "BINANCE:multiusdt",
+            "BYBIT:MULTIUSDT",
             "BINANCE:multibusd",
             "BITGET:MULTIUSDT_SPBL",
-            "COINBASE:MULTI-USD",
+            "GATEIO:MULTI_USDT_SPOT",
             "HITBTC:MULTIUSDT",
             "KRAKEN:MULTI/USD",
-            "MEXC:MULTIUSDT"
+            "MEXC:MULTI_USDT"
           ],
           "zoom": 1
         },
@@ -29,7 +30,10 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "BYBIT:MULTIUSDT",
+            "MEXC:MULTI_USDT"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -40,10 +44,9 @@
             "BINANCE:multiusdt",
             "BINANCE:multibusd",
             "BITGET:MULTIUSDT_SPBL",
-            "COINBASE:MULTI-USD",
+            "GATEIO:MULTI_USDT_SPOT",
             "HITBTC:MULTIUSDT",
-            "KRAKEN:MULTI/USD",
-            "MEXC:MULTIUSDT"
+            "KRAKEN:MULTI/USD"
           ]
         }
       },
@@ -328,11 +331,11 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "DERIBIT": {
@@ -385,6 +388,10 @@
         "fetched": false
       },
       "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -480,7 +487,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:MULTIUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:MULTI_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -524,7 +531,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:multiusdt;\n\nvar b = BINANCE:multibusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MULTIUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:MULTI-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = HITBTC:MULTIUSDT;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = KRAKEN:MULTI/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = MEXC:MULTIUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:multiusdt;\n\nvar b = BINANCE:multibusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MULTIUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = GATEIO:MULTI_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:MULTIUSDT;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = KRAKEN:MULTI/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -624,8 +631,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BYBIT:MULTIUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BYBIT:MULTIUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -885,12 +892,13 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:multiusdt": false,
+        "BYBIT:MULTIUSDT": false,
         "BINANCE:multibusd": false,
         "BITGET:MULTIUSDT_SPBL": false,
-        "COINBASE:MULTI-USD": false,
+        "GATEIO:MULTI_USDT_SPOT": false,
         "HITBTC:MULTIUSDT": false,
         "KRAKEN:MULTI/USD": false,
-        "MEXC:MULTIUSDT": false
+        "MEXC:MULTI_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
@@ -979,9 +987,7 @@
         }
       ],
       "audioThreshold": null,
-      "multipliers": {
-        "COINBASE:MULTI-USD": 0.5
-      },
+      "multipliers": {},
       "showThresholdsAsTable": false,
       "maxRows": "477",
       "muted": false,
@@ -1079,8 +1085,7 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:BTC-USD": 0.53,
-        "COINBASE:MULTI-USD": 0.5
+        "COINBASE:BTC-USD": 0.53
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
