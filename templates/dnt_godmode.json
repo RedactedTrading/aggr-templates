@@ -16,7 +16,8 @@
           "markets": [
             "BINANCE:dntusdt",
             "BINANCE:dntbusd",
-            "COINBASE:DNT-USD"
+            "COINBASE:DNT-USD",
+            "UPBIT:BTC-DNT"
           ],
           "zoom": 1
         },
@@ -35,7 +36,8 @@
           "markets": [
             "BINANCE:dntusdt",
             "BINANCE:dntbusd",
-            "COINBASE:DNT-USD"
+            "COINBASE:DNT-USD",
+            "UPBIT:BTC-DNT"
           ]
         }
       },
@@ -373,7 +375,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       }
     },
@@ -508,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:dntusdt;\n\nvar b = BINANCE:dntbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:DNT-USD;line(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:dntusdt;\n\nvar b = BINANCE:dntbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:DNT-USD;line(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = UPBIT:BTC-DNT;line(cum(d.vbuy-d.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -870,7 +872,8 @@
       "hiddenMarkets": {
         "BINANCE:dntusdt": false,
         "BINANCE:dntbusd": false,
-        "COINBASE:DNT-USD": false
+        "COINBASE:DNT-USD": false,
+        "UPBIT:BTC-DNT": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
