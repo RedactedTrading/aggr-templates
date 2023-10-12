@@ -17,6 +17,7 @@
             "BINANCE:btgusdt",
             "BYBIT:BTGUSDT-SPOT",
             "BINANCE:btgbusd",
+            "GATEIO:BTG_USDT_SPOT",
             "HITBTC:BTGUSD",
             "BITHUMB:BTG_KRW",
             "HITBTC:BTGUSDC",
@@ -40,6 +41,7 @@
             "BINANCE:btgusdt",
             "BYBIT:BTGUSDT-SPOT",
             "BINANCE:btgbusd",
+            "GATEIO:BTG_USDT_SPOT",
             "HITBTC:BTGUSD",
             "BITHUMB:BTG_KRW",
             "HITBTC:BTGUSDC",
@@ -384,6 +386,10 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "BITHUMB": {
         "disabled": false,
         "fetched": false
@@ -520,7 +526,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:btgusdt;\n\nvar b = BINANCE:btgbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITHUMB:BTG_KRW;line(cum(c.vbuy-c.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar d = BYBIT:BTGUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = HITBTC:BTGUSD;\n\nvar f = HITBTC:BTGUSDC;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = UPBIT:KRW-BTG;line(cum(g.vbuy-g.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:btgusdt;\n\nvar b = BINANCE:btgbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITHUMB:BTG_KRW;line(cum(c.vbuy-c.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar d = BYBIT:BTGUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:BTG_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:BTGUSD;\n\nvar g = HITBTC:BTGUSDC;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = UPBIT:KRW-BTG;line(cum(h.vbuy-h.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -883,6 +889,7 @@
         "BINANCE:btgusdt": false,
         "BYBIT:BTGUSDT-SPOT": false,
         "BINANCE:btgbusd": false,
+        "GATEIO:BTG_USDT_SPOT": false,
         "HITBTC:BTGUSD": false,
         "BITHUMB:BTG_KRW": true,
         "HITBTC:BTGUSDC": false,
