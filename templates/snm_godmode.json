@@ -15,7 +15,7 @@
           "type": "chart",
           "markets": [
             "BINANCE:snmbusd",
-            "BITGET:SNMUSDT_SPBL"
+            "GATEIO:SNM_USDT_SPOT"
           ],
           "zoom": 1
         },
@@ -33,7 +33,7 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:snmbusd",
-            "BITGET:SNMUSDT_SPBL"
+            "GATEIO:SNM_USDT_SPOT"
           ]
         }
       },
@@ -374,7 +374,7 @@
         "disabled": true,
         "fetched": false
       },
-      "BITGET": {
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       }
@@ -510,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:snmbusd;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = BITGET:SNMUSDT_SPBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:snmbusd;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = GATEIO:SNM_USDT_SPOT;line(cum(b.vbuy-b.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -871,7 +871,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:snmbusd": false,
-        "BITGET:SNMUSDT_SPBL": false
+        "GATEIO:SNM_USDT_SPOT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
