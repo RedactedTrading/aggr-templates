@@ -17,7 +17,7 @@
             "BINANCE:polsusdt",
             "BINANCE:polsbusd",
             "COINBASE:POLS-USD",
-            "COINBASE:POLS-USDT",
+            "GATEIO:POLS_USDT_SPOT",
             "HITBTC:POLSUSD",
             "KRAKEN:POLS/USD",
             "KUCOIN:POLS-USDT",
@@ -42,7 +42,7 @@
             "BINANCE:polsusdt",
             "BINANCE:polsbusd",
             "COINBASE:POLS-USD",
-            "COINBASE:POLS-USDT",
+            "GATEIO:POLS_USDT_SPOT",
             "HITBTC:POLSUSD",
             "KRAKEN:POLS/USD",
             "KUCOIN:POLS-USDT",
@@ -388,6 +388,10 @@
         "disabled": true,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -524,7 +528,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:polsusdt;\n\nvar b = BINANCE:polsbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:POLS-USD;\n\nvar d = COINBASE:POLS-USDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = HITBTC:POLSUSD;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = KRAKEN:POLS/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = KUCOIN:POLS-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = MEXC:POLSUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar i = OKEX:POLS-USDT;line(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:polsusdt;\n\nvar b = BINANCE:polsbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:POLS-USD;line(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = GATEIO:POLS_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:POLSUSD;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = KRAKEN:POLS/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = KUCOIN:POLS-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:POLSUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar i = OKEX:POLS-USDT;line(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -887,7 +891,7 @@
         "BINANCE:polsusdt": false,
         "BINANCE:polsbusd": false,
         "COINBASE:POLS-USD": false,
-        "COINBASE:POLS-USDT": false,
+        "GATEIO:POLS_USDT_SPOT": false,
         "HITBTC:POLSUSD": false,
         "KRAKEN:POLS/USD": false,
         "KUCOIN:POLS-USDT": false,
@@ -982,8 +986,7 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:POLS-USD": 0.5,
-        "COINBASE:POLS-USDT": 0.5
+        "COINBASE:POLS-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1083,8 +1086,7 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:POLS-USD": 0.5,
-        "COINBASE:POLS-USDT": 0.5
+        "COINBASE:POLS-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
