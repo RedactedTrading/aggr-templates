@@ -24,14 +24,16 @@
             "BINANCE_FUTURES:manausd_perp",
             "BITGET:MANAUSDT_SPBL",
             "BITGET:MANAUSDT_UMCBL",
+            "BITSTAMP:manausd",
             "COINBASE:MANA-USD",
+            "GATEIO:MANA_USDT_SPOT",
+            "GATEIO:MANA_USDT_FUTURES",
             "HITBTC:MANAUSD",
             "KRAKEN:MANA/USD",
             "KRAKEN:MANA/USDT",
             "KRAKEN:PF_MANAUSD",
             "KUCOIN:MANA-USDT",
             "KUCOIN:MANAUSDTM",
-            "MEXC:MANAUSDT",
             "MEXC:MANA_USDT",
             "OKEX:MANA-USDT",
             "OKEX:MANA-USD-SWAP",
@@ -41,6 +43,7 @@
             "BTCTURK:MANATRY",
             "HITBTC:MANAUSDC",
             "OKEX:MANA-USDC",
+            "UPBIT:BTC-MANA",
             "UPBIT:KRW-MANA"
           ],
           "zoom": 1
@@ -56,6 +59,7 @@
             "BINANCE_FUTURES:manausdt",
             "BINANCE_FUTURES:manausd_perp",
             "BITGET:MANAUSDT_UMCBL",
+            "GATEIO:MANA_USDT_FUTURES",
             "KRAKEN:PF_MANAUSD",
             "KUCOIN:MANAUSDTM",
             "MEXC:MANA_USDT",
@@ -74,18 +78,20 @@
             "BINANCE:manabusd",
             "BYBIT:MANAUSDC-SPOT",
             "BITGET:MANAUSDT_SPBL",
+            "BITSTAMP:manausd",
             "COINBASE:MANA-USD",
+            "GATEIO:MANA_USDT_SPOT",
             "HITBTC:MANAUSD",
             "KRAKEN:MANA/USD",
             "KRAKEN:MANA/USDT",
             "KUCOIN:MANA-USDT",
-            "MEXC:MANAUSDT",
             "OKEX:MANA-USDT",
             "BITGET:MANAUSDC_SPBL",
             "BITHUMB:MANA_KRW",
             "BTCTURK:MANATRY",
             "HITBTC:MANAUSDC",
             "OKEX:MANA-USDC",
+            "UPBIT:BTC-MANA",
             "UPBIT:KRW-MANA"
           ]
         }
@@ -367,7 +373,7 @@
         "fetched": false
       },
       "BITSTAMP": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BYBIT": {
@@ -428,6 +434,10 @@
         "fetched": false
       },
       "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -531,7 +541,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:manausdt;\n\nvar b = BINANCE_FUTURES:manausd_perp;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:MANAUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:MANAUSD;\n\nvar e = BYBIT:MANAUSDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = KRAKEN:PF_MANAUSD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = KUCOIN:MANAUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = MEXC:MANA_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar i = OKEX:MANA-USD-SWAP;\n\nvar j = OKEX:MANA-USDT-SWAP;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:manausdt;\n\nvar b = BINANCE_FUTURES:manausd_perp;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:MANAUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:MANAUSD;\n\nvar e = BYBIT:MANAUSDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = GATEIO:MANA_USDT_FUTURES;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = KRAKEN:PF_MANAUSD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar h = KUCOIN:MANAUSDTM;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = MEXC:MANA_USDT;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = OKEX:MANA-USD-SWAP;\n\nvar k = OKEX:MANA-USDT-SWAP;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -575,7 +585,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:manausdt;\n\nvar b = BINANCE:manabusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MANAUSDT_SPBL;\n\nvar d = BITGET:MANAUSDC_SPBL;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:MANA_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = BTCTURK:MANATRY;line(cum(f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar g = BYBIT:MANAUSDT-SPOT;\n\nvar h = BYBIT:MANAUSDC-SPOT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar i = COINBASE:MANA-USD;line(cum(i.vbuy-i.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar j = HITBTC:MANAUSD;\n\nvar k = HITBTC:MANAUSDC;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar l = KRAKEN:MANA/USD;\n\nvar m = KRAKEN:MANA/USDT;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar n = KUCOIN:MANA-USDT;line(cum(n.vbuy-n.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar o = MEXC:MANAUSDT;line(cum(o.vbuy-o.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar p = OKEX:MANA-USDT;\n\nvar q = OKEX:MANA-USDC;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar r = UPBIT:KRW-MANA;line(cum(r.vbuy-r.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:manausdt;\n\nvar b = BINANCE:manabusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MANAUSDT_SPBL;\n\nvar d = BITGET:MANAUSDC_SPBL;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:MANA_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BITSTAMP:manausd;line(cum(f.vbuy-f.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = BTCTURK:MANATRY;line(cum(g.vbuy-g.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar h = BYBIT:MANAUSDT-SPOT;\n\nvar i = BYBIT:MANAUSDC-SPOT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar j = COINBASE:MANA-USD;line(cum(j.vbuy-j.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = GATEIO:MANA_USDT_SPOT;line(cum(k.vbuy-k.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar l = HITBTC:MANAUSD;\n\nvar m = HITBTC:MANAUSDC;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar n = KRAKEN:MANA/USD;\n\nvar o = KRAKEN:MANA/USDT;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar p = KUCOIN:MANA-USDT;line(cum(p.vbuy-p.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar q = OKEX:MANA-USDT;\n\nvar r = OKEX:MANA-USDC;line(cum(q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar s = UPBIT:BTC-MANA;\n\nvar t = UPBIT:KRW-MANA;line(cum(s.vbuy-s.vsell+t.vbuy-t.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -675,8 +685,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:manausdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:manausd_perp;\n\nvar c = COINALYZE_OI:BYBIT:MANAUSD;\n\nvar d = COINALYZE_OI:BYBIT:MANAUSDT;\n\nvar e = COINALYZE_OI:OKEX:MANA-USD-SWAP;\n\nvar f = COINALYZE_OI:OKEX:MANA-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:manausdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:manausd_perp;\n\nvar c = COINALYZE_PFR:BYBIT:MANAUSD;\n\nvar d = COINALYZE_PFR:BYBIT:MANAUSDT;\n\nvar e = COINALYZE_PFR:OKEX:MANA-USD-SWAP;\n\nvar f = COINALYZE_PFR:OKEX:MANA-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:manausdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:manausd_perp;\n\nvar c = COINALYZE_OI:BYBIT:MANAUSD;\n\nvar d = COINALYZE_OI:BYBIT:MANAUSDT;\n\nvar e = COINALYZE_OI:OKEX:MANA-USD-SWAP;\n\nvar f = COINALYZE_OI:OKEX:MANA-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:manausdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:manausd_perp;\n\nvar c = COINALYZE_PFR:BYBIT:MANAUSD;\n\nvar d = COINALYZE_PFR:BYBIT:MANAUSDT;\n\nvar e = COINALYZE_PFR:OKEX:MANA-USD-SWAP;\n\nvar f = COINALYZE_PFR:OKEX:MANA-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -945,14 +955,16 @@
         "BINANCE_FUTURES:manausd_perp": false,
         "BITGET:MANAUSDT_SPBL": false,
         "BITGET:MANAUSDT_UMCBL": false,
+        "BITSTAMP:manausd": false,
         "COINBASE:MANA-USD": false,
+        "GATEIO:MANA_USDT_SPOT": false,
+        "GATEIO:MANA_USDT_FUTURES": false,
         "HITBTC:MANAUSD": false,
         "KRAKEN:MANA/USD": false,
         "KRAKEN:MANA/USDT": false,
         "KRAKEN:PF_MANAUSD": false,
         "KUCOIN:MANA-USDT": false,
         "KUCOIN:MANAUSDTM": false,
-        "MEXC:MANAUSDT": false,
         "MEXC:MANA_USDT": false,
         "OKEX:MANA-USDT": false,
         "OKEX:MANA-USD-SWAP": false,
@@ -962,6 +974,7 @@
         "BTCTURK:MANATRY": true,
         "HITBTC:MANAUSDC": false,
         "OKEX:MANA-USDC": false,
+        "UPBIT:BTC-MANA": true,
         "UPBIT:KRW-MANA": true
       },
       "barSpacing": 0.39437454420364615,
