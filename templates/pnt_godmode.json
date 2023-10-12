@@ -15,7 +15,7 @@
           "type": "chart",
           "markets": [
             "BINANCE:pntusdt",
-            "KUCOIN:PNT-USDT"
+            "GATEIO:PNT_USDT_SPOT"
           ],
           "zoom": 1
         },
@@ -33,7 +33,7 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:pntusdt",
-            "KUCOIN:PNT-USDT"
+            "GATEIO:PNT_USDT_SPOT"
           ]
         }
       },
@@ -350,7 +350,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "OKEX": {
@@ -372,6 +372,10 @@
       "_id": "exchanges",
       "UPBIT": {
         "disabled": true,
+        "fetched": false
+      },
+      "GATEIO": {
+        "disabled": false,
         "fetched": false
       }
     },
@@ -506,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:pntusdt;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = KUCOIN:PNT-USDT;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:pntusdt;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = GATEIO:PNT_USDT_SPOT;line(cum(b.vbuy-b.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -867,7 +871,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:pntusdt": false,
-        "KUCOIN:PNT-USDT": false
+        "GATEIO:PNT_USDT_SPOT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
