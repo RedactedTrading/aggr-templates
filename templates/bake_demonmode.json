@@ -19,8 +19,11 @@
             "BINANCE:bakebusd",
             "BINANCE_FUTURES:bakeusdt",
             "BITGET:BAKEUSDT_SPBL",
+            "BITGET:BAKEUSDT_UMCBL",
+            "GATEIO:BAKE_USDT_SPOT",
+            "GATEIO:BAKE_USDT_FUTURES",
             "HITBTC:BAKEUSD",
-            "MEXC:BAKEUSDT",
+            "KUCOIN:BAKEUSDTM",
             "MEXC:BAKE_USDT"
           ],
           "zoom": 1
@@ -33,6 +36,9 @@
           "markets": [
             "BYBIT:BAKEUSDT",
             "BINANCE_FUTURES:bakeusdt",
+            "BITGET:BAKEUSDT_UMCBL",
+            "GATEIO:BAKE_USDT_FUTURES",
+            "KUCOIN:BAKEUSDTM",
             "MEXC:BAKE_USDT"
           ]
         },
@@ -45,8 +51,8 @@
             "BINANCE:bakeusdt",
             "BINANCE:bakebusd",
             "BITGET:BAKEUSDT_SPBL",
-            "HITBTC:BAKEUSD",
-            "MEXC:BAKEUSDT"
+            "GATEIO:BAKE_USDT_SPOT",
+            "HITBTC:BAKEUSD"
           ]
         }
       },
@@ -363,7 +369,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -388,6 +394,10 @@
         "fetched": false
       },
       "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -483,7 +493,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:bakeusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:BAKEUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = MEXC:BAKE_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:bakeusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:BAKEUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:BAKEUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:BAKE_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KUCOIN:BAKEUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:BAKE_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -527,7 +537,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bakeusdt;\n\nvar b = BINANCE:bakebusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:BAKEUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = HITBTC:BAKEUSD;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar e = MEXC:BAKEUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bakeusdt;\n\nvar b = BINANCE:bakebusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:BAKEUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = GATEIO:BAKE_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:BAKEUSD;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -892,8 +902,11 @@
         "BINANCE:bakebusd": false,
         "BINANCE_FUTURES:bakeusdt": false,
         "BITGET:BAKEUSDT_SPBL": false,
+        "BITGET:BAKEUSDT_UMCBL": false,
+        "GATEIO:BAKE_USDT_SPOT": false,
+        "GATEIO:BAKE_USDT_FUTURES": false,
         "HITBTC:BAKEUSD": false,
-        "MEXC:BAKEUSDT": false,
+        "KUCOIN:BAKEUSDTM": false,
         "MEXC:BAKE_USDT": false
       },
       "barSpacing": 0.39437454420364615,
