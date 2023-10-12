@@ -15,9 +15,8 @@
           "type": "chart",
           "markets": [
             "BYBIT:PRIMALUSDT-SPOT",
-            "KUCOIN:PRIMAL-USDT",
-            "MEXC:PRIMALUSDT",
-            "KUCOIN:PRIMAL-USDC"
+            "GATEIO:PRIMAL_USDT_SPOT",
+            "MEXC:PRIMALUSDT"
           ],
           "zoom": 1
         },
@@ -35,9 +34,8 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:PRIMALUSDT-SPOT",
-            "KUCOIN:PRIMAL-USDT",
-            "MEXC:PRIMALUSDT",
-            "KUCOIN:PRIMAL-USDC"
+            "GATEIO:PRIMAL_USDT_SPOT",
+            "MEXC:PRIMALUSDT"
           ]
         }
       },
@@ -354,7 +352,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "OKEX": {
@@ -376,6 +374,10 @@
       "_id": "exchanges",
       "UPBIT": {
         "disabled": true,
+        "fetched": false
+      },
+      "GATEIO": {
+        "disabled": false,
         "fetched": false
       },
       "MEXC": {
@@ -514,7 +516,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:PRIMALUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = KUCOIN:PRIMAL-USDT;\n\nvar c = KUCOIN:PRIMAL-USDC;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar d = MEXC:PRIMALUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:PRIMALUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = GATEIO:PRIMAL_USDT_SPOT;line(cum(b.vbuy-b.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar c = MEXC:PRIMALUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -875,9 +877,8 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:PRIMALUSDT-SPOT": false,
-        "KUCOIN:PRIMAL-USDT": false,
-        "MEXC:PRIMALUSDT": false,
-        "KUCOIN:PRIMAL-USDC": false
+        "GATEIO:PRIMAL_USDT_SPOT": false,
+        "MEXC:PRIMALUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
