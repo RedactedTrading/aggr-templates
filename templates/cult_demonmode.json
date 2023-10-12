@@ -16,6 +16,7 @@
           "markets": [
             "BYBIT:CULTUSDT-SPOT",
             "BITGET:CULTUSDT_SPBL",
+            "GATEIO:CULT_USDT_SPOT",
             "HITBTC:CULTUSDT",
             "KUCOIN:CULT-USDT",
             "MEXC:CULTUSDT"
@@ -37,6 +38,7 @@
           "markets": [
             "BYBIT:CULTUSDT-SPOT",
             "BITGET:CULTUSDT_SPBL",
+            "GATEIO:CULT_USDT_SPOT",
             "HITBTC:CULTUSDT",
             "KUCOIN:CULT-USDT",
             "MEXC:CULTUSDT"
@@ -384,6 +386,10 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -520,7 +526,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:CULTUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:CULTUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = HITBTC:CULTUSDT;line(cum(c.vbuy-c.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar d = KUCOIN:CULT-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar e = MEXC:CULTUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:CULTUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:CULTUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:CULT_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = HITBTC:CULTUSDT;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = KUCOIN:CULT-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:CULTUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -882,6 +888,7 @@
       "hiddenMarkets": {
         "BYBIT:CULTUSDT-SPOT": false,
         "BITGET:CULTUSDT_SPBL": false,
+        "GATEIO:CULT_USDT_SPOT": false,
         "HITBTC:CULTUSDT": false,
         "KUCOIN:CULT-USDT": false,
         "MEXC:CULTUSDT": false
