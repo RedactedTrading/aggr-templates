@@ -21,11 +21,12 @@
             "BINANCE_FUTURES:agixusdt",
             "BITGET:AGIXUSDT_SPBL",
             "BITGET:AGIXUSDT_UMCBL",
+            "GATEIO:AGIX_USDT_SPOT",
+            "GATEIO:AGIX_USDT_FUTURES",
             "HITBTC:AGIXUSDT",
             "KUCOIN:AGIX-USDT",
             "KUCOIN:AGIXUSDTM",
             "MEXC:AGIX_USDT",
-            "BINANCE_FUTURES:agixbusd",
             "BITHUMB:AGIX_KRW",
             "BTCTURK:AGIXTRY",
             "UNISWAPETHEREUM:AGIX/WETH"
@@ -41,9 +42,9 @@
             "BYBIT:AGIXUSDT",
             "BINANCE_FUTURES:agixusdt",
             "BITGET:AGIXUSDT_UMCBL",
+            "GATEIO:AGIX_USDT_FUTURES",
             "KUCOIN:AGIXUSDTM",
-            "MEXC:AGIX_USDT",
-            "BINANCE_FUTURES:agixbusd"
+            "MEXC:AGIX_USDT"
           ]
         },
         "trades2": {
@@ -56,6 +57,7 @@
             "BYBIT:AGIXUSDT-SPOT",
             "BINANCE:agixbusd",
             "BITGET:AGIXUSDT_SPBL",
+            "GATEIO:AGIX_USDT_SPOT",
             "HITBTC:AGIXUSDT",
             "KUCOIN:AGIX-USDT",
             "BITHUMB:AGIX_KRW",
@@ -405,6 +407,10 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -509,7 +515,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:agixusdt;\n\nvar b = BINANCE_FUTURES:agixbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:AGIXUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:AGIXUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KUCOIN:AGIXUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:AGIX_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:agixusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:AGIXUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:AGIXUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:AGIX_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KUCOIN:AGIXUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:AGIX_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -553,7 +559,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:agixusdt;\n\nvar b = BINANCE:agixbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:AGIXUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:AGIX_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = BTCTURK:AGIXTRY;line(cum(e.vbuy-e.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BYBIT:AGIXUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = HITBTC:AGIXUSDT;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = KUCOIN:AGIX-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar i = UNISWAPETHEREUM:AGIX/WETH;line(cum(i.vbuy-i.vsell), title=\"UNIETH\", color=\"rgb(205, 246, 247)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:agixusdt;\n\nvar b = BINANCE:agixbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:AGIXUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:AGIX_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BTCTURK:AGIXTRY;line(cum(e.vbuy-e.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar f = BYBIT:AGIXUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = GATEIO:AGIX_USDT_SPOT;line(cum(g.vbuy-g.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar h = HITBTC:AGIXUSDT;line(cum(h.vbuy-h.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar i = KUCOIN:AGIX-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = UNISWAPETHEREUM:AGIX/WETH;line(cum(j.vbuy-j.vsell), title=\"UNIETH\", color=\"rgb(197, 246, 101)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -920,11 +926,12 @@
         "BINANCE_FUTURES:agixusdt": false,
         "BITGET:AGIXUSDT_SPBL": false,
         "BITGET:AGIXUSDT_UMCBL": false,
+        "GATEIO:AGIX_USDT_SPOT": false,
+        "GATEIO:AGIX_USDT_FUTURES": false,
         "HITBTC:AGIXUSDT": false,
         "KUCOIN:AGIX-USDT": false,
         "KUCOIN:AGIXUSDTM": false,
         "MEXC:AGIX_USDT": false,
-        "BINANCE_FUTURES:agixbusd": false,
         "BITHUMB:AGIX_KRW": true,
         "BTCTURK:AGIXTRY": true,
         "UNISWAPETHEREUM:AGIX/WETH": true
