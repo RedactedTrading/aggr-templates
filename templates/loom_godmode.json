@@ -17,9 +17,13 @@
             "BINANCE:loomusdt",
             "BYBIT:LOOMUSDT",
             "BINANCE:loombusd",
+            "BINANCE_FUTURES:loomusdt",
             "BITGET:LOOMUSDT_SPBL",
+            "BITGET:LOOMUSDT_UMCBL",
+            "BITMEX:LOOMUSDT",
             "GATEIO:LOOM_USDT_SPOT",
             "GATEIO:LOOM_USDT_FUTURES",
+            "KUCOIN:LOOMUSDTM",
             "MEXC:LOOMUSDT",
             "MEXC:LOOM_USDT",
             "BITHUMB:LOOM_KRW",
@@ -35,7 +39,11 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:LOOMUSDT",
+            "BINANCE_FUTURES:loomusdt",
+            "BITGET:LOOMUSDT_UMCBL",
+            "BITMEX:LOOMUSDT",
             "GATEIO:LOOM_USDT_FUTURES",
+            "KUCOIN:LOOMUSDTM",
             "MEXC:LOOM_USDT"
           ]
         },
@@ -317,7 +325,7 @@
         "fetched": false
       },
       "BINANCE_FUTURES": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BINANCE_US": {
@@ -329,7 +337,7 @@
         "fetched": false
       },
       "BITMEX": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITSTAMP": {
@@ -369,7 +377,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -497,7 +505,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:LOOMUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = GATEIO:LOOM_USDT_FUTURES;line(cum(b.vbuy-b.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar c = MEXC:LOOM_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:loomusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:LOOMUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BITMEX:LOOMUSDT;line(cum(c.vbuy-c.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar d = BYBIT:LOOMUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:LOOM_USDT_FUTURES;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = KUCOIN:LOOMUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:LOOM_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -641,8 +649,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BYBIT:LOOMUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BYBIT:LOOMUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:loomusdt;\n\nvar b = COINALYZE_OI:BITMEX:LOOMUSDT;\n\nvar c = COINALYZE_OI:BYBIT:LOOMUSDT;line(a.close+b.close+c.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:loomusdt;\n\nvar b = COINALYZE_PFR:BITMEX:LOOMUSDT;\n\nvar c = COINALYZE_PFR:BYBIT:LOOMUSDT;line(a.close+b.close+c.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -904,9 +912,13 @@
         "BINANCE:loomusdt": false,
         "BYBIT:LOOMUSDT": false,
         "BINANCE:loombusd": false,
+        "BINANCE_FUTURES:loomusdt": false,
         "BITGET:LOOMUSDT_SPBL": false,
+        "BITGET:LOOMUSDT_UMCBL": false,
+        "BITMEX:LOOMUSDT": false,
         "GATEIO:LOOM_USDT_SPOT": false,
         "GATEIO:LOOM_USDT_FUTURES": false,
+        "KUCOIN:LOOMUSDTM": false,
         "MEXC:LOOMUSDT": false,
         "MEXC:LOOM_USDT": false,
         "BITHUMB:LOOM_KRW": true,
