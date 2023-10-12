@@ -19,8 +19,8 @@
             "BYBIT:JSTUSDT",
             "BINANCE:jstbusd",
             "BITGET:JSTUSDT_SPBL",
+            "GATEIO:JST_USDT_SPOT",
             "KUCOIN:JST-USDT",
-            "KUCOIN:JSTUSDTM",
             "MEXC:JSTUSDT",
             "OKEX:JST-USDT",
             "OKEX:JST-USDT-SWAP",
@@ -28,6 +28,7 @@
             "BITHUMB:JST_KRW",
             "HITBTC:JSTUSD",
             "OKEX:JST-USDC",
+            "UPBIT:BTC-JST",
             "UPBIT:KRW-JST"
           ],
           "zoom": 1
@@ -39,7 +40,6 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:JSTUSDT",
-            "KUCOIN:JSTUSDTM",
             "OKEX:JST-USDT-SWAP"
           ]
         },
@@ -53,6 +53,7 @@
             "BYBIT:JSTUSDT-SPOT",
             "BINANCE:jstbusd",
             "BITGET:JSTUSDT_SPBL",
+            "GATEIO:JST_USDT_SPOT",
             "KUCOIN:JST-USDT",
             "MEXC:JSTUSDT",
             "OKEX:JST-USDT",
@@ -60,6 +61,7 @@
             "BITHUMB:JST_KRW",
             "HITBTC:JSTUSD",
             "OKEX:JST-USDC",
+            "UPBIT:BTC-JST",
             "UPBIT:KRW-JST"
           ]
         }
@@ -405,6 +407,10 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -501,7 +507,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:JSTUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = KUCOIN:JSTUSDTM;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar c = OKEX:JST-USDT-SWAP;line(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:JSTUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = OKEX:JST-USDT-SWAP;line(cum(b.vbuy-b.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -545,7 +551,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:jstusdt;\n\nvar b = BINANCE:jstbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:JSTUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:JSTUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:JST_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = BYBIT:JSTUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = HITBTC:JSTUSD;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = KUCOIN:JST-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar i = MEXC:JSTUSDT;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar j = OKEX:JST-USDT;\n\nvar k = OKEX:JST-USDC;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar l = UPBIT:KRW-JST;line(cum(l.vbuy-l.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:jstusdt;\n\nvar b = BINANCE:jstbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:JSTUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:JSTUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:JST_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BYBIT:JSTUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = GATEIO:JST_USDT_SPOT;line(cum(g.vbuy-g.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar h = HITBTC:JSTUSD;line(cum(h.vbuy-h.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar i = KUCOIN:JST-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = MEXC:JSTUSDT;line(cum(j.vbuy-j.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar k = OKEX:JST-USDT;\n\nvar l = OKEX:JST-USDC;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar m = UPBIT:BTC-JST;\n\nvar n = UPBIT:KRW-JST;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -645,8 +651,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BYBIT:JSTUSDT;\n\nvar b = COINALYZE_OI:OKEX:JST-USDT-SWAP;line(a.close+b.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BYBIT:JSTUSDT;\n\nvar b = COINALYZE_PFR:OKEX:JST-USDT-SWAP;line(a.close+b.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BYBIT:JSTUSDT;\n\nvar b = COINALYZE_OI:OKEX:JST-USDT-SWAP;line(a.close+b.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BYBIT:JSTUSDT;\n\nvar b = COINALYZE_PFR:OKEX:JST-USDT-SWAP;line(a.close+b.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -910,8 +916,8 @@
         "BYBIT:JSTUSDT": false,
         "BINANCE:jstbusd": false,
         "BITGET:JSTUSDT_SPBL": false,
+        "GATEIO:JST_USDT_SPOT": false,
         "KUCOIN:JST-USDT": false,
-        "KUCOIN:JSTUSDTM": false,
         "MEXC:JSTUSDT": false,
         "OKEX:JST-USDT": false,
         "OKEX:JST-USDT-SWAP": false,
@@ -919,6 +925,7 @@
         "BITHUMB:JST_KRW": true,
         "HITBTC:JSTUSD": true,
         "OKEX:JST-USDC": false,
+        "UPBIT:BTC-JST": true,
         "UPBIT:KRW-JST": true
       },
       "barSpacing": 0.39437454420364615,
