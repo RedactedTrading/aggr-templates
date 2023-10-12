@@ -16,9 +16,9 @@
           "markets": [
             "BYBIT:TAMAUSDT-SPOT",
             "BITGET:TAMAUSDT_SPBL",
+            "GATEIO:TAMA_USDT_SPOT",
             "MEXC:TAMAUSDT",
-            "OKEX:TAMA-USDT",
-            "OKEX:TAMA-USDC"
+            "OKEX:TAMA-USDT"
           ],
           "zoom": 1
         },
@@ -37,9 +37,9 @@
           "markets": [
             "BYBIT:TAMAUSDT-SPOT",
             "BITGET:TAMAUSDT_SPBL",
+            "GATEIO:TAMA_USDT_SPOT",
             "MEXC:TAMAUSDT",
-            "OKEX:TAMA-USDT",
-            "OKEX:TAMA-USDC"
+            "OKEX:TAMA-USDT"
           ]
         }
       },
@@ -384,6 +384,10 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -520,7 +524,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:TAMAUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:TAMAUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = MEXC:TAMAUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar d = OKEX:TAMA-USDT;\n\nvar e = OKEX:TAMA-USDC;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:TAMAUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:TAMAUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:TAMA_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = MEXC:TAMAUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar e = OKEX:TAMA-USDT;line(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -882,9 +886,9 @@
       "hiddenMarkets": {
         "BYBIT:TAMAUSDT-SPOT": false,
         "BITGET:TAMAUSDT_SPBL": false,
+        "GATEIO:TAMA_USDT_SPOT": false,
         "MEXC:TAMAUSDT": false,
-        "OKEX:TAMA-USDT": false,
-        "OKEX:TAMA-USDC": false
+        "OKEX:TAMA-USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
