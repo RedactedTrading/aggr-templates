@@ -16,10 +16,12 @@
           "markets": [
             "BINANCE:lskusdt",
             "BINANCE:lskbusd",
+            "GATEIO:LSK_USDT_SPOT",
             "HITBTC:LSKUSD",
             "KRAKEN:LSK/USD",
             "OKEX:LSK-USDT",
             "HITBTC:LSKUSDC",
+            "UPBIT:BTC-LSK",
             "UPBIT:KRW-LSK"
           ],
           "zoom": 1
@@ -39,10 +41,12 @@
           "markets": [
             "BINANCE:lskusdt",
             "BINANCE:lskbusd",
+            "GATEIO:LSK_USDT_SPOT",
             "HITBTC:LSKUSD",
             "KRAKEN:LSK/USD",
             "OKEX:LSK-USDT",
             "HITBTC:LSKUSDC",
+            "UPBIT:BTC-LSK",
             "UPBIT:KRW-LSK"
           ]
         }
@@ -383,6 +387,10 @@
       "UPBIT": {
         "disabled": false,
         "fetched": false
+      },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -516,7 +524,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:lskusdt;\n\nvar b = BINANCE:lskbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = HITBTC:LSKUSD;\n\nvar d = HITBTC:LSKUSDC;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar e = KRAKEN:LSK/USD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = OKEX:LSK-USDT;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = UPBIT:KRW-LSK;line(cum(g.vbuy-g.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:lskusdt;\n\nvar b = BINANCE:lskbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = GATEIO:LSK_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = HITBTC:LSKUSD;\n\nvar e = HITBTC:LSKUSDC;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = KRAKEN:LSK/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = OKEX:LSK-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar h = UPBIT:BTC-LSK;\n\nvar i = UPBIT:KRW-LSK;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -878,10 +886,12 @@
       "hiddenMarkets": {
         "BINANCE:lskusdt": false,
         "BINANCE:lskbusd": false,
+        "GATEIO:LSK_USDT_SPOT": false,
         "HITBTC:LSKUSD": false,
         "KRAKEN:LSK/USD": false,
         "OKEX:LSK-USDT": false,
         "HITBTC:LSKUSDC": false,
+        "UPBIT:BTC-LSK": true,
         "UPBIT:KRW-LSK": true
       },
       "barSpacing": 0.39437454420364615,
