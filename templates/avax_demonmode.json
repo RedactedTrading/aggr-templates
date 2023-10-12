@@ -18,6 +18,7 @@
             "BYBIT:AVAXUSDT-SPOT",
             "BYBIT:AVAXUSDT",
             "BINANCE:avaxbusd",
+            "BINANCE:avaxtusd",
             "BYBIT:AVAXUSDC-SPOT",
             "BINANCE_FUTURES:avaxusdt",
             "BINANCE_FUTURES:avaxusd_perp",
@@ -26,8 +27,11 @@
             "BITGET:AVAXUSD_DMCBL",
             "BITMEX:AVAXUSD",
             "BITMEX:AVAXUSDT",
+            "BITSTAMP:avaxusd",
             "COINBASE:AVAX-USDT",
             "COINBASE:AVAX-USD",
+            "GATEIO:AVAX_USDT_SPOT",
+            "GATEIO:AVAX_USDT_FUTURES",
             "HITBTC:AVAXUSDT",
             "KRAKEN:AVAX/USD",
             "KRAKEN:AVAX/USDT",
@@ -46,7 +50,8 @@
             "KUCOIN:AVAX-USDC",
             "MEXC:AVAXUSDC",
             "OKEX:AVAX-USDC",
-            "UPBIT:KRW-AVAX"
+            "UPBIT:KRW-AVAX",
+            "UPBIT:BTC-AVAX"
           ],
           "zoom": 1
         },
@@ -63,6 +68,7 @@
             "BITGET:AVAXUSD_DMCBL",
             "BITMEX:AVAXUSD",
             "BITMEX:AVAXUSDT",
+            "GATEIO:AVAX_USDT_FUTURES",
             "KRAKEN:PF_AVAXUSD",
             "KUCOIN:AVAXUSDTM",
             "MEXC:AVAX_USDT",
@@ -80,10 +86,13 @@
             "BINANCE:avaxusdt",
             "BYBIT:AVAXUSDT-SPOT",
             "BINANCE:avaxbusd",
+            "BINANCE:avaxtusd",
             "BYBIT:AVAXUSDC-SPOT",
             "BITGET:AVAXUSDT_SPBL",
+            "BITSTAMP:avaxusd",
             "COINBASE:AVAX-USDT",
             "COINBASE:AVAX-USD",
+            "GATEIO:AVAX_USDT_SPOT",
             "HITBTC:AVAXUSDT",
             "KRAKEN:AVAX/USD",
             "KRAKEN:AVAX/USDT",
@@ -96,7 +105,8 @@
             "KUCOIN:AVAX-USDC",
             "MEXC:AVAXUSDC",
             "OKEX:AVAX-USDC",
-            "UPBIT:KRW-AVAX"
+            "UPBIT:KRW-AVAX",
+            "UPBIT:BTC-AVAX"
           ]
         }
       },
@@ -377,7 +387,7 @@
         "fetched": false
       },
       "BITSTAMP": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BYBIT": {
@@ -438,6 +448,10 @@
         "fetched": false
       },
       "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -541,7 +555,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:avaxusdt;\n\nvar b = BINANCE_FUTURES:avaxusd_perp;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:AVAXUSDT_UMCBL;\n\nvar d = BITGET:AVAXUSD_DMCBL;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITMEX:AVAXUSD;\n\nvar f = BITMEX:AVAXUSDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar g = BYBIT:AVAXUSDT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = DERIBIT:AVAX_USDC-PERPETUAL;line(cum(h.vbuy-h.vsell), title=\"DRBT\", color=\"rgb(180, 242, 243)\");\n\n\nvar i = KRAKEN:PF_AVAXUSD;line(cum(i.vbuy-i.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar j = KUCOIN:AVAXUSDTM;line(cum(j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar k = MEXC:AVAX_USDT;line(cum(k.vbuy-k.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar l = OKEX:AVAX-USD-SWAP;\n\nvar m = OKEX:AVAX-USDT-SWAP;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:avaxusdt;\n\nvar b = BINANCE_FUTURES:avaxusd_perp;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:AVAXUSDT_UMCBL;\n\nvar d = BITGET:AVAXUSD_DMCBL;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITMEX:AVAXUSD;\n\nvar f = BITMEX:AVAXUSDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar g = BYBIT:AVAXUSDT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = DERIBIT:AVAX_USDC-PERPETUAL;line(cum(h.vbuy-h.vsell), title=\"DRBT\", color=\"rgb(234, 238, 245)\");\n\n\nvar i = GATEIO:AVAX_USDT_FUTURES;line(cum(i.vbuy-i.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar j = KRAKEN:PF_AVAXUSD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar k = KUCOIN:AVAXUSDTM;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar l = MEXC:AVAX_USDT;line(cum(l.vbuy-l.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar m = OKEX:AVAX-USD-SWAP;\n\nvar n = OKEX:AVAX-USDT-SWAP;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -585,7 +599,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:avaxusdt;\n\nvar b = BINANCE:avaxbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:AVAXUSDT_SPBL;\n\nvar d = BITGET:AVAXUSDC_SPBL;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:AVAX_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = BTCTURK:AVAXTRY;line(cum(f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar g = BYBIT:AVAXUSDT-SPOT;\n\nvar h = BYBIT:AVAXUSDC-SPOT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar i = COINBASE:AVAX-USDT;\n\nvar j = COINBASE:AVAX-USD;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar k = HITBTC:AVAXUSDT;\n\nvar l = HITBTC:AVAXUSDC;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar m = KRAKEN:AVAX/USD;\n\nvar n = KRAKEN:AVAX/USDT;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar o = KUCOIN:AVAX-USDT;\n\nvar p = KUCOIN:AVAX-USDC;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar q = MEXC:AVAXUSDC;line(cum(q.vbuy-q.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar r = OKEX:AVAX-USDT;\n\nvar s = OKEX:AVAX-USDC;line(cum(r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar t = UPBIT:KRW-AVAX;line(cum(t.vbuy-t.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:avaxusdt;\n\nvar b = BINANCE:avaxbusd;\n\nvar c = BINANCE:avaxtusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar d = BITGET:AVAXUSDT_SPBL;\n\nvar e = BITGET:AVAXUSDC_SPBL;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = BITHUMB:AVAX_KRW;line(cum(f.vbuy-f.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar g = BITSTAMP:avaxusd;line(cum(g.vbuy-g.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = BTCTURK:AVAXTRY;line(cum(h.vbuy-h.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar i = BYBIT:AVAXUSDT-SPOT;\n\nvar j = BYBIT:AVAXUSDC-SPOT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar k = COINBASE:AVAX-USDT;\n\nvar l = COINBASE:AVAX-USD;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar m = GATEIO:AVAX_USDT_SPOT;line(cum(m.vbuy-m.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar n = HITBTC:AVAXUSDT;\n\nvar o = HITBTC:AVAXUSDC;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar p = KRAKEN:AVAX/USD;\n\nvar q = KRAKEN:AVAX/USDT;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar r = KUCOIN:AVAX-USDT;\n\nvar s = KUCOIN:AVAX-USDC;line(cum(r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar t = MEXC:AVAXUSDC;line(cum(t.vbuy-t.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar u = OKEX:AVAX-USDT;\n\nvar v = OKEX:AVAX-USDC;line(cum(u.vbuy-u.vsell+v.vbuy-v.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar w = UPBIT:KRW-AVAX;\n\nvar x = UPBIT:BTC-AVAX;line(cum(w.vbuy-w.vsell+x.vbuy-x.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell+w.vbuy-w.vsell+x.vbuy-x.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -685,8 +699,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:avaxusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:avaxusd_perp;\n\nvar c = COINALYZE_OI:BITMEX:AVAXUSD;\n\nvar d = COINALYZE_OI:BITMEX:AVAXUSDT;\n\nvar e = COINALYZE_OI:BYBIT:AVAXUSDT;\n\nvar f = COINALYZE_OI:DERIBIT:AVAX_USDC-PERPETUAL;\n\nvar g = COINALYZE_OI:OKEX:AVAX-USD-SWAP;\n\nvar h = COINALYZE_OI:OKEX:AVAX-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:avaxusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:avaxusd_perp;\n\nvar c = COINALYZE_PFR:BITMEX:AVAXUSD;\n\nvar d = COINALYZE_PFR:BITMEX:AVAXUSDT;\n\nvar e = COINALYZE_PFR:BYBIT:AVAXUSDT;\n\nvar f = COINALYZE_PFR:DERIBIT:AVAX_USDC-PERPETUAL;\n\nvar g = COINALYZE_PFR:OKEX:AVAX-USD-SWAP;\n\nvar h = COINALYZE_PFR:OKEX:AVAX-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:avaxusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:avaxusd_perp;\n\nvar c = COINALYZE_OI:BITMEX:AVAXUSD;\n\nvar d = COINALYZE_OI:BITMEX:AVAXUSDT;\n\nvar e = COINALYZE_OI:BYBIT:AVAXUSDT;\n\nvar f = COINALYZE_OI:DERIBIT:AVAX_USDC-PERPETUAL;\n\nvar g = COINALYZE_OI:OKEX:AVAX-USD-SWAP;\n\nvar h = COINALYZE_OI:OKEX:AVAX-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:avaxusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:avaxusd_perp;\n\nvar c = COINALYZE_PFR:BITMEX:AVAXUSD;\n\nvar d = COINALYZE_PFR:BITMEX:AVAXUSDT;\n\nvar e = COINALYZE_PFR:BYBIT:AVAXUSDT;\n\nvar f = COINALYZE_PFR:DERIBIT:AVAX_USDC-PERPETUAL;\n\nvar g = COINALYZE_PFR:OKEX:AVAX-USD-SWAP;\n\nvar h = COINALYZE_PFR:OKEX:AVAX-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -949,6 +963,7 @@
         "BYBIT:AVAXUSDT-SPOT": false,
         "BYBIT:AVAXUSDT": false,
         "BINANCE:avaxbusd": false,
+        "BINANCE:avaxtusd": true,
         "BYBIT:AVAXUSDC-SPOT": false,
         "BINANCE_FUTURES:avaxusdt": false,
         "BINANCE_FUTURES:avaxusd_perp": false,
@@ -957,8 +972,11 @@
         "BITGET:AVAXUSD_DMCBL": false,
         "BITMEX:AVAXUSD": false,
         "BITMEX:AVAXUSDT": false,
+        "BITSTAMP:avaxusd": false,
         "COINBASE:AVAX-USDT": false,
         "COINBASE:AVAX-USD": false,
+        "GATEIO:AVAX_USDT_SPOT": false,
+        "GATEIO:AVAX_USDT_FUTURES": false,
         "HITBTC:AVAXUSDT": false,
         "KRAKEN:AVAX/USD": false,
         "KRAKEN:AVAX/USDT": false,
@@ -977,7 +995,8 @@
         "KUCOIN:AVAX-USDC": false,
         "MEXC:AVAXUSDC": false,
         "OKEX:AVAX-USDC": false,
-        "UPBIT:KRW-AVAX": true
+        "UPBIT:KRW-AVAX": true,
+        "UPBIT:BTC-AVAX": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
