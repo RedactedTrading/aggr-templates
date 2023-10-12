@@ -17,10 +17,12 @@
             "BINANCE:fluxusdt",
             "BINANCE:fluxbusd",
             "BITGET:FLUXUSDT_SPBL",
+            "GATEIO:FLUX_USDT_SPOT",
+            "GATEIO:FLUX_USDT_FUTURES",
             "HITBTC:FLUXUSDT",
             "KUCOIN:FLUX-USDT",
             "KUCOIN:FLUXUSDTM",
-            "MEXC:FLUX_USDT",
+            "BITHUMB:FLUX_KRW",
             "HITBTC:FLUXUSDC"
           ],
           "zoom": 1
@@ -31,8 +33,8 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "KUCOIN:FLUXUSDTM",
-            "MEXC:FLUX_USDT"
+            "GATEIO:FLUX_USDT_FUTURES",
+            "KUCOIN:FLUXUSDTM"
           ]
         },
         "trades2": {
@@ -44,8 +46,10 @@
             "BINANCE:fluxusdt",
             "BINANCE:fluxbusd",
             "BITGET:FLUXUSDT_SPBL",
+            "GATEIO:FLUX_USDT_SPOT",
             "HITBTC:FLUXUSDT",
             "KUCOIN:FLUX-USDT",
+            "BITHUMB:FLUX_KRW",
             "HITBTC:FLUXUSDC"
           ]
         }
@@ -391,7 +395,11 @@
         "disabled": false,
         "fetched": false
       },
-      "MEXC": {
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
+      "BITHUMB": {
         "disabled": false,
         "fetched": false
       }
@@ -483,7 +491,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = KUCOIN:FLUXUSDTM;line(cum(a.vbuy-a.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar b = MEXC:FLUX_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = GATEIO:FLUX_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar b = KUCOIN:FLUXUSDTM;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -527,7 +535,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:fluxusdt;\n\nvar b = BINANCE:fluxbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:FLUXUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = HITBTC:FLUXUSDT;\n\nvar e = HITBTC:FLUXUSDC;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = KUCOIN:FLUX-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:fluxusdt;\n\nvar b = BINANCE:fluxbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:FLUXUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:FLUX_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = GATEIO:FLUX_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:FLUXUSDT;\n\nvar g = HITBTC:FLUXUSDC;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KUCOIN:FLUX-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -890,10 +898,12 @@
         "BINANCE:fluxusdt": false,
         "BINANCE:fluxbusd": false,
         "BITGET:FLUXUSDT_SPBL": false,
+        "GATEIO:FLUX_USDT_SPOT": false,
+        "GATEIO:FLUX_USDT_FUTURES": false,
         "HITBTC:FLUXUSDT": false,
         "KUCOIN:FLUX-USDT": false,
         "KUCOIN:FLUXUSDTM": false,
-        "MEXC:FLUX_USDT": false,
+        "BITHUMB:FLUX_KRW": true,
         "HITBTC:FLUXUSDC": false
       },
       "barSpacing": 0.39437454420364615,
