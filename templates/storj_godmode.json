@@ -20,8 +20,11 @@
             "BINANCE_FUTURES:storjusdt",
             "BITGET:STORJUSDT_SPBL",
             "BITGET:STORJUSDT_UMCBL",
+            "BITSTAMP:storjusd",
             "BTCTURK:STORJUSDT",
             "COINBASE:STORJ-USD",
+            "GATEIO:STORJ_USDT_SPOT",
+            "GATEIO:STORJ_USDT_FUTURES",
             "HITBTC:STORJUSD",
             "KRAKEN:STORJ/USD",
             "KRAKEN:PF_STORJUSD",
@@ -33,6 +36,7 @@
             "BTCTURK:STORJTRY",
             "HITBTC:STORJUSDC",
             "OKEX:STORJ-USDC",
+            "UPBIT:BTC-STORJ",
             "UPBIT:KRW-STORJ"
           ],
           "zoom": 1
@@ -46,6 +50,7 @@
             "BYBIT:STORJUSDT",
             "BINANCE_FUTURES:storjusdt",
             "BITGET:STORJUSDT_UMCBL",
+            "GATEIO:STORJ_USDT_FUTURES",
             "KRAKEN:PF_STORJUSD",
             "KUCOIN:STORJUSDTM",
             "MEXC:STORJ_USDT",
@@ -61,8 +66,10 @@
             "BINANCE:storjusdt",
             "BINANCE:storjbusd",
             "BITGET:STORJUSDT_SPBL",
+            "BITSTAMP:storjusd",
             "BTCTURK:STORJUSDT",
             "COINBASE:STORJ-USD",
+            "GATEIO:STORJ_USDT_SPOT",
             "HITBTC:STORJUSD",
             "KRAKEN:STORJ/USD",
             "KUCOIN:STORJ-USDT",
@@ -70,6 +77,7 @@
             "BTCTURK:STORJTRY",
             "HITBTC:STORJUSDC",
             "OKEX:STORJ-USDC",
+            "UPBIT:BTC-STORJ",
             "UPBIT:KRW-STORJ"
           ]
         }
@@ -351,7 +359,7 @@
         "fetched": false
       },
       "BITSTAMP": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BYBIT": {
@@ -416,6 +424,10 @@
         "fetched": false
       },
       "BTCTURK": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -511,7 +523,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:storjusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:STORJUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:STORJUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_STORJUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:STORJUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:STORJ_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:STORJ-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:storjusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:STORJUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:STORJUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:STORJ_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KRAKEN:PF_STORJUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:STORJUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:STORJ_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = OKEX:STORJ-USDT-SWAP;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -555,7 +567,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:storjusdt;\n\nvar b = BINANCE:storjbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:STORJUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BTCTURK:STORJUSDT;\n\nvar e = BTCTURK:STORJTRY;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = COINBASE:STORJ-USD;line(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = HITBTC:STORJUSD;\n\nvar h = HITBTC:STORJUSDC;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar i = KRAKEN:STORJ/USD;line(cum(i.vbuy-i.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar j = KUCOIN:STORJ-USDT;line(cum(j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar k = OKEX:STORJ-USDT;\n\nvar l = OKEX:STORJ-USDC;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = UPBIT:KRW-STORJ;line(cum(m.vbuy-m.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:storjusdt;\n\nvar b = BINANCE:storjbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:STORJUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITSTAMP:storjusd;line(cum(d.vbuy-d.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = BTCTURK:STORJUSDT;\n\nvar f = BTCTURK:STORJTRY;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = COINBASE:STORJ-USD;line(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = GATEIO:STORJ_USDT_SPOT;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = HITBTC:STORJUSD;\n\nvar j = HITBTC:STORJUSDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar k = KRAKEN:STORJ/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar l = KUCOIN:STORJ-USDT;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = OKEX:STORJ-USDT;\n\nvar n = OKEX:STORJ-USDC;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar o = UPBIT:BTC-STORJ;\n\nvar p = UPBIT:KRW-STORJ;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -655,8 +667,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:storjusdt;\n\nvar b = COINALYZE_OI:BYBIT:STORJUSDT;\n\nvar c = COINALYZE_OI:OKEX:STORJ-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:storjusdt;\n\nvar b = COINALYZE_PFR:BYBIT:STORJUSDT;\n\nvar c = COINALYZE_PFR:OKEX:STORJ-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:storjusdt;\n\nvar b = COINALYZE_OI:BYBIT:STORJUSDT;\n\nvar c = COINALYZE_OI:OKEX:STORJ-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:storjusdt;\n\nvar b = COINALYZE_PFR:BYBIT:STORJUSDT;\n\nvar c = COINALYZE_PFR:OKEX:STORJ-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -921,8 +933,11 @@
         "BINANCE_FUTURES:storjusdt": false,
         "BITGET:STORJUSDT_SPBL": false,
         "BITGET:STORJUSDT_UMCBL": false,
+        "BITSTAMP:storjusd": false,
         "BTCTURK:STORJUSDT": true,
         "COINBASE:STORJ-USD": false,
+        "GATEIO:STORJ_USDT_SPOT": false,
+        "GATEIO:STORJ_USDT_FUTURES": false,
         "HITBTC:STORJUSD": false,
         "KRAKEN:STORJ/USD": false,
         "KRAKEN:PF_STORJUSD": false,
@@ -934,6 +949,7 @@
         "BTCTURK:STORJTRY": true,
         "HITBTC:STORJUSDC": false,
         "OKEX:STORJ-USDC": false,
+        "UPBIT:BTC-STORJ": true,
         "UPBIT:KRW-STORJ": true
       },
       "barSpacing": 0.39437454420364615,
