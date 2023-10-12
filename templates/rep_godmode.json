@@ -17,6 +17,7 @@
             "BINANCE:repusdt",
             "BINANCE:repbusd",
             "BITGET:REPUSDT_SPBL",
+            "GATEIO:REP_USDT_SPOT",
             "HITBTC:REPUSDT",
             "KRAKEN:REP/USD",
             "OKEX:REP-USDT"
@@ -39,6 +40,7 @@
             "BINANCE:repusdt",
             "BINANCE:repbusd",
             "BITGET:REPUSDT_SPBL",
+            "GATEIO:REP_USDT_SPOT",
             "HITBTC:REPUSDT",
             "KRAKEN:REP/USD",
             "OKEX:REP-USDT"
@@ -385,6 +387,10 @@
       "BITGET": {
         "disabled": false,
         "fetched": false
+      },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -518,7 +524,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:repusdt;\n\nvar b = BINANCE:repbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:REPUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = HITBTC:REPUSDT;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar e = KRAKEN:REP/USD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = OKEX:REP-USDT;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:repusdt;\n\nvar b = BINANCE:repbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:REPUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = GATEIO:REP_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:REPUSDT;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = KRAKEN:REP/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = OKEX:REP-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -881,6 +887,7 @@
         "BINANCE:repusdt": false,
         "BINANCE:repbusd": false,
         "BITGET:REPUSDT_SPBL": false,
+        "GATEIO:REP_USDT_SPOT": false,
         "HITBTC:REPUSDT": false,
         "KRAKEN:REP/USD": false,
         "OKEX:REP-USDT": false
