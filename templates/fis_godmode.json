@@ -17,8 +17,8 @@
             "BINANCE:fisusdt",
             "BINANCE:fisbusd",
             "BITGET:FISUSDT_SPBL",
-            "COINBASE:FIS-USDT",
             "COINBASE:FIS-USD",
+            "GATEIO:FIS_USDT_SPOT",
             "KRAKEN:FIS/USD"
           ],
           "zoom": 1
@@ -39,8 +39,8 @@
             "BINANCE:fisusdt",
             "BINANCE:fisbusd",
             "BITGET:FISUSDT_SPBL",
-            "COINBASE:FIS-USDT",
             "COINBASE:FIS-USD",
+            "GATEIO:FIS_USDT_SPOT",
             "KRAKEN:FIS/USD"
           ]
         }
@@ -385,6 +385,10 @@
       "BITGET": {
         "disabled": false,
         "fetched": false
+      },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -518,7 +522,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:fisusdt;\n\nvar b = BINANCE:fisbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:FISUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:FIS-USDT;\n\nvar e = COINBASE:FIS-USD;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = KRAKEN:FIS/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:fisusdt;\n\nvar b = BINANCE:fisbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:FISUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:FIS-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = GATEIO:FIS_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = KRAKEN:FIS/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -881,8 +885,8 @@
         "BINANCE:fisusdt": false,
         "BINANCE:fisbusd": false,
         "BITGET:FISUSDT_SPBL": false,
-        "COINBASE:FIS-USDT": false,
         "COINBASE:FIS-USD": false,
+        "GATEIO:FIS_USDT_SPOT": false,
         "KRAKEN:FIS/USD": false
       },
       "barSpacing": 0.39437454420364615,
@@ -973,7 +977,6 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:FIS-USDT": 0.5,
         "COINBASE:FIS-USD": 0.5
       },
       "showThresholdsAsTable": false,
@@ -1074,7 +1077,6 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:FIS-USDT": 0.5,
         "COINBASE:FIS-USD": 0.5
       },
       "showThresholdsAsTable": false,
