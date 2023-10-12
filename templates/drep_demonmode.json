@@ -17,7 +17,9 @@
             "BINANCE:drepusdt",
             "BINANCE:drepbusd",
             "BITGET:DREPUSDT_SPBL",
-            "COINBASE:DREP-USD"
+            "COINBASE:DREP-USD",
+            "GATEIO:DREP_USDT_SPOT",
+            "HITBTC:DREPUSDT"
           ],
           "zoom": 1
         },
@@ -37,7 +39,9 @@
             "BINANCE:drepusdt",
             "BINANCE:drepbusd",
             "BITGET:DREPUSDT_SPBL",
-            "COINBASE:DREP-USD"
+            "COINBASE:DREP-USD",
+            "GATEIO:DREP_USDT_SPOT",
+            "HITBTC:DREPUSDT"
           ]
         }
       },
@@ -342,7 +346,7 @@
         "fetched": false
       },
       "HITBTC": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "HUOBI": {
@@ -379,6 +383,10 @@
         "fetched": false
       },
       "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       }
@@ -514,7 +522,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:drepusdt;\n\nvar b = BINANCE:drepbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:DREPUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:DREP-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:drepusdt;\n\nvar b = BINANCE:drepbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:DREPUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:DREP-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = GATEIO:DREP_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:DREPUSDT;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -877,7 +885,9 @@
         "BINANCE:drepusdt": false,
         "BINANCE:drepbusd": false,
         "BITGET:DREPUSDT_SPBL": false,
-        "COINBASE:DREP-USD": false
+        "COINBASE:DREP-USD": false,
+        "GATEIO:DREP_USDT_SPOT": false,
+        "HITBTC:DREPUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
