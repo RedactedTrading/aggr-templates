@@ -16,9 +16,11 @@
           "markets": [
             "BINANCE:hiveusdt",
             "BINANCE:hivebusd",
+            "GATEIO:HIVE_USDT_SPOT",
             "HITBTC:HIVEUSDT",
             "MEXC:HIVEUSDT",
             "BITHUMB:HIVE_KRW",
+            "UPBIT:BTC-HIVE",
             "UPBIT:KRW-HIVE"
           ],
           "zoom": 1
@@ -38,9 +40,11 @@
           "markets": [
             "BINANCE:hiveusdt",
             "BINANCE:hivebusd",
+            "GATEIO:HIVE_USDT_SPOT",
             "HITBTC:HIVEUSDT",
             "MEXC:HIVEUSDT",
             "BITHUMB:HIVE_KRW",
+            "UPBIT:BTC-HIVE",
             "UPBIT:KRW-HIVE"
           ]
         }
@@ -382,6 +386,10 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -522,7 +530,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:hiveusdt;\n\nvar b = BINANCE:hivebusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITHUMB:HIVE_KRW;line(cum(c.vbuy-c.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar d = HITBTC:HIVEUSDT;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar e = MEXC:HIVEUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar f = UPBIT:KRW-HIVE;line(cum(f.vbuy-f.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:hiveusdt;\n\nvar b = BINANCE:hivebusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITHUMB:HIVE_KRW;line(cum(c.vbuy-c.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar d = GATEIO:HIVE_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:HIVEUSDT;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = MEXC:HIVEUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = UPBIT:BTC-HIVE;\n\nvar h = UPBIT:KRW-HIVE;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -884,9 +892,11 @@
       "hiddenMarkets": {
         "BINANCE:hiveusdt": false,
         "BINANCE:hivebusd": false,
+        "GATEIO:HIVE_USDT_SPOT": false,
         "HITBTC:HIVEUSDT": false,
         "MEXC:HIVEUSDT": false,
         "BITHUMB:HIVE_KRW": true,
+        "UPBIT:BTC-HIVE": true,
         "UPBIT:KRW-HIVE": true
       },
       "barSpacing": 0.39437454420364615,
