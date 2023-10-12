@@ -16,20 +16,22 @@
           "markets": [
             "BINANCE:perpusdt",
             "BYBIT:PERPUSDT-SPOT",
+            "BYBIT:PERPUSDT",
             "BINANCE:perpbusd",
             "BINANCE_FUTURES:perpusdt",
             "BITGET:PERPUSDT_SPBL",
+            "BITSTAMP:perpusd",
             "COINBASE:PERP-USD",
             "COINBASE:PERP-USDT",
+            "GATEIO:PERP_USDT_SPOT",
+            "GATEIO:PERP_USDT_FUTURES",
             "HITBTC:PERPUSD",
             "KRAKEN:PERP/USD",
             "KUCOIN:PERP-USDT",
             "KUCOIN:PERPUSDTM",
-            "MEXC:PERPUSDT",
             "MEXC:PERP_USDT",
             "OKEX:PERP-USDT",
-            "OKEX:PERP-USDT-SWAP",
-            "OKEX:PERP-USDC"
+            "OKEX:PERP-USDT-SWAP"
           ],
           "zoom": 1
         },
@@ -39,7 +41,9 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BYBIT:PERPUSDT",
             "BINANCE_FUTURES:perpusdt",
+            "GATEIO:PERP_USDT_FUTURES",
             "KUCOIN:PERPUSDTM",
             "MEXC:PERP_USDT",
             "OKEX:PERP-USDT-SWAP"
@@ -55,14 +59,14 @@
             "BYBIT:PERPUSDT-SPOT",
             "BINANCE:perpbusd",
             "BITGET:PERPUSDT_SPBL",
+            "BITSTAMP:perpusd",
             "COINBASE:PERP-USD",
             "COINBASE:PERP-USDT",
+            "GATEIO:PERP_USDT_SPOT",
             "HITBTC:PERPUSD",
             "KRAKEN:PERP/USD",
             "KUCOIN:PERP-USDT",
-            "MEXC:PERPUSDT",
-            "OKEX:PERP-USDT",
-            "OKEX:PERP-USDC"
+            "OKEX:PERP-USDT"
           ]
         }
       },
@@ -343,7 +347,7 @@
         "fetched": false
       },
       "BITSTAMP": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BYBIT": {
@@ -404,6 +408,10 @@
         "fetched": false
       },
       "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -499,7 +507,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:perpusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = KUCOIN:PERPUSDTM;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar c = MEXC:PERP_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar d = OKEX:PERP-USDT-SWAP;line(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:perpusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:PERPUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:PERP_USDT_FUTURES;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KUCOIN:PERPUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:PERP_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = OKEX:PERP-USDT-SWAP;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -543,7 +551,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:perpusdt;\n\nvar b = BINANCE:perpbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:PERPUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:PERPUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = COINBASE:PERP-USD;\n\nvar f = COINBASE:PERP-USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = HITBTC:PERPUSD;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = KRAKEN:PERP/USD;line(cum(h.vbuy-h.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = KUCOIN:PERP-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar j = MEXC:PERPUSDT;line(cum(j.vbuy-j.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar k = OKEX:PERP-USDT;\n\nvar l = OKEX:PERP-USDC;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:perpusdt;\n\nvar b = BINANCE:perpbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:PERPUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITSTAMP:perpusd;line(cum(d.vbuy-d.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = BYBIT:PERPUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:PERP-USD;\n\nvar g = COINBASE:PERP-USDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = GATEIO:PERP_USDT_SPOT;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = HITBTC:PERPUSD;line(cum(i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar j = KRAKEN:PERP/USD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar k = KUCOIN:PERP-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar l = OKEX:PERP-USDT;line(cum(l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -643,8 +651,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:perpusdt;\n\nvar b = COINALYZE_OI:OKEX:PERP-USDT-SWAP;line(a.close+b.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:perpusdt;\n\nvar b = COINALYZE_PFR:OKEX:PERP-USDT-SWAP;line(a.close+b.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:perpusdt;\n\nvar b = COINALYZE_OI:BYBIT:PERPUSDT;\n\nvar c = COINALYZE_OI:OKEX:PERP-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:perpusdt;\n\nvar b = COINALYZE_PFR:BYBIT:PERPUSDT;\n\nvar c = COINALYZE_PFR:OKEX:PERP-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -905,20 +913,22 @@
       "hiddenMarkets": {
         "BINANCE:perpusdt": false,
         "BYBIT:PERPUSDT-SPOT": false,
+        "BYBIT:PERPUSDT": false,
         "BINANCE:perpbusd": false,
         "BINANCE_FUTURES:perpusdt": false,
         "BITGET:PERPUSDT_SPBL": false,
+        "BITSTAMP:perpusd": false,
         "COINBASE:PERP-USD": false,
         "COINBASE:PERP-USDT": false,
+        "GATEIO:PERP_USDT_SPOT": false,
+        "GATEIO:PERP_USDT_FUTURES": false,
         "HITBTC:PERPUSD": false,
         "KRAKEN:PERP/USD": false,
         "KUCOIN:PERP-USDT": false,
         "KUCOIN:PERPUSDTM": false,
-        "MEXC:PERPUSDT": false,
         "MEXC:PERP_USDT": false,
         "OKEX:PERP-USDT": false,
-        "OKEX:PERP-USDT-SWAP": false,
-        "OKEX:PERP-USDC": false
+        "OKEX:PERP-USDT-SWAP": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
