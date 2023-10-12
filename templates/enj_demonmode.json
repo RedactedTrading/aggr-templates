@@ -21,20 +21,23 @@
             "BINANCE_FUTURES:enjusdt",
             "BITGET:ENJUSDT_SPBL",
             "BITGET:ENJUSDT_UMCBL",
-            "COINBASE:ENJ-USDT",
+            "BITSTAMP:enjusd",
             "COINBASE:ENJ-USD",
+            "COINBASE:ENJ-USDT",
+            "GATEIO:ENJ_USDT_SPOT",
+            "GATEIO:ENJ_USDT_FUTURES",
             "HITBTC:ENJUSD",
             "KRAKEN:ENJ/USD",
             "KRAKEN:PF_ENJUSD",
             "KUCOIN:ENJ-USDT",
             "KUCOIN:ENJUSDTM",
+            "MEXC:ENJUSDT",
             "MEXC:ENJ_USDT",
             "OKEX:ENJ-USDT",
-            "OKEX:ENJ-USDT-SWAP",
             "BITHUMB:ENJ_KRW",
             "BTCTURK:ENJTRY",
             "HITBTC:ENJUSDC",
-            "UPBIT:KRW-ENJ"
+            "UPBIT:BTC-ENJ"
           ],
           "zoom": 1
         },
@@ -47,10 +50,10 @@
             "BYBIT:ENJUSDT",
             "BINANCE_FUTURES:enjusdt",
             "BITGET:ENJUSDT_UMCBL",
+            "GATEIO:ENJ_USDT_FUTURES",
             "KRAKEN:PF_ENJUSD",
             "KUCOIN:ENJUSDTM",
-            "MEXC:ENJ_USDT",
-            "OKEX:ENJ-USDT-SWAP"
+            "MEXC:ENJ_USDT"
           ]
         },
         "trades2": {
@@ -63,16 +66,19 @@
             "BYBIT:ENJUSDT-SPOT",
             "BINANCE:enjbusd",
             "BITGET:ENJUSDT_SPBL",
-            "COINBASE:ENJ-USDT",
+            "BITSTAMP:enjusd",
             "COINBASE:ENJ-USD",
+            "COINBASE:ENJ-USDT",
+            "GATEIO:ENJ_USDT_SPOT",
             "HITBTC:ENJUSD",
             "KRAKEN:ENJ/USD",
             "KUCOIN:ENJ-USDT",
+            "MEXC:ENJUSDT",
             "OKEX:ENJ-USDT",
             "BITHUMB:ENJ_KRW",
             "BTCTURK:ENJTRY",
             "HITBTC:ENJUSDC",
-            "UPBIT:KRW-ENJ"
+            "UPBIT:BTC-ENJ"
           ]
         }
       },
@@ -353,7 +359,7 @@
         "fetched": false
       },
       "BITSTAMP": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BYBIT": {
@@ -414,6 +420,10 @@
         "fetched": false
       },
       "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -517,7 +527,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:enjusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:ENJUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:ENJUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_ENJUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:ENJUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:ENJ_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:ENJ-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:enjusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:ENJUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:ENJUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:ENJ_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KRAKEN:PF_ENJUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:ENJUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:ENJ_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -561,7 +571,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:enjusdt;\n\nvar b = BINANCE:enjbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:ENJUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:ENJ_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = BTCTURK:ENJTRY;line(cum(e.vbuy-e.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BYBIT:ENJUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:ENJ-USDT;\n\nvar h = COINBASE:ENJ-USD;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar i = HITBTC:ENJUSD;\n\nvar j = HITBTC:ENJUSDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar k = KRAKEN:ENJ/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar l = KUCOIN:ENJ-USDT;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar m = OKEX:ENJ-USDT;line(cum(m.vbuy-m.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar n = UPBIT:KRW-ENJ;line(cum(n.vbuy-n.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:enjusdt;\n\nvar b = BINANCE:enjbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:ENJUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:ENJ_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BITSTAMP:enjusd;line(cum(e.vbuy-e.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = BTCTURK:ENJTRY;line(cum(f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = BYBIT:ENJUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = COINBASE:ENJ-USD;\n\nvar i = COINBASE:ENJ-USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar j = GATEIO:ENJ_USDT_SPOT;line(cum(j.vbuy-j.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar k = HITBTC:ENJUSD;\n\nvar l = HITBTC:ENJUSDC;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar m = KRAKEN:ENJ/USD;line(cum(m.vbuy-m.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar n = KUCOIN:ENJ-USDT;line(cum(n.vbuy-n.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar o = MEXC:ENJUSDT;line(cum(o.vbuy-o.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar p = OKEX:ENJ-USDT;line(cum(p.vbuy-p.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar q = UPBIT:BTC-ENJ;line(cum(q.vbuy-q.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -661,8 +671,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:enjusdt;\n\nvar b = COINALYZE_OI:BYBIT:ENJUSDT;\n\nvar c = COINALYZE_OI:OKEX:ENJ-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:enjusdt;\n\nvar b = COINALYZE_PFR:BYBIT:ENJUSDT;\n\nvar c = COINALYZE_PFR:OKEX:ENJ-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:enjusdt;\n\nvar b = COINALYZE_OI:BYBIT:ENJUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:enjusdt;\n\nvar b = COINALYZE_PFR:BYBIT:ENJUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -928,20 +938,23 @@
         "BINANCE_FUTURES:enjusdt": false,
         "BITGET:ENJUSDT_SPBL": false,
         "BITGET:ENJUSDT_UMCBL": false,
-        "COINBASE:ENJ-USDT": false,
+        "BITSTAMP:enjusd": false,
         "COINBASE:ENJ-USD": false,
+        "COINBASE:ENJ-USDT": false,
+        "GATEIO:ENJ_USDT_SPOT": false,
+        "GATEIO:ENJ_USDT_FUTURES": false,
         "HITBTC:ENJUSD": false,
         "KRAKEN:ENJ/USD": false,
         "KRAKEN:PF_ENJUSD": false,
         "KUCOIN:ENJ-USDT": false,
         "KUCOIN:ENJUSDTM": false,
+        "MEXC:ENJUSDT": false,
         "MEXC:ENJ_USDT": false,
         "OKEX:ENJ-USDT": false,
-        "OKEX:ENJ-USDT-SWAP": false,
         "BITHUMB:ENJ_KRW": true,
         "BTCTURK:ENJTRY": true,
         "HITBTC:ENJUSDC": false,
-        "UPBIT:KRW-ENJ": true
+        "UPBIT:BTC-ENJ": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
@@ -1031,8 +1044,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:ENJ-USDT": 0.5,
-        "COINBASE:ENJ-USD": 0.5
+        "COINBASE:ENJ-USD": 0.5,
+        "COINBASE:ENJ-USDT": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1132,8 +1145,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:ENJ-USDT": 0.5,
-        "COINBASE:ENJ-USD": 0.5
+        "COINBASE:ENJ-USD": 0.5,
+        "COINBASE:ENJ-USDT": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
