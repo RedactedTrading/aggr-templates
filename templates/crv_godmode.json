@@ -22,8 +22,11 @@
             "BITFINEX:CRVUSD",
             "BITGET:CRVUSDT_SPBL",
             "BITGET:CRVUSDT_UMCBL",
+            "BITSTAMP:crvusd",
             "BTCTURK:CRVUSDT",
             "COINBASE:CRV-USD",
+            "GATEIO:CRV_USDT_SPOT",
+            "GATEIO:CRV_USDT_FUTURES",
             "HITBTC:CRVUSD",
             "KRAKEN:CRV/USD",
             "KRAKEN:PF_CRVUSD",
@@ -37,7 +40,8 @@
             "BITHUMB:CRV_KRW",
             "BTCTURK:CRVTRY",
             "HITBTC:CRVUSDC",
-            "OKEX:CRV-USDC"
+            "OKEX:CRV-USDC",
+            "UPBIT:BTC-CRV"
           ],
           "zoom": 1
         },
@@ -50,6 +54,7 @@
             "BYBIT:CRVUSDT",
             "BINANCE_FUTURES:crvusdt",
             "BITGET:CRVUSDT_UMCBL",
+            "GATEIO:CRV_USDT_FUTURES",
             "KRAKEN:PF_CRVUSD",
             "KUCOIN:CRVUSDTM",
             "MEXC:CRV_USDT",
@@ -68,8 +73,10 @@
             "BINANCE:crvbusd",
             "BITFINEX:CRVUSD",
             "BITGET:CRVUSDT_SPBL",
+            "BITSTAMP:crvusd",
             "BTCTURK:CRVUSDT",
             "COINBASE:CRV-USD",
+            "GATEIO:CRV_USDT_SPOT",
             "HITBTC:CRVUSD",
             "KRAKEN:CRV/USD",
             "KUCOIN:CRV-USDT",
@@ -78,7 +85,8 @@
             "BITHUMB:CRV_KRW",
             "BTCTURK:CRVTRY",
             "HITBTC:CRVUSDC",
-            "OKEX:CRV-USDC"
+            "OKEX:CRV-USDC",
+            "UPBIT:BTC-CRV"
           ]
         }
       },
@@ -359,7 +367,7 @@
         "fetched": false
       },
       "BITSTAMP": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BYBIT": {
@@ -416,7 +424,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITGET": {
@@ -424,6 +432,10 @@
         "fetched": false
       },
       "BTCTURK": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -523,7 +535,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:crvusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:CRVUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:CRVUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_CRVUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = KUCOIN:CRVUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar f = MEXC:CRV_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar g = OKEX:CRV-USD-SWAP;\n\nvar h = OKEX:CRV-USDT-SWAP;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:crvusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:CRVUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:CRVUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:CRV_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KRAKEN:PF_CRVUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:CRVUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:CRV_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = OKEX:CRV-USD-SWAP;\n\nvar i = OKEX:CRV-USDT-SWAP;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -567,7 +579,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:crvusdt;\n\nvar b = BINANCE:crvbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:CRVUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:CRVUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:CRV_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = BTCTURK:CRVUSDT;\n\nvar g = BTCTURK:CRVTRY;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar h = BYBIT:CRVUSDT-SPOT;line(cum(h.vbuy-h.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar i = COINBASE:CRV-USD;line(cum(i.vbuy-i.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar j = HITBTC:CRVUSD;\n\nvar k = HITBTC:CRVUSDC;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar l = KRAKEN:CRV/USD;line(cum(l.vbuy-l.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar m = KUCOIN:CRV-USDT;line(cum(m.vbuy-m.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar n = MEXC:CRVUSDT;line(cum(n.vbuy-n.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar o = OKEX:CRV-USDT;\n\nvar p = OKEX:CRV-USDC;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:crvusdt;\n\nvar b = BINANCE:crvbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:CRVUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:CRVUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:CRV_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BITSTAMP:crvusd;line(cum(f.vbuy-f.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = BTCTURK:CRVUSDT;\n\nvar h = BTCTURK:CRVTRY;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar i = BYBIT:CRVUSDT-SPOT;line(cum(i.vbuy-i.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar j = COINBASE:CRV-USD;line(cum(j.vbuy-j.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = GATEIO:CRV_USDT_SPOT;line(cum(k.vbuy-k.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar l = HITBTC:CRVUSD;\n\nvar m = HITBTC:CRVUSDC;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar n = KRAKEN:CRV/USD;line(cum(n.vbuy-n.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar o = KUCOIN:CRV-USDT;line(cum(o.vbuy-o.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar p = MEXC:CRVUSDT;line(cum(p.vbuy-p.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar q = OKEX:CRV-USDT;\n\nvar r = OKEX:CRV-USDC;line(cum(q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar s = UPBIT:BTC-CRV;line(cum(s.vbuy-s.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -667,8 +679,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:crvusdt;\n\nvar b = COINALYZE_OI:BYBIT:CRVUSDT;\n\nvar c = COINALYZE_OI:OKEX:CRV-USD-SWAP;\n\nvar d = COINALYZE_OI:OKEX:CRV-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:crvusdt;\n\nvar b = COINALYZE_PFR:BYBIT:CRVUSDT;\n\nvar c = COINALYZE_PFR:OKEX:CRV-USD-SWAP;\n\nvar d = COINALYZE_PFR:OKEX:CRV-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:crvusdt;\n\nvar b = COINALYZE_OI:BYBIT:CRVUSDT;\n\nvar c = COINALYZE_OI:OKEX:CRV-USD-SWAP;\n\nvar d = COINALYZE_OI:OKEX:CRV-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:crvusdt;\n\nvar b = COINALYZE_PFR:BYBIT:CRVUSDT;\n\nvar c = COINALYZE_PFR:OKEX:CRV-USD-SWAP;\n\nvar d = COINALYZE_PFR:OKEX:CRV-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -935,8 +947,11 @@
         "BITFINEX:CRVUSD": false,
         "BITGET:CRVUSDT_SPBL": false,
         "BITGET:CRVUSDT_UMCBL": false,
+        "BITSTAMP:crvusd": false,
         "BTCTURK:CRVUSDT": true,
         "COINBASE:CRV-USD": false,
+        "GATEIO:CRV_USDT_SPOT": false,
+        "GATEIO:CRV_USDT_FUTURES": false,
         "HITBTC:CRVUSD": false,
         "KRAKEN:CRV/USD": false,
         "KRAKEN:PF_CRVUSD": false,
@@ -950,7 +965,8 @@
         "BITHUMB:CRV_KRW": true,
         "BTCTURK:CRVTRY": true,
         "HITBTC:CRVUSDC": false,
-        "OKEX:CRV-USDC": false
+        "OKEX:CRV-USDC": false,
+        "UPBIT:BTC-CRV": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
