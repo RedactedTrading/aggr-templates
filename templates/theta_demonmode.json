@@ -21,6 +21,8 @@
             "BINANCE_FUTURES:thetausdt",
             "BINANCE_FUTURES:thetausd_perp",
             "BITGET:THETAUSDT_UMCBL",
+            "GATEIO:THETA_USDT_SPOT",
+            "GATEIO:THETA_USDT_FUTURES",
             "HITBTC:THETAUSD",
             "KRAKEN:PF_THETAUSD",
             "KUCOIN:THETA-USDT",
@@ -46,6 +48,7 @@
             "BINANCE_FUTURES:thetausdt",
             "BINANCE_FUTURES:thetausd_perp",
             "BITGET:THETAUSDT_UMCBL",
+            "GATEIO:THETA_USDT_FUTURES",
             "KRAKEN:PF_THETAUSD",
             "KUCOIN:THETAUSDTM",
             "MEXC:THETA_USDT",
@@ -62,6 +65,7 @@
             "BINANCE:thetausdt",
             "BYBIT:THETAUSDT-SPOT",
             "BINANCE:thetabusd",
+            "GATEIO:THETA_USDT_SPOT",
             "HITBTC:THETAUSD",
             "KUCOIN:THETA-USDT",
             "OKEX:THETA-USDT",
@@ -413,6 +417,10 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -509,7 +517,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:thetausdt;\n\nvar b = BINANCE_FUTURES:thetausd_perp;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:THETAUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:THETAUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KRAKEN:PF_THETAUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = KUCOIN:THETAUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar g = MEXC:THETA_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar h = OKEX:THETA-USD-SWAP;\n\nvar i = OKEX:THETA-USDT-SWAP;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:thetausdt;\n\nvar b = BINANCE_FUTURES:thetausd_perp;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:THETAUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:THETAUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:THETA_USDT_FUTURES;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = KRAKEN:PF_THETAUSD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = KUCOIN:THETAUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:THETA_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar i = OKEX:THETA-USD-SWAP;\n\nvar j = OKEX:THETA-USDT-SWAP;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -553,7 +561,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:thetausdt;\n\nvar b = BINANCE:thetabusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITHUMB:THETA_KRW;line(cum(c.vbuy-c.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar d = BYBIT:THETAUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = HITBTC:THETAUSD;\n\nvar f = HITBTC:THETAUSDC;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = KUCOIN:THETA-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = OKEX:THETA-USDT;\n\nvar i = OKEX:THETA-USDC;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = UPBIT:KRW-THETA;line(cum(j.vbuy-j.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:thetausdt;\n\nvar b = BINANCE:thetabusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITHUMB:THETA_KRW;line(cum(c.vbuy-c.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar d = BYBIT:THETAUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:THETA_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:THETAUSD;\n\nvar g = HITBTC:THETAUSDC;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KUCOIN:THETA-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = OKEX:THETA-USDT;\n\nvar j = OKEX:THETA-USDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar k = UPBIT:KRW-THETA;line(cum(k.vbuy-k.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -653,8 +661,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:thetausdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:thetausd_perp;\n\nvar c = COINALYZE_OI:BYBIT:THETAUSDT;\n\nvar d = COINALYZE_OI:OKEX:THETA-USD-SWAP;\n\nvar e = COINALYZE_OI:OKEX:THETA-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:thetausdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:thetausd_perp;\n\nvar c = COINALYZE_PFR:BYBIT:THETAUSDT;\n\nvar d = COINALYZE_PFR:OKEX:THETA-USD-SWAP;\n\nvar e = COINALYZE_PFR:OKEX:THETA-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close, title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:thetausdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:thetausd_perp;\n\nvar c = COINALYZE_OI:BYBIT:THETAUSDT;\n\nvar d = COINALYZE_OI:OKEX:THETA-USD-SWAP;\n\nvar e = COINALYZE_OI:OKEX:THETA-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:thetausdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:thetausd_perp;\n\nvar c = COINALYZE_PFR:BYBIT:THETAUSDT;\n\nvar d = COINALYZE_PFR:OKEX:THETA-USD-SWAP;\n\nvar e = COINALYZE_PFR:OKEX:THETA-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -920,6 +928,8 @@
         "BINANCE_FUTURES:thetausdt": false,
         "BINANCE_FUTURES:thetausd_perp": false,
         "BITGET:THETAUSDT_UMCBL": false,
+        "GATEIO:THETA_USDT_SPOT": false,
+        "GATEIO:THETA_USDT_FUTURES": false,
         "HITBTC:THETAUSD": false,
         "KRAKEN:PF_THETAUSD": false,
         "KUCOIN:THETA-USDT": false,
