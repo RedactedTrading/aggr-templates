@@ -15,7 +15,8 @@
           "type": "chart",
           "markets": [
             "BYBIT:MDAOUSDT-SPOT",
-            "BITGET:MDAOUSDT_SPBL"
+            "BITGET:MDAOUSDT_SPBL",
+            "GATEIO:MDAO_USDT_SPOT"
           ],
           "zoom": 1
         },
@@ -33,7 +34,8 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:MDAOUSDT-SPOT",
-            "BITGET:MDAOUSDT_SPBL"
+            "BITGET:MDAOUSDT_SPBL",
+            "GATEIO:MDAO_USDT_SPOT"
           ]
         }
       },
@@ -377,6 +379,10 @@
       "BITGET": {
         "disabled": false,
         "fetched": false
+      },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -510,7 +516,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:MDAOUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:MDAOUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:MDAOUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:MDAOUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:MDAO_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -871,7 +877,8 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:MDAOUSDT-SPOT": false,
-        "BITGET:MDAOUSDT_SPBL": false
+        "BITGET:MDAOUSDT_SPBL": false,
+        "GATEIO:MDAO_USDT_SPOT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
