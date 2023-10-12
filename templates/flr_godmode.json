@@ -18,8 +18,12 @@
             "BYBIT:FLRUSDT",
             "BITFINEX:FLRUSD",
             "BITMEX:FLRUSD",
+            "BITSTAMP:flrusd",
             "BTCTURK:FLRUSDT",
             "COINBASE:FLR-USD",
+            "GATEIO:FLR_USDT_SPOT",
+            "GATEIO:FLR_USDT_FUTURES",
+            "HITBTC:FLRUSDT",
             "KRAKEN:FLR/USD",
             "KRAKEN:PF_FLRUSD",
             "KUCOIN:FLR-USDT",
@@ -40,6 +44,7 @@
           "markets": [
             "BYBIT:FLRUSDT",
             "BITMEX:FLRUSD",
+            "GATEIO:FLR_USDT_FUTURES",
             "KRAKEN:PF_FLRUSD",
             "MEXC:FLR_USDT"
           ]
@@ -52,8 +57,11 @@
           "markets": [
             "BYBIT:FLRUSDT-SPOT",
             "BITFINEX:FLRUSD",
+            "BITSTAMP:flrusd",
             "BTCTURK:FLRUSDT",
             "COINBASE:FLR-USD",
+            "GATEIO:FLR_USDT_SPOT",
+            "HITBTC:FLRUSDT",
             "KRAKEN:FLR/USD",
             "KUCOIN:FLR-USDT",
             "OKEX:FLR-USDT",
@@ -341,7 +349,7 @@
         "fetched": false
       },
       "BITSTAMP": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BYBIT": {
@@ -365,7 +373,7 @@
         "fetched": false
       },
       "HITBTC": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "HUOBI": {
@@ -402,6 +410,10 @@
         "fetched": false
       },
       "BTCTURK": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
         "disabled": false,
         "fetched": false
       },
@@ -501,7 +513,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITMEX:FLRUSD;line(cum(a.vbuy-a.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar b = BYBIT:FLRUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = KRAKEN:PF_FLRUSD;line(cum(c.vbuy-c.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = MEXC:FLR_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITMEX:FLRUSD;line(cum(a.vbuy-a.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar b = BYBIT:FLRUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:FLR_USDT_FUTURES;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KRAKEN:PF_FLRUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar e = MEXC:FLR_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -545,7 +557,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITFINEX:FLRUSD;line(cum(a.vbuy-a.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar b = BITHUMB:FLR_KRW;line(cum(b.vbuy-b.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar c = BTCTURK:FLRUSDT;\n\nvar d = BTCTURK:FLRTRY;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BTURK\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BYBIT:FLRUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:FLR-USD;line(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = KRAKEN:FLR/USD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = KUCOIN:FLR-USDT;\n\nvar i = KUCOIN:FLR-USDC;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(234, 238, 245)\");\n\n\nvar j = OKEX:FLR-USDT;\n\nvar k = OKEX:FLR-USDC;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITFINEX:FLRUSD;line(cum(a.vbuy-a.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar b = BITHUMB:FLR_KRW;line(cum(b.vbuy-b.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar c = BITSTAMP:flrusd;line(cum(c.vbuy-c.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar d = BTCTURK:FLRUSDT;\n\nvar e = BTCTURK:FLRTRY;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar f = BYBIT:FLRUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:FLR-USD;line(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = GATEIO:FLR_USDT_SPOT;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = HITBTC:FLRUSDT;line(cum(i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar j = KRAKEN:FLR/USD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar k = KUCOIN:FLR-USDT;\n\nvar l = KUCOIN:FLR-USDC;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = OKEX:FLR-USDT;\n\nvar n = OKEX:FLR-USDC;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -909,8 +921,12 @@
         "BYBIT:FLRUSDT": false,
         "BITFINEX:FLRUSD": false,
         "BITMEX:FLRUSD": false,
+        "BITSTAMP:flrusd": false,
         "BTCTURK:FLRUSDT": true,
         "COINBASE:FLR-USD": false,
+        "GATEIO:FLR_USDT_SPOT": false,
+        "GATEIO:FLR_USDT_FUTURES": false,
+        "HITBTC:FLRUSDT": false,
         "KRAKEN:FLR/USD": false,
         "KRAKEN:PF_FLRUSD": false,
         "KUCOIN:FLR-USDT": false,
