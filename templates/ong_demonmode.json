@@ -15,6 +15,8 @@
           "type": "chart",
           "markets": [
             "BINANCE:ongusdt",
+            "GATEIO:ONG_USDT_SPOT",
+            "GATEIO:ONG_USDT_FUTURES",
             "HITBTC:ONGUSD",
             "MEXC:ONGUSDT",
             "BITHUMB:ONG_KRW",
@@ -27,7 +29,9 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "GATEIO:ONG_USDT_FUTURES"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -36,6 +40,7 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:ongusdt",
+            "GATEIO:ONG_USDT_SPOT",
             "HITBTC:ONGUSD",
             "MEXC:ONGUSDT",
             "BITHUMB:ONG_KRW",
@@ -380,6 +385,10 @@
         "disabled": false,
         "fetched": false
       },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
       "MEXC": {
         "disabled": false,
         "fetched": false
@@ -476,7 +485,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = GATEIO:ONG_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -520,7 +529,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ongusdt;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = BITHUMB:ONG_KRW;line(cum(b.vbuy-b.vsell), title=\"BHUMB\", color=\"rgb(89, 157, 208)\");\n\n\nvar c = HITBTC:ONGUSD;line(cum(c.vbuy-c.vsell), title=\"HBTC\", color=\"rgb(242, 113, 39)\");\n\n\nvar d = MEXC:ONGUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(222, 144, 177)\");\n\n\nvar e = UPBIT:KRW-ONG;line(cum(e.vbuy-e.vsell), title=\"UPB\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ongusdt;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = BITHUMB:ONG_KRW;line(cum(b.vbuy-b.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar c = GATEIO:ONG_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = HITBTC:ONGUSD;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = MEXC:ONGUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = UPBIT:KRW-ONG;line(cum(f.vbuy-f.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -881,6 +890,8 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:ongusdt": false,
+        "GATEIO:ONG_USDT_SPOT": false,
+        "GATEIO:ONG_USDT_FUTURES": false,
         "HITBTC:ONGUSD": false,
         "MEXC:ONGUSDT": false,
         "BITHUMB:ONG_KRW": true,
