@@ -16,7 +16,10 @@
           "markets": [
             "BINANCE:asrusdt",
             "BINANCE:asrbusd",
-            "BITGET:ASRUSDT_SPBL"
+            "BITGET:ASRUSDT_SPBL",
+            "BTCTURK:ASRUSDT",
+            "GATEIO:ASR_USDT_SPOT",
+            "BTCTURK:ASRTRY"
           ],
           "zoom": 1
         },
@@ -35,7 +38,10 @@
           "markets": [
             "BINANCE:asrusdt",
             "BINANCE:asrbusd",
-            "BITGET:ASRUSDT_SPBL"
+            "BITGET:ASRUSDT_SPBL",
+            "BTCTURK:ASRUSDT",
+            "GATEIO:ASR_USDT_SPOT",
+            "BTCTURK:ASRTRY"
           ]
         }
       },
@@ -379,6 +385,14 @@
       "BITGET": {
         "disabled": false,
         "fetched": false
+      },
+      "BTCTURK": {
+        "disabled": false,
+        "fetched": false
+      },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -512,7 +526,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:asrusdt;\n\nvar b = BINANCE:asrbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:ASRUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:asrusdt;\n\nvar b = BINANCE:asrbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:ASRUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BTCTURK:ASRUSDT;\n\nvar e = BTCTURK:ASRTRY;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar f = GATEIO:ASR_USDT_SPOT;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -874,7 +888,10 @@
       "hiddenMarkets": {
         "BINANCE:asrusdt": false,
         "BINANCE:asrbusd": false,
-        "BITGET:ASRUSDT_SPBL": false
+        "BITGET:ASRUSDT_SPBL": false,
+        "BTCTURK:ASRUSDT": true,
+        "GATEIO:ASR_USDT_SPOT": false,
+        "BTCTURK:ASRTRY": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
