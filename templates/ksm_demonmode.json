@@ -23,7 +23,6 @@
             "BITGET:KSMUSDT_SPBL",
             "BITGET:KSMUSDT_UMCBL",
             "COINBASE:KSM-USD",
-            "COINBASE:KSM-USDT",
             "GATEIO:KSM_USDT_SPOT",
             "GATEIO:KSM_USDT_FUTURES",
             "HITBTC:KSMUSD",
@@ -70,7 +69,6 @@
             "BITFINEX:KSMUSD",
             "BITGET:KSMUSDT_SPBL",
             "COINBASE:KSM-USD",
-            "COINBASE:KSM-USDT",
             "GATEIO:KSM_USDT_SPOT",
             "HITBTC:KSMUSD",
             "KRAKEN:KSM/USD",
@@ -567,7 +565,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ksmusdt;\n\nvar b = BINANCE:ksmbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:KSMUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:KSMUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:KSM_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BYBIT:KSMUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:KSM-USD;\n\nvar h = COINBASE:KSM-USDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = GATEIO:KSM_USDT_SPOT;line(cum(i.vbuy-i.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar j = HITBTC:KSMUSD;line(cum(j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar k = KRAKEN:KSM/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar l = KUCOIN:KSM-USDT;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = MEXC:KSMUSDT;line(cum(m.vbuy-m.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar n = OKEX:KSM-USDT;\n\nvar o = OKEX:KSM-USDC;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ksmusdt;\n\nvar b = BINANCE:ksmbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:KSMUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:KSMUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:KSM_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BYBIT:KSMUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:KSM-USD;line(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = GATEIO:KSM_USDT_SPOT;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = HITBTC:KSMUSD;line(cum(i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar j = KRAKEN:KSM/USD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar k = KUCOIN:KSM-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar l = MEXC:KSMUSDT;line(cum(l.vbuy-l.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar m = OKEX:KSM-USDT;\n\nvar n = OKEX:KSM-USDC;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -936,7 +934,6 @@
         "BITGET:KSMUSDT_SPBL": false,
         "BITGET:KSMUSDT_UMCBL": false,
         "COINBASE:KSM-USD": false,
-        "COINBASE:KSM-USDT": false,
         "GATEIO:KSM_USDT_SPOT": false,
         "GATEIO:KSM_USDT_FUTURES": false,
         "HITBTC:KSMUSD": false,
@@ -1040,8 +1037,7 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:KSM-USD": 0.5,
-        "COINBASE:KSM-USDT": 0.5
+        "COINBASE:KSM-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1141,8 +1137,7 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:KSM-USD": 0.5,
-        "COINBASE:KSM-USDT": 0.5
+        "COINBASE:KSM-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
