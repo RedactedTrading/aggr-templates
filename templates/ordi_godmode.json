@@ -18,7 +18,6 @@
             "BYBIT:ORDIUSDT",
             "BITGET:ORDIUSDT_SPBL",
             "BITGET:ORDIUSDT_UMCBL",
-            "BITMEX:ORDIUSD",
             "GATEIO:ORDI_USDT_SPOT",
             "GATEIO:ORDI_USDT_FUTURES",
             "KUCOIN:ORDI-USDT",
@@ -37,7 +36,6 @@
           "markets": [
             "BYBIT:ORDIUSDT",
             "BITGET:ORDIUSDT_UMCBL",
-            "BITMEX:ORDIUSD",
             "GATEIO:ORDI_USDT_FUTURES",
             "KUCOIN:ORDIUSDTM",
             "MEXC:ORDI_USDT",
@@ -331,7 +329,7 @@
         "fetched": false
       },
       "BITMEX": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "BITSTAMP": {
@@ -495,7 +493,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITGET:ORDIUSDT_UMCBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BITMEX:ORDIUSD;line(cum(b.vbuy-b.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar c = BYBIT:ORDIUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:ORDI_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KUCOIN:ORDIUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:ORDI_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = OKEX:ORDI-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:ORDIUSDT_UMCBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:ORDIUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:ORDI_USDT_FUTURES;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KUCOIN:ORDIUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:ORDI_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = OKEX:ORDI-USDT-SWAP;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -639,8 +637,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BITMEX:ORDIUSD;\n\nvar b = COINALYZE_OI:BYBIT:ORDIUSDT;\n\nvar c = COINALYZE_OI:OKEX:ORDI-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BITMEX:ORDIUSD;\n\nvar b = COINALYZE_PFR:BYBIT:ORDIUSDT;\n\nvar c = COINALYZE_PFR:OKEX:ORDI-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BYBIT:ORDIUSDT;\n\nvar b = COINALYZE_OI:OKEX:ORDI-USDT-SWAP;line(a.close+b.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BYBIT:ORDIUSDT;\n\nvar b = COINALYZE_PFR:OKEX:ORDI-USDT-SWAP;line(a.close+b.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -903,7 +901,6 @@
         "BYBIT:ORDIUSDT": false,
         "BITGET:ORDIUSDT_SPBL": false,
         "BITGET:ORDIUSDT_UMCBL": false,
-        "BITMEX:ORDIUSD": false,
         "GATEIO:ORDI_USDT_SPOT": false,
         "GATEIO:ORDI_USDT_FUTURES": false,
         "KUCOIN:ORDI-USDT": false,
