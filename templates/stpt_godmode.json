@@ -17,8 +17,11 @@
             "BINANCE:stptusdt",
             "BYBIT:STPTUSDT",
             "BINANCE:stptbusd",
+            "BINANCE_FUTURES:stptusdt",
             "BITGET:STPTUSDT_SPBL",
             "GATEIO:STPT_USDT_SPOT",
+            "GATEIO:STPT_USDT_FUTURES",
+            "KUCOIN:STPTUSDTM",
             "MEXC:STPTUSDT",
             "MEXC:STPT_USDT",
             "BITHUMB:STPT_KRW",
@@ -34,6 +37,9 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:STPTUSDT",
+            "BINANCE_FUTURES:stptusdt",
+            "GATEIO:STPT_USDT_FUTURES",
+            "KUCOIN:STPTUSDTM",
             "MEXC:STPT_USDT"
           ]
         },
@@ -315,7 +321,7 @@
         "fetched": false
       },
       "BINANCE_FUTURES": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BINANCE_US": {
@@ -367,7 +373,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -495,7 +501,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:STPTUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:STPT_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:stptusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:STPTUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:STPT_USDT_FUTURES;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KUCOIN:STPTUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:STPT_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -639,8 +645,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BYBIT:STPTUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BYBIT:STPTUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:stptusdt;\n\nvar b = COINALYZE_OI:BYBIT:STPTUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:stptusdt;\n\nvar b = COINALYZE_PFR:BYBIT:STPTUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -902,8 +908,11 @@
         "BINANCE:stptusdt": false,
         "BYBIT:STPTUSDT": false,
         "BINANCE:stptbusd": false,
+        "BINANCE_FUTURES:stptusdt": false,
         "BITGET:STPTUSDT_SPBL": false,
         "GATEIO:STPT_USDT_SPOT": false,
+        "GATEIO:STPT_USDT_FUTURES": false,
+        "KUCOIN:STPTUSDTM": false,
         "MEXC:STPTUSDT": false,
         "MEXC:STPT_USDT": false,
         "BITHUMB:STPT_KRW": true,
