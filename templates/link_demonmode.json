@@ -30,8 +30,8 @@
             "BITMEX:LINKUSDT",
             "BITMEX:LINK_USDT",
             "BITSTAMP:linkusd",
-            "COINBASE:LINK-USDT",
             "COINBASE:LINK-USD",
+            "COINBASE:LINK-USDT",
             "GATEIO:LINK_USDT_SPOT",
             "GATEIO:LINK_USDT_FUTURES",
             "HITBTC:LINKUSD",
@@ -94,8 +94,8 @@
             "BYBIT:LINKUSDC-SPOT",
             "BITGET:LINKUSDT_SPBL",
             "BITSTAMP:linkusd",
-            "COINBASE:LINK-USDT",
             "COINBASE:LINK-USD",
+            "COINBASE:LINK-USDT",
             "GATEIO:LINK_USDT_SPOT",
             "HITBTC:LINKUSD",
             "KRAKEN:LINK/USD",
@@ -607,7 +607,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:linkusdt;\n\nvar b = BINANCE:linktusd;\n\nvar c = BINANCE:linkusdc;\n\nvar d = BINANCE:linkbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITGET:LINKUSDT_SPBL;\n\nvar f = BITGET:LINKUSDC_SPBL;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar g = BITHUMB:LINK_KRW;line(cum(g.vbuy-g.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar h = BITSTAMP:linkusd;line(cum(h.vbuy-h.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar i = BTCTURK:LINKTRY;line(cum(i.vbuy-i.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar j = BYBIT:LINKUSDT-SPOT;\n\nvar k = BYBIT:LINKUSDC-SPOT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar l = COINBASE:LINK-USDT;\n\nvar m = COINBASE:LINK-USD;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar n = GATEIO:LINK_USDT_SPOT;line(cum(n.vbuy-n.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar o = HITBTC:LINKUSD;\n\nvar p = HITBTC:LINKUSDC;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar q = KRAKEN:LINK/USD;\n\nvar r = KRAKEN:LINK/USDT;line(cum(q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar s = KUCOIN:LINK-USDT;\n\nvar t = KUCOIN:LINK-USDC;line(cum(s.vbuy-s.vsell+t.vbuy-t.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar u = OKEX:LINK-USDT;\n\nvar v = OKEX:LINK-USDC;line(cum(u.vbuy-u.vsell+v.vbuy-v.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar w = UNISWAPETHEREUM:LINK/WETH;line(cum(w.vbuy-w.vsell), title=\"UNIETH\", color=\"rgb(197, 246, 101)\");\n\n\nvar x = UPBIT:BTC-LINK;\n\nvar y = UPBIT:KRW-LINK;line(cum(x.vbuy-x.vsell+y.vbuy-y.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell+w.vbuy-w.vsell+x.vbuy-x.vsell+y.vbuy-y.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:linkusdt;\n\nvar b = BINANCE:linktusd;\n\nvar c = BINANCE:linkusdc;\n\nvar d = BINANCE:linkbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITGET:LINKUSDT_SPBL;\n\nvar f = BITGET:LINKUSDC_SPBL;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar g = BITHUMB:LINK_KRW;line(cum(g.vbuy-g.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar h = BITSTAMP:linkusd;line(cum(h.vbuy-h.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar i = BTCTURK:LINKTRY;line(cum(i.vbuy-i.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar j = BYBIT:LINKUSDT-SPOT;\n\nvar k = BYBIT:LINKUSDC-SPOT;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar l = COINBASE:LINK-USD;\n\nvar m = COINBASE:LINK-USDT;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar n = GATEIO:LINK_USDT_SPOT;line(cum(n.vbuy-n.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar o = HITBTC:LINKUSD;\n\nvar p = HITBTC:LINKUSDC;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar q = KRAKEN:LINK/USD;\n\nvar r = KRAKEN:LINK/USDT;line(cum(q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar s = KUCOIN:LINK-USDT;\n\nvar t = KUCOIN:LINK-USDC;line(cum(s.vbuy-s.vsell+t.vbuy-t.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar u = OKEX:LINK-USDT;\n\nvar v = OKEX:LINK-USDC;line(cum(u.vbuy-u.vsell+v.vbuy-v.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar w = UNISWAPETHEREUM:LINK/WETH;line(cum(w.vbuy-w.vsell), title=\"UNIETH\", color=\"rgb(25, 76, 188)\");\n\n\nvar x = UPBIT:BTC-LINK;\n\nvar y = UPBIT:KRW-LINK;line(cum(x.vbuy-x.vsell+y.vbuy-y.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell+w.vbuy-w.vsell+x.vbuy-x.vsell+y.vbuy-y.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -983,8 +983,8 @@
         "BITMEX:LINKUSDT": false,
         "BITMEX:LINK_USDT": false,
         "BITSTAMP:linkusd": false,
-        "COINBASE:LINK-USDT": false,
         "COINBASE:LINK-USD": false,
+        "COINBASE:LINK-USDT": false,
         "GATEIO:LINK_USDT_SPOT": false,
         "GATEIO:LINK_USDT_FUTURES": false,
         "HITBTC:LINKUSD": false,
@@ -1096,8 +1096,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:LINK-USDT": 0.5,
-        "COINBASE:LINK-USD": 0.5
+        "COINBASE:LINK-USD": 0.5,
+        "COINBASE:LINK-USDT": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1197,8 +1197,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:LINK-USDT": 0.5,
-        "COINBASE:LINK-USD": 0.5
+        "COINBASE:LINK-USD": 0.5,
+        "COINBASE:LINK-USDT": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
