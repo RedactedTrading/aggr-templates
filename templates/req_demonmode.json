@@ -19,7 +19,6 @@
             "BINANCE:reqbusd",
             "BITFINEX:REQUSD",
             "COINBASE:REQ-USD",
-            "COINBASE:REQ-USDT",
             "GATEIO:REQ_USDT_SPOT",
             "GATEIO:REQ_USDT_FUTURES",
             "HITBTC:REQUSDT",
@@ -51,7 +50,6 @@
             "BINANCE:reqbusd",
             "BITFINEX:REQUSD",
             "COINBASE:REQ-USD",
-            "COINBASE:REQ-USDT",
             "GATEIO:REQ_USDT_SPOT",
             "HITBTC:REQUSDT",
             "KRAKEN:REQ/USD",
@@ -541,7 +539,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:requsdt;\n\nvar b = BINANCE:reqbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:REQUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITHUMB:REQ_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = COINBASE:REQ-USD;\n\nvar f = COINBASE:REQ-USDT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = GATEIO:REQ_USDT_SPOT;line(cum(g.vbuy-g.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar h = HITBTC:REQUSDT;line(cum(h.vbuy-h.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar i = KRAKEN:REQ/USD;line(cum(i.vbuy-i.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar j = KUCOIN:REQ-USDT;line(cum(j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:requsdt;\n\nvar b = BINANCE:reqbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:REQUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITHUMB:REQ_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = COINBASE:REQ-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = GATEIO:REQ_USDT_SPOT;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = HITBTC:REQUSDT;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KRAKEN:REQ/USD;line(cum(h.vbuy-h.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar i = KUCOIN:REQ-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -906,7 +904,6 @@
         "BINANCE:reqbusd": false,
         "BITFINEX:REQUSD": false,
         "COINBASE:REQ-USD": false,
-        "COINBASE:REQ-USDT": false,
         "GATEIO:REQ_USDT_SPOT": false,
         "GATEIO:REQ_USDT_FUTURES": false,
         "HITBTC:REQUSDT": false,
@@ -1003,8 +1000,7 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:REQ-USD": 0.5,
-        "COINBASE:REQ-USDT": 0.5
+        "COINBASE:REQ-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1104,8 +1100,7 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:REQ-USD": 0.5,
-        "COINBASE:REQ-USDT": 0.5
+        "COINBASE:REQ-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
