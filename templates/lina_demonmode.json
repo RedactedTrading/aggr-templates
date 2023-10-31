@@ -27,9 +27,7 @@
             "KUCOIN:LINA-USDT",
             "KUCOIN:LINAUSDTM",
             "MEXC:LINA_USDT",
-            "BITHUMB:LINA_KRW",
-            "HITBTC:LINAUSDC",
-            "UPBIT:BTC-LINA"
+            "HITBTC:LINAUSDC"
           ],
           "zoom": 1
         },
@@ -60,9 +58,7 @@
             "GATEIO:LINA_USDT_SPOT",
             "HITBTC:LINAUSD",
             "KUCOIN:LINA-USDT",
-            "BITHUMB:LINA_KRW",
-            "HITBTC:LINAUSDC",
-            "UPBIT:BTC-LINA"
+            "HITBTC:LINAUSDC"
           ]
         }
       },
@@ -400,7 +396,7 @@
       },
       "_id": "exchanges",
       "UPBIT": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "BITGET": {
@@ -412,10 +408,6 @@
         "fetched": false
       },
       "MEXC": {
-        "disabled": false,
-        "fetched": false
-      },
-      "BITHUMB": {
         "disabled": false,
         "fetched": false
       }
@@ -551,7 +543,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:linausdt;\n\nvar b = BINANCE:linabusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:LINAUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:LINA_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = GATEIO:LINA_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:LINAUSD;\n\nvar g = HITBTC:LINAUSDC;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KUCOIN:LINA-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = UPBIT:BTC-LINA;line(cum(i.vbuy-i.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:linausdt;\n\nvar b = BINANCE:linabusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:LINAUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = GATEIO:LINA_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:LINAUSD;\n\nvar f = HITBTC:LINAUSDC;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = KUCOIN:LINA-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -924,9 +916,7 @@
         "KUCOIN:LINA-USDT": false,
         "KUCOIN:LINAUSDTM": false,
         "MEXC:LINA_USDT": false,
-        "BITHUMB:LINA_KRW": true,
-        "HITBTC:LINAUSDC": false,
-        "UPBIT:BTC-LINA": true
+        "HITBTC:LINAUSDC": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
