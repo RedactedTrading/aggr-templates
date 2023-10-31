@@ -21,7 +21,6 @@
             "BITGET:TRUUSDT_SPBL",
             "BITGET:TRUUSDT_UMCBL",
             "COINBASE:TRU-USD",
-            "COINBASE:TRU-USDT",
             "GATEIO:TRU_USDT_SPOT",
             "GATEIO:TRU_USDT_FUTURES",
             "HITBTC:TRUUSD",
@@ -56,7 +55,6 @@
             "BINANCE:trubusd",
             "BITGET:TRUUSDT_SPBL",
             "COINBASE:TRU-USD",
-            "COINBASE:TRU-USDT",
             "GATEIO:TRU_USDT_SPOT",
             "HITBTC:TRUUSD",
             "KRAKEN:TRU/USD",
@@ -545,7 +543,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:truusdt;\n\nvar b = BINANCE:trubusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:TRUUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:TRU-USD;\n\nvar e = COINBASE:TRU-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = GATEIO:TRU_USDT_SPOT;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = HITBTC:TRUUSD;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KRAKEN:TRU/USD;line(cum(h.vbuy-h.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar i = KUCOIN:TRU-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:truusdt;\n\nvar b = BINANCE:trubusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:TRUUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:TRU-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = GATEIO:TRU_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:TRUUSD;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = KRAKEN:TRU/USD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar h = KUCOIN:TRU-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -912,7 +910,6 @@
         "BITGET:TRUUSDT_SPBL": false,
         "BITGET:TRUUSDT_UMCBL": false,
         "COINBASE:TRU-USD": false,
-        "COINBASE:TRU-USDT": false,
         "GATEIO:TRU_USDT_SPOT": false,
         "GATEIO:TRU_USDT_FUTURES": false,
         "HITBTC:TRUUSD": false,
@@ -1009,8 +1006,7 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:TRU-USD": 0.5,
-        "COINBASE:TRU-USDT": 0.5
+        "COINBASE:TRU-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1110,8 +1106,7 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:TRU-USD": 0.5,
-        "COINBASE:TRU-USDT": 0.5
+        "COINBASE:TRU-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
