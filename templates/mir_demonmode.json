@@ -16,11 +16,9 @@
           "markets": [
             "BINANCE:mirusdt",
             "BINANCE:mirbusd",
-            "BITGET:MIRUSDT_SPBL",
             "GATEIO:MIR_USDT_SPOT",
             "HITBTC:MIRUSD",
             "KRAKEN:MIR/USD",
-            "KUCOIN:MIR-USDT",
             "MEXC:MIRUSDT"
           ],
           "zoom": 1
@@ -40,11 +38,9 @@
           "markets": [
             "BINANCE:mirusdt",
             "BINANCE:mirbusd",
-            "BITGET:MIRUSDT_SPBL",
             "GATEIO:MIR_USDT_SPOT",
             "HITBTC:MIRUSD",
             "KRAKEN:MIR/USD",
-            "KUCOIN:MIR-USDT",
             "MEXC:MIRUSDT"
           ]
         }
@@ -362,7 +358,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "OKEX": {
@@ -384,10 +380,6 @@
       "_id": "exchanges",
       "UPBIT": {
         "disabled": true,
-        "fetched": false
-      },
-      "BITGET": {
-        "disabled": false,
         "fetched": false
       },
       "GATEIO": {
@@ -530,7 +522,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:mirusdt;\n\nvar b = BINANCE:mirbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MIRUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = GATEIO:MIR_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:MIRUSD;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = KRAKEN:MIR/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = KUCOIN:MIR-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:MIRUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:mirusdt;\n\nvar b = BINANCE:mirbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = GATEIO:MIR_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = HITBTC:MIRUSD;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = KRAKEN:MIR/USD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = MEXC:MIRUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -892,11 +884,9 @@
       "hiddenMarkets": {
         "BINANCE:mirusdt": false,
         "BINANCE:mirbusd": false,
-        "BITGET:MIRUSDT_SPBL": false,
         "GATEIO:MIR_USDT_SPOT": false,
         "HITBTC:MIRUSD": false,
         "KRAKEN:MIR/USD": false,
-        "KUCOIN:MIR-USDT": false,
         "MEXC:MIRUSDT": false
       },
       "barSpacing": 0.39437454420364615,
