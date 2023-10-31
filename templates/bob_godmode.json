@@ -17,8 +17,7 @@
             "BYBIT:BOBUSDT-SPOT",
             "KUCOIN:BOB-USDT",
             "KUCOIN:BOBUSDTM",
-            "MEXC:BOBUSDT",
-            "BITMEX:BOBUSD"
+            "MEXC:BOBUSDT"
           ],
           "zoom": 1
         },
@@ -28,8 +27,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "KUCOIN:BOBUSDTM",
-            "BITMEX:BOBUSD"
+            "KUCOIN:BOBUSDTM"
           ]
         },
         "trades2": {
@@ -317,7 +315,7 @@
         "fetched": false
       },
       "BITMEX": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "BITSTAMP": {
@@ -473,7 +471,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITMEX:BOBUSD;line(cum(a.vbuy-a.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar b = KUCOIN:BOBUSDTM;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = KUCOIN:BOBUSDTM;line(cum(a.vbuy-a.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -617,8 +615,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BITMEX:BOBUSD;line(a.close, title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BITMEX:BOBUSD;line(a.close, title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -880,8 +878,7 @@
         "BYBIT:BOBUSDT-SPOT": false,
         "KUCOIN:BOB-USDT": false,
         "KUCOIN:BOBUSDTM": false,
-        "MEXC:BOBUSDT": false,
-        "BITMEX:BOBUSD": false
+        "MEXC:BOBUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
