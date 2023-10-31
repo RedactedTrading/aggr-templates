@@ -15,6 +15,8 @@
           "type": "chart",
           "markets": [
             "BYBIT:BSVUSDT",
+            "BINANCE_FUTURES:bsvusdt",
+            "BITGET:BSVUSDT_SPBL",
             "BITGET:BSVUSDT_UMCBL",
             "GATEIO:BSV_USDT_SPOT",
             "GATEIO:BSV_USDT_FUTURES",
@@ -39,6 +41,7 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:BSVUSDT",
+            "BINANCE_FUTURES:bsvusdt",
             "BITGET:BSVUSDT_UMCBL",
             "GATEIO:BSV_USDT_FUTURES",
             "KUCOIN:BSVUSDTM",
@@ -53,6 +56,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BITGET:BSVUSDT_SPBL",
             "GATEIO:BSV_USDT_SPOT",
             "HITBTC:BSVUSD",
             "OKEX:BSV-USDT",
@@ -325,7 +329,7 @@
         "fetched": false
       },
       "BINANCE_FUTURES": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BINANCE_US": {
@@ -505,7 +509,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITGET:BSVUSDT_UMCBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:BSVUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:BSV_USDT_FUTURES;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KUCOIN:BSVUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:BSV_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = OKEX:BSV-USD-SWAP;\n\nvar g = OKEX:BSV-USDT-SWAP;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:bsvusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:BSVUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:BSVUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:BSV_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KUCOIN:BSVUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:BSV_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = OKEX:BSV-USD-SWAP;\n\nvar h = OKEX:BSV-USDT-SWAP;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -549,7 +553,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITHUMB:BSV_KRW;line(cum(a.vbuy-a.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar b = GATEIO:BSV_USDT_SPOT;line(cum(b.vbuy-b.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar c = HITBTC:BSVUSD;\n\nvar d = HITBTC:BSVUSDC;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = OKEX:BSV-USDT;\n\nvar f = OKEX:BSV-USDC;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar g = UPBIT:KRW-BSV;\n\nvar h = UPBIT:BTC-BSV;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:BSVUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BITHUMB:BSV_KRW;line(cum(b.vbuy-b.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar c = GATEIO:BSV_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = HITBTC:BSVUSD;\n\nvar e = HITBTC:BSVUSDC;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = OKEX:BSV-USDT;\n\nvar g = OKEX:BSV-USDC;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar h = UPBIT:KRW-BSV;\n\nvar i = UPBIT:BTC-BSV;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -649,8 +653,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BYBIT:BSVUSDT;\n\nvar b = COINALYZE_OI:OKEX:BSV-USD-SWAP;\n\nvar c = COINALYZE_OI:OKEX:BSV-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BYBIT:BSVUSDT;\n\nvar b = COINALYZE_PFR:OKEX:BSV-USD-SWAP;\n\nvar c = COINALYZE_PFR:OKEX:BSV-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:bsvusdt;\n\nvar b = COINALYZE_OI:BYBIT:BSVUSDT;\n\nvar c = COINALYZE_OI:OKEX:BSV-USD-SWAP;\n\nvar d = COINALYZE_OI:OKEX:BSV-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:bsvusdt;\n\nvar b = COINALYZE_PFR:BYBIT:BSVUSDT;\n\nvar c = COINALYZE_PFR:OKEX:BSV-USD-SWAP;\n\nvar d = COINALYZE_PFR:OKEX:BSV-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -910,6 +914,8 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:BSVUSDT": false,
+        "BINANCE_FUTURES:bsvusdt": false,
+        "BITGET:BSVUSDT_SPBL": false,
         "BITGET:BSVUSDT_UMCBL": false,
         "GATEIO:BSV_USDT_SPOT": false,
         "GATEIO:BSV_USDT_FUTURES": false,
