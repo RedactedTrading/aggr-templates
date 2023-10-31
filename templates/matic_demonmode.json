@@ -27,8 +27,8 @@
             "BITMEX:MATICUSDT",
             "BITMEX:MATIC_USDT",
             "BITSTAMP:maticusd",
-            "COINBASE:MATIC-USDT",
             "COINBASE:MATIC-USD",
+            "COINBASE:MATIC-USDT",
             "GATEIO:MATIC_USDT_SPOT",
             "GATEIO:MATIC_USDT_FUTURES",
             "HITBTC:MATICUSD",
@@ -87,8 +87,8 @@
             "BYBIT:MATICUSDC-SPOT",
             "BITGET:MATICUSDT_SPBL",
             "BITSTAMP:maticusd",
-            "COINBASE:MATIC-USDT",
             "COINBASE:MATIC-USD",
+            "COINBASE:MATIC-USDT",
             "GATEIO:MATIC_USDT_SPOT",
             "HITBTC:MATICUSD",
             "KRAKEN:MATIC/USD",
@@ -601,7 +601,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:maticusdt;\n\nvar b = BINANCE:maticbusd;\n\nvar c = BINANCE:matictusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar d = BITGET:MATICUSDT_SPBL;\n\nvar e = BITGET:MATICUSDC_SPBL;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = BITHUMB:MATIC_KRW;line(cum(f.vbuy-f.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar g = BITSTAMP:maticusd;line(cum(g.vbuy-g.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = BTCTURK:MATICTRY;line(cum(h.vbuy-h.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar i = BYBIT:MATICUSDT-SPOT;\n\nvar j = BYBIT:MATICUSDC-SPOT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar k = COINBASE:MATIC-USDT;\n\nvar l = COINBASE:MATIC-USD;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar m = GATEIO:MATIC_USDT_SPOT;line(cum(m.vbuy-m.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar n = HITBTC:MATICUSD;\n\nvar o = HITBTC:MATICUSDC;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar p = KRAKEN:MATIC/USD;\n\nvar q = KRAKEN:MATIC/USDT;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar r = KUCOIN:MATIC-USDT;\n\nvar s = KUCOIN:MATIC-USDC;line(cum(r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar t = MEXC:MATICUSDC;line(cum(t.vbuy-t.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar u = OKEX:MATIC-USDT;\n\nvar v = OKEX:MATIC-USDC;line(cum(u.vbuy-u.vsell+v.vbuy-v.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar w = UNISWAPETHEREUM:MATIC/WETH;line(cum(w.vbuy-w.vsell), title=\"UNIETH\", color=\"rgb(197, 246, 101)\");\n\n\nvar x = UPBIT:KRW-MATIC;\n\nvar y = UPBIT:BTC-MATIC;line(cum(x.vbuy-x.vsell+y.vbuy-y.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell+w.vbuy-w.vsell+x.vbuy-x.vsell+y.vbuy-y.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:maticusdt;\n\nvar b = BINANCE:maticbusd;\n\nvar c = BINANCE:matictusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar d = BITGET:MATICUSDT_SPBL;\n\nvar e = BITGET:MATICUSDC_SPBL;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = BITHUMB:MATIC_KRW;line(cum(f.vbuy-f.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar g = BITSTAMP:maticusd;line(cum(g.vbuy-g.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = BTCTURK:MATICTRY;line(cum(h.vbuy-h.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar i = BYBIT:MATICUSDT-SPOT;\n\nvar j = BYBIT:MATICUSDC-SPOT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar k = COINBASE:MATIC-USD;\n\nvar l = COINBASE:MATIC-USDT;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar m = GATEIO:MATIC_USDT_SPOT;line(cum(m.vbuy-m.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar n = HITBTC:MATICUSD;\n\nvar o = HITBTC:MATICUSDC;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar p = KRAKEN:MATIC/USD;\n\nvar q = KRAKEN:MATIC/USDT;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar r = KUCOIN:MATIC-USDT;\n\nvar s = KUCOIN:MATIC-USDC;line(cum(r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar t = MEXC:MATICUSDC;line(cum(t.vbuy-t.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar u = OKEX:MATIC-USDT;\n\nvar v = OKEX:MATIC-USDC;line(cum(u.vbuy-u.vsell+v.vbuy-v.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar w = UNISWAPETHEREUM:MATIC/WETH;line(cum(w.vbuy-w.vsell), title=\"UNIETH\", color=\"rgb(25, 76, 188)\");\n\n\nvar x = UPBIT:KRW-MATIC;\n\nvar y = UPBIT:BTC-MATIC;line(cum(x.vbuy-x.vsell+y.vbuy-y.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell+w.vbuy-w.vsell+x.vbuy-x.vsell+y.vbuy-y.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -974,8 +974,8 @@
         "BITMEX:MATICUSDT": false,
         "BITMEX:MATIC_USDT": false,
         "BITSTAMP:maticusd": false,
-        "COINBASE:MATIC-USDT": false,
         "COINBASE:MATIC-USD": false,
+        "COINBASE:MATIC-USDT": false,
         "GATEIO:MATIC_USDT_SPOT": false,
         "GATEIO:MATIC_USDT_FUTURES": false,
         "HITBTC:MATICUSD": false,
@@ -1087,8 +1087,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:MATIC-USDT": 0.5,
-        "COINBASE:MATIC-USD": 0.5
+        "COINBASE:MATIC-USD": 0.5,
+        "COINBASE:MATIC-USDT": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1188,8 +1188,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:MATIC-USDT": 0.5,
-        "COINBASE:MATIC-USD": 0.5
+        "COINBASE:MATIC-USD": 0.5,
+        "COINBASE:MATIC-USDT": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
