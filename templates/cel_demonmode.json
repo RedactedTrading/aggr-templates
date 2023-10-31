@@ -17,6 +17,7 @@
             "BYBIT:CELUSDT-SPOT",
             "BITGET:CELUSDT_SPBL",
             "GATEIO:CEL_USDT_SPOT",
+            "GATEIO:CEL_USDT_FUTURES",
             "HITBTC:CELUSDT",
             "MEXC:CELUSDT",
             "MEXC:CEL_USDT",
@@ -33,6 +34,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "GATEIO:CEL_USDT_FUTURES",
             "MEXC:CEL_USDT",
             "OKEX:CEL-USDT-SWAP"
           ]
@@ -491,7 +493,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = MEXC:CEL_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar b = OKEX:CEL-USDT-SWAP;line(cum(b.vbuy-b.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = GATEIO:CEL_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar b = MEXC:CEL_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar c = OKEX:CEL-USDT-SWAP;line(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -898,6 +900,7 @@
         "BYBIT:CELUSDT-SPOT": false,
         "BITGET:CELUSDT_SPBL": false,
         "GATEIO:CEL_USDT_SPOT": false,
+        "GATEIO:CEL_USDT_FUTURES": false,
         "HITBTC:CELUSDT": false,
         "MEXC:CELUSDT": false,
         "MEXC:CEL_USDT": false,
