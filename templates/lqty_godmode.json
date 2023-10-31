@@ -20,7 +20,6 @@
             "BITGET:LQTYUSDT_SPBL",
             "BITGET:LQTYUSDT_UMCBL",
             "COINBASE:LQTY-USD",
-            "COINBASE:LQTY-USDT",
             "GATEIO:LQTY_USDT_SPOT",
             "GATEIO:LQTY_USDT_FUTURES",
             "HITBTC:LQTYUSDT",
@@ -54,7 +53,6 @@
             "BINANCE:lqtyusdt",
             "BITGET:LQTYUSDT_SPBL",
             "COINBASE:LQTY-USD",
-            "COINBASE:LQTY-USDT",
             "GATEIO:LQTY_USDT_SPOT",
             "HITBTC:LQTYUSDT",
             "KUCOIN:LQTY-USDT",
@@ -543,7 +541,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:lqtyusdt;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = BITGET:LQTYUSDT_SPBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = COINBASE:LQTY-USD;\n\nvar d = COINBASE:LQTY-USDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = GATEIO:LQTY_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:LQTYUSDT;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = KUCOIN:LQTY-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = OKEX:LQTY-USDT;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:lqtyusdt;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = BITGET:LQTYUSDT_SPBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = COINBASE:LQTY-USD;line(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = GATEIO:LQTY_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:LQTYUSDT;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = KUCOIN:LQTY-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = OKEX:LQTY-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -909,7 +907,6 @@
         "BITGET:LQTYUSDT_SPBL": false,
         "BITGET:LQTYUSDT_UMCBL": false,
         "COINBASE:LQTY-USD": false,
-        "COINBASE:LQTY-USDT": false,
         "GATEIO:LQTY_USDT_SPOT": false,
         "GATEIO:LQTY_USDT_FUTURES": false,
         "HITBTC:LQTYUSDT": false,
@@ -1006,8 +1003,7 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:LQTY-USD": 0.5,
-        "COINBASE:LQTY-USDT": 0.5
+        "COINBASE:LQTY-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1107,8 +1103,7 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:LQTY-USD": 0.5,
-        "COINBASE:LQTY-USDT": 0.5
+        "COINBASE:LQTY-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
