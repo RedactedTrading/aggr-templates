@@ -15,8 +15,12 @@
           "type": "chart",
           "markets": [
             "BINANCE:rifusdt",
+            "BYBIT:RIFUSDT",
+            "BINANCE_FUTURES:rifusdt",
             "GATEIO:RIF_USDT_SPOT",
+            "GATEIO:RIF_USDT_FUTURES",
             "HITBTC:RIFUSD",
+            "KUCOIN:RIFUSDTM",
             "MEXC:RIFUSDT",
             "MEXC:RIF_USDT"
           ],
@@ -28,6 +32,10 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BYBIT:RIFUSDT",
+            "BINANCE_FUTURES:rifusdt",
+            "GATEIO:RIF_USDT_FUTURES",
+            "KUCOIN:RIFUSDTM",
             "MEXC:RIF_USDT"
           ]
         },
@@ -305,7 +313,7 @@
         "fetched": false
       },
       "BINANCE_FUTURES": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BINANCE_US": {
@@ -325,7 +333,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -357,7 +365,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -477,7 +485,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = MEXC:RIF_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:rifusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:RIFUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:RIF_USDT_FUTURES;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KUCOIN:RIFUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:RIF_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -621,8 +629,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:rifusdt;\n\nvar b = COINALYZE_OI:BYBIT:RIFUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:rifusdt;\n\nvar b = COINALYZE_PFR:BYBIT:RIFUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -882,8 +890,12 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:rifusdt": false,
+        "BYBIT:RIFUSDT": false,
+        "BINANCE_FUTURES:rifusdt": false,
         "GATEIO:RIF_USDT_SPOT": false,
+        "GATEIO:RIF_USDT_FUTURES": false,
         "HITBTC:RIFUSD": false,
+        "KUCOIN:RIFUSDTM": false,
         "MEXC:RIFUSDT": false,
         "MEXC:RIF_USDT": false
       },
