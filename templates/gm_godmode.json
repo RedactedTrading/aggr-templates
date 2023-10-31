@@ -18,7 +18,6 @@
             "BINANCE_FUTURES:gmtusd_perp",
             "GATEIO:GM_USDT_SPOT",
             "MEXC:GMUSDT",
-            "OKEX:GM-USDT",
             "BITMEX:GMTUSD"
           ],
           "zoom": 1
@@ -41,8 +40,7 @@
           "markets": [
             "BYBIT:GMUSDT-SPOT",
             "GATEIO:GM_USDT_SPOT",
-            "MEXC:GMUSDT",
-            "OKEX:GM-USDT"
+            "MEXC:GMUSDT"
           ]
         }
       },
@@ -363,7 +361,7 @@
         "fetched": false
       },
       "OKEX": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "PHEMEX": {
@@ -523,7 +521,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:GMUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = GATEIO:GM_USDT_SPOT;line(cum(b.vbuy-b.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar c = MEXC:GMUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar d = OKEX:GM-USDT;line(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:GMUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = GATEIO:GM_USDT_SPOT;line(cum(b.vbuy-b.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar c = MEXC:GMUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -887,7 +885,6 @@
         "BINANCE_FUTURES:gmtusd_perp": false,
         "GATEIO:GM_USDT_SPOT": false,
         "MEXC:GMUSDT": false,
-        "OKEX:GM-USDT": false,
         "BITMEX:GMTUSD": true
       },
       "barSpacing": 0.39437454420364615,
