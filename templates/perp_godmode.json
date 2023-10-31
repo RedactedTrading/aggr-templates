@@ -22,7 +22,6 @@
             "BITGET:PERPUSDT_SPBL",
             "BITSTAMP:perpusd",
             "COINBASE:PERP-USD",
-            "COINBASE:PERP-USDT",
             "GATEIO:PERP_USDT_SPOT",
             "GATEIO:PERP_USDT_FUTURES",
             "HITBTC:PERPUSD",
@@ -61,7 +60,6 @@
             "BITGET:PERPUSDT_SPBL",
             "BITSTAMP:perpusd",
             "COINBASE:PERP-USD",
-            "COINBASE:PERP-USDT",
             "GATEIO:PERP_USDT_SPOT",
             "HITBTC:PERPUSD",
             "KRAKEN:PERP/USD",
@@ -551,7 +549,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:perpusdt;\n\nvar b = BINANCE:perpbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:PERPUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITSTAMP:perpusd;line(cum(d.vbuy-d.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = BYBIT:PERPUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:PERP-USD;\n\nvar g = COINBASE:PERP-USDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = GATEIO:PERP_USDT_SPOT;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = HITBTC:PERPUSD;line(cum(i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar j = KRAKEN:PERP/USD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar k = KUCOIN:PERP-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar l = OKEX:PERP-USDT;line(cum(l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:perpusdt;\n\nvar b = BINANCE:perpbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:PERPUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITSTAMP:perpusd;line(cum(d.vbuy-d.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = BYBIT:PERPUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:PERP-USD;line(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = GATEIO:PERP_USDT_SPOT;line(cum(g.vbuy-g.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar h = HITBTC:PERPUSD;line(cum(h.vbuy-h.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar i = KRAKEN:PERP/USD;line(cum(i.vbuy-i.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar j = KUCOIN:PERP-USDT;line(cum(j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar k = OKEX:PERP-USDT;line(cum(k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -919,7 +917,6 @@
         "BITGET:PERPUSDT_SPBL": false,
         "BITSTAMP:perpusd": false,
         "COINBASE:PERP-USD": false,
-        "COINBASE:PERP-USDT": false,
         "GATEIO:PERP_USDT_SPOT": false,
         "GATEIO:PERP_USDT_FUTURES": false,
         "HITBTC:PERPUSD": false,
@@ -1018,8 +1015,7 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:PERP-USD": 0.5,
-        "COINBASE:PERP-USDT": 0.5
+        "COINBASE:PERP-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1119,8 +1115,7 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:PERP-USD": 0.5,
-        "COINBASE:PERP-USDT": 0.5
+        "COINBASE:PERP-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
