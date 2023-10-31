@@ -15,7 +15,8 @@
           "type": "chart",
           "markets": [
             "BYBIT:MTCUSDT-SPOT",
-            "BITGET:MTCUSDT_SPBL"
+            "BITGET:MTCUSDT_SPBL",
+            "MEXC:MTCUSDT"
           ],
           "zoom": 1
         },
@@ -33,7 +34,8 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:MTCUSDT-SPOT",
-            "BITGET:MTCUSDT_SPBL"
+            "BITGET:MTCUSDT_SPBL",
+            "MEXC:MTCUSDT"
           ]
         }
       },
@@ -377,6 +379,10 @@
       "BITGET": {
         "disabled": false,
         "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -510,7 +516,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:MTCUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:MTCUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:MTCUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:MTCUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = MEXC:MTCUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -871,7 +877,8 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:MTCUSDT-SPOT": false,
-        "BITGET:MTCUSDT_SPBL": false
+        "BITGET:MTCUSDT_SPBL": false,
+        "MEXC:MTCUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
