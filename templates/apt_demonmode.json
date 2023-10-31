@@ -22,8 +22,8 @@
             "BINANCE_FUTURES:aptusdt",
             "BITGET:APTUSDT_SPBL",
             "BITGET:APTUSDT_UMCBL",
-            "COINBASE:APT-USD",
             "COINBASE:APT-USDT",
+            "COINBASE:APT-USD",
             "GATEIO:APT_USDT_SPOT",
             "GATEIO:APT_USDT_FUTURES",
             "HITBTC:APTUSDT",
@@ -71,8 +71,8 @@
             "BINANCE:aptbusd",
             "BYBIT:APTUSDC-SPOT",
             "BITGET:APTUSDT_SPBL",
-            "COINBASE:APT-USD",
             "COINBASE:APT-USDT",
+            "COINBASE:APT-USD",
             "GATEIO:APT_USDT_SPOT",
             "HITBTC:APTUSDT",
             "KRAKEN:APT/USD",
@@ -581,7 +581,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:aptusdt;\n\nvar b = BINANCE:aptbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:APTUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:APTUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:APT_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BTCTURK:APTTRY;line(cum(f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = BYBIT:APTUSDT-SPOT;\n\nvar h = BYBIT:APTUSDC-SPOT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar i = COINBASE:APT-USD;\n\nvar j = COINBASE:APT-USDT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = GATEIO:APT_USDT_SPOT;line(cum(k.vbuy-k.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar l = HITBTC:APTUSDT;line(cum(l.vbuy-l.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar m = KRAKEN:APT/USD;line(cum(m.vbuy-m.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar n = KUCOIN:APT-USDT;line(cum(n.vbuy-n.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar o = OKEX:APT-USDT;\n\nvar p = OKEX:APT-USDC;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar q = PANCAKESWAPAPTOS:APT/USDC;line(cum(q.vbuy-q.vsell), title=\"PCKAPT\", color=\"rgb(197, 246, 101)\");\n\n\nvar r = UPBIT:KRW-APT;\n\nvar s = UPBIT:BTC-APT;line(cum(r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:aptusdt;\n\nvar b = BINANCE:aptbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:APTUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:APTUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:APT_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BTCTURK:APTTRY;line(cum(f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = BYBIT:APTUSDT-SPOT;\n\nvar h = BYBIT:APTUSDC-SPOT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar i = COINBASE:APT-USDT;\n\nvar j = COINBASE:APT-USD;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = GATEIO:APT_USDT_SPOT;line(cum(k.vbuy-k.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar l = HITBTC:APTUSDT;line(cum(l.vbuy-l.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar m = KRAKEN:APT/USD;line(cum(m.vbuy-m.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar n = KUCOIN:APT-USDT;line(cum(n.vbuy-n.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar o = OKEX:APT-USDT;\n\nvar p = OKEX:APT-USDC;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar q = PANCAKESWAPAPTOS:APT/USDC;line(cum(q.vbuy-q.vsell), title=\"PCKAPT\", color=\"rgb(25, 76, 188)\");\n\n\nvar r = UPBIT:KRW-APT;\n\nvar s = UPBIT:BTC-APT;line(cum(r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -949,8 +949,8 @@
         "BINANCE_FUTURES:aptusdt": false,
         "BITGET:APTUSDT_SPBL": false,
         "BITGET:APTUSDT_UMCBL": false,
-        "COINBASE:APT-USD": false,
         "COINBASE:APT-USDT": false,
+        "COINBASE:APT-USD": false,
         "GATEIO:APT_USDT_SPOT": false,
         "GATEIO:APT_USDT_FUTURES": false,
         "HITBTC:APTUSDT": false,
@@ -1057,8 +1057,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:APT-USD": 0.5,
-        "COINBASE:APT-USDT": 0.5
+        "COINBASE:APT-USDT": 0.5,
+        "COINBASE:APT-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1158,8 +1158,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:APT-USD": 0.5,
-        "COINBASE:APT-USDT": 0.5
+        "COINBASE:APT-USDT": 0.5,
+        "COINBASE:APT-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
