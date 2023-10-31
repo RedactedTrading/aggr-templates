@@ -18,6 +18,7 @@
             "BYBIT:GNSUSDT-SPOT",
             "BITGET:GNSUSDT_SPBL",
             "GATEIO:GNS_USDT_SPOT",
+            "GATEIO:GNS_USDT_FUTURES",
             "HITBTC:GNSUSDT",
             "KUCOIN:GNS-USDT",
             "KUCOIN:GNSUSDTM",
@@ -31,6 +32,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "GATEIO:GNS_USDT_FUTURES",
             "KUCOIN:GNSUSDTM",
             "MEXC:GNS_USDT"
           ]
@@ -487,7 +489,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = KUCOIN:GNSUSDTM;line(cum(a.vbuy-a.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar b = MEXC:GNS_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = GATEIO:GNS_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar b = KUCOIN:GNSUSDTM;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar c = MEXC:GNS_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -895,6 +897,7 @@
         "BYBIT:GNSUSDT-SPOT": false,
         "BITGET:GNSUSDT_SPBL": false,
         "GATEIO:GNS_USDT_SPOT": false,
+        "GATEIO:GNS_USDT_FUTURES": false,
         "HITBTC:GNSUSDT": false,
         "KUCOIN:GNS-USDT": false,
         "KUCOIN:GNSUSDTM": false,
