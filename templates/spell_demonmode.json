@@ -22,7 +22,6 @@
             "BITGET:SPELLUSDT_SPBL",
             "BITGET:SPELLUSDT_UMCBL",
             "COINBASE:SPELL-USD",
-            "COINBASE:SPELL-USDT",
             "GATEIO:SPELL_USDT_SPOT",
             "GATEIO:SPELL_USDT_FUTURES",
             "HITBTC:SPELLUSDT",
@@ -59,7 +58,6 @@
             "BINANCE:spellbusd",
             "BITGET:SPELLUSDT_SPBL",
             "COINBASE:SPELL-USD",
-            "COINBASE:SPELL-USDT",
             "GATEIO:SPELL_USDT_SPOT",
             "HITBTC:SPELLUSDT",
             "KRAKEN:SPELL/USD",
@@ -553,7 +551,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:spellusdt;\n\nvar b = BINANCE:spellbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:SPELLUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BTCTURK:SPELLTRY;line(cum(d.vbuy-d.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar e = BYBIT:SPELLUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:SPELL-USD;\n\nvar g = COINBASE:SPELL-USDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = GATEIO:SPELL_USDT_SPOT;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = HITBTC:SPELLUSDT;line(cum(i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar j = KRAKEN:SPELL/USD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar k = OKEX:SPELL-USDT;line(cum(k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:spellusdt;\n\nvar b = BINANCE:spellbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:SPELLUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BTCTURK:SPELLTRY;line(cum(d.vbuy-d.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar e = BYBIT:SPELLUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:SPELL-USD;line(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = GATEIO:SPELL_USDT_SPOT;line(cum(g.vbuy-g.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar h = HITBTC:SPELLUSDT;line(cum(h.vbuy-h.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar i = KRAKEN:SPELL/USD;line(cum(i.vbuy-i.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar j = OKEX:SPELL-USDT;line(cum(j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -921,7 +919,6 @@
         "BITGET:SPELLUSDT_SPBL": false,
         "BITGET:SPELLUSDT_UMCBL": false,
         "COINBASE:SPELL-USD": false,
-        "COINBASE:SPELL-USDT": false,
         "GATEIO:SPELL_USDT_SPOT": false,
         "GATEIO:SPELL_USDT_FUTURES": false,
         "HITBTC:SPELLUSDT": false,
@@ -1019,8 +1016,7 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:SPELL-USD": 0.5,
-        "COINBASE:SPELL-USDT": 0.5
+        "COINBASE:SPELL-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1120,8 +1116,7 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:SPELL-USD": 0.5,
-        "COINBASE:SPELL-USDT": 0.5
+        "COINBASE:SPELL-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
