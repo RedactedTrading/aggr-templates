@@ -21,7 +21,6 @@
             "BITGET:IDEXUSDT_SPBL",
             "BITGET:IDEXUSDT_UMCBL",
             "COINBASE:IDEX-USD",
-            "COINBASE:IDEX-USDT",
             "GATEIO:IDEX_USDT_SPOT",
             "HITBTC:IDEXUSDT",
             "KRAKEN:IDEX/USD",
@@ -53,7 +52,6 @@
             "BINANCE:idexbusd",
             "BITGET:IDEXUSDT_SPBL",
             "COINBASE:IDEX-USD",
-            "COINBASE:IDEX-USDT",
             "GATEIO:IDEX_USDT_SPOT",
             "HITBTC:IDEXUSDT",
             "KRAKEN:IDEX/USD"
@@ -541,7 +539,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:idexusdt;\n\nvar b = BINANCE:idexbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:IDEXUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:IDEX-USD;\n\nvar e = COINBASE:IDEX-USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = GATEIO:IDEX_USDT_SPOT;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = HITBTC:IDEXUSDT;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KRAKEN:IDEX/USD;line(cum(h.vbuy-h.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:idexusdt;\n\nvar b = BINANCE:idexbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:IDEXUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:IDEX-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = GATEIO:IDEX_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:IDEXUSDT;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = KRAKEN:IDEX/USD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -908,7 +906,6 @@
         "BITGET:IDEXUSDT_SPBL": false,
         "BITGET:IDEXUSDT_UMCBL": false,
         "COINBASE:IDEX-USD": false,
-        "COINBASE:IDEX-USDT": false,
         "GATEIO:IDEX_USDT_SPOT": false,
         "HITBTC:IDEXUSDT": false,
         "KRAKEN:IDEX/USD": false,
@@ -1003,8 +1000,7 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:IDEX-USD": 0.5,
-        "COINBASE:IDEX-USDT": 0.5
+        "COINBASE:IDEX-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1104,8 +1100,7 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:IDEX-USD": 0.5,
-        "COINBASE:IDEX-USDT": 0.5
+        "COINBASE:IDEX-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
