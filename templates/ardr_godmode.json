@@ -15,6 +15,7 @@
           "type": "chart",
           "markets": [
             "BINANCE:ardrusdt",
+            "GATEIO:ARDR_USDT_FUTURES",
             "HITBTC:ARDRUSD",
             "UPBIT:BTC-ARDR",
             "UPBIT:KRW-ARDR"
@@ -26,7 +27,9 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "GATEIO:ARDR_USDT_FUTURES"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -377,6 +380,10 @@
       "UPBIT": {
         "disabled": false,
         "fetched": false
+      },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -466,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = GATEIO:ARDR_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -871,6 +878,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:ardrusdt": false,
+        "GATEIO:ARDR_USDT_FUTURES": false,
         "HITBTC:ARDRUSD": false,
         "UPBIT:BTC-ARDR": true,
         "UPBIT:KRW-ARDR": true
