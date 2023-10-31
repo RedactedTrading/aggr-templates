@@ -17,9 +17,7 @@
             "BYBIT:SOSUSDT-SPOT",
             "BITGET:SOSUSDT_SPBL",
             "GATEIO:SOS_USDT_SPOT",
-            "KUCOIN:SOS-USDT",
-            "MEXC:SOSUSDT",
-            "OKEX:SOS-USDT"
+            "MEXC:SOSUSDT"
           ],
           "zoom": 1
         },
@@ -39,9 +37,7 @@
             "BYBIT:SOSUSDT-SPOT",
             "BITGET:SOSUSDT_SPBL",
             "GATEIO:SOS_USDT_SPOT",
-            "KUCOIN:SOS-USDT",
-            "MEXC:SOSUSDT",
-            "OKEX:SOS-USDT"
+            "MEXC:SOSUSDT"
           ]
         }
       },
@@ -358,11 +354,11 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "OKEX": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "PHEMEX": {
@@ -526,7 +522,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:SOSUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:SOSUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:SOS_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KUCOIN:SOS-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:SOSUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = OKEX:SOS-USDT;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:SOSUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:SOSUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:SOS_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = MEXC:SOSUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -889,9 +885,7 @@
         "BYBIT:SOSUSDT-SPOT": false,
         "BITGET:SOSUSDT_SPBL": false,
         "GATEIO:SOS_USDT_SPOT": false,
-        "KUCOIN:SOS-USDT": false,
-        "MEXC:SOSUSDT": false,
-        "OKEX:SOS-USDT": false
+        "MEXC:SOSUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
