@@ -14,8 +14,7 @@
           "name": "",
           "type": "chart",
           "markets": [
-            "BYBIT:SYNRUSDT-SPOT",
-            "KUCOIN:SYNR-USDT"
+            "BYBIT:SYNRUSDT-SPOT"
           ],
           "zoom": 1
         },
@@ -32,8 +31,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BYBIT:SYNRUSDT-SPOT",
-            "KUCOIN:SYNR-USDT"
+            "BYBIT:SYNRUSDT-SPOT"
           ]
         }
       },
@@ -350,7 +348,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "OKEX": {
@@ -506,7 +504,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:SYNRUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = KUCOIN:SYNR-USDT;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:SYNRUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -866,8 +864,7 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
-        "BYBIT:SYNRUSDT-SPOT": false,
-        "KUCOIN:SYNR-USDT": false
+        "BYBIT:SYNRUSDT-SPOT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
