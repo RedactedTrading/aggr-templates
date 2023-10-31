@@ -21,7 +21,6 @@
             "BITGET:ARPAUSDT_SPBL",
             "BITGET:ARPAUSDT_UMCBL",
             "BTCTURK:ARPAUSDT",
-            "COINBASE:ARPA-USDT",
             "COINBASE:ARPA-USD",
             "GATEIO:ARPA_USDT_SPOT",
             "GATEIO:ARPA_USDT_FUTURES",
@@ -63,7 +62,6 @@
             "BINANCE:arpabusd",
             "BITGET:ARPAUSDT_SPBL",
             "BTCTURK:ARPAUSDT",
-            "COINBASE:ARPA-USDT",
             "COINBASE:ARPA-USD",
             "GATEIO:ARPA_USDT_SPOT",
             "HITBTC:ARPAUSD",
@@ -565,7 +563,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:arpausdt;\n\nvar b = BINANCE:arpabusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:ARPAUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:ARPA_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BTCTURK:ARPAUSDT;\n\nvar f = BTCTURK:ARPATRY;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = COINBASE:ARPA-USDT;\n\nvar h = COINBASE:ARPA-USD;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = GATEIO:ARPA_USDT_SPOT;line(cum(i.vbuy-i.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar j = HITBTC:ARPAUSD;line(cum(j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar k = KRAKEN:ARPA/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar l = KUCOIN:ARPA-USDT;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = MEXC:ARPAUSDT;line(cum(m.vbuy-m.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar n = UPBIT:BTC-ARPA;line(cum(n.vbuy-n.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:arpausdt;\n\nvar b = BINANCE:arpabusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:ARPAUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:ARPA_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BTCTURK:ARPAUSDT;\n\nvar f = BTCTURK:ARPATRY;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = COINBASE:ARPA-USD;line(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = GATEIO:ARPA_USDT_SPOT;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = HITBTC:ARPAUSD;line(cum(i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar j = KRAKEN:ARPA/USD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar k = KUCOIN:ARPA-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar l = MEXC:ARPAUSDT;line(cum(l.vbuy-l.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar m = UPBIT:BTC-ARPA;line(cum(m.vbuy-m.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -932,7 +930,6 @@
         "BITGET:ARPAUSDT_SPBL": false,
         "BITGET:ARPAUSDT_UMCBL": false,
         "BTCTURK:ARPAUSDT": true,
-        "COINBASE:ARPA-USDT": false,
         "COINBASE:ARPA-USD": false,
         "GATEIO:ARPA_USDT_SPOT": false,
         "GATEIO:ARPA_USDT_FUTURES": false,
@@ -1035,7 +1032,6 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:ARPA-USDT": 0.5,
         "COINBASE:ARPA-USD": 0.5
       },
       "showThresholdsAsTable": false,
@@ -1136,7 +1132,6 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:ARPA-USDT": 0.5,
         "COINBASE:ARPA-USD": 0.5
       },
       "showThresholdsAsTable": false,
