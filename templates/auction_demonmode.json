@@ -18,7 +18,6 @@
             "BYBIT:AUCTIONUSDT",
             "BINANCE:auctionbusd",
             "BITGET:AUCTIONUSDT_SPBL",
-            "COINBASE:AUCTION-USDT",
             "COINBASE:AUCTION-USD",
             "GATEIO:AUCTION_USDT_SPOT",
             "GATEIO:AUCTION_USDT_FUTURES",
@@ -49,7 +48,6 @@
             "BINANCE:auctionusdt",
             "BINANCE:auctionbusd",
             "BITGET:AUCTIONUSDT_SPBL",
-            "COINBASE:AUCTION-USDT",
             "COINBASE:AUCTION-USD",
             "GATEIO:AUCTION_USDT_SPOT",
             "HITBTC:AUCTIONUSDT",
@@ -539,7 +537,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:auctionusdt;\n\nvar b = BINANCE:auctionbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:AUCTIONUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:AUCTION-USDT;\n\nvar e = COINBASE:AUCTION-USD;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = GATEIO:AUCTION_USDT_SPOT;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = HITBTC:AUCTIONUSDT;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = OKEX:AUCTION-USDT;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar i = UPBIT:BTC-AUCTION;line(cum(i.vbuy-i.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:auctionusdt;\n\nvar b = BINANCE:auctionbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:AUCTIONUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:AUCTION-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = GATEIO:AUCTION_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:AUCTIONUSDT;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = OKEX:AUCTION-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar h = UPBIT:BTC-AUCTION;line(cum(h.vbuy-h.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -903,7 +901,6 @@
         "BYBIT:AUCTIONUSDT": false,
         "BINANCE:auctionbusd": false,
         "BITGET:AUCTIONUSDT_SPBL": false,
-        "COINBASE:AUCTION-USDT": false,
         "COINBASE:AUCTION-USD": false,
         "GATEIO:AUCTION_USDT_SPOT": false,
         "GATEIO:AUCTION_USDT_FUTURES": false,
@@ -1000,7 +997,6 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:AUCTION-USDT": 0.5,
         "COINBASE:AUCTION-USD": 0.5
       },
       "showThresholdsAsTable": false,
@@ -1101,7 +1097,6 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:AUCTION-USDT": 0.5,
         "COINBASE:AUCTION-USD": 0.5
       },
       "showThresholdsAsTable": false,
