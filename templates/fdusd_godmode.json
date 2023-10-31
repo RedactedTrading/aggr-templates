@@ -16,6 +16,7 @@
           "markets": [
             "BINANCE:fdusdusdt",
             "BINANCE:fdusdbusd",
+            "GATEIO:FDUSD_USDT_SPOT",
             "HITBTC:FDUSDUSDT"
           ],
           "zoom": 1
@@ -35,6 +36,7 @@
           "markets": [
             "BINANCE:fdusdusdt",
             "BINANCE:fdusdbusd",
+            "GATEIO:FDUSD_USDT_SPOT",
             "HITBTC:FDUSDUSDT"
           ]
         }
@@ -375,6 +377,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "GATEIO": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -508,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:fdusdusdt;\n\nvar b = BINANCE:fdusdbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = HITBTC:FDUSDUSDT;line(cum(c.vbuy-c.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:fdusdusdt;\n\nvar b = BINANCE:fdusdbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = GATEIO:FDUSD_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = HITBTC:FDUSDUSDT;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -870,6 +876,7 @@
       "hiddenMarkets": {
         "BINANCE:fdusdusdt": false,
         "BINANCE:fdusdbusd": false,
+        "GATEIO:FDUSD_USDT_SPOT": false,
         "HITBTC:FDUSDUSDT": false
       },
       "barSpacing": 0.39437454420364615,
