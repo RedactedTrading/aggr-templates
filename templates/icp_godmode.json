@@ -23,8 +23,8 @@
             "BITFINEX:ICPUSD",
             "BITGET:ICPUSDT_SPBL",
             "BITGET:ICPUSDT_UMCBL",
-            "COINBASE:ICP-USDT",
             "COINBASE:ICP-USD",
+            "COINBASE:ICP-USDT",
             "GATEIO:ICP_USDT_SPOT",
             "GATEIO:ICP_USDT_FUTURES",
             "HITBTC:ICPUSD",
@@ -67,8 +67,8 @@
             "BYBIT:ICPUSDC-SPOT",
             "BITFINEX:ICPUSD",
             "BITGET:ICPUSDT_SPBL",
-            "COINBASE:ICP-USDT",
             "COINBASE:ICP-USD",
+            "COINBASE:ICP-USDT",
             "GATEIO:ICP_USDT_SPOT",
             "HITBTC:ICPUSD",
             "KRAKEN:ICP/USD",
@@ -559,7 +559,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:icpusdt;\n\nvar b = BINANCE:icpbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:ICPUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:ICPUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BYBIT:ICPUSDT-SPOT;\n\nvar f = BYBIT:ICPUSDC-SPOT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:ICP-USDT;\n\nvar h = COINBASE:ICP-USD;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = GATEIO:ICP_USDT_SPOT;line(cum(i.vbuy-i.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar j = HITBTC:ICPUSD;line(cum(j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar k = KRAKEN:ICP/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar l = KUCOIN:ICP-USDT;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = OKEX:ICP-USDT;\n\nvar n = OKEX:ICP-USDC;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:icpusdt;\n\nvar b = BINANCE:icpbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:ICPUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:ICPUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BYBIT:ICPUSDT-SPOT;\n\nvar f = BYBIT:ICPUSDC-SPOT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:ICP-USD;\n\nvar h = COINBASE:ICP-USDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = GATEIO:ICP_USDT_SPOT;line(cum(i.vbuy-i.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar j = HITBTC:ICPUSD;line(cum(j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar k = KRAKEN:ICP/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar l = KUCOIN:ICP-USDT;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = OKEX:ICP-USDT;\n\nvar n = OKEX:ICP-USDC;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -928,8 +928,8 @@
         "BITFINEX:ICPUSD": false,
         "BITGET:ICPUSDT_SPBL": false,
         "BITGET:ICPUSDT_UMCBL": false,
-        "COINBASE:ICP-USDT": false,
         "COINBASE:ICP-USD": false,
+        "COINBASE:ICP-USDT": false,
         "GATEIO:ICP_USDT_SPOT": false,
         "GATEIO:ICP_USDT_FUTURES": false,
         "HITBTC:ICPUSD": false,
@@ -1030,8 +1030,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:ICP-USDT": 0.5,
-        "COINBASE:ICP-USD": 0.5
+        "COINBASE:ICP-USD": 0.5,
+        "COINBASE:ICP-USDT": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1131,8 +1131,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:ICP-USDT": 0.5,
-        "COINBASE:ICP-USD": 0.5
+        "COINBASE:ICP-USD": 0.5,
+        "COINBASE:ICP-USDT": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
