@@ -20,6 +20,7 @@
             "BINANCE_FUTURES:iotausdt",
             "BITGET:IOTAUSDT_UMCBL",
             "GATEIO:IOTA_USDT_SPOT",
+            "GATEIO:IOTA_USDT_FUTURES",
             "HITBTC:IOTAUSD",
             "KUCOIN:IOTA-USDT",
             "MEXC:IOTA_USDT",
@@ -38,6 +39,7 @@
             "BYBIT:IOTAUSDT",
             "BINANCE_FUTURES:iotausdt",
             "BITGET:IOTAUSDT_UMCBL",
+            "GATEIO:IOTA_USDT_FUTURES",
             "MEXC:IOTA_USDT",
             "OKEX:IOTA-USDT-SWAP"
           ]
@@ -495,7 +497,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:iotausdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:IOTAUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:IOTAUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = MEXC:IOTA_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar e = OKEX:IOTA-USDT-SWAP;line(cum(e.vbuy-e.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:iotausdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:IOTAUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:IOTAUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:IOTA_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = MEXC:IOTA_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = OKEX:IOTA-USDT-SWAP;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -905,6 +907,7 @@
         "BINANCE_FUTURES:iotausdt": false,
         "BITGET:IOTAUSDT_UMCBL": false,
         "GATEIO:IOTA_USDT_SPOT": false,
+        "GATEIO:IOTA_USDT_FUTURES": false,
         "HITBTC:IOTAUSD": false,
         "KUCOIN:IOTA-USDT": false,
         "MEXC:IOTA_USDT": false,
