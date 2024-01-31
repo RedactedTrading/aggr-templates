@@ -15,8 +15,11 @@
           "type": "chart",
           "markets": [
             "BINANCE:maskusdt",
+            "BINANCE:maskusdt",
             "BYBIT:MASKUSDT-SPOT",
             "BYBIT:MASKUSDT",
+            "BYBIT:MASKUSDT",
+            "BINANCE:maskbusd",
             "BINANCE:maskbusd",
             "BINANCE_FUTURES:maskusdt",
             "BITGET:MASKUSDT_SPBL",
@@ -33,11 +36,19 @@
             "MEXC:MASK_USDT",
             "OKEX:MASK-USDT",
             "OKEX:MASK-USDT-SWAP",
+            "BINANCE_FUTURES:maskusdt",
+            "COINBASE:MASK-USD",
+            "COINBASE:MASK-USDT",
+            "KRAKEN:MASK/USD",
+            "KUCOIN:MASK-USDT",
+            "OKEX:MASK-USDT",
+            "OKEX:MASK-USDT-SWAP",
             "BITHUMB:MASK_KRW",
             "BTCTURK:MASKTRY",
             "OKEX:MASK-USDC",
             "UPBIT:BTC-MASK",
-            "UPBIT:KRW-MASK"
+            "UPBIT:KRW-MASK",
+            "OKEX:MASK-USDC"
           ],
           "zoom": 1
         },
@@ -48,12 +59,15 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:MASKUSDT",
+            "BYBIT:MASKUSDT",
             "BINANCE_FUTURES:maskusdt",
             "BITGET:MASKUSDT_UMCBL",
             "GATEIO:MASK_USDT_FUTURES",
             "KRAKEN:PF_MASKUSD",
             "KUCOIN:MASKUSDTM",
             "MEXC:MASK_USDT",
+            "OKEX:MASK-USDT-SWAP",
+            "BINANCE_FUTURES:maskusdt",
             "OKEX:MASK-USDT-SWAP"
           ]
         },
@@ -64,7 +78,9 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:maskusdt",
+            "BINANCE:maskusdt",
             "BYBIT:MASKUSDT-SPOT",
+            "BINANCE:maskbusd",
             "BINANCE:maskbusd",
             "BITGET:MASKUSDT_SPBL",
             "COINBASE:MASK-USDT",
@@ -74,11 +90,17 @@
             "KRAKEN:MASK/USD",
             "KUCOIN:MASK-USDT",
             "OKEX:MASK-USDT",
+            "COINBASE:MASK-USD",
+            "COINBASE:MASK-USDT",
+            "KRAKEN:MASK/USD",
+            "KUCOIN:MASK-USDT",
+            "OKEX:MASK-USDT",
             "BITHUMB:MASK_KRW",
             "BTCTURK:MASKTRY",
             "OKEX:MASK-USDC",
             "UPBIT:BTC-MASK",
-            "UPBIT:KRW-MASK"
+            "UPBIT:KRW-MASK",
+            "OKEX:MASK-USDC"
           ]
         }
       },
@@ -527,7 +549,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:maskusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:MASKUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:MASKUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:MASK_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KRAKEN:PF_MASKUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:MASKUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:MASK_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = OKEX:MASK-USDT-SWAP;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:maskusdt;\n\nvar b = BINANCE_FUTURES:maskusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:MASKUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:MASKUSDT;\n\nvar e = BYBIT:MASKUSDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = GATEIO:MASK_USDT_FUTURES;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = KRAKEN:PF_MASKUSD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar h = KUCOIN:MASKUSDTM;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = MEXC:MASK_USDT;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = OKEX:MASK-USDT-SWAP;\n\nvar k = OKEX:MASK-USDT-SWAP;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -571,7 +593,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:maskusdt;\n\nvar b = BINANCE:maskbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MASKUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:MASK_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BTCTURK:MASKTRY;line(cum(e.vbuy-e.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar f = BYBIT:MASKUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:MASK-USDT;\n\nvar h = COINBASE:MASK-USD;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = GATEIO:MASK_USDT_SPOT;line(cum(i.vbuy-i.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar j = HITBTC:MASKUSD;line(cum(j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar k = KRAKEN:MASK/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar l = KUCOIN:MASK-USDT;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = OKEX:MASK-USDT;\n\nvar n = OKEX:MASK-USDC;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar o = UPBIT:BTC-MASK;\n\nvar p = UPBIT:KRW-MASK;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:maskusdt;\n\nvar b = BINANCE:maskusdt;\n\nvar c = BINANCE:maskbusd;\n\nvar d = BINANCE:maskbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITGET:MASKUSDT_SPBL;line(cum(e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = BITHUMB:MASK_KRW;line(cum(f.vbuy-f.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar g = BTCTURK:MASKTRY;line(cum(g.vbuy-g.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar h = BYBIT:MASKUSDT-SPOT;line(cum(h.vbuy-h.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar i = COINBASE:MASK-USDT;\n\nvar j = COINBASE:MASK-USD;\n\nvar k = COINBASE:MASK-USD;\n\nvar l = COINBASE:MASK-USDT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar m = GATEIO:MASK_USDT_SPOT;line(cum(m.vbuy-m.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar n = HITBTC:MASKUSD;line(cum(n.vbuy-n.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar o = KRAKEN:MASK/USD;\n\nvar p = KRAKEN:MASK/USD;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar q = KUCOIN:MASK-USDT;\n\nvar r = KUCOIN:MASK-USDT;line(cum(q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar s = OKEX:MASK-USDT;\n\nvar t = OKEX:MASK-USDT;\n\nvar u = OKEX:MASK-USDC;\n\nvar v = OKEX:MASK-USDC;line(cum(s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar w = UPBIT:BTC-MASK;\n\nvar x = UPBIT:KRW-MASK;line(cum(w.vbuy-w.vsell+x.vbuy-x.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell+w.vbuy-w.vsell+x.vbuy-x.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -671,8 +693,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:maskusdt;\n\nvar b = COINALYZE_OI:BYBIT:MASKUSDT;\n\nvar c = COINALYZE_OI:OKEX:MASK-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:maskusdt;\n\nvar b = COINALYZE_PFR:BYBIT:MASKUSDT;\n\nvar c = COINALYZE_PFR:OKEX:MASK-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:maskusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:maskusdt;\n\nvar c = COINALYZE_OI:BYBIT:MASKUSDT;\n\nvar d = COINALYZE_OI:BYBIT:MASKUSDT;\n\nvar e = COINALYZE_OI:OKEX:MASK-USDT-SWAP;\n\nvar f = COINALYZE_OI:OKEX:MASK-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:maskusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:maskusdt;\n\nvar c = COINALYZE_PFR:BYBIT:MASKUSDT;\n\nvar d = COINALYZE_PFR:BYBIT:MASKUSDT;\n\nvar e = COINALYZE_PFR:OKEX:MASK-USDT-SWAP;\n\nvar f = COINALYZE_PFR:OKEX:MASK-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
