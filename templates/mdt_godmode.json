@@ -15,7 +15,9 @@
           "type": "chart",
           "markets": [
             "BINANCE:mdtusdt",
+            "BINANCE:mdtusdt",
             "BYBIT:MDTUSDT",
+            "BINANCE:mdtbusd",
             "BINANCE:mdtbusd",
             "BINANCE_FUTURES:mdtusdt",
             "BITGET:MDTUSDT_SPBL",
@@ -27,6 +29,9 @@
             "KUCOIN:MDTUSDTM",
             "MEXC:MDTUSDT",
             "MEXC:MDT_USDT",
+            "OKEX:MDT-USDT",
+            "COINBASE:MDT-USDT",
+            "COINBASE:MDT-USD",
             "OKEX:MDT-USDT"
           ],
           "zoom": 1
@@ -52,12 +57,17 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:mdtusdt",
+            "BINANCE:mdtusdt",
+            "BINANCE:mdtbusd",
             "BINANCE:mdtbusd",
             "BITGET:MDTUSDT_SPBL",
             "COINBASE:MDT-USD",
             "GATEIO:MDT_USDT_SPOT",
             "HITBTC:MDTUSDT",
             "MEXC:MDTUSDT",
+            "OKEX:MDT-USDT",
+            "COINBASE:MDT-USDT",
+            "COINBASE:MDT-USD",
             "OKEX:MDT-USDT"
           ]
         }
@@ -543,7 +553,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:mdtusdt;\n\nvar b = BINANCE:mdtbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MDTUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:MDT-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = GATEIO:MDT_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:MDTUSDT;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = MEXC:MDTUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = OKEX:MDT-USDT;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:mdtusdt;\n\nvar b = BINANCE:mdtusdt;\n\nvar c = BINANCE:mdtbusd;\n\nvar d = BINANCE:mdtbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITGET:MDTUSDT_SPBL;line(cum(e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = COINBASE:MDT-USD;\n\nvar g = COINBASE:MDT-USDT;\n\nvar h = COINBASE:MDT-USD;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = GATEIO:MDT_USDT_SPOT;line(cum(i.vbuy-i.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar j = HITBTC:MDTUSDT;line(cum(j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar k = MEXC:MDTUSDT;line(cum(k.vbuy-k.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar l = OKEX:MDT-USDT;\n\nvar m = OKEX:MDT-USDT;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -916,7 +926,8 @@
         "KUCOIN:MDTUSDTM": false,
         "MEXC:MDTUSDT": false,
         "MEXC:MDT_USDT": false,
-        "OKEX:MDT-USDT": false
+        "OKEX:MDT-USDT": false,
+        "COINBASE:MDT-USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
@@ -1006,7 +1017,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:MDT-USD": 0.5
+        "COINBASE:MDT-USD": 0.5,
+        "COINBASE:MDT-USDT": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1106,7 +1118,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:MDT-USD": 0.5
+        "COINBASE:MDT-USD": 0.5,
+        "COINBASE:MDT-USDT": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
