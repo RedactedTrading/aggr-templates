@@ -21,6 +21,7 @@
             "BITFINEX:SUNUSD",
             "BITGET:SUNUSDT_SPBL",
             "GATEIO:SUN_USDT_SPOT",
+            "GATEIO:SUN_USDT_FUTURES",
             "HITBTC:SUNUSD",
             "KUCOIN:SUN-USDT",
             "MEXC:SUNUSDT",
@@ -38,6 +39,7 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:SUNUSDT",
+            "GATEIO:SUN_USDT_FUTURES",
             "MEXC:SUN_USDT"
           ]
         },
@@ -503,7 +505,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:SUNUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:SUN_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:SUNUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = GATEIO:SUN_USDT_FUTURES;line(cum(b.vbuy-b.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar c = MEXC:SUN_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -914,6 +916,7 @@
         "BITFINEX:SUNUSD": false,
         "BITGET:SUNUSDT_SPBL": false,
         "GATEIO:SUN_USDT_SPOT": false,
+        "GATEIO:SUN_USDT_FUTURES": false,
         "HITBTC:SUNUSD": false,
         "KUCOIN:SUN-USDT": false,
         "MEXC:SUNUSDT": false,
