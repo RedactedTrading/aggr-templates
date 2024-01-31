@@ -16,9 +16,12 @@
           "markets": [
             "BINANCE:beamusdt",
             "BYBIT:BEAMUSDT-SPOT",
+            "BYBIT:BEAMUSDT",
+            "BYBIT:BEAMUSDT",
             "BITGET:BEAMUSDT_SPBL",
             "GATEIO:BEAM_USDT_SPOT",
-            "MEXC:BEAMUSDT"
+            "MEXC:BEAMUSDT",
+            "MEXC:BEAM_USDT"
           ],
           "zoom": 1
         },
@@ -27,7 +30,11 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "BYBIT:BEAMUSDT",
+            "BYBIT:BEAMUSDT",
+            "MEXC:BEAM_USDT"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -480,7 +487,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:BEAMUSDT;\n\nvar b = BYBIT:BEAMUSDT;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = MEXC:BEAM_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -624,8 +631,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BYBIT:BEAMUSDT;\n\nvar b = COINALYZE_OI:BYBIT:BEAMUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BYBIT:BEAMUSDT;\n\nvar b = COINALYZE_PFR:BYBIT:BEAMUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -886,9 +893,11 @@
       "hiddenMarkets": {
         "BINANCE:beamusdt": false,
         "BYBIT:BEAMUSDT-SPOT": false,
+        "BYBIT:BEAMUSDT": false,
         "BITGET:BEAMUSDT_SPBL": false,
         "GATEIO:BEAM_USDT_SPOT": false,
-        "MEXC:BEAMUSDT": false
+        "MEXC:BEAMUSDT": false,
+        "MEXC:BEAM_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
