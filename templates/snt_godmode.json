@@ -15,11 +15,17 @@
           "type": "chart",
           "markets": [
             "BINANCE:sntusdt",
+            "BYBIT:SNTUSDT",
             "BINANCE:sntbusd",
+            "BINANCE_FUTURES:sntusdt",
             "BITGET:SNTUSDT_SPBL",
+            "BITMEX:SNTUSDT",
             "COINBASE:SNT-USD",
             "GATEIO:SNT_USDT_SPOT",
+            "KUCOIN:SNTUSDTM",
+            "MEXC:SNT_USDT",
             "OKEX:SNT-USDT",
+            "BITMEX:SNTUSDT",
             "BITHUMB:SNT_KRW",
             "HITBTC:SNTUSDC",
             "HITBTC:SNTUSD",
@@ -33,7 +39,14 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "BYBIT:SNTUSDT",
+            "BINANCE_FUTURES:sntusdt",
+            "BITMEX:SNTUSDT",
+            "KUCOIN:SNTUSDTM",
+            "MEXC:SNT_USDT",
+            "BITMEX:SNTUSDT"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -316,7 +329,7 @@
         "fetched": false
       },
       "BINANCE_FUTURES": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BINANCE_US": {
@@ -328,7 +341,7 @@
         "fetched": false
       },
       "BITMEX": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITSTAMP": {
@@ -336,7 +349,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -368,7 +381,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -397,6 +410,10 @@
         "fetched": false
       },
       "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
         "disabled": false,
         "fetched": false
       },
@@ -492,7 +509,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:sntusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITMEX:SNTUSDT;\n\nvar c = BITMEX:SNTUSDT;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar d = BYBIT:SNTUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = KUCOIN:SNTUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:SNT_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -636,8 +653,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:sntusdt;\n\nvar b = COINALYZE_OI:BITMEX:SNTUSDT;\n\nvar c = COINALYZE_OI:BITMEX:SNTUSDT;\n\nvar d = COINALYZE_OI:BYBIT:SNTUSDT;line(a.close+b.close+c.close+d.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:sntusdt;\n\nvar b = COINALYZE_PFR:BITMEX:SNTUSDT;\n\nvar c = COINALYZE_PFR:BITMEX:SNTUSDT;\n\nvar d = COINALYZE_PFR:BYBIT:SNTUSDT;line(a.close+b.close+c.close+d.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -897,10 +914,15 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:sntusdt": false,
+        "BYBIT:SNTUSDT": false,
         "BINANCE:sntbusd": false,
+        "BINANCE_FUTURES:sntusdt": false,
         "BITGET:SNTUSDT_SPBL": false,
+        "BITMEX:SNTUSDT": false,
         "COINBASE:SNT-USD": false,
         "GATEIO:SNT_USDT_SPOT": false,
+        "KUCOIN:SNTUSDTM": false,
+        "MEXC:SNT_USDT": false,
         "OKEX:SNT-USDT": false,
         "BITHUMB:SNT_KRW": true,
         "HITBTC:SNTUSDC": false,
