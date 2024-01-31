@@ -17,16 +17,20 @@
             "BINANCE:badgerusdt",
             "BYBIT:BADGERUSDT",
             "BINANCE:badgerbusd",
+            "BINANCE_FUTURES:badgerusdt",
             "BITGET:BADGERUSDT_SPBL",
             "COINBASE:BADGER-USD",
             "GATEIO:BADGER_USDT_SPOT",
             "GATEIO:BADGER_USDT_FUTURES",
             "HITBTC:BADGERUSDT",
             "KRAKEN:BADGER/USD",
+            "KUCOIN:BADGERUSDTM",
             "MEXC:BADGERUSDT",
             "MEXC:BADGER_USDT",
             "OKEX:BADGER-USDT",
-            "OKEX:BADGER-USDT-SWAP"
+            "OKEX:BADGER-USDT-SWAP",
+            "BINANCE_FUTURES:badgerusdt",
+            "KUCOIN:BADGERUSDTM"
           ],
           "zoom": 1
         },
@@ -37,9 +41,13 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:BADGERUSDT",
+            "BINANCE_FUTURES:badgerusdt",
             "GATEIO:BADGER_USDT_FUTURES",
+            "KUCOIN:BADGERUSDTM",
             "MEXC:BADGER_USDT",
-            "OKEX:BADGER-USDT-SWAP"
+            "OKEX:BADGER-USDT-SWAP",
+            "BINANCE_FUTURES:badgerusdt",
+            "KUCOIN:BADGERUSDTM"
           ]
         },
         "trades2": {
@@ -321,7 +329,7 @@
         "fetched": false
       },
       "BINANCE_FUTURES": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BINANCE_US": {
@@ -373,7 +381,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -497,7 +505,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:BADGERUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = GATEIO:BADGER_USDT_FUTURES;line(cum(b.vbuy-b.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar c = MEXC:BADGER_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar d = OKEX:BADGER-USDT-SWAP;line(cum(d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:badgerusdt;\n\nvar b = BINANCE_FUTURES:badgerusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BYBIT:BADGERUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:BADGER_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KUCOIN:BADGERUSDTM;\n\nvar f = KUCOIN:BADGERUSDTM;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:BADGER_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = OKEX:BADGER-USDT-SWAP;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -641,8 +649,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BYBIT:BADGERUSDT;\n\nvar b = COINALYZE_OI:OKEX:BADGER-USDT-SWAP;line(a.close+b.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BYBIT:BADGERUSDT;\n\nvar b = COINALYZE_PFR:OKEX:BADGER-USDT-SWAP;line(a.close+b.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:badgerusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:badgerusdt;\n\nvar c = COINALYZE_OI:BYBIT:BADGERUSDT;\n\nvar d = COINALYZE_OI:OKEX:BADGER-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:badgerusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:badgerusdt;\n\nvar c = COINALYZE_PFR:BYBIT:BADGERUSDT;\n\nvar d = COINALYZE_PFR:OKEX:BADGER-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -904,12 +912,14 @@
         "BINANCE:badgerusdt": false,
         "BYBIT:BADGERUSDT": false,
         "BINANCE:badgerbusd": false,
+        "BINANCE_FUTURES:badgerusdt": false,
         "BITGET:BADGERUSDT_SPBL": false,
         "COINBASE:BADGER-USD": false,
         "GATEIO:BADGER_USDT_SPOT": false,
         "GATEIO:BADGER_USDT_FUTURES": false,
         "HITBTC:BADGERUSDT": false,
         "KRAKEN:BADGER/USD": false,
+        "KUCOIN:BADGERUSDTM": false,
         "MEXC:BADGERUSDT": false,
         "MEXC:BADGER_USDT": false,
         "OKEX:BADGER-USDT": false,
