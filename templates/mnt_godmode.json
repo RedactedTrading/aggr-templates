@@ -19,7 +19,7 @@
             "BYBIT:MNTUSDC-SPOT",
             "GATEIO:MNT_USDT_SPOT",
             "HITBTC:MNTUSDT",
-            "MEXC:MNT_USDT"
+            "KUCOIN:MNT-USDT"
           ],
           "zoom": 1
         },
@@ -29,8 +29,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BYBIT:MNTUSDT",
-            "MEXC:MNT_USDT"
+            "BYBIT:MNTUSDT"
           ]
         },
         "trades2": {
@@ -42,7 +41,8 @@
             "BYBIT:MNTUSDT-SPOT",
             "BYBIT:MNTUSDC-SPOT",
             "GATEIO:MNT_USDT_SPOT",
-            "HITBTC:MNTUSDT"
+            "HITBTC:MNTUSDT",
+            "KUCOIN:MNT-USDT"
           ]
         }
       },
@@ -359,7 +359,7 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
@@ -384,10 +384,6 @@
         "fetched": false
       },
       "GATEIO": {
-        "disabled": false,
-        "fetched": false
-      },
-      "MEXC": {
         "disabled": false,
         "fetched": false
       }
@@ -479,7 +475,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:MNTUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:MNT_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:MNTUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -523,7 +519,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:MNTUSDT-SPOT;\n\nvar b = BYBIT:MNTUSDC-SPOT;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:MNT_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = HITBTC:MNTUSDT;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:MNTUSDT-SPOT;\n\nvar b = BYBIT:MNTUSDC-SPOT;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:MNT_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = HITBTC:MNTUSDT;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = KUCOIN:MNT-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -888,7 +884,7 @@
         "BYBIT:MNTUSDC-SPOT": false,
         "GATEIO:MNT_USDT_SPOT": false,
         "HITBTC:MNTUSDT": false,
-        "MEXC:MNT_USDT": false
+        "KUCOIN:MNT-USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
