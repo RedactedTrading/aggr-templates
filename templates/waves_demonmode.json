@@ -15,9 +15,13 @@
           "type": "chart",
           "markets": [
             "BINANCE:wavesusdt",
+            "BINANCE:wavesusdt",
             "BYBIT:WAVESUSDT-SPOT",
             "BYBIT:WAVESUSDT",
+            "BYBIT:WAVESUSDT",
             "BINANCE:wavestusd",
+            "BINANCE:wavesusdc",
+            "BINANCE:wavesbusd",
             "BINANCE:wavesusdc",
             "BINANCE:wavesbusd",
             "BINANCE_FUTURES:wavesusdt",
@@ -33,12 +37,19 @@
             "MEXC:WAVES_USDT",
             "OKEX:WAVES-USDT",
             "OKEX:WAVES-USDT-SWAP",
+            "BINANCE_FUTURES:wavesusdt",
+            "BITFINEX:WAVES:USD",
+            "KRAKEN:WAVES/USD",
+            "KUCOIN:WAVES-USDT",
+            "OKEX:WAVES-USDT",
+            "OKEX:WAVES-USDT-SWAP",
             "BITHUMB:WAVES_KRW",
             "HITBTC:WAVESUSDC",
             "MEXC:WAVESUSDC",
             "OKEX:WAVES-USDC",
             "UPBIT:BTC-WAVES",
-            "UPBIT:KRW-WAVES"
+            "UPBIT:KRW-WAVES",
+            "OKEX:WAVES-USDC"
           ],
           "zoom": 1
         },
@@ -49,12 +60,15 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:WAVESUSDT",
+            "BYBIT:WAVESUSDT",
             "BINANCE_FUTURES:wavesusdt",
             "BITGET:WAVESUSDT_UMCBL",
             "GATEIO:WAVES_USDT_FUTURES",
             "KRAKEN:PF_WAVESUSD",
             "KUCOIN:WAVESUSDTM",
             "MEXC:WAVES_USDT",
+            "OKEX:WAVES-USDT-SWAP",
+            "BINANCE_FUTURES:wavesusdt",
             "OKEX:WAVES-USDT-SWAP"
           ]
         },
@@ -65,8 +79,11 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:wavesusdt",
+            "BINANCE:wavesusdt",
             "BYBIT:WAVESUSDT-SPOT",
             "BINANCE:wavestusd",
+            "BINANCE:wavesusdc",
+            "BINANCE:wavesbusd",
             "BINANCE:wavesusdc",
             "BINANCE:wavesbusd",
             "BITGET:WAVESUSDT_SPBL",
@@ -75,12 +92,17 @@
             "KRAKEN:WAVES/USD",
             "KUCOIN:WAVES-USDT",
             "OKEX:WAVES-USDT",
+            "BITFINEX:WAVES:USD",
+            "KRAKEN:WAVES/USD",
+            "KUCOIN:WAVES-USDT",
+            "OKEX:WAVES-USDT",
             "BITHUMB:WAVES_KRW",
             "HITBTC:WAVESUSDC",
             "MEXC:WAVESUSDC",
             "OKEX:WAVES-USDC",
             "UPBIT:BTC-WAVES",
-            "UPBIT:KRW-WAVES"
+            "UPBIT:KRW-WAVES",
+            "OKEX:WAVES-USDC"
           ]
         }
       },
@@ -353,7 +375,7 @@
         "fetched": false
       },
       "BITFINEX": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITMEX": {
@@ -525,7 +547,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:wavesusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:WAVESUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:WAVESUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:WAVES_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KRAKEN:PF_WAVESUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:WAVESUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:WAVES_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = OKEX:WAVES-USDT-SWAP;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:wavesusdt;\n\nvar b = BINANCE_FUTURES:wavesusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:WAVESUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:WAVESUSDT;\n\nvar e = BYBIT:WAVESUSDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = GATEIO:WAVES_USDT_FUTURES;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = KRAKEN:PF_WAVESUSD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar h = KUCOIN:WAVESUSDTM;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = MEXC:WAVES_USDT;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = OKEX:WAVES-USDT-SWAP;\n\nvar k = OKEX:WAVES-USDT-SWAP;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -569,7 +591,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:wavesusdt;\n\nvar b = BINANCE:wavestusd;\n\nvar c = BINANCE:wavesusdc;\n\nvar d = BINANCE:wavesbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITGET:WAVESUSDT_SPBL;line(cum(e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = BITHUMB:WAVES_KRW;line(cum(f.vbuy-f.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar g = BYBIT:WAVESUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = GATEIO:WAVES_USDT_SPOT;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = HITBTC:WAVESUSD;\n\nvar j = HITBTC:WAVESUSDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar k = KRAKEN:WAVES/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar l = KUCOIN:WAVES-USDT;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = MEXC:WAVESUSDC;line(cum(m.vbuy-m.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar n = OKEX:WAVES-USDT;\n\nvar o = OKEX:WAVES-USDC;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar p = UPBIT:BTC-WAVES;\n\nvar q = UPBIT:KRW-WAVES;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:wavesusdt;\n\nvar b = BINANCE:wavesusdt;\n\nvar c = BINANCE:wavestusd;\n\nvar d = BINANCE:wavesusdc;\n\nvar e = BINANCE:wavesbusd;\n\nvar f = BINANCE:wavesusdc;\n\nvar g = BINANCE:wavesbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar h = BITFINEX:WAVES:USD;line(cum(h.vbuy-h.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar i = BITGET:WAVESUSDT_SPBL;line(cum(i.vbuy-i.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar j = BITHUMB:WAVES_KRW;line(cum(j.vbuy-j.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar k = BYBIT:WAVESUSDT-SPOT;line(cum(k.vbuy-k.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar l = GATEIO:WAVES_USDT_SPOT;line(cum(l.vbuy-l.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar m = HITBTC:WAVESUSD;\n\nvar n = HITBTC:WAVESUSDC;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar o = KRAKEN:WAVES/USD;\n\nvar p = KRAKEN:WAVES/USD;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar q = KUCOIN:WAVES-USDT;\n\nvar r = KUCOIN:WAVES-USDT;line(cum(q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar s = MEXC:WAVESUSDC;line(cum(s.vbuy-s.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar t = OKEX:WAVES-USDT;\n\nvar u = OKEX:WAVES-USDT;\n\nvar v = OKEX:WAVES-USDC;\n\nvar w = OKEX:WAVES-USDC;line(cum(t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell+w.vbuy-w.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar x = UPBIT:BTC-WAVES;\n\nvar y = UPBIT:KRW-WAVES;line(cum(x.vbuy-x.vsell+y.vbuy-y.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell+w.vbuy-w.vsell+x.vbuy-x.vsell+y.vbuy-y.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -669,8 +691,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:wavesusdt;\n\nvar b = COINALYZE_OI:BYBIT:WAVESUSDT;\n\nvar c = COINALYZE_OI:OKEX:WAVES-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:wavesusdt;\n\nvar b = COINALYZE_PFR:BYBIT:WAVESUSDT;\n\nvar c = COINALYZE_PFR:OKEX:WAVES-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:wavesusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:wavesusdt;\n\nvar c = COINALYZE_OI:BYBIT:WAVESUSDT;\n\nvar d = COINALYZE_OI:BYBIT:WAVESUSDT;\n\nvar e = COINALYZE_OI:OKEX:WAVES-USDT-SWAP;\n\nvar f = COINALYZE_OI:OKEX:WAVES-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:wavesusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:wavesusdt;\n\nvar c = COINALYZE_PFR:BYBIT:WAVESUSDT;\n\nvar d = COINALYZE_PFR:BYBIT:WAVESUSDT;\n\nvar e = COINALYZE_PFR:OKEX:WAVES-USDT-SWAP;\n\nvar f = COINALYZE_PFR:OKEX:WAVES-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -948,6 +970,7 @@
         "MEXC:WAVES_USDT": false,
         "OKEX:WAVES-USDT": false,
         "OKEX:WAVES-USDT-SWAP": false,
+        "BITFINEX:WAVES:USD": false,
         "BITHUMB:WAVES_KRW": true,
         "HITBTC:WAVESUSDC": false,
         "MEXC:WAVESUSDC": false,
