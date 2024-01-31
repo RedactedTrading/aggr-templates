@@ -15,6 +15,23 @@
           "type": "chart",
           "markets": [
             "BYBIT:PYTHUSDT-SPOT",
+            "BYBIT:PYTHUSDT",
+            "BYBIT:PYTHUSDT-SPOT",
+            "BINANCE_FUTURES:pythusdt",
+            "BITGET:PYTHUSDT_SPBL",
+            "BITGET:PYTHUSDT_UMCBL",
+            "BITMEX:PYTHUSDT",
+            "GATEIO:PYTH_USDT_SPOT",
+            "GATEIO:PYTH_USDT_FUTURES",
+            "HITBTC:PYTHUSDT",
+            "KRAKEN:PYTH/USD",
+            "KRAKEN:PF_PYTHUSD",
+            "KUCOIN:PYTH-USDT",
+            "KUCOIN:PYTHUSDTM",
+            "MEXC:PYTHUSDT",
+            "MEXC:PYTH_USDT",
+            "OKEX:PYTH-USDT",
+            "OKEX:PYTH-USDT-SWAP",
             "BITGET:PYTHUSDT_SPBL",
             "BITMEX:PYTHUSDT",
             "GATEIO:PYTH_USDT_SPOT",
@@ -30,6 +47,15 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BYBIT:PYTHUSDT",
+            "BINANCE_FUTURES:pythusdt",
+            "BITGET:PYTHUSDT_UMCBL",
+            "BITMEX:PYTHUSDT",
+            "GATEIO:PYTH_USDT_FUTURES",
+            "KRAKEN:PF_PYTHUSD",
+            "KUCOIN:PYTHUSDTM",
+            "MEXC:PYTH_USDT",
+            "OKEX:PYTH-USDT-SWAP",
             "BITMEX:PYTHUSDT"
           ]
         },
@@ -40,6 +66,14 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:PYTHUSDT-SPOT",
+            "BYBIT:PYTHUSDT-SPOT",
+            "BITGET:PYTHUSDT_SPBL",
+            "GATEIO:PYTH_USDT_SPOT",
+            "HITBTC:PYTHUSDT",
+            "KRAKEN:PYTH/USD",
+            "KUCOIN:PYTH-USDT",
+            "MEXC:PYTHUSDT",
+            "OKEX:PYTH-USDT",
             "BITGET:PYTHUSDT_SPBL",
             "GATEIO:PYTH_USDT_SPOT",
             "KUCOIN:PYTH-USDT",
@@ -309,7 +343,7 @@
         "fetched": false
       },
       "BINANCE_FUTURES": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BINANCE_US": {
@@ -349,7 +383,7 @@
         "fetched": false
       },
       "HITBTC": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "HUOBI": {
@@ -357,7 +391,7 @@
         "fetched": false
       },
       "KRAKEN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "KUCOIN": {
@@ -485,7 +519,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITMEX:PYTHUSDT;line(cum(a.vbuy-a.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:pythusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:PYTHUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BITMEX:PYTHUSDT;\n\nvar d = BITMEX:PYTHUSDT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar e = BYBIT:PYTHUSDT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = GATEIO:PYTH_USDT_FUTURES;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = KRAKEN:PF_PYTHUSD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar h = KUCOIN:PYTHUSDTM;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = MEXC:PYTH_USDT;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = OKEX:PYTH-USDT-SWAP;line(cum(j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -529,7 +563,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:PYTHUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:PYTHUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:PYTH_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KUCOIN:PYTH-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:PYTHUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = OKEX:PYTH-USDT;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:PYTHUSDT_SPBL;\n\nvar b = BITGET:PYTHUSDT_SPBL;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:PYTHUSDT-SPOT;\n\nvar d = BYBIT:PYTHUSDT-SPOT;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:PYTH_USDT_SPOT;\n\nvar f = GATEIO:PYTH_USDT_SPOT;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = HITBTC:PYTHUSDT;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KRAKEN:PYTH/USD;line(cum(h.vbuy-h.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar i = KUCOIN:PYTH-USDT;\n\nvar j = KUCOIN:PYTH-USDT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar k = MEXC:PYTHUSDT;\n\nvar l = MEXC:PYTHUSDT;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar m = OKEX:PYTH-USDT;\n\nvar n = OKEX:PYTH-USDT;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -629,8 +663,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BITMEX:PYTHUSDT;line(a.close, title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BITMEX:PYTHUSDT;line(a.close, title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:pythusdt;\n\nvar b = COINALYZE_OI:BITMEX:PYTHUSDT;\n\nvar c = COINALYZE_OI:BITMEX:PYTHUSDT;\n\nvar d = COINALYZE_OI:BYBIT:PYTHUSDT;\n\nvar e = COINALYZE_OI:OKEX:PYTH-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:pythusdt;\n\nvar b = COINALYZE_PFR:BITMEX:PYTHUSDT;\n\nvar c = COINALYZE_PFR:BITMEX:PYTHUSDT;\n\nvar d = COINALYZE_PFR:BYBIT:PYTHUSDT;\n\nvar e = COINALYZE_PFR:OKEX:PYTH-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -890,12 +924,22 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:PYTHUSDT-SPOT": false,
+        "BYBIT:PYTHUSDT": false,
+        "BINANCE_FUTURES:pythusdt": false,
         "BITGET:PYTHUSDT_SPBL": false,
+        "BITGET:PYTHUSDT_UMCBL": false,
         "BITMEX:PYTHUSDT": false,
         "GATEIO:PYTH_USDT_SPOT": false,
+        "GATEIO:PYTH_USDT_FUTURES": false,
+        "HITBTC:PYTHUSDT": false,
+        "KRAKEN:PYTH/USD": false,
+        "KRAKEN:PF_PYTHUSD": false,
         "KUCOIN:PYTH-USDT": false,
+        "KUCOIN:PYTHUSDTM": false,
         "MEXC:PYTHUSDT": false,
-        "OKEX:PYTH-USDT": false
+        "MEXC:PYTH_USDT": false,
+        "OKEX:PYTH-USDT": false,
+        "OKEX:PYTH-USDT-SWAP": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
