@@ -16,12 +16,17 @@
           "markets": [
             "BINANCE:cakeusdt",
             "BYBIT:CAKEUSDT-SPOT",
+            "BYBIT:CAKEUSDT",
             "BINANCE:cakebusd",
+            "BINANCE:caketusd",
+            "BINANCE:caketusd",
+            "BINANCE_FUTURES:cakeusdt",
             "BITGET:CAKEUSDT_SPBL",
             "GATEIO:CAKE_USDT_SPOT",
             "GATEIO:CAKE_USDT_FUTURES",
             "HITBTC:CAKEUSD",
             "KUCOIN:CAKE-USDT",
+            "KUCOIN:CAKEUSDTM",
             "MEXC:CAKE_USDT",
             "BITHUMB:CAKE_KRW",
             "HITBTC:CAKEUSDC"
@@ -34,7 +39,10 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BYBIT:CAKEUSDT",
+            "BINANCE_FUTURES:cakeusdt",
             "GATEIO:CAKE_USDT_FUTURES",
+            "KUCOIN:CAKEUSDTM",
             "MEXC:CAKE_USDT"
           ]
         },
@@ -47,6 +55,8 @@
             "BINANCE:cakeusdt",
             "BYBIT:CAKEUSDT-SPOT",
             "BINANCE:cakebusd",
+            "BINANCE:caketusd",
+            "BINANCE:caketusd",
             "BITGET:CAKEUSDT_SPBL",
             "GATEIO:CAKE_USDT_SPOT",
             "HITBTC:CAKEUSD",
@@ -317,7 +327,7 @@
         "fetched": false
       },
       "BINANCE_FUTURES": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BINANCE_US": {
@@ -497,7 +507,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = GATEIO:CAKE_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar b = MEXC:CAKE_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:cakeusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:CAKEUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:CAKE_USDT_FUTURES;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KUCOIN:CAKEUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:CAKE_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -541,7 +551,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:cakeusdt;\n\nvar b = BINANCE:cakebusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:CAKEUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:CAKE_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BYBIT:CAKEUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = GATEIO:CAKE_USDT_SPOT;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = HITBTC:CAKEUSD;\n\nvar h = HITBTC:CAKEUSDC;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar i = KUCOIN:CAKE-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:cakeusdt;\n\nvar b = BINANCE:cakebusd;\n\nvar c = BINANCE:caketusd;\n\nvar d = BINANCE:caketusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITGET:CAKEUSDT_SPBL;line(cum(e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = BITHUMB:CAKE_KRW;line(cum(f.vbuy-f.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar g = BYBIT:CAKEUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = GATEIO:CAKE_USDT_SPOT;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = HITBTC:CAKEUSD;\n\nvar j = HITBTC:CAKEUSDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar k = KUCOIN:CAKE-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -641,8 +651,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:cakeusdt;\n\nvar b = COINALYZE_OI:BYBIT:CAKEUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:cakeusdt;\n\nvar b = COINALYZE_PFR:BYBIT:CAKEUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -903,12 +913,16 @@
       "hiddenMarkets": {
         "BINANCE:cakeusdt": false,
         "BYBIT:CAKEUSDT-SPOT": false,
+        "BYBIT:CAKEUSDT": false,
         "BINANCE:cakebusd": false,
+        "BINANCE:caketusd": true,
+        "BINANCE_FUTURES:cakeusdt": false,
         "BITGET:CAKEUSDT_SPBL": false,
         "GATEIO:CAKE_USDT_SPOT": false,
         "GATEIO:CAKE_USDT_FUTURES": false,
         "HITBTC:CAKEUSD": false,
         "KUCOIN:CAKE-USDT": false,
+        "KUCOIN:CAKEUSDTM": false,
         "MEXC:CAKE_USDT": false,
         "BITHUMB:CAKE_KRW": true,
         "HITBTC:CAKEUSDC": false
