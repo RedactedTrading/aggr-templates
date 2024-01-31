@@ -15,13 +15,18 @@
           "type": "chart",
           "markets": [
             "BINANCE:aergousdt",
+            "BYBIT:AERGOUSDT",
+            "BYBIT:AERGOUSDT",
             "BINANCE:aergobusd",
             "BITGET:AERGOUSDT_SPBL",
+            "BITMEX:AERGOUSDT",
             "COINBASE:AERGO-USD",
             "GATEIO:AERGO_USDT_SPOT",
             "KUCOIN:AERGO-USDT",
             "MEXC:AERGOUSDT",
+            "MEXC:AERGO_USDT",
             "OKEX:AERGO-USDT",
+            "MEXC:AERGO_USDT",
             "BITHUMB:AERGO_KRW",
             "UPBIT:BTC-AERGO",
             "UPBIT:KRW-AERGO"
@@ -33,7 +38,13 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "BYBIT:AERGOUSDT",
+            "BYBIT:AERGOUSDT",
+            "BITMEX:AERGOUSDT",
+            "MEXC:AERGO_USDT",
+            "MEXC:AERGO_USDT"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -328,7 +339,7 @@
         "fetched": false
       },
       "BITMEX": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITSTAMP": {
@@ -336,7 +347,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -496,7 +507,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITMEX:AERGOUSDT;line(cum(a.vbuy-a.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar b = BYBIT:AERGOUSDT;\n\nvar c = BYBIT:AERGOUSDT;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = MEXC:AERGO_USDT;\n\nvar e = MEXC:AERGO_USDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -640,8 +651,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BITMEX:AERGOUSDT;\n\nvar b = COINALYZE_OI:BYBIT:AERGOUSDT;\n\nvar c = COINALYZE_OI:BYBIT:AERGOUSDT;line(a.close+b.close+c.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BITMEX:AERGOUSDT;\n\nvar b = COINALYZE_PFR:BYBIT:AERGOUSDT;\n\nvar c = COINALYZE_PFR:BYBIT:AERGOUSDT;line(a.close+b.close+c.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -901,12 +912,15 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:aergousdt": false,
+        "BYBIT:AERGOUSDT": false,
         "BINANCE:aergobusd": false,
         "BITGET:AERGOUSDT_SPBL": false,
+        "BITMEX:AERGOUSDT": false,
         "COINBASE:AERGO-USD": false,
         "GATEIO:AERGO_USDT_SPOT": false,
         "KUCOIN:AERGO-USDT": false,
         "MEXC:AERGOUSDT": false,
+        "MEXC:AERGO_USDT": false,
         "OKEX:AERGO-USDT": false,
         "BITHUMB:AERGO_KRW": true,
         "UPBIT:BTC-AERGO": true,
