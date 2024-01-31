@@ -15,8 +15,11 @@
           "type": "chart",
           "markets": [
             "BINANCE:uniusdt",
+            "BINANCE:uniusdt",
             "BYBIT:UNIUSDT-SPOT",
             "BYBIT:UNIUSDT",
+            "BYBIT:UNIUSDT",
+            "BINANCE:unibusd",
             "BINANCE:unibusd",
             "BINANCE_FUTURES:uniusdt",
             "BINANCE_FUTURES:uniusd_perp",
@@ -35,6 +38,15 @@
             "KUCOIN:UNI-USDT",
             "KUCOIN:UNIUSDTM",
             "MEXC:UNI_USDT",
+            "OKEX:UNI-USDT",
+            "OKEX:UNI-USD-SWAP",
+            "OKEX:UNI-USDT-SWAP",
+            "BINANCE_FUTURES:uniusdt",
+            "BITFINEX:UNIUSD",
+            "BITMEX:UNI_USDT",
+            "COINBASE:UNI-USD",
+            "KRAKEN:UNI/USD",
+            "KUCOIN:UNI-USDT",
             "OKEX:UNI-USDT",
             "OKEX:UNI-USD-SWAP",
             "OKEX:UNI-USDT-SWAP",
@@ -46,8 +58,8 @@
             "MEXC:UNIUSDC",
             "OKEX:UNI-USDC",
             "UPBIT:BTC-UNI",
-            "UNISWAPETHEREUM:UNI/WETH",
-            "UNISWAPV2ETHEREUM:UNI/WETH"
+            "BINANCE_FUTURES:unibusd",
+            "OKEX:UNI-USDC"
           ],
           "zoom": 1
         },
@@ -57,6 +69,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BYBIT:UNIUSDT",
             "BYBIT:UNIUSDT",
             "BINANCE_FUTURES:uniusdt",
             "BINANCE_FUTURES:uniusd_perp",
@@ -69,7 +82,12 @@
             "MEXC:UNI_USDT",
             "OKEX:UNI-USD-SWAP",
             "OKEX:UNI-USDT-SWAP",
-            "DERIBIT:UNI_USDC-PERPETUAL"
+            "BINANCE_FUTURES:uniusdt",
+            "BITMEX:UNI_USDT",
+            "OKEX:UNI-USD-SWAP",
+            "OKEX:UNI-USDT-SWAP",
+            "DERIBIT:UNI_USDC-PERPETUAL",
+            "BINANCE_FUTURES:unibusd"
           ]
         },
         "trades2": {
@@ -79,7 +97,9 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:uniusdt",
+            "BINANCE:uniusdt",
             "BYBIT:UNIUSDT-SPOT",
+            "BINANCE:unibusd",
             "BINANCE:unibusd",
             "BITFINEX:UNIUSD",
             "BITGET:UNIUSDT_SPBL",
@@ -90,6 +110,11 @@
             "KRAKEN:UNI/USD",
             "KUCOIN:UNI-USDT",
             "OKEX:UNI-USDT",
+            "BITFINEX:UNIUSD",
+            "COINBASE:UNI-USD",
+            "KRAKEN:UNI/USD",
+            "KUCOIN:UNI-USDT",
+            "OKEX:UNI-USDT",
             "BITGET:UNIUSDC_SPBL",
             "BITHUMB:UNI_KRW",
             "BTCTURK:UNITRY",
@@ -97,8 +122,7 @@
             "MEXC:UNIUSDC",
             "OKEX:UNI-USDC",
             "UPBIT:BTC-UNI",
-            "UNISWAPETHEREUM:UNI/WETH",
-            "UNISWAPV2ETHEREUM:UNI/WETH"
+            "OKEX:UNI-USDC"
           ]
         }
       },
@@ -458,14 +482,6 @@
       "BTCTURK": {
         "disabled": false,
         "fetched": false
-      },
-      "UNISWAPETHEREUM": {
-        "disabled": false,
-        "fetched": false
-      },
-      "UNISWAPV2ETHEREUM": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -555,7 +571,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:uniusdt;\n\nvar b = BINANCE_FUTURES:uniusd_perp;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:UNIUSDT_UMCBL;\n\nvar d = BITGET:UNIUSD_DMCBL;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITMEX:UNI_USDT;line(cum(e.vbuy-e.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar f = BYBIT:UNIUSDT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = DERIBIT:UNI_USDC-PERPETUAL;line(cum(g.vbuy-g.vsell), title=\"DRBT\", color=\"rgb(234, 238, 245)\");\n\n\nvar h = GATEIO:UNI_USDT_FUTURES;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = KRAKEN:PF_UNIUSD;line(cum(i.vbuy-i.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar j = KUCOIN:UNIUSDTM;line(cum(j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar k = MEXC:UNI_USDT;line(cum(k.vbuy-k.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar l = OKEX:UNI-USD-SWAP;\n\nvar m = OKEX:UNI-USDT-SWAP;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:uniusdt;\n\nvar b = BINANCE_FUTURES:uniusd_perp;\n\nvar c = BINANCE_FUTURES:uniusdt;\n\nvar d = BINANCE_FUTURES:unibusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar e = BITGET:UNIUSDT_UMCBL;\n\nvar f = BITGET:UNIUSD_DMCBL;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar g = BITMEX:UNI_USDT;\n\nvar h = BITMEX:UNI_USDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar i = BYBIT:UNIUSDT;\n\nvar j = BYBIT:UNIUSDT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar k = DERIBIT:UNI_USDC-PERPETUAL;line(cum(k.vbuy-k.vsell), title=\"DRBT\", color=\"rgb(234, 238, 245)\");\n\n\nvar l = GATEIO:UNI_USDT_FUTURES;line(cum(l.vbuy-l.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar m = KRAKEN:PF_UNIUSD;line(cum(m.vbuy-m.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar n = KUCOIN:UNIUSDTM;line(cum(n.vbuy-n.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar o = MEXC:UNI_USDT;line(cum(o.vbuy-o.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar p = OKEX:UNI-USD-SWAP;\n\nvar q = OKEX:UNI-USDT-SWAP;\n\nvar r = OKEX:UNI-USD-SWAP;\n\nvar s = OKEX:UNI-USDT-SWAP;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -599,7 +615,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:uniusdt;\n\nvar b = BINANCE:unibusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:UNIUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:UNIUSDT_SPBL;\n\nvar e = BITGET:UNIUSDC_SPBL;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = BITHUMB:UNI_KRW;line(cum(f.vbuy-f.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar g = BITSTAMP:uniusd;line(cum(g.vbuy-g.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = BTCTURK:UNITRY;line(cum(h.vbuy-h.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar i = BYBIT:UNIUSDT-SPOT;line(cum(i.vbuy-i.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar j = COINBASE:UNI-USD;line(cum(j.vbuy-j.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = GATEIO:UNI_USDT_SPOT;line(cum(k.vbuy-k.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar l = HITBTC:UNIUSD;\n\nvar m = HITBTC:UNIUSDC;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar n = KRAKEN:UNI/USD;line(cum(n.vbuy-n.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar o = KUCOIN:UNI-USDT;line(cum(o.vbuy-o.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar p = MEXC:UNIUSDC;line(cum(p.vbuy-p.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar q = OKEX:UNI-USDT;\n\nvar r = OKEX:UNI-USDC;line(cum(q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar s = UNISWAPETHEREUM:UNI/WETH;line(cum(s.vbuy-s.vsell), title=\"UNIETH\", color=\"rgb(25, 76, 188)\");\n\n\nvar t = UNISWAPV2ETHEREUM:UNI/WETH;line(cum(t.vbuy-t.vsell), title=\"UNI2ETH\", color=\"rgb(25, 76, 188)\");\n\n\nvar u = UPBIT:BTC-UNI;line(cum(u.vbuy-u.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:uniusdt;\n\nvar b = BINANCE:uniusdt;\n\nvar c = BINANCE:unibusd;\n\nvar d = BINANCE:unibusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:UNIUSD;\n\nvar f = BITFINEX:UNIUSD;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar g = BITGET:UNIUSDT_SPBL;\n\nvar h = BITGET:UNIUSDC_SPBL;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar i = BITHUMB:UNI_KRW;line(cum(i.vbuy-i.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar j = BITSTAMP:uniusd;line(cum(j.vbuy-j.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar k = BTCTURK:UNITRY;line(cum(k.vbuy-k.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar l = BYBIT:UNIUSDT-SPOT;line(cum(l.vbuy-l.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar m = COINBASE:UNI-USD;\n\nvar n = COINBASE:UNI-USD;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar o = GATEIO:UNI_USDT_SPOT;line(cum(o.vbuy-o.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar p = HITBTC:UNIUSD;\n\nvar q = HITBTC:UNIUSDC;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar r = KRAKEN:UNI/USD;\n\nvar s = KRAKEN:UNI/USD;line(cum(r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar t = KUCOIN:UNI-USDT;\n\nvar u = KUCOIN:UNI-USDT;line(cum(t.vbuy-t.vsell+u.vbuy-u.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar v = MEXC:UNIUSDC;line(cum(v.vbuy-v.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar w = OKEX:UNI-USDT;\n\nvar x = OKEX:UNI-USDT;\n\nvar y = OKEX:UNI-USDC;\n\nvar z = OKEX:UNI-USDC;line(cum(w.vbuy-w.vsell+x.vbuy-x.vsell+y.vbuy-y.vsell+z.vbuy-z.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar A = UPBIT:BTC-UNI;line(cum(A.vbuy-A.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell+w.vbuy-w.vsell+x.vbuy-x.vsell+y.vbuy-y.vsell+z.vbuy-z.vsell+A.vbuy-A.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -699,8 +715,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:uniusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:uniusd_perp;\n\nvar c = COINALYZE_OI:BITMEX:UNI_USDT;\n\nvar d = COINALYZE_OI:BYBIT:UNIUSDT;\n\nvar e = COINALYZE_OI:DERIBIT:UNI_USDC-PERPETUAL;\n\nvar f = COINALYZE_OI:OKEX:UNI-USD-SWAP;\n\nvar g = COINALYZE_OI:OKEX:UNI-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close+g.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close+g.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:uniusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:uniusd_perp;\n\nvar c = COINALYZE_PFR:BITMEX:UNI_USDT;\n\nvar d = COINALYZE_PFR:BYBIT:UNIUSDT;\n\nvar e = COINALYZE_PFR:DERIBIT:UNI_USDC-PERPETUAL;\n\nvar f = COINALYZE_PFR:OKEX:UNI-USD-SWAP;\n\nvar g = COINALYZE_PFR:OKEX:UNI-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close+g.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close+g.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:uniusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:uniusd_perp;\n\nvar c = COINALYZE_OI:BINANCE_FUTURES:uniusdt;\n\nvar d = COINALYZE_OI:BITMEX:UNI_USDT;\n\nvar e = COINALYZE_OI:BITMEX:UNI_USDT;\n\nvar f = COINALYZE_OI:BYBIT:UNIUSDT;\n\nvar g = COINALYZE_OI:BYBIT:UNIUSDT;\n\nvar h = COINALYZE_OI:DERIBIT:UNI_USDC-PERPETUAL;\n\nvar i = COINALYZE_OI:OKEX:UNI-USD-SWAP;\n\nvar j = COINALYZE_OI:OKEX:UNI-USDT-SWAP;\n\nvar k = COINALYZE_OI:OKEX:UNI-USD-SWAP;\n\nvar l = COINALYZE_OI:OKEX:UNI-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close+i.close+j.close+k.close+l.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close+i.close+j.close+k.close+l.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:uniusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:uniusd_perp;\n\nvar c = COINALYZE_PFR:BINANCE_FUTURES:uniusdt;\n\nvar d = COINALYZE_PFR:BITMEX:UNI_USDT;\n\nvar e = COINALYZE_PFR:BITMEX:UNI_USDT;\n\nvar f = COINALYZE_PFR:BYBIT:UNIUSDT;\n\nvar g = COINALYZE_PFR:BYBIT:UNIUSDT;\n\nvar h = COINALYZE_PFR:DERIBIT:UNI_USDC-PERPETUAL;\n\nvar i = COINALYZE_PFR:OKEX:UNI-USD-SWAP;\n\nvar j = COINALYZE_PFR:OKEX:UNI-USDT-SWAP;\n\nvar k = COINALYZE_PFR:OKEX:UNI-USD-SWAP;\n\nvar l = COINALYZE_PFR:OKEX:UNI-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close+i.close+j.close+k.close+l.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close+i.close+j.close+k.close+l.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -991,8 +1007,7 @@
         "MEXC:UNIUSDC": false,
         "OKEX:UNI-USDC": false,
         "UPBIT:BTC-UNI": true,
-        "UNISWAPETHEREUM:UNI/WETH": true,
-        "UNISWAPV2ETHEREUM:UNI/WETH": true
+        "BINANCE_FUTURES:unibusd": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
