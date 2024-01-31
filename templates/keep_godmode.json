@@ -16,7 +16,8 @@
           "markets": [
             "BINANCE:keepusdt",
             "BINANCE:keepbusd",
-            "KRAKEN:KEEP/USD"
+            "KRAKEN:KEEP/USD",
+            "MEXC:KEEPUSDT"
           ],
           "zoom": 1
         },
@@ -35,7 +36,8 @@
           "markets": [
             "BINANCE:keepusdt",
             "BINANCE:keepbusd",
-            "KRAKEN:KEEP/USD"
+            "KRAKEN:KEEP/USD",
+            "MEXC:KEEPUSDT"
           ]
         }
       },
@@ -375,6 +377,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -508,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:keepusdt;\n\nvar b = BINANCE:keepbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = KRAKEN:KEEP/USD;line(cum(c.vbuy-c.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:keepusdt;\n\nvar b = BINANCE:keepbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = KRAKEN:KEEP/USD;line(cum(c.vbuy-c.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar d = MEXC:KEEPUSDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -870,7 +876,8 @@
       "hiddenMarkets": {
         "BINANCE:keepusdt": false,
         "BINANCE:keepbusd": false,
-        "KRAKEN:KEEP/USD": false
+        "KRAKEN:KEEP/USD": false,
+        "MEXC:KEEPUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
