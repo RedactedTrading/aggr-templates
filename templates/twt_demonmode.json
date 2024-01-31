@@ -18,12 +18,17 @@
             "BYBIT:TWTUSDT-SPOT",
             "BYBIT:TWTUSDT",
             "BINANCE:twtbusd",
+            "BINANCE_FUTURES:twtusdt",
             "BITGET:TWTUSDT_SPBL",
             "GATEIO:TWT_USDT_SPOT",
+            "GATEIO:TWT_USDT_FUTURES",
             "HITBTC:TWTUSDT",
             "KUCOIN:TWT-USDT",
             "KUCOIN:TWTUSDTM",
             "MEXC:TWT_USDT",
+            "BINANCE_FUTURES:twtusdt",
+            "BITGET:TWTUSDT_UMCBL",
+            "GATEIO:TWT_USDT_FUTURES",
             "HITBTC:TWTUSDC"
           ],
           "zoom": 1
@@ -35,8 +40,13 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:TWTUSDT",
+            "BINANCE_FUTURES:twtusdt",
+            "GATEIO:TWT_USDT_FUTURES",
             "KUCOIN:TWTUSDTM",
-            "MEXC:TWT_USDT"
+            "MEXC:TWT_USDT",
+            "BINANCE_FUTURES:twtusdt",
+            "BITGET:TWTUSDT_UMCBL",
+            "GATEIO:TWT_USDT_FUTURES"
           ]
         },
         "trades2": {
@@ -317,7 +327,7 @@
         "fetched": false
       },
       "BINANCE_FUTURES": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BINANCE_US": {
@@ -493,7 +503,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:TWTUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = KUCOIN:TWTUSDTM;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar c = MEXC:TWT_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:twtusdt;\n\nvar b = BINANCE_FUTURES:twtusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:TWTUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:TWTUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:TWT_USDT_FUTURES;\n\nvar f = GATEIO:TWT_USDT_FUTURES;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = KUCOIN:TWTUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:TWT_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -637,8 +647,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BYBIT:TWTUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BYBIT:TWTUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:twtusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:twtusdt;\n\nvar c = COINALYZE_OI:BYBIT:TWTUSDT;line(a.close+b.close+c.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:twtusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:twtusdt;\n\nvar c = COINALYZE_PFR:BYBIT:TWTUSDT;line(a.close+b.close+c.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -901,12 +911,15 @@
         "BYBIT:TWTUSDT-SPOT": false,
         "BYBIT:TWTUSDT": false,
         "BINANCE:twtbusd": false,
+        "BINANCE_FUTURES:twtusdt": false,
         "BITGET:TWTUSDT_SPBL": false,
         "GATEIO:TWT_USDT_SPOT": false,
+        "GATEIO:TWT_USDT_FUTURES": false,
         "HITBTC:TWTUSDT": false,
         "KUCOIN:TWT-USDT": false,
         "KUCOIN:TWTUSDTM": false,
         "MEXC:TWT_USDT": false,
+        "BITGET:TWTUSDT_UMCBL": false,
         "HITBTC:TWTUSDC": false
       },
       "barSpacing": 0.39437454420364615,
