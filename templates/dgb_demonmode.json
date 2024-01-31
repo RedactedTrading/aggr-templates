@@ -23,7 +23,6 @@
             "KUCOIN:DGB-USDT",
             "KUCOIN:DGBUSDTM",
             "OKEX:DGB-USDT",
-            "BITFINEX:DGBUSD",
             "HITBTC:DGBUSDC",
             "HITBTC:DGBUSD",
             "UPBIT:BTC-DGB"
@@ -53,7 +52,6 @@
             "BINANCE:dgbbusd",
             "KUCOIN:DGB-USDT",
             "OKEX:DGB-USDT",
-            "BITFINEX:DGBUSD",
             "HITBTC:DGBUSDC",
             "HITBTC:DGBUSD",
             "UPBIT:BTC-DGB"
@@ -329,7 +327,7 @@
         "fetched": false
       },
       "BITFINEX": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "BITMEX": {
@@ -533,7 +531,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:dgbusdt;\n\nvar b = BINANCE:dgbbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:DGBUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BYBIT:DGBUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = HITBTC:DGBUSDC;\n\nvar f = HITBTC:DGBUSD;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = KUCOIN:DGB-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = OKEX:DGB-USDT;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar i = UPBIT:BTC-DGB;line(cum(i.vbuy-i.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:dgbusdt;\n\nvar b = BINANCE:dgbbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BYBIT:DGBUSDT-SPOT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = HITBTC:DGBUSDC;\n\nvar e = HITBTC:DGBUSD;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = KUCOIN:DGB-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = OKEX:DGB-USDT;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar h = UPBIT:BTC-DGB;line(cum(h.vbuy-h.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -902,7 +900,6 @@
         "KUCOIN:DGB-USDT": false,
         "KUCOIN:DGBUSDTM": false,
         "OKEX:DGB-USDT": false,
-        "BITFINEX:DGBUSD": false,
         "HITBTC:DGBUSDC": false,
         "HITBTC:DGBUSD": false,
         "UPBIT:BTC-DGB": true
