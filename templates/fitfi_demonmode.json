@@ -24,9 +24,7 @@
             "MEXC:FITFI_USDT",
             "OKEX:FITFI-USDT",
             "OKEX:FITFI-USDT-SWAP",
-            "BITGET:FITFIUSDC_SPBL",
             "BITHUMB:FITFI_KRW",
-            "KUCOIN:FITFI-USDC",
             "MEXC:FITFIUSDC"
           ],
           "zoom": 1
@@ -55,9 +53,7 @@
             "KUCOIN:FITFI-USDT",
             "MEXC:FITFIUSDT",
             "OKEX:FITFI-USDT",
-            "BITGET:FITFIUSDC_SPBL",
             "BITHUMB:FITFI_KRW",
-            "KUCOIN:FITFI-USDC",
             "MEXC:FITFIUSDC"
           ]
         }
@@ -547,7 +543,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:FITFIUSDT_SPBL;\n\nvar b = BITGET:FITFIUSDC_SPBL;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BITHUMB:FITFI_KRW;line(cum(c.vbuy-c.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar d = BYBIT:FITFIUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:FITFI_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = KUCOIN:FITFI-USDT;\n\nvar g = KUCOIN:FITFI-USDC;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:FITFIUSDT;\n\nvar i = MEXC:FITFIUSDC;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = OKEX:FITFI-USDT;line(cum(j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:FITFIUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BITHUMB:FITFI_KRW;line(cum(b.vbuy-b.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar c = BYBIT:FITFIUSDT-SPOT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:FITFI_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KUCOIN:FITFI-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:FITFIUSDT;\n\nvar g = MEXC:FITFIUSDC;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = OKEX:FITFI-USDT;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -917,9 +913,7 @@
         "MEXC:FITFI_USDT": false,
         "OKEX:FITFI-USDT": false,
         "OKEX:FITFI-USDT-SWAP": false,
-        "BITGET:FITFIUSDC_SPBL": false,
         "BITHUMB:FITFI_KRW": true,
-        "KUCOIN:FITFI-USDC": false,
         "MEXC:FITFIUSDC": false
       },
       "barSpacing": 0.39437454420364615,
