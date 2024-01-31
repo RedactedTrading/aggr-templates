@@ -19,12 +19,14 @@
             "BINANCE:straxbusd",
             "BINANCE_FUTURES:straxusdt",
             "BITGET:STRAXUSDT_SPBL",
+            "BITMEX:STRAXUSDT",
             "GATEIO:STRAX_USDT_SPOT",
             "GATEIO:STRAX_USDT_FUTURES",
             "HITBTC:STRAXUSDT",
             "KUCOIN:STRAX-USDT",
             "KUCOIN:STRAXUSDTM",
             "MEXC:STRAX_USDT",
+            "BITMEX:STRAXUSDT",
             "BITHUMB:STRAX_KRW",
             "UPBIT:BTC-STRAX",
             "UPBIT:KRW-STRAX"
@@ -39,9 +41,11 @@
           "markets": [
             "BYBIT:STRAXUSDT",
             "BINANCE_FUTURES:straxusdt",
+            "BITMEX:STRAXUSDT",
             "GATEIO:STRAX_USDT_FUTURES",
             "KUCOIN:STRAXUSDTM",
-            "MEXC:STRAX_USDT"
+            "MEXC:STRAX_USDT",
+            "BITMEX:STRAXUSDT"
           ]
         },
         "trades2": {
@@ -335,7 +339,7 @@
         "fetched": false
       },
       "BITMEX": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITSTAMP": {
@@ -503,7 +507,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:straxusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:STRAXUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:STRAX_USDT_FUTURES;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KUCOIN:STRAXUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:STRAX_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:straxusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITMEX:STRAXUSDT;\n\nvar c = BITMEX:STRAXUSDT;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar d = BYBIT:STRAXUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:STRAX_USDT_FUTURES;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = KUCOIN:STRAXUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:STRAX_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -647,8 +651,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:straxusdt;\n\nvar b = COINALYZE_OI:BYBIT:STRAXUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:straxusdt;\n\nvar b = COINALYZE_PFR:BYBIT:STRAXUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:straxusdt;\n\nvar b = COINALYZE_OI:BITMEX:STRAXUSDT;\n\nvar c = COINALYZE_OI:BITMEX:STRAXUSDT;\n\nvar d = COINALYZE_OI:BYBIT:STRAXUSDT;line(a.close+b.close+c.close+d.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:straxusdt;\n\nvar b = COINALYZE_PFR:BITMEX:STRAXUSDT;\n\nvar c = COINALYZE_PFR:BITMEX:STRAXUSDT;\n\nvar d = COINALYZE_PFR:BYBIT:STRAXUSDT;line(a.close+b.close+c.close+d.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -912,6 +916,7 @@
         "BINANCE:straxbusd": false,
         "BINANCE_FUTURES:straxusdt": false,
         "BITGET:STRAXUSDT_SPBL": false,
+        "BITMEX:STRAXUSDT": false,
         "GATEIO:STRAX_USDT_SPOT": false,
         "GATEIO:STRAX_USDT_FUTURES": false,
         "HITBTC:STRAXUSDT": false,
