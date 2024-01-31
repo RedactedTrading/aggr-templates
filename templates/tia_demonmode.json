@@ -17,15 +17,26 @@
             "BINANCE:tiausdt",
             "BYBIT:TIAUSDT-SPOT",
             "BYBIT:TIAUSDT",
+            "BINANCE:tiatusd",
+            "BINANCE:tiausdc",
+            "BINANCE:tiatusd",
             "BINANCE_FUTURES:tiausdt",
+            "BITFINEX:TIAUSD",
             "BITGET:TIAUSDT_SPBL",
+            "BITGET:TIAUSDT_UMCBL",
             "BITMEX:TIAUSDT",
+            "COINBASE:TIA-USD",
             "GATEIO:TIA_USDT_SPOT",
             "GATEIO:TIA_USDT_FUTURES",
+            "HITBTC:TIAUSDT",
             "KRAKEN:TIA/USD",
+            "KRAKEN:PF_TIAUSD",
             "KUCOIN:TIA-USDT",
+            "KUCOIN:TIAUSDTM",
             "MEXC:TIA_USDT",
             "OKEX:TIA-USDT",
+            "OKEX:TIA-USDT-SWAP",
+            "BITFINEX:TIAUSD",
             "BITHUMB:TIA_KRW"
           ],
           "zoom": 1
@@ -38,9 +49,13 @@
           "markets": [
             "BYBIT:TIAUSDT",
             "BINANCE_FUTURES:tiausdt",
+            "BITGET:TIAUSDT_UMCBL",
             "BITMEX:TIAUSDT",
             "GATEIO:TIA_USDT_FUTURES",
-            "MEXC:TIA_USDT"
+            "KRAKEN:PF_TIAUSD",
+            "KUCOIN:TIAUSDTM",
+            "MEXC:TIA_USDT",
+            "OKEX:TIA-USDT-SWAP"
           ]
         },
         "trades2": {
@@ -51,11 +66,18 @@
           "markets": [
             "BINANCE:tiausdt",
             "BYBIT:TIAUSDT-SPOT",
+            "BINANCE:tiatusd",
+            "BINANCE:tiausdc",
+            "BINANCE:tiatusd",
+            "BITFINEX:TIAUSD",
             "BITGET:TIAUSDT_SPBL",
+            "COINBASE:TIA-USD",
             "GATEIO:TIA_USDT_SPOT",
+            "HITBTC:TIAUSDT",
             "KRAKEN:TIA/USD",
             "KUCOIN:TIA-USDT",
             "OKEX:TIA-USDT",
+            "BITFINEX:TIAUSD",
             "BITHUMB:TIA_KRW"
           ]
         }
@@ -329,7 +351,7 @@
         "fetched": false
       },
       "BITFINEX": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITMEX": {
@@ -345,7 +367,7 @@
         "fetched": false
       },
       "COINBASE": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "DERIBIT": {
@@ -361,7 +383,7 @@
         "fetched": false
       },
       "HITBTC": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "HUOBI": {
@@ -501,7 +523,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:tiausdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITMEX:TIAUSDT;line(cum(b.vbuy-b.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar c = BYBIT:TIAUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:TIA_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = MEXC:TIA_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:tiausdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:TIAUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BITMEX:TIAUSDT;line(cum(c.vbuy-c.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar d = BYBIT:TIAUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:TIA_USDT_FUTURES;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = KRAKEN:PF_TIAUSD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = KUCOIN:TIAUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:TIA_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar i = OKEX:TIA-USDT-SWAP;line(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -545,7 +567,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:tiausdt;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = BITGET:TIAUSDT_SPBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BITHUMB:TIA_KRW;line(cum(c.vbuy-c.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar d = BYBIT:TIAUSDT-SPOT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:TIA_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = KRAKEN:TIA/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = KUCOIN:TIA-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = OKEX:TIA-USDT;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:tiausdt;\n\nvar b = BINANCE:tiatusd;\n\nvar c = BINANCE:tiausdc;\n\nvar d = BINANCE:tiatusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:TIAUSD;\n\nvar f = BITFINEX:TIAUSD;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar g = BITGET:TIAUSDT_SPBL;line(cum(g.vbuy-g.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar h = BITHUMB:TIA_KRW;line(cum(h.vbuy-h.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar i = BYBIT:TIAUSDT-SPOT;line(cum(i.vbuy-i.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar j = COINBASE:TIA-USD;line(cum(j.vbuy-j.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = GATEIO:TIA_USDT_SPOT;line(cum(k.vbuy-k.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar l = HITBTC:TIAUSDT;line(cum(l.vbuy-l.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar m = KRAKEN:TIA/USD;line(cum(m.vbuy-m.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar n = KUCOIN:TIA-USDT;line(cum(n.vbuy-n.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar o = OKEX:TIA-USDT;line(cum(o.vbuy-o.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -645,8 +667,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:tiausdt;\n\nvar b = COINALYZE_OI:BITMEX:TIAUSDT;\n\nvar c = COINALYZE_OI:BYBIT:TIAUSDT;line(a.close+b.close+c.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:tiausdt;\n\nvar b = COINALYZE_PFR:BITMEX:TIAUSDT;\n\nvar c = COINALYZE_PFR:BYBIT:TIAUSDT;line(a.close+b.close+c.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:tiausdt;\n\nvar b = COINALYZE_OI:BITMEX:TIAUSDT;\n\nvar c = COINALYZE_OI:BYBIT:TIAUSDT;\n\nvar d = COINALYZE_OI:OKEX:TIA-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:tiausdt;\n\nvar b = COINALYZE_PFR:BITMEX:TIAUSDT;\n\nvar c = COINALYZE_PFR:BYBIT:TIAUSDT;\n\nvar d = COINALYZE_PFR:OKEX:TIA-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -908,15 +930,24 @@
         "BINANCE:tiausdt": false,
         "BYBIT:TIAUSDT-SPOT": false,
         "BYBIT:TIAUSDT": false,
+        "BINANCE:tiatusd": true,
+        "BINANCE:tiausdc": false,
         "BINANCE_FUTURES:tiausdt": false,
+        "BITFINEX:TIAUSD": false,
         "BITGET:TIAUSDT_SPBL": false,
+        "BITGET:TIAUSDT_UMCBL": false,
         "BITMEX:TIAUSDT": false,
+        "COINBASE:TIA-USD": false,
         "GATEIO:TIA_USDT_SPOT": false,
         "GATEIO:TIA_USDT_FUTURES": false,
+        "HITBTC:TIAUSDT": false,
         "KRAKEN:TIA/USD": false,
+        "KRAKEN:PF_TIAUSD": false,
         "KUCOIN:TIA-USDT": false,
+        "KUCOIN:TIAUSDTM": false,
         "MEXC:TIA_USDT": false,
         "OKEX:TIA-USDT": false,
+        "OKEX:TIA-USDT-SWAP": false,
         "BITHUMB:TIA_KRW": true
       },
       "barSpacing": 0.39437454420364615,
@@ -1006,7 +1037,9 @@
         }
       ],
       "audioThreshold": null,
-      "multipliers": {},
+      "multipliers": {
+        "COINBASE:TIA-USD": 0.5
+      },
       "showThresholdsAsTable": false,
       "maxRows": "477",
       "muted": false,
@@ -1104,7 +1137,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:BTC-USD": 0.53
+        "COINBASE:BTC-USD": 0.53,
+        "COINBASE:TIA-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
