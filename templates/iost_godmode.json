@@ -18,6 +18,7 @@
             "BYBIT:IOSTUSDT",
             "BINANCE:iostbusd",
             "BINANCE_FUTURES:iostusdt",
+            "BITGET:IOSTUSDT_SPBL",
             "BITGET:IOSTUSDT_UMCBL",
             "GATEIO:IOST_USDT_SPOT",
             "GATEIO:IOST_USDT_FUTURES",
@@ -29,7 +30,6 @@
             "BITHUMB:IOST_KRW",
             "HITBTC:IOSTUSDC",
             "HITBTC:IOSTUSD",
-            "OKEX:IOST-USDC",
             "UPBIT:KRW-IOST",
             "UPBIT:BTC-IOST"
           ],
@@ -57,6 +57,7 @@
           "markets": [
             "BINANCE:iostusdt",
             "BINANCE:iostbusd",
+            "BITGET:IOSTUSDT_SPBL",
             "GATEIO:IOST_USDT_SPOT",
             "KUCOIN:IOST-USDT",
             "MEXC:IOSTUSDT",
@@ -64,7 +65,6 @@
             "BITHUMB:IOST_KRW",
             "HITBTC:IOSTUSDC",
             "HITBTC:IOSTUSD",
-            "OKEX:IOST-USDC",
             "UPBIT:KRW-IOST",
             "UPBIT:BTC-IOST"
           ]
@@ -555,7 +555,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:iostusdt;\n\nvar b = BINANCE:iostbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITHUMB:IOST_KRW;line(cum(c.vbuy-c.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar d = GATEIO:IOST_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:IOSTUSDC;\n\nvar f = HITBTC:IOSTUSD;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = KUCOIN:IOST-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:IOSTUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar i = OKEX:IOST-USDT;\n\nvar j = OKEX:IOST-USDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar k = UPBIT:KRW-IOST;\n\nvar l = UPBIT:BTC-IOST;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:iostusdt;\n\nvar b = BINANCE:iostbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:IOSTUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:IOST_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = GATEIO:IOST_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:IOSTUSDC;\n\nvar g = HITBTC:IOSTUSD;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KUCOIN:IOST-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = MEXC:IOSTUSDT;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = OKEX:IOST-USDT;line(cum(j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar k = UPBIT:KRW-IOST;\n\nvar l = UPBIT:BTC-IOST;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -919,6 +919,7 @@
         "BYBIT:IOSTUSDT": false,
         "BINANCE:iostbusd": false,
         "BINANCE_FUTURES:iostusdt": false,
+        "BITGET:IOSTUSDT_SPBL": false,
         "BITGET:IOSTUSDT_UMCBL": false,
         "GATEIO:IOST_USDT_SPOT": false,
         "GATEIO:IOST_USDT_FUTURES": false,
@@ -930,7 +931,6 @@
         "BITHUMB:IOST_KRW": true,
         "HITBTC:IOSTUSDC": false,
         "HITBTC:IOSTUSD": true,
-        "OKEX:IOST-USDC": false,
         "UPBIT:KRW-IOST": true,
         "UPBIT:BTC-IOST": true
       },
