@@ -15,8 +15,11 @@
           "type": "chart",
           "markets": [
             "BINANCE:lrcusdt",
+            "BINANCE:lrcusdt",
             "BYBIT:LRCUSDT-SPOT",
             "BYBIT:LRCUSDT",
+            "BYBIT:LRCUSDT",
+            "BINANCE:lrcbusd",
             "BINANCE:lrcbusd",
             "BINANCE_FUTURES:lrcusdt",
             "BITFINEX:LRCUSD",
@@ -36,11 +39,20 @@
             "MEXC:LRC_USDT",
             "OKEX:LRC-USDT",
             "OKEX:LRC-USDT-SWAP",
+            "BINANCE_FUTURES:lrcusdt",
+            "BITFINEX:LRCUSD",
+            "COINBASE:LRC-USDT",
+            "COINBASE:LRC-USD",
+            "KRAKEN:LRC/USD",
+            "KUCOIN:LRC-USDT",
+            "OKEX:LRC-USDT",
+            "OKEX:LRC-USDT-SWAP",
             "BITHUMB:LRC_KRW",
             "BTCTURK:LRCTRY",
             "HITBTC:LRCUSDC",
             "OKEX:LRC-USDC",
-            "UPBIT:BTC-LRC"
+            "UPBIT:BTC-LRC",
+            "OKEX:LRC-USDC"
           ],
           "zoom": 1
         },
@@ -51,12 +63,15 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:LRCUSDT",
+            "BYBIT:LRCUSDT",
             "BINANCE_FUTURES:lrcusdt",
             "BITGET:LRCUSDT_UMCBL",
             "GATEIO:LRC_USDT_FUTURES",
             "KRAKEN:PF_LRCUSD",
             "KUCOIN:LRCUSDTM",
             "MEXC:LRC_USDT",
+            "OKEX:LRC-USDT-SWAP",
+            "BINANCE_FUTURES:lrcusdt",
             "OKEX:LRC-USDT-SWAP"
           ]
         },
@@ -67,7 +82,9 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:lrcusdt",
+            "BINANCE:lrcusdt",
             "BYBIT:LRCUSDT-SPOT",
+            "BINANCE:lrcbusd",
             "BINANCE:lrcbusd",
             "BITFINEX:LRCUSD",
             "BITGET:LRCUSDT_SPBL",
@@ -80,11 +97,18 @@
             "KUCOIN:LRC-USDT",
             "MEXC:LRCUSDT",
             "OKEX:LRC-USDT",
+            "BITFINEX:LRCUSD",
+            "COINBASE:LRC-USDT",
+            "COINBASE:LRC-USD",
+            "KRAKEN:LRC/USD",
+            "KUCOIN:LRC-USDT",
+            "OKEX:LRC-USDT",
             "BITHUMB:LRC_KRW",
             "BTCTURK:LRCTRY",
             "HITBTC:LRCUSDC",
             "OKEX:LRC-USDC",
-            "UPBIT:BTC-LRC"
+            "UPBIT:BTC-LRC",
+            "OKEX:LRC-USDC"
           ]
         }
       },
@@ -533,7 +557,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:lrcusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:LRCUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:LRCUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:LRC_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KRAKEN:PF_LRCUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:LRCUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:LRC_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = OKEX:LRC-USDT-SWAP;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:lrcusdt;\n\nvar b = BINANCE_FUTURES:lrcusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:LRCUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:LRCUSDT;\n\nvar e = BYBIT:LRCUSDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = GATEIO:LRC_USDT_FUTURES;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = KRAKEN:PF_LRCUSD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar h = KUCOIN:LRCUSDTM;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = MEXC:LRC_USDT;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = OKEX:LRC-USDT-SWAP;\n\nvar k = OKEX:LRC-USDT-SWAP;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -577,7 +601,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:lrcusdt;\n\nvar b = BINANCE:lrcbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:LRCUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:LRCUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:LRC_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BITSTAMP:lrcusd;line(cum(f.vbuy-f.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar g = BTCTURK:LRCTRY;line(cum(g.vbuy-g.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar h = BYBIT:LRCUSDT-SPOT;line(cum(h.vbuy-h.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar i = COINBASE:LRC-USD;\n\nvar j = COINBASE:LRC-USDT;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar k = GATEIO:LRC_USDT_SPOT;line(cum(k.vbuy-k.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar l = HITBTC:LRCUSDT;\n\nvar m = HITBTC:LRCUSDC;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar n = KRAKEN:LRC/USD;line(cum(n.vbuy-n.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar o = KUCOIN:LRC-USDT;line(cum(o.vbuy-o.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar p = MEXC:LRCUSDT;line(cum(p.vbuy-p.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar q = OKEX:LRC-USDT;\n\nvar r = OKEX:LRC-USDC;line(cum(q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar s = UPBIT:BTC-LRC;line(cum(s.vbuy-s.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:lrcusdt;\n\nvar b = BINANCE:lrcusdt;\n\nvar c = BINANCE:lrcbusd;\n\nvar d = BINANCE:lrcbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:LRCUSD;\n\nvar f = BITFINEX:LRCUSD;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar g = BITGET:LRCUSDT_SPBL;line(cum(g.vbuy-g.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar h = BITHUMB:LRC_KRW;line(cum(h.vbuy-h.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar i = BITSTAMP:lrcusd;line(cum(i.vbuy-i.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar j = BTCTURK:LRCTRY;line(cum(j.vbuy-j.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar k = BYBIT:LRCUSDT-SPOT;line(cum(k.vbuy-k.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar l = COINBASE:LRC-USD;\n\nvar m = COINBASE:LRC-USDT;\n\nvar n = COINBASE:LRC-USDT;\n\nvar o = COINBASE:LRC-USD;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar p = GATEIO:LRC_USDT_SPOT;line(cum(p.vbuy-p.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar q = HITBTC:LRCUSDT;\n\nvar r = HITBTC:LRCUSDC;line(cum(q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar s = KRAKEN:LRC/USD;\n\nvar t = KRAKEN:LRC/USD;line(cum(s.vbuy-s.vsell+t.vbuy-t.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar u = KUCOIN:LRC-USDT;\n\nvar v = KUCOIN:LRC-USDT;line(cum(u.vbuy-u.vsell+v.vbuy-v.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar w = MEXC:LRCUSDT;line(cum(w.vbuy-w.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar x = OKEX:LRC-USDT;\n\nvar y = OKEX:LRC-USDT;\n\nvar z = OKEX:LRC-USDC;\n\nvar A = OKEX:LRC-USDC;line(cum(x.vbuy-x.vsell+y.vbuy-y.vsell+z.vbuy-z.vsell+A.vbuy-A.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar B = UPBIT:BTC-LRC;line(cum(B.vbuy-B.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell+w.vbuy-w.vsell+x.vbuy-x.vsell+y.vbuy-y.vsell+z.vbuy-z.vsell+A.vbuy-A.vsell+B.vbuy-B.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -677,8 +701,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:lrcusdt;\n\nvar b = COINALYZE_OI:BYBIT:LRCUSDT;\n\nvar c = COINALYZE_OI:OKEX:LRC-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:lrcusdt;\n\nvar b = COINALYZE_PFR:BYBIT:LRCUSDT;\n\nvar c = COINALYZE_PFR:OKEX:LRC-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:lrcusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:lrcusdt;\n\nvar c = COINALYZE_OI:BYBIT:LRCUSDT;\n\nvar d = COINALYZE_OI:BYBIT:LRCUSDT;\n\nvar e = COINALYZE_OI:OKEX:LRC-USDT-SWAP;\n\nvar f = COINALYZE_OI:OKEX:LRC-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:lrcusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:lrcusdt;\n\nvar c = COINALYZE_PFR:BYBIT:LRCUSDT;\n\nvar d = COINALYZE_PFR:BYBIT:LRCUSDT;\n\nvar e = COINALYZE_PFR:OKEX:LRC-USDT-SWAP;\n\nvar f = COINALYZE_PFR:OKEX:LRC-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
