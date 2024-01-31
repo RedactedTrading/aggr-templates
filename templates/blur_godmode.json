@@ -14,8 +14,10 @@
           "name": "",
           "type": "chart",
           "markets": [
+            "BINANCE:blurusdt",
             "BYBIT:BLURUSDT-SPOT",
             "BYBIT:BLURUSDT",
+            "BINANCE:blurusdc",
             "BINANCE_FUTURES:blurusdt",
             "BITGET:BLURUSDT_SPBL",
             "BITGET:BLURUSDT_UMCBL",
@@ -66,7 +68,9 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BINANCE:blurusdt",
             "BYBIT:BLURUSDT-SPOT",
+            "BINANCE:blurusdc",
             "BITGET:BLURUSDT_SPBL",
             "BTCTURK:BLURUSDT",
             "COINBASE:BLUR-USD",
@@ -341,7 +345,7 @@
         "fetched": false
       },
       "BINANCE": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BINANCE_FUTURES": {
@@ -487,7 +491,7 @@
           "unsavedChanges": true
         },
         "price": {
-          "script": "var x0 = BYBIT:BLURUSDT-SPOT;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
+          "script": "var x0 = BINANCE:blurusdt;plotcandlestick((x0.open) / 1,(x0.high) / 1,(x0.low) / 1,(x0.close) / 1);",
           "enabled": true,
           "name": "Price",
           "options": {
@@ -573,7 +577,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:BLURUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BITHUMB:BLUR_KRW;line(cum(b.vbuy-b.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar c = BTCTURK:BLURUSDT;\n\nvar d = BTCTURK:BLURTRY;line(cum(c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar e = BYBIT:BLURUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:BLUR-USD;line(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = GATEIO:BLUR_USDT_SPOT;line(cum(g.vbuy-g.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar h = HITBTC:BLURUSDT;\n\nvar i = HITBTC:BLURUSDC;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar j = KRAKEN:BLUR/USD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar k = KUCOIN:BLUR-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar l = OKEX:BLUR-USDT;\n\nvar m = OKEX:BLUR-USDC;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar n = UPBIT:BTC-BLUR;\n\nvar o = UPBIT:KRW-BLUR;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:blurusdt;\n\nvar b = BINANCE:blurusdc;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:BLURUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:BLUR_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BTCTURK:BLURUSDT;\n\nvar f = BTCTURK:BLURTRY;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = BYBIT:BLURUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = COINBASE:BLUR-USD;line(cum(h.vbuy-h.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = GATEIO:BLUR_USDT_SPOT;line(cum(i.vbuy-i.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar j = HITBTC:BLURUSDT;\n\nvar k = HITBTC:BLURUSDC;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar l = KRAKEN:BLUR/USD;line(cum(l.vbuy-l.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar m = KUCOIN:BLUR-USDT;line(cum(m.vbuy-m.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar n = OKEX:BLUR-USDT;\n\nvar o = OKEX:BLUR-USDC;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar p = UPBIT:BTC-BLUR;\n\nvar q = UPBIT:KRW-BLUR;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -933,8 +937,10 @@
       "showRightScale": true,
       "showTimeScale": true,
       "hiddenMarkets": {
+        "BINANCE:blurusdt": false,
         "BYBIT:BLURUSDT-SPOT": false,
         "BYBIT:BLURUSDT": false,
+        "BINANCE:blurusdc": false,
         "BINANCE_FUTURES:blurusdt": false,
         "BITGET:BLURUSDT_SPBL": false,
         "BITGET:BLURUSDT_UMCBL": false,
