@@ -23,6 +23,7 @@
             "GATEIO:DENT_USDT_SPOT",
             "GATEIO:DENT_USDT_FUTURES",
             "KRAKEN:DENT/USD",
+            "KUCOIN:DENT-USDT",
             "KUCOIN:DENTUSDTM",
             "MEXC:DENT_USDT",
             "HITBTC:DENTUSD",
@@ -55,6 +56,7 @@
             "BITGET:DENTUSDT_SPBL",
             "GATEIO:DENT_USDT_SPOT",
             "KRAKEN:DENT/USD",
+            "KUCOIN:DENT-USDT",
             "HITBTC:DENTUSD",
             "UPBIT:BTC-DENT"
           ]
@@ -541,7 +543,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:dentusdt;\n\nvar b = BINANCE:dentbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:DENTUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = GATEIO:DENT_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:DENTUSD;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = KRAKEN:DENT/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = UPBIT:BTC-DENT;line(cum(g.vbuy-g.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:dentusdt;\n\nvar b = BINANCE:dentbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:DENTUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = GATEIO:DENT_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:DENTUSD;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = KRAKEN:DENT/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = KUCOIN:DENT-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = UPBIT:BTC-DENT;line(cum(h.vbuy-h.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -910,6 +912,7 @@
         "GATEIO:DENT_USDT_SPOT": false,
         "GATEIO:DENT_USDT_FUTURES": false,
         "KRAKEN:DENT/USD": false,
+        "KUCOIN:DENT-USDT": false,
         "KUCOIN:DENTUSDTM": false,
         "MEXC:DENT_USDT": false,
         "HITBTC:DENTUSD": true,
