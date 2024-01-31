@@ -15,8 +15,7 @@
           "type": "chart",
           "markets": [
             "BINANCE:polyusdt",
-            "BINANCE:polybusd",
-            "COINBASE:POLY-USD"
+            "BINANCE:polybusd"
           ],
           "zoom": 1
         },
@@ -34,8 +33,7 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:polyusdt",
-            "BINANCE:polybusd",
-            "COINBASE:POLY-USD"
+            "BINANCE:polybusd"
           ]
         }
       },
@@ -324,7 +322,7 @@
         "fetched": false
       },
       "COINBASE": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "DERIBIT": {
@@ -508,7 +506,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:polyusdt;\n\nvar b = BINANCE:polybusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:POLY-USD;line(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:polyusdt;\n\nvar b = BINANCE:polybusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -869,8 +867,7 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:polyusdt": false,
-        "BINANCE:polybusd": false,
-        "COINBASE:POLY-USD": false
+        "BINANCE:polybusd": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
@@ -959,9 +956,7 @@
         }
       ],
       "audioThreshold": null,
-      "multipliers": {
-        "COINBASE:POLY-USD": 0.5
-      },
+      "multipliers": {},
       "showThresholdsAsTable": false,
       "maxRows": "477",
       "muted": false,
@@ -1059,8 +1054,7 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:BTC-USD": 0.53,
-        "COINBASE:POLY-USD": 0.5
+        "COINBASE:BTC-USD": 0.53
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
