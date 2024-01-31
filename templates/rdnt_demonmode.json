@@ -31,9 +31,7 @@
             "OKEX:RDNT-USDT",
             "OKEX:RDNT-USDT-SWAP",
             "BITHUMB:RDNT_KRW",
-            "OKEX:RDNT-USDC",
-            "BALANCERARBITRUM:RDNT/WETH",
-            "UNISWAPARBITRUM:RDNT/WETH"
+            "OKEX:RDNT-USDC"
           ],
           "zoom": 1
         },
@@ -68,9 +66,7 @@
             "MEXC:RDNTUSDT",
             "OKEX:RDNT-USDT",
             "BITHUMB:RDNT_KRW",
-            "OKEX:RDNT-USDC",
-            "BALANCERARBITRUM:RDNT/WETH",
-            "UNISWAPARBITRUM:RDNT/WETH"
+            "OKEX:RDNT-USDC"
           ]
         }
       },
@@ -426,14 +422,6 @@
       "BITHUMB": {
         "disabled": false,
         "fetched": false
-      },
-      "BALANCERARBITRUM": {
-        "disabled": false,
-        "fetched": false
-      },
-      "UNISWAPARBITRUM": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -567,7 +555,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BALANCERARBITRUM:RDNT/WETH;line(cum(a.vbuy-a.vsell), title=\"BLNAB\", color=\"rgb(25, 76, 188)\");\n\n\nvar b = BINANCE:rdntusdt;\n\nvar c = BINANCE:rdnttusd;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar d = BITGET:RDNTUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:RDNT_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BYBIT:RDNTUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = GATEIO:RDNT_USDT_SPOT;line(cum(g.vbuy-g.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar h = HITBTC:RDNTUSDT;line(cum(h.vbuy-h.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar i = KUCOIN:RDNT-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = MEXC:RDNTUSDT;line(cum(j.vbuy-j.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar k = OKEX:RDNT-USDT;\n\nvar l = OKEX:RDNT-USDC;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar m = UNISWAPARBITRUM:RDNT/WETH;line(cum(m.vbuy-m.vsell), title=\"UNIAB\", color=\"rgb(25, 76, 188)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:rdntusdt;\n\nvar b = BINANCE:rdnttusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:RDNTUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:RDNT_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BYBIT:RDNTUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = GATEIO:RDNT_USDT_SPOT;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = HITBTC:RDNTUSDT;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KUCOIN:RDNT-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = MEXC:RDNTUSDT;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = OKEX:RDNT-USDT;\n\nvar k = OKEX:RDNT-USDC;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -944,9 +932,7 @@
         "OKEX:RDNT-USDT": false,
         "OKEX:RDNT-USDT-SWAP": false,
         "BITHUMB:RDNT_KRW": true,
-        "OKEX:RDNT-USDC": false,
-        "BALANCERARBITRUM:RDNT/WETH": true,
-        "UNISWAPARBITRUM:RDNT/WETH": true
+        "OKEX:RDNT-USDC": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
