@@ -22,7 +22,6 @@
             "BITGET:ANTUSDT_UMCBL",
             "BITSTAMP:antusd",
             "BTCTURK:ANTUSDT",
-            "COINBASE:ANT-USD",
             "GATEIO:ANT_USDT_SPOT",
             "GATEIO:ANT_USDT_FUTURES",
             "HITBTC:ANTUSDT",
@@ -33,10 +32,8 @@
             "MEXC:ANT_USDT",
             "OKEX:ANT-USDT",
             "OKEX:ANT-USDT-SWAP",
-            "BITFINEX:ANTUSD",
             "BTCTURK:ANTTRY",
-            "KRAKEN:PF_ANTUSD",
-            "OKEX:ANT-USDC"
+            "KRAKEN:PF_ANTUSD"
           ],
           "zoom": 1
         },
@@ -67,16 +64,13 @@
             "BITGET:ANTUSDT_SPBL",
             "BITSTAMP:antusd",
             "BTCTURK:ANTUSDT",
-            "COINBASE:ANT-USD",
             "GATEIO:ANT_USDT_SPOT",
             "HITBTC:ANTUSDT",
             "KRAKEN:ANT/USD",
             "KUCOIN:ANT-USDT",
             "MEXC:ANTUSDT",
             "OKEX:ANT-USDT",
-            "BITFINEX:ANTUSD",
-            "BTCTURK:ANTTRY",
-            "OKEX:ANT-USDC"
+            "BTCTURK:ANTTRY"
           ]
         }
       },
@@ -349,7 +343,7 @@
         "fetched": false
       },
       "BITFINEX": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "BITMEX": {
@@ -365,7 +359,7 @@
         "fetched": false
       },
       "COINBASE": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "DERIBIT": {
@@ -565,7 +559,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:antusdt;\n\nvar b = BINANCE:antbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:ANTUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:ANTUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITSTAMP:antusd;line(cum(e.vbuy-e.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = BTCTURK:ANTUSDT;\n\nvar g = BTCTURK:ANTTRY;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar h = COINBASE:ANT-USD;line(cum(h.vbuy-h.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = GATEIO:ANT_USDT_SPOT;line(cum(i.vbuy-i.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar j = HITBTC:ANTUSDT;line(cum(j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar k = KRAKEN:ANT/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar l = KUCOIN:ANT-USDT;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = MEXC:ANTUSDT;line(cum(m.vbuy-m.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar n = OKEX:ANT-USDT;\n\nvar o = OKEX:ANT-USDC;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:antusdt;\n\nvar b = BINANCE:antbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:ANTUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITSTAMP:antusd;line(cum(d.vbuy-d.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = BTCTURK:ANTUSDT;\n\nvar f = BTCTURK:ANTTRY;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = GATEIO:ANT_USDT_SPOT;line(cum(g.vbuy-g.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar h = HITBTC:ANTUSDT;line(cum(h.vbuy-h.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar i = KRAKEN:ANT/USD;line(cum(i.vbuy-i.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar j = KUCOIN:ANT-USDT;line(cum(j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar k = MEXC:ANTUSDT;line(cum(k.vbuy-k.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar l = OKEX:ANT-USDT;line(cum(l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -933,7 +927,6 @@
         "BITGET:ANTUSDT_UMCBL": false,
         "BITSTAMP:antusd": false,
         "BTCTURK:ANTUSDT": true,
-        "COINBASE:ANT-USD": false,
         "GATEIO:ANT_USDT_SPOT": false,
         "GATEIO:ANT_USDT_FUTURES": false,
         "HITBTC:ANTUSDT": false,
@@ -944,10 +937,8 @@
         "MEXC:ANT_USDT": false,
         "OKEX:ANT-USDT": false,
         "OKEX:ANT-USDT-SWAP": false,
-        "BITFINEX:ANTUSD": true,
         "BTCTURK:ANTTRY": true,
-        "KRAKEN:PF_ANTUSD": true,
-        "OKEX:ANT-USDC": false
+        "KRAKEN:PF_ANTUSD": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
@@ -1036,9 +1027,7 @@
         }
       ],
       "audioThreshold": null,
-      "multipliers": {
-        "COINBASE:ANT-USD": 0.5
-      },
+      "multipliers": {},
       "showThresholdsAsTable": false,
       "maxRows": "477",
       "muted": false,
@@ -1136,8 +1125,7 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:BTC-USD": 0.53,
-        "COINBASE:ANT-USD": 0.5
+        "COINBASE:BTC-USD": 0.53
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
