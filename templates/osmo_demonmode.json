@@ -20,7 +20,8 @@
             "COINBASE:OSMO-USD",
             "GATEIO:OSMO_USDT_SPOT",
             "HITBTC:OSMOUSDT",
-            "KUCOIN:OSMO-USDT"
+            "KUCOIN:OSMO-USDT",
+            "BITHUMB:OSMO_KRW"
           ],
           "zoom": 1
         },
@@ -43,7 +44,8 @@
             "COINBASE:OSMO-USD",
             "GATEIO:OSMO_USDT_SPOT",
             "HITBTC:OSMOUSDT",
-            "KUCOIN:OSMO-USDT"
+            "KUCOIN:OSMO-USDT",
+            "BITHUMB:OSMO_KRW"
           ]
         }
       },
@@ -391,6 +393,10 @@
       "GATEIO": {
         "disabled": false,
         "fetched": false
+      },
+      "BITHUMB": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -524,7 +530,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:osmousdt;\n\nvar b = BINANCE:osmobusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:OSMOUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:OSMO-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = GATEIO:OSMO_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:OSMOUSDT;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = KUCOIN:OSMO-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:osmousdt;\n\nvar b = BINANCE:osmobusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:OSMOUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:OSMO_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = COINBASE:OSMO-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = GATEIO:OSMO_USDT_SPOT;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = HITBTC:OSMOUSDT;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KUCOIN:OSMO-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -890,7 +896,8 @@
         "COINBASE:OSMO-USD": false,
         "GATEIO:OSMO_USDT_SPOT": false,
         "HITBTC:OSMOUSDT": false,
-        "KUCOIN:OSMO-USDT": false
+        "KUCOIN:OSMO-USDT": false,
+        "BITHUMB:OSMO_KRW": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
