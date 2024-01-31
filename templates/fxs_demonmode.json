@@ -30,6 +30,7 @@
             "MEXC:FXSUSDT",
             "MEXC:FXS_USDT",
             "OKEX:FXS-USDT",
+            "OKEX:FXS-USDT-SWAP",
             "BITHUMB:FXS_KRW",
             "HITBTC:FXSUSDC"
           ],
@@ -46,7 +47,8 @@
             "BITGET:FXSUSDT_UMCBL",
             "KRAKEN:PF_FXSUSD",
             "KUCOIN:FXSUSDTM",
-            "MEXC:FXS_USDT"
+            "MEXC:FXS_USDT",
+            "OKEX:FXS-USDT-SWAP"
           ]
         },
         "trades2": {
@@ -511,7 +513,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:fxsusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:FXSUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:FXSUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_FXSUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar e = KUCOIN:FXSUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:FXS_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:fxsusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:FXSUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:FXSUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KRAKEN:PF_FXSUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar e = KUCOIN:FXSUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:FXS_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = OKEX:FXS-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -655,8 +657,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:fxsusdt;\n\nvar b = COINALYZE_OI:BYBIT:FXSUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:fxsusdt;\n\nvar b = COINALYZE_PFR:BYBIT:FXSUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:fxsusdt;\n\nvar b = COINALYZE_OI:BYBIT:FXSUSDT;\n\nvar c = COINALYZE_OI:OKEX:FXS-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:fxsusdt;\n\nvar b = COINALYZE_PFR:BYBIT:FXSUSDT;\n\nvar c = COINALYZE_PFR:OKEX:FXS-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -931,6 +933,7 @@
         "MEXC:FXSUSDT": false,
         "MEXC:FXS_USDT": false,
         "OKEX:FXS-USDT": false,
+        "OKEX:FXS-USDT-SWAP": false,
         "BITHUMB:FXS_KRW": true,
         "HITBTC:FXSUSDC": false
       },
