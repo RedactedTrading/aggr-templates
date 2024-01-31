@@ -15,8 +15,8 @@
           "type": "chart",
           "markets": [
             "BYBIT:DOMEUSDT-SPOT",
-            "GATEIO:DOME_USDT_SPOT",
-            "OKEX:DOME-USDT"
+            "BITGET:DOMEUSDT_SPBL",
+            "GATEIO:DOME_USDT_SPOT"
           ],
           "zoom": 1
         },
@@ -34,8 +34,8 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:DOMEUSDT-SPOT",
-            "GATEIO:DOME_USDT_SPOT",
-            "OKEX:DOME-USDT"
+            "BITGET:DOMEUSDT_SPBL",
+            "GATEIO:DOME_USDT_SPOT"
           ]
         }
       },
@@ -356,7 +356,7 @@
         "fetched": false
       },
       "OKEX": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "PHEMEX": {
@@ -374,6 +374,10 @@
       "_id": "exchanges",
       "UPBIT": {
         "disabled": true,
+        "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
         "fetched": false
       },
       "GATEIO": {
@@ -512,7 +516,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:DOMEUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = GATEIO:DOME_USDT_SPOT;line(cum(b.vbuy-b.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar c = OKEX:DOME-USDT;line(cum(c.vbuy-c.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:DOMEUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:DOMEUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:DOME_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -873,8 +877,8 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:DOMEUSDT-SPOT": false,
-        "GATEIO:DOME_USDT_SPOT": false,
-        "OKEX:DOME-USDT": false
+        "BITGET:DOMEUSDT_SPBL": false,
+        "GATEIO:DOME_USDT_SPOT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
