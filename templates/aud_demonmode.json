@@ -15,8 +15,12 @@
           "type": "chart",
           "markets": [
             "BINANCE:audusdt",
+            "BINANCE:audusdt",
             "BINANCE:audbusd",
             "BINANCE:audusdc",
+            "BINANCE:audbusd",
+            "BINANCE:audusdc",
+            "KRAKEN:AUD/USD",
             "KRAKEN:AUD/USD"
           ],
           "zoom": 1
@@ -35,8 +39,12 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:audusdt",
+            "BINANCE:audusdt",
             "BINANCE:audbusd",
             "BINANCE:audusdc",
+            "BINANCE:audbusd",
+            "BINANCE:audusdc",
+            "KRAKEN:AUD/USD",
             "KRAKEN:AUD/USD"
           ]
         }
@@ -510,7 +518,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:audusdt;\n\nvar b = BINANCE:audbusd;\n\nvar c = BINANCE:audusdc;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar d = KRAKEN:AUD/USD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:audusdt;\n\nvar b = BINANCE:audusdt;\n\nvar c = BINANCE:audbusd;\n\nvar d = BINANCE:audusdc;\n\nvar e = BINANCE:audbusd;\n\nvar f = BINANCE:audusdc;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar g = KRAKEN:AUD/USD;\n\nvar h = KRAKEN:AUD/USD;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
