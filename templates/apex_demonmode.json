@@ -15,7 +15,8 @@
           "type": "chart",
           "markets": [
             "BYBIT:APEXUSDT-SPOT",
-            "BYBIT:APEXUSDC-SPOT"
+            "BYBIT:APEXUSDC-SPOT",
+            "MEXC:APEXUSDT"
           ],
           "zoom": 1
         },
@@ -33,7 +34,8 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:APEXUSDT-SPOT",
-            "BYBIT:APEXUSDC-SPOT"
+            "BYBIT:APEXUSDC-SPOT",
+            "MEXC:APEXUSDT"
           ]
         }
       },
@@ -373,6 +375,10 @@
       "UPBIT": {
         "disabled": true,
         "fetched": false
+      },
+      "MEXC": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -506,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:APEXUSDT-SPOT;\n\nvar b = BYBIT:APEXUSDC-SPOT;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:APEXUSDT-SPOT;\n\nvar b = BYBIT:APEXUSDC-SPOT;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = MEXC:APEXUSDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -867,7 +873,8 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:APEXUSDT-SPOT": false,
-        "BYBIT:APEXUSDC-SPOT": false
+        "BYBIT:APEXUSDC-SPOT": false,
+        "MEXC:APEXUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
