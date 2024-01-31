@@ -15,15 +15,23 @@
           "type": "chart",
           "markets": [
             "BINANCE:forthusdt",
+            "BINANCE:forthusdt",
             "BYBIT:FORTHUSDT",
+            "BINANCE:forthbusd",
             "BINANCE:forthbusd",
             "COINBASE:FORTH-USD",
             "GATEIO:FORTH_USDT_SPOT",
+            "GATEIO:FORTH_USDT_FUTURES",
             "HITBTC:FORTHUSD",
             "KRAKEN:FORTH/USD",
             "KUCOIN:FORTH-USDT",
             "MEXC:FORTHUSDT",
             "MEXC:FORTH_USDT",
+            "OKEX:FORTH-USDT",
+            "BITFINEX:FORTH:USD",
+            "COINBASE:FORTH-USD",
+            "KRAKEN:FORTH/USD",
+            "KUCOIN:FORTH-USDT",
             "OKEX:FORTH-USDT"
           ],
           "zoom": 1
@@ -35,6 +43,7 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:FORTHUSDT",
+            "GATEIO:FORTH_USDT_FUTURES",
             "MEXC:FORTH_USDT"
           ]
         },
@@ -45,6 +54,8 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:forthusdt",
+            "BINANCE:forthusdt",
+            "BINANCE:forthbusd",
             "BINANCE:forthbusd",
             "COINBASE:FORTH-USD",
             "GATEIO:FORTH_USDT_SPOT",
@@ -52,6 +63,11 @@
             "KRAKEN:FORTH/USD",
             "KUCOIN:FORTH-USDT",
             "MEXC:FORTHUSDT",
+            "OKEX:FORTH-USDT",
+            "BITFINEX:FORTH:USD",
+            "COINBASE:FORTH-USD",
+            "KRAKEN:FORTH/USD",
+            "KUCOIN:FORTH-USDT",
             "OKEX:FORTH-USDT"
           ]
         }
@@ -325,7 +341,7 @@
         "fetched": false
       },
       "BITFINEX": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITMEX": {
@@ -489,7 +505,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:FORTHUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:FORTH_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:FORTHUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = GATEIO:FORTH_USDT_FUTURES;line(cum(b.vbuy-b.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar c = MEXC:FORTH_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -533,7 +549,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:forthusdt;\n\nvar b = BINANCE:forthbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:FORTH-USD;line(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = GATEIO:FORTH_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:FORTHUSD;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = KRAKEN:FORTH/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = KUCOIN:FORTH-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:FORTHUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar i = OKEX:FORTH-USDT;line(cum(i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:forthusdt;\n\nvar b = BINANCE:forthusdt;\n\nvar c = BINANCE:forthbusd;\n\nvar d = BINANCE:forthbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:FORTH:USD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = COINBASE:FORTH-USD;\n\nvar g = COINBASE:FORTH-USD;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = GATEIO:FORTH_USDT_SPOT;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = HITBTC:FORTHUSD;line(cum(i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar j = KRAKEN:FORTH/USD;\n\nvar k = KRAKEN:FORTH/USD;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar l = KUCOIN:FORTH-USDT;\n\nvar m = KUCOIN:FORTH-USDT;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar n = MEXC:FORTHUSDT;line(cum(n.vbuy-n.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar o = OKEX:FORTH-USDT;\n\nvar p = OKEX:FORTH-USDT;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -898,12 +914,14 @@
         "BINANCE:forthbusd": false,
         "COINBASE:FORTH-USD": false,
         "GATEIO:FORTH_USDT_SPOT": false,
+        "GATEIO:FORTH_USDT_FUTURES": false,
         "HITBTC:FORTHUSD": false,
         "KRAKEN:FORTH/USD": false,
         "KUCOIN:FORTH-USDT": false,
         "MEXC:FORTHUSDT": false,
         "MEXC:FORTH_USDT": false,
-        "OKEX:FORTH-USDT": false
+        "OKEX:FORTH-USDT": false,
+        "BITFINEX:FORTH:USD": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
