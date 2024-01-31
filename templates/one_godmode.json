@@ -15,13 +15,16 @@
           "type": "chart",
           "markets": [
             "BINANCE:oneusdt",
+            "BINANCE:oneusdt",
             "BYBIT:ONEUSDT-SPOT",
+            "BYBIT:ONEUSDT",
             "BYBIT:ONEUSDT",
             "BINANCE:onetusd",
             "BINANCE:oneusdc",
             "BINANCE:onebusd",
+            "BINANCE:oneusdc",
+            "BINANCE:onebusd",
             "BINANCE_FUTURES:oneusdt",
-            "BITFINEX:ONEUSD",
             "BITGET:ONEUSDT_SPBL",
             "BITGET:ONEUSDT_UMCBL",
             "GATEIO:ONE_USDT_SPOT",
@@ -30,6 +33,10 @@
             "KUCOIN:ONE-USDT",
             "KUCOIN:ONEUSDTM",
             "MEXC:ONE_USDT",
+            "OKEX:ONE-USDT",
+            "BINANCE_FUTURES:oneusdt",
+            "BITFINEX:ONEUSD",
+            "KUCOIN:ONE-USDT",
             "OKEX:ONE-USDT",
             "HITBTC:ONEUSDC"
           ],
@@ -42,11 +49,13 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:ONEUSDT",
+            "BYBIT:ONEUSDT",
             "BINANCE_FUTURES:oneusdt",
             "BITGET:ONEUSDT_UMCBL",
             "GATEIO:ONE_USDT_FUTURES",
             "KUCOIN:ONEUSDTM",
-            "MEXC:ONE_USDT"
+            "MEXC:ONE_USDT",
+            "BINANCE_FUTURES:oneusdt"
           ]
         },
         "trades2": {
@@ -56,14 +65,19 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:oneusdt",
+            "BINANCE:oneusdt",
             "BYBIT:ONEUSDT-SPOT",
             "BINANCE:onetusd",
             "BINANCE:oneusdc",
             "BINANCE:onebusd",
-            "BITFINEX:ONEUSD",
+            "BINANCE:oneusdc",
+            "BINANCE:onebusd",
             "BITGET:ONEUSDT_SPBL",
             "GATEIO:ONE_USDT_SPOT",
             "HITBTC:ONEUSD",
+            "KUCOIN:ONE-USDT",
+            "OKEX:ONE-USDT",
+            "BITFINEX:ONEUSD",
             "KUCOIN:ONE-USDT",
             "OKEX:ONE-USDT",
             "HITBTC:ONEUSDC"
@@ -507,7 +521,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:oneusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:ONEUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:ONEUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:ONE_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KUCOIN:ONEUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:ONE_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:oneusdt;\n\nvar b = BINANCE_FUTURES:oneusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:ONEUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:ONEUSDT;\n\nvar e = BYBIT:ONEUSDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = GATEIO:ONE_USDT_FUTURES;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = KUCOIN:ONEUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:ONE_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -551,7 +565,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:oneusdt;\n\nvar b = BINANCE:onetusd;\n\nvar c = BINANCE:oneusdc;\n\nvar d = BINANCE:onebusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:ONEUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:ONEUSDT_SPBL;line(cum(f.vbuy-f.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar g = BYBIT:ONEUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = GATEIO:ONE_USDT_SPOT;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = HITBTC:ONEUSD;\n\nvar j = HITBTC:ONEUSDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar k = KUCOIN:ONE-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar l = OKEX:ONE-USDT;line(cum(l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:oneusdt;\n\nvar b = BINANCE:oneusdt;\n\nvar c = BINANCE:onetusd;\n\nvar d = BINANCE:oneusdc;\n\nvar e = BINANCE:onebusd;\n\nvar f = BINANCE:oneusdc;\n\nvar g = BINANCE:onebusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar h = BITFINEX:ONEUSD;line(cum(h.vbuy-h.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar i = BITGET:ONEUSDT_SPBL;line(cum(i.vbuy-i.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar j = BYBIT:ONEUSDT-SPOT;line(cum(j.vbuy-j.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar k = GATEIO:ONE_USDT_SPOT;line(cum(k.vbuy-k.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar l = HITBTC:ONEUSD;\n\nvar m = HITBTC:ONEUSDC;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar n = KUCOIN:ONE-USDT;\n\nvar o = KUCOIN:ONE-USDT;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar p = OKEX:ONE-USDT;\n\nvar q = OKEX:ONE-USDT;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -651,8 +665,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:oneusdt;\n\nvar b = COINALYZE_OI:BYBIT:ONEUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:oneusdt;\n\nvar b = COINALYZE_PFR:BYBIT:ONEUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:oneusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:oneusdt;\n\nvar c = COINALYZE_OI:BYBIT:ONEUSDT;\n\nvar d = COINALYZE_OI:BYBIT:ONEUSDT;line(a.close+b.close+c.close+d.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:oneusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:oneusdt;\n\nvar c = COINALYZE_PFR:BYBIT:ONEUSDT;\n\nvar d = COINALYZE_PFR:BYBIT:ONEUSDT;line(a.close+b.close+c.close+d.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -918,7 +932,6 @@
         "BINANCE:oneusdc": false,
         "BINANCE:onebusd": false,
         "BINANCE_FUTURES:oneusdt": false,
-        "BITFINEX:ONEUSD": false,
         "BITGET:ONEUSDT_SPBL": false,
         "BITGET:ONEUSDT_UMCBL": false,
         "GATEIO:ONE_USDT_SPOT": false,
@@ -928,6 +941,7 @@
         "KUCOIN:ONEUSDTM": false,
         "MEXC:ONE_USDT": false,
         "OKEX:ONE-USDT": false,
+        "BITFINEX:ONEUSD": false,
         "HITBTC:ONEUSDC": false
       },
       "barSpacing": 0.39437454420364615,
