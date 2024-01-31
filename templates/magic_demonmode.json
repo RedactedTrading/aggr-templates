@@ -30,9 +30,9 @@
             "MEXC:MAGIC_USDT",
             "OKEX:MAGIC-USDT",
             "OKEX:MAGIC-USDT-SWAP",
+            "BITHUMB:MAGIC_KRW",
             "BTCTURK:MAGICTRY",
-            "UPBIT:BTC-MAGIC",
-            "SUSHISWAPARBITRUM:MAGIC/WETH"
+            "UPBIT:BTC-MAGIC"
           ],
           "zoom": 1
         },
@@ -66,9 +66,9 @@
             "HITBTC:MAGICUSDT",
             "KUCOIN:MAGIC-USDT",
             "OKEX:MAGIC-USDT",
+            "BITHUMB:MAGIC_KRW",
             "BTCTURK:MAGICTRY",
-            "UPBIT:BTC-MAGIC",
-            "SUSHISWAPARBITRUM:MAGIC/WETH"
+            "UPBIT:BTC-MAGIC"
           ]
         }
       },
@@ -421,11 +421,11 @@
         "disabled": false,
         "fetched": false
       },
-      "BTCTURK": {
+      "BITHUMB": {
         "disabled": false,
         "fetched": false
       },
-      "SUSHISWAPARBITRUM": {
+      "BTCTURK": {
         "disabled": false,
         "fetched": false
       }
@@ -561,7 +561,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:magicusdt;\n\nvar b = BINANCE:magicbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MAGICUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BTCTURK:MAGICTRY;line(cum(d.vbuy-d.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar e = BYBIT:MAGICUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = COINBASE:MAGIC-USD;line(cum(f.vbuy-f.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar g = GATEIO:MAGIC_USDT_SPOT;line(cum(g.vbuy-g.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar h = HITBTC:MAGICUSDT;line(cum(h.vbuy-h.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar i = KUCOIN:MAGIC-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = OKEX:MAGIC-USDT;line(cum(j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar k = SUSHISWAPARBITRUM:MAGIC/WETH;line(cum(k.vbuy-k.vsell), title=\"SUSHIAB\", color=\"rgb(25, 76, 188)\");\n\n\nvar l = UPBIT:BTC-MAGIC;line(cum(l.vbuy-l.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:magicusdt;\n\nvar b = BINANCE:magicbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:MAGICUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:MAGIC_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BTCTURK:MAGICTRY;line(cum(e.vbuy-e.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar f = BYBIT:MAGICUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:MAGIC-USD;line(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = GATEIO:MAGIC_USDT_SPOT;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = HITBTC:MAGICUSDT;line(cum(i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar j = KUCOIN:MAGIC-USDT;line(cum(j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar k = OKEX:MAGIC-USDT;line(cum(k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar l = UPBIT:BTC-MAGIC;line(cum(l.vbuy-l.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -937,9 +937,9 @@
         "MEXC:MAGIC_USDT": false,
         "OKEX:MAGIC-USDT": false,
         "OKEX:MAGIC-USDT-SWAP": false,
+        "BITHUMB:MAGIC_KRW": true,
         "BTCTURK:MAGICTRY": true,
-        "UPBIT:BTC-MAGIC": true,
-        "SUSHISWAPARBITRUM:MAGIC/WETH": true
+        "UPBIT:BTC-MAGIC": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
