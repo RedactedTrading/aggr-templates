@@ -15,10 +15,12 @@
           "type": "chart",
           "markets": [
             "BINANCE:datausdt",
+            "BYBIT:DATAUSDT",
             "BINANCE:databusd",
             "GATEIO:DATA_USDT_SPOT",
             "HITBTC:DATAUSDT",
-            "KUCOIN:DATA-USDT"
+            "KUCOIN:DATA-USDT",
+            "MEXC:DATA_USDT"
           ],
           "zoom": 1
         },
@@ -27,7 +29,10 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "BYBIT:DATAUSDT",
+            "MEXC:DATA_USDT"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -324,7 +329,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -381,6 +386,10 @@
         "fetched": false
       },
       "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
         "disabled": false,
         "fetched": false
       }
@@ -472,7 +481,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:DATAUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:DATA_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -616,8 +625,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BYBIT:DATAUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BYBIT:DATAUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -877,10 +886,12 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:datausdt": false,
+        "BYBIT:DATAUSDT": false,
         "BINANCE:databusd": false,
         "GATEIO:DATA_USDT_SPOT": false,
         "HITBTC:DATAUSDT": false,
-        "KUCOIN:DATA-USDT": false
+        "KUCOIN:DATA-USDT": false,
+        "MEXC:DATA_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
