@@ -15,12 +15,14 @@
           "type": "chart",
           "markets": [
             "BINANCE:alpineusdt",
+            "BINANCE:alpineusdt",
+            "BINANCE:alpinebusd",
             "BINANCE:alpinebusd",
             "BITGET:ALPINEUSDT_SPBL",
             "GATEIO:ALPINE_USDT_SPOT",
             "KUCOIN:ALPINE-USDT",
             "MEXC:ALPINEUSDT",
-            "MEXC:ALPINE_USDT"
+            "KUCOIN:ALPINE-USDT"
           ],
           "zoom": 1
         },
@@ -29,9 +31,7 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": [
-            "MEXC:ALPINE_USDT"
-          ]
+          "markets": []
         },
         "trades2": {
           "id": "trades2",
@@ -40,11 +40,14 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:alpineusdt",
+            "BINANCE:alpineusdt",
+            "BINANCE:alpinebusd",
             "BINANCE:alpinebusd",
             "BITGET:ALPINEUSDT_SPBL",
             "GATEIO:ALPINE_USDT_SPOT",
             "KUCOIN:ALPINE-USDT",
-            "MEXC:ALPINEUSDT"
+            "MEXC:ALPINEUSDT",
+            "KUCOIN:ALPINE-USDT"
           ]
         }
       },
@@ -485,7 +488,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = MEXC:ALPINE_USDT;line(cum(a.vbuy-a.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -529,7 +532,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:alpineusdt;\n\nvar b = BINANCE:alpinebusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:ALPINEUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = GATEIO:ALPINE_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KUCOIN:ALPINE-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:ALPINEUSDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:alpineusdt;\n\nvar b = BINANCE:alpineusdt;\n\nvar c = BINANCE:alpinebusd;\n\nvar d = BINANCE:alpinebusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITGET:ALPINEUSDT_SPBL;line(cum(e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = GATEIO:ALPINE_USDT_SPOT;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = KUCOIN:ALPINE-USDT;\n\nvar h = KUCOIN:ALPINE-USDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = MEXC:ALPINEUSDT;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -894,8 +897,7 @@
         "BITGET:ALPINEUSDT_SPBL": false,
         "GATEIO:ALPINE_USDT_SPOT": false,
         "KUCOIN:ALPINE-USDT": false,
-        "MEXC:ALPINEUSDT": false,
-        "MEXC:ALPINE_USDT": false
+        "MEXC:ALPINEUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
