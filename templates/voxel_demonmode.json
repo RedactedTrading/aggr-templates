@@ -16,9 +16,13 @@
           "markets": [
             "BINANCE:voxelusdt",
             "BINANCE:voxelbusd",
+            "BITGET:VOXELUSDT_SPBL",
             "COINBASE:VOXEL-USD",
             "GATEIO:VOXEL_USDT_SPOT",
-            "KUCOIN:VOXEL-USDT"
+            "GATEIO:VOXEL_USDT_FUTURES",
+            "HITBTC:VOXELUSDT",
+            "KUCOIN:VOXEL-USDT",
+            "HITBTC:VOXELUSDT"
           ],
           "zoom": 1
         },
@@ -27,7 +31,9 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "GATEIO:VOXEL_USDT_FUTURES"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -37,9 +43,12 @@
           "markets": [
             "BINANCE:voxelusdt",
             "BINANCE:voxelbusd",
+            "BITGET:VOXELUSDT_SPBL",
             "COINBASE:VOXEL-USD",
             "GATEIO:VOXEL_USDT_SPOT",
-            "KUCOIN:VOXEL-USDT"
+            "HITBTC:VOXELUSDT",
+            "KUCOIN:VOXEL-USDT",
+            "HITBTC:VOXELUSDT"
           ]
         }
       },
@@ -344,7 +353,7 @@
         "fetched": false
       },
       "HITBTC": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "HUOBI": {
@@ -378,6 +387,10 @@
       "_id": "exchanges",
       "UPBIT": {
         "disabled": true,
+        "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
         "fetched": false
       },
       "GATEIO": {
@@ -472,7 +485,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = GATEIO:VOXEL_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -516,7 +529,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:voxelusdt;\n\nvar b = BINANCE:voxelbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = COINBASE:VOXEL-USD;line(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = GATEIO:VOXEL_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KUCOIN:VOXEL-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:voxelusdt;\n\nvar b = BINANCE:voxelbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:VOXELUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = COINBASE:VOXEL-USD;line(cum(d.vbuy-d.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar e = GATEIO:VOXEL_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:VOXELUSDT;\n\nvar g = HITBTC:VOXELUSDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KUCOIN:VOXEL-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -878,8 +891,11 @@
       "hiddenMarkets": {
         "BINANCE:voxelusdt": false,
         "BINANCE:voxelbusd": false,
+        "BITGET:VOXELUSDT_SPBL": false,
         "COINBASE:VOXEL-USD": false,
         "GATEIO:VOXEL_USDT_SPOT": false,
+        "GATEIO:VOXEL_USDT_FUTURES": false,
+        "HITBTC:VOXELUSDT": false,
         "KUCOIN:VOXEL-USDT": false
       },
       "barSpacing": 0.39437454420364615,
