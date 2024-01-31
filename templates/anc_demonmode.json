@@ -15,10 +15,15 @@
           "type": "chart",
           "markets": [
             "BINANCE:ancusdt",
+            "BINANCE:ancusdt",
+            "BINANCE:ancbusd",
             "BINANCE:ancbusd",
             "GATEIO:ANC_USDT_SPOT",
             "HITBTC:ANCUSDT",
-            "MEXC:ANCUSDT"
+            "MEXC:ANCUSDT",
+            "KUCOIN:ANC-USDT",
+            "OKEX:ANC-USDT",
+            "OKEX:ANC-USDC"
           ],
           "zoom": 1
         },
@@ -36,10 +41,15 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:ancusdt",
+            "BINANCE:ancusdt",
+            "BINANCE:ancbusd",
             "BINANCE:ancbusd",
             "GATEIO:ANC_USDT_SPOT",
             "HITBTC:ANCUSDT",
-            "MEXC:ANCUSDT"
+            "MEXC:ANCUSDT",
+            "KUCOIN:ANC-USDT",
+            "OKEX:ANC-USDT",
+            "OKEX:ANC-USDC"
           ]
         }
       },
@@ -356,11 +366,11 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "PHEMEX": {
@@ -520,7 +530,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ancusdt;\n\nvar b = BINANCE:ancbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = GATEIO:ANC_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = HITBTC:ANCUSDT;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = MEXC:ANCUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ancusdt;\n\nvar b = BINANCE:ancusdt;\n\nvar c = BINANCE:ancbusd;\n\nvar d = BINANCE:ancbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = GATEIO:ANC_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:ANCUSDT;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = KUCOIN:ANC-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:ANCUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar i = OKEX:ANC-USDT;\n\nvar j = OKEX:ANC-USDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -884,7 +894,10 @@
         "BINANCE:ancbusd": false,
         "GATEIO:ANC_USDT_SPOT": false,
         "HITBTC:ANCUSDT": false,
-        "MEXC:ANCUSDT": false
+        "MEXC:ANCUSDT": false,
+        "KUCOIN:ANC-USDT": false,
+        "OKEX:ANC-USDT": false,
+        "OKEX:ANC-USDC": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
