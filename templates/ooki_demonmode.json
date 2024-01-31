@@ -15,9 +15,13 @@
           "type": "chart",
           "markets": [
             "BINANCE:ookiusdt",
+            "BINANCE:ookiusdt",
+            "BINANCE:ookibusd",
             "BINANCE:ookibusd",
             "GATEIO:OOKI_USDT_SPOT",
-            "GATEIO:OOKI_USDT_FUTURES"
+            "GATEIO:OOKI_USDT_FUTURES",
+            "HITBTC:OOKIUSDT",
+            "COINBASE:OOKI-USD"
           ],
           "zoom": 1
         },
@@ -37,8 +41,12 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:ookiusdt",
+            "BINANCE:ookiusdt",
             "BINANCE:ookibusd",
-            "GATEIO:OOKI_USDT_SPOT"
+            "BINANCE:ookibusd",
+            "GATEIO:OOKI_USDT_SPOT",
+            "HITBTC:OOKIUSDT",
+            "COINBASE:OOKI-USD"
           ]
         }
       },
@@ -327,7 +335,7 @@
         "fetched": false
       },
       "COINBASE": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "DERIBIT": {
@@ -343,7 +351,7 @@
         "fetched": false
       },
       "HITBTC": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "HUOBI": {
@@ -515,7 +523,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ookiusdt;\n\nvar b = BINANCE:ookibusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = GATEIO:OOKI_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ookiusdt;\n\nvar b = BINANCE:ookiusdt;\n\nvar c = BINANCE:ookibusd;\n\nvar d = BINANCE:ookibusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = COINBASE:OOKI-USD;line(cum(e.vbuy-e.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar f = GATEIO:OOKI_USDT_SPOT;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = HITBTC:OOKIUSDT;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -878,7 +886,9 @@
         "BINANCE:ookiusdt": false,
         "BINANCE:ookibusd": false,
         "GATEIO:OOKI_USDT_SPOT": false,
-        "GATEIO:OOKI_USDT_FUTURES": false
+        "GATEIO:OOKI_USDT_FUTURES": false,
+        "HITBTC:OOKIUSDT": false,
+        "COINBASE:OOKI-USD": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
@@ -967,7 +977,9 @@
         }
       ],
       "audioThreshold": null,
-      "multipliers": {},
+      "multipliers": {
+        "COINBASE:OOKI-USD": 0.5
+      },
       "showThresholdsAsTable": false,
       "maxRows": "477",
       "muted": false,
@@ -1065,7 +1077,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:BTC-USD": 0.53
+        "COINBASE:BTC-USD": 0.53,
+        "COINBASE:OOKI-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
