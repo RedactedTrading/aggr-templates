@@ -32,16 +32,16 @@
             "MEXC:BNB_USDT",
             "OKEX:BNB-USDT",
             "OKEX:BNB-USDT-SWAP",
-            "BINANCE_FUTURES:bnbbusd",
+            "BINANCE_FUTURES:bnbusdc",
             "BITGET:BNBUSDC_SPBL",
             "BITHUMB:BNB_KRW",
             "BITMEX:BNBUSD",
             "HITBTC:BNBUSD",
             "HITBTC:BNBUSDC",
+            "KRAKEN:PF_BNBUSD",
             "KUCOIN:BNB-USDC",
             "MEXC:BNBUSDC",
-            "OKEX:BNB-USDC",
-            "PANCAKESWAPAPTOS:BNB/USDC"
+            "OKEX:BNB-USDC"
           ],
           "zoom": 1
         },
@@ -60,8 +60,9 @@
             "KUCOIN:BNBUSDTM",
             "MEXC:BNB_USDT",
             "OKEX:BNB-USDT-SWAP",
-            "BINANCE_FUTURES:bnbbusd",
-            "BITMEX:BNBUSD"
+            "BINANCE_FUTURES:bnbusdc",
+            "BITMEX:BNBUSD",
+            "KRAKEN:PF_BNBUSD"
           ]
         },
         "trades2": {
@@ -85,8 +86,7 @@
             "HITBTC:BNBUSDC",
             "KUCOIN:BNB-USDC",
             "MEXC:BNBUSDC",
-            "OKEX:BNB-USDC",
-            "PANCAKESWAPAPTOS:BNB/USDC"
+            "OKEX:BNB-USDC"
           ]
         }
       },
@@ -399,7 +399,7 @@
         "fetched": false
       },
       "KRAKEN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "KUCOIN": {
@@ -440,10 +440,6 @@
         "fetched": false
       },
       "BITHUMB": {
-        "disabled": false,
-        "fetched": false
-      },
-      "PANCAKESWAPAPTOS": {
         "disabled": false,
         "fetched": false
       }
@@ -535,7 +531,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:bnbusdt;\n\nvar b = BINANCE_FUTURES:bnbusd_perp;\n\nvar c = BINANCE_FUTURES:bnbbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar d = BITGET:BNBUSDT_UMCBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITMEX:BNBUSDT;\n\nvar f = BITMEX:BNBUSD;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar g = BYBIT:BNBUSDT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = GATEIO:BNB_USDT_FUTURES;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = KUCOIN:BNBUSDTM;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = MEXC:BNB_USDT;line(cum(j.vbuy-j.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar k = OKEX:BNB-USDT-SWAP;line(cum(k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:bnbusdt;\n\nvar b = BINANCE_FUTURES:bnbusd_perp;\n\nvar c = BINANCE_FUTURES:bnbusdc;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar d = BITGET:BNBUSDT_UMCBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITMEX:BNBUSDT;\n\nvar f = BITMEX:BNBUSD;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar g = BYBIT:BNBUSDT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = GATEIO:BNB_USDT_FUTURES;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = KRAKEN:PF_BNBUSD;line(cum(i.vbuy-i.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar j = KUCOIN:BNBUSDTM;line(cum(j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar k = MEXC:BNB_USDT;line(cum(k.vbuy-k.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar l = OKEX:BNB-USDT-SWAP;line(cum(l.vbuy-l.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -579,7 +575,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bnbusdt;\n\nvar b = BINANCE:bnbtusd;\n\nvar c = BINANCE:bnbusdc;\n\nvar d = BINANCE:bnbbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITGET:BNBUSDT_SPBL;\n\nvar f = BITGET:BNBUSDC_SPBL;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar g = BITHUMB:BNB_KRW;line(cum(g.vbuy-g.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar h = BYBIT:BNBUSDT-SPOT;line(cum(h.vbuy-h.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar i = GATEIO:BNB_USDT_SPOT;line(cum(i.vbuy-i.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar j = HITBTC:BNBUSD;\n\nvar k = HITBTC:BNBUSDC;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar l = KUCOIN:BNB-USDT;\n\nvar m = KUCOIN:BNB-USDC;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar n = MEXC:BNBUSDC;line(cum(n.vbuy-n.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar o = OKEX:BNB-USDT;\n\nvar p = OKEX:BNB-USDC;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar q = PANCAKESWAPAPTOS:BNB/USDC;line(cum(q.vbuy-q.vsell), title=\"PCKAPT\", color=\"rgb(25, 76, 188)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bnbusdt;\n\nvar b = BINANCE:bnbtusd;\n\nvar c = BINANCE:bnbusdc;\n\nvar d = BINANCE:bnbbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITGET:BNBUSDT_SPBL;\n\nvar f = BITGET:BNBUSDC_SPBL;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar g = BITHUMB:BNB_KRW;line(cum(g.vbuy-g.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar h = BYBIT:BNBUSDT-SPOT;line(cum(h.vbuy-h.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar i = GATEIO:BNB_USDT_SPOT;line(cum(i.vbuy-i.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar j = HITBTC:BNBUSD;\n\nvar k = HITBTC:BNBUSDC;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar l = KUCOIN:BNB-USDT;\n\nvar m = KUCOIN:BNB-USDC;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar n = MEXC:BNBUSDC;line(cum(n.vbuy-n.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar o = OKEX:BNB-USDT;\n\nvar p = OKEX:BNB-USDC;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -679,8 +675,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:bnbusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:bnbusd_perp;\n\nvar c = COINALYZE_OI:BITMEX:BNBUSDT;\n\nvar d = COINALYZE_OI:BITMEX:BNBUSD;\n\nvar e = COINALYZE_OI:BYBIT:BNBUSDT;\n\nvar f = COINALYZE_OI:OKEX:BNB-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:bnbusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:bnbusd_perp;\n\nvar c = COINALYZE_PFR:BITMEX:BNBUSDT;\n\nvar d = COINALYZE_PFR:BITMEX:BNBUSD;\n\nvar e = COINALYZE_PFR:BYBIT:BNBUSDT;\n\nvar f = COINALYZE_PFR:OKEX:BNB-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:bnbusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:bnbusd_perp;\n\nvar c = COINALYZE_OI:BINANCE_FUTURES:bnbusdc;\n\nvar d = COINALYZE_OI:BITMEX:BNBUSDT;\n\nvar e = COINALYZE_OI:BITMEX:BNBUSD;\n\nvar f = COINALYZE_OI:BYBIT:BNBUSDT;\n\nvar g = COINALYZE_OI:OKEX:BNB-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close+g.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close+g.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:bnbusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:bnbusd_perp;\n\nvar c = COINALYZE_PFR:BINANCE_FUTURES:bnbusdc;\n\nvar d = COINALYZE_PFR:BITMEX:BNBUSDT;\n\nvar e = COINALYZE_PFR:BITMEX:BNBUSD;\n\nvar f = COINALYZE_PFR:BYBIT:BNBUSDT;\n\nvar g = COINALYZE_PFR:OKEX:BNB-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close+g.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close+g.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -957,16 +953,16 @@
         "MEXC:BNB_USDT": false,
         "OKEX:BNB-USDT": false,
         "OKEX:BNB-USDT-SWAP": false,
-        "BINANCE_FUTURES:bnbbusd": false,
+        "BINANCE_FUTURES:bnbusdc": false,
         "BITGET:BNBUSDC_SPBL": false,
         "BITHUMB:BNB_KRW": true,
         "BITMEX:BNBUSD": false,
         "HITBTC:BNBUSD": false,
         "HITBTC:BNBUSDC": false,
+        "KRAKEN:PF_BNBUSD": false,
         "KUCOIN:BNB-USDC": false,
         "MEXC:BNBUSDC": false,
-        "OKEX:BNB-USDC": false,
-        "PANCAKESWAPAPTOS:BNB/USDC": false
+        "OKEX:BNB-USDC": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
