@@ -15,6 +15,8 @@
           "type": "chart",
           "markets": [
             "BINANCE:rampusdt",
+            "BINANCE:rampusdt",
+            "BINANCE:rampbusd",
             "BINANCE:rampbusd",
             "GATEIO:RAMP_USDT_SPOT"
           ],
@@ -34,6 +36,8 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:rampusdt",
+            "BINANCE:rampusdt",
+            "BINANCE:rampbusd",
             "BINANCE:rampbusd",
             "GATEIO:RAMP_USDT_SPOT"
           ]
@@ -512,7 +516,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:rampusdt;\n\nvar b = BINANCE:rampbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = GATEIO:RAMP_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:rampusdt;\n\nvar b = BINANCE:rampusdt;\n\nvar c = BINANCE:rampbusd;\n\nvar d = BINANCE:rampbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = GATEIO:RAMP_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
