@@ -15,7 +15,9 @@
           "type": "chart",
           "markets": [
             "BYBIT:GPTUSDT-SPOT",
-            "BYBIT:GPTUSDT"
+            "BYBIT:GPTUSDT",
+            "BYBIT:GPTUSDT",
+            "BITFINEX:GPTUSD"
           ],
           "zoom": 1
         },
@@ -25,6 +27,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BYBIT:GPTUSDT",
             "BYBIT:GPTUSDT"
           ]
         },
@@ -34,7 +37,8 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "BYBIT:GPTUSDT-SPOT"
+            "BYBIT:GPTUSDT-SPOT",
+            "BITFINEX:GPTUSD"
           ]
         }
       },
@@ -307,7 +311,7 @@
         "fetched": false
       },
       "BITFINEX": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITMEX": {
@@ -463,7 +467,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:GPTUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:GPTUSDT;\n\nvar b = BYBIT:GPTUSDT;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -507,7 +511,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:GPTUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITFINEX:GPTUSD;line(cum(a.vbuy-a.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar b = BYBIT:GPTUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -607,8 +611,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BYBIT:GPTUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BYBIT:GPTUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BYBIT:GPTUSDT;\n\nvar b = COINALYZE_OI:BYBIT:GPTUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BYBIT:GPTUSDT;\n\nvar b = COINALYZE_PFR:BYBIT:GPTUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -868,7 +872,8 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:GPTUSDT-SPOT": false,
-        "BYBIT:GPTUSDT": false
+        "BYBIT:GPTUSDT": false,
+        "BITFINEX:GPTUSD": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
