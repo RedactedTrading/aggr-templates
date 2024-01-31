@@ -16,12 +16,16 @@
           "markets": [
             "BINANCE:ntrnusdt",
             "BYBIT:NTRNUSDT",
+            "BINANCE_FUTURES:ntrnusdt",
+            "BITGET:NTRNUSDT_SPBL",
             "BITMEX:NTRNUSDT",
             "GATEIO:NTRN_USDT_SPOT",
             "GATEIO:NTRN_USDT_FUTURES",
             "KUCOIN:NTRN-USDT",
             "KUCOIN:NTRNUSDTM",
-            "MEXC:NTRN_USDT"
+            "MEXC:NTRN_USDT",
+            "BINANCE_FUTURES:ntrnusdt",
+            "BITGET:NTRNUSDT_SPBL"
           ],
           "zoom": 1
         },
@@ -32,10 +36,12 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:NTRNUSDT",
+            "BINANCE_FUTURES:ntrnusdt",
             "BITMEX:NTRNUSDT",
             "GATEIO:NTRN_USDT_FUTURES",
             "KUCOIN:NTRNUSDTM",
-            "MEXC:NTRN_USDT"
+            "MEXC:NTRN_USDT",
+            "BINANCE_FUTURES:ntrnusdt"
           ]
         },
         "trades2": {
@@ -45,8 +51,10 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:ntrnusdt",
+            "BITGET:NTRNUSDT_SPBL",
             "GATEIO:NTRN_USDT_SPOT",
-            "KUCOIN:NTRN-USDT"
+            "KUCOIN:NTRN-USDT",
+            "BITGET:NTRNUSDT_SPBL"
           ]
         }
       },
@@ -311,7 +319,7 @@
         "fetched": false
       },
       "BINANCE_FUTURES": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BINANCE_US": {
@@ -385,6 +393,10 @@
       "_id": "exchanges",
       "UPBIT": {
         "disabled": true,
+        "fetched": false
+      },
+      "BITGET": {
+        "disabled": false,
         "fetched": false
       },
       "GATEIO": {
@@ -483,7 +495,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BITMEX:NTRNUSDT;line(cum(a.vbuy-a.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar b = BYBIT:NTRNUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:NTRN_USDT_FUTURES;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KUCOIN:NTRNUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:NTRN_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:ntrnusdt;\n\nvar b = BINANCE_FUTURES:ntrnusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITMEX:NTRNUSDT;line(cum(c.vbuy-c.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar d = BYBIT:NTRNUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:NTRN_USDT_FUTURES;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = KUCOIN:NTRNUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:NTRN_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -527,7 +539,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ntrnusdt;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = GATEIO:NTRN_USDT_SPOT;line(cum(b.vbuy-b.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar c = KUCOIN:NTRN-USDT;line(cum(c.vbuy-c.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ntrnusdt;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = BITGET:NTRNUSDT_SPBL;\n\nvar c = BITGET:NTRNUSDT_SPBL;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = GATEIO:NTRN_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KUCOIN:NTRN-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -627,8 +639,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BITMEX:NTRNUSDT;\n\nvar b = COINALYZE_OI:BYBIT:NTRNUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BITMEX:NTRNUSDT;\n\nvar b = COINALYZE_PFR:BYBIT:NTRNUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:ntrnusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:ntrnusdt;\n\nvar c = COINALYZE_OI:BITMEX:NTRNUSDT;\n\nvar d = COINALYZE_OI:BYBIT:NTRNUSDT;line(a.close+b.close+c.close+d.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:ntrnusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:ntrnusdt;\n\nvar c = COINALYZE_PFR:BITMEX:NTRNUSDT;\n\nvar d = COINALYZE_PFR:BYBIT:NTRNUSDT;line(a.close+b.close+c.close+d.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -889,6 +901,8 @@
       "hiddenMarkets": {
         "BINANCE:ntrnusdt": false,
         "BYBIT:NTRNUSDT": false,
+        "BINANCE_FUTURES:ntrnusdt": false,
+        "BITGET:NTRNUSDT_SPBL": false,
         "BITMEX:NTRNUSDT": false,
         "GATEIO:NTRN_USDT_SPOT": false,
         "GATEIO:NTRN_USDT_FUTURES": false,
