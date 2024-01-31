@@ -22,6 +22,7 @@
             "BTCTURK:AMPUSDT",
             "COINBASE:AMP-USD",
             "GATEIO:AMP_USDT_SPOT",
+            "GATEIO:AMP_USDT_FUTURES",
             "HITBTC:AMPUSDT",
             "KUCOIN:AMP-USDT",
             "MEXC:AMPUSDT",
@@ -34,7 +35,9 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "GATEIO:AMP_USDT_FUTURES"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -498,7 +501,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = GATEIO:AMP_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -910,6 +913,7 @@
         "BTCTURK:AMPUSDT": true,
         "COINBASE:AMP-USD": false,
         "GATEIO:AMP_USDT_SPOT": false,
+        "GATEIO:AMP_USDT_FUTURES": false,
         "HITBTC:AMPUSDT": false,
         "KUCOIN:AMP-USDT": false,
         "MEXC:AMPUSDT": false,
