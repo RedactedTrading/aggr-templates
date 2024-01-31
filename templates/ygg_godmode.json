@@ -29,6 +29,7 @@
             "MEXC:YGG_USDT",
             "OKEX:YGG-USDT",
             "OKEX:YGG-USDT-SWAP",
+            "BITHUMB:YGG_KRW",
             "HITBTC:YGGUSDC",
             "OKEX:YGG-USDC",
             "UPBIT:BTC-YGG"
@@ -64,6 +65,7 @@
             "KRAKEN:YGG/USD",
             "KUCOIN:YGG-USDT",
             "OKEX:YGG-USDT",
+            "BITHUMB:YGG_KRW",
             "HITBTC:YGGUSDC",
             "OKEX:YGG-USDC",
             "UPBIT:BTC-YGG"
@@ -418,6 +420,10 @@
       "MEXC": {
         "disabled": false,
         "fetched": false
+      },
+      "BITHUMB": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -551,7 +557,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:yggusdt;\n\nvar b = BINANCE:yggbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:YGGUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = GATEIO:YGG_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:YGGUSDT;\n\nvar f = HITBTC:YGGUSDC;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = KRAKEN:YGG/USD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar h = KUCOIN:YGG-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = OKEX:YGG-USDT;\n\nvar j = OKEX:YGG-USDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar k = UPBIT:BTC-YGG;line(cum(k.vbuy-k.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:yggusdt;\n\nvar b = BINANCE:yggbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:YGGUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:YGG_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = GATEIO:YGG_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:YGGUSDT;\n\nvar g = HITBTC:YGGUSDC;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KRAKEN:YGG/USD;line(cum(h.vbuy-h.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar i = KUCOIN:YGG-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = OKEX:YGG-USDT;\n\nvar k = OKEX:YGG-USDC;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar l = UPBIT:BTC-YGG;line(cum(l.vbuy-l.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -926,6 +932,7 @@
         "MEXC:YGG_USDT": false,
         "OKEX:YGG-USDT": false,
         "OKEX:YGG-USDT-SWAP": false,
+        "BITHUMB:YGG_KRW": true,
         "HITBTC:YGGUSDC": false,
         "OKEX:YGG-USDC": false,
         "UPBIT:BTC-YGG": true
