@@ -29,11 +29,7 @@
             "KRAKEN:PF_XMRUSD",
             "KUCOIN:XMR-USDT",
             "KUCOIN:XMRUSDTM",
-            "MEXC:XMR_USDT",
-            "OKEX:XMR-USDT",
-            "OKEX:XMR-USD-SWAP",
-            "OKEX:XMR-USDT-SWAP",
-            "OKEX:XMR-USDC"
+            "MEXC:XMR_USDT"
           ],
           "zoom": 1
         },
@@ -50,9 +46,7 @@
             "GATEIO:XMR_USDT_FUTURES",
             "KRAKEN:PF_XMRUSD",
             "KUCOIN:XMRUSDTM",
-            "MEXC:XMR_USDT",
-            "OKEX:XMR-USD-SWAP",
-            "OKEX:XMR-USDT-SWAP"
+            "MEXC:XMR_USDT"
           ]
         },
         "trades2": {
@@ -68,9 +62,7 @@
             "HITBTC:XMRUSD",
             "KRAKEN:XMR/USDT",
             "KRAKEN:XMR/USD",
-            "KUCOIN:XMR-USDT",
-            "OKEX:XMR-USDT",
-            "OKEX:XMR-USDC"
+            "KUCOIN:XMR-USDT"
           ]
         }
       },
@@ -391,7 +383,7 @@
         "fetched": false
       },
       "OKEX": {
-        "disabled": false,
+        "disabled": true,
         "fetched": false
       },
       "PHEMEX": {
@@ -511,7 +503,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:xmrusdt;\n\nvar b = BINANCE_FUTURES:xmrusd_perp;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:XMRUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:XMRUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:XMR_USDT_FUTURES;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = KRAKEN:PF_XMRUSD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = KUCOIN:XMRUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:XMR_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar i = OKEX:XMR-USD-SWAP;\n\nvar j = OKEX:XMR-USDT-SWAP;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:xmrusdt;\n\nvar b = BINANCE_FUTURES:xmrusd_perp;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:XMRUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:XMRUSDT;line(cum(d.vbuy-d.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar e = GATEIO:XMR_USDT_FUTURES;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = KRAKEN:PF_XMRUSD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = KUCOIN:XMRUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:XMR_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -555,7 +547,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:xmrusdt;\n\nvar b = BINANCE:xmrbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:XMRUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = GATEIO:XMR_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:XMRUSD;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = KRAKEN:XMR/USDT;\n\nvar g = KRAKEN:XMR/USD;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar h = KUCOIN:XMR-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = OKEX:XMR-USDT;\n\nvar j = OKEX:XMR-USDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:xmrusdt;\n\nvar b = BINANCE:xmrbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:XMRUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = GATEIO:XMR_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:XMRUSD;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = KRAKEN:XMR/USDT;\n\nvar g = KRAKEN:XMR/USD;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar h = KUCOIN:XMR-USDT;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -655,8 +647,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:xmrusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:xmrusd_perp;\n\nvar c = COINALYZE_OI:BYBIT:XMRUSDT;\n\nvar d = COINALYZE_OI:OKEX:XMR-USD-SWAP;\n\nvar e = COINALYZE_OI:OKEX:XMR-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:xmrusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:xmrusd_perp;\n\nvar c = COINALYZE_PFR:BYBIT:XMRUSDT;\n\nvar d = COINALYZE_PFR:OKEX:XMR-USD-SWAP;\n\nvar e = COINALYZE_PFR:OKEX:XMR-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:xmrusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:xmrusd_perp;\n\nvar c = COINALYZE_OI:BYBIT:XMRUSDT;line(a.close+b.close+c.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:xmrusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:xmrusd_perp;\n\nvar c = COINALYZE_PFR:BYBIT:XMRUSDT;line(a.close+b.close+c.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -930,11 +922,7 @@
         "KRAKEN:PF_XMRUSD": false,
         "KUCOIN:XMR-USDT": false,
         "KUCOIN:XMRUSDTM": false,
-        "MEXC:XMR_USDT": false,
-        "OKEX:XMR-USDT": false,
-        "OKEX:XMR-USD-SWAP": false,
-        "OKEX:XMR-USDT-SWAP": false,
-        "OKEX:XMR-USDC": false
+        "MEXC:XMR_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
