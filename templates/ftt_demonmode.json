@@ -18,11 +18,13 @@
             "BYBIT:FTTUSDT-SPOT",
             "BINANCE:fttbusd",
             "BITGET:FTTUSDT_SPBL",
+            "BITMEX:FTTUSDT",
             "GATEIO:FTT_USDT_SPOT",
             "GATEIO:FTT_USDT_FUTURES",
             "KUCOIN:FTT-USDT",
             "KUCOIN:FTTUSDTM",
             "MEXC:FTT_USDT",
+            "BITMEX:FTTUSDT",
             "HITBTC:FTTUSD",
             "HITBTC:FTTUSDC",
             "MEXC:FTTUSDC"
@@ -35,9 +37,11 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BITMEX:FTTUSDT",
             "GATEIO:FTT_USDT_FUTURES",
             "KUCOIN:FTTUSDTM",
-            "MEXC:FTT_USDT"
+            "MEXC:FTT_USDT",
+            "BITMEX:FTTUSDT"
           ]
         },
         "trades2": {
@@ -331,7 +335,7 @@
         "fetched": false
       },
       "BITMEX": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BITSTAMP": {
@@ -495,7 +499,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = GATEIO:FTT_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar b = KUCOIN:FTTUSDTM;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar c = MEXC:FTT_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITMEX:FTTUSDT;\n\nvar b = BITMEX:FTTUSDT;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nvar c = GATEIO:FTT_USDT_FUTURES;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KUCOIN:FTTUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:FTT_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -639,8 +643,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BITMEX:FTTUSDT;\n\nvar b = COINALYZE_OI:BITMEX:FTTUSDT;line(a.close+b.close, title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BITMEX:FTTUSDT;\n\nvar b = COINALYZE_PFR:BITMEX:FTTUSDT;line(a.close+b.close, title=\"BMX\", color=\"rgb(255, 202, 42)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -903,6 +907,7 @@
         "BYBIT:FTTUSDT-SPOT": false,
         "BINANCE:fttbusd": false,
         "BITGET:FTTUSDT_SPBL": false,
+        "BITMEX:FTTUSDT": false,
         "GATEIO:FTT_USDT_SPOT": false,
         "GATEIO:FTT_USDT_FUTURES": false,
         "KUCOIN:FTT-USDT": false,
