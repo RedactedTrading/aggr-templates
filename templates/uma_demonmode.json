@@ -15,8 +15,10 @@
           "type": "chart",
           "markets": [
             "BINANCE:umausdt",
+            "BINANCE:umausdt",
             "BYBIT:UMAUSDT-SPOT",
             "BYBIT:UMAUSDT",
+            "BINANCE:umabusd",
             "BINANCE:umabusd",
             "BINANCE_FUTURES:umausdt",
             "BITGET:UMAUSDT_SPBL",
@@ -24,12 +26,19 @@
             "BITSTAMP:umausd",
             "COINBASE:UMA-USD",
             "GATEIO:UMA_USDT_SPOT",
+            "GATEIO:UMA_USDT_FUTURES",
             "HITBTC:UMAUSD",
             "KRAKEN:UMA/USD",
+            "KRAKEN:PF_UMAUSD",
             "KUCOIN:UMA-USDT",
             "KUCOIN:UMAUSDTM",
             "MEXC:UMAUSDT",
             "MEXC:UMA_USDT",
+            "OKEX:UMA-USDT",
+            "OKEX:UMA-USDT-SWAP",
+            "COINBASE:UMA-USD",
+            "KRAKEN:UMA/USD",
+            "KUCOIN:UMA-USDT",
             "OKEX:UMA-USDT",
             "OKEX:UMA-USDT-SWAP",
             "BITHUMB:UMA_KRW",
@@ -47,8 +56,11 @@
             "BYBIT:UMAUSDT",
             "BINANCE_FUTURES:umausdt",
             "BITGET:UMAUSDT_UMCBL",
+            "GATEIO:UMA_USDT_FUTURES",
+            "KRAKEN:PF_UMAUSD",
             "KUCOIN:UMAUSDTM",
             "MEXC:UMA_USDT",
+            "OKEX:UMA-USDT-SWAP",
             "OKEX:UMA-USDT-SWAP"
           ]
         },
@@ -59,7 +71,9 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:umausdt",
+            "BINANCE:umausdt",
             "BYBIT:UMAUSDT-SPOT",
+            "BINANCE:umabusd",
             "BINANCE:umabusd",
             "BITGET:UMAUSDT_SPBL",
             "BITSTAMP:umausd",
@@ -69,6 +83,10 @@
             "KRAKEN:UMA/USD",
             "KUCOIN:UMA-USDT",
             "MEXC:UMAUSDT",
+            "OKEX:UMA-USDT",
+            "COINBASE:UMA-USD",
+            "KRAKEN:UMA/USD",
+            "KUCOIN:UMA-USDT",
             "OKEX:UMA-USDT",
             "BITHUMB:UMA_KRW",
             "BTCTURK:UMATRY",
@@ -521,7 +539,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:umausdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:UMAUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:UMAUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = KUCOIN:UMAUSDTM;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:UMA_USDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = OKEX:UMA-USDT-SWAP;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:umausdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:UMAUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:UMAUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:UMA_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KRAKEN:PF_UMAUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:UMAUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:UMA_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = OKEX:UMA-USDT-SWAP;\n\nvar i = OKEX:UMA-USDT-SWAP;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -565,7 +583,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:umausdt;\n\nvar b = BINANCE:umabusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:UMAUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:UMA_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BITSTAMP:umausd;line(cum(e.vbuy-e.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar f = BTCTURK:UMATRY;line(cum(f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = BYBIT:UMAUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = COINBASE:UMA-USD;line(cum(h.vbuy-h.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar i = GATEIO:UMA_USDT_SPOT;line(cum(i.vbuy-i.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar j = HITBTC:UMAUSD;\n\nvar k = HITBTC:UMAUSDC;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar l = KRAKEN:UMA/USD;line(cum(l.vbuy-l.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar m = KUCOIN:UMA-USDT;line(cum(m.vbuy-m.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar n = MEXC:UMAUSDT;line(cum(n.vbuy-n.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar o = OKEX:UMA-USDT;line(cum(o.vbuy-o.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:umausdt;\n\nvar b = BINANCE:umausdt;\n\nvar c = BINANCE:umabusd;\n\nvar d = BINANCE:umabusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITGET:UMAUSDT_SPBL;line(cum(e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = BITHUMB:UMA_KRW;line(cum(f.vbuy-f.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar g = BITSTAMP:umausd;line(cum(g.vbuy-g.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar h = BTCTURK:UMATRY;line(cum(h.vbuy-h.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar i = BYBIT:UMAUSDT-SPOT;line(cum(i.vbuy-i.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar j = COINBASE:UMA-USD;\n\nvar k = COINBASE:UMA-USD;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar l = GATEIO:UMA_USDT_SPOT;line(cum(l.vbuy-l.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar m = HITBTC:UMAUSD;\n\nvar n = HITBTC:UMAUSDC;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar o = KRAKEN:UMA/USD;\n\nvar p = KRAKEN:UMA/USD;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar q = KUCOIN:UMA-USDT;\n\nvar r = KUCOIN:UMA-USDT;line(cum(q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar s = MEXC:UMAUSDT;line(cum(s.vbuy-s.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar t = OKEX:UMA-USDT;\n\nvar u = OKEX:UMA-USDT;line(cum(t.vbuy-t.vsell+u.vbuy-u.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -665,8 +683,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:umausdt;\n\nvar b = COINALYZE_OI:BYBIT:UMAUSDT;\n\nvar c = COINALYZE_OI:OKEX:UMA-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:umausdt;\n\nvar b = COINALYZE_PFR:BYBIT:UMAUSDT;\n\nvar c = COINALYZE_PFR:OKEX:UMA-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:umausdt;\n\nvar b = COINALYZE_OI:BYBIT:UMAUSDT;\n\nvar c = COINALYZE_OI:OKEX:UMA-USDT-SWAP;\n\nvar d = COINALYZE_OI:OKEX:UMA-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:umausdt;\n\nvar b = COINALYZE_PFR:BYBIT:UMAUSDT;\n\nvar c = COINALYZE_PFR:OKEX:UMA-USDT-SWAP;\n\nvar d = COINALYZE_PFR:OKEX:UMA-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -935,8 +953,10 @@
         "BITSTAMP:umausd": false,
         "COINBASE:UMA-USD": false,
         "GATEIO:UMA_USDT_SPOT": false,
+        "GATEIO:UMA_USDT_FUTURES": false,
         "HITBTC:UMAUSD": false,
         "KRAKEN:UMA/USD": false,
+        "KRAKEN:PF_UMAUSD": false,
         "KUCOIN:UMA-USDT": false,
         "KUCOIN:UMAUSDTM": false,
         "MEXC:UMAUSDT": false,
