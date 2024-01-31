@@ -17,13 +17,18 @@
             "BINANCE:ilvusdt",
             "BYBIT:ILVUSDT",
             "BINANCE:ilvbusd",
+            "BINANCE_FUTURES:ilvusdt",
             "BITGET:ILVUSDT_SPBL",
             "COINBASE:ILV-USD",
             "GATEIO:ILV_USDT_SPOT",
+            "GATEIO:ILV_USDT_FUTURES",
             "HITBTC:ILVUSDT",
             "KUCOIN:ILV-USDT",
+            "KUCOIN:ILVUSDTM",
             "MEXC:ILV_USDT",
             "OKEX:ILV-USDT",
+            "BINANCE_FUTURES:ilvusdt",
+            "GATEIO:ILV_USDT_FUTURES",
             "BITHUMB:ILV_KRW",
             "HITBTC:ILVUSDC"
           ],
@@ -36,7 +41,12 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:ILVUSDT",
-            "MEXC:ILV_USDT"
+            "BINANCE_FUTURES:ilvusdt",
+            "GATEIO:ILV_USDT_FUTURES",
+            "KUCOIN:ILVUSDTM",
+            "MEXC:ILV_USDT",
+            "BINANCE_FUTURES:ilvusdt",
+            "GATEIO:ILV_USDT_FUTURES"
           ]
         },
         "trades2": {
@@ -319,7 +329,7 @@
         "fetched": false
       },
       "BINANCE_FUTURES": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "BINANCE_US": {
@@ -499,7 +509,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:ILVUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:ILV_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:ilvusdt;\n\nvar b = BINANCE_FUTURES:ilvusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BYBIT:ILVUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:ILV_USDT_FUTURES;\n\nvar e = GATEIO:ILV_USDT_FUTURES;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = KUCOIN:ILVUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:ILV_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -643,8 +653,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BYBIT:ILVUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BYBIT:ILVUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:ilvusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:ilvusdt;\n\nvar c = COINALYZE_OI:BYBIT:ILVUSDT;line(a.close+b.close+c.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:ilvusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:ilvusdt;\n\nvar c = COINALYZE_PFR:BYBIT:ILVUSDT;line(a.close+b.close+c.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -906,11 +916,14 @@
         "BINANCE:ilvusdt": false,
         "BYBIT:ILVUSDT": false,
         "BINANCE:ilvbusd": false,
+        "BINANCE_FUTURES:ilvusdt": false,
         "BITGET:ILVUSDT_SPBL": false,
         "COINBASE:ILV-USD": false,
         "GATEIO:ILV_USDT_SPOT": false,
+        "GATEIO:ILV_USDT_FUTURES": false,
         "HITBTC:ILVUSDT": false,
         "KUCOIN:ILV-USDT": false,
+        "KUCOIN:ILVUSDTM": false,
         "MEXC:ILV_USDT": false,
         "OKEX:ILV-USDT": false,
         "BITHUMB:ILV_KRW": true,
