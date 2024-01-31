@@ -20,8 +20,7 @@
             "GATEIO:PEPE2_USDT_FUTURES",
             "KUCOIN:PEPE2-USDT",
             "KUCOIN:1000PEPE2USDTM",
-            "MEXC:PEPE2USDT",
-            "MEXC:1000PEPE2_USDT"
+            "MEXC:PEPE2USDT"
           ],
           "zoom": 1
         },
@@ -32,8 +31,7 @@
           "zoom": 1.0,
           "markets": [
             "GATEIO:PEPE2_USDT_FUTURES",
-            "KUCOIN:1000PEPE2USDTM",
-            "MEXC:1000PEPE2_USDT"
+            "KUCOIN:1000PEPE2USDTM"
           ]
         },
         "trades2": {
@@ -487,7 +485,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = GATEIO:PEPE2_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar b = KUCOIN:1000PEPE2USDTM;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar c = MEXC:1000PEPE2_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = GATEIO:PEPE2_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar b = KUCOIN:1000PEPE2USDTM;line(cum(b.vbuy-b.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -897,8 +895,7 @@
         "GATEIO:PEPE2_USDT_FUTURES": false,
         "KUCOIN:PEPE2-USDT": false,
         "KUCOIN:1000PEPE2USDTM": false,
-        "MEXC:PEPE2USDT": false,
-        "MEXC:1000PEPE2_USDT": false
+        "MEXC:PEPE2USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
