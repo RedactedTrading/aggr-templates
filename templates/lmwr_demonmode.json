@@ -15,9 +15,12 @@
           "type": "chart",
           "markets": [
             "BYBIT:LMWRUSDT-SPOT",
+            "BITGET:LMWRUSDT_SPBL",
             "GATEIO:LMWR_USDT_SPOT",
             "KRAKEN:LMWR/USD",
-            "KUCOIN:LMWR-USDT"
+            "KUCOIN:LMWR-USDT",
+            "MEXC:LMWRUSDT",
+            "MEXC:LMWRUSDT"
           ],
           "zoom": 1
         },
@@ -35,9 +38,12 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:LMWRUSDT-SPOT",
+            "BITGET:LMWRUSDT_SPBL",
             "GATEIO:LMWR_USDT_SPOT",
             "KRAKEN:LMWR/USD",
-            "KUCOIN:LMWR-USDT"
+            "KUCOIN:LMWR-USDT",
+            "MEXC:LMWRUSDT",
+            "MEXC:LMWRUSDT"
           ]
         }
       },
@@ -378,7 +384,15 @@
         "disabled": true,
         "fetched": false
       },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
       "GATEIO": {
+        "disabled": false,
+        "fetched": false
+      },
+      "MEXC": {
         "disabled": false,
         "fetched": false
       }
@@ -514,7 +528,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:LMWRUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = GATEIO:LMWR_USDT_SPOT;line(cum(b.vbuy-b.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar c = KRAKEN:LMWR/USD;line(cum(c.vbuy-c.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar d = KUCOIN:LMWR-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:LMWRUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BYBIT:LMWRUSDT-SPOT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:LMWR_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KRAKEN:LMWR/USD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar e = KUCOIN:LMWR-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:LMWRUSDT;\n\nvar g = MEXC:LMWRUSDT;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -875,9 +889,11 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:LMWRUSDT-SPOT": false,
+        "BITGET:LMWRUSDT_SPBL": false,
         "GATEIO:LMWR_USDT_SPOT": false,
         "KRAKEN:LMWR/USD": false,
-        "KUCOIN:LMWR-USDT": false
+        "KUCOIN:LMWR-USDT": false,
+        "MEXC:LMWRUSDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
