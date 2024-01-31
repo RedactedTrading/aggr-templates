@@ -15,12 +15,14 @@
           "type": "chart",
           "markets": [
             "BINANCE:qiusdt",
+            "BYBIT:QIUSDT",
             "BINANCE:qibusd",
             "COINBASE:QI-USD",
             "GATEIO:QI_USDT_SPOT",
             "HITBTC:QIUSDT",
             "KUCOIN:QI-USDT",
-            "MEXC:QIUSDT"
+            "MEXC:QIUSDT",
+            "MEXC:QI_USDT"
           ],
           "zoom": 1
         },
@@ -29,7 +31,10 @@
           "name": "Perp Trades",
           "type": "trades",
           "zoom": 1.0,
-          "markets": []
+          "markets": [
+            "BYBIT:QIUSDT",
+            "MEXC:QI_USDT"
+          ]
         },
         "trades2": {
           "id": "trades2",
@@ -328,7 +333,7 @@
         "fetched": false
       },
       "BYBIT": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "COINBASE": {
@@ -480,7 +485,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "line(cum(), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:QIUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:QI_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -624,8 +629,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "line(, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "line(, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BYBIT:QIUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BYBIT:QIUSDT;line(a.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -885,12 +890,14 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BINANCE:qiusdt": false,
+        "BYBIT:QIUSDT": false,
         "BINANCE:qibusd": false,
         "COINBASE:QI-USD": false,
         "GATEIO:QI_USDT_SPOT": false,
         "HITBTC:QIUSDT": false,
         "KUCOIN:QI-USDT": false,
-        "MEXC:QIUSDT": false
+        "MEXC:QIUSDT": false,
+        "MEXC:QI_USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
