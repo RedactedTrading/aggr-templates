@@ -19,7 +19,6 @@
             "BINANCE:linabusd",
             "BINANCE_FUTURES:linausdt",
             "BITGET:LINAUSDT_SPBL",
-            "BITGET:LINAUSDT_UMCBL",
             "GATEIO:LINA_USDT_SPOT",
             "GATEIO:LINA_USDT_FUTURES",
             "HITBTC:LINAUSD",
@@ -39,7 +38,6 @@
           "markets": [
             "BYBIT:LINAUSDT",
             "BINANCE_FUTURES:linausdt",
-            "BITGET:LINAUSDT_UMCBL",
             "GATEIO:LINA_USDT_FUTURES",
             "KRAKEN:PF_LINAUSD",
             "KUCOIN:LINAUSDTM",
@@ -499,7 +497,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:linausdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:LINAUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:LINAUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:LINA_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KRAKEN:PF_LINAUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:LINAUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:LINA_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:linausdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:LINAUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:LINA_USDT_FUTURES;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KRAKEN:PF_LINAUSD;line(cum(d.vbuy-d.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar e = KUCOIN:LINAUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:LINA_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -908,7 +906,6 @@
         "BINANCE:linabusd": false,
         "BINANCE_FUTURES:linausdt": false,
         "BITGET:LINAUSDT_SPBL": false,
-        "BITGET:LINAUSDT_UMCBL": false,
         "GATEIO:LINA_USDT_SPOT": false,
         "GATEIO:LINA_USDT_FUTURES": false,
         "HITBTC:LINAUSD": false,
