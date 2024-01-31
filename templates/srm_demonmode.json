@@ -15,14 +15,19 @@
           "type": "chart",
           "markets": [
             "BINANCE:srmusdt",
+            "BINANCE:srmusdt",
             "BYBIT:SRMUSDT-SPOT",
+            "BINANCE:srmbusd",
             "BINANCE:srmbusd",
             "GATEIO:SRM_USDT_SPOT",
             "GATEIO:SRM_USDT_FUTURES",
             "HITBTC:SRMUSD",
             "KRAKEN:SRM/USD",
             "MEXC:SRMUSDT",
-            "MEXC:SRM_USDT"
+            "KRAKEN:SRM/USD",
+            "KUCOIN:SRM-USDT",
+            "OKEX:SRM-USDT",
+            "OKEX:SRM-USDC"
           ],
           "zoom": 1
         },
@@ -32,8 +37,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "GATEIO:SRM_USDT_FUTURES",
-            "MEXC:SRM_USDT"
+            "GATEIO:SRM_USDT_FUTURES"
           ]
         },
         "trades2": {
@@ -43,12 +47,18 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:srmusdt",
+            "BINANCE:srmusdt",
             "BYBIT:SRMUSDT-SPOT",
+            "BINANCE:srmbusd",
             "BINANCE:srmbusd",
             "GATEIO:SRM_USDT_SPOT",
             "HITBTC:SRMUSD",
             "KRAKEN:SRM/USD",
-            "MEXC:SRMUSDT"
+            "MEXC:SRMUSDT",
+            "KRAKEN:SRM/USD",
+            "KUCOIN:SRM-USDT",
+            "OKEX:SRM-USDT",
+            "OKEX:SRM-USDC"
           ]
         }
       },
@@ -365,11 +375,11 @@
         "fetched": false
       },
       "KUCOIN": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "OKEX": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "PHEMEX": {
@@ -485,7 +495,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = GATEIO:SRM_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar b = MEXC:SRM_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = GATEIO:SRM_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -529,7 +539,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:srmusdt;\n\nvar b = BINANCE:srmbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BYBIT:SRMUSDT-SPOT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:SRM_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:SRMUSD;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = KRAKEN:SRM/USD;line(cum(f.vbuy-f.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar g = MEXC:SRMUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:srmusdt;\n\nvar b = BINANCE:srmusdt;\n\nvar c = BINANCE:srmbusd;\n\nvar d = BINANCE:srmbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BYBIT:SRMUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = GATEIO:SRM_USDT_SPOT;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = HITBTC:SRMUSD;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar h = KRAKEN:SRM/USD;\n\nvar i = KRAKEN:SRM/USD;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar j = KUCOIN:SRM-USDT;line(cum(j.vbuy-j.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar k = MEXC:SRMUSDT;line(cum(k.vbuy-k.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar l = OKEX:SRM-USDT;\n\nvar m = OKEX:SRM-USDC;line(cum(l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -897,7 +907,9 @@
         "HITBTC:SRMUSD": false,
         "KRAKEN:SRM/USD": false,
         "MEXC:SRMUSDT": false,
-        "MEXC:SRM_USDT": false
+        "KUCOIN:SRM-USDT": false,
+        "OKEX:SRM-USDT": false,
+        "OKEX:SRM-USDC": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
