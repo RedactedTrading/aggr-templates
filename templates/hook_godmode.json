@@ -15,8 +15,11 @@
           "type": "chart",
           "markets": [
             "BINANCE:hookusdt",
+            "BINANCE:hookusdt",
             "BYBIT:HOOKUSDT-SPOT",
             "BYBIT:HOOKUSDT",
+            "BYBIT:HOOKUSDT",
+            "BINANCE:hookbusd",
             "BINANCE:hookbusd",
             "BINANCE_FUTURES:hookusdt",
             "BITGET:HOOKUSDT_SPBL",
@@ -26,6 +29,7 @@
             "HITBTC:HOOKUSDT",
             "KUCOIN:HOOKUSDTM",
             "MEXC:HOOK_USDT",
+            "BINANCE_FUTURES:hookusdt",
             "BITHUMB:HOOK_KRW"
           ],
           "zoom": 1
@@ -37,11 +41,13 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:HOOKUSDT",
+            "BYBIT:HOOKUSDT",
             "BINANCE_FUTURES:hookusdt",
             "BITGET:HOOKUSDT_UMCBL",
             "GATEIO:HOOK_USDT_FUTURES",
             "KUCOIN:HOOKUSDTM",
-            "MEXC:HOOK_USDT"
+            "MEXC:HOOK_USDT",
+            "BINANCE_FUTURES:hookusdt"
           ]
         },
         "trades2": {
@@ -51,7 +57,9 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:hookusdt",
+            "BINANCE:hookusdt",
             "BYBIT:HOOKUSDT-SPOT",
+            "BINANCE:hookbusd",
             "BINANCE:hookbusd",
             "BITGET:HOOKUSDT_SPBL",
             "GATEIO:HOOK_USDT_SPOT",
@@ -501,7 +509,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:hookusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:HOOKUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:HOOKUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:HOOK_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KUCOIN:HOOKUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:HOOK_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:hookusdt;\n\nvar b = BINANCE_FUTURES:hookusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:HOOKUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:HOOKUSDT;\n\nvar e = BYBIT:HOOKUSDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = GATEIO:HOOK_USDT_FUTURES;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = KUCOIN:HOOKUSDTM;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:HOOK_USDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -545,7 +553,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:hookusdt;\n\nvar b = BINANCE:hookbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:HOOKUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:HOOK_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BYBIT:HOOKUSDT-SPOT;line(cum(e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = GATEIO:HOOK_USDT_SPOT;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = HITBTC:HOOKUSDT;line(cum(g.vbuy-g.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:hookusdt;\n\nvar b = BINANCE:hookusdt;\n\nvar c = BINANCE:hookbusd;\n\nvar d = BINANCE:hookbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITGET:HOOKUSDT_SPBL;line(cum(e.vbuy-e.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar f = BITHUMB:HOOK_KRW;line(cum(f.vbuy-f.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar g = BYBIT:HOOKUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = GATEIO:HOOK_USDT_SPOT;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = HITBTC:HOOKUSDT;line(cum(i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -645,8 +653,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:hookusdt;\n\nvar b = COINALYZE_OI:BYBIT:HOOKUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:hookusdt;\n\nvar b = COINALYZE_PFR:BYBIT:HOOKUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:hookusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:hookusdt;\n\nvar c = COINALYZE_OI:BYBIT:HOOKUSDT;\n\nvar d = COINALYZE_OI:BYBIT:HOOKUSDT;line(a.close+b.close+c.close+d.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:hookusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:hookusdt;\n\nvar c = COINALYZE_PFR:BYBIT:HOOKUSDT;\n\nvar d = COINALYZE_PFR:BYBIT:HOOKUSDT;line(a.close+b.close+c.close+d.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
