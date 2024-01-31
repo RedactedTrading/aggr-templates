@@ -24,8 +24,8 @@
             "BITGET:ENSUSDT_UMCBL",
             "BITSTAMP:ensusd",
             "BTCTURK:ENSUSDT",
-            "COINBASE:ENS-USD",
             "COINBASE:ENS-USDT",
+            "COINBASE:ENS-USD",
             "GATEIO:ENS_USDT_SPOT",
             "GATEIO:ENS_USDT_FUTURES",
             "HITBTC:ENSUSDT",
@@ -33,14 +33,12 @@
             "KRAKEN:PF_ENSUSD",
             "KUCOIN:ENS-USDT",
             "KUCOIN:ENSUSDTM",
-            "MEXC:ENSUSDT",
             "MEXC:ENS_USDT",
             "OKEX:ENS-USDT",
             "OKEX:ENS-USDT-SWAP",
             "BTCTURK:ENSTRY",
             "HITBTC:ENSUSDC",
             "MEXC:ENSUSDC",
-            "OKEX:ENS-USDC",
             "UPBIT:BTC-ENS"
           ],
           "zoom": 1
@@ -74,18 +72,16 @@
             "BITGET:ENSUSDT_SPBL",
             "BITSTAMP:ensusd",
             "BTCTURK:ENSUSDT",
-            "COINBASE:ENS-USD",
             "COINBASE:ENS-USDT",
+            "COINBASE:ENS-USD",
             "GATEIO:ENS_USDT_SPOT",
             "HITBTC:ENSUSDT",
             "KRAKEN:ENS/USD",
             "KUCOIN:ENS-USDT",
-            "MEXC:ENSUSDT",
             "OKEX:ENS-USDT",
             "BTCTURK:ENSTRY",
             "HITBTC:ENSUSDC",
             "MEXC:ENSUSDC",
-            "OKEX:ENS-USDC",
             "UPBIT:BTC-ENS"
           ]
         }
@@ -575,7 +571,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ensusdt;\n\nvar b = BINANCE:ensbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:ENSUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITSTAMP:ensusd;line(cum(d.vbuy-d.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = BTCTURK:ENSUSDT;\n\nvar f = BTCTURK:ENSTRY;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = BYBIT:ENSUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = COINBASE:ENS-USD;\n\nvar i = COINBASE:ENS-USDT;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar j = GATEIO:ENS_USDT_SPOT;line(cum(j.vbuy-j.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar k = HITBTC:ENSUSDT;\n\nvar l = HITBTC:ENSUSDC;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar m = KRAKEN:ENS/USD;line(cum(m.vbuy-m.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar n = KUCOIN:ENS-USDT;line(cum(n.vbuy-n.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar o = MEXC:ENSUSDT;\n\nvar p = MEXC:ENSUSDC;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar q = OKEX:ENS-USDT;\n\nvar r = OKEX:ENS-USDC;line(cum(q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar s = UPBIT:BTC-ENS;line(cum(s.vbuy-s.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ensusdt;\n\nvar b = BINANCE:ensbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:ENSUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITSTAMP:ensusd;line(cum(d.vbuy-d.vsell), title=\"BSTAMP\", color=\"rgb(1, 167, 151)\");\n\n\nvar e = BTCTURK:ENSUSDT;\n\nvar f = BTCTURK:ENSTRY;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = BYBIT:ENSUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = COINBASE:ENS-USDT;\n\nvar i = COINBASE:ENS-USD;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar j = GATEIO:ENS_USDT_SPOT;line(cum(j.vbuy-j.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar k = HITBTC:ENSUSDT;\n\nvar l = HITBTC:ENSUSDC;line(cum(k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar m = KRAKEN:ENS/USD;line(cum(m.vbuy-m.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar n = KUCOIN:ENS-USDT;line(cum(n.vbuy-n.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar o = MEXC:ENSUSDC;line(cum(o.vbuy-o.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar p = OKEX:ENS-USDT;line(cum(p.vbuy-p.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar q = UPBIT:BTC-ENS;line(cum(q.vbuy-q.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -945,8 +941,8 @@
         "BITGET:ENSUSDT_UMCBL": false,
         "BITSTAMP:ensusd": false,
         "BTCTURK:ENSUSDT": true,
-        "COINBASE:ENS-USD": false,
         "COINBASE:ENS-USDT": false,
+        "COINBASE:ENS-USD": false,
         "GATEIO:ENS_USDT_SPOT": false,
         "GATEIO:ENS_USDT_FUTURES": false,
         "HITBTC:ENSUSDT": false,
@@ -954,14 +950,12 @@
         "KRAKEN:PF_ENSUSD": false,
         "KUCOIN:ENS-USDT": false,
         "KUCOIN:ENSUSDTM": false,
-        "MEXC:ENSUSDT": false,
         "MEXC:ENS_USDT": false,
         "OKEX:ENS-USDT": false,
         "OKEX:ENS-USDT-SWAP": false,
         "BTCTURK:ENSTRY": true,
         "HITBTC:ENSUSDC": false,
         "MEXC:ENSUSDC": false,
-        "OKEX:ENS-USDC": false,
         "UPBIT:BTC-ENS": true
       },
       "barSpacing": 0.39437454420364615,
@@ -1052,8 +1046,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:ENS-USD": 0.5,
-        "COINBASE:ENS-USDT": 0.5
+        "COINBASE:ENS-USDT": 0.5,
+        "COINBASE:ENS-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1153,8 +1147,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:ENS-USD": 0.5,
-        "COINBASE:ENS-USDT": 0.5
+        "COINBASE:ENS-USDT": 0.5,
+        "COINBASE:ENS-USD": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
