@@ -15,6 +15,7 @@
           "type": "chart",
           "markets": [
             "BINANCE:botbusd",
+            "BINANCE:botbusd",
             "BITGET:BOTUSDT_SPBL"
           ],
           "zoom": 1
@@ -32,6 +33,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
+            "BINANCE:botbusd",
             "BINANCE:botbusd",
             "BITGET:BOTUSDT_SPBL"
           ]
@@ -510,7 +512,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:botbusd;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = BITGET:BOTUSDT_SPBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:botbusd;\n\nvar b = BINANCE:botbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:BOTUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
