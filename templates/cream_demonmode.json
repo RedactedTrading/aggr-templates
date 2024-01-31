@@ -18,8 +18,7 @@
             "BINANCE:creambusd",
             "GATEIO:CREAM_USDT_SPOT",
             "GATEIO:CREAM_USDT_FUTURES",
-            "KUCOIN:CREAM-USDT",
-            "MEXC:CREAM_USDT"
+            "KUCOIN:CREAM-USDT"
           ],
           "zoom": 1
         },
@@ -29,8 +28,7 @@
           "type": "trades",
           "zoom": 1.0,
           "markets": [
-            "GATEIO:CREAM_USDT_FUTURES",
-            "MEXC:CREAM_USDT"
+            "GATEIO:CREAM_USDT_FUTURES"
           ]
         },
         "trades2": {
@@ -386,10 +384,6 @@
       "GATEIO": {
         "disabled": false,
         "fetched": false
-      },
-      "MEXC": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -479,7 +473,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = GATEIO:CREAM_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar b = MEXC:CREAM_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = GATEIO:CREAM_USDT_FUTURES;line(cum(a.vbuy-a.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nline(cum(a.vbuy-a.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -887,8 +881,7 @@
         "BINANCE:creambusd": false,
         "GATEIO:CREAM_USDT_SPOT": false,
         "GATEIO:CREAM_USDT_FUTURES": false,
-        "KUCOIN:CREAM-USDT": false,
-        "MEXC:CREAM_USDT": false
+        "KUCOIN:CREAM-USDT": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
