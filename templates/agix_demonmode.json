@@ -27,9 +27,10 @@
             "KUCOIN:AGIX-USDT",
             "KUCOIN:AGIXUSDTM",
             "MEXC:AGIX_USDT",
+            "OKEX:AGIX-USDT",
+            "OKEX:AGIX-USDT-SWAP",
             "BITHUMB:AGIX_KRW",
-            "BTCTURK:AGIXTRY",
-            "UNISWAPETHEREUM:AGIX/WETH"
+            "BTCTURK:AGIXTRY"
           ],
           "zoom": 1
         },
@@ -44,7 +45,8 @@
             "BITGET:AGIXUSDT_UMCBL",
             "GATEIO:AGIX_USDT_FUTURES",
             "KUCOIN:AGIXUSDTM",
-            "MEXC:AGIX_USDT"
+            "MEXC:AGIX_USDT",
+            "OKEX:AGIX-USDT-SWAP"
           ]
         },
         "trades2": {
@@ -60,9 +62,9 @@
             "GATEIO:AGIX_USDT_SPOT",
             "HITBTC:AGIXUSDT",
             "KUCOIN:AGIX-USDT",
+            "OKEX:AGIX-USDT",
             "BITHUMB:AGIX_KRW",
-            "BTCTURK:AGIXTRY",
-            "UNISWAPETHEREUM:AGIX/WETH"
+            "BTCTURK:AGIXTRY"
           ]
         }
       },
@@ -383,7 +385,7 @@
         "fetched": false
       },
       "OKEX": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "PHEMEX": {
@@ -420,10 +422,6 @@
         "fetched": false
       },
       "BTCTURK": {
-        "disabled": false,
-        "fetched": false
-      },
-      "UNISWAPETHEREUM": {
         "disabled": false,
         "fetched": false
       }
@@ -515,7 +513,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:agixusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:AGIXUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:AGIXUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:AGIX_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KUCOIN:AGIXUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:AGIX_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:agixusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:AGIXUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:AGIXUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:AGIX_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KUCOIN:AGIXUSDTM;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:AGIX_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar g = OKEX:AGIX-USDT-SWAP;line(cum(g.vbuy-g.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -559,7 +557,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:agixusdt;\n\nvar b = BINANCE:agixbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:AGIXUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:AGIX_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BTCTURK:AGIXTRY;line(cum(e.vbuy-e.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar f = BYBIT:AGIXUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = GATEIO:AGIX_USDT_SPOT;line(cum(g.vbuy-g.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar h = HITBTC:AGIXUSDT;line(cum(h.vbuy-h.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar i = KUCOIN:AGIX-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = UNISWAPETHEREUM:AGIX/WETH;line(cum(j.vbuy-j.vsell), title=\"UNIETH\", color=\"rgb(25, 76, 188)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:agixusdt;\n\nvar b = BINANCE:agixbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:AGIXUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:AGIX_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = BTCTURK:AGIXTRY;line(cum(e.vbuy-e.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar f = BYBIT:AGIXUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = GATEIO:AGIX_USDT_SPOT;line(cum(g.vbuy-g.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar h = HITBTC:AGIXUSDT;line(cum(h.vbuy-h.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar i = KUCOIN:AGIX-USDT;line(cum(i.vbuy-i.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar j = OKEX:AGIX-USDT;line(cum(j.vbuy-j.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -659,8 +657,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:agixusdt;\n\nvar b = COINALYZE_OI:BYBIT:AGIXUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:agixusdt;\n\nvar b = COINALYZE_PFR:BYBIT:AGIXUSDT;line(a.close+b.close, title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nline(a.close+b.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:agixusdt;\n\nvar b = COINALYZE_OI:BYBIT:AGIXUSDT;\n\nvar c = COINALYZE_OI:OKEX:AGIX-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:agixusdt;\n\nvar b = COINALYZE_PFR:BYBIT:AGIXUSDT;\n\nvar c = COINALYZE_PFR:OKEX:AGIX-USDT-SWAP;line(a.close+b.close+c.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -932,9 +930,10 @@
         "KUCOIN:AGIX-USDT": false,
         "KUCOIN:AGIXUSDTM": false,
         "MEXC:AGIX_USDT": false,
+        "OKEX:AGIX-USDT": false,
+        "OKEX:AGIX-USDT-SWAP": false,
         "BITHUMB:AGIX_KRW": true,
-        "BTCTURK:AGIXTRY": true,
-        "UNISWAPETHEREUM:AGIX/WETH": true
+        "BTCTURK:AGIXTRY": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
