@@ -17,12 +17,17 @@
             "BINANCE:hifiusdt",
             "BYBIT:HIFIUSDT",
             "BINANCE_FUTURES:hifiusdt",
+            "BITGET:HIFIUSDT_SPBL",
             "GATEIO:HIFI_USDT_SPOT",
             "GATEIO:HIFI_USDT_FUTURES",
             "HITBTC:HIFIUSDT",
             "KUCOIN:HIFI-USDT",
+            "KUCOIN:HIFIUSDTM",
             "MEXC:HIFIUSDT",
             "MEXC:HIFI_USDT",
+            "BITGET:HIFIUSDT_SPBL",
+            "KUCOIN:HIFIUSDTM",
+            "BITHUMB:HIFI_KRW",
             "UPBIT:BTC-HIFI",
             "UPBIT:KRW-HIFI"
           ],
@@ -37,7 +42,9 @@
             "BYBIT:HIFIUSDT",
             "BINANCE_FUTURES:hifiusdt",
             "GATEIO:HIFI_USDT_FUTURES",
-            "MEXC:HIFI_USDT"
+            "KUCOIN:HIFIUSDTM",
+            "MEXC:HIFI_USDT",
+            "KUCOIN:HIFIUSDTM"
           ]
         },
         "trades2": {
@@ -47,10 +54,13 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:hifiusdt",
+            "BITGET:HIFIUSDT_SPBL",
             "GATEIO:HIFI_USDT_SPOT",
             "HITBTC:HIFIUSDT",
             "KUCOIN:HIFI-USDT",
             "MEXC:HIFIUSDT",
+            "BITGET:HIFIUSDT_SPBL",
+            "BITHUMB:HIFI_KRW",
             "UPBIT:BTC-HIFI",
             "UPBIT:KRW-HIFI"
           ]
@@ -393,11 +403,19 @@
         "disabled": false,
         "fetched": false
       },
+      "BITGET": {
+        "disabled": false,
+        "fetched": false
+      },
       "GATEIO": {
         "disabled": false,
         "fetched": false
       },
       "MEXC": {
+        "disabled": false,
+        "fetched": false
+      },
+      "BITHUMB": {
         "disabled": false,
         "fetched": false
       }
@@ -489,7 +507,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:hifiusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:HIFIUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:HIFI_USDT_FUTURES;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = MEXC:HIFI_USDT;line(cum(d.vbuy-d.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:hifiusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BYBIT:HIFIUSDT;line(cum(b.vbuy-b.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar c = GATEIO:HIFI_USDT_FUTURES;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KUCOIN:HIFIUSDTM;\n\nvar e = KUCOIN:HIFIUSDTM;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar f = MEXC:HIFI_USDT;line(cum(f.vbuy-f.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -533,7 +551,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:hifiusdt;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = GATEIO:HIFI_USDT_SPOT;line(cum(b.vbuy-b.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar c = HITBTC:HIFIUSDT;line(cum(c.vbuy-c.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar d = KUCOIN:HIFI-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:HIFIUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = UPBIT:BTC-HIFI;\n\nvar g = UPBIT:KRW-HIFI;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:hifiusdt;line(cum(a.vbuy-a.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar b = BITGET:HIFIUSDT_SPBL;\n\nvar c = BITGET:HIFIUSDT_SPBL;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:HIFI_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = GATEIO:HIFI_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:HIFIUSDT;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = KUCOIN:HIFI-USDT;line(cum(g.vbuy-g.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar h = MEXC:HIFIUSDT;line(cum(h.vbuy-h.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar i = UPBIT:BTC-HIFI;\n\nvar j = UPBIT:KRW-HIFI;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -896,12 +914,15 @@
         "BINANCE:hifiusdt": false,
         "BYBIT:HIFIUSDT": false,
         "BINANCE_FUTURES:hifiusdt": false,
+        "BITGET:HIFIUSDT_SPBL": false,
         "GATEIO:HIFI_USDT_SPOT": false,
         "GATEIO:HIFI_USDT_FUTURES": false,
         "HITBTC:HIFIUSDT": false,
         "KUCOIN:HIFI-USDT": false,
+        "KUCOIN:HIFIUSDTM": false,
         "MEXC:HIFIUSDT": false,
         "MEXC:HIFI_USDT": false,
+        "BITHUMB:HIFI_KRW": true,
         "UPBIT:BTC-HIFI": true,
         "UPBIT:KRW-HIFI": true
       },
