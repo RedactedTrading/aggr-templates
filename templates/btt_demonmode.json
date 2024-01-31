@@ -15,24 +15,31 @@
           "type": "chart",
           "markets": [
             "BINANCE:bttusdt",
+            "BINANCE:bttusdt",
             "BYBIT:BTTUSDT-SPOT",
             "BYBIT:1000BTTUSDT",
             "BINANCE:btttusd",
             "BINANCE:bttusdc",
             "BINANCE:bttbusd",
+            "BINANCE:bttusdc",
+            "BINANCE:bttbusd",
             "BITGET:BTTUSDT_SPBL",
             "GATEIO:BTT_USDT_SPOT",
+            "GATEIO:BTT_USDT_FUTURES",
             "HITBTC:BTTUSDT",
             "KRAKEN:BTT/USD",
             "KUCOIN:BTT-USDT",
             "MEXC:1000BTT_USDT",
+            "OKEX:BTT-USDT",
+            "KRAKEN:BTT/USD",
+            "KUCOIN:BTT-USDT",
             "OKEX:BTT-USDT",
             "BITFINEX:BTTUSD",
             "BITHUMB:BTT_KRW",
             "HITBTC:BTTUSDC",
             "MEXC:BTTUSDC",
             "UPBIT:KRW-BTT",
-            "UNISWAPETHEREUM:BTT/WETH"
+            "BITFINEX:BTTUSD"
           ],
           "zoom": 1
         },
@@ -43,6 +50,7 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:1000BTTUSDT",
+            "GATEIO:BTT_USDT_FUTURES",
             "MEXC:1000BTT_USDT"
           ]
         },
@@ -53,8 +61,11 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:bttusdt",
+            "BINANCE:bttusdt",
             "BYBIT:BTTUSDT-SPOT",
             "BINANCE:btttusd",
+            "BINANCE:bttusdc",
+            "BINANCE:bttbusd",
             "BINANCE:bttusdc",
             "BINANCE:bttbusd",
             "BITGET:BTTUSDT_SPBL",
@@ -63,12 +74,15 @@
             "KRAKEN:BTT/USD",
             "KUCOIN:BTT-USDT",
             "OKEX:BTT-USDT",
+            "KRAKEN:BTT/USD",
+            "KUCOIN:BTT-USDT",
+            "OKEX:BTT-USDT",
             "BITFINEX:BTTUSD",
             "BITHUMB:BTT_KRW",
             "HITBTC:BTTUSDC",
             "MEXC:BTTUSDC",
             "UPBIT:KRW-BTT",
-            "UNISWAPETHEREUM:BTT/WETH"
+            "BITFINEX:BTTUSD"
           ]
         }
       },
@@ -424,10 +438,6 @@
       "BITHUMB": {
         "disabled": false,
         "fetched": false
-      },
-      "UNISWAPETHEREUM": {
-        "disabled": false,
-        "fetched": false
       }
     },
     "chart": {
@@ -517,7 +527,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BYBIT:1000BTTUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = MEXC:1000BTT_USDT;line(cum(b.vbuy-b.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:1000BTTUSDT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = GATEIO:BTT_USDT_FUTURES;line(cum(b.vbuy-b.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar c = MEXC:1000BTT_USDT;line(cum(c.vbuy-c.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -561,7 +571,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bttusdt;\n\nvar b = BINANCE:btttusd;\n\nvar c = BINANCE:bttusdc;\n\nvar d = BINANCE:bttbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:BTTUSD;line(cum(e.vbuy-e.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar f = BITGET:BTTUSDT_SPBL;line(cum(f.vbuy-f.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar g = BITHUMB:BTT_KRW;line(cum(g.vbuy-g.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar h = BYBIT:BTTUSDT-SPOT;line(cum(h.vbuy-h.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar i = GATEIO:BTT_USDT_SPOT;line(cum(i.vbuy-i.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar j = HITBTC:BTTUSDT;\n\nvar k = HITBTC:BTTUSDC;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar l = KRAKEN:BTT/USD;line(cum(l.vbuy-l.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar m = KUCOIN:BTT-USDT;line(cum(m.vbuy-m.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar n = MEXC:BTTUSDC;line(cum(n.vbuy-n.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar o = OKEX:BTT-USDT;line(cum(o.vbuy-o.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar p = UNISWAPETHEREUM:BTT/WETH;line(cum(p.vbuy-p.vsell), title=\"UNIETH\", color=\"rgb(25, 76, 188)\");\n\n\nvar q = UPBIT:KRW-BTT;line(cum(q.vbuy-q.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bttusdt;\n\nvar b = BINANCE:bttusdt;\n\nvar c = BINANCE:btttusd;\n\nvar d = BINANCE:bttusdc;\n\nvar e = BINANCE:bttbusd;\n\nvar f = BINANCE:bttusdc;\n\nvar g = BINANCE:bttbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar h = BITFINEX:BTTUSD;\n\nvar i = BITFINEX:BTTUSD;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar j = BITGET:BTTUSDT_SPBL;line(cum(j.vbuy-j.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar k = BITHUMB:BTT_KRW;line(cum(k.vbuy-k.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar l = BYBIT:BTTUSDT-SPOT;line(cum(l.vbuy-l.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar m = GATEIO:BTT_USDT_SPOT;line(cum(m.vbuy-m.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar n = HITBTC:BTTUSDT;\n\nvar o = HITBTC:BTTUSDC;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar p = KRAKEN:BTT/USD;\n\nvar q = KRAKEN:BTT/USD;line(cum(p.vbuy-p.vsell+q.vbuy-q.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar r = KUCOIN:BTT-USDT;\n\nvar s = KUCOIN:BTT-USDT;line(cum(r.vbuy-r.vsell+s.vbuy-s.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar t = MEXC:BTTUSDC;line(cum(t.vbuy-t.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar u = OKEX:BTT-USDT;\n\nvar v = OKEX:BTT-USDT;line(cum(u.vbuy-u.vsell+v.vbuy-v.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nvar w = UPBIT:KRW-BTT;line(cum(w.vbuy-w.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell+v.vbuy-v.vsell+w.vbuy-w.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -929,6 +939,7 @@
         "BINANCE:bttbusd": false,
         "BITGET:BTTUSDT_SPBL": false,
         "GATEIO:BTT_USDT_SPOT": false,
+        "GATEIO:BTT_USDT_FUTURES": false,
         "HITBTC:BTTUSDT": false,
         "KRAKEN:BTT/USD": false,
         "KUCOIN:BTT-USDT": false,
@@ -938,8 +949,7 @@
         "BITHUMB:BTT_KRW": true,
         "HITBTC:BTTUSDC": false,
         "MEXC:BTTUSDC": false,
-        "UPBIT:KRW-BTT": true,
-        "UNISWAPETHEREUM:BTT/WETH": true
+        "UPBIT:KRW-BTT": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
