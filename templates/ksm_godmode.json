@@ -15,8 +15,11 @@
           "type": "chart",
           "markets": [
             "BINANCE:ksmusdt",
+            "BINANCE:ksmusdt",
             "BYBIT:KSMUSDT-SPOT",
             "BYBIT:KSMUSDT",
+            "BYBIT:KSMUSDT",
+            "BINANCE:ksmbusd",
             "BINANCE:ksmbusd",
             "BINANCE_FUTURES:ksmusdt",
             "BITFINEX:KSMUSD",
@@ -30,8 +33,16 @@
             "KRAKEN:PF_KSMUSD",
             "KUCOIN:KSM-USDT",
             "KUCOIN:KSMUSDTM",
-            "MEXC:KSMUSDT",
             "MEXC:KSM_USDT",
+            "OKEX:KSM-USDT",
+            "OKEX:KSM-USD-SWAP",
+            "OKEX:KSM-USDT-SWAP",
+            "BINANCE_FUTURES:ksmusdt",
+            "BITFINEX:KSMUSD",
+            "COINBASE:KSM-USDT",
+            "COINBASE:KSM-USD",
+            "KRAKEN:KSM/USD",
+            "KUCOIN:KSM-USDT",
             "OKEX:KSM-USDT",
             "OKEX:KSM-USD-SWAP",
             "OKEX:KSM-USDT-SWAP",
@@ -47,12 +58,16 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:KSMUSDT",
+            "BYBIT:KSMUSDT",
             "BINANCE_FUTURES:ksmusdt",
             "BITGET:KSMUSDT_UMCBL",
             "GATEIO:KSM_USDT_FUTURES",
             "KRAKEN:PF_KSMUSD",
             "KUCOIN:KSMUSDTM",
             "MEXC:KSM_USDT",
+            "OKEX:KSM-USD-SWAP",
+            "OKEX:KSM-USDT-SWAP",
+            "BINANCE_FUTURES:ksmusdt",
             "OKEX:KSM-USD-SWAP",
             "OKEX:KSM-USDT-SWAP"
           ]
@@ -64,7 +79,9 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:ksmusdt",
+            "BINANCE:ksmusdt",
             "BYBIT:KSMUSDT-SPOT",
+            "BINANCE:ksmbusd",
             "BINANCE:ksmbusd",
             "BITFINEX:KSMUSD",
             "BITGET:KSMUSDT_SPBL",
@@ -73,7 +90,12 @@
             "HITBTC:KSMUSD",
             "KRAKEN:KSM/USD",
             "KUCOIN:KSM-USDT",
-            "MEXC:KSMUSDT",
+            "OKEX:KSM-USDT",
+            "BITFINEX:KSMUSD",
+            "COINBASE:KSM-USDT",
+            "COINBASE:KSM-USD",
+            "KRAKEN:KSM/USD",
+            "KUCOIN:KSM-USDT",
             "OKEX:KSM-USDT",
             "BITHUMB:KSM_KRW",
             "OKEX:KSM-USDC"
@@ -521,7 +543,7 @@
           "displayName": "Price"
         },
         "cvd-eth-perp": {
-          "script": "var a = BINANCE_FUTURES:ksmusdt;line(cum(a.vbuy-a.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar b = BITGET:KSMUSDT_UMCBL;line(cum(b.vbuy-b.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar c = BYBIT:KSMUSDT;line(cum(c.vbuy-c.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar d = GATEIO:KSM_USDT_FUTURES;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = KRAKEN:PF_KSMUSD;line(cum(e.vbuy-e.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar f = KUCOIN:KSMUSDTM;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:KSM_USDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = OKEX:KSM-USD-SWAP;\n\nvar i = OKEX:KSM-USDT-SWAP;line(cum(h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE_FUTURES:ksmusdt;\n\nvar b = BINANCE_FUTURES:ksmusdt;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BNF\", color=\"rgb(30, 201, 220)\");\n\n\nvar c = BITGET:KSMUSDT_UMCBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BYBIT:KSMUSDT;\n\nvar e = BYBIT:KSMUSDT;line(cum(d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar f = GATEIO:KSM_USDT_FUTURES;line(cum(f.vbuy-f.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar g = KRAKEN:PF_KSMUSD;line(cum(g.vbuy-g.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar h = KUCOIN:KSMUSDTM;line(cum(h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar i = MEXC:KSM_USDT;line(cum(i.vbuy-i.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar j = OKEX:KSM-USD-SWAP;\n\nvar k = OKEX:KSM-USDT-SWAP;\n\nvar l = OKEX:KSM-USD-SWAP;\n\nvar m = OKEX:KSM-USDT-SWAP;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-perp",
           "name": "CVD ETH Perp",
           "priceScaleId": "cvd-eth-perp",
@@ -565,7 +587,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:ksmusdt;\n\nvar b = BINANCE:ksmbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:KSMUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:KSMUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BITHUMB:KSM_KRW;line(cum(e.vbuy-e.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar f = BYBIT:KSMUSDT-SPOT;line(cum(f.vbuy-f.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar g = COINBASE:KSM-USD;line(cum(g.vbuy-g.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar h = GATEIO:KSM_USDT_SPOT;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = HITBTC:KSMUSD;line(cum(i.vbuy-i.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar j = KRAKEN:KSM/USD;line(cum(j.vbuy-j.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar k = KUCOIN:KSM-USDT;line(cum(k.vbuy-k.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar l = MEXC:KSMUSDT;line(cum(l.vbuy-l.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar m = OKEX:KSM-USDT;\n\nvar n = OKEX:KSM-USDC;line(cum(m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:ksmusdt;\n\nvar b = BINANCE:ksmusdt;\n\nvar c = BINANCE:ksmbusd;\n\nvar d = BINANCE:ksmbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = BITFINEX:KSMUSD;\n\nvar f = BITFINEX:KSMUSD;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar g = BITGET:KSMUSDT_SPBL;line(cum(g.vbuy-g.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar h = BITHUMB:KSM_KRW;line(cum(h.vbuy-h.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar i = BYBIT:KSMUSDT-SPOT;line(cum(i.vbuy-i.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar j = COINBASE:KSM-USD;\n\nvar k = COINBASE:KSM-USDT;\n\nvar l = COINBASE:KSM-USD;line(cum(j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar m = GATEIO:KSM_USDT_SPOT;line(cum(m.vbuy-m.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar n = HITBTC:KSMUSD;line(cum(n.vbuy-n.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar o = KRAKEN:KSM/USD;\n\nvar p = KRAKEN:KSM/USD;line(cum(o.vbuy-o.vsell+p.vbuy-p.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar q = KUCOIN:KSM-USDT;\n\nvar r = KUCOIN:KSM-USDT;line(cum(q.vbuy-q.vsell+r.vbuy-r.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar s = OKEX:KSM-USDT;\n\nvar t = OKEX:KSM-USDT;\n\nvar u = OKEX:KSM-USDC;line(cum(s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell+p.vbuy-p.vsell+q.vbuy-q.vsell+r.vbuy-r.vsell+s.vbuy-s.vsell+t.vbuy-t.vsell+u.vbuy-u.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -665,8 +687,8 @@
           ],
           "displayName": "Liquidations"
         },
-        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:ksmusdt;\n\nvar b = COINALYZE_OI:BYBIT:KSMUSDT;\n\nvar c = COINALYZE_OI:OKEX:KSM-USD-SWAP;\n\nvar d = COINALYZE_OI:OKEX:KSM-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");",
-        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:ksmusdt;\n\nvar b = COINALYZE_PFR:BYBIT:KSMUSDT;\n\nvar c = COINALYZE_PFR:OKEX:KSM-USD-SWAP;\n\nvar d = COINALYZE_PFR:OKEX:KSM-USDT-SWAP;line(a.close+b.close+c.close+d.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close, title=\"total\", color=\"rgb(255,25,183)\");"
+        "open_interest": "var a = COINALYZE_OI:BINANCE_FUTURES:ksmusdt;\n\nvar b = COINALYZE_OI:BINANCE_FUTURES:ksmusdt;\n\nvar c = COINALYZE_OI:BYBIT:KSMUSDT;\n\nvar d = COINALYZE_OI:BYBIT:KSMUSDT;\n\nvar e = COINALYZE_OI:OKEX:KSM-USD-SWAP;\n\nvar f = COINALYZE_OI:OKEX:KSM-USDT-SWAP;\n\nvar g = COINALYZE_OI:OKEX:KSM-USD-SWAP;\n\nvar h = COINALYZE_OI:OKEX:KSM-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close, title=\"total\", color=\"rgb(255,25,183)\");",
+        "funding_rate": "var a = COINALYZE_PFR:BINANCE_FUTURES:ksmusdt;\n\nvar b = COINALYZE_PFR:BINANCE_FUTURES:ksmusdt;\n\nvar c = COINALYZE_PFR:BYBIT:KSMUSDT;\n\nvar d = COINALYZE_PFR:BYBIT:KSMUSDT;\n\nvar e = COINALYZE_PFR:OKEX:KSM-USD-SWAP;\n\nvar f = COINALYZE_PFR:OKEX:KSM-USDT-SWAP;\n\nvar g = COINALYZE_PFR:OKEX:KSM-USD-SWAP;\n\nvar h = COINALYZE_PFR:OKEX:KSM-USDT-SWAP;line(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close, title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(a.close+b.close+c.close+d.close+e.close+f.close+g.close+h.close, title=\"total\", color=\"rgb(255,25,183)\");"
       },
       "priceScales": {
         "right": {
@@ -941,11 +963,11 @@
         "KRAKEN:PF_KSMUSD": false,
         "KUCOIN:KSM-USDT": false,
         "KUCOIN:KSMUSDTM": false,
-        "MEXC:KSMUSDT": false,
         "MEXC:KSM_USDT": false,
         "OKEX:KSM-USDT": false,
         "OKEX:KSM-USD-SWAP": false,
         "OKEX:KSM-USDT-SWAP": false,
+        "COINBASE:KSM-USDT": false,
         "BITHUMB:KSM_KRW": true,
         "OKEX:KSM-USDC": false
       },
@@ -1037,7 +1059,8 @@
       ],
       "audioThreshold": null,
       "multipliers": {
-        "COINBASE:KSM-USD": 0.5
+        "COINBASE:KSM-USD": 0.5,
+        "COINBASE:KSM-USDT": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "477",
@@ -1137,7 +1160,8 @@
       "audioThreshold": null,
       "multipliers": {
         "COINBASE:BTC-USD": 0.53,
-        "COINBASE:KSM-USD": 0.5
+        "COINBASE:KSM-USD": 0.5,
+        "COINBASE:KSM-USDT": 0.5
       },
       "showThresholdsAsTable": false,
       "maxRows": "475",
