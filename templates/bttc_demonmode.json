@@ -15,6 +15,9 @@
           "type": "chart",
           "markets": [
             "BINANCE:bttcusdt",
+            "BINANCE:bttcusdt",
+            "BINANCE:bttcusdc",
+            "BINANCE:bttcbusd",
             "BINANCE:bttcusdc",
             "BINANCE:bttcbusd"
           ],
@@ -34,6 +37,9 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:bttcusdt",
+            "BINANCE:bttcusdt",
+            "BINANCE:bttcusdc",
+            "BINANCE:bttcbusd",
             "BINANCE:bttcusdc",
             "BINANCE:bttcbusd"
           ]
@@ -508,7 +514,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:bttcusdt;\n\nvar b = BINANCE:bttcusdc;\n\nvar c = BINANCE:bttcbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:bttcusdt;\n\nvar b = BINANCE:bttcusdt;\n\nvar c = BINANCE:bttcusdc;\n\nvar d = BINANCE:bttcbusd;\n\nvar e = BINANCE:bttcusdc;\n\nvar f = BINANCE:bttcbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
