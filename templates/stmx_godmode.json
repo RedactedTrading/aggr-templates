@@ -25,6 +25,7 @@
             "HITBTC:STMXUSDT",
             "KUCOIN:STMXUSDTM",
             "MEXC:STMX_USDT",
+            "BITHUMB:STMX_KRW",
             "UPBIT:KRW-STMX",
             "UPBIT:BTC-STMX"
           ],
@@ -55,6 +56,7 @@
             "BITGET:STMXUSDT_SPBL",
             "GATEIO:STMX_USDT_SPOT",
             "HITBTC:STMXUSDT",
+            "BITHUMB:STMX_KRW",
             "UPBIT:KRW-STMX",
             "UPBIT:BTC-STMX"
           ]
@@ -408,6 +410,10 @@
       "MEXC": {
         "disabled": false,
         "fetched": false
+      },
+      "BITHUMB": {
+        "disabled": false,
+        "fetched": false
       }
     },
     "chart": {
@@ -541,7 +547,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:stmxusdt;\n\nvar b = BINANCE:stmxbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:STMXUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = GATEIO:STMX_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:STMXUSDT;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = UPBIT:KRW-STMX;\n\nvar g = UPBIT:BTC-STMX;line(cum(f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:stmxusdt;\n\nvar b = BINANCE:stmxbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITGET:STMXUSDT_SPBL;line(cum(c.vbuy-c.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar d = BITHUMB:STMX_KRW;line(cum(d.vbuy-d.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar e = GATEIO:STMX_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:STMXUSDT;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = UPBIT:KRW-STMX;\n\nvar h = UPBIT:BTC-STMX;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"UPB\", color=\"rgb(222, 144, 177)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -912,6 +918,7 @@
         "HITBTC:STMXUSDT": false,
         "KUCOIN:STMXUSDTM": false,
         "MEXC:STMX_USDT": false,
+        "BITHUMB:STMX_KRW": true,
         "UPBIT:KRW-STMX": true,
         "UPBIT:BTC-STMX": true
       },
