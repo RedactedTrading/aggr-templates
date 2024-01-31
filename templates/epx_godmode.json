@@ -15,9 +15,12 @@
           "type": "chart",
           "markets": [
             "BINANCE:epxusdt",
+            "BINANCE:epxusdt",
+            "BINANCE:epxbusd",
             "BINANCE:epxbusd",
             "GATEIO:EPX_USDT_SPOT",
             "HITBTC:EPXUSDT",
+            "KUCOIN:EPX-USDT",
             "KUCOIN:EPX-USDT"
           ],
           "zoom": 1
@@ -36,9 +39,12 @@
           "zoom": 1.0,
           "markets": [
             "BINANCE:epxusdt",
+            "BINANCE:epxusdt",
+            "BINANCE:epxbusd",
             "BINANCE:epxbusd",
             "GATEIO:EPX_USDT_SPOT",
             "HITBTC:EPXUSDT",
+            "KUCOIN:EPX-USDT",
             "KUCOIN:EPX-USDT"
           ]
         }
@@ -516,7 +522,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:epxusdt;\n\nvar b = BINANCE:epxbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = GATEIO:EPX_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = HITBTC:EPXUSDT;line(cum(d.vbuy-d.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar e = KUCOIN:EPX-USDT;line(cum(e.vbuy-e.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:epxusdt;\n\nvar b = BINANCE:epxusdt;\n\nvar c = BINANCE:epxbusd;\n\nvar d = BINANCE:epxbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar e = GATEIO:EPX_USDT_SPOT;line(cum(e.vbuy-e.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar f = HITBTC:EPXUSDT;line(cum(f.vbuy-f.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar g = KUCOIN:EPX-USDT;\n\nvar h = KUCOIN:EPX-USDT;line(cum(g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
