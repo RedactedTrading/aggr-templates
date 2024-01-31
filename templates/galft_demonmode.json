@@ -15,7 +15,9 @@
           "type": "chart",
           "markets": [
             "BYBIT:GALFTUSDT-SPOT",
-            "OKEX:GALFT-USDT"
+            "OKEX:GALFT-USDT",
+            "OKEX:GALFT-USDT",
+            "OKEX:GALFT-USDC"
           ],
           "zoom": 1
         },
@@ -33,7 +35,9 @@
           "zoom": 1.0,
           "markets": [
             "BYBIT:GALFTUSDT-SPOT",
-            "OKEX:GALFT-USDT"
+            "OKEX:GALFT-USDT",
+            "OKEX:GALFT-USDT",
+            "OKEX:GALFT-USDC"
           ]
         }
       },
@@ -506,7 +510,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BYBIT:GALFTUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = OKEX:GALFT-USDT;line(cum(b.vbuy-b.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BYBIT:GALFTUSDT-SPOT;line(cum(a.vbuy-a.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar b = OKEX:GALFT-USDT;\n\nvar c = OKEX:GALFT-USDT;\n\nvar d = OKEX:GALFT-USDC;line(cum(b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -867,7 +871,8 @@
       "showTimeScale": true,
       "hiddenMarkets": {
         "BYBIT:GALFTUSDT-SPOT": false,
-        "OKEX:GALFT-USDT": false
+        "OKEX:GALFT-USDT": false,
+        "OKEX:GALFT-USDC": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
