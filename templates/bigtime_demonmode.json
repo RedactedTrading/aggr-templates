@@ -22,12 +22,14 @@
             "COINBASE:BIGTIME-USD",
             "GATEIO:BIGTIME_USDT_SPOT",
             "GATEIO:BIGTIME_USDT_FUTURES",
+            "HITBTC:BIGTIMEUSDT",
             "KUCOIN:BIGTIME-USDT",
             "KUCOIN:BIGTIMEUSDTM",
             "MEXC:BIGTIMEUSDT",
             "MEXC:BIGTIME_USDT",
             "OKEX:BIGTIME-USDT",
-            "OKEX:BIGTIME-USDT-SWAP"
+            "OKEX:BIGTIME-USDT-SWAP",
+            "BITHUMB:BIGTIME_KRW"
           ],
           "zoom": 1
         },
@@ -56,9 +58,11 @@
             "BITGET:BIGTIMEUSDT_SPBL",
             "COINBASE:BIGTIME-USD",
             "GATEIO:BIGTIME_USDT_SPOT",
+            "HITBTC:BIGTIMEUSDT",
             "KUCOIN:BIGTIME-USDT",
             "MEXC:BIGTIMEUSDT",
-            "OKEX:BIGTIME-USDT"
+            "OKEX:BIGTIME-USDT",
+            "BITHUMB:BIGTIME_KRW"
           ]
         }
       },
@@ -363,7 +367,7 @@
         "fetched": false
       },
       "HITBTC": {
-        "disabled": true,
+        "disabled": false,
         "fetched": false
       },
       "HUOBI": {
@@ -408,6 +412,10 @@
         "fetched": false
       },
       "MEXC": {
+        "disabled": false,
+        "fetched": false
+      },
+      "BITHUMB": {
         "disabled": false,
         "fetched": false
       }
@@ -543,7 +551,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BITGET:BIGTIMEUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = COINBASE:BIGTIME-USD;line(cum(b.vbuy-b.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar c = GATEIO:BIGTIME_USDT_SPOT;line(cum(c.vbuy-c.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar d = KUCOIN:BIGTIME-USDT;line(cum(d.vbuy-d.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar e = MEXC:BIGTIMEUSDT;line(cum(e.vbuy-e.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar f = OKEX:BIGTIME-USDT;line(cum(f.vbuy-f.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BITGET:BIGTIMEUSDT_SPBL;line(cum(a.vbuy-a.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar b = BITHUMB:BIGTIME_KRW;line(cum(b.vbuy-b.vsell), title=\"BHUMB\", color=\"rgb(205, 246, 247)\");\n\n\nvar c = COINBASE:BIGTIME-USD;line(cum(c.vbuy-c.vsell), title=\"CB\", color=\"rgb(50, 121, 175)\");\n\n\nvar d = GATEIO:BIGTIME_USDT_SPOT;line(cum(d.vbuy-d.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar e = HITBTC:BIGTIMEUSDT;line(cum(e.vbuy-e.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar f = KUCOIN:BIGTIME-USDT;line(cum(f.vbuy-f.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar g = MEXC:BIGTIMEUSDT;line(cum(g.vbuy-g.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar h = OKEX:BIGTIME-USDT;line(cum(h.vbuy-h.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -911,12 +919,14 @@
         "COINBASE:BIGTIME-USD": false,
         "GATEIO:BIGTIME_USDT_SPOT": false,
         "GATEIO:BIGTIME_USDT_FUTURES": false,
+        "HITBTC:BIGTIMEUSDT": false,
         "KUCOIN:BIGTIME-USDT": false,
         "KUCOIN:BIGTIMEUSDTM": false,
         "MEXC:BIGTIMEUSDT": false,
         "MEXC:BIGTIME_USDT": false,
         "OKEX:BIGTIME-USDT": false,
-        "OKEX:BIGTIME-USDT-SWAP": false
+        "OKEX:BIGTIME-USDT-SWAP": false,
+        "BITHUMB:BIGTIME_KRW": true
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
