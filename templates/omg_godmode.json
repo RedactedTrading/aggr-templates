@@ -35,8 +35,7 @@
             "OKEX:OMG-USDT",
             "OKEX:OMG-USDT-SWAP",
             "BTCTURK:OMGTRY",
-            "HITBTC:OMGUSDC",
-            "OKEX:OMG-USDC"
+            "HITBTC:OMGUSDC"
           ],
           "zoom": 1
         },
@@ -75,8 +74,7 @@
             "MEXC:OMGUSDT",
             "OKEX:OMG-USDT",
             "BTCTURK:OMGTRY",
-            "HITBTC:OMGUSDC",
-            "OKEX:OMG-USDC"
+            "HITBTC:OMGUSDC"
           ]
         }
       },
@@ -565,7 +563,7 @@
           "updatedAt": 1671704979079
         },
         "cvd-eth-spot copy 1": {
-          "script": "var a = BINANCE:omgusdt;\n\nvar b = BINANCE:omgbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:OMGUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:OMGUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BTCTURK:OMGUSDT;\n\nvar f = BTCTURK:OMGTRY;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = BYBIT:OMGUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = GATEIO:OMG_USDT_SPOT;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = HITBTC:OMGUSD;\n\nvar j = HITBTC:OMGUSDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar k = KRAKEN:OMG/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar l = KUCOIN:OMG-USDT;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = MEXC:OMGUSDT;line(cum(m.vbuy-m.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar n = OKEX:OMG-USDT;\n\nvar o = OKEX:OMG-USDC;line(cum(n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell+o.vbuy-o.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
+          "script": "var a = BINANCE:omgusdt;\n\nvar b = BINANCE:omgbusd;line(cum(a.vbuy-a.vsell+b.vbuy-b.vsell), title=\"BN\", color=\"rgb(255, 192, 118)\");\n\n\nvar c = BITFINEX:OMGUSD;line(cum(c.vbuy-c.vsell), title=\"BFX\", color=\"rgb(178, 173, 77)\");\n\n\nvar d = BITGET:OMGUSDT_SPBL;line(cum(d.vbuy-d.vsell), title=\"BGET\", color=\"rgb(255, 141, 7)\");\n\n\nvar e = BTCTURK:OMGUSDT;\n\nvar f = BTCTURK:OMGTRY;line(cum(e.vbuy-e.vsell+f.vbuy-f.vsell), title=\"BTURK\", color=\"rgb(197, 246, 101)\");\n\n\nvar g = BYBIT:OMGUSDT-SPOT;line(cum(g.vbuy-g.vsell), title=\"BYB\", color=\"rgb(170, 109, 215)\");\n\n\nvar h = GATEIO:OMG_USDT_SPOT;line(cum(h.vbuy-h.vsell), title=\"GATE\", color=\"rgb(50, 168, 82)\");\n\n\nvar i = HITBTC:OMGUSD;\n\nvar j = HITBTC:OMGUSDC;line(cum(i.vbuy-i.vsell+j.vbuy-j.vsell), title=\"HBTC\", color=\"rgb(89, 157, 208)\");\n\n\nvar k = KRAKEN:OMG/USD;line(cum(k.vbuy-k.vsell), title=\"KRKN\", color=\"rgb(180, 242, 243)\");\n\n\nvar l = KUCOIN:OMG-USDT;line(cum(l.vbuy-l.vsell), title=\"KUC\", color=\"rgb(83, 217, 232)\");\n\n\nvar m = MEXC:OMGUSDT;line(cum(m.vbuy-m.vsell), title=\"MXC\", color=\"rgb(242, 113, 39)\");\n\n\nvar n = OKEX:OMG-USDT;line(cum(n.vbuy-n.vsell), title=\"OKX\", color=\"rgb(204, 227, 126)\");\n\n\nline(cum(a.vbuy-a.vsell+b.vbuy-b.vsell+c.vbuy-c.vsell+d.vbuy-d.vsell+e.vbuy-e.vsell+f.vbuy-f.vsell+g.vbuy-g.vsell+h.vbuy-h.vsell+i.vbuy-i.vsell+j.vbuy-j.vsell+k.vbuy-k.vsell+l.vbuy-l.vsell+m.vbuy-m.vsell+n.vbuy-n.vsell), title=\"total\", color=\"rgb(255,25,183)\");",
           "id": "cvd-eth-spot copy 1",
           "name": "CVD ETH Spot",
           "priceScaleId": "cvd-eth-spot",
@@ -946,8 +944,7 @@
         "OKEX:OMG-USDT": false,
         "OKEX:OMG-USDT-SWAP": false,
         "BTCTURK:OMGTRY": true,
-        "HITBTC:OMGUSDC": false,
-        "OKEX:OMG-USDC": false
+        "HITBTC:OMGUSDC": false
       },
       "barSpacing": 0.39437454420364615,
       "navigationState": {
